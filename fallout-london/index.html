@@ -534,7 +534,7 @@ function loadData() {
     a.innerText = getMapInfo(id).name;
     a.className = 'map-link';
     a.href = '#' + id;
-    a.onclick = function(e){ loadMap(e.target.href.split('#').pop());  }
+    a.onclick = function(e){ loadMap(e.target.href.split('#').pop()); return false; }
     div.appendChild(a);
     if (mapId==id) {
       a.classList.add('selected');
