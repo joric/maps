@@ -48,7 +48,7 @@
   "Railroad - Faction": {"fa": "road"},
   "Drive-In": {"fa": "road"},
   "Car": {"fa": "car"},
-  "Diamond City": {"fa": "gem"},
+  "Diamond City": {"fa": "dungeon", "name": "Gates"},
   "Minutemen": {"fa": "person-rifle"},
   "Institute": {"fa": "building-columns"},
   "Country Club": {"fa": "crown"},
