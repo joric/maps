@@ -1,0 +1,7923 @@
+{
+	"worldspaces": [
+		{
+			"form_id": "0000003C",
+			"editor_id": "Commonwealth",
+			"name": "Commonwealth",
+			"nw_cell": [
+				-33,
+				25
+			],
+			"se_cell": [
+				28,
+				-36
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-96,
+				-96
+			],
+			"bounds_max": [
+				96,
+				96
+			]
+		},
+		{
+			"form_id": "00000F93",
+			"editor_id": "DiamondCityFX",
+			"name": "Diamond City",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-9,
+				-3
+			],
+			"bounds_max": [
+				6,
+				4
+			]
+		},
+		{
+			"form_id": "00000F94",
+			"editor_id": "DiamondCity",
+			"name": "Diamond City",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				-16384,
+				-27852.800781,
+				3072
+			],
+			"bounds_min": [
+				-4,
+				-4
+			],
+			"bounds_max": [
+				10,
+				8
+			]
+		},
+		{
+			"form_id": "00054BD5",
+			"editor_id": "Goodneighbor",
+			"name": "Goodneighbor",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-1,
+				-7
+			],
+			"bounds_max": [
+				11,
+				2
+			]
+		},
+		{
+			"form_id": "000A7FF4",
+			"editor_id": "SanctuaryHillsWorld",
+			"name": "Sanctuary Hills",
+			"nw_cell": [
+				-33,
+				25
+			],
+			"se_cell": [
+				28,
+				-36
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-28,
+				-13
+			],
+			"bounds_max": [
+				8,
+				35
+			]
+		},
+		{
+			"form_id": "03000810",
+			"editor_id": "TestClaraCoast",
+			"name": "Clara Land",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-3,
+				-3
+			],
+			"bounds_max": [
+				4,
+				4
+			]
+		},
+		{
+			"form_id": "03000B0F",
+			"editor_id": "DLC03FarHarbor",
+			"name": "The Island",
+			"nw_cell": [
+				-16,
+				17
+			],
+			"se_cell": [
+				19,
+				-18
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-73,
+				-59
+			],
+			"bounds_max": [
+				70,
+				79
+			]
+		},
+		{
+			"form_id": "030014F4",
+			"editor_id": "TestMadCoast",
+			"name": "",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-3,
+				-2
+			],
+			"bounds_max": [
+				4,
+				3
+			]
+		},
+		{
+			"form_id": "03004EA4",
+			"editor_id": "DLC03VRWorldspace",
+			"name": "Simulation",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-12,
+				-12
+			],
+			"bounds_max": [
+				13,
+				13
+			]
+		},
+		{
+			"form_id": "0600290F",
+			"editor_id": "NukaWorld",
+			"name": "Nuka-World",
+			"nw_cell": [
+				-18,
+				17
+			],
+			"se_cell": [
+				16,
+				-18
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-32,
+				-32
+			],
+			"bounds_max": [
+				33,
+				33
+			]
+		},
+		{
+			"form_id": "06008B56",
+			"editor_id": "TestMadWorld",
+			"name": "MadWorld",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-5,
+				-4
+			],
+			"bounds_max": [
+				13,
+				11
+			]
+		},
+		{
+			"form_id": "06052931",
+			"editor_id": "NukaWorldAmphitheater",
+			"name": "Bradberton Amphitheater",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-11,
+				-8
+			],
+			"bounds_max": [
+				5,
+				-1
+			]
+		},
+		{
+			"form_id": "06053C58",
+			"editor_id": "NukaWorldMarket",
+			"name": "Nuka-Town Market",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-4,
+				-8
+			],
+			"bounds_max": [
+				5,
+				-1
+			]
+		},
+		{
+			"form_id": "07000F99",
+			"editor_id": "BromleyGladesWorld",
+			"name": "The Glades",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 0.5,
+			"cell_offset": [
+				86425.601562,
+				-71680,
+				-409.600006
+			],
+			"bounds_min": [
+				-33,
+				-33
+			],
+			"bounds_max": [
+				34,
+				34
+			]
+		},
+		{
+			"form_id": "07003640",
+			"editor_id": "HackneyWorld",
+			"name": "Hackney",
+			"nw_cell": [
+				-3,
+				12
+			],
+			"se_cell": [
+				13,
+				-4
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-19,
+				-27
+			],
+			"bounds_max": [
+				20,
+				20
+			]
+		},
+		{
+			"form_id": "0700762E",
+			"editor_id": "WestminsterWorld",
+			"name": "Westminster",
+			"nw_cell": [
+				-17,
+				13
+			],
+			"se_cell": [
+				15,
+				-19
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-30,
+				-37
+			],
+			"bounds_max": [
+				27,
+				60
+			]
+		},
+		{
+			"form_id": "0700762F",
+			"editor_id": "IslingtonWorld",
+			"name": "Islington",
+			"nw_cell": [
+				-8,
+				11
+			],
+			"se_cell": [
+				8,
+				-5
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-25,
+				-27
+			],
+			"bounds_max": [
+				19,
+				17
+			]
+		},
+		{
+			"form_id": "0700E701",
+			"editor_id": "LondonWorld",
+			"name": "London",
+			"nw_cell": [
+				-30,
+				30
+			],
+			"se_cell": [
+				30,
+				-30
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-64,
+				-64
+			],
+			"bounds_max": [
+				64,
+				64
+			]
+		},
+		{
+			"form_id": "0701A9AF",
+			"editor_id": "CamdenWorld",
+			"name": "Camden",
+			"nw_cell": [
+				-9,
+				16
+			],
+			"se_cell": [
+				7,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-21,
+				-25
+			],
+			"bounds_max": [
+				24,
+				19
+			]
+		},
+		{
+			"form_id": "0703DB07",
+			"editor_id": "IWMWorld",
+			"name": "Imperial War Museum",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 1,
+			"cell_offset": [
+				-53657.601562,
+				1228.800049,
+				4956.160156
+			],
+			"bounds_min": [
+				-9,
+				-10
+			],
+			"bounds_max": [
+				10,
+				7
+			]
+		},
+		{
+			"form_id": "0705BFDF",
+			"editor_id": "StPaulsWorld",
+			"name": "St Paul's Cathedral",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 0.1,
+			"cell_offset": [
+				-54067.199219,
+				48332.800781,
+				4956.160156
+			],
+			"bounds_min": [
+				-7,
+				-7
+			],
+			"bounds_max": [
+				9,
+				7
+			]
+		},
+		{
+			"form_id": "0705BFE0",
+			"editor_id": "BankofEnglandWorld",
+			"name": "Bank of England",
+			"nw_cell": [
+				-8,
+				8
+			],
+			"se_cell": [
+				8,
+				-8
+			],
+			"world_map_scale": 0.3,
+			"cell_offset": [
+				0,
+				0,
+				0
+			],
+			"bounds_min": [
+				-16,
+				-15
+			],
+			"bounds_max": [
+				17,
+				16
+			]
+		},
+		{
+			"form_id": "0707E34E",
+			"editor_id": "DumpWorld",
+			"name": "The Dump",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 0.5,
+			"cell_offset": [
+				-9420.799805,
+				-18432,
+				4956.160156
+			],
+			"bounds_min": [
+				-10,
+				-10
+			],
+			"bounds_max": [
+				12,
+				9
+			]
+		},
+		{
+			"form_id": "070A4CD4",
+			"editor_id": "CoventGardenWorldSpace",
+			"name": "Covent Garden",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 0.5,
+			"cell_offset": [
+				-72089.601562,
+				45056,
+				4956.160156
+			],
+			"bounds_min": [
+				-8,
+				-10
+			],
+			"bounds_max": [
+				10,
+				8
+			]
+		},
+		{
+			"form_id": "0712B821",
+			"editor_id": "BromleyPindarWorld",
+			"name": "Bromley Pindar",
+			"nw_cell": [
+				0,
+				0
+			],
+			"se_cell": [
+				0,
+				0
+			],
+			"world_map_scale": 0.5,
+			"cell_offset": [
+				40960,
+				-73728,
+				0
+			],
+			"bounds_min": [
+				-9,
+				-8
+			],
+			"bounds_max": [
+				9,
+				8
+			]
+		}
+	],
+	"markers": [
+		{
+			"form_id": "00019C6F",
+			"type": "Encampment",
+			"name": "Boston Airport Ruins",
+			"x": 47088,
+			"y": -5384,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0001ABC2",
+			"type": "Military Base",
+			"name": "Waypoint Echo",
+			"x": -51720.109375,
+			"y": -82807.03125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0001CAD5",
+			"type": "Diamond City",
+			"name": "Diamond City",
+			"x": -1080.942017,
+			"y": -2097.57373,
+			"area": "DiamondCity"
+		},
+		{
+			"form_id": "0001CAD8",
+			"type": "Settlement",
+			"name": "Diamond City Market",
+			"x": 1373.421143,
+			"y": 410.821381,
+			"area": "DiamondCity"
+		},
+		{
+			"form_id": "0001D6E7",
+			"type": "Church",
+			"name": "Trinity Plaza",
+			"x": 1342.75708,
+			"y": -22208.683594,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0001E305",
+			"type": "Graveyard",
+			"name": "Old Granary Burying Ground",
+			"x": 15654.088867,
+			"y": -13778.270508,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0001E306",
+			"type": "Swan Pond",
+			"name": "Swan's Pond",
+			"x": 11509.265625,
+			"y": -18008.105469,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0001E307",
+			"type": "Metro Station",
+			"name": "Park Street Station",
+			"x": 14878.141602,
+			"y": -15941.295898,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00020B81",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "0002112F",
+			"type": "Skyscraper",
+			"name": "Trinity Tower",
+			"x": 3739.31543,
+			"y": -24263.550781,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00022628",
+			"type": "Goodneighbor",
+			"name": "Goodneighbor",
+			"x": 20826.119141,
+			"y": -11904.713867,
+			"area": "Goodneighbor"
+		},
+		{
+			"form_id": "00024576",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "00024577",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "0002457B",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "00024580",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "00024836",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "0002495A",
+			"type": "Radio Tower",
+			"name": "Outpost Zimonja",
+			"x": -10606.697266,
+			"y": 100158.242188,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024F92",
+			"type": "Industrial Stacks",
+			"name": "Corvega Assembly Plant",
+			"x": -34808.246094,
+			"y": 32128.492187,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024F95",
+			"type": "Drive-In",
+			"name": "Starlight Drive In",
+			"x": -39208.847656,
+			"y": 57600.890625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024F9A",
+			"type": "Military Base",
+			"name": "Fort Hagen",
+			"x": -87978.539062,
+			"y": -5674.824219,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024F9B",
+			"type": "Office / Civic Building",
+			"name": "Hesters Consumer Robotics",
+			"x": 21672.755859,
+			"y": -29512.523437,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024F9C",
+			"type": "City",
+			"name": "Lexington",
+			"x": -33029.695312,
+			"y": 41006.21875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024F9D",
+			"type": "Encampment",
+			"name": "Gorski Cabin",
+			"x": -63734.539062,
+			"y": 58183.359375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024F9E",
+			"type": "Encampment",
+			"name": "Ranger Cabin",
+			"x": -88073.742188,
+			"y": 71694.382812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024F9F",
+			"type": "Junkyard",
+			"name": "Robotics Disposal Ground",
+			"x": -53451.152344,
+			"y": 99311.90625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024FA0",
+			"type": "Settlement",
+			"name": "Sunshine Tidings Co-op",
+			"x": -86685.5,
+			"y": 38379.359375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024FA1",
+			"type": "Quarry",
+			"name": "Thicket Excavations",
+			"x": -45164.980469,
+			"y": 82241.070312,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024FA2",
+			"type": "Pond / Lake",
+			"name": "Walden Pond",
+			"x": -69326.460938,
+			"y": 44242.738281,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024FA3",
+			"type": "Factory / Industrial Site",
+			"name": "Wicked Shipping Fleet Lockup",
+			"x": -84696.398438,
+			"y": 64375.84375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00024FBE",
+			"type": "Filling Station",
+			"name": "Red Rocket Truck Stop",
+			"x": -69379,
+			"y": 80148.046875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000252E9",
+			"type": "Low-Rise Building",
+			"name": "Wilson Atomatoys Corporate HQ",
+			"x": 6406.112793,
+			"y": -29624.451172,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000254E4",
+			"type": "Industrial Stacks",
+			"name": "Wilson Atomatoys Factory",
+			"x": 18906.292969,
+			"y": -91393.140625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00025561",
+			"type": "Industrial Stacks",
+			"name": "Cambridge Polymer Labs",
+			"x": -27347.425781,
+			"y": -2568.369385,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00026469",
+			"type": "Farm",
+			"name": "Finch Farm",
+			"x": 55168.011719,
+			"y": 47679.996094,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000291CC",
+			"type": "Low-Rise Building",
+			"name": "Roadside Pines Motel",
+			"x": -89318,
+			"y": -41435.710938,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002A4BB",
+			"type": "School",
+			"name": "Suffolk County Charter School",
+			"x": 3077.599121,
+			"y": -84298.6875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B4D0",
+			"type": "Satellite",
+			"name": "Fort Hagen Satellite Array",
+			"x": -100535.515625,
+			"y": -2366.126953,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B4D0",
+			"type": "Satellite",
+			"name": "Fort Hagen Satellite Array",
+			"x": -100535.515625,
+			"y": -2366.126953,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B7CA",
+			"type": "Gov't Building / Monument",
+			"name": "Fraternal Post 115",
+			"x": -26528,
+			"y": 3104,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B7CC",
+			"type": "Institute",
+			"name": "The Institute",
+			"x": -16775.347656,
+			"y": 1159.660889,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B7DC",
+			"type": "Industrial Dome",
+			"name": "Beantown Brewery",
+			"x": -42142.921875,
+			"y": 4746.07373,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B83E",
+			"type": "Skyscraper",
+			"name": "Mass Fusion Building",
+			"x": 18693.775391,
+			"y": -7164.127441,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B859",
+			"type": "Hospital",
+			"name": "Greater Mass Blood Clinic",
+			"x": -87589.6875,
+			"y": -12080.735352,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B86B",
+			"type": "Pond / Lake",
+			"name": "Old Gullet Sinkhole",
+			"x": 21780.941406,
+			"y": 68194.203125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B879",
+			"type": "Low-Rise Building",
+			"name": "BADTFL Regional Office",
+			"x": 10518.014648,
+			"y": 19758.804688,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B880",
+			"type": "Bunker Hill",
+			"name": "Bunker Hill",
+			"x": 18232.314453,
+			"y": 14378.210937,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B889",
+			"type": "Farm",
+			"name": "Graygarden",
+			"x": -47985.351562,
+			"y": 18472.773438,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B88F",
+			"type": "School",
+			"name": "East Boston Preparatory School",
+			"x": 45882.96875,
+			"y": 12726.006836,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B8DE",
+			"type": "Encampment",
+			"name": "Easy City Downs",
+			"x": 54544.3125,
+			"y": 12408.921875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B921",
+			"type": "Ruins - Urban",
+			"name": "College Square",
+			"x": -29692.560547,
+			"y": 14911.913086,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B967",
+			"type": "Libertalia",
+			"name": "Liberitalia",
+			"x": 79545,
+			"y": 17804.982422,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B969",
+			"type": "Bunker",
+			"name": "Federal Ration Stockpile",
+			"x": -83879.0625,
+			"y": 23204.082031,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B9DC",
+			"type": "Irish Pride",
+			"name": "Irish Pride Industries Shipyard",
+			"x": 18848,
+			"y": 26224,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B9DE",
+			"type": "School",
+			"name": "Shaw High School",
+			"x": -3432.203613,
+			"y": -62774.558594,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002B9F6",
+			"type": "Office / Civic Building",
+			"name": "Wattz Consumer Electronics",
+			"x": -6048.000977,
+			"y": 22911.998047,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BA2E",
+			"type": "Quarry",
+			"name": "Mass Gravel & Sand",
+			"x": -19939.296875,
+			"y": 26626.355469,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BA49",
+			"type": "Pier",
+			"name": "Nahant Oceanological Society",
+			"x": 105582.578125,
+			"y": 24731.416016,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BA4B",
+			"type": "Industrial Stacks",
+			"name": "Poseiden Energy Turbine #18-F",
+			"x": 10177.801758,
+			"y": 30224.113281,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BA87",
+			"type": "Metro Station",
+			"name": "Revere Beach Station",
+			"x": 57612.566406,
+			"y": 29377.757812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BA8C",
+			"type": "Ruins - Town",
+			"name": "Croup Manor",
+			"x": 91189.359375,
+			"y": 37248.324219,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BA8F",
+			"type": "Farm",
+			"name": "The Slog",
+			"x": 52512.507812,
+			"y": 70576.625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB02",
+			"type": "Skyscraper",
+			"name": "Ticonderoga",
+			"x": 5022.970215,
+			"y": 3699.896729,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB11",
+			"type": "Bunker",
+			"name": "Boston Mayoral Shelter",
+			"x": -101203.71875,
+			"y": -15322.791992,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB12",
+			"type": "Gov't Building / Monument",
+			"name": "Boston Public Library",
+			"x": -3490.25708,
+			"y": -22646.289062,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB46",
+			"type": "Office / Civic Building",
+			"name": "Cabot House",
+			"x": 18353.595703,
+			"y": 2118.949463,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB48",
+			"type": "Radio Tower",
+			"name": "Gunners Plaza",
+			"x": -14182.44043,
+			"y": -78683.976562,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB54",
+			"type": "Encampment",
+			"name": "Charles View Amphitheater",
+			"x": 6837.796875,
+			"y": -8581.571289,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB5B",
+			"type": "Pond / Lake",
+			"name": "Chestnut Hillock Reservoir",
+			"x": -29037,
+			"y": -24806,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB5E",
+			"type": "Factory / Industrial Site",
+			"name": "Electrical Hobbyist's Club",
+			"x": -58187.292969,
+			"y": -53621.015625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB61",
+			"type": "Custom House",
+			"name": "Custom House Tower",
+			"x": 32759.246094,
+			"y": -10065.709961,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB6A",
+			"type": "Shipwreck",
+			"name": "Cutler Bend",
+			"x": -27473.917969,
+			"y": -74349.25,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BB81",
+			"type": "Office / Civic Building",
+			"name": "Fallon's Department Store",
+			"x": -12726.888672,
+			"y": -61941.53125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BBA3",
+			"type": "Faneuil Hall",
+			"name": "Faneuil Hall",
+			"x": 26407.373047,
+			"y": -5545.841309,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BBBE",
+			"type": "Bunker",
+			"name": "Federal Surveillance Center K-21B",
+			"x": -104787.390625,
+			"y": -84110.820312,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BBD0",
+			"type": "Ruins - Town",
+			"name": "Forest Grove Marsh",
+			"x": -60894.675781,
+			"y": -18509.535156,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BBE6",
+			"type": "Metro Station",
+			"name": "West Roxbury Station",
+			"x": -7894.152344,
+			"y": -63110.179687,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BBF3",
+			"type": "Military Base",
+			"name": "Fort Strong",
+			"x": 76976,
+			"y": -17488,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BC07",
+			"type": "Irish Pride",
+			"name": "Four Leaf Fishpacking Plant",
+			"x": 33400.320312,
+			"y": -32500.007812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BC0B",
+			"type": "Brownstone Townhouse",
+			"name": "Back Street Apparel",
+			"x": -10737.46582,
+			"y": -14488.457031,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BC1A",
+			"type": "Shipwreck",
+			"name": "Wreck of the FMS Northern Star",
+			"x": 60962.554687,
+			"y": -84373.242188,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BC4B",
+			"type": "Vault",
+			"name": "Vault 95",
+			"x": -49106.949219,
+			"y": -89462.1875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BC66",
+			"type": "Satellite",
+			"name": "USAF Satellite Station Olivia",
+			"x": -41433.882812,
+			"y": 93037.625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BC76",
+			"type": "Office / Civic Building",
+			"name": "The Shamrock Taphouse",
+			"x": 31491.130859,
+			"y": -17614.849609,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BC8C",
+			"type": "Office / Civic Building",
+			"name": "The Gwinnett Restaurant",
+			"x": 32818.773437,
+			"y": -45179.535156,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BC98",
+			"type": "School",
+			"name": "D.B. Technical High School",
+			"x": 13417.609375,
+			"y": -30766.996094,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BCA5",
+			"type": "Castle",
+			"name": "The Castle",
+			"x": 48321.933594,
+			"y": -46600.113281,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BCE7",
+			"type": "Railroad",
+			"name": "NH&M Freight Depot",
+			"x": -6426.673828,
+			"y": -39689.453125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BD1E",
+			"type": "Military Base",
+			"name": "S. Boston Military Checkpoint",
+			"x": 14510.53125,
+			"y": -46451.515625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BD42",
+			"type": "Metro Station",
+			"name": "Andrew Station",
+			"x": 21952,
+			"y": -42976,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BDEB",
+			"type": "Junkyard",
+			"name": "Big John's Salvage",
+			"x": 4970.438965,
+			"y": -44639.972656,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BEE8",
+			"type": "Satellite",
+			"name": "Revere Satellite Array",
+			"x": 51641.597656,
+			"y": 37535.867188,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BF2D",
+			"type": "Military Base",
+			"name": "National Guard Training Yard",
+			"x": 39114.171875,
+			"y": 39581.492188,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BFC1",
+			"type": "Ruins - Urban",
+			"name": "Super Duper Mart",
+			"x": -34491.359375,
+			"y": 43176.015625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BFC3",
+			"type": "Pier",
+			"name": "Gibson Point Pier",
+			"x": 65372.785156,
+			"y": 41444.476562,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BFCF",
+			"type": "Ruins - Town",
+			"name": "West Everett Estates",
+			"x": 13591.40332,
+			"y": 38601.007812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BFDF",
+			"type": "Pier",
+			"name": "Reeb Marina",
+			"x": 58176,
+			"y": 37760,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BFE5",
+			"type": "Hospital",
+			"name": "Med-Tek Research",
+			"x": 23112.787109,
+			"y": 54460.941406,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002BFFE",
+			"type": "Office / Civic Building",
+			"name": "Taffington Boathouse",
+			"x": 6617.544922,
+			"y": 46030.269531,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C07B",
+			"type": "Industrial Stacks",
+			"name": "Saugus Ironworks",
+			"x": 54454.300781,
+			"y": 59023.121094,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C07F",
+			"type": "Radioactive Area",
+			"name": "Crater House",
+			"x": 90651.640625,
+			"y": 69404.734375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C088",
+			"type": "Vault",
+			"name": "Vault 75",
+			"x": 18994.775391,
+			"y": 61599.382812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C0D5",
+			"type": "Ruins - Urban",
+			"name": "Slocum's Joe Corporate HQ",
+			"x": 17285.361328,
+			"y": 58287.339844,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C10D",
+			"type": "Hospital",
+			"name": "Parsons State Insane Asylum",
+			"x": 52694.699219,
+			"y": 86705.828125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C10F",
+			"type": "Graveyard",
+			"name": "Wildwood Cemetery",
+			"x": -11694.444336,
+			"y": 67820.015625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C16E",
+			"type": "Hospital",
+			"name": "Medford Memorial Hospital",
+			"x": 11072,
+			"y": 59584,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C170",
+			"type": "Airfield",
+			"name": "Skylanes Flight 1981",
+			"x": -5564.828125,
+			"y": 78981.03125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C173",
+			"type": "Pond / Lake",
+			"name": "Dark Hollow Pond",
+			"x": 9288.219727,
+			"y": 74896.90625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C1B7",
+			"type": "Ruins - Town",
+			"name": "Rook Family House",
+			"x": 94874.046875,
+			"y": 86668.867188,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C1D2",
+			"type": "Ruins - Town",
+			"name": "Mystic Pines",
+			"x": -24233.173828,
+			"y": 46668.484375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C1DB",
+			"type": "Junkyard",
+			"name": "Hub City Auto Wreckers",
+			"x": 61514.503906,
+			"y": 57117.257812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C241",
+			"type": "Quarry",
+			"name": "Dunwich Borers",
+			"x": 66904.65625,
+			"y": 69940,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C26E",
+			"type": "Pier",
+			"name": "Kingsport Lighthouse",
+			"x": 89557.851562,
+			"y": 59967.417969,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C2AF",
+			"type": "Settlement",
+			"name": "Lynn Woods",
+			"x": 42547.742188,
+			"y": 90805.914062,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C2E5",
+			"type": "Hospital",
+			"name": "Milton General Hospital",
+			"x": -7838.476074,
+			"y": -58291.738281,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C489",
+			"type": "Farm",
+			"name": "Breakheart Banks",
+			"x": 36038.035156,
+			"y": 77691.5,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C4D4",
+			"type": "Junkyard",
+			"name": "Rotten Landfill",
+			"x": -22614.056641,
+			"y": 62543.746094,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C561",
+			"type": "Metro Station",
+			"name": "Malden Center",
+			"x": 14824.554687,
+			"y": 58814.34375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C5BC",
+			"type": "Junkyard",
+			"name": "Scrap Palace",
+			"x": -44192.824219,
+			"y": -74941.429688,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C5BD",
+			"type": "Camper",
+			"name": "Rocky Narrows Park",
+			"x": -55195.828125,
+			"y": 26826.595703,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C5F0",
+			"type": "Forested",
+			"name": "Robotics Pioneer Park",
+			"x": -49667.984375,
+			"y": -68420.523437,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C611",
+			"type": "Settlement",
+			"name": "Quincy Ruins",
+			"x": 27461.742187,
+			"y": -85579.984375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C64C",
+			"type": "Quarry",
+			"name": "Quincy Quarries",
+			"x": 14544.477539,
+			"y": -81255.890625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C64C",
+			"type": "Quarry",
+			"name": "Quincy Quarries",
+			"x": 14544.477539,
+			"y": -81255.890625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C64D",
+			"type": "Railroad",
+			"name": "Boston Police Rationing Site",
+			"x": -16594.582031,
+			"y": -39282.515625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C691",
+			"type": "Military Base",
+			"name": "Coast Guard Pier",
+			"x": -33693.230469,
+			"y": -51814.675781,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C6AB",
+			"type": "Pier",
+			"name": "Egret Tours Marina",
+			"x": -31166.285156,
+			"y": -62888.996094,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C6E3",
+			"type": "Pond / Lake",
+			"name": "Westing Estate",
+			"x": -47263.316406,
+			"y": -43526.144531,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C6FC",
+			"type": "Industrial Stacks",
+			"name": "ArcJet Systems",
+			"x": -67592,
+			"y": 20064,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C71D",
+			"type": "Junkyard",
+			"name": "Atom Cats Garage",
+			"x": 38379.492188,
+			"y": -71075.148438,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C71E",
+			"type": "Ruins - Town",
+			"name": "Hardware Town",
+			"x": -23475.619141,
+			"y": -33961.046875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C72B",
+			"type": "Ruins - Town",
+			"name": "Hyde Park",
+			"x": 7100.858398,
+			"y": -75153.445312,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C72E",
+			"type": "Office / Civic Building",
+			"name": "HalluciGen, Inc.",
+			"x": 6103.559082,
+			"y": -13656.456055,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C72F",
+			"type": "Junkyard",
+			"name": "Jalbert Brothers Disposal",
+			"x": -46588.027344,
+			"y": 25835.748047,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C777",
+			"type": "Radio Tower",
+			"name": "WRVR Broadcast Station",
+			"x": -39728,
+			"y": -56840,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C780",
+			"type": "Pond / Lake",
+			"name": "Lake Cochituate",
+			"x": -78974.15625,
+			"y": -44483.917969,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C802",
+			"type": "Elevated Highway",
+			"name": "Mass Pike Interchange",
+			"x": -69224.640625,
+			"y": -34810.914062,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C810",
+			"type": "School",
+			"name": "University Point",
+			"x": 23471.931641,
+			"y": -57168.027344,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C821",
+			"type": "Ruins - Town",
+			"name": "Natick Banks",
+			"x": -86800,
+			"y": -47056,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C837",
+			"type": "Pond / Lake",
+			"name": "Neponset Park",
+			"x": 21658.361328,
+			"y": -72891.203125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C855",
+			"type": "Farm",
+			"name": "Warwick Homestead",
+			"x": 57336.429687,
+			"y": -74971.34375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C866",
+			"type": "Church",
+			"name": "Old North Church",
+			"x": 29036.896484,
+			"y": 1093.02771,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C87D",
+			"type": "Industrial Stacks",
+			"name": "Poseidon Energy",
+			"x": 41824,
+			"y": -90112,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002C949",
+			"type": "Sewer / Utility Tunnels",
+			"name": "Fens Street Sewer",
+			"x": -19309.447266,
+			"y": -26817.451172,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0002CF9E",
+			"type": "Natural Landmark",
+			"name": "Spectacle Island",
+			"x": 74770.671875,
+			"y": -59106.628906,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0003ADCD",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "0003ADD1",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "0003D833",
+			"type": "Industrial Stacks",
+			"name": "Longneck Lukowski's Cannery",
+			"x": 79992,
+			"y": 55488,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0003DAB6",
+			"type": "Police Station",
+			"name": "Cambridge Police Station",
+			"x": -28908.457031,
+			"y": 10171.888672,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0003DF66",
+			"type": "Railroad",
+			"name": "Bedford Station",
+			"x": -29602.396484,
+			"y": 69760.617188,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0003F035",
+			"type": "Settlement",
+			"name": "Combat Zone",
+			"x": 13184.999023,
+			"y": -23091.609375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0004763F",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "00047650",
+			"type": "Vault",
+			"name": "Vault 81",
+			"x": -37803.199219,
+			"y": -23720.890625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000479FA",
+			"type": "Radioactive Area",
+			"name": "Mass Fusion Disposal Site",
+			"x": -70692.765625,
+			"y": -54919.933594,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0004D53E",
+			"type": "Factory / Industrial Site",
+			"name": "Parsons Creamery",
+			"x": 49253.757812,
+			"y": 99758.320312,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0005483F",
+			"type": "Industrial Stacks",
+			"name": "Mahkra Fishpacking",
+			"x": 83679.539062,
+			"y": 99042.851562,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0005E630",
+			"type": "Ruins - Town",
+			"name": "Jamaica Plain",
+			"x": 9968.90625,
+			"y": -63015.9375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00063D67",
+			"type": "Ruins - Urban",
+			"name": "Postal Square",
+			"x": 26546.650391,
+			"y": -14843.163086,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00066645",
+			"type": "Ruins - Urban",
+			"name": "Haymarket Mall",
+			"x": 21960,
+			"y": -3656,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00066647",
+			"type": "Skyscraper",
+			"name": "35 Court",
+			"x": 29578.867187,
+			"y": -12353.916016,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00066648",
+			"type": "Ruins - Urban",
+			"name": "Water Street Apartments",
+			"x": 21734.671875,
+			"y": -14946.490234,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00066905",
+			"type": "Office / Civic Building",
+			"name": "Hubris Comics",
+			"x": 7148.975586,
+			"y": -19572.792969,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0006F2C4",
+			"type": "Elevated Highway",
+			"name": "Fallen Skybridge",
+			"x": 21460.378906,
+			"y": -16120.992187,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0006F322",
+			"type": "Skyscraper",
+			"name": "Garden Terrace",
+			"x": 24278.695312,
+			"y": -4063.928955,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0006F5D4",
+			"type": "Farm",
+			"name": "Abernathy Farm",
+			"x": -76640,
+			"y": 67872,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00071F64",
+			"type": "Skyscraper",
+			"name": "Commonwealth Bank",
+			"x": 27367.03125,
+			"y": -8134.401367,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00072A48",
+			"type": "Sanctuary",
+			"name": "Sanctuary",
+			"x": -80768.1875,
+			"y": 88174.804688,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00074BDF",
+			"type": "Skyscraper",
+			"name": "Weatherby Investment Trust",
+			"x": 27359.853516,
+			"y": -3820.02124,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00074BE0",
+			"type": "USS Constitution",
+			"name": "USS Constitution",
+			"x": 27359.853516,
+			"y": -3844.02124,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00078C76",
+			"type": "Camper",
+			"name": "Fiddler's Green Trailer Estates",
+			"x": -76395.398438,
+			"y": -294.522552,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00078DB2",
+			"type": "Natural Landmark",
+			"name": "Boston Common",
+			"x": 12705.563477,
+			"y": -17196.083984,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0007D6B6",
+			"type": "Skyscraper",
+			"name": "Greenetech Genetics",
+			"x": -2667.147949,
+			"y": 882.456055,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00082138",
+			"type": "Ruins - Town",
+			"name": "Concord",
+			"x": -60286.011719,
+			"y": 72977.789062,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00084BEB",
+			"type": "Airfield",
+			"name": "Boston Airport",
+			"x": 48073.898438,
+			"y": -3331.962402,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0008BCE7",
+			"type": "Submarine",
+			"name": "Yangtze",
+			"x": 41475.644531,
+			"y": -22655.193359,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0008CB75",
+			"type": "Office / Civic Building",
+			"name": "Pickman Gallery",
+			"x": 26023.601562,
+			"y": 3203.477783,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0008F07F",
+			"type": "Skyscraper",
+			"name": "Vault-Tec Regional HQ",
+			"x": 12480.771484,
+			"y": -9530.158203,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00090E59",
+			"type": "Prydwen",
+			"name": "The Prydwen",
+			"x": 54805.492187,
+			"y": -9271.691406,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00096C89",
+			"type": "Bunker",
+			"name": "Listening Post Bravo",
+			"x": 38353.527344,
+			"y": 62590.910156,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009B040",
+			"type": "USS Constitution",
+			"name": "USS Constitution",
+			"x": 27233.632812,
+			"y": 13174.519531,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009B1B1",
+			"type": "Farm",
+			"name": "Tenpines Bluff",
+			"x": -22154.769531,
+			"y": 89056.078125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009B1BF",
+			"type": "Farm",
+			"name": "Nordhagen Beach",
+			"x": 64214.683594,
+			"y": 3311.321289,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009B1CF",
+			"type": "Farm",
+			"name": "Oberland Station",
+			"x": -46180.316406,
+			"y": -4997.758301,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009B1DA",
+			"type": "Farm",
+			"name": "County Crossing",
+			"x": 38674.199219,
+			"y": 31457.03125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009B1E5",
+			"type": "Farm",
+			"name": "Somerville Place",
+			"x": -36033.703125,
+			"y": -91751.6875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009B1F0",
+			"type": "Farm",
+			"name": "Greentop Nursery",
+			"x": 29735.650391,
+			"y": 67383,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009BC21",
+			"type": "Industrial Stacks",
+			"name": "Poseidon Reservoir",
+			"x": -87711.289062,
+			"y": -34164.835937,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009C38C",
+			"type": "Gov't Building / Monument",
+			"name": "Dorchester Heights Monument",
+			"x": 29610.021484,
+			"y": -47920.476562,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009C38E",
+			"type": "Office / Civic Building",
+			"name": "L Street Bathhouse",
+			"x": 32951.832031,
+			"y": -52946.210937,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009C390",
+			"type": "Town",
+			"name": "Hawthorne Estate",
+			"x": 23777.892578,
+			"y": -50443.871094,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009F272",
+			"type": "Vault",
+			"name": "Vault 111",
+			"x": -89271.984375,
+			"y": 91369.304688,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009FB56",
+			"type": "Skyscraper",
+			"name": "Boston Bugle Building",
+			"x": 18106.648438,
+			"y": -4094.191406,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009FB59",
+			"type": "Ruins - Urban",
+			"name": "Tower Apartments",
+			"x": 11461.818359,
+			"y": -3810.617432,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0009FF3D",
+			"type": "Ruins - Town",
+			"name": "Navy Yard",
+			"x": 22976,
+			"y": 10432,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A017E",
+			"type": "Skyscraper",
+			"name": "Oakwood Residences",
+			"x": 16819.275391,
+			"y": -21425.810547,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A0180",
+			"type": "Skyscraper",
+			"name": "Hub 360",
+			"x": 22953.232422,
+			"y": -19596.835938,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A069E",
+			"type": "Pier",
+			"name": "Long Wharf",
+			"x": 40938.476562,
+			"y": -8881.273438,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A16E8",
+			"type": "School",
+			"name": "South Boston High School",
+			"x": 31786.439453,
+			"y": -49232.511719,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A16E9",
+			"type": "Graveyard",
+			"name": "South Boston Graveyard",
+			"x": 37029.714844,
+			"y": -47622.128906,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A21F1",
+			"type": "Ruins - Urban",
+			"name": "Shenley's Oyster Bar",
+			"x": 4801.126465,
+			"y": -18039.316406,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A2218",
+			"type": "City",
+			"name": "Layton Towers",
+			"x": 1302.528687,
+			"y": -30543.691406,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A4654",
+			"type": "Ruins - Urban",
+			"name": "Raider Drug Den",
+			"x": 25092.041016,
+			"y": 17358.005859,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A59EB",
+			"type": "Church",
+			"name": "Holy Mission Congregation",
+			"x": -5428.053711,
+			"y": -17064.085937,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A6008",
+			"type": "Irish Pride",
+			"name": "Boxing Gym",
+			"x": 26750.210937,
+			"y": 2325.455322,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A8A41",
+			"type": "Office / Civic Building",
+			"name": "Apartment",
+			"x": 21521.515625,
+			"y": 3707.712891,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A8C6D",
+			"type": "Office / Civic Building",
+			"name": "Mean Pastries",
+			"x": 23950.029297,
+			"y": 1204.644897,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A93B0",
+			"type": "Metro Station",
+			"name": "Valenti Station",
+			"x": 29380.519531,
+			"y": -3039.5,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96D0",
+			"type": "Ruins - Urban",
+			"name": "Cambridge Academic Center",
+			"x": -23939.828125,
+			"y": 10198.655273,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96D2",
+			"type": "Skyscraper",
+			"name": "Collegiate Administration Building",
+			"x": -22337.361328,
+			"y": 16284.038086,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96D4",
+			"type": "Office / Civic Building",
+			"name": "Cambridge Campus Diner",
+			"x": -22087.560547,
+			"y": 7850.03125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96DE",
+			"type": "Ruins - Urban",
+			"name": "Campus Law Offices",
+			"x": -19636.269531,
+			"y": 5926.490234,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96E0",
+			"type": "Graveyard",
+			"name": "Cambridge Graveyard",
+			"x": -19200,
+			"y": 12752,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96F0",
+			"type": "Settlement",
+			"name": "Cambridge Raider Base",
+			"x": -11529.583008,
+			"y": 15110.311523,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96F2",
+			"type": "Ruins - Town",
+			"name": "Cambridge Hardware Store",
+			"x": -15113.300781,
+			"y": 17892.103516,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96F8",
+			"type": "Natural Landmark",
+			"name": "Cambridge Baseball Diamond",
+			"x": -8253.302734,
+			"y": 10033.499023,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96FA",
+			"type": "Church",
+			"name": "Cambridge Church",
+			"x": 3591.608643,
+			"y": 18399.347656,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A96FC",
+			"type": "Skyscraper",
+			"name": "Cambridge Construction Site",
+			"x": 9393.858398,
+			"y": 12229.385742,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A970A",
+			"type": "Factory / Industrial Site",
+			"name": "Cambridge Warehouse",
+			"x": 5762.10791,
+			"y": 15111.776367,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A970C",
+			"type": "City",
+			"name": "Monsignor Plaza",
+			"x": 4641.554199,
+			"y": 8677.612305,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000A9712",
+			"type": "Ruins - Urban",
+			"name": "East C.I.T. Raider Camp",
+			"x": -9376,
+			"y": -320,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD89",
+			"type": "Radioactive Area",
+			"name": "Crater of Atom",
+			"x": -99710.890625,
+			"y": -116049.78125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD8C",
+			"type": "Airfield",
+			"name": "Skylanes Flight 1665",
+			"x": -64854.203125,
+			"y": -125006.28125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD8E",
+			"type": "Church",
+			"name": "Hopesmarch Pentecostal Church",
+			"x": -60448.101562,
+			"y": -101168.703125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD90",
+			"type": "Cave",
+			"name": "Cave",
+			"x": -75417.703125,
+			"y": -89808.554688,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD93",
+			"type": "Cave",
+			"name": "Cave",
+			"x": -71997.015625,
+			"y": -116780.5,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD94",
+			"type": "Factory / Industrial Site",
+			"name": "O'Neill Family Manufacturing",
+			"x": -78873.617188,
+			"y": -130105.40625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD96",
+			"type": "Factory / Industrial Site",
+			"name": "Capsized Factory",
+			"x": -85175.835938,
+			"y": -97384.515625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD98",
+			"type": "Church",
+			"name": "Forgotten Church",
+			"x": -121180.140625,
+			"y": -86049,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD9A",
+			"type": "Airfield",
+			"name": "Vertibird Wreckage",
+			"x": -62551.453125,
+			"y": -109744.9375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD9C",
+			"type": "Bunker",
+			"name": "Federal Supply Cache 84NE",
+			"x": -91048.695312,
+			"y": -74600.726562,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADD9E",
+			"type": "Skyscraper",
+			"name": "Atlantic Offices",
+			"x": -94747.820312,
+			"y": -94894.359375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADDA0",
+			"type": "Industrial Stacks",
+			"name": "Decrepit Factory",
+			"x": -109093.367187,
+			"y": -121065.8125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADDA2",
+			"type": "Industrial Dome",
+			"name": "Decayed Reactor Site",
+			"x": -117022.867187,
+			"y": -107646.257812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000ADDA4",
+			"type": "Sentinel",
+			"name": "Sentinel Site",
+			"x": -79765.609375,
+			"y": -141218.375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000B3CBA",
+			"type": "Salem",
+			"name": "Museum of Witchcraft",
+			"x": 84599.6875,
+			"y": 73939.546875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000B3EC6",
+			"type": "Railroad - Faction",
+			"name": "Mercer Safehouse",
+			"x": 27980.886719,
+			"y": 17094.042969,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000B4654",
+			"type": "Cave",
+			"name": "Rocky Cave",
+			"x": -116397.023437,
+			"y": -136728.78125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000BA770",
+			"type": "Vault",
+			"name": "Vault 114",
+			"x": 8019.567871,
+			"y": -18075.195312,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000BA83B",
+			"type": "Bunker",
+			"name": "Recon Bunker Theta",
+			"x": 20120,
+			"y": 101840,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000BB900",
+			"type": "Low-Rise Building",
+			"name": "Lynn Pier Parking",
+			"x": 68952.070312,
+			"y": 50417.953125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000BD4A5",
+			"type": "Hospital",
+			"name": "Sandy Coves Convalescent Home",
+			"x": 89531.273438,
+			"y": 79111.6875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000BEB22",
+			"type": "Office / Civic Building",
+			"name": "Salem",
+			"x": 93443.65625,
+			"y": 80551.921875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000C804F",
+			"type": "Ruins - Urban",
+			"name": "Founder's Triangle",
+			"x": -21461.625,
+			"y": -25709.865234,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000C9BBE",
+			"type": "Pond / Lake",
+			"name": "Murkwater Construction Site",
+			"x": 5154.391602,
+			"y": -95173.8125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000CFF0D",
+			"type": "Ruins - Urban",
+			"name": "Evans Way Cul-de-Sac",
+			"x": -13352.833984,
+			"y": -34920.898438,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000D182E",
+			"type": "Settlement",
+			"name": "Mass Pike Tunnel West",
+			"x": -29693.183594,
+			"y": -32666.267578,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000D182F",
+			"type": "Settlement",
+			"name": "Mass Pike Tunnel East",
+			"x": -5264,
+			"y": -33040,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000E8CC0",
+			"type": "Church",
+			"name": "Nahant Chapel",
+			"x": 101052.28125,
+			"y": 33670.507812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000EAE52",
+			"type": "Office / Civic Building",
+			"name": "General Atomics Galleria",
+			"x": 6244,
+			"y": 82260,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000EDCEE",
+			"type": "Low-Rise Building",
+			"name": "Drumlin Diner",
+			"x": -50291.457031,
+			"y": 55078.925781,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000F0C6D",
+			"type": "Settlement",
+			"name": "Covenant",
+			"x": -7896.411621,
+			"y": 47115.722656,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000F60E7",
+			"type": "Factory / Industrial Site",
+			"name": "Mass Fusion Containment Shed",
+			"x": 19599.792969,
+			"y": 78334.5,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "000F75E9",
+			"type": "Industrial Stacks",
+			"name": "General Atomics Factory",
+			"x": 37859.433594,
+			"y": -35456.152344,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0010196C",
+			"type": "Encampment",
+			"name": "Abandoned Shack",
+			"x": -104709.359375,
+			"y": -83907.289062,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00108998",
+			"type": "Pond / Lake",
+			"name": "Lake Quannapowitt",
+			"x": 4448.30127,
+			"y": 93224.132812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0010985B",
+			"type": "Gov't Building / Monument",
+			"name": "Museum of Freedom",
+			"x": -57011.765625,
+			"y": 70392.140625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0010985C",
+			"type": "Ruins - Town",
+			"name": "Fairline Hill Estates",
+			"x": -13878.245117,
+			"y": -51513.496094,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0010985E",
+			"type": "Industrial Dome",
+			"name": "Weston Water Treatment Plant",
+			"x": -61250.664062,
+			"y": -1831.054321,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00120826",
+			"type": "Natural Landmark",
+			"name": "Christopher Columbus Park",
+			"x": 33847.359375,
+			"y": -5220.513672,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001246DC",
+			"type": "Pier",
+			"name": "Nahant Wharf",
+			"x": 82153.765625,
+			"y": 25431.279297,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00137A64",
+			"type": "City",
+			"name": "Lexington Apartments",
+			"x": -27751.136719,
+			"y": 36870.667969,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0013BF2C",
+			"type": "Radioactive Area",
+			"name": "Hugo's Hole",
+			"x": 73386.203125,
+			"y": 72231.507812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0013F9DD",
+			"type": "Graveyard",
+			"name": "North End Graveyard",
+			"x": 23840,
+			"y": 2976,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0014536B",
+			"type": "City",
+			"name": "Parkview Apartments",
+			"x": -21935.714844,
+			"y": -28362.476562,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0014536D",
+			"type": "Ruins - Urban",
+			"name": "Brookline Building",
+			"x": -19808.462891,
+			"y": -21239.263672,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0014536F",
+			"type": "Skyscraper",
+			"name": "South Fens Tower",
+			"x": -12605.620117,
+			"y": -32759.146484,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00145374",
+			"type": "Office / Civic Building",
+			"name": "Bridgeway Trust",
+			"x": -9586.302734,
+			"y": -17027.585937,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0014849F",
+			"type": "Police Station",
+			"name": "Police Precinct 8",
+			"x": -7144.602051,
+			"y": -23396.152344,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001493DF",
+			"type": "Ruins - Town",
+			"name": "Ivan's",
+			"x": 42081.390625,
+			"y": -43732.46875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001493EB",
+			"type": "Industrial Stacks",
+			"name": "Factory",
+			"x": 27806.291016,
+			"y": -36407.804688,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001493ED",
+			"type": "Ruins - Urban",
+			"name": "Union Man's Circle",
+			"x": 24922.3125,
+			"y": -47829.765625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001493EF",
+			"type": "Ruins - Urban",
+			"name": "Harbormaster Hotel",
+			"x": 28405.845703,
+			"y": -20982.027344,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00149413",
+			"type": "Ruins - Urban",
+			"name": "Jimbo's Tower",
+			"x": 8323.685547,
+			"y": -24087.392578,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0014D16F",
+			"type": "Railroad - Faction",
+			"name": "Railroad HQ",
+			"x": 32562.095703,
+			"y": 234.412415,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00156897",
+			"type": "Settlement",
+			"name": "Home Plate",
+			"x": 3162.528809,
+			"y": 1861.405151,
+			"area": "DiamondCity"
+		},
+		{
+			"form_id": "0015D33A",
+			"type": "Skyscraper",
+			"name": "Mass Fusion Executive Suite",
+			"x": 19808,
+			"y": -7072,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0015E9A7",
+			"type": "Natural Landmark",
+			"name": "Edge of the Glowing Sea",
+			"x": -56092.308594,
+			"y": -78515.8125,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016349B",
+			"type": "Office / Civic Building",
+			"name": "C.I.T. Ruins",
+			"x": -16793.677734,
+			"y": -2777.439941,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001680C4",
+			"type": "Ruins - Urban",
+			"name": "Cambridge Crater",
+			"x": -1926.375,
+			"y": 7685.773926,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016A5F4",
+			"type": "Ruins - Urban",
+			"name": "Warren Theater",
+			"x": 10889.037109,
+			"y": -26245.068359,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016A6A8",
+			"type": "Office / Civic Building",
+			"name": "Marlborough House",
+			"x": 2832.513916,
+			"y": -14437.984375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016A6AA",
+			"type": "Elevated Highway",
+			"name": "Footbridge Camp",
+			"x": -856.683777,
+			"y": -13235.950195,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016A6AD",
+			"type": "Office / Civic Building",
+			"name": "Boylston Club",
+			"x": 11593.481445,
+			"y": -21004.957031,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016A6AF",
+			"type": "Pier",
+			"name": "Science Center Gift Shop",
+			"x": 9595.952148,
+			"y": 6023.061035,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016A6B1",
+			"type": "Ruins - Urban",
+			"name": "Camp Kendall",
+			"x": 2235.058594,
+			"y": -1361.322021,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016A6B2",
+			"type": "Ruins - Urban",
+			"name": "Kendall Parking Garage",
+			"x": -927.561096,
+			"y": 3075.725342,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016A6B8",
+			"type": "Ruins - Urban",
+			"name": "Major Crossroad",
+			"x": -11871.595703,
+			"y": 4695.921875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016A6B9",
+			"type": "Hospital",
+			"name": "Kendall Hospital",
+			"x": -15164.751953,
+			"y": 9908.27832,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016C7BB",
+			"type": "Ruins - Urban",
+			"name": "Prost Bar",
+			"x": 9758.305664,
+			"y": -15683.243164,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016CA06",
+			"type": "Car",
+			"name": "Freeway Pileup",
+			"x": 13384.151367,
+			"y": -33877.535156,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016CA12",
+			"type": "Encampment",
+			"name": "Back Alley Camp",
+			"x": 17510.824219,
+			"y": -31376.857422,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016CA14",
+			"type": "Ruins - Urban",
+			"name": "Ticker Tape Lounge",
+			"x": 21591.587891,
+			"y": -22744.464844,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016CA16",
+			"type": "Ruins - Urban",
+			"name": "Pizza Parlour",
+			"x": 28873.246094,
+			"y": 5435.629395,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016CA18",
+			"type": "Ruins - Urban",
+			"name": "Raider Alleyway Outpost",
+			"x": -4528.38623,
+			"y": -15217.964844,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016CA1B",
+			"type": "Natural Landmark",
+			"name": "Lil' Gentry Playground",
+			"x": 14516.225586,
+			"y": -6060.072266,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016CA1D",
+			"type": "Ruins - Urban",
+			"name": "Hangman's Alley",
+			"x": -20574.564453,
+			"y": -17968.435547,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016CA1E",
+			"type": "Metro Station",
+			"name": "Subway Station",
+			"x": -25456,
+			"y": -20336,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0016CA20",
+			"type": "Ruins - Urban",
+			"name": "Flagon Tunnel",
+			"x": -16447.621094,
+			"y": -18528.859375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00176078",
+			"type": "Police Station",
+			"name": "South Boston Police Department",
+			"x": 26155.507812,
+			"y": -42843.265625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00183ACB",
+			"type": "Police Station",
+			"name": "Natick Police Department",
+			"x": -84458.0625,
+			"y": -48120.320312,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0018673A",
+			"type": "Police Station",
+			"name": "Quincy Police Station",
+			"x": 29625.234375,
+			"y": -89561.757812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0018673B",
+			"type": "Police Station",
+			"name": "Nahant Sherrif's Department",
+			"x": 83133.554688,
+			"y": 28209.337891,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00186BD0",
+			"type": "Police Station",
+			"name": "East Boston Police Station",
+			"x": 39165,
+			"y": 9457.986328,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0018B892",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "0018B893",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "0018B894",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "00191D84",
+			"type": "Hospital",
+			"name": "Mass Bay Medical Center",
+			"x": 19286.132812,
+			"y": -26527.076172,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00191F00",
+			"type": "Military Base",
+			"name": "Relay Tower",
+			"x": 488.089508,
+			"y": 63.675888
+		},
+		{
+			"form_id": "00191F03",
+			"type": "Radio Tower",
+			"name": "Relay Tower 0BB-915",
+			"x": -91276.789062,
+			"y": 5004.62207,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00194FB4",
+			"type": "Industrial Stacks",
+			"name": "Gwinnett Brewery",
+			"x": 31750.003906,
+			"y": -41667.410156,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00194FB6",
+			"type": "Metro Station",
+			"name": "Medical Center Metro",
+			"x": 15598.845703,
+			"y": -27821.490234,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001A5B64",
+			"type": "Gov't Building / Monument",
+			"name": "Massachusetts State House",
+			"x": 12895.228516,
+			"y": -12818.046875,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001A5B66",
+			"type": "Office / Civic Building",
+			"name": "Old Corner Bookstore",
+			"x": 20928,
+			"y": -6144,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001A5B68",
+			"type": "Ruins - Town",
+			"name": "Paul Revere House",
+			"x": 30939.029297,
+			"y": -1848.936401,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001A7291",
+			"type": "School",
+			"name": "Malden Middle School",
+			"x": 18994.775391,
+			"y": 61599.382812,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001AC2E1",
+			"type": "Radio Tower",
+			"name": "Relay Tower 0DB-521",
+			"x": -53973.910156,
+			"y": -111388.320312,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001ADA23",
+			"type": "Ruins - Town",
+			"name": "Coastal Cottage",
+			"x": 69518.882812,
+			"y": 89355.265625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001B9A24",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "001B9A25",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "001B9A26",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "001B9A2A",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "001B9A2E",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "001D1AE7",
+			"type": "Radio Tower",
+			"name": "Radio Tower 3SM-U81",
+			"x": 14423.305664,
+			"y": 88399.242188,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001D2068",
+			"type": "Radio Tower",
+			"name": "Relay Tower 1DL-109",
+			"x": -51070.125,
+			"y": -11633.553711,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001D8826",
+			"type": "Radio Tower",
+			"name": "Relay Tower 0SC-527",
+			"x": -4279.458496,
+			"y": -48715.777344,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001E22FB",
+			"type": "Radio Tower",
+			"name": "Relay Tower 0MC-810",
+			"x": 25985.578125,
+			"y": 38866.609375,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001EB9A6",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "001F2637",
+			"type": "USS Constitution",
+			"name": "USS Constitution",
+			"x": 27186.623047,
+			"y": -4011.791748,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "001F2639",
+			"type": "Ruins - Urban",
+			"name": "Weatherby Savings & Loan",
+			"x": 27522.505859,
+			"y": 13183.319336,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0021DDB9",
+			"type": "Vault",
+			"name": "Vault 81 Atrium",
+			"x": -40789.652344,
+			"y": -20621.435547,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00225BB1",
+			"type": "Skyscraper",
+			"name": "Dartmouth Professional Building",
+			"x": -1842.529663,
+			"y": -29406.480469,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0022F204",
+			"type": "Filling Station",
+			"name": "Fort Hagen Filling Station",
+			"x": -87137.46875,
+			"y": -1005.453552,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0023EC8D",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "00248478",
+			"type": "Car",
+			"name": "Tucker Memorial Bridge",
+			"x": 1576.437256,
+			"y": 31418.839844,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00248CCE",
+			"type": "Church",
+			"name": "Lonely Chapel",
+			"x": -90837.59375,
+			"y": 29422.871094,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "00249680",
+			"type": "Shipwreck",
+			"name": "Wreck of the USS Riptide",
+			"x": -17465.416016,
+			"y": -9899.851562,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "002499B5",
+			"type": "Encampment",
+			"name": "Peabody House",
+			"x": 34691.007812,
+			"y": -93687.460938,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0024A066",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "01004314",
+			"type": "Office / Civic Building",
+			"name": "RobCo Sales & Service Center",
+			"x": 42259.769531,
+			"y": 3400.50293,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "01004316",
+			"type": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
+			"name": "The Mechanist's Lair",
+			"x": 42649.324219,
+			"y": 16275.075195,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "030034F6",
+			"type": "Settlement",
+			"name": "Nakano Residence",
+			"x": 80812.84375,
+			"y": 122126.367187,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0300448D",
+			"type": "Radioactive Area",
+			"name": "The Nucleus",
+			"x": -1047.703979,
+			"y": -8350.186523,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "030049FB",
+			"type": "Drive-In",
+			"name": "Eden Meadows Cinemas",
+			"x": -6777.089355,
+			"y": 21228.414062,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03005C7A",
+			"type": "Settlement",
+			"name": "Far Harbor",
+			"x": 55296,
+			"y": 34112,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03006128",
+			"type": "Observatory",
+			"name": "Acadia",
+			"x": 38868.429688,
+			"y": 5734.161621,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03009351",
+			"type": "Settlement",
+			"name": "National Park Visitor's Center",
+			"x": 24294.775391,
+			"y": 45804.984375,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0300AFE3",
+			"type": "Pond / Lake",
+			"name": "Far Harbor",
+			"x": -17545.607422,
+			"y": -3687.621582,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0300ECE5",
+			"type": "Observatory",
+			"name": "Brooke's Head Lighthouse",
+			"x": -3332.185303,
+			"y": -61117.269531,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0301046E",
+			"type": "Ruins - Town",
+			"name": "National Park HQ",
+			"x": 13768.482422,
+			"y": 34790.957031,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03011A81",
+			"type": "Pier",
+			"name": "Fringe Cove Docks",
+			"x": -18234.171875,
+			"y": -50359.6875,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0301536C",
+			"type": "Factory / Industrial Site",
+			"name": "Eagle's Cove Tannery",
+			"x": -9600,
+			"y": 34816,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03016E34",
+			"type": "Airfield",
+			"name": "Horizon Flight 1207",
+			"x": 17408,
+			"y": 16896,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03016E37",
+			"type": "Ruins - Urban",
+			"name": "Cliff's Edge Hotel",
+			"x": 31357.146484,
+			"y": 36893.003906,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03016E3A",
+			"type": "Drive-In",
+			"name": "Beaver Creek Lanes",
+			"x": 50352.65625,
+			"y": 24250.416016,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03016E3D",
+			"type": "Factory / Industrial Site",
+			"name": "Vim! Pop Factory",
+			"x": 7203.534668,
+			"y": -30984.347656,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0301F97F",
+			"type": "Hospital",
+			"name": "Aldersea Day Spa",
+			"x": 9188.865234,
+			"y": 43631.6875,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0301FC9A",
+			"type": "Factory / Industrial Site",
+			"name": "Echo Lake Lumber",
+			"x": -21159.791016,
+			"y": 4784.997559,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0301FD17",
+			"type": "Natural Landmark",
+			"name": "Haddock Cove",
+			"x": -35477.96875,
+			"y": -32167.90625,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "030247BF",
+			"type": "Pond / Lake",
+			"name": "National Park Campground",
+			"x": 30376.138672,
+			"y": 28182.699219,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03024F71",
+			"type": "Quarry",
+			"name": "Northwood Ridge Quarry",
+			"x": 1632.416992,
+			"y": -45296.351562,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "030258E3",
+			"type": "Cave",
+			"name": "Kitteredge Pass",
+			"x": 22219.6875,
+			"y": 10281.387695,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "030258E7",
+			"type": "Cave",
+			"name": "Pine Crest Cavern",
+			"x": 20619.087891,
+			"y": -5739.474609,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0302F40B",
+			"type": "Bunker",
+			"name": "Wind Farm Maintenance",
+			"x": 45873.476562,
+			"y": 5712.124023,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0302F40D",
+			"type": "Goodneighbor",
+			"name": "Harbor Grand Hotel",
+			"x": 42101.097656,
+			"y": -23908.789062,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "030347D1",
+			"type": "Shipwreck",
+			"name": "MS Azalea",
+			"x": 67973.703125,
+			"y": -11121.363281,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03038EB0",
+			"type": "Farm",
+			"name": "Coastal Pier",
+			"x": 4253.839844,
+			"y": 61320,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "030399CA",
+			"type": "Ruins - Town",
+			"name": "Southwest Harbor",
+			"x": 16160.731445,
+			"y": -24411.673828,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0303FEE3",
+			"type": "City",
+			"name": "The Commonwealth",
+			"x": 64825.589844,
+			"y": 34026.191406,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0303FEE5",
+			"type": "Pier",
+			"name": "Far Harbor",
+			"x": 93942.054688,
+			"y": 102910.210937,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "03040DD5",
+			"type": "Ruins - Town",
+			"name": "Far Harbor Ruins",
+			"x": 54988.050781,
+			"y": 33992.679687,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0304678C",
+			"type": "Radioactive Area",
+			"name": "The Nucleus",
+			"x": -1128.229492,
+			"y": -8282.209961,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0304855F",
+			"type": "Natural Landmark",
+			"name": "DiMA's Cache",
+			"x": -59084.855469,
+			"y": 13269.608398,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03049D0F",
+			"type": "Settlement",
+			"name": "Nakano Residence",
+			"x": 80001.890625,
+			"y": 104175.851562,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0304D6B8",
+			"type": "Encampment",
+			"name": "Rayburn Point",
+			"x": -49875.003906,
+			"y": 5559.887695,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0304F140",
+			"type": "Pier",
+			"name": "Cranberry Island Docks",
+			"x": 23764.308594,
+			"y": -43162.535156,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0304F8E2",
+			"type": "Radioactive Area",
+			"name": "Children of Atom Shrine",
+			"x": -29780.011719,
+			"y": -24450.556641,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0304FD24",
+			"type": "Encampment",
+			"name": "Longfellow's Cabin",
+			"x": 54576.351562,
+			"y": 42429.699219,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0304FE1B",
+			"type": "Farm",
+			"name": "Cranberry Island Bog",
+			"x": 29348.521484,
+			"y": -50017.027344,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0304FE1D",
+			"type": "Pier",
+			"name": "Cranberry Island Supply Shed",
+			"x": 34216.210937,
+			"y": -54417.769531,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0304FFA6",
+			"type": "Encampment",
+			"name": "Oceanarium",
+			"x": -10778.90625,
+			"y": 50087.527344,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0304FFA8",
+			"type": "Pond / Lake",
+			"name": "Old Pond House",
+			"x": 29951.199219,
+			"y": -8255.791992,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0305422A",
+			"type": "Radio Tower",
+			"name": "Ruined Radio Tower",
+			"x": -2311.615967,
+			"y": -14572.323242,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0305422B",
+			"type": "Pier",
+			"name": "Rock Point Camp",
+			"x": -44018.742188,
+			"y": -21603.513672,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03054254",
+			"type": "Radio Tower",
+			"name": "Zephyr Ridge Camp",
+			"x": -33256.613281,
+			"y": -14917.015625,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "030567BE",
+			"type": "School",
+			"name": "Waves Crest Orphanage",
+			"x": 10360.998047,
+			"y": -53779.910156,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "030567C0",
+			"type": "Forested",
+			"name": "Huntress Island",
+			"x": 38713.832031,
+			"y": -41460.597656,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0305689A",
+			"type": "Pond / Lake",
+			"name": "Briney's Bait and Tackle",
+			"x": -23759.558594,
+			"y": 11415.795898,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0305689F",
+			"type": "Church",
+			"name": "Ruined Church",
+			"x": -14161.104492,
+			"y": -34061.566406,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "03056918",
+			"type": "Natural Landmark",
+			"name": "Radiant Crest Shrine",
+			"x": -16066.342773,
+			"y": -18104.341797,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "0305691B",
+			"type": "Forested",
+			"name": "Glowing Grove",
+			"x": -22745.851562,
+			"y": -9778.032227,
+			"area": "DLC03FarHarbor"
+		},
+		{
+			"form_id": "05003CC3",
+			"type": "Low-Rise Building",
+			"name": "University Point Pharmacy",
+			"x": 19396.447266,
+			"y": -61552.574219,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "050043FB",
+			"type": "Vault",
+			"name": "Vault 88",
+			"x": 13433.850586,
+			"y": -82544.90625,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0600ADB6",
+			"type": "Custom 73",
+			"name": "Nuka-World Transit Center",
+			"x": -111604.257812,
+			"y": 20804.873047,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0600B8E3",
+			"type": "Custom 73",
+			"name": "Nuka-Station",
+			"x": 3968,
+			"y": -33504,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0600B94B",
+			"type": "Custom 74",
+			"name": "Cola-Cars Arena",
+			"x": 5120,
+			"y": -18560,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0600E767",
+			"type": "Custom 70",
+			"name": "Galactic Zone",
+			"x": -15265.03125,
+			"y": -2598.101562,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0600E768",
+			"type": "Custom 74",
+			"name": "Starlight Interstellar Theater",
+			"x": -13547.390625,
+			"y": -6761.974609,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0600E769",
+			"type": "Custom 74",
+			"name": "Vault-Tec: Among the Stars",
+			"x": -17048.160156,
+			"y": -7663.300781,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0600E76A",
+			"type": "Custom 74",
+			"name": "RobCo Battlezone",
+			"x": -13343.099609,
+			"y": 2051.870117,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0600E76B",
+			"type": "Custom 74",
+			"name": "Nuka-Galaxy",
+			"x": -20260.003906,
+			"y": 2119.366943,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0600E775",
+			"type": "Custom 74",
+			"name": "Starport Nuka",
+			"x": -17393.486328,
+			"y": -2965.319092,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "06017647",
+			"type": "Junkyard",
+			"name": "ERROR: <<NO REF LOCATION>>",
+			"x": -35232,
+			"y": -19872,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0601CD2A",
+			"type": "Encampment",
+			"name": "Hubologist's Camp",
+			"x": -17040.601562,
+			"y": -34615.820312,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0601EFCD",
+			"type": "Gov't Building / Monument",
+			"name": "World of Refreshment",
+			"x": 10493.800781,
+			"y": 23506.650391,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0601EFCE",
+			"type": "Factory / Industrial Site",
+			"name": "Nuka-Cola Bottling Plant",
+			"x": 12094.791016,
+			"y": 28517.712891,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0602446D",
+			"type": "Ruins - Town",
+			"name": "Nuka-Town USA",
+			"x": 596.181702,
+			"y": -21443.787109,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "06025515",
+			"type": "Ruins - Town",
+			"name": "Nuka-World",
+			"x": -116344,
+			"y": 17512,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "06025517",
+			"type": "City",
+			"name": "Commonwealth",
+			"x": 3984,
+			"y": -38312,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "060260E3",
+			"type": "Custom 75",
+			"name": "Safari Adventure",
+			"x": -1899.546387,
+			"y": 37960.140625,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604190A",
+			"type": "Cave",
+			"name": "Dry Rock Gulch",
+			"x": -14666.228516,
+			"y": 18836.457031,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604190C",
+			"type": "Town",
+			"name": "Kiddie Kingdom",
+			"x": 11600.004883,
+			"y": 10585.330078,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604B06E",
+			"type": "Encampment",
+			"name": "Evan's Home",
+			"x": -964.696472,
+			"y": -47190.683594,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604C2A0",
+			"type": "Gov't Building / Monument",
+			"name": "Wixon's Shovel Museum",
+			"x": 23946.300781,
+			"y": -15325.578125,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604C5E7",
+			"type": "Custom 74",
+			"name": "Mad Mulligan's Minecart Coaster",
+			"x": -11889.077148,
+			"y": 21329.085938,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604C5EA",
+			"type": "Ruins - Town",
+			"name": "Dry Rock Gulch Employee Area",
+			"x": -6914.691406,
+			"y": 15565.916992,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604C5EB",
+			"type": "Office / Civic Building",
+			"name": "Dry Rock Gulch Theater",
+			"x": -12773.485352,
+			"y": 14591.939453,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604C5ED",
+			"type": "Office / Civic Building",
+			"name": "Doc Phosphate's Saloon",
+			"x": -15867.787109,
+			"y": 18916.195312,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604C76A",
+			"type": "Custom 74",
+			"name": "Grandchester Mystery Mansion",
+			"x": -32752.910156,
+			"y": -38532.367188,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604C76C",
+			"type": "Industrial Dome",
+			"name": "Nuka-World Power Plant",
+			"x": -57250.230469,
+			"y": 6310.762695,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604C76E",
+			"type": "Filling Station",
+			"name": "Nuka-World Red Rocket",
+			"x": 22262.193359,
+			"y": 32637.029297,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604C7A5",
+			"type": "Encampment",
+			"name": "Dunmore Homestead",
+			"x": -39280.179688,
+			"y": -31495.390625,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CBC1",
+			"type": "Custom 75",
+			"name": "Safari Adventure Primate House",
+			"x": 2469.198242,
+			"y": 34626.453125,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CBC2",
+			"type": "Cave",
+			"name": "Safari Adventure Reptile House",
+			"x": -5616,
+			"y": 38944,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CBC3",
+			"type": "Custom 75",
+			"name": "The Angry Anaconda",
+			"x": -5584,
+			"y": 45600,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CBC7",
+			"type": "Custom 75",
+			"name": "Cappy's Treehouse",
+			"x": -2282.715088,
+			"y": 35821.625,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CD93",
+			"type": "Custom 74",
+			"name": "Fun House",
+			"x": 11199.537109,
+			"y": 13870.342773,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CD94",
+			"type": "Custom 74",
+			"name": "King Cola's Castle",
+			"x": 15674.693359,
+			"y": 13487.613281,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CD95",
+			"type": "Elevated Highway",
+			"name": "Bradberton Overpass",
+			"x": 28955.824219,
+			"y": 14969.491211,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CD96",
+			"type": "Ruins - Town",
+			"name": "Bradberton",
+			"x": 29042.517578,
+			"y": 46955.34375,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CD98",
+			"type": "Airfield",
+			"name": "Nuka-World Airfield",
+			"x": 11829.256836,
+			"y": 38762.253906,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CD99",
+			"type": "Pond / Lake",
+			"name": "Northpoint Reservoir",
+			"x": 19078.287109,
+			"y": 58841.363281,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604CD9B",
+			"type": "Ruins - Town",
+			"name": "Morton Residence",
+			"x": 37754.988281,
+			"y": 41233.933594,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604DF85",
+			"type": "Custom 66",
+			"name": "Fizztop Grille",
+			"x": 610.225769,
+			"y": -4877.233398,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604DF87",
+			"type": "Custom 78",
+			"name": "Fizztop Mountain",
+			"x": 3424.143066,
+			"y": -5101.057617,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604DF88",
+			"type": "Custom 79",
+			"name": "The Parlor",
+			"x": 1340.528442,
+			"y": -12933.192383,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604DF89",
+			"type": "Custom 80",
+			"name": "Bradberton Amphitheater",
+			"x": -2882.991455,
+			"y": -18843.472656,
+			"area": "NukaWorldAmphitheater"
+		},
+		{
+			"form_id": "0604E0EE",
+			"type": "Custom 74",
+			"name": "Ferris Wheel",
+			"x": 5604.538574,
+			"y": 5969.305664,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "0604E132",
+			"type": "Encampment",
+			"name": "Moonshiner's Camp",
+			"x": 38604.90625,
+			"y": 30379.662109,
+			"area": "NukaWorld"
+		},
+		{
+			"form_id": "060557ED",
+			"type": "Ruins - Town",
+			"name": "Nuka-Town Market",
+			"x": 478,
+			"y": -18702.185547,
+			"area": "NukaWorldMarket"
+		},
+		{
+			"form_id": "07035F81",
+			"type": "Railroad",
+			"name": "Greenwich Station",
+			"x": 40167.910156,
+			"y": -29452.982422,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07035F84",
+			"type": "Custom 66",
+			"name": "Old Royal Naval College",
+			"x": 58368.261719,
+			"y": -19289.117188,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07035F85",
+			"type": "Goodneighbor",
+			"name": "Queen's House",
+			"x": 64089.476562,
+			"y": -29518.40625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07035F88",
+			"type": "USS Constitution",
+			"name": "Cutty Sark",
+			"x": 47124.328125,
+			"y": -20939.408203,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0705BF11",
+			"type": "Metro Station",
+			"name": "North Greenwich Station",
+			"x": 73379.273438,
+			"y": 27166.861328,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0705BFA9",
+			"type": "Sentinel",
+			"name": "The Dome",
+			"x": 71663.023438,
+			"y": 32378.914062,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068381",
+			"type": "Observatory",
+			"name": "Royal Observatory",
+			"x": 68641.273437,
+			"y": -43853.734375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070683D3",
+			"type": "Vault",
+			"name": "Greenwich Pindar",
+			"x": 50446.089844,
+			"y": -26599.742187,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070683D4",
+			"type": "Filling Station",
+			"name": "Greenwich Petrol Station",
+			"x": 72522.875,
+			"y": 14260.283203,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070683D7",
+			"type": "Factory / Industrial Site",
+			"name": "Prilladog Food Factory",
+			"x": 16935.167969,
+			"y": -5575.326172,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070683DC",
+			"type": "Shipwreck",
+			"name": "Greenwich Flotilla",
+			"x": 84753.671875,
+			"y": 28031.314453,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070683DD",
+			"type": "Pier",
+			"name": "Greenwich Foot Tunnel South",
+			"x": 43086.398438,
+			"y": -20081.734375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070683DF",
+			"type": "Custom 73",
+			"name": "Lewisham Monorail Station",
+			"x": 30596.927734,
+			"y": -54006.375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070685FC",
+			"type": "Church",
+			"name": "Holy Trinity Church",
+			"x": 73337.195312,
+			"y": -90343.25,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070685FF",
+			"type": "Bunker",
+			"name": "Outskirts Bunker",
+			"x": 68684.6875,
+			"y": -92505.234375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068600",
+			"type": "Ruins - Town",
+			"name": "Biggin Hill",
+			"x": 61552,
+			"y": -89920,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068606",
+			"type": "Custom 70",
+			"name": "Biggin Hill Airport",
+			"x": 40789.390625,
+			"y": -73595.640625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068609",
+			"type": "Ruins - Urban",
+			"name": "Bromley",
+			"x": 85799.257812,
+			"y": -79516.429688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0706860A",
+			"type": "Railroad",
+			"name": "Bromley North Station",
+			"x": 92673.742188,
+			"y": -61842.238281,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0706860D",
+			"type": "Metro Station",
+			"name": "Bromley South Station",
+			"x": 85237.085938,
+			"y": -88949.664062,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0706860E",
+			"type": "School",
+			"name": "Bromley College",
+			"x": 77536.5,
+			"y": -88500.625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068611",
+			"type": "Police Station",
+			"name": "Bromley Police Station",
+			"x": 85893.398438,
+			"y": -92145.15625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068612",
+			"type": "Junkyard",
+			"name": "Traveller Camp",
+			"x": 69480,
+			"y": -73592,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068615",
+			"type": "Metro Station",
+			"name": "West Croydon Station",
+			"x": -14461.358398,
+			"y": -87271.570312,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068616",
+			"type": "Custom 77",
+			"name": "Apollo House",
+			"x": -20619.080078,
+			"y": -87611.1875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068619",
+			"type": "Low-Rise Building",
+			"name": "Post Office",
+			"x": -17152.638672,
+			"y": -66892.210937,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0706861A",
+			"type": "Radio Tower",
+			"name": "Crystal Palace Radio Tower",
+			"x": 5735.823242,
+			"y": -64925.054687,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0706861B",
+			"type": "Forested",
+			"name": "Crystal Palace Maze",
+			"x": 8352,
+			"y": -73872,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0706861C",
+			"type": "Goodneighbor",
+			"name": "Crystal Palace",
+			"x": -575.543457,
+			"y": -69392.84375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0706861D",
+			"type": "Junkyard",
+			"name": "Crystal Palace Caravan Park",
+			"x": -2783.250732,
+			"y": -55735.015625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068623",
+			"type": "Hospital",
+			"name": "Bethlem Royal Hospital",
+			"x": -172.891113,
+			"y": -85917.859375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068627",
+			"type": "Farm",
+			"name": "Razorgrain Field",
+			"x": -84560,
+			"y": -95952.09375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0706862C",
+			"type": "Settlement",
+			"name": "Tennis Museum",
+			"x": -56920.199219,
+			"y": -86200.375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0706862F",
+			"type": "Farm",
+			"name": "Derelict Farm",
+			"x": -68450.804687,
+			"y": -90320.710938,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068630",
+			"type": "Factory / Industrial Site",
+			"name": "Battersea Power Station",
+			"x": -82072,
+			"y": -28528,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07068633",
+			"type": "Office / Civic Building",
+			"name": "Battersea Cats and Dogs Home",
+			"x": -82951.09375,
+			"y": -39778.449219,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A709A",
+			"type": "Diamond City",
+			"name": "Lewisham Gate 01",
+			"x": 29244.232422,
+			"y": -43670.425781,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A709D",
+			"type": "Gov't Building / Monument",
+			"name": "British Museum",
+			"x": -67764.390625,
+			"y": 62877.355469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A709E",
+			"type": "Skyscraper",
+			"name": "Senate House",
+			"x": -69592,
+			"y": 70952,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70A2",
+			"type": "Low-Rise Building",
+			"name": "Cruciform Building",
+			"x": -75804.359375,
+			"y": 75729.320312,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70A3",
+			"type": "School",
+			"name": "University College London",
+			"x": -70109.03125,
+			"y": 76047.25,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70A4",
+			"type": "Radio Tower",
+			"name": "LT Tower",
+			"x": -80058,
+			"y": 75190.992188,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70A5",
+			"type": "Hospital",
+			"name": "University College London Hospital",
+			"x": -75483.570312,
+			"y": 80227.921875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70AB",
+			"type": "Metro Station",
+			"name": "Tottenham Court Road Station",
+			"x": -80978.28125,
+			"y": 66690.476562,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70AC",
+			"type": "Farm",
+			"name": "White Farm",
+			"x": -83674.75,
+			"y": 67143.460937,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70B0",
+			"type": "Church",
+			"name": "St. Anne's Churchyard",
+			"x": -85065.359375,
+			"y": 63690.464844,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70B1",
+			"type": "Town",
+			"name": "Japan Town",
+			"x": -84350.09375,
+			"y": 59712.707031,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70B5",
+			"type": "Gov't Building / Monument",
+			"name": "Leicester Square",
+			"x": -83296,
+			"y": 56560,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070A70BD",
+			"type": "Gov't Building / Monument",
+			"name": "East Picadilly Circus",
+			"x": -92272.101562,
+			"y": 59664.644531,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070B829E",
+			"type": "Town",
+			"name": "Croydon",
+			"x": -16806.240234,
+			"y": -91676.40625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070CE1B3",
+			"type": "Airfield",
+			"name": "London City Airport",
+			"x": 92046.289062,
+			"y": 34378.855469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070CE1B4",
+			"type": "Ruins - Urban",
+			"name": "X-Cell Centre",
+			"x": 95897.726562,
+			"y": 52484.335937,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "070DC8F8",
+			"type": "Railroad - Faction",
+			"name": "Camden Market",
+			"x": -8431.554687,
+			"y": 44560.230469,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "070DCBD4",
+			"type": "Castle",
+			"name": "Water & Power Syphon",
+			"x": -20425.484375,
+			"y": 38821.039062,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "070F4F2D",
+			"type": "Metro Station",
+			"name": "Camden Town Underground Station",
+			"x": -916.969666,
+			"y": 32905.792969,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "070F4F2E",
+			"type": "Encampment",
+			"name": "Rustic Homestead",
+			"x": 9149.875,
+			"y": 28157.164062,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "07106210",
+			"type": "Prydwen",
+			"name": "Cyberfox",
+			"x": -7699.647949,
+			"y": 52549.066406,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "07106315",
+			"type": "School",
+			"name": "Arlington School",
+			"x": -13758.170898,
+			"y": 27623.466797,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "0719580F",
+			"type": "",
+			"name": "",
+			"x": 82264.710938,
+			"y": -89046.390625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0719DC17",
+			"type": "Airfield",
+			"name": "Crashed Plane",
+			"x": 10238.569336,
+			"y": 19182.259766,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071B54C7",
+			"type": "Castle",
+			"name": "Tower of London",
+			"x": -19413.621094,
+			"y": 34630.9375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071B54CA",
+			"type": "Ruins - Urban",
+			"name": "The Strand",
+			"x": -61552,
+			"y": 43648,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071B54CB",
+			"type": "Railroad",
+			"name": "Liverpool Street Station",
+			"x": -28336,
+			"y": 58488,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071CB0CB",
+			"type": "Settlement",
+			"name": "Covent Garden",
+			"x": 1595.344238,
+			"y": 2267.193604,
+			"area": "CoventGardenWorldSpace"
+		},
+		{
+			"form_id": "071D7597",
+			"type": "Synth Head",
+			"name": "Shakespeare's Globe",
+			"x": -45692.929688,
+			"y": 21888.890625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6822",
+			"type": "Custom 71",
+			"name": "Dom's Cafe",
+			"x": 83758.007812,
+			"y": -53745.777344,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6825",
+			"type": "Custom 80",
+			"name": "Swan & Mitre",
+			"x": 81135.585938,
+			"y": -64151.527344,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E682B",
+			"type": "Office / Civic Building",
+			"name": "The Glades",
+			"x": 88712.984375,
+			"y": -76872.34375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E69FC",
+			"type": "Satellite",
+			"name": "Chain Home Radar",
+			"x": -61699.003906,
+			"y": -70183.007812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E69FF",
+			"type": "Castle",
+			"name": "Lambeth Palace",
+			"x": -66542.3125,
+			"y": 3701.196777,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A02",
+			"type": "Office / Civic Building",
+			"name": "London Brigade of Fire HQ",
+			"x": -70228.078125,
+			"y": -419.895691,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A03",
+			"type": "Gov't Building / Monument",
+			"name": "Ministry of Information",
+			"x": -70583.820312,
+			"y": -5576.57666,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A04",
+			"type": "Office / Civic Building",
+			"name": "US Embassy",
+			"x": -73792,
+			"y": -14288,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A05",
+			"type": "Pond / Lake",
+			"name": "Vauxhall Swamp",
+			"x": -66840,
+			"y": -8784,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A0C",
+			"type": "Factory / Industrial Site",
+			"name": "Enfield Factory",
+			"x": -51424,
+			"y": -11072,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A0D",
+			"type": "Factory / Industrial Site",
+			"name": "Houseguard Gin Distillery",
+			"x": -48600,
+			"y": -21712,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A19",
+			"type": "Settlement",
+			"name": "Oval",
+			"x": -56087.199219,
+			"y": -27729.888672,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A1E",
+			"type": "Industrial Dome",
+			"name": "Retrofitting Centre",
+			"x": -73323.046875,
+			"y": -42284.757812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A1F",
+			"type": "Bunker",
+			"name": "Royal Armaments Depo",
+			"x": -64725.539062,
+			"y": -44210.789062,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A20",
+			"type": "Factory / Industrial Site",
+			"name": "Processing Plant",
+			"x": -76193.734375,
+			"y": -49650.484375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A21",
+			"type": "Camper",
+			"name": "Happy Endings Caravan Park",
+			"x": -64944.261719,
+			"y": -57765.710937,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A24",
+			"type": "Custom 75",
+			"name": "Great Oak Tree House",
+			"x": -54784,
+			"y": -61672,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A38",
+			"type": "Encampment",
+			"name": "Cannibal Camp",
+			"x": -60721.808594,
+			"y": -62556.457031,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E6A8A",
+			"type": "Low-Rise Building",
+			"name": "Wandsworth Substation",
+			"x": -50264.304688,
+			"y": -58012.230469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "071E712C",
+			"type": "Brownstone Townhouse",
+			"name": "Emelio's Caffe House",
+			"x": -4233.976562,
+			"y": 39103.59375,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "071E712D",
+			"type": "Custom 69",
+			"name": "Cambridge Arms",
+			"x": -3185.627197,
+			"y": 33477.910156,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "071E712E",
+			"type": "Skyscraper",
+			"name": "Lock Penthouse",
+			"x": 6174.487793,
+			"y": 34131.457031,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "071E712F",
+			"type": "Cave",
+			"name": "Subterranean Cave",
+			"x": 8811.597656,
+			"y": 24275.134766,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "071E7130",
+			"type": "Skyscraper",
+			"name": "Anarchist's Tower",
+			"x": -17760.363281,
+			"y": 29124.460937,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "071E7131",
+			"type": "Settlement",
+			"name": "Albert House",
+			"x": -11492.317383,
+			"y": 24011.453125,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "071E7133",
+			"type": "Radio Tower",
+			"name": "Camden TV Station",
+			"x": -11924.758789,
+			"y": 48064.523438,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "071ECC0A",
+			"type": "Factory / Industrial Site",
+			"name": "Buchannann's Art Supply Co.",
+			"x": 14915.501953,
+			"y": 9812.777344,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07284907",
+			"type": "Metro Station",
+			"name": "Angel Underground Station",
+			"x": -1249.128418,
+			"y": 26482.03125,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07284909",
+			"type": "Gov't Building / Monument",
+			"name": "Islington Charter House",
+			"x": 11840.620117,
+			"y": 9332.064453,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "0728490A",
+			"type": "Church",
+			"name": "Crypt On The Green",
+			"x": -1957.794556,
+			"y": 13240.892578,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "0728490D",
+			"type": "Sewer / Utility Tunnels",
+			"name": "Islington Sewer",
+			"x": 5643.671387,
+			"y": 463.748718,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "0728490F",
+			"type": "Ruins - Urban",
+			"name": "Greasy Spoon",
+			"x": 16228.564453,
+			"y": 3511.346191,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07284910",
+			"type": "Ruins - Urban",
+			"name": "Samurai Garden",
+			"x": 1470.489746,
+			"y": 6630.410645,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07284914",
+			"type": "Ruins - Urban",
+			"name": "The Postal Museum",
+			"x": -20775.527344,
+			"y": 18323,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07284916",
+			"type": "Ruins - Urban",
+			"name": "Wolfy's Exchange",
+			"x": 352.334961,
+			"y": 22269.626953,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "0728B6F1",
+			"type": "Church",
+			"name": "R.A.F Chapel",
+			"x": 41770.394531,
+			"y": -77037.03125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6F2",
+			"type": "Vault",
+			"name": "Bromley Pindar",
+			"x": 33841.644531,
+			"y": -78117.046875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6F3",
+			"type": "Custom 69",
+			"name": "The Hound",
+			"x": 83296,
+			"y": -68120,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6F6",
+			"type": "Custom 69",
+			"name": "Blind Begger",
+			"x": -5630.245117,
+			"y": 58849.796875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6F8",
+			"type": "Brownstone Townhouse",
+			"name": "Whitechapel Off Licence",
+			"x": -6162.59082,
+			"y": 55904.820312,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6F9",
+			"type": "Custom 69",
+			"name": "The Shipmate",
+			"x": -2169.617188,
+			"y": 57228.382812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6FA",
+			"type": "Metro Station",
+			"name": "Tower Hill Station",
+			"x": -18060.306641,
+			"y": 42253.429688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6FB",
+			"type": "Settlement",
+			"name": "Lanthorn Tower",
+			"x": -19836.976562,
+			"y": 32046.478516,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6FC",
+			"type": "Ruins - Urban",
+			"name": "Ali Baba's",
+			"x": -2633.1604,
+			"y": 49256.554688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6FD",
+			"type": "Factory / Industrial Site",
+			"name": "Tobacco Dock",
+			"x": -7498.386719,
+			"y": 38550.777344,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6FE",
+			"type": "Brotherhood of Steel",
+			"name": "St George",
+			"x": -8125.336914,
+			"y": 41728.445312,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B6FF",
+			"type": "Ruins - Urban",
+			"name": "Shadwell Fire Station",
+			"x": -4820.069336,
+			"y": 41676.898438,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B700",
+			"type": "School",
+			"name": "Cable Street School",
+			"x": 259.576355,
+			"y": 41120.777344,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B701",
+			"type": "Skyscraper",
+			"name": "Propaganda Centre",
+			"x": 5501.80957,
+			"y": 47445.625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B702",
+			"type": "Custom 69",
+			"name": "Charlie Browns",
+			"x": 5777.277832,
+			"y": 45524.164062,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B703",
+			"type": "Hospital",
+			"name": "St Bartholomew's Hospital",
+			"x": -5815.794434,
+			"y": 49290.375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B704",
+			"type": "Brownstone Townhouse",
+			"name": "Stepney Apartments",
+			"x": 4281.858398,
+			"y": 51497.414062,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B705",
+			"type": "Brownstone Townhouse",
+			"name": "Clothing Store",
+			"x": 2754.231201,
+			"y": 49564.070312,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B706",
+			"type": "Brownstone Townhouse",
+			"name": "Jack The Ripper Museum",
+			"x": -12038.454102,
+			"y": 43030.429688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B707",
+			"type": "Custom 79",
+			"name": "One Canada Square",
+			"x": 34008.320312,
+			"y": 31920.291016,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B708",
+			"type": "Bunker",
+			"name": "East Wintergarden",
+			"x": 42787.765625,
+			"y": 34092.507812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B70A",
+			"type": "Skyscraper",
+			"name": "Ruined Skyscraper",
+			"x": 37023.40625,
+			"y": 21901.996094,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B70B",
+			"type": "Custom 77",
+			"name": "Kinoworld Cinema",
+			"x": 31468.408203,
+			"y": 39630.585938,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B70D",
+			"type": "Ruins - Urban",
+			"name": "KemPharm Offices",
+			"x": 28871.861328,
+			"y": 10016.960938,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B70E",
+			"type": "Factory / Industrial Site",
+			"name": "Cow's Lick Milk Factory",
+			"x": 35648.757812,
+			"y": 705.765625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B70F",
+			"type": "Factory / Industrial Site",
+			"name": "Tater Factory",
+			"x": 48037.296875,
+			"y": 17506.601562,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B710",
+			"type": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
+			"name": "Mudchute Department Store",
+			"x": 53479.195312,
+			"y": 18592.707031,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B712",
+			"type": "Ruins - Urban",
+			"name": "Polaris Apartments",
+			"x": 52722.128906,
+			"y": 34874.769531,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B713",
+			"type": "Hospital",
+			"name": "Children Hospital",
+			"x": 37578.992188,
+			"y": 42480.179688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B714",
+			"type": "Shipwreck",
+			"name": "HMS Dredge",
+			"x": 33781.03125,
+			"y": 17837.701172,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B716",
+			"type": "Custom 77",
+			"name": "Royal Armaments Silo",
+			"x": -55595.421875,
+			"y": -54440.300781,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B717",
+			"type": "Minutemen",
+			"name": "Camelot",
+			"x": -85013.398438,
+			"y": -83032,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B719",
+			"type": "Metro Station",
+			"name": "Vauxhall Underground Station",
+			"x": -72435.0625,
+			"y": -10148.643555,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B71A",
+			"type": "Gov't Building / Monument",
+			"name": "London Aquarium",
+			"x": -68372.664062,
+			"y": 13767.104492,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B71C",
+			"type": "Hospital",
+			"name": "St Thomas Hospital",
+			"x": -68599.382812,
+			"y": 8331.146484,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B71D",
+			"type": "Brownstone Townhouse",
+			"name": "Chem Den",
+			"x": -52528.496094,
+			"y": -6904.452148,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B720",
+			"type": "Factory / Industrial Site",
+			"name": "Waterloo Waterworks",
+			"x": -61903.828125,
+			"y": 10697.330078,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B721",
+			"type": "Metro Station",
+			"name": "Waterloo Station",
+			"x": -59631.730469,
+			"y": 14446.708984,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B722",
+			"type": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
+			"name": "Fesco Extra",
+			"x": 23904.164062,
+			"y": -50750.683594,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B724",
+			"type": "Police Station",
+			"name": "Lewisham Police Station",
+			"x": 40802.757812,
+			"y": -54717.730469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B725",
+			"type": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
+			"name": "East Mall",
+			"x": 36508.417969,
+			"y": -60891.027344,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B726",
+			"type": "Brownstone Townhouse",
+			"name": "Booths Pharmacy",
+			"x": 38450.203125,
+			"y": -64978.039062,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B727",
+			"type": "Custom 77",
+			"name": "Laundrette",
+			"x": 3752.164062,
+			"y": -20678.679688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B728",
+			"type": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
+			"name": "New Cross Shopping Centre",
+			"x": 11120.164062,
+			"y": -22342.683594,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B729",
+			"type": "Railroad",
+			"name": "Deptford Bus Garage",
+			"x": 8008.164062,
+			"y": -33670.679687,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728B72A",
+			"type": "Vault",
+			"name": "Lewisham Pindar",
+			"x": 50088.15625,
+			"y": -63142.691406,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0728C2FD",
+			"type": "Faneuil Hall",
+			"name": "Bank of England",
+			"x": 1213.370728,
+			"y": 11152.198242,
+			"area": "BankofEnglandWorld"
+		},
+		{
+			"form_id": "0728C300",
+			"type": "Office / Civic Building",
+			"name": "Mansion House",
+			"x": -4417.927246,
+			"y": 5099.768066,
+			"area": "BankofEnglandWorld"
+		},
+		{
+			"form_id": "0728C301",
+			"type": "Salem",
+			"name": "London Mithraeum",
+			"x": -7205.832031,
+			"y": 2723.791504,
+			"area": "BankofEnglandWorld"
+		},
+		{
+			"form_id": "0729A784",
+			"type": "Low-Rise Building",
+			"name": "Islington Public Library",
+			"x": 18031.685547,
+			"y": 6040.791992,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "072A0A27",
+			"type": "Settlement",
+			"name": "London Bridge",
+			"x": -35159.835938,
+			"y": 27638.017578,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072A9145",
+			"type": "Metro Station",
+			"name": "Thameshaven",
+			"x": -5082.371582,
+			"y": 1573.719604,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072D3B36",
+			"type": "Radio Tower",
+			"name": "Billingsgate Relay Tower",
+			"x": 46812.785156,
+			"y": 34869.304688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072D4388",
+			"type": "Metro Station",
+			"name": "Marble Arch",
+			"x": -24905.523438,
+			"y": 7573.879883,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "072ECE05",
+			"type": "Settlement",
+			"name": "Lambeth Walk",
+			"x": -59186.699219,
+			"y": -3671.708008,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072ECEF1",
+			"type": "",
+			"name": "",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"form_id": "072ED6F2",
+			"type": "Ruins - Town",
+			"name": "Kinoworld Theatre",
+			"x": 28336.582031,
+			"y": 17312.884766,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED6F4",
+			"type": "Encampment",
+			"name": "Arnold Circus",
+			"x": 31120.664062,
+			"y": 12435.564453,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED6F6",
+			"type": "Custom 69",
+			"name": "The Chosen One",
+			"x": 38692.222656,
+			"y": 16936.058594,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED6F8",
+			"type": "Custom 71",
+			"name": "The Tandoori Commander",
+			"x": 39057.652344,
+			"y": 5860.547363,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED6FA",
+			"type": "Custom 71",
+			"name": "Maab House",
+			"x": 33083.164062,
+			"y": 8409.733398,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED6FD",
+			"type": "Police Station",
+			"name": "Hackney Police Station",
+			"x": 29018.373047,
+			"y": 7299.058105,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED6FE",
+			"type": "Railroad - Faction",
+			"name": "Vintage Market Shoreditch",
+			"x": 35010.035156,
+			"y": 3583.356201,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED700",
+			"type": "Radio Tower",
+			"name": "The Mend",
+			"x": 16194.515625,
+			"y": 32205.117187,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED702",
+			"type": "Hospital",
+			"name": "St Leonards Hospital",
+			"x": 17528,
+			"y": 28248,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED704",
+			"type": "Office / Civic Building",
+			"name": "Courthouse Hotel",
+			"x": 17040,
+			"y": 21056,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED706",
+			"type": "Custom 67",
+			"name": "The Shoppe",
+			"x": 19472,
+			"y": 17808,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED708",
+			"type": "Encampment",
+			"name": "Druid Encampment",
+			"x": 9299.893555,
+			"y": 28458.5,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED70B",
+			"type": "Office / Civic Building",
+			"name": "Shoreditch Fire Station",
+			"x": 5213.349609,
+			"y": 19510.146484,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED70C",
+			"type": "Low-Rise Building",
+			"name": "Mrs Whippy Ice Cream Parlour",
+			"x": 10805.193359,
+			"y": 13267.625977,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED70E",
+			"type": "Diamond City",
+			"name": "Hackney Checkpoint",
+			"x": 17304.166016,
+			"y": 301.956116,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED710",
+			"type": "Diamond City",
+			"name": "Islington Checkpoint",
+			"x": -1580.541016,
+			"y": 24636.423828,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED71B",
+			"type": "Pier",
+			"name": "Kingsland Basin",
+			"x": 3209.985596,
+			"y": 31505.416016,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED71C",
+			"type": "Railroad",
+			"name": "Hoxton Station",
+			"x": 20949.591797,
+			"y": 23762.640625,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED71E",
+			"type": "Custom 69",
+			"name": "The Wolf and Port",
+			"x": 21826.736328,
+			"y": 20192.689453,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED720",
+			"type": "Church",
+			"name": "Shoreditch Church",
+			"x": 24111.308594,
+			"y": 18305.931641,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED722",
+			"type": "Pond / Lake",
+			"name": "Great Eastern Swamp",
+			"x": 10752.306641,
+			"y": 9861.487305,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED724",
+			"type": "Low-Rise Building",
+			"name": "Container Park",
+			"x": 19523.205078,
+			"y": 4823.311523,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED727",
+			"type": "Ruins - Town",
+			"name": "Ace High Hotel",
+			"x": 26053.216797,
+			"y": 12708.666992,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED728",
+			"type": "Low-Rise Building",
+			"name": "Spin & Shine Laundromat",
+			"x": 4179.530762,
+			"y": 27035.214844,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED72A",
+			"type": "Custom 71",
+			"name": "Brick Lane Curry",
+			"x": 39195.511719,
+			"y": 13825.984375,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED72D",
+			"type": "Brownstone Townhouse",
+			"name": "Happy Sailor",
+			"x": 26813.681641,
+			"y": 15317.867187,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED735",
+			"type": "Office / Civic Building",
+			"name": "Glam Clubhouse",
+			"x": 21123.640625,
+			"y": 16440.158203,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072ED738",
+			"type": "Junkyard",
+			"name": "Club Oberon",
+			"x": 26893.054687,
+			"y": 3875.073975,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "072EE36D",
+			"type": "Custom 77",
+			"name": "Tunnel Cough Passage",
+			"x": -5920.953613,
+			"y": 30146.765625,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "072EE36F",
+			"type": "Custom 77",
+			"name": "Quarantine Zone",
+			"x": -12968.633789,
+			"y": 19544.226562,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "072EE371",
+			"type": "Diamond City",
+			"name": "Checkpoint",
+			"x": 378.823242,
+			"y": -94.709335,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "072EE374",
+			"type": "Airfield",
+			"name": "Skylanes Flight 1984",
+			"x": 10397.657227,
+			"y": 2331.205566,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "072EE378",
+			"type": "Diamond City",
+			"name": "Hackney Checkpoint",
+			"x": 20288.425781,
+			"y": 10165.87207,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "072EE3AE",
+			"type": "Custom 77",
+			"name": "Elephant And Castle",
+			"x": -38920,
+			"y": -5872,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3B0",
+			"type": "School",
+			"name": "King's College London Guy's Campus",
+			"x": -29664.017578,
+			"y": 1764.423462,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3B2",
+			"type": "Skyscraper",
+			"name": "The Shard",
+			"x": -31009.445312,
+			"y": 6593.461426,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3B5",
+			"type": "Hospital",
+			"name": "Guy's Hospital",
+			"x": -25655.75,
+			"y": 2085.579834,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3BA",
+			"type": "Office / Civic Building",
+			"name": "City Hall",
+			"x": -27686.453125,
+			"y": 14654.947266,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3BC",
+			"type": "Shipwreck",
+			"name": "HMS Belfast",
+			"x": -31213.105469,
+			"y": 20547.654297,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3BE",
+			"type": "Skyscraper",
+			"name": "Upton-Burke Headquarters",
+			"x": -33637.710937,
+			"y": 14850.797852,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3C0",
+			"type": "City",
+			"name": "Butlers Wharf",
+			"x": -19209.8125,
+			"y": 11911.15332,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3C2",
+			"type": "Vault",
+			"name": "Train Crash",
+			"x": 11073.160156,
+			"y": -26605.646484,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3C5",
+			"type": "Factory / Industrial Site",
+			"name": "Bankside Power Station",
+			"x": -49489.367188,
+			"y": 22812.205078,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3C7",
+			"type": "Encampment",
+			"name": "Bankside Ruffian Hideaway",
+			"x": -52185.34375,
+			"y": 16243.655273,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3C9",
+			"type": "USS Constitution",
+			"name": "The Golden Hinde",
+			"x": -37482.289062,
+			"y": 18853.828125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3CB",
+			"type": "Castle",
+			"name": "Winchester Palace",
+			"x": -40547.898438,
+			"y": 18519.708984,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE3CD",
+			"type": "Railroad",
+			"name": "London Bridge Station",
+			"x": -26076.154297,
+			"y": 4865.745117,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EE6A3",
+			"type": "Custom 71",
+			"name": "Beefeater Burger",
+			"x": -8020.972656,
+			"y": 29647.625,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "072EE6AB",
+			"type": "Elevated Highway",
+			"name": "Crumbling Catwalk",
+			"x": -16968.001953,
+			"y": 33698.757812,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "072EE6AF",
+			"type": "Graveyard",
+			"name": "Catacombs",
+			"x": -16585.089844,
+			"y": 41677.589844,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "072EE6B3",
+			"type": "Railroad - Faction",
+			"name": "Stable Market",
+			"x": -10330.270508,
+			"y": 49488.855469,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "072EE6B5",
+			"type": "Goodneighbor",
+			"name": "The Hippo",
+			"x": 1009.758179,
+			"y": 23344.580078,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "072EE6B8",
+			"type": "Metro Station",
+			"name": "Mornington Crescent Underground Station",
+			"x": -4409.023926,
+			"y": 22595.255859,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "072EE778",
+			"type": "Military Base",
+			"name": "Imperial War Museum",
+			"x": 1536,
+			"y": 1208,
+			"area": "IWMWorld"
+		},
+		{
+			"form_id": "072EE779",
+			"type": "Junkyard",
+			"name": "The Den",
+			"x": 46.773804,
+			"y": 4100.110352,
+			"area": "DumpWorld"
+		},
+		{
+			"form_id": "072EE8DB",
+			"type": "Settlement",
+			"name": "Vauxhall Grove Construction Site",
+			"x": -66565.96875,
+			"y": -18392.523438,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EF033",
+			"type": "Skyscraper",
+			"name": "Easy Tea Company Offices",
+			"x": -90429.859375,
+			"y": 81769.257812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EF035",
+			"type": "Encampment",
+			"name": "Regent's Park Checkpoint",
+			"x": -93546.164062,
+			"y": 83011.5625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EF037",
+			"type": "Brownstone Townhouse",
+			"name": "Mycroft's House",
+			"x": -91530.710938,
+			"y": 78896.265625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EF039",
+			"type": "Office / Civic Building",
+			"name": "Boston House",
+			"x": -80538.351562,
+			"y": 78729.953125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072EF03B",
+			"type": "Custom 69",
+			"name": "The Drunken Wolf",
+			"x": -93620.304688,
+			"y": 79349.984375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDAF0",
+			"type": "Railroad - Faction",
+			"name": "Borough Market",
+			"x": -39879.5625,
+			"y": 15023.424805,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDAF2",
+			"type": "School",
+			"name": "Rotting Schoolhouse",
+			"x": -41511.207031,
+			"y": 6945.946777,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDAF4",
+			"type": "Custom 69",
+			"name": "Four Leaf Pub",
+			"x": -39153.367188,
+			"y": 6855.736816,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDAF6",
+			"type": "Low-Rise Building",
+			"name": "Plumbing Center",
+			"x": -46221.074219,
+			"y": -38715.105469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDAF8",
+			"type": "Metro Station",
+			"name": "Oval Underground Station",
+			"x": -56898.476562,
+			"y": -39165.867188,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDAFA",
+			"type": "Factory / Industrial Site",
+			"name": "Warmite Factory",
+			"x": -67280.421875,
+			"y": -28597.349609,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDAFC",
+			"type": "Skyscraper",
+			"name": "Meadow Point Apartments",
+			"x": -61288.007812,
+			"y": -21580.636719,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDAFE",
+			"type": "Skyscraper",
+			"name": "Coin Street Flats",
+			"x": -44934.816406,
+			"y": 14081.389648,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB00",
+			"type": "Skyscraper",
+			"name": "Nelson Mandela House",
+			"x": -17415.253906,
+			"y": -36119.835938,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB02",
+			"type": "Ruins - Town",
+			"name": "Peckham",
+			"x": -20642.523438,
+			"y": -35054.003906,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB04",
+			"type": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
+			"name": "Fesco",
+			"x": 3970.444336,
+			"y": -161.041458,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB06",
+			"type": "Ruins - Town",
+			"name": "Blight Crater",
+			"x": 87951.695312,
+			"y": -2672.258301,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB08",
+			"type": "Cave",
+			"name": "Fungus Grotto",
+			"x": 83841.28125,
+			"y": 12320.950195,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB0A",
+			"type": "Encampment",
+			"name": "Hermit Shack",
+			"x": 92763.109375,
+			"y": -33977.742187,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB0C",
+			"type": "Natural Landmark",
+			"name": "Mushroom Marsh",
+			"x": 98009.53125,
+			"y": -16202.310547,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB0E",
+			"type": "Elevated Highway",
+			"name": "A102",
+			"x": 70734.460938,
+			"y": -1446.361084,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB10",
+			"type": "Custom 69",
+			"name": "The Golden Elm",
+			"x": 63687.15625,
+			"y": -6454.949219,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB12",
+			"type": "Church",
+			"name": "St Alfege's Church",
+			"x": 48754.828125,
+			"y": -34839.992188,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB14",
+			"type": "Factory / Industrial Site",
+			"name": "Greenwich Crematorium",
+			"x": 49304.179688,
+			"y": -40475.8125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB16",
+			"type": "Custom 69",
+			"name": "Portugal House",
+			"x": 64212.710937,
+			"y": -62357.851562,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB18",
+			"type": "Low-Rise Building",
+			"name": "Brookes Retail Supplies",
+			"x": 66809.976562,
+			"y": -56285.085937,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB1A",
+			"type": "Radioactive Area",
+			"name": "Blackheath",
+			"x": 58308.183594,
+			"y": -52229.105469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB1C",
+			"type": "Diamond City",
+			"name": "Lewisham Gate 02",
+			"x": 57589.78125,
+			"y": -60500.375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB1E",
+			"type": "Diamond City",
+			"name": "Lewisham Gate 03",
+			"x": 38132.722656,
+			"y": -43892.347656,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB20",
+			"type": "Skyscraper",
+			"name": "Ravensbourne Construction Site",
+			"x": 35039.730469,
+			"y": -49888.234375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB22",
+			"type": "Encampment",
+			"name": "Brickton",
+			"x": -31948.443359,
+			"y": -69411.125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB24",
+			"type": "Natural Landmark",
+			"name": "Wimbledon Park Lake",
+			"x": -46230.683594,
+			"y": -77600.46875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB26",
+			"type": "Forested",
+			"name": "Kennington Park",
+			"x": -50798.109375,
+			"y": -44502.308594,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB28",
+			"type": "Encampment",
+			"name": "Cutethulhu Camp",
+			"x": -43048.355469,
+			"y": -26904.208984,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB2A",
+			"type": "Church",
+			"name": "Matrimony Church",
+			"x": -79119.976562,
+			"y": -60530.425781,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB2C",
+			"type": "Encampment",
+			"name": "Camelot Outpost",
+			"x": -69448.835938,
+			"y": -61843.855469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB2E",
+			"type": "Pond / Lake",
+			"name": "Pen Ponds",
+			"x": -92590.0625,
+			"y": -75935.851562,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB30",
+			"type": "Vault",
+			"name": "Clapham Common Pindar",
+			"x": -32472.158203,
+			"y": -32569.380859,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB32",
+			"type": "Ruins - Town",
+			"name": "The Clap",
+			"x": -33926.828125,
+			"y": -25644.695312,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB34",
+			"type": "Low-Rise Building",
+			"name": "J. Laws Bank",
+			"x": -24344.273438,
+			"y": -25549.5625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB36",
+			"type": "Low-Rise Building",
+			"name": "Winston's Toys",
+			"x": -83546.1875,
+			"y": 70528.554688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB38",
+			"type": "Custom 69",
+			"name": "Red Tiger",
+			"x": -86579.617188,
+			"y": 74190.015625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB3A",
+			"type": "Elevated Highway",
+			"name": "A501",
+			"x": -73082.039062,
+			"y": 85820.570312,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB3C",
+			"type": "Metro Station",
+			"name": "Euston Station",
+			"x": -71618.195312,
+			"y": 90495.71875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB3E",
+			"type": "Gov't Building / Monument",
+			"name": "British Library",
+			"x": -68236.335937,
+			"y": 88745.007812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB40",
+			"type": "Goodneighbor",
+			"name": "St Pancras International Hotel",
+			"x": -63937.9375,
+			"y": 89169.257812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB42",
+			"type": "Natural Landmark",
+			"name": "Sink Hole",
+			"x": -78232.007812,
+			"y": 61758.957031,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB44",
+			"type": "Sewer / Utility Tunnels",
+			"name": "Six Dials",
+			"x": -77968,
+			"y": 65984,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB46",
+			"type": "Metro Station",
+			"name": "King's Cross St. Pancras Station",
+			"x": -57776,
+			"y": 89408,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB48",
+			"type": "Custom 69",
+			"name": "The Liberty Spikes",
+			"x": -60128,
+			"y": 79896,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB4A",
+			"type": "Office / Civic Building",
+			"name": "Abyss Song Studio",
+			"x": -95115.023438,
+			"y": 76877.15625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB4C",
+			"type": "Custom 69",
+			"name": "The Pilgrim",
+			"x": -86804.984375,
+			"y": 68204.96875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB4E",
+			"type": "Custom 69",
+			"name": "The Plumber's Hands",
+			"x": -89059.101562,
+			"y": 68189.226562,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB50",
+			"type": "Junkyard",
+			"name": "Trash Heap",
+			"x": -92704.304688,
+			"y": 67367.617187,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB52",
+			"type": "Sewer / Utility Tunnels",
+			"name": "Sewer",
+			"x": -80720.03125,
+			"y": 62012.84375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB54",
+			"type": "Gov't Building / Monument",
+			"name": "Eastminster Slums",
+			"x": -83933.179688,
+			"y": 51442.113281,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB56",
+			"type": "Gov't Building / Monument",
+			"name": "National Portrait Gallery",
+			"x": -80498.515625,
+			"y": 52944.816406,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB58",
+			"type": "Bunker Hill",
+			"name": "Trafalgar Square",
+			"x": -83853.242188,
+			"y": 44217.570312,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB5A",
+			"type": "Metro Station",
+			"name": "Charing Cross Station",
+			"x": -78157.375,
+			"y": 39609.929688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB5C",
+			"type": "Office / Civic Building",
+			"name": "Bush House",
+			"x": -61556.417969,
+			"y": 44677.589844,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB5E",
+			"type": "Skyscraper",
+			"name": "The Gauntlet",
+			"x": -51358.648438,
+			"y": 51187.890625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB60",
+			"type": "Custom 69",
+			"name": "The Nags",
+			"x": -62838.472656,
+			"y": 47002.78125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB62",
+			"type": "Vault",
+			"name": "Eastminster Pindar",
+			"x": -84784.84375,
+			"y": 57801.714844,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB64",
+			"type": "City",
+			"name": "The Barbican",
+			"x": -48792.035156,
+			"y": 62845.980469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB66",
+			"type": "Skyscraper",
+			"name": "General Atomics Headquarters",
+			"x": -48296.308594,
+			"y": 53239.628906,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB68",
+			"type": "Gov't Building / Monument",
+			"name": "Guildhall",
+			"x": -43195.046875,
+			"y": 54964.84375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB6A",
+			"type": "Skyscraper",
+			"name": "Nuka-Cola Headquaters",
+			"x": -41458.78125,
+			"y": 63010.847656,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB6C",
+			"type": "",
+			"name": "",
+			"x": -39748.488281,
+			"y": 66758.257812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB6E",
+			"type": "Low-Rise Building",
+			"name": "Government Rationing Centre",
+			"x": -28618.054687,
+			"y": 45304.90625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB70",
+			"type": "Forested",
+			"name": "Sky Garden",
+			"x": -23408.515625,
+			"y": 43681.859375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB72",
+			"type": "Skyscraper",
+			"name": "The Gherkin",
+			"x": -22812.679688,
+			"y": 47765.996094,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB74",
+			"type": "Railroad",
+			"name": "Fenchurch Street Station",
+			"x": -19564.974609,
+			"y": 47184.210938,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB76",
+			"type": "Skyscraper",
+			"name": "Madeira Inc. Offices",
+			"x": -17955.908203,
+			"y": 51960.519531,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB78",
+			"type": "Encampment",
+			"name": "Ferryman Dockhouse",
+			"x": -34121.195312,
+			"y": 35421.097656,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB7A",
+			"type": "Metro Station",
+			"name": "Monument Underground Station",
+			"x": -35129.660156,
+			"y": 42747.621094,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB7C",
+			"type": "Bunker Hill",
+			"name": "Monument",
+			"x": -32970.132812,
+			"y": 39575.957031,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB7E",
+			"type": "Elevated Highway",
+			"name": "Southwark Bridge",
+			"x": -43242.332031,
+			"y": 28380.78125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB80",
+			"type": "Elevated Highway",
+			"name": "Millennium Bridge",
+			"x": -47557.1875,
+			"y": 30291.894531,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB82",
+			"type": "Elevated Highway",
+			"name": "Blackfriars Bridge",
+			"x": -52866.207031,
+			"y": 32082.431641,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB84",
+			"type": "Elevated Highway",
+			"name": "Waterloo Bridge",
+			"x": -64878.324219,
+			"y": 31584.974609,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB86",
+			"type": "Custom 74",
+			"name": "London Eye",
+			"x": -68933.046875,
+			"y": 18365.082031,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB89",
+			"type": "Elevated Highway",
+			"name": "Westminster Bridge",
+			"x": -75094.8125,
+			"y": 10402.517578,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB8C",
+			"type": "Railroad - Faction",
+			"name": "Old Spitalfields Market",
+			"x": -22598.773438,
+			"y": 61275.726562,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB8E",
+			"type": "Radio Tower",
+			"name": "Emergency Broadcast Centre",
+			"x": -20730.542969,
+			"y": 54627.734375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB90",
+			"type": "Ruins - Urban",
+			"name": "Tenpenny Airlines Inc.",
+			"x": -15634.667969,
+			"y": 58185.839844,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB92",
+			"type": "Skyscraper",
+			"name": "British Lion Headquarters",
+			"x": -62784.40625,
+			"y": -3490.823242,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB94",
+			"type": "Church",
+			"name": "St Peter's Church",
+			"x": -62047.816406,
+			"y": -7951.801758,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB96",
+			"type": "Encampment",
+			"name": "Flak Emplacement",
+			"x": -55212.46875,
+			"y": -5711.477539,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB99",
+			"type": "Police Station",
+			"name": "Vauxhall Police Station",
+			"x": -54207.695312,
+			"y": -16654.644531,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB9B",
+			"type": "Industrial Dome",
+			"name": "Gasworks",
+			"x": -50380.890625,
+			"y": -16227.470703,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB9D",
+			"type": "Skyscraper",
+			"name": "Squatter's Den",
+			"x": -56293.957031,
+			"y": -12849.867187,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDB9F",
+			"type": "Brownstone Townhouse",
+			"name": "Stagnant Building",
+			"x": -77867.078125,
+			"y": -18322.935547,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBA2",
+			"type": "Police Station",
+			"name": "Forensic Science Laboratory",
+			"x": -63734.277344,
+			"y": 1131.28125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBA4",
+			"type": "Brownstone Townhouse",
+			"name": "Corner Shop",
+			"x": -63890.3125,
+			"y": -1355.546509,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBA6",
+			"type": "Brownstone Townhouse",
+			"name": "The Wheelhouse",
+			"x": -56158.601562,
+			"y": 10668.957031,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBA8",
+			"type": "Custom 69",
+			"name": "The King's Nose",
+			"x": -72219.476562,
+			"y": -27293.546875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBAE",
+			"type": "Low-Rise Building",
+			"name": "Pinhead Bowling Alley",
+			"x": 44064.714844,
+			"y": -55787.171875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBB0",
+			"type": "Brownstone Townhouse",
+			"name": "Plantagents Florists",
+			"x": 37225.222656,
+			"y": -63212.003906,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBB3",
+			"type": "Ruins - Town",
+			"name": "Lewisham",
+			"x": 40556.328125,
+			"y": -59388.296875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBB7",
+			"type": "Brownstone Townhouse",
+			"name": "Trashed Shops",
+			"x": 32807.140625,
+			"y": -63472.6875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBB9",
+			"type": "Custom 69",
+			"name": "The Bishop's Toe",
+			"x": 40311.996094,
+			"y": -61164.636719,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBBE",
+			"type": "Custom 77",
+			"name": "Roundabout Campsite",
+			"x": 7699.255859,
+			"y": -10842.90918,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBC2",
+			"type": "Vault",
+			"name": "Croydon Pindar",
+			"x": -16706.617187,
+			"y": -77514.492188,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBC4",
+			"type": "Low-Rise Building",
+			"name": "Victory Gift Shop",
+			"x": 49441.449219,
+			"y": -22873.105469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBC6",
+			"type": "Shipwreck",
+			"name": "Stranded Ship",
+			"x": 46454.667969,
+			"y": -15061.310547,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBC8",
+			"type": "Custom 73",
+			"name": "Greenwich DLR Monorail",
+			"x": 40737.308594,
+			"y": -26989.167969,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBCA",
+			"type": "Ruins - Urban",
+			"name": "London Gas and Heating Offices",
+			"x": 65418.195312,
+			"y": 30193.009766,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBCC",
+			"type": "Office / Civic Building",
+			"name": "Laundromat",
+			"x": 45286.523438,
+			"y": -27224.337891,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBCE",
+			"type": "Custom 71",
+			"name": "Abandoned Resturant",
+			"x": 44499.132812,
+			"y": -29553.130859,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBD0",
+			"type": "Factory / Industrial Site",
+			"name": "Aluminum Metalworks",
+			"x": 75096.9375,
+			"y": 49115.238281,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBD2",
+			"type": "Factory / Industrial Site",
+			"name": "Yes! Toy Factory",
+			"x": 80003.90625,
+			"y": 49701.222656,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBD4",
+			"type": "Factory / Industrial Site",
+			"name": "Storage Facility",
+			"x": 82866.367188,
+			"y": 49714.214844,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBD6",
+			"type": "Low-Rise Building",
+			"name": "Vaulzon Warehouse",
+			"x": 79181.710938,
+			"y": 43618.933594,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBD8",
+			"type": "Factory / Industrial Site",
+			"name": "Kosuna Bike Factory",
+			"x": 87729.164062,
+			"y": 52859.023437,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBDC",
+			"type": "Factory / Industrial Site",
+			"name": "Ammo Manufacturing Plant",
+			"x": 85698.609375,
+			"y": 33427.191406,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBDF",
+			"type": "Airfield",
+			"name": "Strato-Fortress",
+			"x": 102654.671875,
+			"y": 42839.574219,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBE1",
+			"type": "Elevated Highway",
+			"name": "Thames Barrier",
+			"x": 91395.898438,
+			"y": 26875.482422,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBE3",
+			"type": "Shipwreck",
+			"name": "Caledonia",
+			"x": 86692.976562,
+			"y": 25062.609375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBE5",
+			"type": "Factory / Industrial Site",
+			"name": "London Smelters & Co.",
+			"x": 71247.296875,
+			"y": 47151.25,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBE7",
+			"type": "Custom 79",
+			"name": "Syndicate Factory",
+			"x": 73881.796875,
+			"y": 44359.179688,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBFA",
+			"type": "Metro Station",
+			"name": "Canning Town",
+			"x": 67271.585937,
+			"y": 45443.984375,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBFC",
+			"type": "Filling Station",
+			"name": "Newham Petorl Station",
+			"x": 77296.421875,
+			"y": 52009.6875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDBFE",
+			"type": "Factory / Industrial Site",
+			"name": "Textile Manufactorium",
+			"x": 87256.890625,
+			"y": 48897.847656,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC01",
+			"type": "Vault",
+			"name": "Newham Pindar",
+			"x": 88223.960938,
+			"y": 34789.046875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC04",
+			"type": "Pier",
+			"name": "Rotherhithe Docks",
+			"x": 3366.893066,
+			"y": 18182.175781,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC06",
+			"type": "Pier",
+			"name": "Surrey Quays",
+			"x": 13263.750977,
+			"y": 2302.033691,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC08",
+			"type": "Hospital",
+			"name": "GUM Clinic",
+			"x": -35332.308594,
+			"y": 11726.898438,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC0A",
+			"type": "Ruins - Town",
+			"name": "Southwark Ruins",
+			"x": -44557.652344,
+			"y": 4621.485352,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC0C",
+			"type": "Irish Pride",
+			"name": "Tower Bridge",
+			"x": -19550.837891,
+			"y": 23168.814453,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC0E",
+			"type": "Brownstone Townhouse",
+			"name": "Dusty Terrace",
+			"x": -17994.007812,
+			"y": -12019.544922,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC10",
+			"type": "Filling Station",
+			"name": "Southwark Petrol Station",
+			"x": -23816.962891,
+			"y": -15434.923828,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC12",
+			"type": "Low-Rise Building",
+			"name": "Hardware City",
+			"x": -23540.5625,
+			"y": -9137.760742,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC14",
+			"type": "Skyscraper",
+			"name": "Yes! Toy HQ",
+			"x": -32485.792969,
+			"y": -9864.837891,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC16",
+			"type": "Encampment",
+			"name": "Hooligan Outpost",
+			"x": -30149.751953,
+			"y": -15867.946289,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC18",
+			"type": "Custom 69",
+			"name": "The Tabard",
+			"x": -47661.667969,
+			"y": -7191.700684,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC1A",
+			"type": "Pier",
+			"name": "Submarine Dock",
+			"x": -36692.953125,
+			"y": 19952.480469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC1C",
+			"type": "Custom 69",
+			"name": "The Wellerman Pub",
+			"x": 11812.881836,
+			"y": 18889.923828,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC1E",
+			"type": "Ruins - Town",
+			"name": "Rotherhithe",
+			"x": 13980.589844,
+			"y": 18339.314453,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC20",
+			"type": "Brownstone Townhouse",
+			"name": "Peckham Inn",
+			"x": -19008.396484,
+			"y": -27725.373047,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC23",
+			"type": "Brownstone Townhouse",
+			"name": "Decrepit Residence",
+			"x": -22584,
+			"y": 2784,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC25",
+			"type": "Submarine",
+			"name": "U-96",
+			"x": -28672,
+			"y": 31144,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC27",
+			"type": "Forested",
+			"name": "Battersea Park",
+			"x": -95935.757812,
+			"y": -31631.355469,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC29",
+			"type": "Custom 69",
+			"name": "Old Cheese of Chesire",
+			"x": -91135.890625,
+			"y": -44127.515625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC2B",
+			"type": "Low-Rise Building",
+			"name": "Robotics Repair",
+			"x": -89309.203125,
+			"y": -47068.511719,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC2D",
+			"type": "Custom 77",
+			"name": "Cement Factory",
+			"x": -85902.992188,
+			"y": -48095.640625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC30",
+			"type": "Brownstone Townhouse",
+			"name": "Scavenger House",
+			"x": -81811.929688,
+			"y": -62406.503906,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC32",
+			"type": "Bunker",
+			"name": "Hidden Bunker",
+			"x": -50584.0625,
+			"y": -99583.742188,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC34",
+			"type": "Custom 77",
+			"name": "Raider Camp",
+			"x": 48243.015625,
+			"y": 30717.710937,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC36",
+			"type": "Camper",
+			"name": "Blackwall Citadel",
+			"x": 52332.820312,
+			"y": 38577.050781,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC38",
+			"type": "Custom 69",
+			"name": "The Coach House",
+			"x": 55134.550781,
+			"y": 43296.996094,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC3C",
+			"type": "Metro Station",
+			"name": "Canary Wharf Station",
+			"x": 39423.101562,
+			"y": 31821.349609,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC41",
+			"type": "Custom 69",
+			"name": "The Chute Inn",
+			"x": 55237.050781,
+			"y": 7230.688477,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC43",
+			"type": "Elevated Highway",
+			"name": "Greenwich Foot Tunnel North",
+			"x": 46909.941406,
+			"y": 862.103027,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC45",
+			"type": "Farm",
+			"name": "Mudchute Farm",
+			"x": 48302.746094,
+			"y": 8536.617187,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC47",
+			"type": "Low-Rise Building",
+			"name": "Beefeater Burger",
+			"x": 43068.386719,
+			"y": 6620.210937,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC4A",
+			"type": "Ruins - Town",
+			"name": "Isle of Dogs Ruin",
+			"x": 33702.820312,
+			"y": 10526.070312,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC4C",
+			"type": "",
+			"name": "",
+			"x": 32842.261719,
+			"y": 8655.793945,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC53",
+			"type": "Bunker",
+			"name": "Access Bunker",
+			"x": 32912.828125,
+			"y": 42825.992188,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC55",
+			"type": "Hospital",
+			"name": "Royal London Hospital",
+			"x": -6011.427734,
+			"y": 53330.199219,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC5A",
+			"type": "Bunker",
+			"name": "Emergency Bunker",
+			"x": 471.409424,
+			"y": 54145.257812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC5E",
+			"type": "Bunker",
+			"name": "Ministry of Defence Bunker",
+			"x": -12158.084961,
+			"y": 61010.757812,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC60",
+			"type": "Ruins - Urban",
+			"name": "Singhbury's Foodstuffs",
+			"x": -10994.359375,
+			"y": 62402.636719,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC62",
+			"type": "Diamond City",
+			"name": "Gate",
+			"x": -10108.795898,
+			"y": 66411.992187,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC64",
+			"type": "Vault",
+			"name": "Tower Hamlets Pindar",
+			"x": 18866.621094,
+			"y": 45177.433594,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC66",
+			"type": "Pier",
+			"name": "Limehouse Basin",
+			"x": 15713.979492,
+			"y": 39460.890625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC68",
+			"type": "Filling Station",
+			"name": "Tower Hamlets Petrol Station",
+			"x": 10808.210938,
+			"y": 42242.738281,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC6B",
+			"type": "Forested",
+			"name": "King Edward Memorial Park",
+			"x": 7724.96582,
+			"y": 40361.449219,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC78",
+			"type": "Custom 69",
+			"name": "The Mariner And Albatross",
+			"x": 33256.058594,
+			"y": 4636.350098,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDC7A",
+			"type": "Elevated Highway",
+			"name": "A205",
+			"x": -99077.523438,
+			"y": -68810.476562,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "072FDCBE",
+			"type": "Pond / Lake",
+			"name": "Rejuvenation Pool",
+			"x": 79330.6875,
+			"y": 15172.536133,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "073073F1",
+			"type": "Police Station",
+			"name": "New Scotland Yard",
+			"x": 14532.686523,
+			"y": -31739.662109,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0730DD3A",
+			"type": "Office / Civic Building",
+			"name": "Broadcasting House",
+			"x": 192.365875,
+			"y": 24629.34375,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07310FED",
+			"type": "Town",
+			"name": "Islington",
+			"x": -6912,
+			"y": 48896,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "07310FEE",
+			"type": "Town",
+			"name": "Camden",
+			"x": -10752,
+			"y": 48896,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "07310FEF",
+			"type": "City",
+			"name": "Westminster",
+			"x": -10240,
+			"y": 6144,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "07310FF0",
+			"type": "Ruins - Urban",
+			"name": "London",
+			"x": -3328,
+			"y": 2048,
+			"area": "HackneyWorld"
+		},
+		{
+			"form_id": "07310FF4",
+			"type": "Town",
+			"name": "Camden",
+			"x": 59392,
+			"y": 52224,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07310FF5",
+			"type": "Ruins - Urban",
+			"name": "London",
+			"x": 35840,
+			"y": -1280,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07310FF6",
+			"type": "Town",
+			"name": "Islington",
+			"x": 59392,
+			"y": 22272,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07310FF7",
+			"type": "Town",
+			"name": "Hackney",
+			"x": 59392,
+			"y": 4608,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07310FFC",
+			"type": "Town",
+			"name": "Hackney",
+			"x": 30720,
+			"y": -19456,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07310FFD",
+			"type": "Ruins - Urban",
+			"name": "London",
+			"x": -2048,
+			"y": -3328,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07310FFE",
+			"type": "City",
+			"name": "Westminster",
+			"x": -29696,
+			"y": -17664,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07310FFF",
+			"type": "Town",
+			"name": "Camden",
+			"x": -11264,
+			"y": 44032,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07311003",
+			"type": "Town",
+			"name": "Hackney",
+			"x": 22528,
+			"y": 67584,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07311004",
+			"type": "Town",
+			"name": "Islington",
+			"x": -34816,
+			"y": 75776,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07311005",
+			"type": "Town",
+			"name": "Camden",
+			"x": -79872,
+			"y": 104448,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07311006",
+			"type": "City",
+			"name": "Westminster",
+			"x": -96256,
+			"y": 18432,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0731100B",
+			"type": "Ruins - Urban",
+			"name": "London",
+			"x": -2048,
+			"y": 10240,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "0731100C",
+			"type": "City",
+			"name": "Westminster",
+			"x": -19456,
+			"y": 768,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "0731100D",
+			"type": "Town",
+			"name": "Islington",
+			"x": 27648,
+			"y": 7168,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "0731100E",
+			"type": "Town",
+			"name": "Hackney",
+			"x": 27648,
+			"y": 15616,
+			"area": "CamdenWorld"
+		},
+		{
+			"form_id": "073115B5",
+			"type": "",
+			"name": "",
+			"x": 33781.03125,
+			"y": 17934.3125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07312FDD",
+			"type": "Metro Station",
+			"name": "Westminster Underground Station",
+			"x": 7185.195801,
+			"y": -37609.5625,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FDF",
+			"type": "Custom 71",
+			"name": "Emelio's Caffe",
+			"x": 4202.95752,
+			"y": -35995.527344,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FE1",
+			"type": "Goodneighbor",
+			"name": "Tenpenny Manor",
+			"x": -3152.18457,
+			"y": -31743.474609,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FE3",
+			"type": "Church",
+			"name": "Westminster Abbey",
+			"x": -7535.586426,
+			"y": -40997.648438,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FE5",
+			"type": "Custom House",
+			"name": "Palace of Westminster",
+			"x": 2370.473389,
+			"y": -43914.242188,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FE7",
+			"type": "Custom House",
+			"name": "10 Downing Street",
+			"x": 5206.900879,
+			"y": -23759.279297,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FE9",
+			"type": "Gov't Building / Monument",
+			"name": "Horse Guards",
+			"x": 10276.978516,
+			"y": -19538.787109,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FEB",
+			"type": "Drive-In",
+			"name": "Piccadilly Circus",
+			"x": 10098.817383,
+			"y": 1419.658203,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FED",
+			"type": "Car",
+			"name": "The Mall",
+			"x": 10174.272461,
+			"y": -10674.601562,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FEF",
+			"type": "Diamond City",
+			"name": "Admiralty Arch",
+			"x": 19714.669922,
+			"y": -7083.209961,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FF1",
+			"type": "Hospital",
+			"name": "NuSkin",
+			"x": 1807.652222,
+			"y": 18327.009766,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FF3",
+			"type": "School",
+			"name": "Westminster University",
+			"x": -3669.586426,
+			"y": 18857.017578,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FF5",
+			"type": "Custom 77",
+			"name": "Oxford Circus",
+			"x": -92.983551,
+			"y": 14237.894531,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FF7",
+			"type": "Junkyard",
+			"name": "Westminster Refuse",
+			"x": 11007.146484,
+			"y": 15859.509766,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FF9",
+			"type": "Custom 77",
+			"name": "Crash Site",
+			"x": 1205.844482,
+			"y": -1682.665527,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FFB",
+			"type": "Car",
+			"name": "Regent Street",
+			"x": 2468.494873,
+			"y": 3279.18335,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07312FFD",
+			"type": "Custom 77",
+			"name": "Carnaby Street",
+			"x": 6329.72168,
+			"y": 11971.128906,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313000",
+			"type": "Castle",
+			"name": "St James's Palace",
+			"x": -591.077148,
+			"y": -8144.564453,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313002",
+			"type": "Pond / Lake",
+			"name": "St James's Park",
+			"x": -606.138794,
+			"y": -19144.427734,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313004",
+			"type": "Country Club",
+			"name": "Buckingham Palace",
+			"x": -14405.179687,
+			"y": -20048.728516,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313006",
+			"type": "Custom 77",
+			"name": "Wellington Arch",
+			"x": -25439.039062,
+			"y": -2988.551025,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313008",
+			"type": "Forested",
+			"name": "Green Park",
+			"x": -12623.805664,
+			"y": -5688.436035,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0731300A",
+			"type": "Metro Station",
+			"name": "Green Park Underground Station",
+			"x": -9579.993164,
+			"y": 758.854919,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0731300C",
+			"type": "Car",
+			"name": "A4",
+			"x": -20585.128906,
+			"y": -2475.949463,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0731300E",
+			"type": "Minutemen",
+			"name": "Tournament Grounds",
+			"x": -36970.914062,
+			"y": 3396.37085,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313010",
+			"type": "Railroad - Faction",
+			"name": "Speaker's Corner",
+			"x": -26707.976562,
+			"y": 4250.946289,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313012",
+			"type": "Custom 77",
+			"name": "Marble Arch",
+			"x": -26900.771484,
+			"y": 6940.014648,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313014",
+			"type": "Metro Station",
+			"name": "Hyde Park Corner Underground Station",
+			"x": -29880.322266,
+			"y": -566.137634,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313016",
+			"type": "Metro Station",
+			"name": "Knightsbridge Underground Station",
+			"x": -29163.949219,
+			"y": -7010.153809,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313018",
+			"type": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
+			"name": "King Herods",
+			"x": -29016.267578,
+			"y": -10701.538086,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0731301A",
+			"type": "Gov't Building / Monument",
+			"name": "Victoria and Albert Museum",
+			"x": -34757.0625,
+			"y": -11691.897461,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0731301C",
+			"type": "Gov't Building / Monument",
+			"name": "Science Museum",
+			"x": -42214.9375,
+			"y": -8722.624023,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0731301E",
+			"type": "Gov't Building / Monument",
+			"name": "Natural History Museum",
+			"x": -44480.421875,
+			"y": -15331.65625,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313020",
+			"type": "Observatory",
+			"name": "Royal Albert Hall",
+			"x": -47652.292969,
+			"y": -8556.051758,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313022",
+			"type": "Forested",
+			"name": "Hyde Park",
+			"x": -48405.4375,
+			"y": 3965.269531,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313028",
+			"type": "Ruins - Town",
+			"name": "Grosvenor Square",
+			"x": -6149.699219,
+			"y": 5400.708008,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0731302A",
+			"type": "Custom 77",
+			"name": "Mount Street",
+			"x": -14399.822266,
+			"y": 4781.79541,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0731302C",
+			"type": "Metro Station",
+			"name": "Bond Street Underground Station",
+			"x": -8624.571289,
+			"y": 9572.415039,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0731302F",
+			"type": "Military Base",
+			"name": "British Military Checkpoint",
+			"x": -21270.535156,
+			"y": -35733.800781,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313031",
+			"type": "Custom 69",
+			"name": "Two Westminster Chairmen",
+			"x": -15064.612305,
+			"y": -34909.121094,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313033",
+			"type": "Railroad - Faction",
+			"name": "Aeneid",
+			"x": -10503.123047,
+			"y": -31655.613281,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313035",
+			"type": "Custom 77",
+			"name": "Parliament Square Garden",
+			"x": -1244.661865,
+			"y": -34606.011719,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313037",
+			"type": "Diamond City",
+			"name": "Westminster Gate",
+			"x": 8003.310547,
+			"y": -41487.59375,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "07313E08",
+			"type": "Pond / Lake",
+			"name": "Inferno Lake",
+			"x": -26932.425781,
+			"y": -92679.421875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07314583",
+			"type": "Custom 77",
+			"name": "Nadia's Trade Post",
+			"x": 81769.96875,
+			"y": -86779.65625,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "073156A3",
+			"type": "Custom 77",
+			"name": "Churchill Library",
+			"x": 82584.390625,
+			"y": -74875.546875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "073156A5",
+			"type": "Custom 77",
+			"name": "Do It Yourself",
+			"x": 83369.570312,
+			"y": -83172.453125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "073193AA",
+			"type": "Pond / Lake",
+			"name": "Insect Birthing Pool",
+			"x": 75108.320312,
+			"y": -28585.033203,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0731A017",
+			"type": "Vault",
+			"name": "Wandsworth Pindar",
+			"x": -70981.398438,
+			"y": -76962.1875,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0731E15E",
+			"type": "Graveyard",
+			"name": "Nunhead Cemetary",
+			"x": -1612.779053,
+			"y": -32727.267578,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "073204F9",
+			"type": "Ruins - Urban",
+			"name": "Morrisinghs Convenience Store",
+			"x": -15404.541016,
+			"y": 15206.020508,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "073204FB",
+			"type": "Ruins - Urban",
+			"name": "London Electronics Store",
+			"x": -12795.708008,
+			"y": 16243.704102,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "073204FD",
+			"type": "Ruins - Urban",
+			"name": "Plodd Bins",
+			"x": -1841.525391,
+			"y": 8459.456055,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "073204FF",
+			"type": "Ruins - Urban",
+			"name": "Gregori's Bakery",
+			"x": 83.904129,
+			"y": 9654.692383,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07320501",
+			"type": "Ruins - Urban",
+			"name": "Singhsbury Local",
+			"x": -1352.934448,
+			"y": 23615.808594,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07320503",
+			"type": "Ruins - Urban",
+			"name": "Islington Bank",
+			"x": -3621.33252,
+			"y": 27468.126953,
+			"area": "IslingtonWorld"
+		},
+		{
+			"form_id": "07320B81",
+			"type": "Custom 77",
+			"name": "Observation Point",
+			"x": -11260.705078,
+			"y": 41854.492188,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07322746",
+			"type": "",
+			"name": "",
+			"x": -71138.164062,
+			"y": 10336.62793,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "07329F3E",
+			"type": "Railroad - Faction",
+			"name": "Thameshaven Market",
+			"x": -4576.452148,
+			"y": 5213.28125,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0732A2B3",
+			"type": "Institute",
+			"name": "Head of Civil Service's Office",
+			"x": -4676.777344,
+			"y": -24931.414062,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0732ACF2",
+			"type": "Church",
+			"name": "St Paul's Cathedral",
+			"x": 8882.632812,
+			"y": 1564.915405,
+			"area": "StPaulsWorld"
+		},
+		{
+			"form_id": "0732F37E",
+			"type": "Faneuil Hall",
+			"name": "Bank Of England",
+			"x": -37250,
+			"y": 46909.097656,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0732F381",
+			"type": "Ruins - Urban",
+			"name": "London",
+			"x": -387.689209,
+			"y": -484.57959,
+			"area": "BankofEnglandWorld"
+		},
+		{
+			"form_id": "0732F384",
+			"type": "Military Base",
+			"name": "Imperial War Museum",
+			"x": -3941.805908,
+			"y": -2962.134277,
+			"area": "BankofEnglandWorld"
+		},
+		{
+			"form_id": "0732F385",
+			"type": "Military Base",
+			"name": "Imperial War Museum",
+			"x": 7546.052246,
+			"y": -50796.722656,
+			"area": "WestminsterWorld"
+		}
+	]
+}

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Joric's Maps</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+<link rel="stylesheet" href="main.css">
+
+<!--
+<link rel="stylesheet" href="https://unpkg.com/maptalks/dist/maptalks.css">
+<script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+-->
+
+<link href="maptalks.css" rel="stylesheet">
+<script src="maptalks-custom.min.js#issue-2354"></script>
+<script src="all.min.js"></script>
+
+
+<style>
+html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
+.container{width:100%;height:100%}
+</style>
+
+</head>
+<body>
+<div tabindex=0 id="map" class="container"></div>
+
+<div id="left-sidebar" class="sidebar">
+  <div class="sidebar-close" onclick="toggleNav(this)"><div class="container middle"><i class="triangle"></i></div></div>
+  <div class="panel">
+    <h2>Fallout London</h2>
+    <hr/>
+
+    <div class="map-switcher-panel">
+      <a id="load_folon" class="map-link selected" href="javascript:loadMap('folon')">London</a>
+    </div>
+
+    <hr/>
+    <div class="button-panel"><span id="show-all" onclick="showAll()">Show All</span><span id="hide-all" onclick="hideAll()">Hide All</span></div>
+
+    <div class="search-input-wrapper input-group" style="display: none;">
+      <div class="input-group-prepend">
+        <button id="search-close" type="button" class="btn">x</button>
+      </div>
+      <input id="search-input" class="form-control" type="text" placeholder="Search..."/>
+      <div class="input-group-append">
+        <button id="search-submit" type="button" class="btn">Search</button>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div id="categories-wrapper">
+      <ul id="categories">
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+let localDataName = 'joricsFalloutLondonMaps';
+let localData = JSON.parse(localStorage.getItem(localDataName)) || {};
+
+let startPitch = 0;
+let startZoom = 2;
+let heightFactor = 0.5;
+let defaultPitch = 45;
+let enableAltitude = true;
+let autoAltitude = true;
+let drawMarkerAltitude = true;
+let drawCurveAltitude = false;
+let drawShadow = false;
+let iconSize = 48;
+let lineWidth = 3;
+let lineDasharray = null;
+//let lineDasharray = [6,4];
+let arrowStyle = [2,3];
+let markerLayer = null;
+let mapCenter = null;
+let markerSymbol = markerSymbol2;
+let map = null;
+let parsed = {};
+let objectNames = {};
+
+let settings;
+let counters = {};
+let areas = {};
+let mapBounds = [];
+let types = {};
+let mapId = 'LondonWorld';
+let pressed = {};
+let markers = {};
+let mapInfo = null;
+
+let cw = ch = 4096;
+let w = h = 64;
+
+let map_ids = [
+  "LondonWorld",
+  "WestminsterWorld",
+  "IslingtonWorld",
+  "HackneyWorld",
+  "CamdenWorld",
+  "BankofEnglandWorld"
+];
+
+function getMapInfo(id) {
+  for (o of markers.worldspaces) {
+    if (id==o.editor_id) {
+      return o;
+    }
+  }
+  return null;
+}
+
+function createMap() {
+  let cw = ch = 4096;
+  let w = h = 64;
+
+  let mapSize = {width: 2048, height: 2048}
+
+  let mapWorldSize = w * cw;
+  let scale = mapWorldSize / mapSize.width;
+
+  let mapWorldCenter = { "X": 0.0, "Y": 0.0, "Z": 0.0 };
+  let mapWorldUpperLeft = { "X": -w*cw/2, "Y": -h*ch/2, "Z": 0.0 };
+  let mapWorldLowerRight = { "X": w*cw/2, "Y": h*ch/2, "Z": 0.0 };
+
+  mapCenter = [mapWorldCenter.X, mapWorldCenter.Y];
+  mapBounds = [mapWorldUpperLeft.X, mapWorldUpperLeft.Y, mapWorldLowerRight.X, mapWorldLowerRight.Y];
+
+  let [left,top,right,bottom] = mapBounds;
+  let extent = new maptalks.Extent(left, top, right, bottom);
+
+  if (!settings.center) {
+    [settings.zoom, settings.pitch, settings.bearing, settings.center] = [startZoom, startPitch, 0, mapCenter];
+  }
+
+  map = new maptalks.Map('map', {
+    heightFactor: heightFactor,
+    zoom: settings.zoom,
+    pitch: settings.pitch,
+    bearing: settings.bearing,
+    center: settings.center,
+    maxExtent: extent,
+    maxPitch: 80,
+    spatialReference : {
+      projection : 'identity',
+      resolutions: [8,4,2,1,1/2,1/4,1/8].map(x=>x*scale),
+      fullExtent : { top: top, left: left, bottom: bottom, right: right },
+    },
+    baseLayer: new maptalks.TileLayer('base', {
+      maxAvailableZoom: 2,
+      urlTemplate: 'tiles/'+mapId+'/{z}/{x}/{y}.png',
+      repeatWorld: false,
+      tileSystem: [ 1, -1, left, top ],
+    }),
+    seamlessZoom: true,
+    doubleClickZoom: true,
+
+    zoomControl: {
+      //position  : 'bottom-right',
+      //position  : 'top-right',
+      position  : {bottom: 70, right: 20},
+      zoomLevel : false,
+    },
+
+    attribution: {
+      content: '', position: {top: -50, left: 0},
+    },
+
+  });
+
+  markerLayer = new maptalks.VectorLayer('markers', {
+    enableAltitude: enableAltitude,
+    sortByDistanceToCamera: true,
+    forceRenderOnMoving: true,
+    forceRenderOnRotating: true,
+  }).addTo(map);
+
+  if (drawMarkerAltitude) {
+    markerLayer.setOptions({drawAltitude : {lineWidth : lineWidth, lineColor : '#fff', lineOpacity: 0.25, lineDasharray: lineDasharray }});
+  }
+
+  map.on('viewchange', e=> {
+    document.getElementById('map').focus();
+    settings.center = [e.new.center[0],e.new.center[1]];
+    settings.bearing = e.new.bearing;
+    settings.pitch = e.new.pitch;
+    settings.zoom = e.new.zoom;
+
+    if (enableAltitude && autoAltitude) {
+      markerLayer.setOptions({enableAltitude: map.getPitch()!=0});
+    }
+    saveSettings();
+
+  });
+
+  let compassControl = new maptalks.control.Compass({position  : 'bottom-right'}).addTo(map)
+    ._compass.onclick = (e)=>map.getBearing()==0 && map.animateTo({ pitch: map.getPitch()==0 ? defaultPitch : 0 })
+
+  map.on('click', function(e) {
+    document.getElementById('map').focus(); // needs tabindex
+  });
+}
+
+function markerSymbol2(type, _bg, _fg) {
+  let d = 48;
+  let bg = 'grey';
+  let fg = 'white';
+  let icon = 'circle-question';
+
+  if (t = types[type]) {
+    if (t.fa) icon = t.fa;
+    if (t.bg) bg = t.bg;
+    if (t.fg) fg = t.fg;
+  }
+
+  bg = _bg || bg;
+  fg = _fg || fg;
+
+  let [w1,h1,[s1],c1,p1] = FontAwesome.icon({ iconName: 'location-pin' }).icon;
+
+  if (!(fa = FontAwesome.icon({ iconName: icon }))) {
+    fa = FontAwesome.icon({ icon: 'circle-question' });
+  }
+
+  let [w2,h2,[s2],c2,p2] = fa.icon;
+
+  let k = 0.45;
+
+  let dx = (w1-w2*k)/2;
+  let dy = (h1-h2*k)/2 - h1*0.125;
+
+  let path = [
+    {path:p1, fill: 'black'},
+    {transform: 'matrix(0.976,0,0,0.976,5,5)', path: p1, fill: bg },
+    {transform: 'matrix('+k+',0,0,'+k+','+dx+','+dy+')', path:p2, fill: fg }
+  ];
+  return {
+    markerType: 'path',
+    markerPath : path,
+    markerPathWidth : w1,
+    markerPathHeight : h1,
+    markerLineColor : 12,
+
+    markerWidth: w1*d/512,
+    markerHeight: h1*d/512,
+
+    //markerWidth: { stops:[] }, // { stops: [[1, 16], [5, 32], [7, 64]] },
+
+    markerDy : 0,
+    markerDx : 0
+  };
+}
+
+function saveSettings() {
+  localStorage.setItem(localDataName, JSON.stringify(localData));
+}
+
+function showAll(e) {
+  updateAll(e, true);
+}
+
+function hideAll(e) {
+  updateAll(e, false);
+}
+
+function updateAll(e, show=true, type=null) {
+  lookup = {};
+
+  if (type) {
+    let div = e.target;
+    lookup[type] = div;
+    show ? setClass(div, false, 'hidden') : setClass(div, true, 'hidden');
+  } else {
+    for (div of document.querySelectorAll('.category')) {
+      lookup[div.alt] = div;
+      show ? setClass(div, false, 'hidden') : setClass(div, true, 'hidden');
+    }
+  }
+
+/*
+  // update markers
+  for (marker of map.getLayer('markers')._geoList) {
+    if (div = (lookup[ marker.properties.type ] || lookup[ marker.properties.spawn ]) ) {
+      show ? marker.show() : marker.hide();
+    }
+  }
+*/
+
+  return false;
+}
+
+function toggleItem(e) {
+  e.preventDefault();
+  return updateAll(e, e.target.classList.contains('hidden'), e.target.alt);
+}
+
+function setClass(e, set, c) { set ? e.classList.add(c) : e.classList.remove(c);}
+function toggleClass(e, c) { if (e.classList.contains(c)) { e.classList.remove(c); return false; } else { e.classList.add(c); return true; }}
+function toggleNav(e) { let input = document.querySelector('#search-input'); toggleClass(e.parentElement, 'closed') ? input.blur() : input.focus();}
+function toggleVisibility(a) { [].forEach.call(a, function(e) { toggleClass(document.querySelector(e), 'collapsed'); }) }
+const cmpNum = (a,b)=> b[1]!=a[1] ? (b[1]-a[1]) : a[0].localeCompare(b[0]);
+const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true });
+const capitalize = s => s[0].toUpperCase()+s.slice(1);
+
+function toggleGroup(e) {
+  e.preventDefault();
+
+  // check siblings, if all visible set show to false else true
+  let show = false;
+  let divs = e.target.nextSibling.querySelectorAll('.category-item');
+  [].forEach.call(divs,function(e) {
+    if (e.classList.contains('hidden')) show = true;
+  });
+
+  return e.target.alt && toggleItems(e, show, divs);
+}
+
+function humanReadable(type) {
+  let s = type;
+  if (name = (types[type] && types[type].name)) {
+    s = name;
+  } else {
+    s = s.replace(/([A-Z]+|[\d]+)/g, ' $1').replace(/^ /, ''); // camel case to space-separated
+  }
+  return s;
+}
+
+function showAll(e) { toggleItems(e, true, document.querySelectorAll('#categories .category-item')); }
+function hideAll(e) { toggleItems(e, false, document.querySelectorAll('#categories .category-item')); }
+
+function toggleItem(e) {
+  e.preventDefault();
+  return e.target.alt && toggleItems(e, e.target.classList.contains('hidden'), [e.target]);
+}
+
+function toggleGroup(e) {
+  e.preventDefault();
+
+  // check siblings, if all visible set show to false else true
+  let show = false;
+  let divs = e.target.nextSibling.querySelectorAll('.category-item');
+  [].forEach.call(divs,function(e) {
+    if (e.classList.contains('hidden')) show = true;
+  });
+
+  return e.target.alt && toggleItems(e, show, divs);
+}
+
+function toggleItems(e, show, parent) {
+
+  let hideFound = false;//document.querySelector('#toggle-found').classList.contains('hidden');
+
+  let alwaysVisible = marker=>marker.properties.type=='Jumppad_C' || marker.properties.type.startsWith('Pipesystem');
+
+  lookup = {};
+  for (div of parent) {
+    lookup[div.alt] = div;
+  }
+
+  // update markers
+  for (layerName of ['markers']) {
+    for (marker of map.getLayer(layerName)._geoList) {
+      let o = marker.properties;
+
+      for (type of [o.spawns,o.type]) {
+
+        if (div = lookup[type]) {
+          let id = o.area + ':' + o.name;
+          let found = settings.markedItems[id];
+
+          // toggle markers
+          show && !(found && hideFound && !alwaysVisible(marker)) ? marker.show() : marker.hide();
+
+          // update active items
+          if (layerName == 'markers') {
+            if (show) {
+              delete settings.hiddenItems[type];
+            } else {
+              settings.hiddenItems[type] = true;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  saveSettings();
+  markItems();
+
+  return false;
+}
+
+
+function markItems() {
+  // update markers
+  let hideFound = false;//document.querySelector('#toggle-found').classList.contains('hidden');
+  let hideContent = false;//document.querySelector('#toggle-content').classList.contains('hidden');
+  let alwaysVisible = marker=>marker.properties.type=='Jumppad_C' || marker.properties.type.startsWith('Pipesystem');
+
+  let total = {};
+  let marked = {};
+
+  for (layerName of ['markers']) {
+
+    for (marker of map.getLayer(layerName)._geoList) {
+      let o = marker.properties;
+      let id = o.area +':'+ o.name;
+      let found = settings.markedItems[id];
+
+      let hidden = settings.hiddenItems[o.type];
+
+      hidden || (found && hideFound && !alwaysVisible(marker)) ? marker.hide() : marker.show();
+
+      if (layerName == 'markers') {
+
+        let spawns = o.spawns;
+        if (o.type == 'Chest_C' && !o.spawns) {
+          spawns = o.coins>1 ? 'LotsOfCoins5_C' : 'Coin_C';
+        }
+
+        let type = hideContent ? o.type : (spawns || o.type); // show content if allowed
+
+        // update markers to show/hide chest contents (chests only, to avoid updating empty symbols)
+        o.type=='Chest_C' && marker.updateSymbol(markerSymbol(type, getItemColor(o, type)));
+
+        marker.updateSymbol({markerOpacity: found ? 0.5 : 1 });
+
+        total[o.type] = (total[o.type] || 0) + 1;
+        marked[o.type] = (marked[o.type] || 0) + (found ? 1 : 0);
+
+        if(o.spawns){
+          total[o.spawns] = (total[o.spawns] || 0) + 1;
+          marked[o.spawns] = (marked[o.spawns] || 0) + (found ? 1 : 0);
+        }
+
+      } else {
+        marker.updateSymbol({lineOpacity: marked ? 0.5 : 1 });
+      }
+    }
+  }
+
+  // mark html items
+  [].forEach.call(document.querySelectorAll('#categories .item'), function(div) {
+    if (settings.hiddenItems[div.alt]==true) {
+      div.classList.add('hidden');
+    } else {
+      div.classList.remove('hidden');
+    }
+  });
+
+}
+
+function loadData() {
+  let counters = {};
+
+  function getLoc(x, y) {
+    // need to reproject marker coordinates back
+
+    let cw = ch = 4096;
+    let w = mapInfo.bounds_max[0] - mapInfo.bounds_min[0];
+    let h = mapInfo.bounds_max[1] - mapInfo.bounds_min[1];
+
+    let scale = 1;//.5;//64 / w;
+
+    //console.log(mapInfo);
+    //console.log(scale);
+
+    x *= scale;
+    y *= scale;
+
+
+    return [x, -y];
+  }
+
+  for (o of markers.markers) {
+    //console.log(o);
+
+    if (!o.name) continue;
+
+    if (o.area != mapId) continue;
+
+    let z = 0;//o.type == 'City' || o.type == 'Town' || o.type =='Settlement' || o.type == 'Metro Station' ? 1024*8 : 0;
+
+    let loc = getLoc(o.x, o.y);
+
+    let marker = new maptalks.Marker(loc, {
+      properties: o,
+      content: o.name,
+      symbol: markerSymbol(o.type),
+    }).addTo(markerLayer);
+
+    const tooltip = new maptalks.ui.ToolTip(o.name + ' (' + humanReadable(o.type) + ')', {
+        showTimeout: 50
+    }).addTo(marker);
+
+    marker.setInfoWindow({autoCloseOn: 'click'})
+    .on('click',e=>{
+      let o = e.target.properties;
+      //o._coordinates = e.target.getCoordinates();
+      let title = o.name;
+      let content = JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
+      e.target._infoWindow.setTitle(title);
+      e.target._infoWindow.setContent(content);
+    })
+
+
+    for (type of [o.type]) {
+      if (type !== undefined && types[type] !== undefined) {
+        let group = (types[type] && types[type].group) || 'All Markers';
+        counters[group] = counters[group] || {};
+        counters[group][type] = (counters[group][type] || 0) + 1;
+      }
+    }
+
+  }
+
+  // fill map switcher panel
+  let div = document.querySelector('.map-switcher-panel');
+  div.innerHTML = '';
+  for (id of map_ids) {
+    let a = document.createElement('a');
+    a.innerText = getMapInfo(id).name;
+    a.className = 'map-link';
+    a.href = 'javascript:loadMap(\''+id+'\')'
+    div.appendChild(a);
+    if (mapId==id) {
+      a.classList.add('selected');
+    }
+  }
+
+
+  let ul = document.querySelector('#categories');
+  ul.innerHTML = '';
+
+  let groups = Object.keys(counters);
+  let weight = x=>0;//({'collectable':100,'coins':90,'items':-100, 'actors':-101, 'weapons':80, 'stats':6, 'upgrades': 7, 'teleports': 85, 'graves':-10, 'misc':-1000}[x] || 0);
+
+  for (group of groups.sort( (a,b)=> weight(b)-weight(a) || cmpAlphaNum(a,b)) ) {
+    let header = document.createElement('div');
+    header.innerHTML = capitalize(group);
+    header.className = 'header';
+    header.alt = group;
+    header.onclick = toggleGroup;
+
+    ul.appendChild(header);
+
+    let div = document.createElement('div');
+    div.className = 'group-categories';
+    ul.appendChild(div);
+
+    let items = [];
+    for ([type, count] of Object.entries(counters[group])) {
+      items.push([humanReadable(type),count,type]);
+    }
+
+    for ([name,count,type] of items.sort(cmpAlphaNum)) {
+      let li = document.createElement('div');
+      li.className = 'item';
+      li.classList.add('category-item');
+      li.alt = type;
+      li.title = name + ' (' + type + ')';
+      li.onclick = toggleItem;
+
+      let c0 = document.createElement('span');
+      c0.className = 'icon';
+
+      let fa = (types[type] && types[type].fa) || 'circle-question';
+      c0.classList.add('fa');
+      c0.classList.add('fa-'+fa);
+      //c0.setAttribute('data-fa-transform','left-5');
+
+      let c1 = document.createElement('span');
+      c1.innerHTML = name;
+      c1.className = 'title';
+
+      let c2 = document.createElement('span');
+      c2.innerHTML = count;
+      c2.className = 'bubble';
+
+      li.appendChild(c0);
+      li.appendChild(c1);
+      li.appendChild(c2);
+      div.appendChild(li);
+    }
+  }
+
+  markItems();
+
+  setTimeout(function() {
+    if (enableAltitude && autoAltitude) {
+      markerLayer.setOptions({enableAltitude: map.getPitch()!=0});
+    }
+  },500);
+}
+
+function loadMap(id) {
+  map && map.remove();
+  mapId = id;
+
+  localData.mapId = mapId;
+  settings = localData[mapId];
+
+  saveSettings();
+
+  let promises = ['./markers.json'].map(url=>fetch(url).then(r=>r.json()));
+  Promise.all(promises).then(values => {
+    markers = values[0];
+    mapInfo = getMapInfo(mapId);
+    console.log('loading', id, mapInfo);
+    createMap();
+    loadData();
+  }).catch(e=>{console.log(e);})
+
+  return false;
+}
+
+window.onload = function(event) {
+
+  mapId = localData.mapId || map_ids[0];
+
+  for (id of map_ids) {
+    if (!localData[id]) {
+      localData[id] = {};
+    }
+    if (!localData[id].hiddenItems) {
+      localData[id].hiddenItems = {};
+    }
+    if (!localData[id].markedItems) {
+      localData[id].markedItems = {};
+    }
+    if (!localData[id].searchText) {
+      localData[id].searchText = '';
+    }
+  }
+
+  settings = localData[mapId];
+
+  saveSettings();
+
+  let bindings = {
+    KeyA:['x',+1],KeyD:['x',-1],
+    KeyW:['y',+1],KeyS:['y',-1],
+    KeyQ:['b',+1],KeyE:['b',-1],
+    KeyT:['z',+1],KeyG:['z',-1],
+    KeyX:['p',+1],KeyZ:['p',-1],
+  };
+
+  function update(timestep) {
+    let step = 20;
+    let v = {};
+    for (key of Object.keys(bindings)) {
+      if (pressed[key]) {
+        let [dir, step] = bindings[key];
+        v[dir] = (v[dir]||0) + step;
+      }
+    }
+    (v.x || v.y) && map.panBy([(v.x||0)*step, (v.y||0)*step], {duration: 1});
+    v.b && map.setBearing(map.getBearing()+v.b*step/10);
+    v.p && map.setPitch(map.getPitch()+v.p*step/10, {duration: 1});
+    v.z && map.setZoom(map.getZoom()+v.z/16, {duration: 1});
+    window.requestAnimationFrame(update);
+  }
+
+  window.addEventListener('keyup', (e) => {
+    delete pressed[e.code];
+  });
+
+  window.addEventListener("keydown",function (e) {
+    //console.log(e.code);
+    if(document.getElementById('map') == document.activeElement) {
+      pressed[e.code] = true;
+    } else {
+      pressed = {};
+      return;
+    }
+
+    switch (e.code) {
+      case 'KeyR':
+        if (map.getBearing()!=0) {
+          map.animateTo({ bearing: 0 });
+        } else {
+          map.animateTo({ pitch: map.getPitch()==0 ? defaultPitch : 0 });
+        }
+      break;
+      case 'KeyC': !e.ctrlKey && map.panTo(mapCenter); break;
+      case 'Digit1': loadMap(map_ids[0]); break;
+      case 'Digit2': loadMap(map_ids[1]); break;
+      case 'Digit3': loadMap(map_ids[2]); break;
+      case 'Digit4': loadMap(map_ids[3]); break;
+      case 'Digit5': loadMap(map_ids[4]); break;
+      case 'Digit6': loadMap(map_ids[5]); break;
+    }
+  });
+
+  window.requestAnimationFrame(update);
+
+  let promises = ['./types.json'].map(url=>fetch(url).then(r=>r.json()));
+  Promise.all(promises).then(values => {
+    types = values[0];
+    loadMap(mapId);
+  }).catch(e=>{console.log(e);})
+
+}
+
+</script>
+
+<a href="https://github.com/joric/maps" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>

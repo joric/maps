@@ -1,0 +1,61 @@
+{
+  Pip-boy Map Markers Export for xEdit by Joric (c) 2024
+  Hotkey: Ctrl+Shift+D
+}
+
+unit UserScript;
+
+function Finalize: integer;
+var
+  i, j: integer;
+  g, e, ref, MapMarkerStat: IInterface;
+  Obj, ChildObj: TJsonObject;
+begin
+  Obj := TJsonObject.Create;
+
+  for i := 0 to Pred(FileCount) do begin
+    g := GroupBySignature(FileByIndex(i), 'WRLD');
+    for j := 0 to Pred(ElementCount(g)) do begin
+      e := ElementByIndex(g, j);
+      if IsMaster(e) then begin
+        ChildObj := Obj.A['worldspaces'].AddObject;
+        ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(e), 8);
+        ChildObj['editor_id'] := EditorID(e);
+        ChildObj['name'] := GetElementEditValues(e, 'FULL');
+        ChildObj.A['nw_cell'].Add(Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\X')));
+        ChildObj.A['nw_cell'].Add(Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\Y')));
+        ChildObj.A['se_cell'].Add(Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\X')));
+        ChildObj.A['se_cell'].Add(Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\Y')));
+        ChildObj['world_map_scale'] := Double(GetElementNativeValues(e, 'ONAM\World Map Scale'));
+        ChildObj.A['cell_offset'].Add(Double(GetElementNativeValues(e, 'ONAM\Cell X Offset')));
+        ChildObj.A['cell_offset'].Add(Double(GetElementNativeValues(e, 'ONAM\Cell Y Offset')));
+        ChildObj.A['cell_offset'].Add(Double(GetElementNativeValues(e, 'ONAM\Cell Z Offset')));
+        ChildObj.A['bounds_min'].Add(GetElementNativeValues(e, 'Object Bounds\NAM0\X'));
+        ChildObj.A['bounds_min'].Add(GetElementNativeValues(e, 'Object Bounds\NAM0\Y'));
+        ChildObj.A['bounds_max'].Add(GetElementNativeValues(e, 'Object Bounds\NAM9\X'));
+        ChildObj.A['bounds_max'].Add(GetElementNativeValues(e, 'Object Bounds\NAM9\Y'));
+      end;
+    end;
+  end;
+
+  MapMarkerStat := RecordByFormID(FileByIndex(0), $00000010, False);
+  for i := 0 to Pred(ReferencedByCount(MapMarkerStat)) do begin
+    e := ReferencedByIndex(MapMarkerStat, i);
+    ChildObj := Obj.A['markers'].AddObject;
+    ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(e), 8);
+    ChildObj['type'] := GetElementEditValues(e, 'Map Marker\TNAM\Type');
+    ChildObj['name'] := GetElementEditValues(e, 'Map Marker\FULL');
+    ChildObj['x'] := Double(GetElementNativeValues(e, 'DATA\Position\X'));
+    ChildObj['y'] := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
+    ref := LinksTo(ElementByName(LinksTo(ElementByName(e, 'Cell')), 'Worldspace'));
+    if Assigned(ref) then
+      ChildObj['area'] := EditorID(ref);
+  end;
+
+  //AddMessage(Obj.ToJSON({Compact:=}False));
+  AddMessage('Saving markers.json...');
+  Obj.SaveToFile('markers.json', False, TEncoding.UTF8, True);
+end;
+
+end.
+
