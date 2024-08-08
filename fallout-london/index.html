@@ -533,7 +533,8 @@ function loadData() {
     let a = document.createElement('a');
     a.innerText = getMapInfo(id).name;
     a.className = 'map-link';
-    a.href = 'javascript:loadMap(\''+id+'\')'
+    a.href = '#' + id;
+    a.onclick = function(e){ loadMap(e.target.href.split('#').pop());  }
     div.appendChild(a);
     if (mapId==id) {
       a.classList.add('selected');
@@ -618,7 +619,7 @@ function loadMap(id) {
   Promise.all(promises).then(values => {
     markers = values[0];
     mapInfo = getMapInfo(mapId);
-    console.log('loading', id, mapInfo);
+    //console.log('loading', id, mapInfo);
     createMap();
     loadData();
   }).catch(e=>{console.log(e);})
