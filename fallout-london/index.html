@@ -24,7 +24,6 @@
 <script src="maptalks-custom.min.js#issue-2354"></script>
 <script src="all.min.js"></script>
 
-
 <style>
 html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
 .container{width:100%;height:100%}
@@ -47,17 +46,27 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
     <hr/>
     <div class="button-panel"><span id="show-all" onclick="showAll()">Show All</span><span id="hide-all" onclick="hideAll()">Hide All</span></div>
 
-    <div class="search-input-wrapper input-group" style="display: none;">
-      <div class="input-group-prepend">
-        <button id="search-close" type="button" class="btn">x</button>
+    <hr/>
+
+    <form id="search-form">
+      <div class="search-input-wrapper input-group">
+        <div class="input-group-prepend">
+          <button id="search-close" type="button" class="btn">x</button>
+        </div>
+        <input id="search-input" class="form-control" type="text" placeholder="Search..." autofocus/>
+        <div class="input-group-append">
+          <input type="submit" id="search-submit" type="button" class="btn" value="Search" />
+        </div>
       </div>
-      <input id="search-input" class="form-control" type="text" placeholder="Search..."/>
-      <div class="input-group-append">
-        <button id="search-submit" type="button" class="btn">Search</button>
-      </div>
-    </div>
+    </form>
 
     <hr/>
+
+    <div id="search-result" class="collapsed group-categories">
+      <div id="search-items">
+        search results here
+      </div>
+    </div>
 
     <div id="categories-wrapper">
       <ul id="categories">
@@ -717,6 +726,114 @@ window.onload = function(event) {
     types = values[0];
     loadMap(mapId);
   }).catch(e=>{console.log(e);})
+
+
+  let searchInput = document.querySelector('#search-input');
+  let searchResult = document.querySelector('#search-result');
+  let categories = document.querySelector('#categories-wrapper');
+
+  function filterMarker(o, text) {
+    if (text=='') return true;
+    if (o.area != mapId) return false;
+
+    for (s of [o.name, o.editor_id, o.type]) {
+      if (s && s.toLowerCase().includes(text.toLowerCase()))
+        return true;
+    }
+    return false;
+  }
+
+  function clickSearchItem(e) {
+    //alert('selecting', id);
+    //console.log(e.target.alt);
+    let id = e.target.alt;
+
+    for (layerName of ['markers']) {
+      for (marker of map.getLayer(layerName)._geoList) {
+        let o = marker.properties;
+        if (id == o.form_id) {
+          map.animateTo({center: marker._coordinates});
+          marker.show();
+          marker.setInfoWindow({autoCloseOn: 'click',
+            title: o.name,
+            content: JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;'),
+          });
+          marker.openInfoWindow();
+          return;
+        }
+      }
+    }
+  }
+
+  function openSearch(text) {
+    setClass(searchResult, false, 'collapsed');
+    setClass(categories, true, 'collapsed');
+
+    settings.searchText = text;
+
+    let div = document.querySelector('#search-items');
+    div.innerHTML = ''
+
+    for (o of markers.markers) {
+      if (!filterMarker(o, text)) {
+        continue;
+      }
+
+      let id = o.form_id;
+      let name = o.name;
+      let type = o.type;
+      let title = name + ' (' + type + ')';
+
+      let li = document.createElement('div');
+      li.className = 'item';
+      li.classList.add('search-item');
+      li.title = title + ' [' + id + ']';
+      li.alt = id;
+      li.onclick = clickSearchItem;
+
+      let c0 = document.createElement('span');
+      c0.className = 'icon';
+
+      let fa = (types[type] && types[type].fa) || 'circle-question';
+      c0.classList.add('fa');
+      c0.classList.add('fa-'+fa);
+
+      let c1 = document.createElement('span');
+      c1.innerHTML = title;
+      c1.className = 'title';
+
+      li.appendChild(c0);
+      li.appendChild(c1);
+      div.appendChild(li);
+
+    }
+  }
+
+  function closeSearch() {
+    setClass(searchResult, true, 'collapsed')
+    setClass(categories, false, 'collapsed');
+    searchInput.value = '';
+    searchInput.focus();
+    settings.searchText = '';
+  }
+
+  document.querySelector('#search-close').onclick = closeSearch;
+
+  document.querySelector('#search-form').onkeydown = function(e) {
+    if (e.code == 'Escape') {
+      closeSearch();
+    }
+  }
+
+  document.querySelector('#search-form').onsubmit = function(e) {
+    e. preventDefault(); 
+    let text = searchInput.value;
+    if (text=='') {
+      closeSearch();
+    } else {
+      openSearch(text);
+    }
+  }
 
 }
 
