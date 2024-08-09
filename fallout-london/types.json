@@ -63,7 +63,7 @@
   "Custom 66": {"fa": "school",  "name": "School"},
   "Custom 67": {"fa": "shop",  "name": "The Shoppe"},
   "Custom 69": {"fa": "beer-mug-empty",  "name": "Pub"},
-  "Custom 70": {"fa": "plane", "name": "Planes" },
+  "Custom 70": {"fa": "tents", "bg": "darkcyan", "name": "Biggin Hill Airport" },
   "Custom 71": {"fa": "mug-saucer", "name": "Emelio's Caffe" },
   "Custom 73": {"fa": "road", "name": "Monorail" },
   "Custom 74": {"fa": "dharmachakra", "name": "London Eye" },
