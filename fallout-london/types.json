@@ -7,7 +7,7 @@
   "Faneuil Hall": {"fa": "dollar-sign"},
   "Submarine": {"fa": "ship"},
   "USS Constitution": {"fa": "ship"},
-  "Synth Head": {"fa": "hotel"},
+  "Synth Head": {"fa": "globe", "name": "Theatre"},
   "Castle": {"fa": "chess-rook"},
   "Settlement": {"fa": "tents", "bg": "darkcyan" },
   "Railroad": {"fa": "train"},
