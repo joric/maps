@@ -117,16 +117,15 @@ let cw = ch = 4096;
 let w = h = 64;
 
 let maps = {
-  'LondonWorld' : true,
-  'WestminsterWorld' : true,
-  'IslingtonWorld': true,
-  'HackneyWorld' : true,
-  'CamdenWorld': true,
-  'BankofEnglandWorld': true,
-  'BankofEnglandWorld': true,
-  'CoventGardenWorldSpace': false, // no separate map
-  'BromleyGladesWorld': false,
-  'StPaulsWorld': false,
+  'LondonWorld' : { scale: 1, offset: {x:0, y:0}, has_map: true},
+  'WestminsterWorld' : { scale: 1.9, offset: {x:7000, y:22000}, has_map: true},
+  'IslingtonWorld': { scale: 3.82, offset: {x:0, y:-47500}, has_map: true},
+  'HackneyWorld' : { scale: 3.77, offset: {x:-77500, y:-63000}, has_map: true},
+  'CamdenWorld': { scale: 3.77, offset: {x:15000, y:-126000}, has_map: true},
+  'BankofEnglandWorld': { scale: 3.77, offset: {x:-15000, y:38000}, has_map: true},
+  'CoventGardenWorldSpace': { scale: 1, offset: {x:0, y:0}, has_map: false},
+  'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0}, has_map: false},
+  'StPaulsWorld': { scale: 1, offset: {x:0, y:0}, has_map: false},
 };
 
 function createMap() {
@@ -473,11 +472,17 @@ function loadData() {
   let counters = {};
 
   function getLoc(o) {
-    // need to reproject marker coordinates back
+    let x = o.x;
+    let y = o.y;
+
     let t = markers.worldspaces[o.area];
-    let cw = ch = 4096;
-    let x = o.x  * t.scale + t.offset.x;
-    let y = o.y  * t.scale + t.offset.y;
+    x = x * t.scale + t.offset.x;
+    y = y * t.scale + t.offset.y;
+
+    t = maps[o.area];
+    x = x * t.scale + t.offset.x;
+    y = y * t.scale + t.offset.y;
+
     return [x, -y];
   }
 
@@ -485,10 +490,12 @@ function loadData() {
     //console.log(o);
     if (!o.name) continue;
 
-    let submaps = Object.keys(maps).filter(key=>!maps[key]);
+    let submaps = Object.keys(maps).filter(key=>!maps[key].has_map);
     let force = submaps.includes(o.area) && mapId == 'LondonWorld';
 
     if (o.area != mapId && !force) continue;
+
+    //if (o.area =='LondonWorld') continue;
 
     let z = 0;//o.type == 'City' || o.type == 'Town' || o.type =='Settlement' || o.type == 'Metro Station' ? 1024*8 : 0;
 
@@ -529,8 +536,8 @@ function loadData() {
   let div = document.querySelector('.map-switcher-panel');
   div.innerHTML = '';
 
-  for (const [id, has_map] of Object.entries(maps)) {
-    if (!has_map) continue;
+  for (const [id,t] of Object.entries(maps)) {
+    if (!t.has_map) continue;
     let a = document.createElement('a');
     a.innerText = markers.worldspaces[id].name;
     a.className = 'map-link';
