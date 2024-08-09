@@ -45,7 +45,7 @@
   "Satellite": {"fa": "satellite-dish"},
   "Graveyard": {"fa": "cross"},
   "Cave": {"fa": "mound"},
-  "Railroad - Faction": {"fa": "road"},
+  "Railroad - Faction": {"fa": "store", "name": "Marketplace"},
   "Drive-In": {"fa": "road"},
   "Car": {"fa": "car"},
   "Diamond City": {"fa": "archway", "name": "Gates"},
