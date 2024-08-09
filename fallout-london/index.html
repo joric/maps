@@ -737,7 +737,7 @@ window.onload = function(event) {
     if (o.area != mapId) return false;
     if (!o.name || !o.type || !o.form_id) return false;
     text = text.toLowerCase();
-    context = (o.name||'') +' '+ (o.type||'') +' '+ (o.form_id||'');
+    context = (o.name||'') +' '+ (o.type||'') +' '+ (o.form_id||'') +' '+humanReadable(o.type);
     if (context.toLowerCase().includes(text)) {
       return true;
     }
@@ -793,7 +793,7 @@ window.onload = function(event) {
       let id = o.form_id;
       let name = o.name;
       let type = o.type;
-      let title = name + ' (' + type + ')';
+      let title = name + ' (' + humanReadable(o.type) + ')';
 
       let li = document.createElement('div');
       li.className = 'item';
