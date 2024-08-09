@@ -735,9 +735,11 @@ window.onload = function(event) {
   function filterMarker(o, text) {
     if (text=='') return true;
     if (o.area != mapId) return false;
-    for (s of [o.name, o.form_id, o.type]) {
-      if (s && s.toLowerCase().includes(text.toLowerCase()))
-        return true;
+    if (!o.name || !o.type || !o.form_id) return false;
+    text = text.toLowerCase();
+    context = (o.name||'') +' '+ (o.type||'') +' '+ (o.form_id||'');
+    if (context.toLowerCase().includes(text)) {
+      return true;
     }
     return false;
   }
@@ -773,9 +775,18 @@ window.onload = function(event) {
     let div = document.querySelector('#search-items');
     div.innerHTML = ''
 
+    let count = 0;
+
     for (o of markers.markers) {
+
       if (!filterMarker(o, text)) {
         continue;
+      }
+
+      count += 1;
+
+      if (count > 100) {
+        break;
       }
 
       let id = o.form_id;
