@@ -784,11 +784,11 @@ window.onload = function(event) {
         continue;
       }
 
-      count += 1;
-
-      if (count > 100) {
+      if (count == 100) {
         break;
       }
+
+      count += 1;
 
       let id = o.form_id;
       let name = o.name;
@@ -816,8 +816,10 @@ window.onload = function(event) {
       li.appendChild(c0);
       li.appendChild(c1);
       div.appendChild(li);
-
     }
+
+    label = count + ' search result' + (count!=1 ? 's':'');
+    div.innerHTML = '<p>' + label + '</p>'  + div.innerHTML;
   }
 
   function closeSearch() {
