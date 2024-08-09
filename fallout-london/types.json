@@ -60,7 +60,7 @@
   "Sentinel": {"fa": "igloo"},
   "Salem": {"fa": "house"},
   "Prydwen": {"fa": "house", "name" : "Cyberfox"},
-  "Custom 66": {"fa": "school",  "name": "School"},
+  "Custom 66": {"fa": "school",  "name": "College"},
   "Custom 67": {"fa": "shop",  "name": "The Shoppe"},
   "Custom 69": {"fa": "beer-mug-empty",  "name": "Pub"},
   "Custom 70": {"fa": "tents", "bg": "darkcyan", "name": "Biggin Hill Airport" },
