@@ -10,6 +10,7 @@ var
   i, j: integer;
   g, e, ref, MapMarkerStat: IInterface;
   Obj, ChildObj: TJsonObject;
+  id: string;
 begin
   Obj := TJsonObject.Create;
 
@@ -18,22 +19,21 @@ begin
     for j := 0 to Pred(ElementCount(g)) do begin
       e := ElementByIndex(g, j);
       if IsMaster(e) then begin
-        ChildObj := Obj.A['worldspaces'].AddObject;
+        ChildObj := Obj.O['worldspaces'].O[EditorID(e)];
         ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(e), 8);
-        ChildObj['editor_id'] := EditorID(e);
         ChildObj['name'] := GetElementEditValues(e, 'FULL');
-        ChildObj.A['nw_cell'].Add(Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\X')));
-        ChildObj.A['nw_cell'].Add(Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\Y')));
-        ChildObj.A['se_cell'].Add(Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\X')));
-        ChildObj.A['se_cell'].Add(Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\Y')));
-        ChildObj['world_map_scale'] := Double(GetElementNativeValues(e, 'ONAM\World Map Scale'));
-        ChildObj.A['cell_offset'].Add(Double(GetElementNativeValues(e, 'ONAM\Cell X Offset')));
-        ChildObj.A['cell_offset'].Add(Double(GetElementNativeValues(e, 'ONAM\Cell Y Offset')));
-        ChildObj.A['cell_offset'].Add(Double(GetElementNativeValues(e, 'ONAM\Cell Z Offset')));
-        ChildObj.A['bounds_min'].Add(Double(GetElementNativeValues(e, 'Object Bounds\NAM0\X')));
-        ChildObj.A['bounds_min'].Add(Double(GetElementNativeValues(e, 'Object Bounds\NAM0\Y')));
-        ChildObj.A['bounds_max'].Add(Double(GetElementNativeValues(e, 'Object Bounds\NAM9\X')));
-        ChildObj.A['bounds_max'].Add(Double(GetElementNativeValues(e, 'Object Bounds\NAM9\Y')));
+        ChildObj.O['nw'].I['x'] := Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\X'));
+        ChildObj.O['nw'].I['y'] := Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\Y'));
+        ChildObj.O['se'].I['x'] := Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\X'));
+        ChildObj.O['se'].I['y'] := Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\Y'));
+        ChildObj.F['scale'] := Double(GetElementNativeValues(e, 'ONAM\World Map Scale'));
+        ChildObj.O['offset'].F['x'] := Double(GetElementNativeValues(e, 'ONAM\Cell X Offset'));
+        ChildObj.O['offset'].F['y'] := Double(GetElementNativeValues(e, 'ONAM\Cell Y Offset'));
+        ChildObj.O['offset'].F['z'] := Double(GetElementNativeValues(e, 'ONAM\Cell Z Offset'));
+        ChildObj.O['min'].F['x'] := Double(GetElementNativeValues(e, 'Object Bounds\NAM0\X'));
+        ChildObj.O['min'].F['y'] := Double(GetElementNativeValues(e, 'Object Bounds\NAM0\Y'));
+        ChildObj.O['max'].F['x'] := Double(GetElementNativeValues(e, 'Object Bounds\NAM9\X'));
+        ChildObj.O['max'].F['y'] := Double(GetElementNativeValues(e, 'Object Bounds\NAM9\Y'));
       end;
     end;
   end;

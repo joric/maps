@@ -1,681 +1,656 @@
 {
-	"worldspaces": [
-		{
+	"worldspaces": {
+		"Commonwealth": {
 			"form_id": "0000003C",
-			"editor_id": "Commonwealth",
 			"name": "Commonwealth",
-			"nw_cell": [
-				-33,
-				25
-			],
-			"se_cell": [
-				28,
-				-36
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-96,
-				-96
-			],
-			"bounds_max": [
-				96,
-				96
-			]
+			"nw": {
+				"x": -33,
+				"y": 25
+			},
+			"se": {
+				"x": 28,
+				"y": -36
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -96,
+				"y": -96
+			},
+			"max": {
+				"x": 96,
+				"y": 96
+			}
 		},
-		{
+		"DiamondCityFX": {
 			"form_id": "00000F93",
-			"editor_id": "DiamondCityFX",
 			"name": "Diamond City",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-9,
-				-3
-			],
-			"bounds_max": [
-				6,
-				4
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -9,
+				"y": -3
+			},
+			"max": {
+				"x": 6,
+				"y": 4
+			}
 		},
-		{
+		"DiamondCity": {
 			"form_id": "00000F94",
-			"editor_id": "DiamondCity",
 			"name": "Diamond City",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				-16384,
-				-27852.800781,
-				3072
-			],
-			"bounds_min": [
-				-4,
-				-4
-			],
-			"bounds_max": [
-				10,
-				8
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": -16384,
+				"y": -27852.800781,
+				"z": 3072
+			},
+			"min": {
+				"x": -4,
+				"y": -4
+			},
+			"max": {
+				"x": 10,
+				"y": 8
+			}
 		},
-		{
+		"Goodneighbor": {
 			"form_id": "00054BD5",
-			"editor_id": "Goodneighbor",
 			"name": "Goodneighbor",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-1,
-				-7
-			],
-			"bounds_max": [
-				11,
-				2
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -1,
+				"y": -7
+			},
+			"max": {
+				"x": 11,
+				"y": 2
+			}
 		},
-		{
+		"SanctuaryHillsWorld": {
 			"form_id": "000A7FF4",
-			"editor_id": "SanctuaryHillsWorld",
 			"name": "Sanctuary Hills",
-			"nw_cell": [
-				-33,
-				25
-			],
-			"se_cell": [
-				28,
-				-36
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-28,
-				-13
-			],
-			"bounds_max": [
-				8,
-				35
-			]
+			"nw": {
+				"x": -33,
+				"y": 25
+			},
+			"se": {
+				"x": 28,
+				"y": -36
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -28,
+				"y": -13
+			},
+			"max": {
+				"x": 8,
+				"y": 35
+			}
 		},
-		{
+		"TestClaraCoast": {
 			"form_id": "03000810",
-			"editor_id": "TestClaraCoast",
 			"name": "Clara Land",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-3,
-				-3
-			],
-			"bounds_max": [
-				4,
-				4
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -3,
+				"y": -3
+			},
+			"max": {
+				"x": 4,
+				"y": 4
+			}
 		},
-		{
+		"DLC03FarHarbor": {
 			"form_id": "03000B0F",
-			"editor_id": "DLC03FarHarbor",
 			"name": "The Island",
-			"nw_cell": [
-				-16,
-				17
-			],
-			"se_cell": [
-				19,
-				-18
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-73,
-				-59
-			],
-			"bounds_max": [
-				70,
-				79
-			]
+			"nw": {
+				"x": -16,
+				"y": 17
+			},
+			"se": {
+				"x": 19,
+				"y": -18
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -73,
+				"y": -59
+			},
+			"max": {
+				"x": 70,
+				"y": 79
+			}
 		},
-		{
+		"TestMadCoast": {
 			"form_id": "030014F4",
-			"editor_id": "TestMadCoast",
 			"name": "",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-3,
-				-2
-			],
-			"bounds_max": [
-				4,
-				3
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -3,
+				"y": -2
+			},
+			"max": {
+				"x": 4,
+				"y": 3
+			}
 		},
-		{
+		"DLC03VRWorldspace": {
 			"form_id": "03004EA4",
-			"editor_id": "DLC03VRWorldspace",
 			"name": "Simulation",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-12,
-				-12
-			],
-			"bounds_max": [
-				13,
-				13
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -12,
+				"y": -12
+			},
+			"max": {
+				"x": 13,
+				"y": 13
+			}
 		},
-		{
+		"NukaWorld": {
 			"form_id": "0600290F",
-			"editor_id": "NukaWorld",
 			"name": "Nuka-World",
-			"nw_cell": [
-				-18,
-				17
-			],
-			"se_cell": [
-				16,
-				-18
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-32,
-				-32
-			],
-			"bounds_max": [
-				33,
-				33
-			]
+			"nw": {
+				"x": -18,
+				"y": 17
+			},
+			"se": {
+				"x": 16,
+				"y": -18
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -32,
+				"y": -32
+			},
+			"max": {
+				"x": 33,
+				"y": 33
+			}
 		},
-		{
+		"TestMadWorld": {
 			"form_id": "06008B56",
-			"editor_id": "TestMadWorld",
 			"name": "MadWorld",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-5,
-				-4
-			],
-			"bounds_max": [
-				13,
-				11
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -5,
+				"y": -4
+			},
+			"max": {
+				"x": 13,
+				"y": 11
+			}
 		},
-		{
+		"NukaWorldAmphitheater": {
 			"form_id": "06052931",
-			"editor_id": "NukaWorldAmphitheater",
 			"name": "Bradberton Amphitheater",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-11,
-				-8
-			],
-			"bounds_max": [
-				5,
-				-1
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -11,
+				"y": -8
+			},
+			"max": {
+				"x": 5,
+				"y": -1
+			}
 		},
-		{
+		"NukaWorldMarket": {
 			"form_id": "06053C58",
-			"editor_id": "NukaWorldMarket",
 			"name": "Nuka-Town Market",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-4,
-				-8
-			],
-			"bounds_max": [
-				5,
-				-1
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -4,
+				"y": -8
+			},
+			"max": {
+				"x": 5,
+				"y": -1
+			}
 		},
-		{
+		"BromleyGladesWorld": {
 			"form_id": "07000F99",
-			"editor_id": "BromleyGladesWorld",
 			"name": "The Glades",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 0.5,
-			"cell_offset": [
-				86425.601562,
-				-71680,
-				-409.600006
-			],
-			"bounds_min": [
-				-33,
-				-33
-			],
-			"bounds_max": [
-				34,
-				34
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 0.5,
+			"offset": {
+				"x": 86425.601562,
+				"y": -71680,
+				"z": -409.600006
+			},
+			"min": {
+				"x": -33,
+				"y": -33
+			},
+			"max": {
+				"x": 34,
+				"y": 34
+			}
 		},
-		{
+		"HackneyWorld": {
 			"form_id": "07003640",
-			"editor_id": "HackneyWorld",
 			"name": "Hackney",
-			"nw_cell": [
-				-3,
-				12
-			],
-			"se_cell": [
-				13,
-				-4
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-19,
-				-27
-			],
-			"bounds_max": [
-				20,
-				20
-			]
+			"nw": {
+				"x": -3,
+				"y": 12
+			},
+			"se": {
+				"x": 13,
+				"y": -4
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -19,
+				"y": -27
+			},
+			"max": {
+				"x": 20,
+				"y": 20
+			}
 		},
-		{
+		"WestminsterWorld": {
 			"form_id": "0700762E",
-			"editor_id": "WestminsterWorld",
 			"name": "Westminster",
-			"nw_cell": [
-				-17,
-				13
-			],
-			"se_cell": [
-				15,
-				-19
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-30,
-				-37
-			],
-			"bounds_max": [
-				27,
-				60
-			]
+			"nw": {
+				"x": -17,
+				"y": 13
+			},
+			"se": {
+				"x": 15,
+				"y": -19
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -30,
+				"y": -37
+			},
+			"max": {
+				"x": 27,
+				"y": 60
+			}
 		},
-		{
+		"IslingtonWorld": {
 			"form_id": "0700762F",
-			"editor_id": "IslingtonWorld",
 			"name": "Islington",
-			"nw_cell": [
-				-8,
-				11
-			],
-			"se_cell": [
-				8,
-				-5
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-25,
-				-27
-			],
-			"bounds_max": [
-				19,
-				17
-			]
+			"nw": {
+				"x": -8,
+				"y": 11
+			},
+			"se": {
+				"x": 8,
+				"y": -5
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -25,
+				"y": -27
+			},
+			"max": {
+				"x": 19,
+				"y": 17
+			}
 		},
-		{
+		"LondonWorld": {
 			"form_id": "0700E701",
-			"editor_id": "LondonWorld",
 			"name": "London",
-			"nw_cell": [
-				-30,
-				30
-			],
-			"se_cell": [
-				30,
-				-30
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-64,
-				-64
-			],
-			"bounds_max": [
-				64,
-				64
-			]
+			"nw": {
+				"x": -30,
+				"y": 30
+			},
+			"se": {
+				"x": 30,
+				"y": -30
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -64,
+				"y": -64
+			},
+			"max": {
+				"x": 64,
+				"y": 64
+			}
 		},
-		{
+		"CamdenWorld": {
 			"form_id": "0701A9AF",
-			"editor_id": "CamdenWorld",
 			"name": "Camden",
-			"nw_cell": [
-				-9,
-				16
-			],
-			"se_cell": [
-				7,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-21,
-				-25
-			],
-			"bounds_max": [
-				24,
-				19
-			]
+			"nw": {
+				"x": -9,
+				"y": 16
+			},
+			"se": {
+				"x": 7,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -21,
+				"y": -25
+			},
+			"max": {
+				"x": 24,
+				"y": 19
+			}
 		},
-		{
+		"IWMWorld": {
 			"form_id": "0703DB07",
-			"editor_id": "IWMWorld",
 			"name": "Imperial War Museum",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 1,
-			"cell_offset": [
-				-53657.601562,
-				1228.800049,
-				4956.160156
-			],
-			"bounds_min": [
-				-9,
-				-10
-			],
-			"bounds_max": [
-				10,
-				7
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 1,
+			"offset": {
+				"x": -53657.601562,
+				"y": 1228.800049,
+				"z": 4956.160156
+			},
+			"min": {
+				"x": -9,
+				"y": -10
+			},
+			"max": {
+				"x": 10,
+				"y": 7
+			}
 		},
-		{
+		"StPaulsWorld": {
 			"form_id": "0705BFDF",
-			"editor_id": "StPaulsWorld",
 			"name": "St Paul's Cathedral",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 0.1,
-			"cell_offset": [
-				-54067.199219,
-				48332.800781,
-				4956.160156
-			],
-			"bounds_min": [
-				-7,
-				-7
-			],
-			"bounds_max": [
-				9,
-				7
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 0.1,
+			"offset": {
+				"x": -54067.199219,
+				"y": 48332.800781,
+				"z": 4956.160156
+			},
+			"min": {
+				"x": -7,
+				"y": -7
+			},
+			"max": {
+				"x": 9,
+				"y": 7
+			}
 		},
-		{
+		"BankofEnglandWorld": {
 			"form_id": "0705BFE0",
-			"editor_id": "BankofEnglandWorld",
 			"name": "Bank of England",
-			"nw_cell": [
-				-8,
-				8
-			],
-			"se_cell": [
-				8,
-				-8
-			],
-			"world_map_scale": 0.3,
-			"cell_offset": [
-				0,
-				0,
-				0
-			],
-			"bounds_min": [
-				-16,
-				-15
-			],
-			"bounds_max": [
-				17,
-				16
-			]
+			"nw": {
+				"x": -8,
+				"y": 8
+			},
+			"se": {
+				"x": 8,
+				"y": -8
+			},
+			"scale": 0.3,
+			"offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"min": {
+				"x": -16,
+				"y": -15
+			},
+			"max": {
+				"x": 17,
+				"y": 16
+			}
 		},
-		{
+		"DumpWorld": {
 			"form_id": "0707E34E",
-			"editor_id": "DumpWorld",
 			"name": "The Dump",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 0.5,
-			"cell_offset": [
-				-9420.799805,
-				-18432,
-				4956.160156
-			],
-			"bounds_min": [
-				-10,
-				-10
-			],
-			"bounds_max": [
-				12,
-				9
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 0.5,
+			"offset": {
+				"x": -9420.799805,
+				"y": -18432,
+				"z": 4956.160156
+			},
+			"min": {
+				"x": -10,
+				"y": -10
+			},
+			"max": {
+				"x": 12,
+				"y": 9
+			}
 		},
-		{
+		"CoventGardenWorldSpace": {
 			"form_id": "070A4CD4",
-			"editor_id": "CoventGardenWorldSpace",
 			"name": "Covent Garden",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 0.5,
-			"cell_offset": [
-				-72089.601562,
-				45056,
-				4956.160156
-			],
-			"bounds_min": [
-				-8,
-				-10
-			],
-			"bounds_max": [
-				10,
-				8
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 0.5,
+			"offset": {
+				"x": -72089.601562,
+				"y": 45056,
+				"z": 4956.160156
+			},
+			"min": {
+				"x": -8,
+				"y": -10
+			},
+			"max": {
+				"x": 10,
+				"y": 8
+			}
 		},
-		{
+		"BromleyPindarWorld": {
 			"form_id": "0712B821",
-			"editor_id": "BromleyPindarWorld",
 			"name": "Bromley Pindar",
-			"nw_cell": [
-				0,
-				0
-			],
-			"se_cell": [
-				0,
-				0
-			],
-			"world_map_scale": 0.5,
-			"cell_offset": [
-				40960,
-				-73728,
-				0
-			],
-			"bounds_min": [
-				-9,
-				-8
-			],
-			"bounds_max": [
-				9,
-				8
-			]
+			"nw": {
+				"x": 0,
+				"y": 0
+			},
+			"se": {
+				"x": 0,
+				"y": 0
+			},
+			"scale": 0.5,
+			"offset": {
+				"x": 40960,
+				"y": -73728,
+				"z": 0
+			},
+			"min": {
+				"x": -9,
+				"y": -8
+			},
+			"max": {
+				"x": 9,
+				"y": 8
+			}
 		}
-	],
+	},
 	"markers": [
 		{
 			"form_id": "00019C6F",

@@ -116,23 +116,18 @@ let mapInfo = null;
 let cw = ch = 4096;
 let w = h = 64;
 
-let map_ids = [
-  "LondonWorld",
-  "WestminsterWorld",
-  "IslingtonWorld",
-  "HackneyWorld",
-  "CamdenWorld",
-  "BankofEnglandWorld"
-];
-
-function getMapInfo(id) {
-  for (o of markers.worldspaces) {
-    if (id==o.editor_id) {
-      return o;
-    }
-  }
-  return null;
-}
+let maps = {
+  'LondonWorld' : true,
+  'WestminsterWorld' : true,
+  'IslingtonWorld': true,
+  'HackneyWorld' : true,
+  'CamdenWorld': true,
+  'BankofEnglandWorld': true,
+  'BankofEnglandWorld': true,
+  'CoventGardenWorldSpace': false, // no separate map
+  'BromleyGladesWorld': false,
+  'StPaulsWorld': false,
+};
 
 function createMap() {
   let cw = ch = 4096;
@@ -477,35 +472,27 @@ function markItems() {
 function loadData() {
   let counters = {};
 
-  function getLoc(x, y) {
+  function getLoc(o) {
     // need to reproject marker coordinates back
-
+    let t = markers.worldspaces[o.area];
     let cw = ch = 4096;
-    let w = mapInfo.bounds_max[0] - mapInfo.bounds_min[0];
-    let h = mapInfo.bounds_max[1] - mapInfo.bounds_min[1];
-
-    let scale = 1;//.5;//64 / w;
-
-    //console.log(mapInfo);
-    //console.log(scale);
-
-    x *= scale;
-    y *= scale;
-
-
+    let x = o.x  * t.scale + t.offset.x;
+    let y = o.y  * t.scale + t.offset.y;
     return [x, -y];
   }
 
   for (o of markers.markers) {
     //console.log(o);
-
     if (!o.name) continue;
 
-    if (o.area != mapId) continue;
+    let submaps = Object.keys(maps).filter(key=>!maps[key]);
+    let force = submaps.includes(o.area) && mapId == 'LondonWorld';
+
+    if (o.area != mapId && !force) continue;
 
     let z = 0;//o.type == 'City' || o.type == 'Town' || o.type =='Settlement' || o.type == 'Metro Station' ? 1024*8 : 0;
 
-    let loc = getLoc(o.x, o.y);
+    let loc = getLoc(o);
 
     let marker = new maptalks.Marker(loc, {
       properties: o,
@@ -541,9 +528,11 @@ function loadData() {
   // fill map switcher panel
   let div = document.querySelector('.map-switcher-panel');
   div.innerHTML = '';
-  for (id of map_ids) {
+
+  for (const [id, has_map] of Object.entries(maps)) {
+    if (!has_map) continue;
     let a = document.createElement('a');
-    a.innerText = getMapInfo(id).name;
+    a.innerText = markers.worldspaces[id].name;
     a.className = 'map-link';
     a.href = '#' + id;
     a.onclick = function(e){ loadMap(e.target.href.split('#').pop()); return false; }
@@ -630,8 +619,6 @@ function loadMap(id) {
   let promises = ['./markers.json'].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
     markers = values[0];
-    mapInfo = getMapInfo(mapId);
-    //console.log('loading', id, mapInfo);
     createMap();
     loadData();
   }).catch(e=>{console.log(e);})
@@ -641,9 +628,9 @@ function loadMap(id) {
 
 window.onload = function(event) {
 
-  mapId = localData.mapId || map_ids[0];
+  mapId = localData.mapId || maps[0];
 
-  for (id of map_ids) {
+  for (id of Object.keys(maps)) {
     if (!localData[id]) {
       localData[id] = {};
     }
@@ -708,12 +695,12 @@ window.onload = function(event) {
         }
       break;
       case 'KeyC': !e.ctrlKey && map.panTo(mapCenter); break;
-      case 'Digit1': loadMap(map_ids[0]); break;
-      case 'Digit2': loadMap(map_ids[1]); break;
-      case 'Digit3': loadMap(map_ids[2]); break;
-      case 'Digit4': loadMap(map_ids[3]); break;
-      case 'Digit5': loadMap(map_ids[4]); break;
-      case 'Digit6': loadMap(map_ids[5]); break;
+      case 'Digit1': loadMap(Object.keys(maps)[0]); break;
+      case 'Digit2': loadMap(Object.keys(maps)[1]); break;
+      case 'Digit3': loadMap(Object.keys(maps)[2]); break;
+      case 'Digit4': loadMap(Object.keys(maps)[3]); break;
+      case 'Digit5': loadMap(Object.keys(maps)[4]); break;
+      case 'Digit6': loadMap(Object.keys(maps)[5]); break;
     }
   });
 
