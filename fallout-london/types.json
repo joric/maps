@@ -62,7 +62,7 @@
   "Prydwen": {"fa": "house", "name" : "Cyberfox"},
   "Custom 66": {"fa": "anchor",  "name": "Naval College"},
   "Custom 67": {"fa": "shop",  "name": "The Shoppe"},
-  "Custom 69": {"fa": "champagne-glasses",  "name": "Pub"},
+  "Custom 69": {"fa": "glass-water",  "name": "Pub"},
   "Custom 70": {"fa": "tents", "bg": "darkcyan", "name": "Biggin Hill Airport" },
   "Custom 71": {"fa": "bread-slice", "name": "Restaurant" },
   "Custom 73": {"fa": "cable-car", "name": "Monorail" },
