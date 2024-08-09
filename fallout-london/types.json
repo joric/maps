@@ -68,7 +68,7 @@
   "Custom 73": {"fa": "cable-car", "name": "Monorail" },
   "Custom 74": {"fa": "dharmachakra", "name": "London Eye" },
   "Custom 75": {"fa": "tree", "name": "Tree House" },
-  "Custom 77": {"fa": "circle-dot", "name": "Location" },
+  "Custom 77": {"fa": "circle", "name": "Location" },
   "Custom 79": {"fa": "dog",  "name": "Isle of Dogs"},
   "Custom 80": {"fa": "crow", "name": "Swan & Mitre"}
 }
