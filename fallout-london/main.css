@@ -512,6 +512,15 @@ a:hover { text-decoration: underline; }
   cursor: pointer;
 }
 
+input:focus{
+    outline: none;
+}
+
+input::selection {
+  color: black;
+  background-color: lightgrey;
+}
+
 @media (max-width: 1200px) {
   .sidebar {
     width: 220px;
