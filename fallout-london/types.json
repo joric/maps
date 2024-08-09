@@ -46,7 +46,7 @@
   "Graveyard": {"fa": "cross"},
   "Cave": {"fa": "mound"},
   "Railroad - Faction": {"fa": "store", "name": "Marketplace"},
-  "Drive-In": {"fa": "road"},
+  "Drive-In": {"fa": "rotate", "name": "Road Junction"},
   "Car": {"fa": "car"},
   "Diamond City": {"fa": "archway", "name": "Gates"},
   "Minutemen": {"fa": "dragon", "name": "Camelot"},
