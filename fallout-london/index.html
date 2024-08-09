@@ -769,6 +769,7 @@ window.onload = function(event) {
   function openSearch(text) {
     setClass(searchResult, false, 'collapsed');
     setClass(categories, true, 'collapsed');
+    searchInput.select();
 
     settings.searchText = text;
 
