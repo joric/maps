@@ -50,7 +50,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
     <form id="search-form">
       <div class="search-input-wrapper input-group">
         <div class="input-group-prepend">
-          <button id="search-close" type="button" class="btn">x</button>
+          <button id="search-close" type="button" class="btn collapsed">x</button>
         </div>
         <input id="search-input" class="form-control" type="text" placeholder="Search..." autofocus/>
         <div class="input-group-append">
@@ -731,6 +731,7 @@ window.onload = function(event) {
   let searchInput = document.querySelector('#search-input');
   let searchResult = document.querySelector('#search-result');
   let categories = document.querySelector('#categories-wrapper');
+  let searchClose = document.querySelector('#search-close');
 
   function filterMarker(o, text) {
     if (text=='') return true;
@@ -768,9 +769,10 @@ window.onload = function(event) {
 
   function openSearch(text) {
     setClass(searchResult, false, 'collapsed');
+    setClass(searchClose, false, 'collapsed');
     setClass(categories, true, 'collapsed');
-    searchInput.select();
 
+    searchInput.select();
     settings.searchText = text;
 
     let div = document.querySelector('#search-items');
@@ -822,14 +824,16 @@ window.onload = function(event) {
   }
 
   function closeSearch() {
-    setClass(searchResult, true, 'collapsed')
+    setClass(searchResult, true, 'collapsed');
+    setClass(searchClose, true, 'collapsed');
+    setClass(categories, false, 'collapsed');
     setClass(categories, false, 'collapsed');
     searchInput.value = '';
     searchInput.focus();
     settings.searchText = '';
   }
 
-  document.querySelector('#search-close').onclick = closeSearch;
+  searchClose.onclick = closeSearch;
 
   document.querySelector('#search-form').onkeydown = function(e) {
     if (e.code == 'Escape') {
