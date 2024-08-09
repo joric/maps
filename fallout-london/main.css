@@ -521,6 +521,11 @@ input::selection {
   background-color: lightgrey;
 }
 
+#search-count {
+  padding: 6px;
+  opacity: .8;
+}
+
 @media (max-width: 1200px) {
   .sidebar {
     width: 220px;

@@ -63,6 +63,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
     <hr/>
 
     <div id="search-result" class="collapsed group-categories">
+      <div id="search-count"></div>
       <div id="search-items">
         search results here
       </div>
@@ -818,8 +819,7 @@ window.onload = function(event) {
       div.appendChild(li);
     }
 
-    label = count + ' search result' + (count!=1 ? 's':'');
-    div.innerHTML = '<p>' + label + '</p>'  + div.innerHTML;
+    document.querySelector('#search-count').innerHTML = count + ' search result' + (count!=1 ? 's':'');
   }
 
   function closeSearch() {
