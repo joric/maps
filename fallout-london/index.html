@@ -635,7 +635,7 @@ function loadMap(id) {
 
 window.onload = function(event) {
 
-  mapId = localData.mapId || maps[0];
+  mapId = localData.mapId || Object.keys(maps)[0];
 
   for (id of Object.keys(maps)) {
     if (!localData[id]) {
