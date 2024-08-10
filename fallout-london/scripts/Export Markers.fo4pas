@@ -48,6 +48,7 @@ begin
     ChildObj['name'] := GetElementEditValues(e, 'Map Marker\FULL');
     ChildObj['x'] := Double(GetElementNativeValues(e, 'DATA\Position\X'));
     ChildObj['y'] := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
+    ChildObj['z'] := Double(GetElementNativeValues(e, 'DATA\Position\Z'));
     area := LinksTo(ElementByName(LinksTo(ElementByName(e, 'Cell')), 'Worldspace'));
     if Assigned(area) then
       ChildObj['area'] := EditorID(area);

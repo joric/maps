@@ -478,6 +478,7 @@ function loadData() {
   function getLoc(o) {
     let x = o.x;
     let y = o.y;
+    let z = o.z;
 
     let t = markers.worldspaces[o.area];
     x = x * t.scale + t.offset.x;
@@ -505,7 +506,7 @@ function loadData() {
       y = y * t.scale + t.offset.y;
     }
 
-    return [x, -y];
+    return [x, -y, z];
   }
 
   for (o of markers.markers) {
