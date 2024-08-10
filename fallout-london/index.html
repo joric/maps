@@ -545,14 +545,14 @@ function loadData() {
     })
 
 
-    for (type of [o.type]) {
-      if (type !== undefined && types[type] !== undefined) {
-        let group = (types[type] && types[type].group) || 'All Markers';
+    // count both outer type and spawns
+    for (type of [o.type, o.spawns]) {
+      if (type !== undefined) {
+        let group = (types[type] && types[type].group) || 'misc';
         counters[group] = counters[group] || {};
         counters[group][type] = (counters[group][type] || 0) + 1;
       }
     }
-
   }
 
   // fill map switcher panel
@@ -574,7 +574,7 @@ function loadData() {
   ul.innerHTML = '';
 
   let groups = Object.keys(counters);
-  let weight = x=>0;//({'collectable':100,'coins':90,'items':-100, 'actors':-101, 'weapons':80, 'stats':6, 'upgrades': 7, 'teleports': 85, 'graves':-10, 'misc':-1000}[x] || 0);
+  let weight = x=>({'fast travel':1000, 'factions': 2000, 'misc':-1000}[x] || 0);
 
   for (group of groups.sort( (a,b)=> weight(b)-weight(a) || cmpAlphaNum(a,b)) ) {
     let header = document.createElement('div');
