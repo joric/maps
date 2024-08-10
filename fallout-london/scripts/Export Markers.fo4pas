@@ -58,8 +58,16 @@ begin
   items[0] := $0729B95C; // Calling Card
   items[1] := $0008E737; // 005 1 magazine
   items[2] := $0008E738; // 005 2 magazine
-  items[3] := $0008E75E; // Protect and Survive
-  ItemsCount := 4;
+  items[3] := $0008E739; // 005 3 magazine
+  items[4] := $0008E73A; // 005 4 magazine
+  items[5] := $0008E73B; // 005 5 magazine
+  items[6] := $0008E73C; // 005 6 magazine
+  items[7] := $0008E73D; // 005 7 magazine
+  items[8] := $0008E73E; // 005 8 magazine
+  items[9] := $0008E73F; // 005 9 magazine
+  items[10] := $0008E740; // 005 10 magazine
+  items[11] := $0008E75E; // Protect and Survive
+  ItemsCount := 12;
 
   count := 0;
   for j := 0 to Pred(ItemsCount) do begin
