@@ -36,8 +36,10 @@ a:hover { text-decoration: underline; }
 .map-link {
   font-size: 14px;
   flex-grow: 1;
-  text-align: center;
   padding: 6px 6px 6px 6px;
+
+  text-align: center;
+  min-width: 100px;
 }
 
 .map-link:hover {

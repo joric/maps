@@ -40,6 +40,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
     <hr/>
 
     <div class="map-switcher-panel">
+      <a href="#LondonWorld" class="map-link">London</a>
     </div>
 
     <hr/>
@@ -535,7 +536,6 @@ function loadData() {
   // fill map switcher panel
   let div = document.querySelector('.map-switcher-panel');
   div.innerHTML = '';
-
   for (const [id,t] of Object.entries(maps)) {
     if (!t.has_map) continue;
     let a = document.createElement('a');
@@ -548,7 +548,6 @@ function loadData() {
       a.classList.add('selected');
     }
   }
-
 
   let ul = document.querySelector('#categories');
   ul.innerHTML = '';
