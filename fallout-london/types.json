@@ -58,7 +58,7 @@
   "Brotherhood of Steel": {"fa": "cat", "bg":"forestgreen", "name": "5th Column", "group": "factions"},
   "Radioactive Area": {"fa": "radiation"},
   "Sentinel": {"fa": "landmark-dome", "name": "The Dome", "group":"places of interest"},
-  "Salem": {"fa": "building-columns", "name": "Museum", "group": "facilities"},
+  "Salem": {"fa": "place-of-worship", "name": "Temple", "group": "facilities"},
   "Prydwen": {"fa": "gun", "bg": "forestgreen", "name" : "Pistols", "group":"factions"},
   "Custom 66": {"fa": "anchor",  "name": "Naval College", "group":"facilities"},
   "Custom 67": {"fa": "bullseye", "bg": "forestgreen", "name": "Tommies", "group": "factions"},
