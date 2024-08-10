@@ -39,7 +39,7 @@ a:hover { text-decoration: underline; }
   padding: 6px 6px 6px 6px;
 
   text-align: center;
-  min-width: 100px;
+  width: 100px;
 }
 
 .map-link:hover {
