@@ -57,7 +57,7 @@
   "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement": {"fa": "shopping-cart", "name": "Shopping Area "},
   "Brotherhood of Steel": {"fa": "cat", "bg":"forestgreen", "name": "5th Column", "group": "factions"},
   "Radioactive Area": {"fa": "radiation"},
-  "Sentinel": {"fa": "landmark-dome", "name": "The Dome", "group":"places of interest"},
+  "Sentinel": {"fa": "virus", "name": "The Dome", "group":"places of interest"},
   "Salem": {"fa": "place-of-worship", "name": "Temple", "group": "facilities"},
   "Prydwen": {"fa": "gun", "bg": "forestgreen", "name" : "Pistols", "group":"factions"},
   "Custom 66": {"fa": "anchor",  "name": "Naval College", "group":"facilities"},
