@@ -4,7 +4,7 @@
   "Gov't Building / Monument": { "fa": "building-columns", "group": "buildings"},
   "Bunker Hill": {"fa": "monument"},
   "Vault": {"fa": "gear", "group":"settlements"},
-  "Faneuil Hall": {"fa": "dollar-sign", "group": "facilities"},
+  "Faneuil Hall": {"fa": "dollar-sign", "name": "Bank", "group": "facilities"},
   "Submarine": {"fa": "ship", "group":"government"},
   "USS Constitution": {"fa": "ship", "group": "government"},
   "Synth Head": {"fa": "globe", "name": "Theatre", "group": "facilities"},
