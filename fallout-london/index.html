@@ -172,7 +172,7 @@ function createMap() {
     maxPitch: 80,
     spatialReference : {
       projection : 'identity',
-      resolutions: [8,4,2,1,1/2,1/4,1/8].map(x=>x*scale),
+      resolutions: [8,4,2,1,1/2,1/4,1/8,1/16].map(x=>x*scale),
       fullExtent : { top: top, left: left, bottom: bottom, right: right },
     },
     baseLayer: new maptalks.TileLayer('base', {
