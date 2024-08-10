@@ -3,7 +3,7 @@
   "Town":{"fa": "tree-city", "bg": "red", "group": "fast travel"},
   "Gov't Building / Monument": { "fa": "building-columns", "group": "buildings"},
   "Bunker Hill": {"fa": "monument"},
-  "Vault": {"fa": "gear", "group":"settlement"},
+  "Vault": {"fa": "gear", "group":"settlements"},
   "Faneuil Hall": {"fa": "dollar-sign", "group": "facilities"},
   "Submarine": {"fa": "ship", "group":"government"},
   "USS Constitution": {"fa": "ship", "group": "government"},
