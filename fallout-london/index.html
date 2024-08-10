@@ -118,15 +118,21 @@ let cw = ch = 4096;
 let w = h = 64;
 
 let maps = {
-  'LondonWorld' : { scale: 1, offset: {x:0, y:0}, has_map: true},
-  'WestminsterWorld' : { scale: 1.9, offset: {x:7000, y:22000}, has_map: true},
-  'IslingtonWorld': { scale: 3.82, offset: {x:0, y:-47500}, has_map: true},
-  'HackneyWorld' : { scale: 3.77, offset: {x:-77500, y:-63000}, has_map: true},
-  'CamdenWorld': { scale: 3.77, offset: {x:15000, y:-126000}, has_map: true},
-  'BankofEnglandWorld': { scale: 3.77, offset: {x:6000, y:4800}, has_map: true},
-  'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000}, has_map: false},
-  'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0}, has_map: false},
-  'StPaulsWorld': { scale: 1, offset: {x:3000, y:0}, has_map: false},
+  'LondonWorld' : { scale: 1, offset: {x:0, y:0} },
+  'WestminsterWorld' : { scale: 1.9, offset: {x:7000, y:22000} },
+  'IslingtonWorld': { scale: 3.82, offset: {x:0, y:-47500} },
+  'HackneyWorld' : { scale: 3.77, offset: {x:-77500, y:-63000} },
+  'CamdenWorld': { scale: 3.77, offset: {x:15000, y:-126000} },
+  'BankofEnglandWorld': { scale: 3.77, offset: {x:6000, y:4800} },
+};
+
+let submaps = {
+  'LondonWorld' : {
+    'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
+    'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
+    'StPaulsWorld': { scale: 1, offset: {x:3000, y:0} },
+    //'WestminsterWorld' : { scale: 0.5, offset: {x:-110000, y:34000} }, //rotated?
+  },
 };
 
 function createMap() {
@@ -480,9 +486,16 @@ function loadData() {
     x = x * t.scale + t.offset.x;
     y = y * t.scale + t.offset.y;
 
-    t = maps[o.area];
-    x = x * t.scale + t.offset.x;
-    y = y * t.scale + t.offset.y;
+    if (t = (submaps[mapId] && submaps[mapId][o.area])) {
+
+      x = x * t.scale + t.offset.x;
+      y = y * t.scale + t.offset.y;
+
+    } else if (t = maps[o.area]) {
+
+      x = x * t.scale + t.offset.x;
+      y = y * t.scale + t.offset.y;
+    }
 
     return [x, -y];
   }
@@ -491,12 +504,7 @@ function loadData() {
     //console.log(o);
     if (!o.name) continue;
 
-    let submaps = Object.keys(maps).filter(key=>!maps[key].has_map);
-    let force = submaps.includes(o.area) && mapId == 'LondonWorld';
-
-    if (o.area != mapId && !force) continue;
-
-    //if (o.area =='LondonWorld') continue;
+    if (o.area != mapId && !(submaps[mapId] && submaps[mapId][o.area])) continue;
 
     let z = 0;//o.type == 'City' || o.type == 'Town' || o.type =='Settlement' || o.type == 'Metro Station' ? 1024*8 : 0;
 
@@ -537,7 +545,6 @@ function loadData() {
   let div = document.querySelector('.map-switcher-panel');
   div.innerHTML = '';
   for (const [id,t] of Object.entries(maps)) {
-    if (!t.has_map) continue;
     let a = document.createElement('a');
     a.innerText = markers.worldspaces[id].name;
     a.className = 'map-link';
@@ -726,7 +733,7 @@ window.onload = function(event) {
 
   function filterMarker(o, text) {
     if (text=='') return true;
-    if (o.area != mapId) return false;
+    if (o.area != mapId && !(submaps[mapId] && submaps[mapId][o.area])) return false;
     if (!o.name || !o.type || !o.form_id) return false;
     text = text.toLowerCase();
     context = (o.name||'') +' '+ (o.type||'') +' '+ (o.form_id||'') +' '+humanReadable(o.type);
@@ -737,10 +744,7 @@ window.onload = function(event) {
   }
 
   function clickSearchItem(e) {
-    //alert('selecting', id);
-    //console.log(e.target.alt);
     let id = e.target.alt;
-
     for (layerName of ['markers']) {
       for (marker of map.getLayer(layerName)._geoList) {
         let o = marker.properties;
