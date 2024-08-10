@@ -48,7 +48,7 @@
   "Railroad - Faction": {"fa": "store", "name": "Marketplace", "group":"facilities"},
   "Drive-In": {"fa": "rotate", "name": "Road Junction"},
   "Car": {"fa": "car", "name": "Parking", "group":"facilities"},
-  "Diamond City": {"fa": "archway", "name": "Gates", "group": "travel"},
+  "Diamond City": {"fa": "archway", "bg": "red", "name": "Gates", "group": "travel"},
   "Minutemen": {"fa": "dragon", "bg":"orange", "name": "Camelot", "group": "factions"},
   "Institute": {"fa": "compass-drafting", "bg":"orange", "name": "Angel", "group": "factions"},
   "Country Club": {"fa": "crown", "name": "Palace", "group": "government"},
