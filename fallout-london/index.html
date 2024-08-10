@@ -131,7 +131,7 @@ let submaps = {
     'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
     'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
     'StPaulsWorld': { scale: 1, offset: {x:3000, y:0} },
-    //'WestminsterWorld' : { scale: 0.5, offset: {x:-110000, y:34000} }, //rotated?
+    //'WestminsterWorld' : { scale: 0.6, offset: {x:-104300, y:28300}, rotation: 0.54 }, // still kind of skewed
   },
 };
 
@@ -144,9 +144,9 @@ function createMap() {
   let mapWorldSize = w * cw;
   let scale = mapWorldSize / mapSize.width;
 
-  let mapWorldCenter = { "X": 0.0, "Y": 0.0, "Z": 0.0 };
-  let mapWorldUpperLeft = { "X": -w*cw/2, "Y": -h*ch/2, "Z": 0.0 };
-  let mapWorldLowerRight = { "X": w*cw/2, "Y": h*ch/2, "Z": 0.0 };
+  let mapWorldCenter = { X: 0.0, Y: 0.0, Z: 0.0 };
+  let mapWorldUpperLeft = { X: -w*cw/2, Y: -h*ch/2, Z: 0.0 };
+  let mapWorldLowerRight = { X: w*cw/2, Y: h*ch/2, Z: 0.0 };
 
   mapCenter = [mapWorldCenter.X, mapWorldCenter.Y];
   mapBounds = [mapWorldUpperLeft.X, mapWorldUpperLeft.Y, mapWorldLowerRight.X, mapWorldLowerRight.Y];
@@ -487,9 +487,19 @@ function loadData() {
     y = y * t.scale + t.offset.y;
 
     if (t = (submaps[mapId] && submaps[mapId][o.area])) {
-
       x = x * t.scale + t.offset.x;
       y = y * t.scale + t.offset.y;
+
+      if (t.rotation) {
+        let cx = t.offset.x;
+        let cy = t.offset.y;
+        x = x - cx;
+        y = y - cy;
+        let tx = x * Math.cos(t.rotation) - y * Math.sin(t.rotation);
+        let ty = x * Math.sin(t.rotation) + y * Math.cos(t.rotation);
+        x = tx + cx;
+        y = ty + cy;
+      }
 
     } else if (t = maps[o.area]) {
 
