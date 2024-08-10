@@ -7,10 +7,11 @@ unit UserScript;
 
 function Finalize: integer;
 var
-  i, j: integer;
-  g, e, ref, MapMarkerStat: IInterface;
+  i, j, k, count, ItemsCount: integer;
+  g, e, ref, area, MapMarkerStat: IInterface;
   Obj, ChildObj: TJsonObject;
   id: string;
+  items: array[0..100] of integer;
 begin
   Obj := TJsonObject.Create;
 
@@ -47,10 +48,47 @@ begin
     ChildObj['name'] := GetElementEditValues(e, 'Map Marker\FULL');
     ChildObj['x'] := Double(GetElementNativeValues(e, 'DATA\Position\X'));
     ChildObj['y'] := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
-    ref := LinksTo(ElementByName(LinksTo(ElementByName(e, 'Cell')), 'Worldspace'));
-    if Assigned(ref) then
-      ChildObj['area'] := EditorID(ref);
+    area := LinksTo(ElementByName(LinksTo(ElementByName(e, 'Cell')), 'Worldspace'));
+    if Assigned(area) then
+      ChildObj['area'] := EditorID(area);
   end;
+
+
+  items[0] := $0729B95C; // Calling Card
+  items[1] := $0008E737; // 005 1 magazine
+  items[2] := $0008E738; // 005 2 magazine
+  items[3] := $0008E75E; // Protect and Survive
+  ItemsCount := 4;
+
+  count := 0;
+  for j := 0 to Pred(ItemsCount) do begin
+    MapMarkerStat := RecordByFormID(FileByLoadOrder(7), items[j], False);
+    for i := 0 to Pred(ReferencedByCount(MapMarkerStat)) do begin
+      e := ReferencedByIndex(MapMarkerStat, i);
+
+      ref := LinksTo(ElementBySignature(e, 'NAME'));
+      if not Assigned(ref) then continue;
+      area := LinksTo(ElementByName(LinksTo(ElementByName(e, 'Cell')), 'Worldspace'));
+      if not Assigned(area) then continue;
+
+      ChildObj := Obj.A['markers'].AddObject;
+
+      ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(ref), 8);
+      ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
+      ChildObj['editor_id'] := EditorID(ref);
+      ChildObj['type'] := GetElementEditValues(ref, 'FULL');
+      ChildObj['signature'] := Signature(ref);
+      ChildObj['name'] := GetElementEditValues(ref, 'FULL');
+      ChildObj['x'] := Double(GetElementNativeValues(e, 'DATA\Position\X'));
+      ChildObj['y'] := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
+      ChildObj['z'] := Double(GetElementNativeValues(e, 'DATA\Position\Z'));
+      ChildObj['area'] := EditorID(area);
+
+      Inc(count);
+    end;
+  end;
+
+  AddMessage(Format('Collected %d items', [count]));
 
   //AddMessage(Obj.ToJSON({Compact:=}False));
   AddMessage('Saving markers.json...');

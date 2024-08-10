@@ -510,7 +510,7 @@ function loadData() {
 
   for (o of markers.markers) {
     //console.log(o);
-    if (!o.name) continue;
+    if (!o.type) continue;
 
     if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) continue;
 

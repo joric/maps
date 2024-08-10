@@ -7893,6 +7893,66 @@
 			"x": 7546.052246,
 			"y": -50796.722656,
 			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0729B95C",
+			"instance_id": "07329D46",
+			"editor_id": "Folon_BOOK_MQ201SmytheCallingCard",
+			"type": "Calling Card",
+			"signature": "BOOK",
+			"name": "Calling Card",
+			"x": 299.973969,
+			"y": 59.959763,
+			"z": -849.977234,
+			"area": "WestminsterWorld"
+		},
+		{
+			"form_id": "0008E737",
+			"instance_id": "072DBB24",
+			"editor_id": "PerkMagUSCovertOperationsManual01",
+			"type": "005 Comic",
+			"signature": "BOOK",
+			"name": "005 Comic",
+			"x": 70760.226562,
+			"y": -15115.790039,
+			"z": 5188.44873,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0008E738",
+			"instance_id": "072DBD09",
+			"editor_id": "PerkMagUSCovertOperationsManual02",
+			"type": "005 Comic",
+			"signature": "BOOK",
+			"name": "005 Comic",
+			"x": -49708.777344,
+			"y": -10587.160156,
+			"z": 5196.664062,
+			"area": "LondonWorld"
+		},
+		{
+			"form_id": "0008E75E",
+			"instance_id": "00184D99",
+			"editor_id": "PerkMagWastelandSurvivalGuide01",
+			"type": "Wasteland Survival Guide",
+			"signature": "BOOK",
+			"name": "Wasteland Survival Guide",
+			"x": -19305.326172,
+			"y": -10381.467773,
+			"z": 580.281921,
+			"area": "Commonwealth"
+		},
+		{
+			"form_id": "0008E75E",
+			"instance_id": "072DBB40",
+			"editor_id": "PerkMagWastelandSurvivalGuide01",
+			"type": "Protect and Survive",
+			"signature": "BOOK",
+			"name": "Protect and Survive",
+			"x": -83490.398438,
+			"y": 67418.046875,
+			"z": 5276.557617,
+			"area": "LondonWorld"
 		}
 	]
 }

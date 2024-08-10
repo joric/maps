@@ -9,7 +9,7 @@
   "USS Constitution": {"fa": "ship", "group": "places of interest"},
   "Synth Head": {"fa": "globe", "name": "Theatre", "group": "places of interest"},
   "Castle": {"fa": "chess-rook","group":"places of interest"},
-  "Settlement": {"fa": "tents", "bg": "darkcyan", "group": "settlements" },
+  "Settlement": {"fa": "tents", "bg": "teal ", "group": "settlements" },
   "Railroad": {"fa": "train", "group": "travel"},
   "Junkyard": {"fa": "car-side"},
   "Shipwreck": {"fa": "ship"},
@@ -70,5 +70,9 @@
   "Custom 75": {"fa": "tree", "name": "Tree House" },
   "Custom 77": {"fa": "location-crosshairs", "name": "Location", "group":"places of interest" },
   "Custom 79": {"fa": "dog", "bg": "forestgreen", "name": "Isle of Dogs", "group": "factions"},
-  "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"}
+  "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"},
+
+  "Calling Card": {"fa": "id-card", "bg": "tomato", "group": "items"},
+  "005 Comic": {"fa": "book", "bg": "tomato", "group": "items"},
+  "Protect and Survive": {"fa": "book", "bg": "tomato", "group": "items"}
 }
