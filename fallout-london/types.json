@@ -2,7 +2,7 @@
   "City":{"fa": "city", "bg": "red", "group": "travel"},
   "Town":{"fa": "tree-city", "bg": "red", "group": "travel"},
   "Gov't Building / Monument": { "fa": "building-columns", "group": "buildings"},
-  "Bunker Hill": {"fa": "monument"},
+  "Bunker Hill": {"fa": "monument", "name": "Monument"},
   "Vault": {"fa": "gear", "group":"settlements"},
   "Faneuil Hall": {"fa": "dollar-sign", "name": "Bank", "group": "facilities"},
   "Submarine": {"fa": "ship", "group":"government"},
