@@ -22,7 +22,7 @@
   "Sewer / Utility Tunnels": {"fa": "ring", "group": "travel"},
   "Filling Station": {"fa": "gas-pump", "group":"facilities"},
   "Natural Landmark": {"fa": "landmark", "group": "places of interest"},
-  "Goodneighbor": {"fa": "hotel", "group":"facilities"},
+  "Goodneighbor": {"fa": "hotel", "name": "Hotel", "group":"facilities"},
   "School": {"fa": "graduation-cap", "group":"facilities"},
   "Military Base":{"fa": "flag", "group":"government"},
   "Forested":{ "fa": "tree"},
