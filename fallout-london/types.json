@@ -18,7 +18,7 @@
   "Farm": {"fa": "tractor", "group":"settlements"},
   "Bunker": {"fa": "warehouse", "group": "buildings"},
   "Radio Tower": {"fa": "tower-cell", "group":"places of interest"},
-  "Airfield": {"fa": "plane", "group":"facilities"},
+  "Airfield": {"fa": "plane", "name": "Airport", "group":"facilities"},
   "Sewer / Utility Tunnels": {"fa": "ring", "group": "travel"},
   "Filling Station": {"fa": "gas-pump", "group":"facilities"},
   "Natural Landmark": {"fa": "landmark", "group": "places of interest"},
