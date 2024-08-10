@@ -118,16 +118,8 @@ let cw = ch = 4096;
 let w = h = 64;
 
 let maps = {
-  'LondonWorld' : { scale: 1, offset: {x:0, y:0} },
-  'WestminsterWorld' : { scale: 1.9, offset: {x:7000, y:22000} },
-  'IslingtonWorld': { scale: 3.82, offset: {x:0, y:-47500} },
-  'HackneyWorld' : { scale: 3.77, offset: {x:-77500, y:-63000} },
-  'CamdenWorld': { scale: 3.77, offset: {x:15000, y:-126000} },
-  'BankofEnglandWorld': { scale: 3.77, offset: {x:6000, y:4800} },
-};
-
-let submaps = {
-  'LondonWorld' : {
+  'LondonWorld' : { scale: 1, offset: {x:0, y:0}, 
+    regions: {
     'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
     'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
     'StPaulsWorld': { scale: 1, offset: {x:3000, y:0} },
@@ -136,7 +128,13 @@ let submaps = {
     'IslingtonWorld': { scale: 0.95, offset: {x:-26600, y:66500}, rotation: 0.57 },
     'HackneyWorld': { scale: 0.95, offset: {x:19100, y:44000}, rotation: 0.78 },
     'BankofEnglandWorld': { scale: 1, offset: {x:-32000, y:35500} },
+    }
   },
+  'WestminsterWorld' : { scale: 1.9, offset: {x:7000, y:22000} },
+  'IslingtonWorld': { scale: 3.82, offset: {x:0, y:-47500} },
+  'HackneyWorld' : { scale: 3.77, offset: {x:-77500, y:-63000} },
+  'CamdenWorld': { scale: 3.77, offset: {x:15000, y:-126000} },
+  'BankofEnglandWorld': { scale: 3.77, offset: {x:6000, y:4800} },
 };
 
 function createMap() {
@@ -490,7 +488,8 @@ function loadData() {
     x = x * t.scale + t.offset.x;
     y = y * t.scale + t.offset.y;
 
-    if (t = (submaps[mapId] && submaps[mapId][o.area])) {
+    if (t = (maps[mapId].regions && maps[mapId].regions[o.area])) {
+
       x = x * t.scale + t.offset.x;
       y = y * t.scale + t.offset.y;
 
@@ -518,7 +517,7 @@ function loadData() {
     //console.log(o);
     if (!o.name) continue;
 
-    if (o.area != mapId && !(submaps[mapId] && submaps[mapId][o.area])) continue;
+    if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) continue;
 
     let z = 0;//o.type == 'City' || o.type == 'Town' || o.type =='Settlement' || o.type == 'Metro Station' ? 1024*8 : 0;
 
