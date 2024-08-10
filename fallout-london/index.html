@@ -574,7 +574,7 @@ function loadData() {
   ul.innerHTML = '';
 
   let groups = Object.keys(counters);
-  let weight = x=>({'fast travel':1000, 'factions': 2000, 'settlements':500, 'government':250, 'places of interest':100, 'misc':-1000}[x] || 0);
+  let weight = x=>({'travel':1000, 'factions': 2000, 'settlements':500, 'government':100, 'places of interest':250, 'misc':-1000}[x] || 0);
 
   for (group of groups.sort( (a,b)=> weight(b)-weight(a) || cmpAlphaNum(a,b)) ) {
     let header = document.createElement('div');
