@@ -472,6 +472,16 @@ function markItems() {
 
 }
 
+function toggleMarked(id) {
+  settings.markedItems[id] = !settings.markedItems[id];
+  markItems();
+  saveSettings();
+}
+
+let mouseMoved = false;
+document.addEventListener('mousedown', function(event) {mouseMoved = false; });
+document.addEventListener('mousemove', function(event){mouseMoved = true;});
+
 function loadData() {
   let counters = {};
 
@@ -543,6 +553,12 @@ function loadData() {
       let content = JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
       e.target._infoWindow.setTitle(title);
       e.target._infoWindow.setContent(content);
+    })
+    .on('contextmenu', e=> {
+      if (mouseMoved) return;
+      let o = e.target.properties;
+      let id = o.area + ':' + o.name;
+      toggleMarked(id);
     })
 
 
