@@ -11786,7 +11786,7 @@
 			"form_id": "0730167F",
 			"instance_id": "07314AC3",
 			"editor_id": "Folon_NPC_CamelotPendragon",
-			"type": "NPC_",
+			"type": "NPC_Companion",
 			"name": "Strange Robot",
 			"cell_id": "0710AAF1",
 			"cell_name": "Camelot",
