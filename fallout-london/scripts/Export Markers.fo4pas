@@ -5,13 +5,16 @@
 
 unit UserScript;
 
+uses SysUtils;
+
 function Finalize: integer;
 var
-  i, j, k, count, ItemsCount: integer;
-  g, e, ref, area, MapMarkerStat: IInterface;
+  i, j, k, count, doors, ItemsCount: integer;
+  g, e, r, area, cell, refs, a, b, MapMarkerStat: IInterface;
   Obj, ChildObj: TJsonObject;
-  id: string;
-  items: array[0..100] of integer;
+  s, id: string;
+  items: TStringList;
+  x,y,z, ax,ay,az, bx,by,bz: double;
 begin
   Obj := TJsonObject.Create;
 
@@ -54,52 +57,101 @@ begin
       ChildObj['area'] := EditorID(area);
   end;
 
-
-  items[0] := $0729B95C; // Calling Card
-  items[1] := $0008E737; // 005 1 magazine
-  items[2] := $0008E738; // 005 2 magazine
-  items[3] := $0008E739; // 005 3 magazine
-  items[4] := $0008E73A; // 005 4 magazine
-  items[5] := $0008E73B; // 005 5 magazine
-  items[6] := $0008E73C; // 005 6 magazine
-  items[7] := $0008E73D; // 005 7 magazine
-  items[8] := $0008E73E; // 005 8 magazine
-  items[9] := $0008E73F; // 005 9 magazine
-  items[10] := $0008E740; // 005 10 magazine
-  items[11] := $0008E75E; // Protect and Survive
-  ItemsCount := 12;
-
   count := 0;
-  for j := 0 to Pred(ItemsCount) do begin
-    MapMarkerStat := RecordByFormID(FileByLoadOrder(7), items[j], False);
-    for i := 0 to Pred(ReferencedByCount(MapMarkerStat)) do begin
-      e := ReferencedByIndex(MapMarkerStat, i);
+  items := TStringList.Create;
+  items.DelimitedText := 'BOOK NPC_';
 
-      ref := LinksTo(ElementBySignature(e, 'NAME'));
-      if not Assigned(ref) then continue;
-      area := LinksTo(ElementByName(LinksTo(ElementByName(e, 'Cell')), 'Worldspace'));
-      if not Assigned(area) then continue;
+  for k := 0 to Pred(items.Count) do begin
+    g := GroupBySignature(FileByIndex(8), items[k]);
+    for j := 0 to Pred(ElementCount(g)) do begin
+      r := ElementByIndex(g, j);
+      for i := 0 to Pred(ReferencedByCount(r)) do
+      begin
+        e := ReferencedByIndex(r, i);
+        if (
+            (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR')
+            and (pos('Companion', EditorID(r)) <> 0)
+          )
+          or (
+              (Signature(r) = 'BOOK') and (Signature(e) = 'REFR')
+              and (
+              (pos('PerkMag', EditorID(r)) <> 0) or (pos('CallingCard', EditorID(r)) <> 0)
+            )
+          )
 
-      ChildObj := Obj.A['markers'].AddObject;
+        then begin
+          ChildObj := Obj.A['markers'].AddObject;
 
-      ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(ref), 8);
-      ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
-      ChildObj['editor_id'] := EditorID(ref);
-      ChildObj['type'] := GetElementEditValues(ref, 'FULL');
-      ChildObj['signature'] := Signature(ref);
-      ChildObj['name'] := GetElementEditValues(ref, 'FULL');
-      ChildObj['x'] := Double(GetElementNativeValues(e, 'DATA\Position\X'));
-      ChildObj['y'] := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
-      ChildObj['z'] := Double(GetElementNativeValues(e, 'DATA\Position\Z'));
-      ChildObj['area'] := EditorID(area);
+          ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
+          ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
+          ChildObj['editor_id'] := EditorID(r);
+          ChildObj['type'] := Signature(r);
+          ChildObj['name'] := GetElementEditValues(r, 'FULL');
 
-      Inc(count);
+          x := Double(GetElementNativeValues(e, 'DATA\Position\X'));
+          y := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
+          z := Double(GetElementNativeValues(e, 'DATA\Position\Z'));
+
+          // figure out location on the map
+          cell := LinksTo(ElementByName(e, 'Cell'));
+          area := LinksTo(ElementByName(cell, 'Worldspace'));
+          if Assigned(area) then begin
+            ChildObj['area'] := EditorID(area);
+          end;
+
+          if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then
+          begin
+            ChildObj['cell_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
+            ChildObj['cell_name'] := GetElementEditValues(cell, 'FULL');
+            //ChildObj['cell_editor_id'] := EditorID(cell);
+
+            // interior cell, find a door to the worldspace, update coordinates
+            refs := FindChildGroup(ChildGroup(cell), 8, cell);
+            for i := 0 to Pred(ElementCount(refs)) do begin
+              a := ElementByIndex(refs, i);
+              if Signature(BaseRecord(a)) <> 'DOOR' then
+                continue;
+
+              b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
+              if not Assigned(b) then Continue;
+              if not ElementExists(b, 'XTEL') then Continue;
+
+              area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
+              if Assigned(area) then begin
+
+                //ChildObj['door_id'] := IntToHex(GetLoadOrderFormID(a), 8);
+                ChildObj['area'] := EditorID(area);
+
+                ax := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\X'));
+                ay := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Y'));
+                az := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Z'));
+
+                bx := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\X'));
+                by := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Y'));
+                bz := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Z'));
+
+                x := ax - x + bx;
+                y := ay - y + by;
+                z := az - z + bz;
+
+              end;
+            end;
+          end;
+
+          ChildObj['x'] := x;
+          ChildObj['y'] := y;
+          ChildObj['z'] := z;
+
+          Inc(count);
+        end;
+      end;
     end;
   end;
 
   AddMessage(Format('Collected %d items', [count]));
 
-  //AddMessage(Obj.ToJSON({Compact:=}False));
+  //AddMessage(AdjustLineBreaks(Obj.ToJSON({Compact:=}False)));
+
   AddMessage('Saving markers.json...');
   Obj.SaveToFile('markers.json', False, TEncoding.UTF8, True);
 end;
