@@ -132,6 +132,7 @@ let mapId = 'LondonWorld';
 let pressed = {};
 let markers = {};
 let mapParam = {};
+let firstStart = false;
 
 let maps = {
   'LondonWorld' : { scale: 1, offset: {x:0, y:0},
@@ -319,15 +320,6 @@ function updateAll(e, show=true, type=null) {
       show ? setClass(div, false, 'hidden') : setClass(div, true, 'hidden');
     }
   }
-
-/*
-  // update markers
-  for (marker of map.getLayer('markers')._geoList) {
-    if (div = (lookup[ marker.properties.type ] || lookup[ marker.properties.spawn ]) ) {
-      show ? marker.show() : marker.hide();
-    }
-  }
-*/
 
   return false;
 }
@@ -687,6 +679,7 @@ function loadData() {
     let header = document.createElement('div');
     header.innerHTML = capitalize(group);
     header.className = 'header';
+    header.id = 'group-header-'+group;
     header.alt = group;
     header.onclick = toggleGroup;
 
@@ -730,6 +723,13 @@ function loadData() {
       li.appendChild(c2);
       div.appendChild(li);
     }
+  }
+
+
+  if (firstStart) {
+    firstStart = false;
+    document.querySelector('#group-header-misc').click();
+    saveSettings();
   }
 
   markItems();
@@ -831,9 +831,12 @@ window.onload = function(event) {
   mapId = localData.mapId || Object.keys(maps)[0];
 
   for (id of Object.keys(maps)) {
-    localData[id] = localData[id] || {};
-    localData[id].hiddenItems = localData[id].hiddenItems || {};
+    if (!localData[id]) {
+      localData[id] = {};
+      firstStart = true;
+    }
     localData[id].markedItems = localData[id].markedItems || {};
+    localData[id].hiddenItems = localData[id].hiddenItems || {};
     localData[id].searchText = localData[id].searchText || '';
   }
 
