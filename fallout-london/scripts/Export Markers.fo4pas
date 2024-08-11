@@ -88,8 +88,8 @@ begin
         ChildObj := Obj.A['markers'].AddObject;
 
         ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
-        ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
         ChildObj['editor_id'] := EditorID(r);
+        ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
 
         ChildObj['type'] := Signature(r);
 
@@ -114,9 +114,9 @@ begin
 
         if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then
         begin
-          ChildObj['cell_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
           ChildObj['cell_name'] := GetElementEditValues(cell, 'FULL');
-          //ChildObj['cell_editor_id'] := EditorID(cell);
+          ChildObj['cell_form_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
+          ChildObj['cell_editor_id'] := EditorID(cell);
 
           // interior cell, find a door to the worldspace, update coordinates
           refs := FindChildGroup(ChildGroup(cell), 8, cell);
