@@ -845,6 +845,10 @@ window.onload = function(event) {
     let count = 0;
 
     for (marker of map.getLayer(layerName)._geoList) {
+      marker.hide();
+    }
+
+    for (marker of map.getLayer(layerName)._geoList) {
       let o = marker.properties;
 
       if (!filterMarker(o, text)) {
@@ -898,6 +902,7 @@ window.onload = function(event) {
     searchInput.value = '';
     searchInput.focus();
     settings.searchText = '';
+    markItems();
   }
 
   searchClose.onclick = closeSearch;
