@@ -45,14 +45,16 @@ begin
   MapMarkerStat := RecordByFormID(FileByIndex(0), $00000010, False);
   for i := 0 to Pred(ReferencedByCount(MapMarkerStat)) do begin
     e := ReferencedByIndex(MapMarkerStat, i);
+    cell := LinksTo(ElementByName(e, 'Cell'));
     ChildObj := Obj.A['markers'].AddObject;
     ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(e), 8);
     ChildObj['type'] := GetElementEditValues(e, 'Map Marker\TNAM\Type');
     ChildObj['name'] := GetElementEditValues(e, 'Map Marker\FULL');
+    ChildObj['cell_form_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
     ChildObj['x'] := Double(GetElementNativeValues(e, 'DATA\Position\X'));
     ChildObj['y'] := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
     ChildObj['z'] := Double(GetElementNativeValues(e, 'DATA\Position\Z'));
-    area := LinksTo(ElementByName(LinksTo(ElementByName(e, 'Cell')), 'Worldspace'));
+    area := LinksTo(ElementByName(cell, 'Worldspace'));
     if Assigned(area) then
       ChildObj['area'] := EditorID(area);
   end;
@@ -114,9 +116,9 @@ begin
 
         if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then
         begin
-          ChildObj['cell_name'] := GetElementEditValues(cell, 'FULL');
           ChildObj['cell_form_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
           ChildObj['cell_editor_id'] := EditorID(cell);
+          ChildObj['cell_name'] := GetElementEditValues(cell, 'FULL');
 
           // interior cell, find a door to the worldspace, update coordinates
           refs := FindChildGroup(ChildGroup(cell), 8, cell);
