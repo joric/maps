@@ -75,6 +75,11 @@
   "BOOK": {"fa": "message", "bg": "cadetblue", "name":"Message", "group": "misc"},
   "NPC_": {"fa": "person", "bg": "#555", "name": "NPC", "group": "misc"},
 
+  "WEAP": {"fa": "gun", "bg": "mediumseagreen", "name":"Weapon", "group": "misc"},
+  "AMMO": {"fa": "toolbox", "bg": "seagreen", "name": "Ammo", "group": "misc"},
+  "ALCH": {"fa": "heart-circle-plus", "bg": "red", "name": "Meds", "group": "misc"},
+  "NOTE": {"fa": "compact-disc", "bg": "mediumpurple", "name": "Holotape", "group": "misc"},
+
   "_Newspaper": {"fa": "newspaper", "bg": "#aaa", "name":"Newspaper", "group": "misc"},
   "_Note": {"fa": "note-sticky", "bg": "sandybrown", "name":"Note", "group": "misc"},
 
