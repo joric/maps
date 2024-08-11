@@ -664,10 +664,6 @@ function postprocessMarkers(data){
       o.name = s;
     }
 
-    if (o.type=='NPC_' && o.quests<3) {
-      continue;
-    }
-
     if (o.type=='NPC_' && o.editor_id && (o.editor_id.includes('Companion') || o.editor_id=='Folon_NPC_CamelotPendragon')) {
       o.type = '_Companion';
     }
