@@ -11722,19 +11722,6 @@
 			"z": 5677.069824
 		},
 		{
-			"form_id": "071C0AF5",
-			"instance_id": "072EEEDE",
-			"editor_id": "Folon_NPC_CamelotArthur",
-			"type": "NPC_",
-			"name": "Arthur",
-			"cell_id": "0710AAF1",
-			"cell_name": "Camelot",
-			"area": "LondonWorld",
-			"x": -84463.286163,
-			"y": -85420.739014,
-			"z": 6328.586182
-		},
-		{
 			"form_id": "071C0B00",
 			"instance_id": "0727691B",
 			"editor_id": "Folon_NPC_CompanionMadJack",
@@ -11794,6 +11781,19 @@
 			"x": -10595.481445,
 			"y": 65608.570312,
 			"z": 5053.487305
+		},
+		{
+			"form_id": "0730167F",
+			"instance_id": "07314AC3",
+			"editor_id": "Folon_NPC_CamelotPendragon",
+			"type": "NPC_",
+			"name": "Strange Robot",
+			"cell_id": "0710AAF1",
+			"cell_name": "Camelot",
+			"area": "LondonWorld",
+			"x": -85513.107574,
+			"y": -85126.526612,
+			"z": 5815.999985
 		}
 	]
 }

@@ -74,7 +74,7 @@ begin
             and (
               (pos('Companion', s) <> 0)
               or ('Folon_NPC_BeefeaterBeefy' = s)
-              or ('Folon_NPC_CamelotArthur' = s)
+              or ('Folon_NPC_CamelotPendragon' = s)
               or ('Folon_NPC_GentryTenpenny' = s)
             )
           )
