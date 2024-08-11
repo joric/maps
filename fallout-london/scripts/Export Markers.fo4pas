@@ -9,8 +9,8 @@ uses SysUtils;
 
 function Finalize: integer;
 var
-  i, j, k, count, doors, ItemsCount: integer;
-  g, e, r, area, cell, refs, a, b, MapMarkerStat: IInterface;
+  i, j, k, count, doors, ItemsCount, quests, q: integer;
+  g, e, r, area, cell, refs, a, b, ref, MapMarkerStat: IInterface;
   Obj, ChildObj: TJsonObject;
   s, id: string;
   items: TStringList;
@@ -69,91 +69,91 @@ begin
       begin
         e := ReferencedByIndex(r, i);
         s := EditorID(r);
-        if (
-            (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR')
-            and (
-              (pos('Companion', s) <> 0)
-              or ('Folon_NPC_BeefeaterBeefy' = s)
-              or ('Folon_NPC_CamelotPendragon' = s)
-              or ('Folon_NPC_GentryTenpenny' = s)
-            )
-          )
-          or (
-             (Signature(r) = 'BOOK') and (Signature(e) = 'REFR')
-            and (
-              (pos('PerkMag', s) <> 0)
-              or (pos('CallingCard', s) <> 0)
-            )
-          )
 
-        then begin
-          ChildObj := Obj.A['markers'].AddObject;
+        if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
 
-          ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
-          ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
-          ChildObj['editor_id'] := EditorID(r);
+          //if pos('PerkMag', s)=0 and pos('CallingCard', s)=0 then continue;
 
-          if (pos('Companion',s) <> 0) or (pos('Pendragon',s)<>0) then
-            ChildObj['type'] := Signature(r) + 'Companion'
-          else
-            ChildObj['type'] := Signature(r);
-
-          ChildObj['name'] := GetElementEditValues(r, 'FULL');
-
-          x := Double(GetElementNativeValues(e, 'DATA\Position\X'));
-          y := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
-          z := Double(GetElementNativeValues(e, 'DATA\Position\Z'));
-
-          // figure out location on the map
-          cell := LinksTo(ElementByName(e, 'Cell'));
-          area := LinksTo(ElementByName(cell, 'Worldspace'));
-          if Assigned(area) then begin
-            ChildObj['area'] := EditorID(area);
+        end else
+        if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin
+          if pos('_NPC_', s)=0 then continue;
+          quests := 0;
+          for q := 0 to Pred(ReferencedByCount(r)) do begin
+            ref := ReferencedByIndex(r, q);
+            if Signature(ref)='QUST' then Inc(quests);
           end;
+          if quests = 0 then continue;
+        end else continue
 
-          if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then
-          begin
-            ChildObj['cell_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
-            ChildObj['cell_name'] := GetElementEditValues(cell, 'FULL');
-            //ChildObj['cell_editor_id'] := EditorID(cell);
+        ChildObj := Obj.A['markers'].AddObject;
 
-            // interior cell, find a door to the worldspace, update coordinates
-            refs := FindChildGroup(ChildGroup(cell), 8, cell);
-            for i := 0 to Pred(ElementCount(refs)) do begin
-              a := ElementByIndex(refs, i);
-              if Signature(BaseRecord(a)) <> 'DOOR' then
-                continue;
+        ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
+        ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
+        ChildObj['editor_id'] := EditorID(r);
 
-              b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
-              if not Assigned(b) then Continue;
-              if not ElementExists(b, 'XTEL') then Continue;
+        ChildObj['type'] := Signature(r);
 
-              area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
-              if Assigned(area) then begin
+        ChildObj['name'] := GetElementEditValues(r, 'FULL');
 
-                //ChildObj['door_id'] := IntToHex(GetLoadOrderFormID(a), 8);
-                ChildObj['area'] := EditorID(area);
+        if Signature(r) = 'NPC_' then ChildObj['quests'] := quests;
 
-                ax := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\X'));
-                ay := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Y'));
-                az := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Z'));
+        x := Double(GetElementNativeValues(e, 'DATA\Position\X'));
+        y := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
+        z := Double(GetElementNativeValues(e, 'DATA\Position\Z'));
 
-                bx := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\X'));
-                by := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Y'));
-                bz := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Z'));
+        ChildObj['x'] := x;
+        ChildObj['y'] := y;
+        ChildObj['z'] := z;
 
-                x := x + ax - bx;
-                y := y + ay - by;
-                z := z + az - bz;
+        // figure out location on the map
+        cell := LinksTo(ElementByName(e, 'Cell'));
+        area := LinksTo(ElementByName(cell, 'Worldspace'));
+        if Assigned(area) then begin
+          ChildObj['area'] := EditorID(area);
+        end;
 
-                break;
-              end;
+        if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then
+        begin
+          ChildObj['cell_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
+          ChildObj['cell_name'] := GetElementEditValues(cell, 'FULL');
+          //ChildObj['cell_editor_id'] := EditorID(cell);
+
+          // interior cell, find a door to the worldspace, update coordinates
+          refs := FindChildGroup(ChildGroup(cell), 8, cell);
+          for i := 0 to Pred(ElementCount(refs)) do begin
+            a := ElementByIndex(refs, i);
+            if Signature(BaseRecord(a)) <> 'DOOR' then
+              continue;
+
+            b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
+            if not Assigned(b) then Continue;
+            if not ElementExists(b, 'XTEL') then Continue;
+
+            area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
+            if Assigned(area) then begin
+
+              //ChildObj['door_id'] := IntToHex(GetLoadOrderFormID(a), 8);
+              ChildObj['area'] := EditorID(area);
+
+              ax := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\X'));
+              ay := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Y'));
+              az := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Z'));
+
+              bx := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\X'));
+              by := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Y'));
+              bz := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Z'));
+
+              x := x + ax - bx;
+              y := y + ay - by;
+              z := z + az - bz;
+
+              ChildObj['x'] := x;
+              ChildObj['y'] := y;
+              ChildObj['z'] := z;
+
+              break;
             end;
           end;
-
-          ChildObj['x'] := x;
-          ChildObj['y'] := y;
-          ChildObj['z'] := z;
 
           Inc(count);
         end;

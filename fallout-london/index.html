@@ -165,7 +165,7 @@ function createMap() {
     maxPitch: 80,
     spatialReference : {
       projection : 'identity',
-      resolutions: [8,4,2,1,1/2,1/4,1/8,1/16].map(x=>x*scale),
+      resolutions: [8,4,2,1,1/2,1/4,1/8,1/16,1/32,1/64].map(x=>x*scale),
       fullExtent : { top: top, left: left, bottom: bottom, right: right },
     },
     baseLayer: new maptalks.TileLayer('base', {
@@ -651,6 +651,43 @@ function loadData() {
   },500);
 }
 
+function postprocessMarkers(data){
+  let nameReplace = {
+    'Dog': 'Churchill',
+  }
+
+  out = [];
+
+  for (o of data.markers) {
+    if (s = nameReplace[o.name]) {
+      o.original_name = o.name;
+      o.name = s;
+    }
+
+    if (o.type=='NPC_' && o.editor_id && (o.editor_id.includes('Companion') || o.editor_id=='Folon_NPC_CamelotPendragon')) {
+      o.type = '_Companion';
+    }
+
+    if (o.type=='BOOK' && o.editor_id.includes('Card')) {
+      o.type = '_Card';
+    }
+
+    if (o.type=='BOOK' && o.editor_id.includes('PerkMag')) {
+      o.type = '_Magazine';
+    }
+
+    if (o.type=='BOOK') {
+      continue;
+    }
+
+    out.push(o);
+  }
+
+  data.markers = out;
+
+  return data;
+}
+
 function loadMap(id) {
   map && map.remove();
   mapId = id;
@@ -662,7 +699,7 @@ function loadMap(id) {
 
   let promises = ['./markers.json'].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
-    markers = values[0];
+    markers = postprocessMarkers(values[0]);
     createMap();
     loadData();
   }).catch(e=>{console.log(e);})
