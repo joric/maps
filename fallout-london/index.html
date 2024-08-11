@@ -823,12 +823,13 @@ window.onload = function(event) {
 
   if (location.hash.length>1) {
     mapParam.markerId = decodeURIComponent(location.hash.slice(1));
+    mapParam.mapId = Object.keys(maps)[0];
   }
 
   // clear location hash
   history.pushState('', document.title, window.location.pathname + window.location.search);
 
-  mapId = localData.mapId || Object.keys(maps)[0];
+  mapId = mapParam.mapId || localData.mapId || Object.keys(maps)[0];
 
   for (id of Object.keys(maps)) {
     if (!localData[id]) {
