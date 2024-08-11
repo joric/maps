@@ -506,7 +506,7 @@ function loadData() {
       y = y * t.scale + t.offset.y;
     }
 
-    return [x, -y, z];
+    return {'x':x, 'y':-y, 'z':z};
   }
 
   for (o of markers.markers) {
@@ -517,9 +517,15 @@ function loadData() {
 
     let z = 0;//o.type == 'City' || o.type == 'Town' || o.type =='Settlement' || o.type == 'Metro Station' ? 1024*8 : 0;
 
-    let loc = getLoc(o);
+    let c = getLoc(o);
 
-    let marker = new maptalks.Marker(loc, {
+    // skip markers out of bounds
+    let [left,top,right,bottom] = mapBounds;
+    if (! (c.x>left && c.x<right && c.y>top && c.y<bottom )) {
+      continue;
+    }
+
+    let marker = new maptalks.Marker(c, {
       properties: o,
       content: o.name,
       symbol: markerSymbol(o.type),
