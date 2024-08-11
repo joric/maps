@@ -745,8 +745,9 @@ window.onload = function(event) {
     if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) return false;
     if (!o.name || !o.type || !o.form_id) return false;
     text = text.toLowerCase();
-    context = (o.name||'') +' '+ (o.type||'') +' '+ (o.form_id||'') +' '+humanReadable(o.type);
-    if (context.toLowerCase().includes(text)) {
+    context = (o.name||'') +' '+ (o.type||'') +' '+ ' '+humanReadable(o.type);
+
+    if (context.toLowerCase().includes(text) || o.form_id==text ) {
       return true;
     }
     return false;
@@ -784,7 +785,8 @@ window.onload = function(event) {
 
     let count = 0;
 
-    for (o of markers.markers) {
+    for (marker of map.getLayer(layerName)._geoList) {
+      let o = marker.properties;
 
       if (!filterMarker(o, text)) {
         continue;
@@ -793,6 +795,8 @@ window.onload = function(event) {
       if (count == 100) {
         break;
       }
+
+      marker.show();
 
       count += 1;
 
