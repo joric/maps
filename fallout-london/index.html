@@ -768,8 +768,8 @@ function postprocessMarkers(data){
       o.type = '_Magazine';
       if (o.name == "005 Comic") o.name = '005';
       if (o.name == "D.I.Y.") o.name = 'DIY: The Householder\'s Handbook';
-      let issue = o.editor_id.replace(/^.*(\d\d)$/, '$1');
-      if (issue) o.name = o.name +' '+ parseInt(issue);
+      let issue = o.editor_id.match(/^.*(\d\d)$/);
+      if (issue) o.name = o.name +' '+ parseInt(issue[1]);
     }
 
     if (o.type=='BOOK') {
