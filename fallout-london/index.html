@@ -75,6 +75,27 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
   </div>
 </div>
 
+<div id="alert" class="closed">Copied To Clipboard</div>
+
+<div id="popup" class="popup">
+  <div class="popup-content-wrapper">
+    <div class="popup-content">
+      <div id="popup-title">Popup Title</div>
+      <div id="popup-subtitle">Popup Subtitle</div>
+      <div id="popup-data" class="collapsed"></div>
+      <div id="popup-data-toggle" data-toggle="collapse" data-target="popup-data"><hr/></div>
+      <div class="popup-controls">
+        <input id="popup-found" type="checkbox">
+        <label for="popup-found" title="Toggle found">Found</label>
+        <!--a class="popup-link" id="popup-youtube-link" href="#" target="_blank" title="Youtube link"><i class="fa fa-brands fa-youtube"></i></a-->
+        <a class="popup-link" id="popup-wiki-link" href="#" target="_blank" title="Wiki link"><i class="fa fa-brands fa-wikipedia-w"></i></a>
+        <a class="popup-link" id="popup-marker-link" href="#" target="_blank" title="Copy marker location to clipboard"><i class="fa fa-link"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="popup-tip-container"><div class="popup-tip"></div></div>
+  <a id="popup-close" class="popup-close-button">&times;</a>
+</div>
 
 </body>
 </html>
@@ -111,6 +132,7 @@ let types = {};
 let mapId = 'LondonWorld';
 let pressed = {};
 let markers = {};
+let mapParam = {};
 
 let maps = {
   'LondonWorld' : { scale: 1, offset: {x:0, y:0},
@@ -387,8 +409,7 @@ function toggleItems(e, show, parent) {
       for (type of [o.spawns,o.type]) {
 
         if (div = lookup[type]) {
-          let id = o.area + ':' + o.form_id;
-          let found = settings.markedItems[id];
+          let found = settings.markedItems[o.form_id];
 
           // toggle markers
           show && !(found && hideFound && !alwaysVisible(marker)) ? marker.show() : marker.hide();
@@ -426,8 +447,7 @@ function markItems() {
 
     for (marker of map.getLayer(layerName)._geoList) {
       let o = marker.properties;
-      let id = o.area +':'+ o.form_id;
-      let found = settings.markedItems[id];
+      let found = settings.markedItems[o.form_id];
 
       let hidden = settings.hiddenItems[o.type];
 
@@ -477,6 +497,85 @@ function toggleMarked(id) {
   markItems();
   saveSettings();
 }
+
+function copyToClipboard(text) {
+  let input = document.body.appendChild(document.createElement("input"));
+  input.value = text;
+  input.focus();
+  input.select();
+  document.execCommand('copy');
+  input.parentNode.removeChild(input);
+  document.getElementById('alert').classList.remove('closed');
+  setTimeout(function(e){ document.getElementById('alert').classList.add('closed') },1500);
+}
+
+function getMarkerURL(markerId) {
+  let base = window.location.href.replace(/#.*$/,'');
+  //let vars = {mapId:mapId, markerId: markerId};
+  //return base +'#' + Object.entries(vars).map(e=>e[0]+'='+encodeURIComponent(e[1])).join('&');
+  return base + '#' + encodeURIComponent(markerId);
+}
+
+function gotoMarkerByName(name) {
+  for (marker of map.getLayer('markers')._geoList) {
+    let o = marker.properties;
+    if (name == o.name) {
+      map.animateTo({center: marker.getCoordinates(), zoom:(5), pitch:(0), bearing:(0)});
+      marker.show();
+      popupOnClick({target: marker});
+      marker.openInfoWindow();
+      break;
+    }
+  }
+}
+
+function gotoMarker(id) {
+  for (marker of map.getLayer('markers')._geoList) {
+    let o = marker.properties;
+    if (id == o.form_id) {
+      map.animateTo({center: marker._coordinates});
+      marker.show();
+      popupOnClick({target: marker});
+      marker.openInfoWindow();
+      break;
+    }
+  }
+}
+
+function popupOnClick(e) {
+    let o = e.target.properties;
+    let markerId = o.form_id;
+
+    let popup = document.querySelector('#popup').cloneNode(true);
+
+    popup.querySelector('#popup-data-toggle').onclick = function() {
+      let data_id = popup.querySelector('#popup-data-toggle').getAttribute('data-target');
+      settings.debugMode = !toggleClass(document.querySelector('#'+data_id),'collapsed');
+      saveSettings();
+    };
+
+    popup.querySelector('#popup-title').innerHTML = '<b>' + o.name + '</b>';
+    popup.querySelector('#popup-subtitle').innerHTML = humanReadable(o.type);
+
+    popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
+    popup.querySelector('#popup-found').checked = settings.markedItems[markerId]==true;
+    popup.querySelector('#popup-found').onclick = function() { toggleMarked(markerId) };
+
+    popup.querySelector('#popup-marker-link').href = getMarkerURL(o.name);
+    popup.querySelector('#popup-marker-link').onclick = function(e){ copyToClipboard(e.target.href); return false; }
+
+    popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+o.name;
+
+    popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
+
+    setClass(popup.querySelector('#popup-data'), settings.debugMode!=true, 'collapsed');
+
+    e.target._infoWindow.setOptions({custom: true, dy: -12});
+    e.target._infoWindow.setContent(popup);
+
+    popup.addEventListener('contextmenu', function(e) { e.stopPropagation()}, true); // enable default context menu
+}
+
 
 let mouseMoved = false;
 document.addEventListener('mousedown', function(event) {mouseMoved = false; });
@@ -546,21 +645,13 @@ function loadData() {
     }).addTo(marker);
 
     marker.setInfoWindow({autoCloseOn: 'click'})
-    .on('click',e=>{
-      let o = e.target.properties;
-      //o._coordinates = e.target.getCoordinates();
-      let title = o.name;
-      let content = JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
-      e.target._infoWindow.setTitle(title);
-      e.target._infoWindow.setContent(content);
-    })
+    .on('click', popupOnClick)
     .on('contextmenu', e=> {
       if (mouseMoved) return;
       let o = e.target.properties;
       let id = o.area + ':' + o.form_id;
       toggleMarked(id);
     })
-
 
     // count both outer type and spawns
     for (type of [o.type, o.spawns]) {
@@ -649,6 +740,14 @@ function loadData() {
       markerLayer.setOptions({enableAltitude: map.getPitch()!=0});
     }
   },500);
+
+
+  // marker link
+  if (markerId = mapParam.markerId) {
+    gotoMarkerByName(markerId);
+  }
+
+  mapParam = {}; // critical to reload map properly
 }
 
 function postprocessMarkers(data){
@@ -709,21 +808,20 @@ function loadMap(id) {
 
 window.onload = function(event) {
 
+  if (location.hash.length>1) {
+    mapParam.markerId = decodeURIComponent(location.hash.slice(1));
+  }
+
+  // clear location hash
+  history.pushState('', document.title, window.location.pathname + window.location.search);
+
   mapId = localData.mapId || Object.keys(maps)[0];
 
   for (id of Object.keys(maps)) {
-    if (!localData[id]) {
-      localData[id] = {};
-    }
-    if (!localData[id].hiddenItems) {
-      localData[id].hiddenItems = {};
-    }
-    if (!localData[id].markedItems) {
-      localData[id].markedItems = {};
-    }
-    if (!localData[id].searchText) {
-      localData[id].searchText = '';
-    }
+    localData[id] = localData[id] || {};
+    localData[id].hiddenItems = localData[id].hiddenItems || {};
+    localData[id].markedItems = localData[id].markedItems || {};
+    localData[id].searchText = localData[id].searchText || '';
   }
 
   settings = localData[mapId];
@@ -813,22 +911,7 @@ window.onload = function(event) {
   }
 
   function clickSearchItem(e) {
-    let id = e.target.alt;
-    for (layerName of ['markers']) {
-      for (marker of map.getLayer(layerName)._geoList) {
-        let o = marker.properties;
-        if (id == o.form_id) {
-          map.animateTo({center: marker._coordinates});
-          marker.show();
-          marker.setInfoWindow({autoCloseOn: 'click',
-            title: o.name,
-            content: JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;'),
-          });
-          marker.openInfoWindow();
-          return;
-        }
-      }
-    }
+    gotoMarker(e.target.alt);
   }
 
   function openSearch(text) {
