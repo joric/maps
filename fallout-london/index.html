@@ -387,7 +387,7 @@ function toggleItems(e, show, parent) {
       for (type of [o.spawns,o.type]) {
 
         if (div = lookup[type]) {
-          let id = o.area + ':' + o.name;
+          let id = o.area + ':' + o.form_id;
           let found = settings.markedItems[id];
 
           // toggle markers
@@ -426,7 +426,7 @@ function markItems() {
 
     for (marker of map.getLayer(layerName)._geoList) {
       let o = marker.properties;
-      let id = o.area +':'+ o.name;
+      let id = o.area +':'+ o.form_id;
       let found = settings.markedItems[id];
 
       let hidden = settings.hiddenItems[o.type];
@@ -557,7 +557,7 @@ function loadData() {
     .on('contextmenu', e=> {
       if (mouseMoved) return;
       let o = e.target.properties;
-      let id = o.area + ':' + o.name;
+      let id = o.area + ':' + o.form_id;
       toggleMarked(id);
     })
 
