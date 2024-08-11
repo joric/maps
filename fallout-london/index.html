@@ -765,8 +765,16 @@ function postprocessMarkers(data){
       o.type = '_Card';
     }
 
+    if (o.type=='BOOK' && o.editor_id.includes('Newspaper')) {
+      o.type = '_Newspaper';
+    }
+
+    if (o.type=='BOOK' && (o.editor_id.includes('Note') || o.name.includes('Note'))) {
+      o.type = '_Note';
+    }
+
     if (o.type=='MISC' && o.editor_id.includes('VinylRecord')) {
-      o.type = '_VinylRecords';
+      o.type = '_Vinyl';
     }
 
     if (o.type=='BOOK' && o.editor_id.includes('PerkMag')) {
@@ -778,7 +786,7 @@ function postprocessMarkers(data){
     }
 
     if (o.type=='BOOK') {
-      continue;
+      //continue;
     }
 
     if (orig_name!=o.name) o.original_name = orig_name;

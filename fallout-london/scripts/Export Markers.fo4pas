@@ -77,7 +77,7 @@ begin
         end 
         else
         if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
-          if (pos('PerkMag', s)=0) and (pos('CallingCard', s)=0) then continue;
+          //if (pos('PerkMag', s)=0) and (pos('CallingCard', s)=0) then continue;
         end
         else
         if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin

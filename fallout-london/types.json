@@ -72,11 +72,14 @@
   "Custom 79": {"fa": "dog", "bg": "forestgreen", "name": "Isle of Dogs", "group": "factions"},
   "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"},
 
-  "BOOK": {"fa": "newspaper", "bg": "grey", "name":"Paper"},
+  "BOOK": {"fa": "message", "bg": "cadetblue", "name":"Message", "group": "items"},
   "NPC_": {"fa": "person", "bg": "#555", "name": "NPC"},
 
-  "_VinylRecords": {"fa": "headphones", "bg": "steelblue", "name":"Vinyl Records", "group": "items"},
+  "_Newspaper": {"fa": "newspaper", "bg": "#aaa", "name":"Newspaper", "group": "items"},
+  "_Note": {"fa": "note-sticky", "bg": "sandybrown", "name":"Note", "group": "items"},
+
+  "_Vinyl": {"fa": "headphones", "bg": "steelblue", "name":"Vinyl Record", "group": "items"},
   "_Magazine": {"fa": "book", "bg": "steelblue", "group": "items", "name": "Magazine"},
-  "_Card": {"fa": "id-card", "bg": "darkkhaki", "group": "items", "name": "Card"},
+  "_Card": {"fa": "id-card", "bg": "sandybrown", "group": "items", "name": "Card"},
   "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion"}
 }
