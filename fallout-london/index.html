@@ -754,6 +754,7 @@ function postprocessMarkers(data){
 
   for (o of data.markers) {
     let orig_name = o.name;
+    let orig_type = o.name;
 
     if (o.type=='NPC_' && o.editor_id && (o.editor_id.includes('Companion') || o.editor_id=='Folon_NPC_CamelotPendragon')) {
       o.type = '_Companion';
@@ -777,6 +778,8 @@ function postprocessMarkers(data){
     }
 
     if (orig_name!=o.name) o.original_name = orig_name;
+    if (orig_type!=o.type) o.original_type = orig_type;
+
     out.push(o);
   }
 
