@@ -354,7 +354,6 @@ a:hover { text-decoration: underline; }
   padding-right: 5px;
 }
 
-
 .popup {
   position: absolute;
   text-align: center;
@@ -399,7 +398,7 @@ a:hover { text-decoration: underline; }
 
 .popup-content-wrapper,
 .popup-tip {
-  background-color: #eee;
+  background-color: #fff;
   color: black;
   opacity: 95%;
   font-size: 13px;
