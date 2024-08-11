@@ -68,14 +68,21 @@ begin
       for i := 0 to Pred(ReferencedByCount(r)) do
       begin
         e := ReferencedByIndex(r, i);
+        s := EditorID(r);
         if (
             (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR')
-            and (pos('Companion', EditorID(r)) <> 0)
+            and (
+              (pos('Companion', s) <> 0)
+              or ('Folon_NPC_BeefeaterBeefy' = s)
+              or ('Folon_NPC_CamelotArthur' = s)
+              or ('Folon_NPC_GentryTenpenny' = s)
+            )
           )
           or (
-              (Signature(r) = 'BOOK') and (Signature(e) = 'REFR')
-              and (
-              (pos('PerkMag', EditorID(r)) <> 0) or (pos('CallingCard', EditorID(r)) <> 0)
+             (Signature(r) = 'BOOK') and (Signature(e) = 'REFR')
+            and (
+              (pos('PerkMag', s) <> 0)
+              or (pos('CallingCard', s) <> 0)
             )
           )
 
@@ -85,7 +92,12 @@ begin
           ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
           ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
           ChildObj['editor_id'] := EditorID(r);
-          ChildObj['type'] := Signature(r);
+
+          if pos('Companion', EditorID(r)) <> 0 then
+            ChildObj['type'] := Signature(r) + 'Companion'
+          else
+            ChildObj['type'] := Signature(r);
+
           ChildObj['name'] := GetElementEditValues(r, 'FULL');
 
           x := Double(GetElementNativeValues(e, 'DATA\Position\X'));
@@ -130,10 +142,11 @@ begin
                 by := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Y'));
                 bz := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Z'));
 
-                x := ax - x + bx;
-                y := ay - y + by;
-                z := az - z + bz;
+                x := x + ax - bx;
+                y := y + ay - by;
+                z := z + az - bz;
 
+                break;
               end;
             end;
           end;

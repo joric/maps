@@ -73,5 +73,6 @@
   "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"},
 
   "BOOK": {"fa": "book", "bg": "sienna", "group": "items", "name": "Book"},
-  "NPC_": {"fa": "person", "bg": "orchid", "group": "items", "name": "Companion"}
+  "NPC_Companion": {"fa": "person", "bg": "orchid", "group": "items", "name": "Companion"},
+  "NPC_": {"fa": "person", "bg": "darkcyan", "group": "items", "name": "NPC"}
 }
