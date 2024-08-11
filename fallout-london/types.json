@@ -72,10 +72,10 @@
   "Custom 79": {"fa": "dog", "bg": "forestgreen", "name": "Isle of Dogs", "group": "factions"},
   "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"},
 
-  "BOOK": {"fa": "newspaper", "bg": "grey", "group": "items", "name":"Paper"},
-  "NPC_": {"fa": "person", "bg": "#555", "group": "items", "name": "NPC"},
+  "BOOK": {"fa": "newspaper", "bg": "grey", "name":"Paper"},
+  "NPC_": {"fa": "person", "bg": "#555", "name": "NPC"},
 
   "_Magazine": {"fa": "book", "bg": "steelblue", "group": "items", "name": "Magazine"},
   "_Card": {"fa": "id-card", "bg": "darkkhaki", "group": "items", "name": "Card"},
-  "_Companion": {"fa": "person", "bg": "orchid", "group": "items", "name": "Companion"}
+  "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion"}
 }
