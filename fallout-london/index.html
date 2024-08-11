@@ -87,7 +87,6 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
       <div class="popup-controls">
         <input id="popup-found" type="checkbox">
         <label for="popup-found" title="Toggle found">Found</label>
-        <!--a class="popup-link" id="popup-youtube-link" href="#" target="_blank" title="Youtube link"><i class="fa fa-brands fa-youtube"></i></a-->
         <a class="popup-link" id="popup-wiki-link" href="#" target="_blank" title="Wiki link"><i class="fa fa-brands fa-wikipedia-w"></i></a>
         <a class="popup-link" id="popup-marker-link" href="#" target="_blank" title="Copy marker location to clipboard"><i class="fa fa-link"></i></a>
       </div>
@@ -520,7 +519,7 @@ function gotoMarkerByName(name) {
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
     if (name == o.name || name == o.form_id) {
-      map.animateTo({center: marker.getCoordinates(), zoom:(5), pitch:(0), bearing:(0)});
+      map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
       marker.show();
       popupOnClick({target: marker});
       marker.openInfoWindow();
@@ -773,9 +772,12 @@ function postprocessMarkers(data){
 
     if (o.type=='BOOK' && o.editor_id.includes('PerkMag')) {
       o.type = '_Magazine';
+      let orig_name = o.name;
       if (o.name == "005 Comic") o.name = '005';
+      if (o.name == "D.I.Y.") o.name = 'DIY: The Householder\'s Handbook';
       let issue = o.editor_id.replace(/^.*(\d\d)$/, '$1');
       if (issue) o.name = o.name +' '+ parseInt(issue);
+      if (orig_name!=o.name) o.original_name = orig_name;
     }
 
     if (o.type=='BOOK') {
