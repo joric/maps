@@ -75,6 +75,7 @@
   "BOOK": {"fa": "newspaper", "bg": "grey", "name":"Paper"},
   "NPC_": {"fa": "person", "bg": "#555", "name": "NPC"},
 
+  "_VinylRecords": {"fa": "headphones", "bg": "steelblue", "name":"Vinyl Records", "group": "items"},
   "_Magazine": {"fa": "book", "bg": "steelblue", "group": "items", "name": "Magazine"},
   "_Card": {"fa": "id-card", "bg": "darkkhaki", "group": "items", "name": "Card"},
   "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion"}

@@ -61,7 +61,7 @@ begin
 
   count := 0;
   items := TStringList.Create;
-  items.DelimitedText := 'BOOK NPC_';
+  items.DelimitedText := 'BOOK NPC_ MISC';
 
   for k := 0 to Pred(items.Count) do begin
     g := GroupBySignature(FileByIndex(8), items[k]);
@@ -72,11 +72,14 @@ begin
         e := ReferencedByIndex(r, i);
         s := EditorID(r);
 
+        if (Signature(r) = 'MISC') and (Signature(e) = 'REFR') then begin
+          if pos('VinylRecord', s)=0 then continue;
+        end 
+        else
         if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
-
-          //if pos('PerkMag', s)=0 and pos('CallingCard', s)=0 then continue;
-
-        end else
+          if (pos('PerkMag', s)=0) and (pos('CallingCard', s)=0) then continue;
+        end
+        else
         if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin
           if pos('_NPC_', s)=0 then continue;
           quests := 0;
@@ -85,7 +88,8 @@ begin
             if Signature(ref)='QUST' then Inc(quests);
           end;
           if quests = 0 then continue;
-        end else continue
+        end
+        else continue
 
         ChildObj := Obj.A['markers'].AddObject;
 
@@ -168,7 +172,7 @@ begin
   //AddMessage(AdjustLineBreaks(Obj.ToJSON({Compact:=}False)));
 
   AddMessage('Saving markers.json...');
-  Obj.SaveToFile('markers.json', False, TEncoding.UTF8, True);
+  Obj.SaveToFile(extractfilepath(paramstr(0))+'../markers.json', False, TEncoding.UTF8, True);
 end;
 
 end.

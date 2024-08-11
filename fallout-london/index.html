@@ -765,6 +765,10 @@ function postprocessMarkers(data){
       o.type = '_Card';
     }
 
+    if (o.type=='MISC' && o.editor_id.includes('VinylRecord')) {
+      o.type = '_VinylRecords';
+    }
+
     if (o.type=='BOOK' && o.editor_id.includes('PerkMag')) {
       o.type = '_Magazine';
       if (o.name == "005 Comic") o.name = '005';
