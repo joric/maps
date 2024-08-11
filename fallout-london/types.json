@@ -73,7 +73,7 @@
   "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"},
 
   "BOOK": {"fa": "newspaper", "bg": "grey", "group": "items", "name":"Paper"},
-  "NPC_": {"fa": "person", "bg": "darkslategrey", "group": "items", "name": "NPC"},
+  "NPC_": {"fa": "person", "bg": "#555", "group": "items", "name": "NPC"},
 
   "_Magazine": {"fa": "book", "bg": "steelblue", "group": "items", "name": "Magazine"},
   "_Card": {"fa": "id-card", "bg": "darkkhaki", "group": "items", "name": "Card"},
