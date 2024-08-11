@@ -774,8 +774,8 @@ function postprocessMarkers(data){
     if (o.type=='BOOK' && o.editor_id.includes('PerkMag')) {
       o.type = '_Magazine';
       if (o.name == "005 Comic") o.name = '005';
-      let issue = o.editor_id.replace(/^.*(\d+)$/, '$1');
-      if (issue) o.name = o.name +' '+issue;
+      let issue = o.editor_id.replace(/^.*(\d\d)$/, '$1');
+      if (issue) o.name = o.name +' '+ parseInt(issue);
     }
 
     if (o.type=='BOOK') {
