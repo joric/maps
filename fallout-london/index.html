@@ -754,7 +754,7 @@ function postprocessMarkers(data){
 
   for (o of data.markers) {
     let orig_name = o.name;
-    let orig_type = o.name;
+    let orig_type = o.type;
 
     if (o.type=='NPC_' && o.editor_id && (o.editor_id.includes('Companion') || o.editor_id=='Folon_NPC_CamelotPendragon')) {
       o.type = '_Companion';
