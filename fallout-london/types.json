@@ -86,5 +86,5 @@
   "_Vinyl": {"fa": "headphones", "bg": "steelblue", "name":"Vinyl Record", "group": "misc"},
   "_Magazine": {"fa": "book", "bg": "steelblue", "name": "Magazine", "group": "misc"},
   "_Card": {"fa": "id-card", "bg": "sandybrown", "name": "Card", "group": "misc"},
-  "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion"}
+  "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion", "group": "factions"}
 }
