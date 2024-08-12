@@ -61,7 +61,7 @@ begin
 
   count := 0;
   items := TStringList.Create;
-  items.DelimitedText := 'BOOK NPC_ MISC ALCH WEAP AMMO NOTE';
+  items.DelimitedText := 'BOOK NPC_ MISC ALCH WEAP AMMO NOTE FLOR';
 
   for k := 0 to Pred(items.Count) do begin
     g := GroupBySignature(FileByIndex(8), items[k]);
@@ -73,6 +73,10 @@ begin
         s := EditorID(r);
 
         if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin
+        end else
+        if (Signature(r) = 'FLOR') and (Signature(e) = 'REFR') then begin
+          if (pos('Mutfruit', s)=0)
+          then continue;
         end else
         if (Signature(r) = 'AMMO') and (Signature(e) = 'REFR') then begin
         end else
@@ -111,9 +115,7 @@ begin
         ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
         ChildObj['editor_id'] := EditorID(r);
         ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
-
         ChildObj['type'] := Signature(r);
-
         ChildObj['name'] := GetElementEditValues(r, 'FULL');
 
         if Signature(r) = 'NPC_' then ChildObj['quests'] := quests;
