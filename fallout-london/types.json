@@ -50,7 +50,7 @@
   "Car": {"fa": "car", "name": "Parking", "group": "facilities"},
   "Diamond City": {"fa": "archway", "bg": "orange", "name": "Gates", "group": "travel"},
   "Minutemen": {"fa": "dragon", "bg":"forestgreen", "name": "Camelot", "group": "factions"},
-  "Institute": {"fa": "compass-drafting", "bg":"forestgreen", "name": "Angel", "group": "factions"},
+  "Institute": {"fa": "compass-drafting", "bg":"forestgreen", "name": "Angels", "group": "factions"},
   "Country Club": {"fa": "crown", "name": "Palace", "group": "places of interest"},
   "Custom House": {"fa": "landmark-dome", "group": "facilities"},
   "Police Station": {"fa": "helmet-safety", "group": "facilities"},

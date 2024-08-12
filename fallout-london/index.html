@@ -157,16 +157,16 @@ let factions = {
   'Isle of Dogs': {npc:'IODS', color:'forestgreen'},
   '5th Column': {npc:'5thColumn', color:'darkorchid'},
   'Vagabonds': {npc:'Vagabonds', color:'saddlebrown'},
-  'Camelot': {npc:'Camelot', color:'darkorange'},
+  'Camelot': {npc:'NPC_Camelot', color:'darkorange'},
   'Roundels': {npc:'NPC_Roundel', color:'slategrey'},
-  'Angel': {npc:'NPC_Angel', color:'red'},
-  'Tommies': {npc:'NPC_Tommy', color:'royalblue'},
+  'Angels': {npc:'NPC_Angel', color:'red'},
+  'Tommies': {npc:'NPC_Tommy', alt:'Tommy', color:'royalblue'},
   'Gentry': {npc:'Gentry', color:'lightgrey'},
 }
 
 function getFaction(o) {
   for (const [name, value] of Object.entries(factions)) {
-    if (types[o.type].name==name || (o.type=='NPC_' && (o.editor_id && o.editor_id.includes(value.npc)))) {
+    if (types[o.type].name==name || (o.type=='NPC_' && (o.editor_id && (o.editor_id.includes(value.npc)||o.editor_id.includes(value.alt))))) {
       return {name: name, data: value};
     }
   }
