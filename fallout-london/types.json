@@ -73,16 +73,15 @@
   "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"},
 
   "BOOK": {"fa": "envelope", "bg": "tan", "name":"Message", "group": "misc"},
+  "NOTE": {"fa": "compact-disc", "bg": "mediumpurple", "name": "Holotape", "group": "misc"},
   "NPC_": {"fa": "person", "bg": "#555", "name": "NPC", "group": "misc"},
 
   "WEAP": {"fa": "gun", "bg": "tomato", "name":"Weapon", "group": "misc"},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "name": "Ammo", "group": "misc"},
   "ALCH": {"fa": "briefcase-medical", "bg": "red", "name": "Meds", "group": "misc"},
-  "NOTE": {"fa": "compact-disc", "bg": "mediumpurple", "name": "Holotape", "group": "misc"},
 
   "_Newspaper": {"fa": "newspaper", "bg": "#aaa", "name":"Newspaper", "group": "misc"},
   "_Note": {"fa": "note-sticky", "bg": "sandybrown", "name":"Note", "group": "misc"},
-
   "_Vinyl": {"fa": "record-vinyl", "bg": "darkslategrey", "name":"Vinyl Record", "group": "misc"},
   "_Magazine": {"fa": "book", "bg": "steelblue", "name": "Magazine", "group": "misc"},
   "_Card": {"fa": "id-card", "bg": "sandybrown", "name": "Card", "group": "misc"},
