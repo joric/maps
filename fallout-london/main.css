@@ -165,12 +165,12 @@ a:hover { text-decoration: underline; }
 }
 
 .panel::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: hsla(0, 0%, 53%, .2);
   border-radius: 4px
 }
 
 .panel:hover::-webkit-scrollbar-thumb {
-  background: hsla(0, 0%, 53%, .4)
+  background: hsla(0, 0%, 53%, .8)
 }
 
 .panel:hover::-webkit-scrollbar-track {
