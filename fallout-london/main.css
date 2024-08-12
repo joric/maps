@@ -482,6 +482,21 @@ hr { opacity: .6;}
   height: 22px;
 }
 
+#popup-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#popup-subtitle {
+  font-size: 14px;
+}
+
+#popup-note {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+
 #alert {
   position: absolute;
   margin: auto;

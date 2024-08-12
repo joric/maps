@@ -80,6 +80,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
     <div class="popup-content">
       <div id="popup-title">Popup Title</div>
       <div id="popup-subtitle">Popup Subtitle</div>
+      <div id="popup-note">Popup Note</div>
       <div id="popup-data" class="collapsed"></div>
       <div id="popup-data-toggle" data-toggle="collapse" data-target="popup-data"><hr/></div>
       <div class="popup-controls">
@@ -133,7 +134,7 @@ let mapParam = {};
 let firstStart = false;
 
 let maps = {
-  'LondonWorld' : { scale: 1, offset: {x:0, y:0},
+  'LondonWorld' : { name: 'London', scale: 1, offset: {x:0, y:0},
     regions: {
       'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
       'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
@@ -145,11 +146,11 @@ let maps = {
       'BankofEnglandWorld': { scale: 1, offset: {x:-32000, y:35500} },
     },
   },
-  'WestminsterWorld' : { scale: 1.9, offset: {x:7000, y:22000} },
-  'IslingtonWorld': { scale: 3.82, offset: {x:0, y:-47500} },
-  'HackneyWorld' : { scale: 3.77, offset: {x:-77500, y:-63000} },
-  'CamdenWorld': { scale: 3.77, offset: {x:15000, y:-126000} },
-  'BankofEnglandWorld': { scale: 3.77, offset: {x:6000, y:4800} },
+  'WestminsterWorld' : { name: 'Westminster', scale: 1.9, offset: {x:7000, y:22000} },
+  'IslingtonWorld': { name: 'Islington', scale: 3.82, offset: {x:0, y:-47500} },
+  'HackneyWorld' : { name: 'Hackney', scale: 3.77, offset: {x:-77500, y:-63000} },
+  'CamdenWorld': { name: 'Camden', scale: 3.77, offset: {x:15000, y:-126000} },
+  'BankofEnglandWorld': { name:'Bank of England', scale: 3.77, offset: {x:6000, y:4800} },
 };
 
 let factions = {
@@ -568,14 +569,14 @@ function popupOnClick(e) {
       saveSettings();
     };
 
-    popup.querySelector('#popup-title').innerHTML = '<b>' + o.name + '</b>';
+    popup.querySelector('#popup-title').innerText = o.name;
+    popup.querySelector('#popup-subtitle').innerText = (faction = getFaction(o)) ? faction.name : humanReadable(o.type);
 
-    let type = humanReadable(o.type);
-    if (faction = getFaction(o)) {
-      type = faction.name;
-    }
+    let location =  maps[o.area].name;
 
-    popup.querySelector('#popup-subtitle').innerHTML = type;
+    if (o.cell_name) location += ' (' + o.cell_name + ')';
+
+    popup.querySelector('#popup-note').innerText = location;
 
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
     popup.querySelector('#popup-found').checked = settings.markedItems[markerId]==true;
