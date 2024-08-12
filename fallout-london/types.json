@@ -72,11 +72,11 @@
   "Custom 79": {"fa": "dog", "bg": "forestgreen", "name": "Isle of Dogs", "group": "factions"},
   "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"},
 
-  "BOOK": {"fa": "message", "bg": "cadetblue", "name":"Message", "group": "misc"},
+  "BOOK": {"fa": "envelope", "bg": "BurlyWood", "name":"Message", "group": "misc"},
   "NPC_": {"fa": "person", "bg": "#555", "name": "NPC", "group": "misc"},
 
   "WEAP": {"fa": "gun", "bg": "tomato", "name":"Weapon", "group": "misc"},
-  "AMMO": {"fa": "toolbox", "bg": "seagreen", "name": "Ammo", "group": "misc"},
+  "AMMO": {"fa": "toolbox", "bg": "dimgrey", "name": "Ammo", "group": "misc"},
   "ALCH": {"fa": "heart-circle-plus", "bg": "red", "name": "Meds", "group": "misc"},
   "NOTE": {"fa": "compact-disc", "bg": "mediumpurple", "name": "Holotape", "group": "misc"},
 
