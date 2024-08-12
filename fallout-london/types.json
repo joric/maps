@@ -24,7 +24,7 @@
   "Natural Landmark": {"fa": "landmark", "group": "places of interest"},
   "Goodneighbor": {"fa": "hotel", "name": "Hotel", "group":"buildings"},
   "School": {"fa": "graduation-cap", "group":"facilities"},
-  "Military Base":{"fa": "flag", "group":"facilities"},
+  "Military Base":{"fa": "flag", "group":"factions", "name":"Tommies"},
   "Forested":{ "fa": "tree", "group": "places of interest"},
   "Observatory":{"fa": "landmark-dome", "group":"facilities"},
   "Elevated Highway": {"fa": "bridge", "name":"Bridge", "group":"places of interest"},
