@@ -161,20 +161,20 @@ a:hover { text-decoration: underline; }
 }
 
 .panel::-webkit-scrollbar {
-  width: 8px
+  width: 6px
 }
 
 .panel::-webkit-scrollbar-thumb {
   background: hsla(0, 0%, 53%, .2);
-  border-radius: 4px
+  border-radius: 4px;
 }
 
 .panel:hover::-webkit-scrollbar-thumb {
-  background: hsla(0, 0%, 53%, .8)
+  background: hsla(0, 0%, 53%, .8);
 }
 
 .panel:hover::-webkit-scrollbar-track {
-  background: hsla(0, 0%, 53%, .1)
+  background: hsla(0, 0%, 53%, .1);
 }
 
 #categories {
@@ -514,7 +514,6 @@ hr { opacity: .6;}
 
 #search-items {
   padding: 0;
-  //display: flex;
   flex-wrap: wrap;
 }
 
@@ -525,7 +524,6 @@ hr { opacity: .6;}
   position: relative;
   padding: 3px 6px;
   cursor: pointer;
-  
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
