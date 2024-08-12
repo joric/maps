@@ -51,7 +51,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
     <form id="search-form">
       <div class="search-input-wrapper input-group">
         <button id="search-close" type="button" class="btn collapsed">x</button>
-        <input id="search-input" class="form-control" type="text" placeholder="Search..." autofocus/>
+        <input id="search-input" class="form-control" type="text" placeholder="Search for name, editor id, or form id..." autofocus/>
         <div class="input-group-append">
           <input type="submit" id="search-submit" type="button" class="btn" value="Search" />
         </div>
@@ -913,8 +913,7 @@ window.onload = function(event) {
     if (!o.name || !o.type || !o.form_id) return false;
     text = text.toLowerCase();
     context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
-
-    if (context.toLowerCase().includes(text) || o.form_id==text ) {
+    if (context.toLowerCase().includes(text) || (text.length>=4 && o.form_id && o.form_id.toLowerCase().includes(text)) ) {
       return true;
     }
     return false;
