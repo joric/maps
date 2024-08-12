@@ -83,7 +83,7 @@
   "_Newspaper": {"fa": "newspaper", "bg": "#aaa", "name":"Newspaper", "group": "misc"},
   "_Note": {"fa": "note-sticky", "bg": "sandybrown", "name":"Note", "group": "misc"},
 
-  "_Vinyl": {"fa": "headphones", "bg": "steelblue", "name":"Vinyl Record", "group": "misc"},
+  "_Vinyl": {"fa": "record-vinyl", "bg": "darkslategrey", "name":"Vinyl Record", "group": "misc"},
   "_Magazine": {"fa": "book", "bg": "steelblue", "name": "Magazine", "group": "misc"},
   "_Card": {"fa": "id-card", "bg": "sandybrown", "name": "Card", "group": "misc"},
   "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion", "group": "misc"}
