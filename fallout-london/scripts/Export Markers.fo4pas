@@ -26,18 +26,18 @@ begin
         ChildObj := Obj.O['worldspaces'].O[EditorID(e)];
         ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(e), 8);
         ChildObj['name'] := GetElementEditValues(e, 'FULL');
-        ChildObj.O['nw'].I['x'] := Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\X'));
-        ChildObj.O['nw'].I['y'] := Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\Y'));
-        ChildObj.O['se'].I['x'] := Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\X'));
-        ChildObj.O['se'].I['y'] := Integer(GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\Y'));
-        ChildObj.F['scale'] := Double(GetElementNativeValues(e, 'ONAM\World Map Scale'));
-        ChildObj.O['offset'].F['x'] := Double(GetElementNativeValues(e, 'ONAM\Cell X Offset'));
-        ChildObj.O['offset'].F['y'] := Double(GetElementNativeValues(e, 'ONAM\Cell Y Offset'));
-        ChildObj.O['offset'].F['z'] := Double(GetElementNativeValues(e, 'ONAM\Cell Z Offset'));
-        ChildObj.O['min'].F['x'] := Double(GetElementNativeValues(e, 'Object Bounds\NAM0\X'));
-        ChildObj.O['min'].F['y'] := Double(GetElementNativeValues(e, 'Object Bounds\NAM0\Y'));
-        ChildObj.O['max'].F['x'] := Double(GetElementNativeValues(e, 'Object Bounds\NAM9\X'));
-        ChildObj.O['max'].F['y'] := Double(GetElementNativeValues(e, 'Object Bounds\NAM9\Y'));
+        ChildObj.O['nw'].I['x'] := GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\X');
+        ChildObj.O['nw'].I['y'] := GetElementNativeValues(e, 'MNAM\Cell Coordinates\NW Cell\Y');
+        ChildObj.O['se'].I['x'] := GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\X');
+        ChildObj.O['se'].I['y'] := GetElementNativeValues(e, 'MNAM\Cell Coordinates\SE Cell\Y');
+        ChildObj.F['scale'] := GetElementNativeValues(e, 'ONAM\World Map Scale');
+        ChildObj.O['offset'].F['x'] := GetElementNativeValues(e, 'ONAM\Cell X Offset');
+        ChildObj.O['offset'].F['y'] := GetElementNativeValues(e, 'ONAM\Cell Y Offset');
+        ChildObj.O['offset'].F['z'] := GetElementNativeValues(e, 'ONAM\Cell Z Offset');
+        ChildObj.O['min'].F['x'] := GetElementNativeValues(e, 'Object Bounds\NAM0\X');
+        ChildObj.O['min'].F['y'] := GetElementNativeValues(e, 'Object Bounds\NAM0\Y');
+        ChildObj.O['max'].F['x'] := GetElementNativeValues(e, 'Object Bounds\NAM9\X');
+        ChildObj.O['max'].F['y'] := GetElementNativeValues(e, 'Object Bounds\NAM9\Y');
       end;
     end;
   end;
@@ -51,9 +51,9 @@ begin
     ChildObj['type'] := GetElementEditValues(e, 'Map Marker\TNAM\Type');
     ChildObj['name'] := GetElementEditValues(e, 'Map Marker\FULL');
     ChildObj['cell_form_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
-    ChildObj['x'] := Double(GetElementNativeValues(e, 'DATA\Position\X'));
-    ChildObj['y'] := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
-    ChildObj['z'] := Double(GetElementNativeValues(e, 'DATA\Position\Z'));
+    ChildObj.F['x'] := GetElementNativeValues(e, 'DATA\Position\X');
+    ChildObj.F['y'] := GetElementNativeValues(e, 'DATA\Position\Y');
+    ChildObj.F['z'] := GetElementNativeValues(e, 'DATA\Position\Z');
     area := LinksTo(ElementByName(cell, 'Worldspace'));
     if Assigned(area) then
       ChildObj['area'] := EditorID(area);
@@ -118,9 +118,9 @@ begin
 
         if Signature(r) = 'NPC_' then ChildObj['quests'] := quests;
 
-        x := Double(GetElementNativeValues(e, 'DATA\Position\X'));
-        y := Double(GetElementNativeValues(e, 'DATA\Position\Y'));
-        z := Double(GetElementNativeValues(e, 'DATA\Position\Z'));
+        x := GetElementNativeValues(e, 'DATA\Position\X');
+        y := GetElementNativeValues(e, 'DATA\Position\Y');
+        z := GetElementNativeValues(e, 'DATA\Position\Z');
 
         ChildObj['x'] := x;
         ChildObj['y'] := y;
@@ -156,13 +156,13 @@ begin
               //ChildObj['door_id'] := IntToHex(GetLoadOrderFormID(a), 8);
               ChildObj['area'] := EditorID(area);
 
-              ax := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\X'));
-              ay := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Y'));
-              az := Double(GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Z'));
+              ax := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\X');
+              ay := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Y');
+              az := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Z');
 
-              bx := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\X'));
-              by := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Y'));
-              bz := Double(GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Z'));
+              bx := GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\X');
+              by := GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Y');
+              bz := GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Z');
 
               x := x + ax - bx;
               y := y + ay - by;
