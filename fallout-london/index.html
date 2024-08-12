@@ -245,11 +245,13 @@ function createMap() {
   });
 }
 
-function markerSymbol2(type, _bg, _fg) {
+function markerSymbol2(o) {
   let d = 48;
   let bg = 'grey';
   let fg = 'white';
   let icon = 'circle-question';
+
+  let type = o.type;
 
   if (t = types[type]) {
     if (t.fa) icon = t.fa;
@@ -257,14 +259,14 @@ function markerSymbol2(type, _bg, _fg) {
     if (t.fg) fg = t.fg;
   }
 
-  bg = _bg || bg;
-  fg = _fg || fg;
+  if (o.name=='Churchill') icon = 'dog';
 
   let [w1,h1,[s1],c1,p1] = FontAwesome.icon({ iconName: 'location-pin' }).icon;
 
   if (!(fa = FontAwesome.icon({ iconName: icon }))) {
     fa = FontAwesome.icon({ icon: 'circle-question' });
   }
+
 
   let [w2,h2,[s2],c2,p2] = fa.icon;
 
@@ -453,9 +455,6 @@ function markItems() {
 
         let type = hideContent ? o.type : (spawns || o.type); // show content if allowed
 
-        // update markers to show/hide chest contents (chests only, to avoid updating empty symbols)
-        o.type=='Chest_C' && marker.updateSymbol(markerSymbol(type, getItemColor(o, type)));
-
         marker.updateSymbol({markerOpacity: found ? 0.5 : 1 });
 
         total[o.type] = (total[o.type] || 0) + 1;
@@ -628,7 +627,7 @@ function loadData() {
     let marker = new maptalks.Marker(c, {
       properties: o,
       content: o.name,
-      symbol: markerSymbol(o.type),
+      symbol: markerSymbol(o),
     }).addTo(markerLayer);
 
     const tooltip = new maptalks.ui.ToolTip(o.name + ' (' + humanReadable(o.type) + ')', {
