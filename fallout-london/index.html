@@ -259,7 +259,8 @@ function markerSymbol2(o) {
     if (t.fg) fg = t.fg;
   }
 
-  if (o.name=='Churchill') icon = 'dog';
+  if ((o.editor_id||'').endsWith('CamelotPendragon')) icon = 'robot';
+  if ((o.editor_id||'').endsWith('DogCompanion')) icon = 'dog';
 
   let [w1,h1,[s1],c1,p1] = FontAwesome.icon({ iconName: 'location-pin' }).icon;
 
