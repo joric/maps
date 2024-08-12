@@ -546,7 +546,7 @@ input::selection {
 
 #search-count {
   padding: 6px;
-  opacity: .8;
+  opacity: .6;
 }
 
 @media (max-width: 1200px) {
