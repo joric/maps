@@ -125,9 +125,12 @@ begin
         if quests > 0 then begin
           for q := 0 to Pred(ReferencedByCount(r)) do begin
             ref := ReferencedByIndex(r, q);
-            if Signature(ref)='QUST' then
-              if GetElementEditValues(ref, 'FULL') <> '' then
-                ChildObj.O['quests'].S[IntToHex(GetLoadOrderFormID(ref), 8)] := GetElementEditValues(ref, 'FULL');
+            if Signature(ref)='QUST' then begin
+                id := IntToHex(GetLoadOrderFormID(ref), 8);
+                ChildObj.O['quests'].S[id] := EditorID(ref);
+                if GetElementEditValues(ref, 'FULL') <> '' then
+                  ChildObj.O['quests'].S[id] := GetElementEditValues(ref, 'FULL')
+            end;
           end;
         end;
 

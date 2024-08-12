@@ -9716,6 +9716,9 @@
 			"instance_id": "072DF6CD",
 			"type": "NPC_",
 			"name": "Flora",
+			"quests": {
+				"072DEFBE": "Folon_DialogueSPSFlora"
+			},
 			"x": 3870.47168,
 			"y": 2494.742676,
 			"z": 184,
@@ -9825,7 +9828,8 @@
 				"072AEAA2": "The Sneering Imperialist",
 				"072AEAA3": "A View To Kill",
 				"0730159C": "Tenpenny Mission 01 Post Quest",
-				"07317440": "Battle of Westminster Master Quest"
+				"07317440": "Battle of Westminster Master Quest",
+				"0732B700": "FOLON_SQWestminster108Post"
 			},
 			"x": 4064.045654,
 			"y": -36333.265625,
@@ -9860,6 +9864,7 @@
 				"072AE49E": "Welcome to the Vagabonds",
 				"072AE49F": "Meeting in Millwall",
 				"072B457F": "Revenge, Thy Name Is Fury",
+				"072B4581": "FOLON_PostGW201Conv",
 				"072B6593": "Black",
 				"072B6594": "Breaking the Cycle",
 				"072BDCC6": "Star-Cross'd Lovers",
@@ -9990,6 +9995,9 @@
 			"instance_id": "072DE98E",
 			"type": "NPC_",
 			"name": "Charlotte Green",
+			"quests": {
+				"072DF799": "Folon_GMUniqueTraders"
+			},
 			"x": -82246.902588,
 			"y": 51673.454407,
 			"z": 5786.373368,
@@ -10919,6 +10927,7 @@
 			"quests": {
 				"071C76B4": "Swan & Mitre",
 				"072AE49F": "Meeting in Millwall",
+				"072AE4A0": "FOLON_ConvPostGW102",
 				"072B6593": "Black",
 				"072B6596": "Shoot the Messengers",
 				"072BDCC6": "Star-Cross'd Lovers",
@@ -10987,6 +10996,7 @@
 			"name": "Rat Piss",
 			"quests": {
 				"072ACE00": "It's Coming Home",
+				"072DC2E2": "Folon_PostFqMiller102Conv",
 				"0730FCF0": "5th Column Kick Out Quest"
 			},
 			"x": 1084.81311,
@@ -11101,6 +11111,7 @@
 			"quests": {
 				"072AE49E": "Welcome to the Vagabonds",
 				"072AE49F": "Meeting in Millwall",
+				"072AE4A0": "FOLON_ConvPostGW102",
 				"072B6597": "Syndication"
 			},
 			"x": 37531.244384,
@@ -11323,7 +11334,8 @@
 			"type": "NPC_",
 			"name": "Octavia Holland",
 			"quests": {
-				"072ACDFF": "It Must Be Love"
+				"072ACDFF": "It Must Be Love",
+				"072DF799": "Folon_GMUniqueTraders"
 			},
 			"x": -83768,
 			"y": 45936,
@@ -12286,6 +12298,9 @@
 			"instance_id": "072F2532",
 			"type": "NPC_",
 			"name": "Factory Guard",
+			"quests": {
+				"072728BB": "FOLON_DogmeatQuest"
+			},
 			"x": 14733.158203,
 			"y": -8109.234863,
 			"z": 5275.716797,
@@ -12563,7 +12578,8 @@
 			"type": "NPC_",
 			"name": "Mr. Emil",
 			"quests": {
-				"072AEAA2": "The Sneering Imperialist"
+				"072AEAA2": "The Sneering Imperialist",
+				"0732B700": "FOLON_SQWestminster108Post"
 			},
 			"x": -76561.125,
 			"y": 36467.398438,
@@ -13141,7 +13157,8 @@
 			"type": "NPC_",
 			"name": "Corporal Nux",
 			"quests": {
-				"072AEA9D": "One Fell Swoop"
+				"072AEA9D": "One Fell Swoop",
+				"072F9843": "FOLON_SQLambeth102Post"
 			},
 			"x": 723.460327000001,
 			"y": -2803.939148,
@@ -13556,7 +13573,8 @@
 			"type": "NPC_",
 			"name": "High Priest Gordo",
 			"quests": {
-				"0729C3F4": "Gordon's Alive"
+				"0729C3F4": "Gordon's Alive",
+				"072FC590": "Folon_SQBromley101_Post"
 			},
 			"x": 44126.507812,
 			"y": -73850.75,
@@ -14532,6 +14550,7 @@
 			"type": "NPC_",
 			"name": "Dog",
 			"quests": {
+				"072728BB": "FOLON_DogmeatQuest",
 				"072A07D3": "Angel: Into the Shadows"
 			},
 			"x": 14300.098633,
@@ -14619,6 +14638,9 @@
 			"instance_id": "07296889",
 			"type": "NPC_",
 			"name": "Mr Pulford",
+			"quests": {
+				"07296562": "FOLON_Thameshaven_BarVendor"
+			},
 			"x": -9415.867188,
 			"y": 8819.985352,
 			"z": 830.362793,
@@ -14632,6 +14654,9 @@
 			"instance_id": "07296888",
 			"type": "NPC_",
 			"name": "Gretta Lino",
+			"quests": {
+				"07296563": "FOLON_Thameshaven_FoodVendor"
+			},
 			"x": -9432.412109,
 			"y": 9178.875977,
 			"z": 830.362793,
@@ -14645,6 +14670,9 @@
 			"instance_id": "07296887",
 			"type": "NPC_",
 			"name": "Ahab Herringway",
+			"quests": {
+				"07296561": "FOLON_Thameshaven_WeaponVendor"
+			},
 			"x": -10285.59082,
 			"y": 10965.838867,
 			"z": 835.060974,
@@ -14720,6 +14748,9 @@
 			"instance_id": "0729BBAE",
 			"type": "NPC_",
 			"name": "Leana Searle",
+			"quests": {
+				"0729B9D4": "FOLON_Thameshaven_InfirmaryVendor"
+			},
 			"x": -10914.771484,
 			"y": 10363.433594,
 			"z": 831.152771,
@@ -14936,7 +14967,8 @@
 			"type": "NPC_",
 			"name": "Jean Dalmat",
 			"quests": {
-				"072BCEF5": "L'appel du Vide"
+				"072BCEF5": "L'appel du Vide",
+				"0730124F": "FOLON_SQNewham102_Post"
 			},
 			"x": 1816,
 			"y": 4312,
@@ -14950,7 +14982,8 @@
 			"type": "NPC_",
 			"name": "Eugene Dongle",
 			"quests": {
-				"072BCEF5": "L'appel du Vide"
+				"072BCEF5": "L'appel du Vide",
+				"0730124F": "FOLON_SQNewham102_Post"
 			},
 			"x": 1666.90564,
 			"y": 4314.422852,
@@ -14978,7 +15011,8 @@
 			"type": "NPC_",
 			"name": "Segolene Moreau",
 			"quests": {
-				"072BCEF5": "L'appel du Vide"
+				"072BCEF5": "L'appel du Vide",
+				"0730124F": "FOLON_SQNewham102_Post"
 			},
 			"x": -14305.449219,
 			"y": -25814.921875,
@@ -16488,7 +16522,8 @@
 			"name": "Angel Trooper",
 			"quests": {
 				"07283CDA": "All To Pot",
-				"072A5B2A": "War Games"
+				"072A5B2A": "War Games",
+				"072C0B87": "FOLON_ConvPostMQ205"
 			},
 			"x": 3410.657227,
 			"y": -35596.03186,
@@ -16917,7 +16952,9 @@
 			"quests": {
 				"072AEAA2": "The Sneering Imperialist",
 				"072AEAA3": "A View To Kill",
-				"0730159C": "Tenpenny Mission 01 Post Quest"
+				"0730159C": "Tenpenny Mission 01 Post Quest",
+				"0732B6FD": "FOLON_SQWestminster108_MessengerEncounter",
+				"0732B6FF": "FOLON_SQWestminster107_MessengerEncounter"
 			},
 			"x": 4338.448242,
 			"y": -36748.222656,
@@ -16978,6 +17015,9 @@
 			"instance_id": "0732B612",
 			"type": "NPC_",
 			"name": "Alden Shawcross",
+			"quests": {
+				"072DF799": "Folon_GMUniqueTraders"
+			},
 			"x": 2196.300537,
 			"y": -5206.046875,
 			"z": -387.888672,
@@ -17432,7 +17472,8 @@
 			"type": "NPC_",
 			"name": "Fowler",
 			"quests": {
-				"0730159C": "Tenpenny Mission 01 Post Quest"
+				"0730159C": "Tenpenny Mission 01 Post Quest",
+				"0732B6FE": "FOLON_SQWestminster107_FowlerEncounter"
 			},
 			"x": -65091.226562,
 			"y": 17276.736328,
@@ -17446,7 +17487,8 @@
 			"type": "NPC_",
 			"name": "Eye Resident",
 			"quests": {
-				"0730159C": "Tenpenny Mission 01 Post Quest"
+				"0730159C": "Tenpenny Mission 01 Post Quest",
+				"0732B6FE": "FOLON_SQWestminster107_FowlerEncounter"
 			},
 			"x": -65143.71875,
 			"y": 17401.808594,
@@ -17460,7 +17502,8 @@
 			"type": "NPC_",
 			"name": "Eye Resident",
 			"quests": {
-				"0730159C": "Tenpenny Mission 01 Post Quest"
+				"0730159C": "Tenpenny Mission 01 Post Quest",
+				"0732B6FE": "FOLON_SQWestminster107_FowlerEncounter"
 			},
 			"x": -64971.324219,
 			"y": 17307.099609,
