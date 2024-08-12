@@ -136,14 +136,14 @@ let firstStart = false;
 let maps = {
   'LondonWorld' : { name: 'London', scale: 1, offset: {x:0, y:0},
     regions: {
-      'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
-      'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
-      'StPaulsWorld': { scale: 1, offset: {x:3000, y:0} },
       'WestminsterWorld' : { scale: 0.6, offset: {x:-104300, y:27900}, rotation: 0.57 },
       'CamdenWorld': { scale: 1, offset: {x:-79000, y:74000}, rotation: 0 },
       'IslingtonWorld': { scale: 0.95, offset: {x:-26600, y:66500}, rotation: 0.57 },
       'HackneyWorld': { scale: 0.95, offset: {x:19100, y:44000}, rotation: 0.78 },
       'BankofEnglandWorld': { scale: 1, offset: {x:-32000, y:35500} },
+      'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
+      'StPaulsWorld': { scale: 1, offset: {x:3000, y:0} },
+      'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
     },
   },
   'WestminsterWorld' : { name: 'Westminster', scale: 1.9, offset: {x:7000, y:22000} },
@@ -151,6 +151,7 @@ let maps = {
   'HackneyWorld' : { name: 'Hackney', scale: 3.77, offset: {x:-77500, y:-63000} },
   'CamdenWorld': { name: 'Camden', scale: 3.77, offset: {x:15000, y:-126000} },
   'BankofEnglandWorld': { name:'Bank of England', scale: 3.77, offset: {x:6000, y:4800} },
+  'CoventGardenWorldSpace': { name:'Covent Garden', scale: 3.77, offset: {x:6000, y:4800}, hidden: true },
 };
 
 let factions = {
@@ -572,7 +573,7 @@ function popupOnClick(e) {
     popup.querySelector('#popup-title').innerText = o.name;
     popup.querySelector('#popup-subtitle').innerText = (faction = getFaction(o)) ? faction.name : humanReadable(o.type);
 
-    let location =  maps[o.area].name;
+    let location =  (maps[o.area] && maps[o.area].name) || o.area;
 
     if (o.cell_name) location += ' (' + o.cell_name + ')';
 
@@ -688,6 +689,7 @@ function loadData() {
   let div = document.querySelector('.map-switcher-panel');
   div.innerHTML = '';
   for (const [id,t] of Object.entries(maps)) {
+    if (t.hidden) continue;
     let a = document.createElement('a');
     a.innerText = markers.worldspaces[id].name;
     a.className = 'map-link';
