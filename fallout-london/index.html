@@ -162,13 +162,13 @@ let factions = {
   'Camelot': {npc:'NPC_Camelot', color:'darkorange'},
   'Roundels': {npc:'NPC_Roundel', color:'slategrey'},
   'Angels': {npc:'NPC_Angel', color:'red'},
-  'Tommies': {npc:'NPC_Tommy', alt:'Tommy', color:'royalblue'},
+  'Tommies': {npc:'Tommy', color:'royalblue'},
   'Gentry': {npc:'Gentry', color:'lightgrey'},
 }
 
 function getFaction(o) {
   for (const [name, value] of Object.entries(factions)) {
-    if (types[o.type].name==name || (o.type=='NPC_' && (o.editor_id && (o.editor_id.includes(value.npc)||o.editor_id.includes(value.alt))))) {
+    if (types[o.type].name==name || (o.type=='NPC_' && (o.editor_id && o.editor_id.includes(value.npc)))) {
       return {name: name, data: value};
     }
   }
@@ -662,7 +662,8 @@ function loadData() {
       symbol: markerSymbol(o),
     }).addTo(markerLayer);
 
-    const tooltip = new maptalks.ui.ToolTip(o.name + ' (' + humanReadable(o.type) + ')', {
+    const tooltip = new maptalks.ui.ToolTip(
+        o.name + ' (' + ((faction = getFaction(o)) ? faction.name : humanReadable(o.type)) + ')', {
         showTimeout: 50
     }).addTo(marker);
 
