@@ -72,7 +72,7 @@
   "Custom 79": {"fa": "dog", "bg": "forestgreen", "name": "Isle of Dogs", "group": "factions"},
   "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"},
 
-  "BOOK": {"fa": "envelope", "bg": "CornflowerBlue", "name":"Message", "group": "misc"},
+  "BOOK": {"fa": "envelope", "bg": "tan", "name":"Message", "group": "misc"},
   "NPC_": {"fa": "person", "bg": "#555", "name": "NPC", "group": "misc"},
 
   "WEAP": {"fa": "gun", "bg": "tomato", "name":"Weapon", "group": "misc"},
