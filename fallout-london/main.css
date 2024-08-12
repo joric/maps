@@ -497,6 +497,10 @@ hr { opacity: .6;}
   transform: translateY(40px)
 }
 
+#search-form {
+  padding-top: 2px;
+}
+
 #search-result {
   width: 100%;
   margin: 0;
