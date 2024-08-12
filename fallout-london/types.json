@@ -74,7 +74,7 @@
 
   "BOOK": {"fa": "envelope", "bg": "tan", "name":"Message", "group": "misc"},
   "NOTE": {"fa": "compact-disc", "bg": "peru", "name": "Holotape", "group": "misc"},
-  "NPC_": {"fa": "person", "bg": "#555", "name": "NPC Quest", "group": "misc"},
+  "NPC_": {"fa": "person", "bg": "#555", "name": "NPC Quests", "group": "misc"},
 
   "WEAP": {"fa": "gun", "bg": "tomato", "name":"Weapon", "group": "misc"},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "name": "Ammo", "group": "misc"},
