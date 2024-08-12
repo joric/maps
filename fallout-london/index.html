@@ -259,7 +259,6 @@ function markerSymbol2(o) {
     if (t.fg) fg = t.fg;
   }
 
-  if ((o.editor_id||'').endsWith('CamelotPendragon')) icon = 'robot';
   if ((o.editor_id||'').endsWith('DogCompanion')) icon = 'dog';
 
   let [w1,h1,[s1],c1,p1] = FontAwesome.icon({ iconName: 'location-pin' }).icon;
@@ -759,30 +758,24 @@ function postprocessMarkers(data){
     if (o.type=='NPC_' && o.editor_id && (o.editor_id.includes('Companion') || o.editor_id=='Folon_NPC_CamelotPendragon')) {
       o.type = '_Companion';
       if (o.name == 'Dog') o.name = 'Churchill';
+      if (o.name == 'Strange Robot') o.name = 'Pendragon';
     }
 
-    if (o.type=='BOOK' && o.editor_id.includes('Card')) {
-      o.type = '_Card';
-    }
-
-    if (o.type=='BOOK' && o.editor_id.includes('Newspaper')) {
-      o.type = '_Newspaper';
-    }
-
-    if (o.type=='BOOK' && (o.editor_id.includes('Note') || o.name.includes('Note'))) {
-      o.type = '_Note';
+    if (o.type=='BOOK') {
+      if (o.editor_id.includes('Card')) o.type = '_Card';
+      if (o.editor_id.includes('Newspaper')) o.type = '_Newspaper';
+      if (o.editor_id.includes('Note') || o.name.includes('Note')) o.type = '_Note';
+      if (o.editor_id.includes('PerkMag')) {
+        o.type = '_Magazine';
+        if (o.name == "005 Comic") o.name = '005';
+        if (o.name == "D.I.Y.") o.name = 'DIY: The Householder\'s Handbook';
+        let issue = o.editor_id.match(/^.*(\d\d)$/);
+        if (issue) o.name = o.name +' '+ parseInt(issue[1]);
+      }
     }
 
     if (o.type=='MISC' && o.editor_id.includes('VinylRecord')) {
       o.type = '_Vinyl';
-    }
-
-    if (o.type=='BOOK' && o.editor_id.includes('PerkMag')) {
-      o.type = '_Magazine';
-      if (o.name == "005 Comic") o.name = '005';
-      if (o.name == "D.I.Y.") o.name = 'DIY: The Householder\'s Handbook';
-      let issue = o.editor_id.match(/^.*(\d\d)$/);
-      if (issue) o.name = o.name +' '+ parseInt(issue[1]);
     }
 
     if (o.type=='Settlement') {
