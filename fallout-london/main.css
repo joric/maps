@@ -513,6 +513,10 @@ a:hover { text-decoration: underline; }
   position: relative;
   padding: 3px 6px;
   cursor: pointer;
+  
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .search-item:hover {
