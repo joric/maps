@@ -61,10 +61,11 @@ begin
 
   count := 0;
   items := TStringList.Create;
-  items.DelimitedText := 'BOOK NPC_ MISC ALCH WEAP AMMO NOTE FLOR';
+  items.DelimitedText := 'NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR';
 
   for k := 0 to Pred(items.Count) do begin
     g := GroupBySignature(FileByIndex(8), items[k]);
+    AddMessage('Collecting ' + items[k] +' ...');
     for j := 0 to Pred(ElementCount(g)) do begin
       r := ElementByIndex(g, j);
       for i := 0 to Pred(ReferencedByCount(r)) do
@@ -105,7 +106,10 @@ begin
           quests := 0;
           for q := 0 to Pred(ReferencedByCount(r)) do begin
             ref := ReferencedByIndex(r, q);
-            if Signature(ref)='QUST' then Inc(quests);
+            if Signature(ref)='QUST' then begin
+              Inc(quests);
+              break;
+            end;
           end;
           if quests = 0 then continue;
         end else continue
@@ -118,7 +122,14 @@ begin
         ChildObj['type'] := Signature(r);
         ChildObj['name'] := GetElementEditValues(r, 'FULL');
 
-        if Signature(r) = 'NPC_' then ChildObj['quests'] := quests;
+        if quests > 0 then begin
+          for q := 0 to Pred(ReferencedByCount(r)) do begin
+            ref := ReferencedByIndex(r, q);
+            if Signature(ref)='QUST' then
+              if GetElementEditValues(ref, 'FULL') <> '' then
+                ChildObj.O['quests'].S[IntToHex(GetLoadOrderFormID(ref), 8)] := GetElementEditValues(ref, 'FULL');
+          end;
+        end;
 
         x := GetElementNativeValues(e, 'DATA\Position\X');
         y := GetElementNativeValues(e, 'DATA\Position\Y');
