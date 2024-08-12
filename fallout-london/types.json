@@ -68,7 +68,7 @@
   "Custom 73": {"fa": "cable-car", "name": "Monorail","group": "travel" },
   "Custom 74": {"fa": "dharmachakra", "name": "Ferris Wheel", "group":"places of interest" },
   "Custom 75": {"fa": "tree", "name": "Tree House", "group": "places of interest" },
-  "Custom 77": {"fa": "location-crosshairs", "name": "Location", "group":"places of interest" },
+  "Custom 77": {"fa": "location-crosshairs", "name": "Location", "group":"travel" },
   "Custom 79": {"fa": "dog", "bg": "forestgreen", "name": "Isle of Dogs", "group": "factions"},
   "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "name": "Vagabonds", "group": "factions"},
 
@@ -85,6 +85,6 @@
 
   "_Vinyl": {"fa": "headphones", "bg": "steelblue", "name":"Vinyl Record", "group": "misc"},
   "_Magazine": {"fa": "book", "bg": "steelblue", "name": "Magazine", "group": "misc"},
-  "_Card": {"fa": "id-card", "bg": "sandybrown", "name": "Card", "group": "misc"},
+  "_Card": {"fa": "id-card", "bg": "sandybrown", "name": "Card", "group": "places of interest"},
   "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion", "group": "factions"}
 }
