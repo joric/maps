@@ -59,7 +59,7 @@
   "Radioactive Area": {"fa": "radiation", "group": "places of interest"},
   "Sentinel": {"fa": "virus", "name": "The Dome", "group":"places of interest"},
   "Salem": {"fa": "place-of-worship", "name": "Temple", "group": "facilities"},
-  "Prydwen": {"fa": "gun", "bg": "forestgreen", "name" : "Pistols", "group":"factions"},
+  "Prydwen": {"fa": "hand-fist", "bg": "forestgreen", "name" : "Pistols", "group":"factions"},
   "Custom 66": {"fa": "anchor",  "name": "Naval College", "group":"facilities"},
   "Custom 67": {"fa": "bullseye", "bg": "forestgreen", "name": "Tommies", "group": "factions"},
   "Custom 69": {"fa": "wine-glass",  "name": "Pub", "group": "facilities"},
