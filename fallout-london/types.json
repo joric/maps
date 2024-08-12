@@ -61,7 +61,7 @@
   "Salem": {"fa": "place-of-worship", "name": "Temple", "group": "facilities"},
   "Prydwen": {"fa": "hand-fist", "bg": "forestgreen", "name" : "Pistols", "group":"factions"},
   "Custom 66": {"fa": "anchor",  "name": "Naval College", "group":"facilities"},
-  "Custom 67": {"fa": "bullseye", "bg": "forestgreen", "name": "Tommies", "group": "factions"},
+  "Custom 67": {"fa": "bullseye", "bg": "forestgreen", "name": "Roundels", "group": "factions"},
   "Custom 69": {"fa": "wine-glass",  "name": "Pub", "group": "facilities"},
   "Custom 70": {"fa": "tents", "bg": "darkcyan", "name": "Biggin Hill", "group":"settlements" },
   "Custom 71": {"fa": "bread-slice", "name": "Restaurant", "group":"facilities"},

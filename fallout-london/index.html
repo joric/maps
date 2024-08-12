@@ -152,6 +152,27 @@ let maps = {
   'BankofEnglandWorld': { scale: 3.77, offset: {x:6000, y:4800} },
 };
 
+let factions = {
+  'Pistols': {npc:'Pistol',color:'darkslategrey'},
+  'Isle of Dogs': {npc:'IODS', color:'forestgreen'},
+  '5th Column': {npc:'5thColumn', color:'darkorchid'},
+  'Vagabonds': {npc:'Vagabonds', color:'saddlebrown'},
+  'Camelot': {npc:'Camelot', color:'darkorange'},
+  'Roundels': {npc:'NPC_Roundel', color:'slategrey'},
+  'Angel': {npc:'NPC_Angel', color:'red'},
+  'Tommies': {npc:'NPC_Tommy', color:'royalblue'},
+  'Gentry': {npc:'Gentry', color:'lightgrey'},
+}
+
+function getFaction(o) {
+  for (const [name, value] of Object.entries(factions)) {
+    if (types[o.type].name==name || (o.type=='NPC_' && (o.editor_id && o.editor_id.includes(value.npc)))) {
+      return {name: name, data: value};
+    }
+  }
+  return null
+}
+
 function createMap() {
   let cw = ch = 4096;
   let w = h = 64;
@@ -257,7 +278,12 @@ function markerSymbol2(o) {
     if (t.fg) fg = t.fg;
   }
 
+  // churchill
   if ((o.editor_id||'').endsWith('DogCompanion')) icon = 'dog';
+
+  if (faction = getFaction(o)) {
+    bg = faction.data.color;
+  }
 
   let [w1,h1,[s1],c1,p1] = FontAwesome.icon({ iconName: 'location-pin' }).icon;
 
@@ -543,7 +569,13 @@ function popupOnClick(e) {
     };
 
     popup.querySelector('#popup-title').innerHTML = '<b>' + o.name + '</b>';
-    popup.querySelector('#popup-subtitle').innerHTML = humanReadable(o.type);
+
+    let type = humanReadable(o.type);
+    if (faction = getFaction(o)) {
+      type = faction.name;
+    }
+
+    popup.querySelector('#popup-subtitle').innerHTML = type;
 
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
     popup.querySelector('#popup-found').checked = settings.markedItems[markerId]==true;
