@@ -174,9 +174,12 @@ a:hover { text-decoration: underline; }
 
 #categories {
   padding: 0;
+  margin-top: 3px;
   display: flex;
   flex-wrap: wrap;
 }
+
+hr { opacity: .6;}
 
 #categories .category-item:hover {
   opacity: 1;
