@@ -983,6 +983,8 @@ window.onload = function(event) {
     let result = fuzzySearch(text, 100, 0.25);
 
     for (o of result) {
+      o.marker.show();
+
       let id = o.instance_id || o.form_id;
       let name = o.name;
       let type = o.type;
