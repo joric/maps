@@ -553,6 +553,7 @@ function fuzzySearch(s, limit, threshold) {
     threshold: threshold,
     ignoreLocation: true,
     useExtendedSearch: true, // search by words
+    findAllMatches: false, // stop on perfect match
   }
 
   let fuse = new Fuse(data, options);
