@@ -18,11 +18,13 @@
 <link rel="stylesheet" href="https://unpkg.com/maptalks/dist/maptalks.css">
 <script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 -->
 
 <link href="maptalks.css" rel="stylesheet">
 <script src="maptalks-custom.min.js#issue-2354"></script>
 <script src="all.min.js"></script>
+<script src="fuse.js"></script>
 
 <style>
 html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
@@ -531,45 +533,27 @@ function copyToClipboard(text) {
 
 function getMarkerURL(markerId) {
   let base = window.location.href.replace(/#.*$/,'');
-  //let vars = {mapId:mapId, markerId: markerId};
-  //return base +'#' + Object.entries(vars).map(e=>e[0]+'='+encodeURIComponent(e[1])).join('&');
   return base + '#' + encodeURIComponent(markerId);
 }
 
-function fuzzySearchMarker(s) {
+function fuzzySearch(s, limit, threshold) {
+  let data = [];
   let collection = map.getLayer('markers')._geoList;
-
   for (marker of collection) {
-    let o = marker.properties;
-    if (s == o.name || s == o.instance_id || s == o.form_id) {
-      return marker;
-    }
+    data.push({...marker.properties, ...{custom_type: itemType(marker.properties), marker: marker}});
   }
 
-  s = s.toLowerCase();
-
-  for (marker of collection) {
-    let o = marker.properties;
-    let context = ([o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|')).toLowerCase();
-    if (context.includes(s) || context.includes(s.replace(' ','_'))) {
-      return marker;
-    }
-  }
-
-  let words = s.split(/[\s_]+/);
-  for (marker of collection) {
-    let o = marker.properties;
-    let context = ([o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|')).toLowerCase();
-    for (word of words) {
-      if (context.includes(word)) {
-        return marker;
-      }
-    }
-  }
+  return new Fuse(data, {
+    keys: ['name', 'type', 'custom_type', 'form_id', 'instance_id'],
+    threshold: threshold || 0.5,
+    ignoreLocation: true,
+    limit: limit || 100,
+  }).search(s).splice(0, limit);
 }
 
 function gotoMarkerByName(name) {
-  if (marker = fuzzySearchMarker(name)) {
+  if (result = fuzzySearch(name, 1)) {
+    let marker = result[0].marker;
     map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
     marker.show();
     popupOnClick({target: marker});
@@ -988,30 +972,16 @@ window.onload = function(event) {
     searchInput.select();
     settings.searchText = text;
 
-    let div = document.querySelector('#search-items');
-    div.innerHTML = ''
-
-    let count = 0;
-
     for (marker of map.getLayer(layerName)._geoList) {
       marker.hide();
     }
 
-    for (marker of map.getLayer(layerName)._geoList) {
-      let o = marker.properties;
+    let div = document.querySelector('#search-items');
+    div.innerHTML = ''
 
-      if (!filterMarker(o, text)) {
-        continue;
-      }
+    let result = fuzzySearch(text, 100, 0.25);
 
-      if (count == 100) {
-        break;
-      }
-
-      marker.show();
-
-      count += 1;
-
+    for (o of result) {
       let id = o.instance_id || o.form_id;
       let name = o.name;
       let type = o.type;
@@ -1040,7 +1010,8 @@ window.onload = function(event) {
       div.appendChild(li);
     }
 
-    document.querySelector('#search-count').innerHTML = count + ' search result' + (count!=1 ? 's':'');
+    let label = result.length + ' search result' + (result.length!=1 ? 's':'');
+    document.querySelector('#search-count').textContent = label;
   }
 
   function closeSearch() {
