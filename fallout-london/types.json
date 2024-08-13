@@ -86,5 +86,6 @@
   "_Vinyl": {"fa": "record-vinyl", "bg": "darkslategrey", "name":"Vinyl Record", "group": "misc"},
   "_Magazine": {"fa": "book", "bg": "steelblue", "name": "Magazine", "group": "misc"},
   "_Card": {"fa": "id-card", "bg": "sandybrown", "name": "Card", "group": "misc"},
+  "_Coaster": {"fa": "circle-dot", "bg": "tan", "name": "Coaster", "group": "misc"},
   "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion", "group": "misc"}
 }

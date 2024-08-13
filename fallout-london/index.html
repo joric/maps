@@ -813,6 +813,7 @@ function postprocessMarkers(data){
         let issue = o.editor_id.match(/^.*(\d\d)$/);
         if (issue) o.name = o.name +' '+ parseInt(issue[1]);
       }
+      if (o.name.includes(' Coaster')) o.type = '_Coaster';
     }
 
     if (o.type=='MISC' && o.editor_id.includes('VinylRecord')) {
