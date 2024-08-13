@@ -536,45 +536,41 @@ function getMarkerURL(markerId) {
   return base + '#' + encodeURIComponent(markerId);
 }
 
-function gotoMarkerByName(name) {
-  for (marker of map.getLayer('markers')._geoList) {
+function fuzzySearchMarker(s) {
+  let collection = map.getLayer('markers')._geoList;
+  for (marker of collection) {
     let o = marker.properties;
-    if (name == o.name || name == o.instance_id || name == o.form_id) {
-      map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
-      marker.show();
-      popupOnClick({target: marker});
-      marker.openInfoWindow();
-      return;
+    if (s == o.name || s == o.instance_id || s == o.form_id) {
+      return marker;
     }
   }
 
-  // no results, try a substring search
-  for (marker of map.getLayer('markers')._geoList) {
+  for (marker of collection) {
     let o = marker.properties;
     let context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
-    if ( context.includes(name) || context.includes(name.replace(' ','_')) ) {
-      map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
-      marker.show();
-      popupOnClick({target: marker});
-      marker.openInfoWindow();
-      return;
+    if (context.includes(s) || context.includes(s.replace(' ','_'))) {
+      return marker;
     }
   }
 
-  // no results, try searching by words
-  let words = name.split(' ').concat(name.split('_'));
-  for (marker of map.getLayer('markers')._geoList) {
+  let words = s.split(' ').concat(s.split('_'));
+  for (marker of collection) {
     let o = marker.properties;
     let context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
-    for (name of words) {
-      if ( context.includes(name) ) {
-        map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
-        marker.show();
-        popupOnClick({target: marker});
-        marker.openInfoWindow();
-        return;
+    for (word of words) {
+      if (context.includes(word)) {
+        return marker;
       }
     }
+  }
+}
+
+function gotoMarkerByName(name) {
+  if (marker = fuzzySearchMarker(name)) {
+    map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
+    marker.show();
+    popupOnClick({target: marker});
+    marker.openInfoWindow();
   }
 }
 
