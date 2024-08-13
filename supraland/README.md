@@ -1,3 +1,3 @@
 ## Supraland
 
-Originally https://joric.github.io/supraland
+Originally https://joric.github.io/supraland/3d
