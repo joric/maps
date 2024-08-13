@@ -786,6 +786,8 @@ function loadData() {
     gotoMarkerByName(markerName);
   } else {
     if (settings.searchText != '') {
+      let searchInput = document.querySelector('#search-input');
+      searchInput.value = settings.searchText;
       openSearch(settings.searchText);
     }
   }
@@ -858,6 +860,84 @@ function loadMap(id) {
   }).catch(e=>{console.log(e);})
 
   return false;
+}
+
+function filterMarker(o, text) {
+  if (text=='') return true;
+  if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) return false;
+  if (!o.name || !o.type || !o.form_id) return false;
+  text = text.toLowerCase();
+  context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
+  if (context.toLowerCase().includes(text) || (text.length>=4 && o.form_id && o.form_id.toLowerCase().includes(text)) ) {
+    return true;
+  }
+  return false;
+}
+
+function clickSearchItem(e) {
+  gotoMarker(e.target.alt);
+}
+
+function openSearch(text) {
+  setClass(document.querySelector('#search-result'), false, 'collapsed');
+  setClass(document.querySelector('#search-close'), false, 'collapsed');
+  setClass(document.querySelector('#categories-wrapper'), true, 'collapsed');
+  document.querySelector('#search-input').select();
+
+  for (marker of map.getLayer(layerName)._geoList) {
+    marker.hide();
+  }
+
+  let div = document.querySelector('#search-items');
+  div.innerHTML = ''
+
+  let result = fuzzySearch(text, 100, 0.25);
+
+  for (o of result) {
+    o.marker.show();
+
+    let id = o.instance_id || o.form_id;
+    let name = o.name;
+    let type = o.type;
+    let title = itemDescription(o) + ' in ' + itemLocation(o);
+
+    let li = document.createElement('div');
+    li.className = 'item';
+    li.classList.add('search-item');
+    li.title = title + ' [' + id + ']';
+    li.alt = id;
+    li.onclick = clickSearchItem;
+
+    let c0 = document.createElement('span');
+    c0.className = 'icon';
+
+    let fa = (types[type] && types[type].fa) || 'circle-question';
+    c0.classList.add('fa');
+    c0.classList.add('fa-'+fa);
+
+    let c1 = document.createElement('span');
+    c1.innerHTML = title;
+    c1.className = 'title';
+
+    li.appendChild(c0);
+    li.appendChild(c1);
+    div.appendChild(li);
+  }
+
+  let label = result.length + ' search result' + (result.length!=1 ? 's':'');
+  document.querySelector('#search-count').textContent = label;
+}
+
+function closeSearch() {
+  setClass(document.querySelector('#search-result'), true, 'collapsed');
+  setClass(document.querySelector('#search-close'), true, 'collapsed');
+  setClass(document.querySelector('#categories-wrapper'), false, 'collapsed');
+  let searchInput = document.querySelector('#search-input');
+  searchInput.value = '';
+  searchInput.focus();
+  settings.searchText = '';
+  markItems();
+  saveSettings();
 }
 
 window.onload = function(event) {
@@ -949,91 +1029,7 @@ window.onload = function(event) {
     loadMap(mapId);
   }).catch(e=>{console.log(e);})
 
-  let searchInput = document.querySelector('#search-input');
-  let searchResult = document.querySelector('#search-result');
-  let categories = document.querySelector('#categories-wrapper');
-  let searchClose = document.querySelector('#search-close');
-
-  function filterMarker(o, text) {
-    if (text=='') return true;
-    if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) return false;
-    if (!o.name || !o.type || !o.form_id) return false;
-    text = text.toLowerCase();
-    context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
-    if (context.toLowerCase().includes(text) || (text.length>=4 && o.form_id && o.form_id.toLowerCase().includes(text)) ) {
-      return true;
-    }
-    return false;
-  }
-
-  function clickSearchItem(e) {
-    gotoMarker(e.target.alt);
-  }
-
-  function openSearch(text) {
-    setClass(searchResult, false, 'collapsed');
-    setClass(searchClose, false, 'collapsed');
-    setClass(categories, true, 'collapsed');
-
-    searchInput.select();
-    settings.searchText = text;
-
-    for (marker of map.getLayer(layerName)._geoList) {
-      marker.hide();
-    }
-
-    let div = document.querySelector('#search-items');
-    div.innerHTML = ''
-
-    let result = fuzzySearch(text, 100, 0.25);
-
-    for (o of result) {
-      o.marker.show();
-
-      let id = o.instance_id || o.form_id;
-      let name = o.name;
-      let type = o.type;
-      let title = itemDescription(o) + ' in ' + itemLocation(o);
-
-      let li = document.createElement('div');
-      li.className = 'item';
-      li.classList.add('search-item');
-      li.title = title + ' [' + id + ']';
-      li.alt = id;
-      li.onclick = clickSearchItem;
-
-      let c0 = document.createElement('span');
-      c0.className = 'icon';
-
-      let fa = (types[type] && types[type].fa) || 'circle-question';
-      c0.classList.add('fa');
-      c0.classList.add('fa-'+fa);
-
-      let c1 = document.createElement('span');
-      c1.innerHTML = title;
-      c1.className = 'title';
-
-      li.appendChild(c0);
-      li.appendChild(c1);
-      div.appendChild(li);
-    }
-
-    let label = result.length + ' search result' + (result.length!=1 ? 's':'');
-    document.querySelector('#search-count').textContent = label;
-  }
-
-  function closeSearch() {
-    setClass(searchResult, true, 'collapsed');
-    setClass(searchClose, true, 'collapsed');
-    setClass(categories, false, 'collapsed');
-    setClass(categories, false, 'collapsed');
-    searchInput.value = '';
-    searchInput.focus();
-    settings.searchText = '';
-    markItems();
-  }
-
-  searchClose.onclick = closeSearch;
+  document.querySelector('#search-close').onclick = closeSearch;
 
   document.querySelector('#search-form').onkeydown = function(e) {
     if (e.code == 'Escape') {
@@ -1043,14 +1039,16 @@ window.onload = function(event) {
 
   document.querySelector('#search-form').onsubmit = function(e) {
     e. preventDefault(); 
+    let searchInput = document.querySelector('#search-input');
     let text = searchInput.value;
     if (text=='') {
       closeSearch();
     } else {
+      settings.searchText = text;
+      saveSettings();
       openSearch(text);
     }
   }
-
 }
 
 </script>
