@@ -10,12 +10,13 @@ uses SysUtils;
 function Finalize: integer;
 var
   i, j, k, count, doors, ItemsCount, quests, q: integer;
-  g, e, r, area, cell, refs, a, b, ref, MapMarkerStat: IInterface;
+  f, g, e, r, area, cell, refs, a, b, ref, MapMarkerStat: IInterface;
   Obj, ChildObj: TJsonObject;
   s, id: string;
   items: TStringList;
   x,y,z, ax,ay,az, bx,by,bz: double;
 begin
+  f := FileByIndex(8);
   Obj := TJsonObject.Create;
 
   for i := 0 to Pred(FileCount) do begin
@@ -45,6 +46,7 @@ begin
   MapMarkerStat := RecordByFormID(FileByIndex(0), $00000010, False);
   for i := 0 to Pred(ReferencedByCount(MapMarkerStat)) do begin
     e := ReferencedByIndex(MapMarkerStat, i);
+    if GetFile(e) <> f then continue;
     cell := LinksTo(ElementByName(e, 'Cell'));
     ChildObj := Obj.A['markers'].AddObject;
     ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(e), 8);
@@ -61,10 +63,10 @@ begin
 
   count := 0;
   items := TStringList.Create;
-  items.DelimitedText := 'NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR';
+  items.DelimitedText := 'NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN CONT';
 
   for k := 0 to Pred(items.Count) do begin
-    g := GroupBySignature(FileByIndex(8), items[k]);
+    g := GroupBySignature(f, items[k]);
     AddMessage('Collecting ' + items[k] +' ...');
     for j := 0 to Pred(ElementCount(g)) do begin
       r := ElementByIndex(g, j);
@@ -72,7 +74,14 @@ begin
       begin
         e := ReferencedByIndex(r, i);
         s := EditorID(r);
+        if GetFile(e) <> f then continue;
 
+        if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
+          if (pos('Folon_WorkbenchWeapons', s)=0) then continue;
+        end else
+        if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
+          if (pos('Folon_SettlementWorkbench', s)=0) then continue;
+        end else
         if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin
         end else
         if (Signature(r) = 'FLOR') and (Signature(e) = 'REFR') then begin
