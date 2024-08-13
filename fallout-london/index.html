@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://unpkg.com/maptalks/dist/maptalks.css">
 <script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 -->
 
 <link href="maptalks.css" rel="stylesheet">
@@ -782,8 +782,12 @@ function loadData() {
 
 
   // marker link
-  if (markerId = mapParam.markerId) {
-    gotoMarkerByName(markerId);
+  if (markerName = mapParam.markerName) {
+    gotoMarkerByName(markerName);
+  } else {
+    if (settings.searchText != '') {
+      openSearch(settings.searchText);
+    }
   }
 
   mapParam = {}; // critical to reload map properly
@@ -859,7 +863,7 @@ function loadMap(id) {
 window.onload = function(event) {
 
   if (location.hash.length>1) {
-    mapParam.markerId = decodeURIComponent(location.hash.slice(1));
+    mapParam.markerName = decodeURIComponent(location.hash.slice(1));
     mapParam.mapId = Object.keys(maps)[0];
   }
 
