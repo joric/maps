@@ -170,7 +170,7 @@ let factions = {
 
 function getFaction(o) {
   for (const [name, value] of Object.entries(factions)) {
-    if (types[o.type].name==name || (o.type=='NPC_' && (o.editor_id && o.editor_id.includes(value.npc)))) {
+    if ((types[o.type] && types[o.type].name==name) || (o.type=='NPC_' && (o.editor_id && o.editor_id.includes(value.npc)))) {
       return {name: name, data: value};
     }
   }
@@ -829,7 +829,6 @@ function postprocessMarkers(data){
         let issue = o.editor_id.match(/^.*(\d\d)$/);
         if (issue) o.name = o.name +' '+ parseInt(issue[1]);
       }
-      if (o.name.includes(' Coaster')) o.type = '_Coaster';
     }
 
     if (o.type=='MISC' && o.editor_id.includes('VinylRecord')) {
@@ -841,6 +840,8 @@ function postprocessMarkers(data){
         o.type = 'Pond / Lake'; // Oval is NOT a settlement, the icon is wrong (confirmed)
       }
     }
+
+    if (o.name.endsWith(' Coaster')) o.type = '_Coaster';
 
     if (orig_name!=o.name) o.original_name = orig_name;
     if (orig_type!=o.type) o.original_type = orig_type;
