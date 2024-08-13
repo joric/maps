@@ -544,7 +544,20 @@ function gotoMarkerByName(name) {
       marker.show();
       popupOnClick({target: marker});
       marker.openInfoWindow();
-      break;
+      return;
+    }
+  }
+
+  // no results, try a substring search
+  for (marker of map.getLayer('markers')._geoList) {
+    let o = marker.properties;
+    context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
+    if ( context.includes(name) || context.includes(name.replace(' ','_')) ) {
+      map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
+      marker.show();
+      popupOnClick({target: marker});
+      marker.openInfoWindow();
+      return;
     }
   }
 }
