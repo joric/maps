@@ -191,12 +191,9 @@ a:hover { text-decoration: underline; }
 
 hr { opacity: .6;}
 
-#categories .category-item:hover {
-  opacity: 1;
-}
-
-#categories .header:hover {
-  opacity: 1;
+.item.hidden > * {
+  visibility: visible;
+  opacity: 50%;
 }
 
 #categories .header {
@@ -204,6 +201,10 @@ hr { opacity: .6;}
   width: 100%;
   padding: 6px 0px;
   cursor: pointer;
+}
+
+#categories .header:hover {
+  opacity: 1;
 }
 
 #categories .group-categories {
@@ -215,14 +216,19 @@ hr { opacity: .6;}
 
 
 #categories .category-item {
+  opacity: .8;
   width: 100%;
   display: flex;
   align-items: center;
-  opacity: .8;
   position: relative;
   padding: 3px 6px;
   cursor: pointer;
 }
+
+#categories .category-item:hover {
+  opacity: 1;
+}
+
 
 .item > * {
   pointer-events: none;
@@ -295,11 +301,6 @@ hr { opacity: .6;}
 
 .collapsed {
   display: none;
-}
-
-.item.hidden > * {
-  visibility: visible;
-  opacity: 50%;
 }
 
 .item.hidden > .title {
