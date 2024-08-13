@@ -540,11 +540,12 @@ function fuzzySearch(s, limit, threshold) {
   let data = [];
   let collection = map.getLayer('markers')._geoList;
   for (marker of collection) {
-    data.push({...marker.properties, ...{custom_type: itemType(marker.properties), marker: marker}});
+    let o = marker.properties;
+    data.push({...o, ...{location: itemLocation(o), custom_type: itemType(o), marker: marker}});
   }
 
   return new Fuse(data, {
-    keys: ['name', 'type', 'custom_type', 'form_id', 'instance_id'],
+    keys: ['name', 'type', 'custom_type', 'form_id', 'instance_id', 'location'],
     threshold: threshold || 0.5,
     ignoreLocation: true,
     limit: limit || 100,
