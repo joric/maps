@@ -551,13 +551,29 @@ function gotoMarkerByName(name) {
   // no results, try a substring search
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
-    context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
+    let context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
     if ( context.includes(name) || context.includes(name.replace(' ','_')) ) {
       map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
       marker.show();
       popupOnClick({target: marker});
       marker.openInfoWindow();
       return;
+    }
+  }
+
+  // no results, try searching by words
+  let words = name.split(' ').concat(name.split('_'));
+  for (marker of map.getLayer('markers')._geoList) {
+    let o = marker.properties;
+    let context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
+    for (name of words) {
+      if ( context.includes(name) ) {
+        map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
+        marker.show();
+        popupOnClick({target: marker});
+        marker.openInfoWindow();
+        return;
+      }
     }
   }
 }
