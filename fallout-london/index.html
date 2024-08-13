@@ -538,6 +538,7 @@ function getMarkerURL(markerId) {
 
 function fuzzySearchMarker(s) {
   let collection = map.getLayer('markers')._geoList;
+
   for (marker of collection) {
     let o = marker.properties;
     if (s == o.name || s == o.instance_id || s == o.form_id) {
