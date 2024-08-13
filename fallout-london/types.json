@@ -79,7 +79,7 @@
   "WEAP": {"fa": "gun", "bg": "tomato", "name":"Weapon", "group": "misc"},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "name": "Ammo", "group": "misc"},
   "ALCH": {"fa": "briefcase-medical", "bg": "red", "name": "Meds", "group": "misc"},
-  "FLOR": {"fa": "seedling", "bg": "purple", "name": "Plant", "group": "misc"},
+  "FLOR": {"fa": "seedling", "bg": "forestgreen", "name": "Plant", "group": "misc"},
 
   "_Newspaper": {"fa": "newspaper", "bg": "#aaa", "name":"Newspaper", "group": "misc"},
   "_Note": {"fa": "note-sticky", "bg": "sandybrown", "name":"Note", "group": "misc"},
