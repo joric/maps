@@ -987,7 +987,7 @@ window.onload = function(event) {
       let id = o.instance_id || o.form_id;
       let name = o.name;
       let type = o.type;
-      let title = itemDescription(o);
+      let title = itemDescription(o) + ' in ' + itemLocation(o);
 
       let li = document.createElement('div');
       li.className = 'item';
