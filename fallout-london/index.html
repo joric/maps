@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://unpkg.com/maptalks/dist/maptalks.css">
 <script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 -->
 
 <link href="maptalks.css" rel="stylesheet">
@@ -541,20 +541,29 @@ function fuzzySearch(s, limit, threshold) {
   let collection = map.getLayer('markers')._geoList;
   for (marker of collection) {
     let o = marker.properties;
-    data.push({...o, ...{location: itemLocation(o), custom_type: itemType(o), marker: marker}});
+    data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), marker: marker}});
   }
 
-  return new Fuse(data, {
-    keys: ['name', 'type', 'custom_type', 'form_id', 'instance_id', 'location'],
-    threshold: threshold || 0.5,
+  limit = limit || 100;
+  s = s.split(/[\s|_]+/).join(' '); // possible wiki links
+  threshold = threshold || 0.75; // do not change. breaks camden_lock => "lock penthouse in camden"
+
+  let options = {
+    keys: ['description', 'name', 'type', 'form_id', 'instance_id', 'custom_type', 'location'],
+    threshold: threshold,
     ignoreLocation: true,
-    limit: limit || 100,
-  }).search(s).splice(0, limit);
+    useExtendedSearch: true, // search by words
+  }
+
+  let fuse = new Fuse(data, options);
+  let result = fuse.search(s, { limit: limit });
+
+  return result;
 }
 
 function gotoMarkerByName(name) {
   if (result = fuzzySearch(name, 1)) {
-    let marker = result[0].marker;
+    let marker = result[0].item.marker;
     map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
     marker.show();
     popupOnClick({target: marker});
@@ -893,7 +902,9 @@ function openSearch(text) {
 
   let result = fuzzySearch(text, 100, 0.25);
 
-  for (o of result) {
+  for (r of result) {
+    let o = r.item;
+
     o.marker.show();
 
     let id = o.instance_id || o.form_id;
