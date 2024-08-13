@@ -378,6 +378,10 @@ function toggleGroup(e) {
   return e.target.alt && toggleItems(e, show, divs);
 }
 
+let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = o.cell_name) ? ' (' + cell + ')' : '');
+let itemDescription = o=> o.name + ' (' + itemType(o) + ')';
+let itemType = o=> (faction = getFaction(o)) ? faction.name : humanReadable(o.type);
+
 function humanReadable(type) {
   let s = type;
   if (name = (types[type] && types[type].name)) {
@@ -535,7 +539,7 @@ function getMarkerURL(markerId) {
 function gotoMarkerByName(name) {
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
-    if (name == o.name || name == o.form_id) {
+    if (name == o.name || name == o.instance_id || name == o.form_id) {
       map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
       marker.show();
       popupOnClick({target: marker});
@@ -548,7 +552,7 @@ function gotoMarkerByName(name) {
 function gotoMarker(id) {
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
-    if (id == o.form_id) {
+    if (id == o.instance_id || id == o.form_id) {
       map.animateTo({center: marker._coordinates});
       marker.show();
       popupOnClick({target: marker});
@@ -571,23 +575,14 @@ function popupOnClick(e) {
     };
 
     popup.querySelector('#popup-title').innerText = o.name;
-    popup.querySelector('#popup-subtitle').innerText = (faction = getFaction(o)) ? faction.name : humanReadable(o.type);
-
-    let location =  (maps[o.area] && maps[o.area].name) || o.area;
-
-    if (o.cell_name) location += ' (' + o.cell_name + ')';
-
-    popup.querySelector('#popup-note').innerText = location;
-
+    popup.querySelector('#popup-subtitle').innerText = itemType(o);
+    popup.querySelector('#popup-note').innerText = itemLocation(o);
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
     popup.querySelector('#popup-found').checked = settings.markedItems[markerId]==true;
     popup.querySelector('#popup-found').onclick = function() { toggleMarked(markerId) };
-
     popup.querySelector('#popup-marker-link').href = getMarkerURL(o.name);
     popup.querySelector('#popup-marker-link').onclick = function(e){ copyToClipboard(e.target.href); return false; }
-
     popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+o.name;
-
     popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
 
     setClass(popup.querySelector('#popup-data'), settings.debugMode!=true, 'collapsed');
@@ -662,9 +657,8 @@ function loadData() {
       symbol: markerSymbol(o),
     }).addTo(markerLayer);
 
-    const tooltip = new maptalks.ui.ToolTip(
-        o.name + ' (' + ((faction = getFaction(o)) ? faction.name : humanReadable(o.type)) + ')', {
-        showTimeout: 50
+    const tooltip = new maptalks.ui.ToolTip( itemDescription(o), {
+      showTimeout: 50
     }).addTo(marker);
 
     marker.setInfoWindow({autoCloseOn: 'click'})
@@ -937,7 +931,6 @@ window.onload = function(event) {
     loadMap(mapId);
   }).catch(e=>{console.log(e);})
 
-
   let searchInput = document.querySelector('#search-input');
   let searchResult = document.querySelector('#search-result');
   let categories = document.querySelector('#categories-wrapper');
@@ -991,10 +984,10 @@ window.onload = function(event) {
 
       count += 1;
 
-      let id = o.form_id;
+      let id = o.instance_id || o.form_id;
       let name = o.name;
       let type = o.type;
-      let title = name + ' (' + humanReadable(o.type) + ')';
+      let title = itemDescription(o);
 
       let li = document.createElement('div');
       li.className = 'item';
