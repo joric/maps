@@ -762,7 +762,7 @@ function loadData() {
 
   // fill map switcher panel
   let div = document.querySelector('.map-switcher-panel');
-  div.innerHTML = '';
+  div.replaceChildren();
   for (const [id,t] of Object.entries(maps)) {
     if (t.hidden) continue;
     let a = document.createElement('a');
@@ -777,7 +777,7 @@ function loadData() {
   }
 
   let ul = document.querySelector('#categories');
-  ul.innerHTML = '';
+  ul.replaceChildren();
 
   let groups = Object.keys(counters);
   let weight = x=>({'travel':1000, 'factions': 2000, 'settlements':500, 'items':400, 'places of interest':250, 'facilities': 200, 'misc':-1000}[x] || 0);
@@ -968,7 +968,7 @@ function openSearch(text) {
   }
 
   let div = document.querySelector('#search-items');
-  div.innerHTML = ''
+  div.replaceChildren();
 
   let result = fuzzySearch(text, 100, 0.25);
 
