@@ -80,8 +80,8 @@
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "name": "Ammo", "group": "misc"},
   "ALCH": {"fa": "briefcase-medical", "bg": "red", "name": "Meds", "group": "misc"},
   "FLOR": {"fa": "seedling", "bg": "forestgreen", "name": "Plant", "group": "misc"},
-  "FURN": {"fa": "wrench", "bg": "tomato", "name": "Workbench", "group": "misc"},
-  "CONT": {"fa": "screwdriver-wrench", "bg": "red", "name": "Workshop", "group": "misc"},
+  "FURN": {"fa": "wrench", "bg": "tomato", "name": "Workbench", "group": "settlements"},
+  "CONT": {"fa": "screwdriver-wrench", "bg": "red", "name": "Workshop", "group": "settlements"},
 
   "_Newspaper": {"fa": "newspaper", "bg": "#aaa", "name":"Newspaper", "group": "misc"},
   "_Note": {"fa": "note-sticky", "bg": "sandybrown", "name":"Note", "group": "misc"},
