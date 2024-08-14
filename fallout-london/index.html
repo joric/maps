@@ -570,6 +570,12 @@ function getMapURL(id) {
   return base + '#' + encodeURIComponent(id);
 }
 
+function getItemURL(o) {
+  let location_id = o.form_id && (o.original_type || o.type)!='NPC_' ? canonical(o.marker_id) : o.name; // npc and locations are referred by name
+  let external_id = location_id.replace(/[^A-Za-z0-9\s]/g, '').trim().replace(/\s+/g, '_');
+  return getMapURL(external_id);
+}
+
 let debugText = '';
 
 function findLocation(text) {
@@ -679,9 +685,7 @@ function popupOnClick(e) {
     popup.querySelector('#popup-id-link').href = '#' + (o.form_id || o.marker_id);
     popup.querySelector('#popup-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
 
-    let location_id = o.form_id && (o.original_type || o.type)!='NPC_' ? canonical(o.marker_id) : o.name; // npc and locations are referred by name
-
-    popup.querySelector('#popup-location-link').href = getMapURL(location_id.replace(/[\s|_]+/g,'_'));
+    popup.querySelector('#popup-location-link').href = getItemURL(o);
     popup.querySelector('#popup-location-link').onclick = copyLink;
 
     popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(o.name);
