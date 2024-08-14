@@ -619,7 +619,7 @@ function gotoMarker(id) {
 }
 
 function formatQuest(s) {
-  return ({'FOLON_DogmeatQuest':'Protect the Dog'}[s] || (s.startsWith('FOLON') ? '' : s));
+  return ({'FOLON_DogmeatQuest':'Protect the Dog'}[s] || (s.match(/^folon/i) ? '' : s));
 }
 
 function popupOnClick(e) {
