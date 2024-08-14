@@ -1043,12 +1043,8 @@ function openSearch(text) {
   setClass(document.querySelector('#search-close'), false, 'collapsed');
   setClass(document.querySelector('#categories-wrapper'), true, 'collapsed');
 
-  let elements = document.querySelectorAll('.search-item');
-  let update = text != settings.searchText || elements.length==0;
-
-  if (update) {
+  if (text != settings.searchText || document.querySelectorAll('.search-item').length==0) {
     updateSearchResults(text);
-    console.log('updating');
   }
 
   selectSearchItem(1);
