@@ -91,7 +91,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
         <a class="popup-link" id="popup-wiki-link" href="#" target="_blank" title="Go to Wiki (external link)"><i class="fa fa-brands fa-wikipedia-w"></i></a>
         <a class="popup-link" id="popup-marker-link" href="#" target="_blank" title="Copy name link to clipboard"><i class="fa fa-link"></i></a>
         <a class="popup-link" id="popup-location-link" href="#" target="_blank" title="Copy location link to clipboard"><i class="fa fa-location-crosshairs"></i></a>
-        <a class="popup-link" id="popup-id-link" href="#" target="_blank" title="Copy item id to clipboard"><i class="fa fa-hashtag"></i></a>
+        <a class="popup-link" id="popup-id-link" href="#" target="_blank" title="Copy form id to clipboard"><i class="fa fa-hashtag"></i></a>
       </div>
     </div>
   </div>
@@ -454,7 +454,7 @@ function toggleItems(e, show, parent) {
       for (type of [o.spawns,o.type]) {
 
         if (div = lookup[type]) {
-          let found = settings.markedItems[o.form_id];
+          let found = settings.markedItems[o.marker_id];
 
           // toggle markers
           show && !(found && hideFound && !alwaysVisible(marker)) ? marker.show() : marker.hide();
@@ -492,7 +492,7 @@ function markItems() {
 
     for (marker of map.getLayer(layerName)._geoList) {
       let o = marker.properties;
-      let found = settings.markedItems[o.form_id];
+      let found = settings.markedItems[o.marker_id];
 
       let hidden = settings.hiddenItems[o.type];
 
@@ -540,7 +540,7 @@ function toggleMarked(id) {
 
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
-    if (id == o.form_id) {
+    if (id == o.marker_id) {
       let found = settings.markedItems[id];
       marker.updateSymbol({markerOpacity: found ? 0.5 : 1 });
       break;
@@ -562,8 +562,8 @@ function copyToClipboard(text) {
 }
 
 
-function canonicalID(id) {
-  return id.slice(2);
+function canonical(id) {
+  return id ? id.slice(2) : '';
 }
 
 function getMapURL(id) {
@@ -582,10 +582,10 @@ function findLocation(text) {
   for (let stage=0; stage<3; stage++) {
     for (marker of collection) {
       let o = marker.properties;
-      let base = [o.name, o.form_id, canonicalID(o.form_id)].map(s=>s ? s.toLowerCase():'')
+      let base = [o.name, o.form_id, canonical(o.form_id)].map(s=>s ? s.toLowerCase():'')
       let scramble = [...split(o.name), itemType(o), itemLocation(o)].map(s=>s?s.toLowerCase():'');
       let tags = [o.name, o.type, itemType(o), itemLocation(o)].map(s=>s ? s.toLowerCase():'');
-      if (stage==0 && (canonicalID(o.form_id)==canonicalID(name) || base.includes(name))) return marker;
+      if (stage==0 && (canonical(o.form_id)==canonical(name) || base.includes(name))) return marker;
       if (stage==1 && words.every(e=>scramble.includes(e))) return marker;
       if (stage==2 && words.every(e=>tags.includes(e))) return marker;
     }
@@ -612,7 +612,7 @@ function fuzzySearch(s, limit, threshold) {
   threshold = threshold || 0.75;
 
   let options = {
-    keys: ['description', 'name', 'type', 'base_id', 'custom_type', 'location', 'tags'],
+    keys: ['description', 'name', 'type', 'form_id', 'marker_id', 'custom_type', 'location', 'tags'],
     threshold: threshold,
     ignoreLocation: true,
     useExtendedSearch: true, // search by words
@@ -674,13 +674,13 @@ function popupOnClick(e) {
     popup.querySelector('#popup-subtitle').innerText = itemType(o);
     popup.querySelector('#popup-note').innerText = itemLocation(o);
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
-    popup.querySelector('#popup-found').checked = settings.markedItems[o.form_id]==true;
-    popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.form_id) };
-    popup.querySelector('#popup-id-link').href = '#' + (o.base_id || o.form_id);
+    popup.querySelector('#popup-found').checked = settings.markedItems[o.marker_id]==true;
+    popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.marker_id) };
+    popup.querySelector('#popup-id-link').href = '#' + (o.form_id || o.marker_id);
     popup.querySelector('#popup-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
     popup.querySelector('#popup-marker-link').href = getMapURL(o.name);
     popup.querySelector('#popup-marker-link').onclick = copyLink;
-    popup.querySelector('#popup-location-link').href = getMapURL(canonicalID(o.form_id));
+    popup.querySelector('#popup-location-link').href = getMapURL(canonical(o.marker_id));
     popup.querySelector('#popup-location-link').onclick = copyLink;
     popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(o.name);
     popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
@@ -746,8 +746,8 @@ function loadData() {
 
     // hide some of the location markers on the base map
     if (mapId == Object.keys(maps)[0]) {
-      if (['City','Town'].includes(o.type) && o.area != mapId && o.form_id!='07310FF5') continue;
-      if (o.type == 'Military Base' && o.form_id != '0732F385') continue;
+      if (['City','Town'].includes(o.type) && o.area != mapId && o.marker_id!='07310FF5') continue;
+      if (o.type == 'Military Base' && o.marker_id != '0732F385') continue;
     }
 
     let c = getLoc(o);
@@ -773,7 +773,7 @@ function loadData() {
     .on('contextmenu', e=> {
       if (mouseMoved) return;
       let o = e.target.properties;
-      toggleMarked(o.form_id);
+      toggleMarked(o.marker_id);
     })
 
     // count both outer type and spawns
@@ -959,18 +959,6 @@ function loadMap(id) {
   return false;
 }
 
-function filterMarker(o, text) {
-  if (text=='') return true;
-  if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) return false;
-  if (!o.name || !o.type || !o.form_id) return false;
-  text = text.toLowerCase();
-  context = [o.name,o.type,humanReadableType(o.type),o.editor_id].map(s=>s?s:'').join('|');
-  if (context.toLowerCase().includes(text) || (text.length>=4 && o.form_id && o.form_id.toLowerCase().includes(text)) ) {
-    return true;
-  }
-  return false;
-}
-
 function updateSearchResults(text) {
   for (marker of map.getLayer(layerName)._geoList) {
     marker.hide();
@@ -986,7 +974,6 @@ function updateSearchResults(text) {
 
     o.marker.show();
 
-    let id = o.form_id;
     let name = o.name;
     let type = o.type;
     let title = itemDescription(o) + ' in ' + itemLocation(o);
@@ -994,8 +981,8 @@ function updateSearchResults(text) {
     let li = document.createElement('div');
     li.className = 'item';
     li.classList.add('search-item');
-    li.title = title + ' [' + id + ']';
-    li.alt = id;
+    li.title = title + ' [' + o.form_id + ']';
+    li.alt = o.marker_id;
     li.onclick = clickSearchItem;
 
     let c0 = document.createElement('span');
@@ -1023,7 +1010,7 @@ function updateSearchResults(text) {
 function jumpToMarker(id) {
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
-    if (id == o.form_id) {
+    if (id == o.marker_id) {
       map.animateTo({center: marker._coordinates});
       marker.show();
       popupOnClick({target: marker});
