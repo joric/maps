@@ -984,6 +984,8 @@ function updateSearchResults(text) {
     marker.hide();
   }
 
+  let extent = null;
+
   let div = document.querySelector('#search-items');
   let nodes = [];
 
@@ -993,6 +995,9 @@ function updateSearchResults(text) {
     let o = r.item;
 
     o.marker.show();
+
+    let c = o.marker.getCoordinates();
+    extent = extent ? extent.combine(c) : new maptalks.Extent(c, c);
 
     let name = o.name;
     let type = o.type;
@@ -1025,6 +1030,11 @@ function updateSearchResults(text) {
 
   let label = result.length + ' search result' + (result.length!=1 ? 's':'');
   document.querySelector('#search-count').textContent = label;
+
+  if (result.length>1) {
+    //map.fitExtent(extent);
+  }
+
 }
 
 function jumpToMarker(id) {

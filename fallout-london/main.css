@@ -79,7 +79,7 @@ a:hover { text-decoration: underline; }
 }
 
 #right-sidebar select {
-  max-width: 200px;
+  max-width: 220px;
 }
 
 #right-sidebar.closed {
@@ -530,7 +530,7 @@ hr { opacity: .6;}
   left: 0;
   right: 0;
   bottom: 0;
-  width: 200px;
+  width: 220px;
   height: 40px;
   padding: 12px;
   text-align: center;
@@ -599,7 +599,7 @@ input::selection {
   opacity: .6;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
   .sidebar {
     width: 220px;
   }
