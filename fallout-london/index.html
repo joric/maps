@@ -587,7 +587,6 @@ function gotoMarker(id) {
 
 function popupOnClick(e) {
     let o = e.target.properties;
-    let markerId = o.form_id;
 
     let popup = document.querySelector('#popup').cloneNode(true);
 
@@ -601,8 +600,8 @@ function popupOnClick(e) {
     popup.querySelector('#popup-subtitle').innerText = itemType(o);
     popup.querySelector('#popup-note').innerText = itemLocation(o);
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
-    popup.querySelector('#popup-found').checked = settings.markedItems[markerId]==true;
-    popup.querySelector('#popup-found').onclick = function() { toggleMarked(markerId) };
+    popup.querySelector('#popup-found').checked = settings.markedItems[o.form_id]==true;
+    popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.form_id) };
     popup.querySelector('#popup-marker-link').href = getMarkerURL(o.name);
     popup.querySelector('#popup-marker-link').onclick = function(e){ copyToClipboard(e.target.href); return false; }
     popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+o.name;
