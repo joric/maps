@@ -381,7 +381,7 @@ function toggleGroup(e) {
 }
 
 let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = o.cell_name) ? ' (' + cell + ')' : '');
-let itemDescription = o=> o.name + ' (' + itemType(o) + ')';
+let itemDescription = o=> ( o.name || 'Unnamed' ) + ' (' + itemType(o) + ')';
 let itemType = o=> (faction = getFaction(o)) ? faction.name : humanReadable(o.type);
 
 function humanReadable(type) {
@@ -842,6 +842,8 @@ function postprocessMarkers(data){
     }
 
     if (o.name.endsWith(' Coaster')) o.type = '_Coaster';
+
+    if (o.name=='') o.name = 'Unnamed';
 
     if (orig_name!=o.name) o.original_name = orig_name;
     if (orig_type!=o.type) o.original_type = orig_type;
