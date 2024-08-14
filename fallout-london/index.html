@@ -661,7 +661,7 @@ function popupOnClick(e) {
           a.className = 'popup-subnote-item';
           a.textContent = name;
           a.title = id;
-          a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + name;
+          a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(name);
           a.target = 'blank_';
           div.appendChild(a);
         }
@@ -677,7 +677,7 @@ function popupOnClick(e) {
     popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.form_id) };
     popup.querySelector('#popup-marker-link').href = getMarkerURL(o.name);
     popup.querySelector('#popup-marker-link').onclick = function(e){ copyToClipboard(e.target.href); return false; }
-    popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+o.name;
+    popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(o.name);
     popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
 
     setClass(popup.querySelector('#popup-data'), settings.debugMode!=true, 'collapsed');

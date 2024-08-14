@@ -511,6 +511,11 @@ hr { opacity: .6;}
   color: black;
 }
 
+.popup-subnote-item:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
 .popup-subnote-item:before {
   position: absolute;
   left: -0.8em;
