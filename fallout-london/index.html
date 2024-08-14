@@ -702,7 +702,7 @@ function loadData() {
     // hide some of the location markers on the base map
     if (mapId == Object.keys(maps)[0]) {
       if (['City','Town'].includes(o.type) && o.area != mapId && o.form_id!='07310FF5') continue;
-      if (o.type == 'Military Base' && o.form_id != '0731302F') continue;
+      if (o.type == 'Military Base' && o.form_id != '0732F385') continue;
     }
 
     let c = getLoc(o);
