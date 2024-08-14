@@ -676,7 +676,7 @@ function popupOnClick(e) {
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
     popup.querySelector('#popup-found').checked = settings.markedItems[o.form_id]==true;
     popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.form_id) };
-    popup.querySelector('#popup-id-link').href = '#' + o.form_id;
+    popup.querySelector('#popup-id-link').href = '#' + (o.base_id || o.form_id);
     popup.querySelector('#popup-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
     popup.querySelector('#popup-marker-link').href = getMapURL(o.name);
     popup.querySelector('#popup-marker-link').onclick = copyLink;
