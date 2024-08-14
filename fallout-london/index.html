@@ -618,7 +618,8 @@ function jumpToLocation(name) {
 }
 
 function formatQuest(s) {
-  return ({'FOLON_DogmeatQuest':'Protect the Dog'}[s] || (s.match(/^folon/i) ? '' : s));
+  //return {'FOLON_DogmeatQuest':'Protect the Dog'}[s] || (s.match(/^folon/i) ? '' : s);
+  return {'FOLON_DogmeatQuest':'Protect the Dog'}[s] || s;
 }
 
 function popupOnClick(e) {
@@ -640,7 +641,9 @@ function popupOnClick(e) {
 
       for (const list of [o.quests, o.weapons]) {
         if (list) {
+
           div.appendChild(document.createElement('hr'));
+
           for (const[id, value] of Object.entries(list)) {
             if (text = formatQuest(value)) {
               let a = document.createElement('a');
@@ -653,6 +656,7 @@ function popupOnClick(e) {
               div.appendChild(a);
             }
           }
+
         }
       }
 
