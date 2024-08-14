@@ -633,9 +633,10 @@ function popupOnClick(e) {
       saveSettings();
     };
 
+    let div = popup.querySelector('#popup-subnote');
+    div.replaceChildren();
+
     if (o.quests) {
-      let div = popup.querySelector('#popup-subnote');
-      div.replaceChildren();
       for (value of Object.values(o.quests)) {
         if (text = formatQuest(value)) {
           let li = document.createElement('div');
