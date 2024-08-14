@@ -612,7 +612,7 @@ function fuzzySearch(s, limit, threshold) {
   threshold = threshold || 0.75;
 
   let options = {
-    keys: ['description', 'name', 'type', 'form_id', 'instance_id', 'custom_type', 'location', 'tags'],
+    keys: ['description', 'name', 'type', 'base_id', 'custom_type', 'location', 'tags'],
     threshold: threshold,
     ignoreLocation: true,
     useExtendedSearch: true, // search by words
