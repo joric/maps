@@ -637,10 +637,10 @@ function popupOnClick(e) {
       for (const list of [o.quests, o.weapons]) {
         if (list) {
           div.appendChild(document.createElement('hr'));
-          for (const[id, value] of Object.entries(list)) {
+          for (const[id, name] of Object.entries(list)) {
             let a = document.createElement('a');
             a.className = 'popup-subnote-item';
-            a.textContent = value;
+            a.textContent = name;
             a.title = id;
             a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(name);
             a.target = 'blank_';
