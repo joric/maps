@@ -681,7 +681,7 @@ function popupOnClick(e) {
 
     let location_id = o.form_id && (o.original_type || o.type)!='NPC_' ? o.marker_id : o.name; // npc and locations are referred by name
 
-    popup.querySelector('#popup-location-link').href = getMapURL(location_id);
+    popup.querySelector('#popup-location-link').href = getMapURL(location_id.replace(' ','_'));
     popup.querySelector('#popup-location-link').onclick = copyLink;
 
     popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(o.name);
