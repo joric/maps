@@ -37,7 +37,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
 
 <div id="left-sidebar" class="sidebar">
   <div class="sidebar-close" onclick="toggleNav(this)"><div class="container middle"><i class="triangle"></i></div></div>
-  <div class="panel">
+  <div class="panel" id="left-panel">
     <h2>Fallout London</h2>
     <hr/>
 
@@ -1009,10 +1009,17 @@ function jumpToMarker(id) {
   }
 }
 
+const isVisible = function (ele, container) {
+    const { bottom, height, top } = ele.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    return top <= containerRect.top ? containerRect.top - top <= height : bottom - containerRect.bottom <= height;
+};
+
 function selectSearchItem(step, id) {
   let elements = document.querySelectorAll('.search-item');
   let div = document.querySelector('#search-items');
   let count = elements.length;
+  let container = document.querySelector('#left-panel');
 
   let current = null;
   [].forEach.call(elements, function(e, i) {
@@ -1025,6 +1032,7 @@ function selectSearchItem(step, id) {
     if (id == e.alt || (step && current == i)) {
       id = e.alt;
       e.classList.add('selected');
+      //if (!isVisible(e, container)) e.scrollIntoView();
     } else {
       e.classList.remove('selected');
     }
