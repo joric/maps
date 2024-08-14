@@ -3,5 +3,5 @@
 <Description>Search Joric's Fallout London Map</Description>
 <InputEncoding>UTF-8</InputEncoding>
 <Url type="text/html" method="get" template="https://joric.github.io/maps/fallout-london/#{searchTerms}"/>
-<moz:SearchForm>http://joric.gihub.io/maps/fallout-london/</moz:SearchForm>
+<InputEncoding>UTF-8</InputEncoding>
 </OpenSearchDescription>
