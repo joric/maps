@@ -662,8 +662,11 @@ function loadData() {
     let z = o.z;
 
     let t = markers.worldspaces[o.area];
-    x = x * t.scale + t.offset.x;
-    y = y * t.scale + t.offset.y;
+
+    if (t) {
+      x = x * t.scale + t.offset.x;
+      y = y * t.scale + t.offset.y;
+    }
 
     if (t = (maps[mapId].regions && maps[mapId].regions[o.area])) {
 
@@ -695,6 +698,12 @@ function loadData() {
     if (!o.type) continue;
 
     if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) continue;
+
+    // hide some of the location markers on the base map
+    if (mapId == Object.keys(maps)[0]) {
+      if (['City','Town'].includes(o.type) && o.area != mapId && o.form_id!='07310FF5') continue;
+      if (o.type == 'Military Base' && o.form_id != '0731302F') continue;
+    }
 
     let c = getLoc(o);
 
@@ -878,6 +887,10 @@ function postprocessMarkers(data){
     if (o.name.endsWith(' Coaster')) o.type = '_Coaster';
 
     if (o.name=='') o.name = 'Unnamed';
+
+    //put london - ruins urban travel marker into city group
+    if (o.name=='London' && o.type=='Ruins - Urban') o.type = 'City';
+
 
     if (orig_name!=o.name) o.original_name = orig_name;
     if (orig_type!=o.type) o.original_type = orig_type;
