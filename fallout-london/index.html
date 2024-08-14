@@ -536,6 +536,33 @@ function getMarkerURL(markerId) {
   return base + '#' + encodeURIComponent(markerId);
 }
 
+let debugText = '';
+
+function findLocation(text) {
+  let collection = map.getLayer('markers')._geoList;
+  let split = s=>s ? s.toLowerCase().split(/[\s|_]+/):[];
+  let words = split(text);
+  let name = words.join(' ');
+
+  for (let stage=0; stage<3; stage++) {
+    for (marker of collection) {
+      let o = marker.properties;
+      let base = [o.name, o.form_id].map(s=>s ? s.toLowerCase():'')
+      let scramble = [...split(o.name), itemType(o), itemLocation(o)].map(s=>s?s.toLowerCase():'');
+      let tags = [o.name, o.type, itemType(o), itemLocation(o)].map(s=>s ? s.toLowerCase():'');
+      if (stage==0 && base.includes(name)) return marker;
+      if (stage==1 && words.every(e=>scramble.includes(e))) return marker;
+      if (stage==2 && words.every(e=>tags.includes(e))) return marker;
+    }
+  }
+
+  if (result = fuzzySearch(text, 1)) {
+    //console.log('fallback to fuzzy with', text);
+    return result[0].item.marker;
+  }
+}
+
+
 function fuzzySearch(s, limit, threshold) {
   let data = [];
   let collection = map.getLayer('markers')._geoList;
@@ -553,8 +580,7 @@ function fuzzySearch(s, limit, threshold) {
   }
 
   limit = limit || 100;
-  s = s.split(/[\s|_]+/).join(' '); // possible wiki links
-  threshold = threshold || 0.75; // do not change. breaks camden_lock => "lock penthouse in camden"
+  threshold = threshold || 0.75;
 
   let options = {
     keys: ['description', 'name', 'type', 'form_id', 'instance_id', 'custom_type', 'location', 'quests'],
@@ -571,8 +597,7 @@ function fuzzySearch(s, limit, threshold) {
 }
 
 function gotoMarkerByName(name) {
-  if (result = fuzzySearch(name, 1)) {
-    let marker = result[0].item.marker;
+  if (marker = findLocation(name)) {
     map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
     marker.show();
     popupOnClick({target: marker});
@@ -670,8 +695,6 @@ function loadData() {
     if (!o.type) continue;
 
     if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) continue;
-
-    let z = 0;//o.type == 'City' || o.type == 'Town' || o.type =='Settlement' || o.type == 'Metro Station' ? 1024*8 : 0;
 
     let c = getLoc(o);
 
@@ -809,6 +832,11 @@ function loadData() {
   }
 
   mapParam = {}; // critical to reload map properly
+
+  if (marker=(debugText && findLocation(debugText))) {
+    let o = marker.properties;
+    console.log(debugText, '=>', [o.name, o.type, itemType(o), itemLocation(o)]);
+  }
 }
 
 function postprocessMarkers(data){
