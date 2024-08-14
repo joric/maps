@@ -63,7 +63,6 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
     <div id="search-result" class="collapsed group-categories">
       <div id="search-count"></div>
       <div id="search-items">
-        search results here
       </div>
     </div>
 
@@ -622,19 +621,6 @@ function jumpToLocation(name) {
   }
 }
 
-function jumpToMarker(id) {
-  for (marker of map.getLayer('markers')._geoList) {
-    let o = marker.properties;
-    if (id == o.form_id) {
-      map.animateTo({center: marker._coordinates});
-      marker.show();
-      popupOnClick({target: marker});
-      marker.openInfoWindow();
-      break;
-    }
-  }
-}
-
 function formatQuest(s) {
   return ({'FOLON_DogmeatQuest':'Protect the Dog'}[s] || (s.match(/^folon/i) ? '' : s));
 }
@@ -961,23 +947,13 @@ function filterMarker(o, text) {
   return false;
 }
 
-function clickSearchItem(e) {
-  jumpToMarker(e.target.alt);
-}
-
-function openSearch(text) {
-  setClass(document.querySelector('#search-result'), false, 'collapsed');
-  setClass(document.querySelector('#search-close'), false, 'collapsed');
-  setClass(document.querySelector('#categories-wrapper'), true, 'collapsed');
-
-  document.querySelector('#search-input').select();
-
+function updateSearchResults(text) {
   for (marker of map.getLayer(layerName)._geoList) {
     marker.hide();
   }
 
   let div = document.querySelector('#search-items');
-  let items = [];
+  let nodes = [];
 
   let result = fuzzySearch(text, 100, 0.25);
 
@@ -1011,18 +987,81 @@ function openSearch(text) {
 
     li.appendChild(c0);
     li.appendChild(c1);
-    items.push(li);
+    nodes.push(li);
   }
 
-  div.replaceChildren(...items);
-
-  if (result.length) {
-    jumpToMarker(result[0].item.form_id);
-    setTimeout(function(){  document.querySelector('#search-input').focus(); }, 250);
-  }
+  div.replaceChildren(...nodes);
 
   let label = result.length + ' search result' + (result.length!=1 ? 's':'');
   document.querySelector('#search-count').textContent = label;
+}
+
+function jumpToMarker(id) {
+  for (marker of map.getLayer('markers')._geoList) {
+    let o = marker.properties;
+    if (id == o.form_id) {
+      map.animateTo({center: marker._coordinates});
+      marker.show();
+      popupOnClick({target: marker});
+      marker.openInfoWindow();
+      break;
+    }
+  }
+}
+
+function selectSearchItem(step, id) {
+  let elements = document.querySelectorAll('.search-item');
+  let div = document.querySelector('#search-items');
+  let count = elements.length;
+
+  let current = null;
+  [].forEach.call(elements, function(e, i) {
+    if (e.classList.contains('selected')) current = i;
+  });
+
+  current = current==null ? 0 : ((current + count + step) % count);
+
+  [].forEach.call(elements, function(e, i) {
+    if (id == e.alt || (step && current == i)) {
+      id = e.alt;
+      e.classList.add('selected');
+    } else {
+      e.classList.remove('selected');
+    }
+  });
+
+  jumpToMarker(id);
+  setTimeout(function(){document.querySelector('#search-input').select()}, 100);
+}
+
+function clickSearchItem(e) {
+  selectSearchItem(0, e.target.alt);
+}
+
+function openSearch(text) {
+  setClass(document.querySelector('#search-result'), false, 'collapsed');
+  setClass(document.querySelector('#search-close'), false, 'collapsed');
+  setClass(document.querySelector('#categories-wrapper'), true, 'collapsed');
+
+  let elements = document.querySelectorAll('.search-item');
+  let update = text != settings.searchText || elements.length==0;
+
+  if (update) {
+    updateSearchResults(text);
+    console.log('updating');
+  }
+
+  selectSearchItem(1);
+
+  settings.searchText = text;
+  saveSettings();
+
+  document.querySelector('#search-input').onkeydown = function(e) {
+    switch (e.code) {
+      case 'ArrowUp': selectSearchItem(-1); break;
+      case 'ArrowDown': selectSearchItem(+1); break;
+    }
+  }
 }
 
 function closeSearch() {
@@ -1035,6 +1074,7 @@ function closeSearch() {
   settings.searchText = '';
   markItems();
   saveSettings();
+  searchItemIndex = 0;
 }
 
 window.onload = function(event) {
@@ -1141,8 +1181,6 @@ window.onload = function(event) {
     if (text=='') {
       closeSearch();
     } else {
-      settings.searchText = text;
-      saveSettings();
       openSearch(text);
     }
   }

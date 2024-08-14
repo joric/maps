@@ -566,13 +566,18 @@ hr { opacity: .6;}
 .search-item {
   display: block;
   align-items: center;
-  opacity: .8;
+  opacity: .6;
   position: relative;
   padding: 3px 6px;
   cursor: pointer;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.search-item.selected{
+  opacity: 1;
+  background: transparent;
 }
 
 .search-item:hover {
