@@ -541,7 +541,15 @@ function fuzzySearch(s, limit, threshold) {
   let collection = map.getLayer('markers')._geoList;
   for (marker of collection) {
     let o = marker.properties;
-    data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), marker: marker}});
+    let quests = [];
+    /*
+    if (o.quests) { // search by quests
+      for (const [k,v] of Object.entries(o.quests)) {
+        quests.push(v);
+      }
+    }
+    */
+    data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), quests: quests, marker: marker}});
   }
 
   limit = limit || 100;
@@ -549,7 +557,7 @@ function fuzzySearch(s, limit, threshold) {
   threshold = threshold || 0.75; // do not change. breaks camden_lock => "lock penthouse in camden"
 
   let options = {
-    keys: ['description', 'name', 'type', 'form_id', 'instance_id', 'custom_type', 'location'],
+    keys: ['description', 'name', 'type', 'form_id', 'instance_id', 'custom_type', 'location', 'quests'],
     threshold: threshold,
     ignoreLocation: true,
     useExtendedSearch: true, // search by words
