@@ -179,6 +179,24 @@ function getFaction(o) {
 }
 
 function createMap() {
+
+  // fill map switcher panel
+  let div = document.querySelector('.map-switcher-panel');
+  div.replaceChildren();
+
+  for (const [id,t] of Object.entries(maps)) {
+    if (t.hidden) continue;
+    let a = document.createElement('a');
+    a.innerText = markers.worldspaces[id].name;
+    a.className = 'map-link';
+    a.href = '#' + id;
+    a.onclick = function(e){ loadMap(e.target.href.split('#').pop()); return false; }
+    div.appendChild(a);
+    if (mapId==id) {
+      a.classList.add('selected');
+    }
+  }
+
   let cw = ch = 4096;
   let w = h = 64;
 
@@ -760,24 +778,8 @@ function loadData() {
     }
   }
 
-  // fill map switcher panel
-  let div = document.querySelector('.map-switcher-panel');
-  div.replaceChildren();
-  for (const [id,t] of Object.entries(maps)) {
-    if (t.hidden) continue;
-    let a = document.createElement('a');
-    a.innerText = markers.worldspaces[id].name;
-    a.className = 'map-link';
-    a.href = '#' + id;
-    a.onclick = function(e){ loadMap(e.target.href.split('#').pop()); return false; }
-    div.appendChild(a);
-    if (mapId==id) {
-      a.classList.add('selected');
-    }
-  }
-
   let ul = document.querySelector('#categories');
-  ul.replaceChildren();
+  let nodes = [];
 
   let groups = Object.keys(counters);
   let weight = x=>({'travel':1000, 'factions': 2000, 'settlements':500, 'items':400, 'places of interest':250, 'facilities': 200, 'misc':-1000}[x] || 0);
@@ -790,11 +792,12 @@ function loadData() {
     header.alt = group;
     header.onclick = toggleGroup;
 
-    ul.appendChild(header);
+    nodes.push(header);
 
     let div = document.createElement('div');
     div.className = 'group-categories';
-    ul.appendChild(div);
+
+    nodes.push(div);
 
     let items = [];
     for ([type, count] of Object.entries(counters[group])) {
@@ -831,6 +834,8 @@ function loadData() {
       div.appendChild(li);
     }
   }
+
+  ul.replaceChildren(...nodes);
 
 
   if (firstStart) {
@@ -968,7 +973,7 @@ function openSearch(text) {
   }
 
   let div = document.querySelector('#search-items');
-  div.replaceChildren();
+  let items = [];
 
   let result = fuzzySearch(text, 100, 0.25);
 
@@ -1002,8 +1007,10 @@ function openSearch(text) {
 
     li.appendChild(c0);
     li.appendChild(c1);
-    div.appendChild(li);
+    items.push(li);
   }
+
+  div.replaceChildren(...items);
 
   let label = result.length + ' search result' + (result.length!=1 ? 's':'');
   document.querySelector('#search-count').textContent = label;
