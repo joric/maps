@@ -266,7 +266,6 @@ function createMap() {
   }
 
   map.on('viewchange', e=> {
-    document.getElementById('map').focus();
     settings.center = [e.new.center[0],e.new.center[1]];
     settings.bearing = e.new.bearing;
     settings.pitch = e.new.pitch;
@@ -623,7 +622,7 @@ function jumpToLocation(name) {
   }
 }
 
-function gotoMarker(id) {
+function jumpToMarker(id) {
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
     if (id == o.form_id) {
@@ -963,13 +962,14 @@ function filterMarker(o, text) {
 }
 
 function clickSearchItem(e) {
-  gotoMarker(e.target.alt);
+  jumpToMarker(e.target.alt);
 }
 
 function openSearch(text) {
   setClass(document.querySelector('#search-result'), false, 'collapsed');
   setClass(document.querySelector('#search-close'), false, 'collapsed');
   setClass(document.querySelector('#categories-wrapper'), true, 'collapsed');
+
   document.querySelector('#search-input').select();
 
   for (marker of map.getLayer(layerName)._geoList) {
@@ -1015,6 +1015,11 @@ function openSearch(text) {
   }
 
   div.replaceChildren(...items);
+
+  if (result.length) {
+    jumpToMarker(result[0].item.form_id);
+    setTimeout(function(){  document.querySelector('#search-input').focus(); }, 250);
+  }
 
   let label = result.length + ' search result' + (result.length!=1 ? 's':'');
   document.querySelector('#search-count').textContent = label;
