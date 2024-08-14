@@ -570,8 +570,21 @@ function getMapURL(id) {
   return base + '#' + encodeURIComponent(id);
 }
 
+function getItemURL1(o) {
+  let location_id = count>1 ? canonical(o.marker_id) : o.name;
+  let external_id = location_id.replace(/[^A-Za-z0-9\s]/g, '').trim().replace(/\s+/g, '_');
+  return getMapURL(external_id);
+}
+
 function getItemURL(o) {
-  let location_id = o.form_id && (o.original_type || o.type)!='NPC_' ? canonical(o.marker_id) : o.name; // npc and locations are referred by name
+  let count = 0;
+  for (const marker of map.getLayer('markers')._geoList) {
+    if (marker.properties.name == o.name) {
+      count += 1;
+      if (count>1) break;
+    }
+  }
+  let location_id = count > 1 ? canonical(o.marker_id) : o.name;
   let external_id = location_id.replace(/[^A-Za-z0-9\s]/g, '').trim().replace(/\s+/g, '_');
   return getMapURL(external_id);
 }
