@@ -575,7 +575,7 @@ function gotoMarkerByName(name) {
 function gotoMarker(id) {
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
-    if (id == o.instance_id || id == o.form_id) {
+    if (id == o.form_id) {
       map.animateTo({center: marker._coordinates});
       marker.show();
       popupOnClick({target: marker});
@@ -689,8 +689,7 @@ function loadData() {
     .on('contextmenu', e=> {
       if (mouseMoved) return;
       let o = e.target.properties;
-      let id = o.area + ':' + o.form_id;
-      toggleMarked(id);
+      toggleMarked(o.form_id);
     })
 
     // count both outer type and spawns
@@ -911,7 +910,7 @@ function openSearch(text) {
 
     o.marker.show();
 
-    let id = o.instance_id || o.form_id;
+    let id = o.form_id;
     let name = o.name;
     let type = o.type;
     let title = itemDescription(o) + ' in ' + itemLocation(o);

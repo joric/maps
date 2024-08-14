@@ -125,9 +125,9 @@ begin
 
         ChildObj := Obj.A['markers'].AddObject;
 
-        ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
+        ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(e), 8);
+        ChildObj['base_id'] := IntToHex(GetLoadOrderFormID(r), 8);
         ChildObj['editor_id'] := EditorID(r);
-        ChildObj['instance_id'] := IntToHex(GetLoadOrderFormID(e), 8);
         ChildObj['type'] := Signature(r);
         ChildObj['name'] := GetElementEditValues(r, 'FULL');
 
