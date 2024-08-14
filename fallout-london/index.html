@@ -569,13 +569,11 @@ function fuzzySearch(s, limit, threshold) {
   for (marker of collection) {
     let o = marker.properties;
     let quests = [];
-    /*
     if (o.quests) { // search by quests
       for (const [k,v] of Object.entries(o.quests)) {
         quests.push(v);
       }
     }
-    */
     data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), quests: quests, marker: marker}});
   }
 
