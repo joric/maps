@@ -90,7 +90,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
         <label for="popup-found" title="Toggle found">Found</label>
         <a class="popup-link" id="popup-wiki-link" href="#" target="_blank" title="Go to Wiki (external link)"><i class="fa fa-brands fa-wikipedia-w"></i></a>
         <a class="popup-link" id="popup-marker-link" href="#" target="_blank" title="Copy name link to clipboard"><i class="fa fa-link"></i></a>
-        <a class="popup-link" id="popup-location-link" href="#" target="_blank" title="Copy location link to clipboard"><i class="fa fa-location-crosshairs"></i></a>
+        <!--a class="popup-link" id="popup-location-link" href="#" target="_blank" title="Copy location link to clipboard"><i class="fa fa-location-crosshairs"></i></a-->
         <a class="popup-link" id="popup-id-link" href="#" target="_blank" title="Copy form id to clipboard"><i class="fa fa-hashtag"></i></a>
       </div>
     </div>
@@ -676,12 +676,16 @@ function popupOnClick(e) {
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
     popup.querySelector('#popup-found').checked = settings.markedItems[o.marker_id]==true;
     popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.marker_id) };
+
     popup.querySelector('#popup-id-link').href = '#' + (o.form_id || o.marker_id);
     popup.querySelector('#popup-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
-    popup.querySelector('#popup-marker-link').href = getMapURL(o.name);
+
+    popup.querySelector('#popup-marker-link').href = getMapURL(o.form_id ? o.marker_id : o.name);
     popup.querySelector('#popup-marker-link').onclick = copyLink;
-    popup.querySelector('#popup-location-link').href = getMapURL(canonical(o.marker_id));
-    popup.querySelector('#popup-location-link').onclick = copyLink;
+
+    //popup.querySelector('#popup-location-link').href = getMapURL(canonical(o.marker_id));
+    //popup.querySelector('#popup-location-link').onclick = copyLink;
+
     popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(o.name);
     popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
 
