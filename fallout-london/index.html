@@ -655,12 +655,16 @@ function popupOnClick(e) {
     div.replaceChildren();
 
     if (o.quests) {
-      for (value of Object.values(o.quests)) {
+      for (const[id, value] of Object.entries(o.quests)) {
         if (text = formatQuest(value)) {
-          let li = document.createElement('div');
-          li.className = 'popup-subnote-item';
-          li.textContent = formatQuest(text);
-          div.appendChild(li);
+          let a = document.createElement('a');
+          let name = formatQuest(text);
+          a.className = 'popup-subnote-item';
+          a.textContent = name;
+          a.title = id;
+          a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + name;
+          a.target = 'blank_';
+          div.appendChild(a);
         }
       }
       div.classList.remove('collapsed');

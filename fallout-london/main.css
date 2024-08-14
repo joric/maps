@@ -508,6 +508,7 @@ hr { opacity: .6;}
   margin-left : 1em;
   opacity: .7;
   font-size: 13px;
+  color: black;
 }
 
 .popup-subnote-item:before {
