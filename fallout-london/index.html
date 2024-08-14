@@ -534,7 +534,17 @@ function markItems() {
 
 function toggleMarked(id) {
   settings.markedItems[id] = !settings.markedItems[id];
-  markItems();
+  //markItems();
+
+  for (marker of map.getLayer('markers')._geoList) {
+    let o = marker.properties;
+    if (id == o.form_id) {
+      let found = settings.markedItems[id];
+      marker.updateSymbol({markerOpacity: found ? 0.5 : 1 });
+      break;
+    }
+  }
+
   saveSettings();
 }
 
