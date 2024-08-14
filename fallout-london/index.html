@@ -617,11 +617,6 @@ function jumpToLocation(name) {
   }
 }
 
-function formatQuest(s) {
-  //return {'FOLON_DogmeatQuest':'Protect the Dog'}[s] || (s.match(/^folon/i) ? '' : s);
-  return {'FOLON_DogmeatQuest':'Protect the Dog'}[s] || s;
-}
-
 function popupOnClick(e) {
     let o = e.target.properties;
 
@@ -641,22 +636,16 @@ function popupOnClick(e) {
 
       for (const list of [o.quests, o.weapons]) {
         if (list) {
-
           div.appendChild(document.createElement('hr'));
-
           for (const[id, value] of Object.entries(list)) {
-            if (text = formatQuest(value)) {
-              let a = document.createElement('a');
-              let name = formatQuest(text);
-              a.className = 'popup-subnote-item';
-              a.textContent = name;
-              a.title = id;
-              a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(name);
-              a.target = 'blank_';
-              div.appendChild(a);
-            }
+            let a = document.createElement('a');
+            a.className = 'popup-subnote-item';
+            a.textContent = value;
+            a.title = id;
+            a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(name);
+            a.target = 'blank_';
+            div.appendChild(a);
           }
-
         }
       }
 
@@ -912,6 +901,11 @@ function postprocessMarkers(data){
     //put london - ruins urban travel marker into city group
     if (o.name=='London' && o.type=='Ruins - Urban') o.type = 'City';
 
+    if (o.quests) {
+      for (const[id,value] of Object.entries(o.quests)) {
+        if (value == 'FOLON_DogmeatQuest') o.quests[id] = 'Protect the Dog';
+      }
+    }
 
     if (orig_name!=o.name) o.original_name = orig_name;
     if (orig_type!=o.type) o.original_type = orig_type;
