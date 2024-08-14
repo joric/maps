@@ -89,7 +89,8 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
         <input id="popup-found" type="checkbox">
         <label for="popup-found" title="Toggle found">Found</label>
         <a class="popup-link" id="popup-wiki-link" href="#" target="_blank" title="Wiki link"><i class="fa fa-brands fa-wikipedia-w"></i></a>
-        <a class="popup-link" id="popup-marker-link" href="#" target="_blank" title="Copy marker location to clipboard"><i class="fa fa-link"></i></a>
+        <a class="popup-link" id="popup-marker-link" href="#" target="_blank" title="Copy name link to clipboard"><i class="fa fa-link"></i></a>
+        <a class="popup-link" id="popup-location-link" href="#" target="_blank" title="Copy location link to clipboard"><i class="fa fa-location-crosshairs"></i></a>
       </div>
     </div>
   </div>
@@ -559,9 +560,14 @@ function copyToClipboard(text) {
   setTimeout(function(e){ document.getElementById('alert').classList.add('closed') },1500);
 }
 
-function getMarkerURL(markerId) {
+
+function canonicalID(id) {
+  return id.substring(2);
+}
+
+function getMapURL(id) {
   let base = window.location.href.replace(/#.*$/,'');
-  return base + '#' + encodeURIComponent(markerId);
+  return base + '#' + encodeURIComponent(id);
 }
 
 let debugText = '';
@@ -575,10 +581,10 @@ function findLocation(text) {
   for (let stage=0; stage<3; stage++) {
     for (marker of collection) {
       let o = marker.properties;
-      let base = [o.name, o.form_id].map(s=>s ? s.toLowerCase():'')
+      let base = [o.name, o.form_id, canonicalID(o.form_id)].map(s=>s ? s.toLowerCase():'')
       let scramble = [...split(o.name), itemType(o), itemLocation(o)].map(s=>s?s.toLowerCase():'');
       let tags = [o.name, o.type, itemType(o), itemLocation(o)].map(s=>s ? s.toLowerCase():'');
-      if (stage==0 && base.includes(name)) return marker;
+      if (stage==0 && (canonicalID(o.form_id)==canonicalID(name) || base.includes(name))) return marker;
       if (stage==1 && words.every(e=>scramble.includes(e))) return marker;
       if (stage==2 && words.every(e=>tags.includes(e))) return marker;
     }
@@ -631,6 +637,7 @@ function popupOnClick(e) {
     let o = e.target.properties;
 
     let popup = document.querySelector('#popup').cloneNode(true);
+    let copyLink = e=>{ copyToClipboard(e.target.href); return false; };
 
     popup.querySelector('#popup-data-toggle').onclick = function() {
       let data_id = popup.querySelector('#popup-data-toggle').getAttribute('data-target');
@@ -668,8 +675,10 @@ function popupOnClick(e) {
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
     popup.querySelector('#popup-found').checked = settings.markedItems[o.form_id]==true;
     popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.form_id) };
-    popup.querySelector('#popup-marker-link').href = getMarkerURL(o.name);
-    popup.querySelector('#popup-marker-link').onclick = function(e){ copyToClipboard(e.target.href); return false; }
+    popup.querySelector('#popup-marker-link').href = getMapURL(o.name);
+    popup.querySelector('#popup-marker-link').onclick = copyLink;
+    popup.querySelector('#popup-location-link').href = getMapURL(canonicalID(o.form_id));
+    popup.querySelector('#popup-location-link').onclick = copyLink;
     popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(o.name);
     popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
 
