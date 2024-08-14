@@ -83,6 +83,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
       <div id="popup-title">Popup Title</div>
       <div id="popup-subtitle">Popup Subtitle</div>
       <div id="popup-note">Popup Note</div>
+      <div id="popup-subnote" class="collapsed">Popup Subnote</div>
       <div id="popup-data" class="collapsed"></div>
       <div id="popup-data-toggle" data-toggle="collapse" data-target="popup-data"><hr/></div>
       <div class="popup-controls">
@@ -382,14 +383,15 @@ function toggleGroup(e) {
 
 let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = o.cell_name) ? ' (' + cell + ')' : '');
 let itemDescription = o=> ( o.name || 'Unnamed' ) + ' (' + itemType(o) + ')';
-let itemType = o=> (faction = getFaction(o)) ? faction.name : humanReadable(o.type);
+let itemType = o=> (faction = getFaction(o)) ? faction.name : humanReadableType(o.type);
+let human = s=>s.replace(/([A-Z]+|[\d]+)/g, ' $1').replace(/^ /, ''); // camel case to space-separated
 
-function humanReadable(type) {
+function humanReadableType(type) {
   let s = type;
   if (name = (types[type] && types[type].name)) {
     s = name;
   } else {
-    s = s.replace(/([A-Z]+|[\d]+)/g, ' $1').replace(/^ /, ''); // camel case to space-separated
+    s = human(s);
   }
   return s;
 }
@@ -616,6 +618,10 @@ function gotoMarker(id) {
   }
 }
 
+function formatQuest(s) {
+  return ({'FOLON_DogmeatQuest':'Protect the Dog'}[s] || (s.startsWith('FOLON') ? '' : s));
+}
+
 function popupOnClick(e) {
     let o = e.target.properties;
 
@@ -626,6 +632,20 @@ function popupOnClick(e) {
       settings.debugMode = !toggleClass(document.querySelector('#'+data_id),'collapsed');
       saveSettings();
     };
+
+    if (o.quests) {
+      let div = popup.querySelector('#popup-subnote');
+      div.replaceChildren();
+      for (value of Object.values(o.quests)) {
+        if (text = formatQuest(value)) {
+          let li = document.createElement('div');
+          li.className = 'popup-subnote-item';
+          li.textContent = formatQuest(text);
+          div.appendChild(li);
+        }
+      }
+      div.classList.remove('collapsed');
+    }
 
     popup.querySelector('#popup-title').innerText = o.name;
     popup.querySelector('#popup-subtitle').innerText = itemType(o);
@@ -777,7 +797,7 @@ function loadData() {
 
     let items = [];
     for ([type, count] of Object.entries(counters[group])) {
-      items.push([humanReadable(type),count,type]);
+      items.push([humanReadableType(type),count,type]);
     }
 
     for ([name,count,type] of items.sort(cmpAlphaNum)) {
@@ -925,7 +945,7 @@ function filterMarker(o, text) {
   if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) return false;
   if (!o.name || !o.type || !o.form_id) return false;
   text = text.toLowerCase();
-  context = [o.name,o.type,humanReadable(o.type),o.editor_id].map(s=>s?s:'').join('|');
+  context = [o.name,o.type,humanReadableType(o.type),o.editor_id].map(s=>s?s:'').join('|');
   if (context.toLowerCase().includes(text) || (text.length>=4 && o.form_id && o.form_id.toLowerCase().includes(text)) ) {
     return true;
   }

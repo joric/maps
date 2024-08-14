@@ -495,6 +495,18 @@ hr { opacity: .6;}
 #popup-note {
   font-size: 12px;
   margin-top: 2px;
+  list-style-type: none;
+}
+
+#popup-subnote {
+  margin-top: 3px;
+}
+
+.popup-subnote-item {
+  display: list-item;
+  margin-left : 1.5em;
+  opacity: .7;
+  font-size: 13px;
 }
 
 
