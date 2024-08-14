@@ -472,6 +472,11 @@ hr { opacity: .6;}
   pointer-events: none;
 }
 
+#popup-data{
+  font-size: 14px;
+  font-family: monospace;
+}
+
 #popup-data-toggle {
   padding-top: 8px;
   margin-top: -8px;
