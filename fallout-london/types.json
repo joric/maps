@@ -59,7 +59,7 @@
   "Radioactive Area": {"fa": "radiation", "group": "places of interest"},
   "Sentinel": {"fa": "virus", "name": "The Dome", "group":"places of interest"},
   "Salem": {"fa": "place-of-worship", "name": "Temple", "group": "facilities"},
-  "Prydwen": {"fa": "hand-fist", "bg": "forestgreen", "name" : "Pistols", "group":"factions"},
+  "Prydwen": {"fa": "hand-fist", "bg": "darkslategrey", "name" : "Pistols", "group":"factions"},
   "Custom 66": {"fa": "anchor",  "name": "Naval College", "group":"facilities"},
   "Custom 67": {"fa": "bullseye", "bg": "forestgreen", "name": "Roundels", "group": "factions"},
   "Custom 69": {"fa": "wine-glass",  "name": "Pub", "group": "facilities"},
@@ -84,10 +84,10 @@
   "CONT": {"fa": "screwdriver-wrench", "bg": "red", "name": "Workshop", "group": "misc"},
 
   "_Newspaper": {"fa": "newspaper", "bg": "#aaa", "name":"Newspaper", "group": "misc"},
-  "_Note": {"fa": "note-sticky", "bg": "sandybrown", "name":"Note", "group": "misc"},
+  "_Note": {"fa": "note-sticky", "bg": "goldenrod", "name":"Note", "group": "misc"},
   "_Vinyl": {"fa": "record-vinyl", "bg": "darkslategrey", "name":"Vinyl Record", "group": "misc"},
   "_Magazine": {"fa": "book", "bg": "steelblue", "name": "Magazine", "group": "misc"},
   "_Card": {"fa": "id-card", "bg": "sandybrown", "name": "Card", "group": "misc"},
-  "_Coaster": {"fa": "square", "fg": "chocolate", "bg": "cornsilk", "name": "Coaster", "group": "misc"},
+  "_Coaster": {"fa": "square", "fg": "rosybrown", "bg": "cornsilk", "name": "Coaster", "group": "misc"},
   "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion", "group": "misc"}
 }
