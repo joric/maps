@@ -87,7 +87,12 @@
   "_Note": {"fa": "note-sticky", "bg": "sandybrown", "name":"Note", "group": "misc"},
   "_Vinyl": {"fa": "record-vinyl", "bg": "darkslategrey", "name":"Vinyl Record", "group": "misc"},
   "_Magazine": {"fa": "book", "bg": "steelblue", "name": "Magazine", "group": "misc"},
-  "_Card": {"fa": "id-card", "bg": "goldenrod", "name": "Card", "group": "misc"},
+  "_Card": {"fa": "id-card", "bg": "goldenrod", "name": "Visiting Card", "group": "misc"},
   "_Coaster": {"fa": "square", "bg": "peru", "name": "Coaster", "group": "misc"},
+  "_Tardis": {"fa": "phone", "bg": "cornflowerblue", "name": "Unusual Call Box", "group": "misc"},
+  "_Beacon": {"fa": "toggle-off", "bg": "cornflowerblue", "name": "Water Signal Beacon", "group": "misc"},
+  "_CutethulhuActivator": {"fa": "square-virus", "bg": "darkslategrey", "name": "CuteThulhu Activator", "group": "misc"},
+  "_CuteThulhu": {"fa": "virus", "bg": "darkslategrey", "name": "CuteThulhu", "group": "misc"},
+  "_MiscCard": {"fa": "diamond", "bg": "chocolate", "name": "Cigarette Card", "group": "misc"},
   "_Companion": {"fa": "person", "bg": "orchid", "name": "Companion", "group": "misc"}
 }

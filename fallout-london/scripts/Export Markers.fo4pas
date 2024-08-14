@@ -63,7 +63,7 @@ begin
 
   count := 0;
   sList := TStringList.Create;
-  sList.DelimitedText := 'NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN CONT';
+  sList.DelimitedText := 'NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN CONT ACTI';
 
   for k := 0 to Pred(sList.Count) do begin
     g := GroupBySignature(f, sList[k]);
@@ -76,11 +76,18 @@ begin
         s := EditorID(r);
         if GetFile(e) <> f then continue;
 
+        if (Signature(r) = 'ACTI') and (Signature(e) = 'REFR') then begin
+          if (pos('Folon_ACTI_CutethulhuDollActivator', s)=0)
+          and (pos('FOLON_ACTI_LQLondon100',s)=0)
+          and (pos('Folon_ACTI_BarryBoatBeacon',s)=0)
+          then continue;
+        end else
         if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
           if (pos('Folon_WorkbenchWeapons', s)=0) then continue;
         end else
         if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
-          if (pos('Folon_SettlementWorkbench', s)=0) then continue;
+          if (pos('Folon_SettlementWorkbench', s)=0)
+          then continue;
         end else
         if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin
         end else
@@ -105,7 +112,11 @@ begin
           then continue;
         end else
         if (Signature(r) = 'MISC') and (Signature(e) = 'REFR') then begin
-          if (pos('VinylRecord', s)=0) and (pos('BobbleHead_', s)=0) then continue;
+          if (pos('VinylRecord', s)=0)
+          and (pos('BobbleHead_', s)=0)
+          and (pos('Folon_MiscCuteThulhu',s)=0)
+          and (pos('Folon_MiscCard',s)=0)
+          then continue;
         end else
         if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
           //if (pos('PerkMag', s)=0) and (pos('CallingCard', s)=0) then continue;

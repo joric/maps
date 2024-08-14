@@ -931,14 +931,22 @@ function postprocessMarkers(data){
       }
     }
 
-    if (o.type=='MISC' && o.editor_id.includes('VinylRecord')) {
-      o.type = '_Vinyl';
+    if (o.type=='MISC') {
+       if (o.editor_id.includes('VinylRecord')) o.type = '_Vinyl';
+       if (o.editor_id.includes('Folon_MiscCard')) o.type = '_MiscCard';
+       if (o.editor_id == 'Folon_MiscCuteThulhu') o.type = '_CuteThulhu';
     }
 
     if (o.type=='Settlement') {
       if (o.name == 'Oval') {
         o.type = 'Pond / Lake'; // Oval is NOT a settlement, the icon is wrong (confirmed)
       }
+    }
+
+    if (o.type == 'ACTI') {
+      if (o.editor_id == 'Folon_ACTI_CutethulhuDollActivator') o.type = '_CutethulhuActivator';
+      if (o.editor_id == 'Folon_ACTI_BarryBoatBeacon') o.type = '_Beacon';
+      if (o.editor_id == 'FOLON_ACTI_LQLondon100') o.type = '_Tardis';
     }
 
     if (o.name.endsWith(' Coaster')) o.type = '_Coaster';
