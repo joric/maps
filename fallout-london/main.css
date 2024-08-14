@@ -503,10 +503,17 @@ hr { opacity: .6;}
 }
 
 .popup-subnote-item {
-  display: list-item;
-  margin-left : 1.5em;
+  position: relative;
+  display: block;
+  margin-left : 1em;
   opacity: .7;
   font-size: 13px;
+}
+
+.popup-subnote-item:before {
+  position: absolute;
+  left: -0.8em;
+  content: "\2022";
 }
 
 
