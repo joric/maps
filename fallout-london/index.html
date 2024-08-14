@@ -580,26 +580,22 @@ function findLocation(text) {
   }
 }
 
-
 function fuzzySearch(s, limit, threshold) {
   let data = [];
   let collection = map.getLayer('markers')._geoList;
   for (marker of collection) {
     let o = marker.properties;
-    let quests = [];
-    if (o.quests) { // search by quests
-      for (const [k,v] of Object.entries(o.quests)) {
-        quests.push(v);
-      }
-    }
-    data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), quests: quests, marker: marker}});
+    let tags = [];
+    if (o.quests) for (const [k,v] of Object.entries(o.quests)) tags.push(v);
+    if (o.weapons) for (const [k,v] of Object.entries(o.weapons)) tags.push(v);
+    data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), tags: tags, marker: marker}});
   }
 
   limit = limit || 100;
   threshold = threshold || 0.75;
 
   let options = {
-    keys: ['description', 'name', 'type', 'form_id', 'instance_id', 'custom_type', 'location', 'quests'],
+    keys: ['description', 'name', 'type', 'form_id', 'instance_id', 'custom_type', 'location', 'tags'],
     threshold: threshold,
     ignoreLocation: true,
     useExtendedSearch: true, // search by words
@@ -639,19 +635,27 @@ function popupOnClick(e) {
     let div = popup.querySelector('#popup-subnote');
     div.replaceChildren();
 
-    if (o.quests) {
-      for (const[id, value] of Object.entries(o.quests)) {
-        if (text = formatQuest(value)) {
-          let a = document.createElement('a');
-          let name = formatQuest(text);
-          a.className = 'popup-subnote-item';
-          a.textContent = name;
-          a.title = id;
-          a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(name);
-          a.target = 'blank_';
-          div.appendChild(a);
+    if (o.quests || o.weapons) {
+      let split = true;
+
+      for (const list of [o.quests, o.weapons]) {
+        if (list) {
+          div.appendChild(document.createElement('hr'));
+          for (const[id, value] of Object.entries(list)) {
+            if (text = formatQuest(value)) {
+              let a = document.createElement('a');
+              let name = formatQuest(text);
+              a.className = 'popup-subnote-item';
+              a.textContent = name;
+              a.title = id;
+              a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(name);
+              a.target = 'blank_';
+              div.appendChild(a);
+            }
+          }
         }
       }
+
       div.classList.remove('collapsed');
     }
 

@@ -9,11 +9,11 @@ uses SysUtils;
 
 function Finalize: integer;
 var
-  i, j, k, count, doors, ItemsCount, quests, q: integer;
-  f, g, e, r, area, cell, refs, a, b, ref, MapMarkerStat: IInterface;
+  i, j, k, w, count, doors, ItemsCount, quests, q: integer;
+  f, g, e, r, area, cell, refs, a, b, ref, items, item, rec, MapMarkerStat: IInterface;
   Obj, ChildObj: TJsonObject;
   s, id: string;
-  items: TStringList;
+  sList: TStringList;
   x,y,z, ax,ay,az, bx,by,bz: double;
 begin
   f := FileByIndex(8);
@@ -62,12 +62,12 @@ begin
   end;
 
   count := 0;
-  items := TStringList.Create;
-  items.DelimitedText := 'NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN CONT';
+  sList := TStringList.Create;
+  sList.DelimitedText := 'NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN CONT';
 
-  for k := 0 to Pred(items.Count) do begin
-    g := GroupBySignature(f, items[k]);
-    AddMessage('Collecting ' + items[k] +' ...');
+  for k := 0 to Pred(sList.Count) do begin
+    g := GroupBySignature(f, sList[k]);
+    AddMessage('Collecting ' + sList[k] +' ...');
     for j := 0 to Pred(ElementCount(g)) do begin
       r := ElementByIndex(g, j);
       for i := 0 to Pred(ReferencedByCount(r)) do
@@ -141,6 +141,21 @@ begin
                   ChildObj.O['quests'].S[id] := GetElementEditValues(ref, 'FULL')
             end;
           end;
+
+          items := ElementByName(r, 'Items');
+          if Assigned(items) then begin
+            for w := ElementCount(items) - 1 downto 0 do begin
+              item := ElementByIndex(items, w);
+              ref := LinksTo(ElementByPath(item, 'CNTO\Item'));
+              if Signature(ref) = 'WEAP' then begin
+                id := IntToHex(GetLoadOrderFormID(ref), 8);
+                ChildObj.O['weapons'].S[id] := EditorID(ref);
+                if GetElementEditValues(ref, 'FULL') <> '' then
+                  ChildObj.O['weapons'].S[id] := GetElementEditValues(ref, 'FULL')
+              end;
+            end;
+          end;
+
         end;
 
         x := GetElementNativeValues(e, 'DATA\Position\X');

@@ -473,7 +473,8 @@ hr { opacity: .6;}
 }
 
 #popup-data-toggle {
-  padding-top: 4px;
+  padding-top: 8px;
+  margin-top: -8px;
   margin-bottom: 8px;
   cursor: pointer;
 }
@@ -581,7 +582,7 @@ hr { opacity: .6;}
 }
 
 .search-item:hover {
-  opacity: 1;
+  opacity: .8;
 }
 
 input:focus{

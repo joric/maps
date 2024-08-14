@@ -5454,6 +5454,9 @@
 				"073121E6": "Barrow Boy Trading Lines",
 				"073121E7": "Barrow Boy"
 			},
+			"weapons": {
+				"000CE97D": ".44"
+			},
 			"x": -14636.569336,
 			"y": 53274.046875,
 			"z": 5448.000488,
@@ -5472,6 +5475,10 @@
 				"07317440": "Battle of Westminster Master Quest",
 				"0732B700": "FOLON_SQWestminster108Post"
 			},
+			"weapons": {
+				"0710C867": "Umbrella",
+				"070C99AB": "Vintage Rifle"
+			},
 			"x": 4064.045654,
 			"y": -36333.265625,
 			"z": -386.625916,
@@ -5488,6 +5495,9 @@
 				"072AEA99": "Lost & Won",
 				"072B5C7C": "Fair is Foul",
 				"07319F63": "Roundels Kick Out Quest"
+			},
+			"weapons": {
+				"0704E15E": "9mm"
 			},
 			"x": 17652.240234,
 			"y": 933.652771,
@@ -5510,6 +5520,9 @@
 				"072B6594": "Breaking the Cycle",
 				"072BDCC6": "Star-Cross'd Lovers",
 				"07319F64": "Vagabonds Kick Out Quest"
+			},
+			"weapons": {
+				"072AC4E1": "Combat Shotgun"
 			},
 			"x": 81475.84143,
 			"y": -64879.496582,
@@ -5569,6 +5582,9 @@
 				"072CD192": "A Glorious Revolution",
 				"072CD194": "Eye for an Eye",
 				"07319F64": "Vagabonds Kick Out Quest"
+			},
+			"weapons": {
+				"070B6569": "Light Machine Gun"
 			},
 			"x": 81964.71875,
 			"y": -63659.445312,
@@ -5972,6 +5988,9 @@
 				"072B5C7C": "Fair is Foul",
 				"07319F63": "Roundels Kick Out Quest"
 			},
+			"weapons": {
+				"0704E15E": "9mm"
+			},
 			"x": 17431.423828,
 			"y": 900.440186,
 			"z": 144.009735,
@@ -6002,6 +6021,9 @@
 			"name": "Cecily Sugar",
 			"quests": {
 				"072AC4EA": "Out of the Shadows"
+			},
+			"weapons": {
+				"070C84E0": "Boxcutter"
 			},
 			"x": -48361.140625,
 			"y": -10264.192261,
@@ -6056,6 +6078,9 @@
 				"072BA80C": "Green and Pleasant Land",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"0730B164": "Wood Bow"
+			},
 			"x": -54593.921875,
 			"y": -61485.117187,
 			"z": 5912.641113,
@@ -6091,6 +6116,9 @@
 				"072B5C7C": "Fair is Foul",
 				"07319F63": "Roundels Kick Out Quest"
 			},
+			"weapons": {
+				"070DB2BF": "Crude Gun"
+			},
 			"x": 16857.488526,
 			"y": 20366.327331,
 			"z": 706.856232,
@@ -6108,6 +6136,9 @@
 			"quests": {
 				"072BA80C": "Green and Pleasant Land",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"0730B164": "Wood Bow"
 			},
 			"x": -54655.003906,
 			"y": -61306.375,
@@ -6249,6 +6280,9 @@
 			"quests": {
 				"0729C3F4": "Gordon's Alive"
 			},
+			"weapons": {
+				"072B026E": "Sacrificial Blade"
+			},
 			"x": 43707.492188,
 			"y": -73838.296875,
 			"z": 5534.165039,
@@ -6310,6 +6344,9 @@
 				"072B84D1": "Living on a Thin Line",
 				"072BA80E": "Under Pressure",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"07307231": "Galantine"
 			},
 			"x": -69825.414062,
 			"y": -61826.542969,
@@ -6658,6 +6695,9 @@
 				"072C2D09": "Unto The Breach",
 				"072CD195": "Not One Step Back",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"07307235": "Olwen"
 			},
 			"x": -85738.928741,
 			"y": -85257.820557,
@@ -7245,6 +7285,9 @@
 			"quests": {
 				"07286D66": "Eggs for Egbert"
 			},
+			"weapons": {
+				"070BE3D1": "Long Sword"
+			},
 			"x": -87182.578125,
 			"y": -85857.273438,
 			"z": 5372.378418,
@@ -7415,6 +7458,9 @@
 				"072BA80F": "Knight of the Cart",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"0731ACC7": "Secace"
+			},
 			"x": -88362.88089,
 			"y": -83623.004151,
 			"z": 5432,
@@ -7432,6 +7478,9 @@
 			"quests": {
 				"072AA438": "Lunatics Have Taken Over The Asylum",
 				"072ACE01": "Where Women Glow and Men Plunder"
+			},
+			"weapons": {
+				"0731ACCA": "Service Rifle"
 			},
 			"x": -33435.738281,
 			"y": -70175.828125,
@@ -7581,6 +7630,9 @@
 				"072C2D10": "Waterloo Sunset",
 				"0730FCF0": "5th Column Kick Out Quest"
 			},
+			"weapons": {
+				"072D42C4": "Box Submachine Gun"
+			},
 			"x": -8310.133545,
 			"y": 41723.667481,
 			"z": 4851.157257,
@@ -7612,6 +7664,9 @@
 			"name": "Beefy",
 			"quests": {
 				"072BA811": "The Other Other White Meat"
+			},
+			"weapons": {
+				"0715B9A8": "Carmine"
 			},
 			"x": -34885.636719,
 			"y": 28201.757812,
@@ -7814,6 +7869,9 @@
 				"072C2D09": "Unto The Breach",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"072995DE": "Arondight"
+			},
 			"x": -82928.257812,
 			"y": -78773.703125,
 			"z": 5616,
@@ -7895,6 +7953,9 @@
 				"072BA80C": "Green and Pleasant Land",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"070BE3D0": "Two-Handed Long Sword"
+			},
 			"x": -87318.1875,
 			"y": -87730.398438,
 			"z": 5294.01416,
@@ -7955,6 +8016,9 @@
 			"name": "Moe",
 			"quests": {
 				"072B65A0": "Behind the Bonnet"
+			},
+			"weapons": {
+				"072D42C4": "Box Submachine Gun"
 			},
 			"x": 8874.693359,
 			"y": -1071.046265,
@@ -8048,6 +8112,9 @@
 			"name": "Laurence",
 			"quests": {
 				"072AEAA9": "Answers At Last?"
+			},
+			"weapons": {
+				"070DB22B": "Crude Revolver"
 			},
 			"x": -71730.773438,
 			"y": 49280.410156,
@@ -8222,6 +8289,9 @@
 				"072AEAA2": "The Sneering Imperialist",
 				"0732B700": "FOLON_SQWestminster108Post"
 			},
+			"weapons": {
+				"070DB5BF": "Battle Rifle"
+			},
 			"x": -76561.125,
 			"y": 36467.398438,
 			"z": 4980.766113,
@@ -8395,6 +8465,9 @@
 			"quests": {
 				"072C56AE": "Walking on Sunshine",
 				"072E383F": "Detective Mycroft"
+			},
+			"weapons": {
+				"070DB848": "Service Revolver"
 			},
 			"x": -91475.303497,
 			"y": 79675.288452,
@@ -8575,6 +8648,9 @@
 			"quests": {
 				"072BCEF5": "L'appel du Vide"
 			},
+			"weapons": {
+				"0005524B": "Knuckles"
+			},
 			"x": 67856.847657,
 			"y": 29978.141357,
 			"z": 5083.751465,
@@ -8746,6 +8822,9 @@
 			"quests": {
 				"072AA196": "Torch for Tommy Nightwatchman"
 			},
+			"weapons": {
+				"072815F2": "Torch"
+			},
 			"x": 3908.447754,
 			"y": 220.56926,
 			"z": -75.202972,
@@ -8782,6 +8861,9 @@
 				"072B84D0": "Hear Ye, Hear Ye",
 				"072CB1F6": "King or Country",
 				"07319F63": "Roundels Kick Out Quest"
+			},
+			"weapons": {
+				"072EC6C4": "Makeshift Knife"
 			},
 			"x": 15549.606018,
 			"y": 20366.997619,
@@ -9217,6 +9299,10 @@
 				"0729C3F4": "Gordon's Alive",
 				"072FC590": "Folon_SQBromley101_Post"
 			},
+			"weapons": {
+				"0713B86D": "Flower Power Staff",
+				"0713B853": "Flower Power Blaster"
+			},
 			"x": 44126.507812,
 			"y": -73850.75,
 			"z": 5536.467285,
@@ -9279,6 +9365,9 @@
 				"072CB1F6": "King or Country",
 				"072CD192": "A Glorious Revolution",
 				"072CD194": "Eye for an Eye"
+			},
+			"weapons": {
+				"070DB2BF": "Crude Gun"
 			},
 			"x": 82052.585938,
 			"y": -63533.40625,
@@ -9346,6 +9435,9 @@
 				"072BA816": "Idylls of the King",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"070DB848": "Service Revolver"
+			},
 			"x": 687.848511,
 			"y": 1383.436035,
 			"z": 110.429947,
@@ -9398,6 +9490,9 @@
 				"072CB1F6": "King or Country",
 				"07319F63": "Roundels Kick Out Quest"
 			},
+			"weapons": {
+				"070D95C3": "Quadrophenia"
+			},
 			"x": 18558.058228,
 			"y": 17385.769532,
 			"z": 343.86618,
@@ -9417,6 +9512,9 @@
 				"072B84CA": "The Dolorous Strike",
 				"072BA818": "Mountain Out Of A Molehill",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"07307233": "Iseult"
 			},
 			"x": -39790.949219,
 			"y": 4316.058594,
@@ -9441,6 +9539,9 @@
 				"072CD196": "Camelot Questline Manager",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"070BE3C6": "Rigby's Baton"
+			},
 			"x": -84989.259552,
 			"y": -85790.610474,
 			"z": 6328,
@@ -9458,6 +9559,9 @@
 			"quests": {
 				"072BA813": "The Firm",
 				"073071D5": "The Firm Post"
+			},
+			"weapons": {
+				"070DB2BF": "Crude Gun"
 			},
 			"x": -28260.552734,
 			"y": 45693.792969,
@@ -9481,6 +9585,9 @@
 				"072CB1F6": "King or Country",
 				"072CD193": "Permanently Redacted",
 				"072CD195": "Not One Step Back"
+			},
+			"weapons": {
+				"07329999": "Redcoat"
 			},
 			"x": 1964.023803,
 			"y": -3542.712799,
@@ -9543,6 +9650,9 @@
 				"0730FCF0": "5th Column Kick Out Quest",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"072E9804": "Haereticus Ferire"
+			},
 			"x": -84463.286163,
 			"y": -85420.739014,
 			"z": 6328.586182,
@@ -9563,6 +9673,9 @@
 				"072BA818": "Mountain Out Of A Molehill",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"0731C335": "Rhongomiant Spear"
+			},
 			"x": -39651.804688,
 			"y": 4642.987305,
 			"z": -400,
@@ -9580,6 +9693,9 @@
 				"072B84D0": "Hear Ye, Hear Ye",
 				"072CB1F6": "King or Country",
 				"07319F66": "Pistols Kick Out Quest"
+			},
+			"weapons": {
+				"070BE3EA": "Long Sword"
 			},
 			"x": -4956.157227,
 			"y": 51446.196167,
@@ -9620,6 +9736,9 @@
 				"072BA80B": "The King's Speech",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"0731ACC8": "Caliburn"
+			},
 			"x": 8367.730469,
 			"y": 16879.798828,
 			"z": -226.314362,
@@ -9647,6 +9766,9 @@
 				"0730FCF0": "5th Column Kick Out Quest",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"070D7DC3": "Iron Curtain"
+			},
 			"x": -7761.459228,
 			"y": 40933.389893,
 			"z": 5107.290039,
@@ -9665,6 +9787,9 @@
 				"072AA43F": "Five Finger Discount",
 				"072BA817": "Songs of Carthage",
 				"0730FCF0": "5th Column Kick Out Quest"
+			},
+			"weapons": {
+				"070BE3EA": "Long Sword"
 			},
 			"x": -8287.043457,
 			"y": 41658.143555,
@@ -9707,6 +9832,9 @@
 				"072C24CB": "Mad Jack Unchained",
 				"072C2D0D": "Mad Jack Talk/Relationship Scene"
 			},
+			"weapons": {
+				"07322583": "MadJackGlove"
+			},
 			"x": -89350.75243,
 			"y": 67922.690674,
 			"z": 4794.537323,
@@ -9724,6 +9852,9 @@
 			"quests": {
 				"071B7318": "Cold Case"
 			},
+			"weapons": {
+				"071898E3": "Cricket Bat"
+			},
 			"x": 42535.709961,
 			"y": 33757.219848,
 			"z": 5106.328662,
@@ -9740,6 +9871,9 @@
 			"name": "Syndicate Goon",
 			"quests": {
 				"071B7318": "Cold Case"
+			},
+			"weapons": {
+				"0005524B": "Knuckles"
 			},
 			"x": 42688.379333,
 			"y": 33775.63269,
@@ -9764,6 +9898,9 @@
 				"072BCEF7": "The Gathering Storm",
 				"072CB1F6": "King or Country",
 				"0730FCF0": "5th Column Kick Out Quest"
+			},
+			"weapons": {
+				"07272E70": "Oi"
 			},
 			"x": 12548.009766,
 			"y": 10113.178711,
@@ -9937,6 +10074,9 @@
 				"072C2D0E": "Kiera Talk/Relationship Scene",
 				"072E3852": "QuarterlyQuest"
 			},
+			"weapons": {
+				"07322585": "Kiera's Covert"
+			},
 			"x": 3293.487549,
 			"y": 14433.488953,
 			"z": 1208.10376,
@@ -9963,6 +10103,9 @@
 				"072C2D09": "Unto The Breach",
 				"072CD196": "Camelot Questline Manager",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"07307232": "Carnwennan"
 			},
 			"x": -85043.454864,
 			"y": -85087.814698,
@@ -10107,6 +10250,9 @@
 				"072BA80E": "Under Pressure",
 				"072C56AF": "The Art of War",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"0731ACC9": "Red Hilt"
 			},
 			"x": -84292.867706,
 			"y": -85400.327881,
@@ -10361,6 +10507,9 @@
 			"quests": {
 				"072A9AE9": "Clean-Up"
 			},
+			"weapons": {
+				"070DB2BF": "Crude Gun"
+			},
 			"x": -1182.552979,
 			"y": 14080.030274,
 			"z": 252.178207,
@@ -10416,6 +10565,9 @@
 				"072E7EEA": "Masquerade",
 				"0730FCF0": "5th Column Kick Out Quest"
 			},
+			"weapons": {
+				"07322586": "Submachine Gun"
+			},
 			"x": -8253.301269,
 			"y": 41368.202149,
 			"z": 5105.130859,
@@ -10447,6 +10599,9 @@
 			"name": "Section",
 			"quests": {
 				"072AA438": "Lunatics Have Taken Over The Asylum"
+			},
+			"weapons": {
+				"07329997": "Macabre Balisong"
 			},
 			"x": 1408.529755,
 			"y": -88318.835877,
@@ -10549,6 +10704,9 @@
 			"name": "Injured Boxer",
 			"quests": {
 				"072BDCC7": "A Minute With Mad Jack"
+			},
+			"weapons": {
+				"0016498F": "Boxing Glove"
 			},
 			"x": -87350.6875,
 			"y": 69064.039062,
@@ -11088,6 +11246,9 @@
 				"072CB1F6": "King or Country",
 				"07319F63": "Roundels Kick Out Quest"
 			},
+			"weapons": {
+				"070BE418": "Kukri"
+			},
 			"x": 15586.789917,
 			"y": 20070.663635,
 			"z": 704.440033,
@@ -11120,6 +11281,9 @@
 				"072B84D1": "Living on a Thin Line",
 				"072BA80C": "Green and Pleasant Land",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"07315569": "Wood Bow"
 			},
 			"x": -54406.148437,
 			"y": -61417.785156,
@@ -11380,6 +11544,9 @@
 			"quests": {
 				"071C76B4": "Swan & Mitre"
 			},
+			"weapons": {
+				"072EC6C4": "Makeshift Knife"
+			},
 			"x": 82279.379029,
 			"y": -53733.663452,
 			"z": 5050.183838,
@@ -11398,6 +11565,9 @@
 				"072B659E": "Camelot: Sword in Hand",
 				"072BA80C": "Green and Pleasant Land",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"070BE3E9": "Long Sword"
 			},
 			"x": -87323,
 			"y": -87281.453125,
@@ -11502,6 +11672,9 @@
 				"072B84D1": "Living on a Thin Line",
 				"072BA80E": "Under Pressure",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"070BE3CB": "Mace"
 			},
 			"x": -68977.515625,
 			"y": -54950.03125,
@@ -11655,6 +11828,9 @@
 			"quests": {
 				"072AC4EA": "Out of the Shadows"
 			},
+			"weapons": {
+				"000D83BF": "Pipe Wrench"
+			},
 			"x": -48275.229248,
 			"y": -8183.893067,
 			"z": -215,
@@ -11671,6 +11847,9 @@
 			"name": "Royal Albert Hall Guard",
 			"quests": {
 				"072AC4EA": "Out of the Shadows"
+			},
+			"weapons": {
+				"07189A92": "Police Truncheon"
 			},
 			"x": -48676.299805,
 			"y": -7309.964844,
@@ -11706,6 +11885,9 @@
 			"quests": {
 				"072AC4EA": "Out of the Shadows",
 				"072AC4F1": "Crossing the T's"
+			},
+			"weapons": {
+				"000CE97D": ".44"
 			},
 			"x": -10228.694336,
 			"y": -18764.160156,
@@ -11837,6 +12019,9 @@
 				"072BA817": "Songs of Carthage",
 				"0730FCF0": "5th Column Kick Out Quest"
 			},
+			"weapons": {
+				"07272E71": "Claw Hammer"
+			},
 			"x": 1404.40979,
 			"y": 1984.523437,
 			"z": 541.419434,
@@ -11967,6 +12152,9 @@
 			"quests": {
 				"072AC4F2": "Spin Doctor"
 			},
+			"weapons": {
+				"070BE430": "Upton-Burke Class C Rifle"
+			},
 			"x": 1951.474853,
 			"y": 26563.393738,
 			"z": 1944.715957,
@@ -12016,6 +12204,9 @@
 			"quests": {
 				"072BA80C": "Green and Pleasant Land",
 				"0730FCF1": "Camelot Kick Out Quest"
+			},
+			"weapons": {
+				"07315569": "Wood Bow"
 			},
 			"x": -54536.195312,
 			"y": -61139.800781,
@@ -12099,6 +12290,10 @@
 				"072C2D0C": "Mountbatten Talk/Relationship Scene",
 				"072C2D0F": "The Writing on the Wall"
 			},
+			"weapons": {
+				"07322588": "Arthur's Gun",
+				"0710C865": "Umbrella"
+			},
 			"x": -10595.481445,
 			"y": 65608.570312,
 			"z": 5053.487305,
@@ -12146,6 +12341,9 @@
 			"name": "Guard",
 			"quests": {
 				"07283CDA": "All To Pot"
+			},
+			"weapons": {
+				"07189A92": "Police Truncheon"
 			},
 			"x": 3042.598145,
 			"y": -34600.329102,
@@ -12276,6 +12474,9 @@
 			"name": "Artie Wells",
 			"quests": {
 				"072C24CB": "Mad Jack Unchained"
+			},
+			"weapons": {
+				"0710C861": "Razor"
 			},
 			"x": -7151.484863,
 			"y": 49424.835938,
@@ -12483,6 +12684,9 @@
 				"072BA80F": "Knight of the Cart",
 				"0730FCF1": "Camelot Kick Out Quest"
 			},
+			"weapons": {
+				"070BE3D1": "Long Sword"
+			},
 			"x": -85753.129913,
 			"y": -85481.648072,
 			"z": 5816.641235,
@@ -12642,6 +12846,9 @@
 			"quests": {
 				"072AEAA7": "Colonial's Finest"
 			},
+			"weapons": {
+				"070DB22B": "Crude Revolver"
+			},
 			"x": -14003.906189,
 			"y": -34931.907287,
 			"z": -386.188995,
@@ -12659,6 +12866,9 @@
 			"quests": {
 				"072DF799": "Folon_GMUniqueTraders"
 			},
+			"weapons": {
+				"070DB22B": "Crude Revolver"
+			},
 			"x": 2196.300537,
 			"y": -5206.046875,
 			"z": -387.888672,
@@ -12672,6 +12882,9 @@
 			"name": "Gruff",
 			"quests": {
 				"072AEAA1": "Abandoned Underground Tunnels"
+			},
+			"weapons": {
+				"070DB22B": "Crude Revolver"
 			},
 			"x": -8080.68164,
 			"y": 40950.473877,
@@ -12707,6 +12920,9 @@
 			"name": "Fluffy",
 			"quests": {
 				"072B658F": "Tea for Tomb"
+			},
+			"weapons": {
+				"00113339": "DeathclawDirtThrow"
 			},
 			"x": 7144.953125,
 			"y": -36444.926758,
@@ -12772,6 +12988,9 @@
 			"name": "Gambler",
 			"quests": {
 				"072ACDFF": "It Must Be Love"
+			},
+			"weapons": {
+				"070DB22B": "Crude Revolver"
 			},
 			"x": 1812.143921,
 			"y": -88.995667,
@@ -13098,6 +13317,9 @@
 			"quests": {
 				"073149E4": "Pendragon Companion Quest"
 			},
+			"weapons": {
+				"072EC6C8": "Spear"
+			},
 			"x": -85513.107574,
 			"y": -85126.526612,
 			"z": 5815.999985,
@@ -13237,6 +13459,9 @@
 			"quests": {
 				"072DEFC1": "Caravan Main Quest",
 				"072DEFC6": "PC Settlement - Caravan Stop"
+			},
+			"weapons": {
+				"070DB22B": "Crude Revolver"
 			},
 			"x": 72587.96875,
 			"y": -54212.167969,
@@ -13565,6 +13790,9 @@
 			"quests": {
 				"072B6599": "Excalibur"
 			},
+			"weapons": {
+				"0710C864": "Clarent"
+			},
 			"x": -50666.846679,
 			"y": -51025.002929,
 			"z": 2722.681153,
@@ -13581,6 +13809,9 @@
 			"name": "Morgana",
 			"quests": {
 				"072B6599": "Excalibur"
+			},
+			"weapons": {
+				"0014BBDA": "Behemoth Bolder"
 			},
 			"x": -26771.826172,
 			"y": -93111.945312,
@@ -13807,6 +14038,9 @@
 			"name": "Skinhead",
 			"quests": {
 				"072BF524": "All the World's a Stage"
+			},
+			"weapons": {
+				"070DB2BF": "Crude Gun"
 			},
 			"x": -1536.237671,
 			"y": 8505.656494,
