@@ -635,12 +635,16 @@ function fuzzySearch(s, limit, threshold) {
     keys: ['description', 'name', 'type', 'form_id', 'marker_id', 'custom_type', 'location', 'tags'],
     threshold: threshold,
     ignoreLocation: true,
+    includeScore: true,
     useExtendedSearch: true, // search by words
     findAllMatches: false, // stop on perfect match
   }
 
   let fuse = new Fuse(data, options);
   let result = fuse.search(s, { limit: limit });
+
+  const cmpAlphaNum2 = (a,b) => a.localeCompare(b, 'en', { numeric: true });
+  result.sort( (a,b)=> a.score - b.score || cmpAlphaNum2(a.item.name, b.item.name) ) ;
 
   return result;
 }
