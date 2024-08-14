@@ -1,0 +1,7 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<ShortName>Joric's Fallout London</ShortName>
+<Description>Search Joric's Fallout London Map</Description>
+<InputEncoding>UTF-8</InputEncoding>
+<Url type="text/html" method="get" template="http://joric.gihub.io/maps/fallout-london/#{searchTerms}"/>
+<moz:SearchForm>http://joric.gihub.io/maps/fallout-london/</moz:SearchForm>
+</OpenSearchDescription>
