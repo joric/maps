@@ -614,9 +614,9 @@ function fuzzySearch(s, limit, threshold) {
   return result;
 }
 
-function gotoMarkerByName(name) {
+function jumpToLocation(name) {
   if (marker = findLocation(name)) {
-    map.animateTo({center: marker.getCoordinates(), zoom:5, pitch:0, bearing:0});
+    map.animateTo({center: marker.getCoordinates(), zoom:3, pitch:0, bearing:0});
     marker.show();
     popupOnClick({target: marker});
     marker.openInfoWindow();
@@ -854,8 +854,8 @@ function loadData() {
 
 
   // marker link
-  if (markerName = mapParam.markerName) {
-    gotoMarkerByName(markerName);
+  if (name = mapParam.markerName) {
+    jumpToLocation(name);
   } else {
     if (settings.searchText != '') {
       let searchInput = document.querySelector('#search-input');
