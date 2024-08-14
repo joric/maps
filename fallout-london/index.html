@@ -1032,9 +1032,8 @@ function updateSearchResults(text) {
   document.querySelector('#search-count').textContent = label;
 
   if (result.length>1) {
-    //map.fitExtent(extent);
+    //map.setMaxZoom(4); map.fitExtent(extent); map.setMaxZoom(8); // sidebar issue, e.g. search tenpenny
   }
-
 }
 
 function jumpToMarker(id) {
