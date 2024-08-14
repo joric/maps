@@ -1032,7 +1032,14 @@ function updateSearchResults(text) {
   document.querySelector('#search-count').textContent = label;
 
   if (result.length>1) {
-    //map.setMaxZoom(4); map.fitExtent(extent); map.setMaxZoom(8); // sidebar issue, e.g. search tenpenny
+    map.setMaxZoom(6);
+    // grow extent vertically so it's square
+    if ((delta = extent.getWidth()-extent.getHeight())>0) {
+      extent.ymin -= delta/2;
+      extent.ymax += delta/2;
+    }
+    map.fitExtent(extent); 
+    map.setMaxZoom(10);
   }
 }
 
@@ -1040,7 +1047,7 @@ function jumpToMarker(id) {
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
     if (id == o.marker_id) {
-      map.animateTo({center: marker._coordinates});
+      //map.animateTo({center: marker._coordinates});
       marker.show();
       popupOnClick({target: marker});
       marker.openInfoWindow();
