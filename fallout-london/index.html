@@ -1031,8 +1031,8 @@ function updateSearchResults(text) {
   let label = result.length + ' search result' + (result.length!=1 ? 's':'');
   document.querySelector('#search-count').textContent = label;
 
-  if (result.length>1) {
-    map.setMaxZoom(6);
+  if (result.length>0) {
+    map.setMaxZoom(5);
     // grow extent vertically so it's square
     if ((delta = extent.getWidth()-extent.getHeight())>0) {
       extent.ymin -= delta/2;
