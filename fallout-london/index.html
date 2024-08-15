@@ -691,7 +691,9 @@ function loadData() {
 
   for (o of markers.markers) {
     //console.log(o);
-    if (!o.type) continue;
+
+    t = getType(o);
+    weights[t.group] = Math.max(weights[t.group]||0, t.weight);
 
     if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) continue;
 
@@ -732,7 +734,6 @@ function loadData() {
 
     counters[t.group] = counters[t.group] || {};
     counters[t.group][t.type] = (counters[t.group][t.type] || 0) + 1;
-    weights[t.group] = Math.max(weights[t.group]||0, t.weight);
   }
 
   let ul = document.querySelector('#categories');
