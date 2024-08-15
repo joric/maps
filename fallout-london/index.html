@@ -272,8 +272,8 @@ function itemName(o) {
   let t = getType(o);
   let name = o.name || 'Unnamed';
   for (let [reg, rep] of Object.entries(t.replace||{})) {
-    let issue = o.editor_id.match(/^.*(\d\d)$/);
-    if (issue) rep = rep.replace('{issue}', parseInt(issue[1]));
+    let index = o.editor_id.match(/^.*(\d\d)$/);
+    if (index) rep = rep.replace('{index}', parseInt(index[1]));
     name = name.replace(new RegExp(reg,'g'), rep);
   }
   return name.trim();

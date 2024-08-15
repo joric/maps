@@ -159,8 +159,8 @@
       "Note": {"match": "Note", "fa": "note-sticky", "bg": "sandybrown", "type": "Note"},
       "Magazine": {"match": "PerkMag", "fa": "book", "bg": "steelblue", "type": "Magazine", 
         "replace":{
-          "005 Comic": "005 {issue}",
-          "D.I.Y.": "DIY: The Householder's Handbook {issue}",
+          "005 Comic": "005 {index}",
+          "D.I.Y.": "DIY: The Householder's Handbook {index}",
           "Anarchy Timesr": "Anarchy Times"
           }
         },
