@@ -692,7 +692,7 @@ function loadData() {
   for (o of markers.markers) {
     //console.log(o);
 
-    t = getType(o);
+    let t = getType(o);
     weights[t.group] = Math.max(weights[t.group]||0, t.weight);
 
     if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) continue;
@@ -711,7 +711,6 @@ function loadData() {
       continue;
     }
 
-    let t = getType(o);
     cached_types[t.type] = {...cached_types[t.type], ...t};
 
     let marker = new maptalks.Marker(c, {
