@@ -592,7 +592,7 @@ function getItemURL(o) {
   return getMapURL(external_id);
 }
 
-let debugText = '';
+let debugParam = '';//'Cigarette_Card_Wild_Animal_No39';
 
 function findLocation(text) {
   let collection = map.getLayer('markers')._geoList;
@@ -612,8 +612,8 @@ function findLocation(text) {
     }
   }
 
-  if (result = fuzzySearch(text, 1)) {
-    //console.log('fallback to fuzzy with', text);
+  if (result = fuzzySearch(text, 1, 0.25)) {
+    if (debugParam) console.log('fallback to fuzzy with', text);
     return result[0].item.marker;
   }
 }
@@ -889,6 +889,7 @@ function loadData() {
     }
   },500);
 
+  if (debugParam) mapParam.markerName = debugParam;
 
   // marker link
   if (name = mapParam.markerName) {
@@ -902,11 +903,6 @@ function loadData() {
   }
 
   mapParam = {}; // critical to reload map properly
-
-  if (marker=(debugText && findLocation(debugText))) {
-    let o = marker.properties;
-    console.log(debugText, '=>', [o.name, o.type, itemType(o), itemLocation(o)]);
-  }
 }
 
 function postprocessMarkers(data){
