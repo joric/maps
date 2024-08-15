@@ -303,8 +303,15 @@ function markerSymbol2(o) {
     if (t.fg) fg = t.fg;
   }
 
-  // churchill
-  if ((o.editor_id||'').endsWith('DogCompanion')) icon = 'dog';
+  icon = {
+    'Churchill': 'dog',
+    'Umbrella': 'umbrella',
+    'TNT': 'bomb',
+  }[o.name] || icon;
+
+  if (o.name.endsWith('Grenade')) icon = 'bomb';
+  if (o.name.endsWith('Sword')) icon = 'screwdriver'; // no sword in font-awesome
+
 
   if (faction = getFaction(o)) {
     bg = faction.data.color;
