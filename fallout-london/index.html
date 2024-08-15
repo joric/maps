@@ -606,7 +606,7 @@ function popupOnClick(e) {
       for (const [k,v] of Object.entries(list)) {
         let a = document.createElement('a');
         a.className = 'popup-subnote-item';
-        a.textContent = v;
+        a.textContent = v.replace('FOLON_DogmeatQuest','Protect the Dog');
         a.title = k;
         a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(v);
         a.target = 'blank_';
