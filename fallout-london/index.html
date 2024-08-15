@@ -684,7 +684,7 @@ function loadData() {
     return {'x':x, 'y':-y, 'z':z};
   }
 
-  let transformed_types = {};
+  let cached_types = {};
   let weights = {};
 
   for (o of markers.markers) {
@@ -708,7 +708,7 @@ function loadData() {
     }
 
     let t = getType(o);
-    transformed_types[t.type] = t;
+    cached_types[t.type] = cached_types[t.type] || t;
 
     let marker = new maptalks.Marker(c, {
       properties: o,
@@ -762,7 +762,7 @@ function loadData() {
 
     for ([title, count, type] of items.sort(cmpAlphaNum)) {
 
-      let t = transformed_types[type];
+      let t = cached_types[type];
 
       let li = document.createElement('div');
       li.className = 'item';

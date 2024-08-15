@@ -106,6 +106,15 @@
     }
   },
 
+  "MISC": {"group":"items", "weight": 800,
+    "items": {
+      "Vinyl": {"match":"Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type":"Vinyl Record"},
+      "CigaretteCard": {"match":"MiscCard", "fa": "diamond", "bg": "chocolate", "type": "Cigarette Card"},
+      "Coaster": {"match":"BobbleHead_", "fa": "square", "bg": "peru", "type": "Coaster"},
+      "CuteThulhu": {"match":"Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"}
+    }
+  },
+
   "ACTI": {"fa": "screwdriver-wrench", "bg": "red", "type": "Workshop", "group": "items",
     "items": {
       "Tardis": {"match":"FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Unusual Call Box"},
@@ -126,15 +135,6 @@
           }
         },
       "Card": {"match":"Card", "fa": "id-card", "bg": "goldenrod", "type": "Visiting Card"}
-    }
-  },
-  
-  "MISC": {"group":"items", "weight": 800,
-    "items": {
-      "Vinyl": {"match":"Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type":"Vinyl Record"},
-      "CigaretteCard": {"match":"MiscCard", "fa": "diamond", "bg": "chocolate", "type": "Cigarette Card"},
-      "Coaster": {"match":"BobbleHead_", "fa": "square", "bg": "peru", "type": "Coaster"},
-      "CuteThulhu": {"match":"Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"}
     }
   }
 }
