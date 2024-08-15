@@ -392,7 +392,7 @@ function toggleGroup(e) {
 let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = o.cell_name) ? ' (' + cell + ')' : '');
 let itemDescription = o=> itemName(o) + ' (' + itemTypeExtended(o) + ')';
 let itemType = o => getType(o).type;
-let itemTypeExtended = o => {t = getType(o); return t.subclass ? t.subclass + ' / ' + t.subclass : t.type; } 
+let itemTypeExtended = o => {t = getType(o); return t.subclass ? t.type + ' / ' + t.subclass : t.type; } 
 let human = s=>s.replace(/([A-Z]+|[\d]+)/g, ' $1').replace(/^ /, ''); // camel case to space-separated
 
 function showAll(e) { toggleItems(e, true, document.querySelectorAll('#categories .category-item')); }
