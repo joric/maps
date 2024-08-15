@@ -9,7 +9,11 @@
   "USS Constitution": {"fa": "ship", "group": "places of interest"},
   "Synth Head": {"fa": "globe", "type": "Theatre", "group": "places of interest"},
   "Castle": {"fa": "chess-rook","group": "places of interest"},
-  "Settlement": {"fa": "tents", "bg": "darkcyan", "group": "settlements" },
+  "Settlement": {"fa": "tents", "bg": "darkcyan", "group": "settlements", 
+    "items": {
+      "Oval":{ "match":"Oval", "fa": "water", "type": "Pond / Lake", "group": "places of interest" }
+     }
+   },
   "Railroad": {"fa": "train", "group": "travel"},
   "Junkyard": {"fa": "car-side", "group": "places of interest"},
   "Shipwreck": {"fa": "ship", "group": "places of interest"},
@@ -107,7 +111,10 @@
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
   "ALCH": {"fa": "briefcase-medical", "bg": "red", "type": "Meds", "group": "items",
     "items": {
-      "Dog Food": {"match": "Folon_FoodDog", "fa": "shield-dog", "bg": "chocolate", "type": "Dog Food"}
+      "Dog Food": {"match": "Folon_FoodDog", "fa": "shield-dog", "bg": "chocolate", "type": "Dog Food"},
+      "Roid": {"match": "Buffout", "fa": "jar"},
+      "Rad-X": {"match": "RadX", "fa": "prescription-bottle"},
+      "Hyp-O": {"match": "Psycho", "fa": "syringe"}
     }
   },
   "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",
