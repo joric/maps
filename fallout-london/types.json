@@ -60,7 +60,7 @@
   "Sentinel": {"fa": "igloo", "type": "The Dome", "group":"places of interest"},
   "Salem": {"fa": "place-of-worship", "type": "Temple", "group": "places of interest"},
 
-  "Prydwen": {"fa": "hand-fist", "bg": "darkslategrey", "type" : "Pistols", "group":"factions"},
+  "Prydwen": {"fa": "hand-fist", "bg": "slategrey", "type" : "Pistols", "group":"factions"},
 
   "Custom 66": {"fa": "anchor",  "type": "Naval College", "group":"facilities"},
   "Custom 67": {"fa": "bullseye", "bg": "darkgoldenrod", "type": "Roundels", "group": "factions"},
