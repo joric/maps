@@ -157,6 +157,7 @@
     "items": {
       "Newspaper": {"match": "Newspaper", "fa": "newspaper", "bg": "#aaa", "type": "Newspaper"},
       "Note": {"match": "Note", "fa": "note-sticky", "bg": "sandybrown", "type": "Note"},
+      "Coaster": {"match": "Folon_BOOK_Mag", "fa": "image", "bg": "peru", "type": "Coaster"},
       "Magazine": {"match": "PerkMag", "fa": "book", "bg": "steelblue", "type": "Magazine", 
         "replace":{
           "005 Comic": "005 {index}",
