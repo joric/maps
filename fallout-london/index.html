@@ -568,9 +568,12 @@ function canonical(id) {
   return id ? id.slice(2) : '';
 }
 
+function getBaseURL() {
+  return window.location.href.replace(/#.*$/,'');
+}
+
 function getMapURL(id) {
-  let base = window.location.href.replace(/#.*$/,'');
-  return base + '#' + encodeURIComponent(id);
+  return getBaseURL() + '#' + encodeURIComponent(id);
 }
 
 function wikify(o) {
@@ -888,6 +891,9 @@ function loadData() {
   if (name = mapParam.markerName) {
     jumpToLocation(name);
   } else {
+    if (search = mapParam.search) {
+      settings.searchText = search;
+    }
     if (settings.searchText != '') {
       let searchInput = document.querySelector('#search-input');
       searchInput.value = settings.searchText;
@@ -1034,8 +1040,13 @@ function updateSearchResults(text) {
 
   div.replaceChildren(...nodes);
 
-  let label = result.length + ' search result' + (result.length!=1 ? 's':'');
-  document.querySelector('#search-count').textContent = label;
+  // add secret copy search link
+  let a = document.createElement('a');
+  a.href = getBaseURL() + '#search/' + encodeURIComponent(text);
+  a.onclick = function(e){ copyToClipboard(e.target.href); return false; };
+  a.title = 'copy search url to clipboard';
+  a.textContent = result.length + ' search result' + (result.length!=1 ? 's':'');
+  document.querySelector('#search-count').replaceChildren(a);
 
   if (result.length>0) {
     map.setMaxZoom(5);
@@ -1137,8 +1148,13 @@ function closeSearch() {
 window.onload = function(event) {
 
   if (location.hash.length>1) {
-    mapParam.markerName = decodeURIComponent(location.hash.slice(1));
-    mapParam.mapId = Object.keys(maps)[0];
+    let param = decodeURIComponent(location.hash.slice(1));
+    if (param.startsWith('search/')) {
+      mapParam.search = param.split('/')[1];
+    } else {
+      mapParam.markerName = param;
+      mapParam.mapId = Object.keys(maps)[0];
+    }
   }
 
   // clear location hash
