@@ -1,9 +1,9 @@
 {
-  "City":{"fa": "city", "bg": "red", "group": "travel", "weight": 800},
+  "City":{"fa": "city", "bg": "red", "group": "travel", "weight": 850},
   "Town":{"fa": "tree-city", "bg": "red", "group": "travel"},
   "Gov't Building / Monument": { "fa": "building-columns", "group": "buildings"},
   "Bunker Hill": {"fa": "monument", "type": "Monument", "group": "places of interest", "weight": 700},
-  "Vault": {"fa": "gear", "group":"settlements", "weight": 850},
+  "Vault": {"fa": "gear", "group":"settlements", "weight": 800},
   "Faneuil Hall": {"fa": "dollar-sign", "type": "Bank", "group": "facilities", "weight": 600},
   "Submarine": {"fa": "ship", "group":"places of interest"},
   "USS Constitution": {"fa": "ship", "group": "places of interest"},
