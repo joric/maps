@@ -3,7 +3,7 @@
   "Town":{"fa": "tree-city", "bg": "red", "group": "travel"},
   "Gov't Building / Monument": { "fa": "building-columns", "group": "buildings"},
   "Bunker Hill": {"fa": "monument", "type": "Monument", "group": "places of interest", "weight": 700},
-  "Vault": {"fa": "gear", "group":"settlements", "weight": 800},
+  "Vault": {"fa": "gear", "group":"settlements", "weight": 750},
   "Faneuil Hall": {"fa": "dollar-sign", "type": "Bank", "group": "facilities", "weight": 600},
   "Submarine": {"fa": "ship", "group":"places of interest"},
   "USS Constitution": {"fa": "ship", "group": "places of interest"},
@@ -75,7 +75,7 @@
   "Custom 80": {"fa": "hat-cowboy", "bg": "forestgreen", "type": "Vagabonds", "group": "factions"},
 
   "NPC_": {
-    "fa": "person", "bg": "#555", "type": "NPC", "group": "misc",
+    "fa": "person", "bg": "#555", "type": "NPC", "group": "items",
     "items": {
       "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"Dog":"Churchill"}},
       "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "replace": {"Strange Robot":"Pendragon"}},
@@ -95,18 +95,18 @@
   "FURN": {"fa": "wrench", "bg": "tomato", "type": "Workbench", "group": "settlements"},
   "CONT": {"fa": "screwdriver-wrench", "bg": "red", "type": "Workshop", "group": "settlements"},
 
-  "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "misc"},
-  "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "misc"},
-  "ALCH": {"fa": "briefcase-medical", "bg": "red", "type": "Meds", "group": "misc"},
-  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "misc"},
+  "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items"},
+  "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
+  "ALCH": {"fa": "briefcase-medical", "bg": "red", "type": "Meds", "group": "items"},
+  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items"},
 
-  "WEAP": {"fa": "gun", "bg": "tomato", "type":"Weapon", "group": "misc",
+  "WEAP": {"fa": "gun", "bg": "tomato", "type":"Weapon", "group": "items",
     "items": {
       "Umbrella": {"match":"Folon_Weap_Umbrella", "fa": "umbrella"}
     }
   },
 
-  "ACTI": {"fa": "screwdriver-wrench", "bg": "red", "type": "Workshop", "group": "misc",
+  "ACTI": {"fa": "screwdriver-wrench", "bg": "red", "type": "Workshop", "group": "items",
     "items": {
       "Tardis": {"match":"FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Unusual Call Box"},
       "Beacon": {"match":"Folon_ACTI_BarryBoatBeacon", "fa": "toggle-off", "bg": "cornflowerblue", "type": "Water Signal Beacon"},
@@ -115,7 +115,7 @@
     }
   },
 
-  "BOOK": {"fa": "envelope", "bg": "tan", "type":"Message", "group": "misc",
+  "BOOK": {"fa": "envelope", "bg": "tan", "type":"Message", "group": "items",
     "items": {
       "Newspaper": {"match":"Newspaper", "fa": "newspaper", "bg": "#aaa", "type":"Newspaper"},
       "Note": {"match":"Note", "fa": "note-sticky", "bg": "sandybrown", "type":"Note"},
@@ -129,7 +129,7 @@
     }
   },
   
-  "MISC": {"group":"misc", "weight": -8000,
+  "MISC": {"group":"items", "weight": 800,
     "items": {
       "Vinyl": {"match":"Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type":"Vinyl Record"},
       "CigaretteCard": {"match":"MiscCard", "fa": "diamond", "bg": "chocolate", "type": "Cigarette Card"},
