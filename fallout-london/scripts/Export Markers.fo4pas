@@ -94,7 +94,7 @@ begin
         if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin
         end else
         if (Signature(r) = 'FLOR') and (Signature(e) = 'REFR') then begin
-          if (pos('WildMutfruit', s)=0)
+          //if (pos('WildMutfruit', s)=0)
           then continue;
         end else
         if (Signature(r) = 'AMMO') and (Signature(e) = 'REFR') then begin

@@ -286,7 +286,9 @@ function getType(o) {
     if (tt.match && o.editor_id) {
       if (o.editor_id.match(new RegExp(tt.match,'g'))) {
         t = {...t, ...tt, key: key};
-        if (!tt.type) t = {...t, subclass: key};
+        if (!tt.type) {
+          t = {...t, subclass: key};
+        }
         return t;
       }
     }
@@ -708,7 +710,7 @@ function loadData() {
     }
 
     let t = getType(o);
-    cached_types[t.type] = cached_types[t.type] || t;
+    cached_types[t.type] = {...cached_types[t.type], ...t};
 
     let marker = new maptalks.Marker(c, {
       properties: o,
@@ -775,7 +777,7 @@ function loadData() {
       c0.className = 'icon';
 
       c0.classList.add('fa');
-      c0.classList.add('fa-' + t.fa);
+      c0.classList.add('fa-' + (t.group_fa||t.fa));
       // c0.style.color = t.bg; // color icons
 
       let c1 = document.createElement('span');

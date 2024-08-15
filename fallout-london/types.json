@@ -92,7 +92,7 @@
     }
   },
 
-  "FURN": {"fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "settlements",
+  "FURN": {"group_fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "settlements",
     "items": {
       "Weapons Workbench": {"match":"Folon_WorkbenchWeapons", "fa": "gun"},
       "Tea Station": {"match":"Folon_WorkbenchTeaStation", "fa":"mug-hot"},
@@ -100,6 +100,7 @@
       "Armour Station": {"match":"Folon_WorkbenchArmor", "fa":"shield-halved"}
     }
    },
+
   "CONT": {"fa": "screwdriver-wrench", "bg": "red", "type": "Workshop", "group": "settlements"},
 
   "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items"},
@@ -128,11 +129,11 @@
     }
   },
 
-  "ACTI": {"fa": "screwdriver-wrench", "bg": "red", "type": "Workshop", "group": "items",
+  "ACTI": {"fa": "virus", "bg": "red", "type": "Workshop", "group": "items",
     "items": {
       "Tardis": {"match":"FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Unusual Call Box"},
       "Beacon": {"match":"Folon_ACTI_BarryBoatBeacon", "fa": "toggle-off", "bg": "cornflowerblue", "type": "Water Signal Beacon"},
-      "CutethulhuActivator": {"match":"Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus", "bg": "darkslategrey", "type": "CuteThulhu Actvator"}
+      "CutethulhuActivator": {"match":"Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus", "bg": "darkslategrey", "type": "CuteThulhu Activator"}
     }
   },
 
