@@ -108,7 +108,7 @@
 
   "ACTI": {"fa": "screwdriver-wrench", "bg": "red", "type": "Workshop", "group": "items",
     "items": {
-      "Tardis": {"match":"FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Call Box"},
+      "Tardis": {"match":"FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Unusual Call Box"},
       "Beacon": {"match":"Folon_ACTI_BarryBoatBeacon", "fa": "toggle-off", "bg": "cornflowerblue", "type": "Water Signal Beacon"},
       "CutethulhuActivator": {"match":"Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus",
         "bg": "darkslategrey", "type": "CuteThulhu Activator"}
