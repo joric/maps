@@ -11,7 +11,7 @@
   "Castle": {"fa": "chess-rook","group": "places of interest"},
   "Settlement": {"fa": "tents", "bg": "darkcyan", "group": "settlements", 
     "items": {
-      "Oval":{ "match":"Oval", "fa": "water", "type": "Pond / Lake", "group": "places of interest" }
+      "Oval":{ "match":"Oval", "fa": "water", "bg": "grey", "type": "Pond / Lake", "group": "places of interest" }
      }
    },
   "Railroad": {"fa": "train", "group": "travel"},
