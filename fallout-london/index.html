@@ -617,9 +617,10 @@ function popupOnClick(e) {
       }
     }
 
-    popup.querySelector('#popup-title').innerText = itemName(o);
-    popup.querySelector('#popup-subtitle').innerText = itemTypeExtended(o);
-    popup.querySelector('#popup-note').innerText = itemLocation(o);
+    popup.querySelector('#popup-title').textContent = itemName(o);
+    popup.querySelector('#popup-title').title = o.form_id;
+    popup.querySelector('#popup-subtitle').textContent = itemTypeExtended(o);
+    popup.querySelector('#popup-note').textContent = itemLocation(o);
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
     popup.querySelector('#popup-found').checked = settings.markedItems[o.marker_id]==true;
     popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.marker_id) };
