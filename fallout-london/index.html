@@ -620,8 +620,12 @@ function fuzzySearch(s, limit, threshold) {
   for (marker of collection) {
     let o = marker.properties;
     let tags = [];
-    if (o.quests) for (const [k,v] of Object.entries(o.quests)) tags.push(v);
-    if (o.weapons) for (const [k,v] of Object.entries(o.weapons)) tags.push(v);
+
+    for (const list of [o.quests, o.weapons, o.perks]) {
+      if (!list) continue;
+      for (const [k,v] of Object.entries(list)) { tags.push(k); tags.push(v); }
+    }
+
     data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), tags: tags, marker: marker}});
   }
 
@@ -670,25 +674,19 @@ function popupOnClick(e) {
     let div = popup.querySelector('#popup-subnote');
     div.replaceChildren();
 
-    if (o.quests || o.weapons) {
-      let split = true;
-
-      for (const list of [o.quests, o.weapons]) {
-        if (list) {
-          div.appendChild(document.createElement('hr'));
-          for (const[id, name] of Object.entries(list)) {
-            let a = document.createElement('a');
-            a.className = 'popup-subnote-item';
-            a.textContent = name;
-            a.title = id;
-            a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(name);
-            a.target = 'blank_';
-            div.appendChild(a);
-          }
-        }
-      }
-
+    for (const list of [o.quests, o.weapons, o.perks]) {
+      if (!list) continue;
       div.classList.remove('collapsed');
+      div.appendChild(document.createElement('hr'));
+      for (const [k,v] of Object.entries(list)) {
+        let a = document.createElement('a');
+        a.className = 'popup-subnote-item';
+        a.textContent = v;
+        a.title = k;
+        a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(v);
+        a.target = 'blank_';
+        div.appendChild(a);
+      }
     }
 
     popup.querySelector('#popup-title').innerText = o.name;
@@ -922,9 +920,12 @@ function postprocessMarkers(data){
       if (o.editor_id.includes('Newspaper')) o.type = '_Newspaper';
       if (o.editor_id.includes('Note') || o.name.includes('Note')) o.type = '_Note';
       if (o.editor_id.includes('PerkMag')) {
+
         o.type = '_Magazine';
         if (o.name == "005 Comic") o.name = '005';
         if (o.name == "D.I.Y.") o.name = 'DIY: The Householder\'s Handbook';
+
+        // may be do not rename issue may be name mismatch
         let issue = o.editor_id.match(/^.*(\d\d)$/);
         if (issue) o.name = o.name +' '+ parseInt(issue[1]);
       }

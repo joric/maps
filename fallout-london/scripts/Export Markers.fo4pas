@@ -9,8 +9,8 @@ uses SysUtils;
 
 function Finalize: integer;
 var
-  i, j, k, w, count, doors, ItemsCount, quests, q: integer;
-  f, g, e, r, area, cell, refs, a, b, ref, items, item, rec, MapMarkerStat: IInterface;
+  i, j, k, w, count, doors, ItemsCount, quests, q, value: integer;
+  f, g, e, r, area, cell, refs, a, b, ref, items, item, rec, perk, MapMarkerStat: IInterface;
   Obj, ChildObj: TJsonObject;
   s, id: string;
   sList: TStringList;
@@ -63,7 +63,7 @@ begin
 
   count := 0;
   sList := TStringList.Create;
-  sList.DelimitedText := 'NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN CONT ACTI';
+  sList.DelimitedText := 'BOOK NPC_ MISC ALCH WEAP AMMO NOTE FLOR FURN CONT ACTI';
 
   for k := 0 to Pred(sList.Count) do begin
     g := GroupBySignature(f, sList[k]);
@@ -166,8 +166,17 @@ begin
               end;
             end;
           end;
-
         end;
+
+        value := GetElementNativeValues(r, 'DATA\Value');
+        if (value <> 0) then begin
+          ChildObj['value'] := value;
+        end;
+
+        perk := LinksTo(ElementByPath(r, 'DNAM\Perk'));
+        if Assigned(perk) then begin
+          ChildObj.O['perks'].S[GetElementEditValues(perk, 'DESC')] := GetElementEditValues(perk, 'FULL');
+        end
 
         x := GetElementNativeValues(e, 'DATA\Position\X');
         y := GetElementNativeValues(e, 'DATA\Position\Y');
