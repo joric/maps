@@ -268,15 +268,18 @@ function createMap() {
 }
 
 
-function itemName(o) {
+function itemText(text, o) {
   let t = getType(o);
-  let name = o.name || 'Unnamed';
   for (let [reg, rep] of Object.entries(t.replace||{})) {
     let index = o.editor_id.match(/^.*(\d\d)$/);
     if (index) rep = rep.replace('{index}', parseInt(index[1]));
-    name = name.replace(new RegExp(reg,'g'), rep);
+    text = text.replace(new RegExp(reg,'g'), rep);
   }
-  return name.trim();
+  return text.trim();
+}
+
+function itemName(o) {
+  return itemText(o.name || 'Unnamed', o);
 }
 
 function getType(o) {
@@ -546,7 +549,7 @@ function fuzzySearch(s, limit, threshold) {
 
     for (const list of [o.quests, o.weapons, o.perks, o.outfits]) {
       if (!list) continue;
-      for (const [k,v] of Object.entries(list)) { tags.push(k); tags.push(v); }
+      for (const [k,v] of Object.entries(list)) { tags.push(k); tags.push(itemText(v,o)); }
     }
 
     let t = getType(o);
@@ -606,9 +609,9 @@ function popupOnClick(e) {
       for (const [k,v] of Object.entries(list)) {
         let a = document.createElement('a');
         a.className = 'popup-subnote-item';
-        a.textContent = v.replace('FOLON_DogmeatQuest','Protect the Dog');
         a.title = k;
-        a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(v);
+        a.textContent = itemText(v,o);
+        a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(v,o));
         a.target = 'blank_';
         div.appendChild(a);
       }

@@ -81,7 +81,7 @@
   "NPC_": {
     "fa": "person", "bg": "#555", "type": "NPC", "group": "items",
     "items": {
-      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"Dog": "Churchill"}},
+      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"^Dog$": "Churchill", "FOLON_DogmeatQuest":"Protect the Dog"}},
       "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "replace": {"Strange Robot": "Pendragon"}},
       "Pistols": {"match": "Pistol","bg": "slategrey"},
       "Isle of Dogs": {"match": "IODS", "bg": "forestgreen"},
