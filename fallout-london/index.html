@@ -136,7 +136,7 @@ let mapId = 'LondonWorld';
 let pressed = {};
 let markers = {};
 let mapParam = {};
-let firstStart = false;
+let firstRun = false;
 let layerName = 'markers';
 
 let maps = {
@@ -796,9 +796,10 @@ function loadData() {
   ul.replaceChildren(...nodes);
 
 
-  if (firstStart) {
-    firstStart = false;
-    document.querySelector('#group-header-misc').click();
+  if (firstRun) {
+    firstRun = false;
+    // make it less cluttered maybe ?
+    // document.querySelector('#group-header-items').click();
     saveSettings();
   }
 
@@ -1022,7 +1023,7 @@ window.onload = function(event) {
   for (id of Object.keys(maps)) {
     if (!localData[id]) {
       localData[id] = {};
-      firstStart = true;
+      firstRun = true;
     }
     localData[id].markedItems = localData[id].markedItems || {};
     localData[id].hiddenItems = localData[id].hiddenItems || {};
