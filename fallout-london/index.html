@@ -137,6 +137,7 @@ let pressed = {};
 let markers = {};
 let mapParam = {};
 let firstStart = false;
+let layerName = 'markers';
 
 let maps = {
   'LondonWorld' : { name: 'London', scale: 1, offset: {x:0, y:0},
@@ -159,38 +160,15 @@ let maps = {
   'CoventGardenWorldSpace': { name:'Covent Garden', scale: 3.77, offset: {x:6000, y:4800}, hidden: true },
 };
 
-let factions = {
-  'Pistols': {npc:'Pistol',color:'slategrey'},
-  'Isle of Dogs': {npc:'IODS', color:'forestgreen'},
-  '5th Column': {npc:'5thColumn', color:'darkorchid'},
-  'Vagabonds': {npc:'Vagabonds', color:'saddlebrown'},
-  'Camelot': {npc:'NPC_Camelot', color:'darkorange'},
-  'Roundels': {npc:'NPC_Roundel', color:'darkgoldenrod'},
-  'Angels': {npc:'NPC_Angel', color:'red'},
-  'Tommies': {npc:'Tommy', color:'royalblue'},
-  'Gentry': {npc:'Gentry', color:'lightgrey'},
-  'Thamesfolk': {npc:'NPC_Thameshaven', color: 'darkslategrey'},
-}
-
-function getFaction(o) {
-  for (const [name, value] of Object.entries(factions)) {
-    if ((types[o.type] && types[o.type].name==name) || (o.type=='NPC_' && (o.editor_id && o.editor_id.includes(value.npc)))) {
-      return {name: name, data: value};
-    }
-  }
-  return null
-}
-
 function createMap() {
-
   // fill map switcher panel
   let div = document.querySelector('.map-switcher-panel');
   div.replaceChildren();
 
-  for (const [id,t] of Object.entries(maps)) {
-    if (t.hidden) continue;
+  for (const [id,m] of Object.entries(maps)) {
+    if (m.hidden) continue;
     let a = document.createElement('a');
-    a.innerText = markers.worldspaces[id].name;
+    a.innerText = m.name;
     a.className = 'map-link';
     a.href = '#' + id;
     a.onclick = function(e){ loadMap(e.target.href.split('#').pop()); return false; }
@@ -289,40 +267,45 @@ function createMap() {
   });
 }
 
+
+function itemName(o) {
+  let t = getType(o);
+  let name = o.name || 'Unnamed';
+  for (let [reg, rep] of Object.entries(t.replace||{})) {
+    let issue = o.editor_id.match(/^.*(\d\d)$/);
+    if (issue) rep = rep.replace('{issue}', parseInt(issue[1]));
+    name = name.replace(new RegExp(reg,'g'), rep);
+  }
+  return name.trim();
+}
+
+function getType(o) {
+  let defaults = { bg: 'grey', fg: 'white', fa: 'circle-question', group:'misc'};
+  t = {...defaults, type: o.type, weight:0, ...(types[o.type] || {})};
+  for (const [key, tt] of Object.entries(t.items||{})) {
+    if (tt.match && o.editor_id) {
+      if (o.editor_id.match(new RegExp(tt.match,'g'))) {
+        t = {...t, ...tt, key: key};
+        if (!tt.type) t = {...t, subclass: key};
+        return t;
+      }
+    }
+  }
+  return t;
+}
+
 function markerSymbol2(o) {
   let d = 48;
-  let bg = 'grey';
-  let fg = 'white';
-  let icon = 'circle-question';
-
-  let type = o.type;
-
-  if (t = types[type]) {
-    if (t.fa) icon = t.fa;
-    if (t.bg) bg = t.bg;
-    if (t.fg) fg = t.fg;
-  }
-
-  icon = {
-    'Churchill': 'dog',
-    'Umbrella': 'umbrella',
-    'TNT': 'bomb',
-  }[o.name] || icon;
-
-  if (o.name.endsWith('Grenade')) icon = 'bomb';
-  if (o.name.endsWith('Sword')) icon = 'screwdriver'; // no sword in font-awesome
-
-
-  if (faction = getFaction(o)) {
-    bg = faction.data.color;
-  }
+  let t = getType(o);
+  let icon = t.fa;
+  let bg = t.bg;
+  let fg = t.fg;
 
   let [w1,h1,[s1],c1,p1] = FontAwesome.icon({ iconName: 'location-pin' }).icon;
 
   if (!(fa = FontAwesome.icon({ iconName: icon }))) {
     fa = FontAwesome.icon({ icon: 'circle-question' });
   }
-
 
   let [w2,h2,[s2],c2,p2] = fa.icon;
 
@@ -397,31 +380,20 @@ const capitalize = s => s[0].toUpperCase()+s.slice(1);
 
 function toggleGroup(e) {
   e.preventDefault();
-
   // check siblings, if all visible set show to false else true
   let show = false;
   let divs = e.target.nextSibling.querySelectorAll('.category-item');
   [].forEach.call(divs,function(e) {
     if (e.classList.contains('hidden')) show = true;
   });
-
   return e.target.alt && toggleItems(e, show, divs);
 }
 
 let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = o.cell_name) ? ' (' + cell + ')' : '');
-let itemDescription = o=> ( o.name || 'Unnamed' ) + ' (' + itemType(o) + ')';
-let itemType = o=> (faction = getFaction(o)) ? faction.name : humanReadableType(o.type);
+let itemDescription = o=> itemName(o) + ' (' + itemTypeExtended(o) + ')';
+let itemType = o => getType(o).type;
+let itemTypeExtended = o => {t = getType(o); return t.subclass ? t.subclass + ' / ' + t.alias : t.type; } 
 let human = s=>s.replace(/([A-Z]+|[\d]+)/g, ' $1').replace(/^ /, ''); // camel case to space-separated
-
-function humanReadableType(type) {
-  let s = type;
-  if (name = (types[type] && types[type].name)) {
-    s = name;
-  } else {
-    s = human(s);
-  }
-  return s;
-}
 
 function showAll(e) { toggleItems(e, true, document.querySelectorAll('#categories .category-item')); }
 function hideAll(e) { toggleItems(e, false, document.querySelectorAll('#categories .category-item')); }
@@ -445,39 +417,19 @@ function toggleGroup(e) {
 }
 
 function toggleItems(e, show, parent) {
-
-  let hideFound = false;//document.querySelector('#toggle-found').classList.contains('hidden');
-
-  let alwaysVisible = marker=>marker.properties.type=='Jumppad_C' || marker.properties.type.startsWith('Pipesystem');
-
-  lookup = {};
+  ids = {};
   for (div of parent) {
-    lookup[div.alt] = div;
+    ids[div.alt] = true;
   }
 
-  // update markers
-  for (layerName of ['markers']) {
-    for (marker of map.getLayer(layerName)._geoList) {
-      let o = marker.properties;
-
-      for (type of [o.spawns,o.type]) {
-
-        if (div = lookup[type]) {
-          let found = settings.markedItems[o.marker_id];
-
-          // toggle markers
-          show && !(found && hideFound && !alwaysVisible(marker)) ? marker.show() : marker.hide();
-
-          // update active items
-          if (layerName == 'markers') {
-            if (show) {
-              delete settings.hiddenItems[type];
-            } else {
-              settings.hiddenItems[type] = true;
-            }
-          }
-        }
-      }
+  for (marker of markerLayer._geoList) {
+    let o = marker.properties;
+    let t = getType(o);
+    if (!ids[t.type]) continue;
+    if (show) {
+      delete settings.hiddenItems[t.type];
+    } else {
+      settings.hiddenItems[t.type] = true;
     }
   }
 
@@ -490,49 +442,14 @@ function toggleItems(e, show, parent) {
 
 function markItems() {
   // update markers
-  let hideFound = false;//document.querySelector('#toggle-found').classList.contains('hidden');
-  let hideContent = false;//document.querySelector('#toggle-content').classList.contains('hidden');
-  let alwaysVisible = marker=>marker.properties.type=='Jumppad_C' || marker.properties.type.startsWith('Pipesystem');
-
-  let total = {};
-  let marked = {};
-
-  for (layerName of ['markers']) {
-
-    for (marker of map.getLayer(layerName)._geoList) {
-      let o = marker.properties;
-      let found = settings.markedItems[o.marker_id];
-
-      let hidden = settings.hiddenItems[o.type];
-
-      hidden || (found && hideFound && !alwaysVisible(marker)) ? marker.hide() : marker.show();
-
-      if (layerName == 'markers') {
-
-        let spawns = o.spawns;
-        if (o.type == 'Chest_C' && !o.spawns) {
-          spawns = o.coins>1 ? 'LotsOfCoins5_C' : 'Coin_C';
-        }
-
-        let type = hideContent ? o.type : (spawns || o.type); // show content if allowed
-
-        marker.updateSymbol({markerOpacity: found ? 0.5 : 1 });
-
-        total[o.type] = (total[o.type] || 0) + 1;
-        marked[o.type] = (marked[o.type] || 0) + (found ? 1 : 0);
-
-        if(o.spawns){
-          total[o.spawns] = (total[o.spawns] || 0) + 1;
-          marked[o.spawns] = (marked[o.spawns] || 0) + (found ? 1 : 0);
-        }
-
-      } else {
-        marker.updateSymbol({lineOpacity: marked ? 0.5 : 1 });
-      }
-    }
+  for (marker of markerLayer._geoList) {
+    let o = marker.properties;
+    let t = getType(o);
+    marker.updateSymbol({markerOpacity: settings.markedItems[o.marker_id] ? 0.5 : 1 });
+    settings.hiddenItems[t.type] ? marker.hide() : marker.show();
   }
 
-  // mark html items
+  // mark DOM structure on the page
   [].forEach.call(document.querySelectorAll('#categories .item'), function(div) {
     if (settings.hiddenItems[div.alt]==true) {
       div.classList.add('hidden');
@@ -540,14 +457,11 @@ function markItems() {
       div.classList.remove('hidden');
     }
   });
-
 }
 
 function toggleMarked(id) {
   settings.markedItems[id] = !settings.markedItems[id];
-  //markItems();
-
-  for (marker of map.getLayer('markers')._geoList) {
+  for (marker of markerLayer._geoList) {
     let o = marker.properties;
     if (id == o.marker_id) {
       let found = settings.markedItems[id];
@@ -555,7 +469,6 @@ function toggleMarked(id) {
       break;
     }
   }
-
   saveSettings();
 }
 
@@ -603,6 +516,7 @@ function findLocation(text) {
   let words = split(text);
   let name = words.join(' ');
 
+  // try exact match first
   for (let stage=0; stage<3; stage++) {
     for (marker of collection) {
       let o = marker.properties;
@@ -633,14 +547,16 @@ function fuzzySearch(s, limit, threshold) {
       for (const [k,v] of Object.entries(list)) { tags.push(k); tags.push(v); }
     }
 
-    data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), tags: tags, marker: marker}});
+    let t = getType(o);
+
+    data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), tags: tags, key: t.key, marker: marker}});
   }
 
   limit = limit || 100;
   threshold = threshold || 0.75;
 
   let options = {
-    keys: ['description', 'name', 'type', 'form_id', 'marker_id', 'custom_type', 'location', 'tags'],
+    keys: ['description', 'name', 'type', 'form_id', 'marker_id', 'custom_type', 'location', 'tags', 'key'],
     threshold: threshold,
     ignoreLocation: true,
     includeScore: true,
@@ -652,7 +568,7 @@ function fuzzySearch(s, limit, threshold) {
   let result = fuse.search(s, { limit: limit });
 
   const cmpAlphaNum2 = (a,b) => a.localeCompare(b, 'en', { numeric: true });
-  result.sort( (a,b)=> a.score - b.score || cmpAlphaNum2(a.item.name, b.item.name) ) ;
+  result.sort( (a,b)=> a.score - b.score || cmpAlphaNum2(a.item.description, b.item.description) ) ;
 
   return result;
 }
@@ -696,8 +612,8 @@ function popupOnClick(e) {
       }
     }
 
-    popup.querySelector('#popup-title').innerText = o.name;
-    popup.querySelector('#popup-subtitle').innerText = itemType(o);
+    popup.querySelector('#popup-title').innerText = itemName(o);
+    popup.querySelector('#popup-subtitle').innerText = itemTypeExtended(o);
     popup.querySelector('#popup-note').innerText = itemLocation(o);
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
     popup.querySelector('#popup-found').checked = settings.markedItems[o.marker_id]==true;
@@ -768,6 +684,9 @@ function loadData() {
     return {'x':x, 'y':-y, 'z':z};
   }
 
+  let transformed_types = {};
+  let weights = {};
+
   for (o of markers.markers) {
     //console.log(o);
     if (!o.type) continue;
@@ -788,9 +707,12 @@ function loadData() {
       continue;
     }
 
+    let t = getType(o);
+    transformed_types[t.type] = t;
+
     let marker = new maptalks.Marker(c, {
       properties: o,
-      content: o.name,
+      content: itemName(o),
       symbol: markerSymbol(o),
     }).addTo(markerLayer);
 
@@ -806,28 +728,24 @@ function loadData() {
       toggleMarked(o.marker_id);
     })
 
-    // count both outer type and spawns
-    for (type of [o.type, o.spawns]) {
-      if (type !== undefined) {
-        let group = (types[type] && types[type].group) || 'misc';
-        counters[group] = counters[group] || {};
-        counters[group][type] = (counters[group][type] || 0) + 1;
-      }
-    }
+    counters[t.group] = counters[t.group] || {};
+    counters[t.group][t.type] = (counters[t.group][t.type] || 0) + 1;
+    weights[t.group] = Math.max(weights[t.group]||0, t.weight);
   }
 
   let ul = document.querySelector('#categories');
   let nodes = [];
 
   let groups = Object.keys(counters);
-  let weight = x=>({'travel':1000, 'factions': 2000, 'settlements':500, 'items':400, 'places of interest':250, 'facilities': 200, 'misc':-1000}[x] || 0);
 
-  for (group of groups.sort( (a,b)=> weight(b)-weight(a) || cmpAlphaNum(a,b)) ) {
+  for (group of groups.sort( (a,b)=> weights[b]-weights[a] || cmpAlphaNum(a,b)) ) {
+
     let header = document.createElement('div');
     header.innerHTML = capitalize(group);
     header.className = 'header';
     header.id = 'group-header-'+group;
     header.alt = group;
+    header.title = group;
     header.onclick = toggleGroup;
 
     nodes.push(header);
@@ -838,28 +756,29 @@ function loadData() {
     nodes.push(div);
 
     let items = [];
-    for ([type, count] of Object.entries(counters[group])) {
-      items.push([humanReadableType(type),count,type]);
+    for (const [type, count] of Object.entries(counters[group])) {
+      items.push([type, count, type]);
     }
 
-    for ([name,count,type] of items.sort(cmpAlphaNum)) {
+    for ([title, count, type] of items.sort(cmpAlphaNum)) {
+
+      let t = transformed_types[type];
+
       let li = document.createElement('div');
       li.className = 'item';
       li.classList.add('category-item');
-      li.alt = type;
-      li.title = name + ' (' + type + ')';
+      li.alt = t.type;
+      li.title = t.type;
       li.onclick = toggleItem;
 
       let c0 = document.createElement('span');
       c0.className = 'icon';
 
-      let fa = (types[type] && types[type].fa) || 'circle-question';
       c0.classList.add('fa');
-      c0.classList.add('fa-'+fa);
-      //c0.setAttribute('data-fa-transform','left-5');
+      c0.classList.add('fa-' + t.fa);
 
       let c1 = document.createElement('span');
-      c1.innerHTML = name;
+      c1.innerHTML = t.type;
       c1.className = 'title';
 
       let c2 = document.createElement('span');
@@ -870,6 +789,7 @@ function loadData() {
       li.appendChild(c1);
       li.appendChild(c2);
       div.appendChild(li);
+
     }
   }
 
@@ -909,77 +829,6 @@ function loadData() {
   mapParam = {}; // critical to reload map properly
 }
 
-function postprocessMarkers(data){
-  out = [];
-
-  for (o of data.markers) {
-    let orig_name = o.name;
-    let orig_type = o.type;
-
-    if (o.type=='NPC_' && o.editor_id && (o.editor_id.includes('Companion') || o.editor_id=='Folon_NPC_CamelotPendragon')) {
-      o.type = '_Companion';
-      if (o.name == 'Dog') o.name = 'Churchill';
-      if (o.name == 'Strange Robot') o.name = 'Pendragon';
-    }
-
-    if (o.type=='BOOK') {
-      if (o.editor_id.includes('Card')) o.type = '_Card';
-      if (o.editor_id.includes('Newspaper')) o.type = '_Newspaper';
-      if (o.editor_id.includes('Note') || o.name.includes('Note')) o.type = '_Note';
-      if (o.editor_id.includes('PerkMag')) {
-
-        o.type = '_Magazine';
-        if (o.name == "005 Comic") o.name = '005';
-        if (o.name == "D.I.Y.") o.name = 'DIY: The Householder\'s Handbook';
-
-        // may be do not rename issue may be name mismatch
-        let issue = o.editor_id.match(/^.*(\d\d)$/);
-        if (issue) o.name = o.name +' '+ parseInt(issue[1]);
-      }
-    }
-
-    if (o.type=='MISC') {
-       if (o.editor_id.includes('VinylRecord')) o.type = '_Vinyl';
-       if (o.editor_id.includes('Folon_MiscCard')) o.type = '_MiscCard';
-       if (o.editor_id == 'Folon_MiscCuteThulhu') o.type = '_CuteThulhu';
-    }
-
-    if (o.type=='Settlement') {
-      if (o.name == 'Oval') {
-        o.type = 'Pond / Lake'; // Oval is NOT a settlement, the icon is wrong (confirmed)
-      }
-    }
-
-    if (o.type == 'ACTI') {
-      if (o.editor_id == 'Folon_ACTI_CutethulhuDollActivator') o.type = '_CutethulhuActivator';
-      if (o.editor_id == 'Folon_ACTI_BarryBoatBeacon') o.type = '_Beacon';
-      if (o.editor_id == 'FOLON_ACTI_LQLondon100') o.type = '_Tardis';
-    }
-
-    if (o.name.endsWith(' Coaster')) o.type = '_Coaster';
-
-    if (o.name=='') o.name = 'Unnamed';
-
-    //put london - ruins urban travel marker into city group
-    if (o.name=='London' && o.type=='Ruins - Urban') o.type = 'City';
-
-    if (o.quests) {
-      for (const[id,value] of Object.entries(o.quests)) {
-        if (value == 'FOLON_DogmeatQuest') o.quests[id] = 'Protect the Dog';
-      }
-    }
-
-    if (orig_name!=o.name) o.original_name = orig_name;
-    if (orig_type!=o.type) o.original_type = orig_type;
-
-    out.push(o);
-  }
-
-  data.markers = out;
-
-  return data;
-}
-
 function loadMap(id) {
   map && map.remove();
   mapId = id;
@@ -989,10 +838,11 @@ function loadMap(id) {
 
   saveSettings();
 
+  createMap();
+
   let promises = ['./markers.json'].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
-    markers = postprocessMarkers(values[0]);
-    createMap();
+    markers = values[0];
     loadData();
   }).catch(e=>{console.log(e);})
 
@@ -1019,8 +869,8 @@ function updateSearchResults(text) {
     let c = o.marker.getCoordinates();
     extent = extent ? extent.combine(c) : new maptalks.Extent(c, c);
 
-    let name = o.name;
-    let type = o.type;
+    let t = getType(o);
+
     let title = itemDescription(o) + ' in ' + itemLocation(o);
 
     let li = document.createElement('div');
@@ -1033,9 +883,8 @@ function updateSearchResults(text) {
     let c0 = document.createElement('span');
     c0.className = 'icon';
 
-    let fa = (types[type] && types[type].fa) || 'circle-question';
     c0.classList.add('fa');
-    c0.classList.add('fa-'+fa);
+    c0.classList.add('fa-'+t.fa);
 
     let c1 = document.createElement('span');
     c1.innerHTML = title;
