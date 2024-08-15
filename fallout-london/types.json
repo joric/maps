@@ -92,13 +92,26 @@
     }
   },
 
-  "FURN": {"fa": "wrench", "bg": "tomato", "type": "Workbench", "group": "settlements"},
+  "FURN": {"fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "settlements",
+    "items": {
+      "Weapons Workbench": {"match":"Folon_WorkbenchWeapons", "fa": "gun"},
+      "Tea Station": {"match":"Folon_WorkbenchTeaStation", "fa":"mug-hot"},
+      "Chemistry Station": {"match":"Folon_WorkbenchChemistry", "fa":"flask"},
+      "Armour Station": {"match":"Folon_WorkbenchArmor", "fa":"shield-halved"}
+    }
+   },
   "CONT": {"fa": "screwdriver-wrench", "bg": "red", "type": "Workshop", "group": "settlements"},
 
   "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items"},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
-  "ALCH": {"fa": "briefcase-medical", "bg": "red", "type": "Meds", "group": "items"},
+  "ALCH": {"fa": "briefcase-medical", "bg": "red", "type": "Meds", "group": "items",
+    "items": {
+      "Dog Food": {"match":"Folon_FoodDog", "fa": "shield-dog", "bg": "chocolate", "type": "Dog Food"}
+    }
+  },
   "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items"},
+
+  "ARMO": {"fa": "shirt", "bg": "slategrey", "type": "Armor", "group": "items"},
 
   "WEAP": {"fa": "gun", "bg": "tomato", "type":"Weapon", "group": "items",
     "items": {

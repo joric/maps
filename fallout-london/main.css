@@ -16,13 +16,25 @@ html,body{
 h2 { font-size: 150%; text-align: center; padding-bottom: 0px; margin: 0; }
 h3 { font-size: 110%; text-align: center; padding-bottom: 8px; margin: 0; }
 
-a { color: white; text-decoration: none; }
+a { text-decoration: none; color: #eee; }
 a:hover { text-decoration: underline; }
 
 #map{
   width:100%;
   height:100%;
-  background:black;
+  background-color: black;
+}
+
+.sidebar {
+  color: #eee;
+  background-color: #333;
+  width: 404px;
+  opacity: 95%;
+  bottom: 0;
+  margin: 0;
+  top: 0;
+  position: absolute;
+  transition: transform .25s ease-out;
 }
 
 .map-switcher-panel {
@@ -37,31 +49,25 @@ a:hover { text-decoration: underline; }
   font-size: 14px;
   flex-grow: 1;
   padding: 6px 6px 6px 6px;
+  text-align: center;
+  width: 100px;
+}
 
+.map-link.selected {
+  background: dimgrey;
+  font-size: 14px;
+  flex-grow: 1;
+  padding: 6px 6px 6px 6px;
   text-align: center;
   width: 100px;
 }
 
 .map-link:hover {
-  background-color: grey;
   text-decoration: none;
 }
 
 .selected {
-  background-color: dimgrey;
   text-weight: bold;
-}
-
-.sidebar {
-  width: 404px;
-  background-color: #333;
-  opacity: 95%;
-  color: white;
-  bottom: 0;
-  margin: 0;
-  top: 0;
-  position: absolute;
-  transition: transform .25s ease-out;
 }
 
 #left-sidebar.closed {
@@ -112,28 +118,28 @@ a:hover { text-decoration: underline; }
 .triangle {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 9px solid white;
+  border-left: 9px solid;
   opacity: .6;
 }
 
 #left-sidebar .triangle{
   border-left: 0px;
-  border-right: 9px solid white;
+  border-right: 9px solid;
 }
 
 #right-sidebar .triangle {
-  border-left: 9px solid white;
+  border-left: 9px solid;
   border-right: 0px;
 }
 
 #left-sidebar.closed .triangle{
-  border-left: 9px solid white;
+  border-left: 9px solid;
   border-right: 0px;
 }
 
 #right-sidebar.closed .triangle {
   border-left: 0px;
-  border-right: 9px solid white;
+  border-right: 9px solid;
 }
 
 .panel {

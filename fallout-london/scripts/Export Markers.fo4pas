@@ -63,7 +63,7 @@ begin
 
   count := 0;
   sList := TStringList.Create;
-  sList.DelimitedText := 'BOOK NPC_ MISC ALCH WEAP AMMO NOTE FLOR FURN CONT ACTI';
+  sList.DelimitedText := 'ARMO NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN CONT ACTI';
 
   for k := 0 to Pred(sList.Count) do begin
     g := GroupBySignature(f, sList[k]);
@@ -76,6 +76,8 @@ begin
         s := EditorID(r);
         if GetFile(e) <> f then continue;
 
+        if (Signature(r) = 'ARMO') and (Signature(e) = 'REFR') then begin
+        end else
         if (Signature(r) = 'ACTI') and (Signature(e) = 'REFR') then begin
           if (pos('Folon_ACTI_CutethulhuDollActivator', s)=0)
           and (pos('FOLON_ACTI_LQLondon100',s)=0)
@@ -83,7 +85,7 @@ begin
           then continue;
         end else
         if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
-          if (pos('Folon_WorkbenchWeapons', s)=0) then continue;
+          if (pos('Folon_Workbench', s)=0) then continue;
         end else
         if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
           if (pos('Folon_SettlementWorkbench', s)=0)
@@ -108,7 +110,7 @@ begin
           and (pos('Overdrive', s)=0)
           and (pos('XCell', s)=0)
           and (pos('UltraJet', s)=0)
-          and (pos('Waterinstitute', s)=0)
+          //and (pos('Folon_FoodDog', s)=0)
           then continue;
         end else
         if (Signature(r) = 'MISC') and (Signature(e) = 'REFR') then begin
@@ -166,6 +168,7 @@ begin
               end;
             end;
           end;
+
         end;
 
         value := GetElementNativeValues(r, 'DATA\Value');
