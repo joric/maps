@@ -3,40 +3,40 @@
   "Town":{"fa": "tree-city", "bg": "red", "group": "travel"},
   "Gov't Building / Monument": { "fa": "building-columns", "group": "buildings"},
   "Bunker Hill": {"fa": "monument", "type": "Monument", "group": "places of interest", "weight": 700},
-  "Vault": {"fa": "gear", "group":"settlements", "weight": 750},
+  "Vault": {"fa": "gear", "group": "settlements", "weight": 750},
   "Faneuil Hall": {"fa": "dollar-sign", "type": "Bank", "group": "facilities", "weight": 600},
-  "Submarine": {"fa": "ship", "group":"places of interest"},
+  "Submarine": {"fa": "ship", "group": "places of interest"},
   "USS Constitution": {"fa": "ship", "group": "places of interest"},
   "Synth Head": {"fa": "globe", "type": "Theatre", "group": "places of interest"},
-  "Castle": {"fa": "chess-rook","group":"places of interest"},
+  "Castle": {"fa": "chess-rook","group": "places of interest"},
   "Settlement": {"fa": "tents", "bg": "darkcyan", "group": "settlements" },
   "Railroad": {"fa": "train", "group": "travel"},
   "Junkyard": {"fa": "car-side", "group": "places of interest"},
   "Shipwreck": {"fa": "ship", "group": "places of interest"},
   "Ruins - Town": {"fa": "house-circle-xmark", "group": "buildings" },
   "Ruins - Urban": {"fa": "building-circle-xmark", "group": "buildings" },
-  "Farm": {"fa": "tractor", "group":"settlements"},
+  "Farm": {"fa": "tractor", "group": "settlements"},
   "Bunker": {"fa": "warehouse", "group": "buildings"},
-  "Radio Tower": {"fa": "tower-cell", "group":"facilities"},
-  "Airfield": {"fa": "plane", "type": "Airport", "group":"facilities"},
+  "Radio Tower": {"fa": "tower-cell", "group": "facilities"},
+  "Airfield": {"fa": "plane", "type": "Airport", "group": "facilities"},
   "Sewer / Utility Tunnels": {"fa": "ring", "group": "travel"},
-  "Filling Station": {"fa": "gas-pump", "group":"facilities"},
+  "Filling Station": {"fa": "gas-pump", "group": "facilities"},
   "Natural Landmark": {"fa": "landmark", "group": "places of interest"},
-  "Goodneighbor": {"fa": "hotel", "type": "Hotel", "group":"facilities"},
-  "School": {"fa": "graduation-cap", "group":"facilities"},
-  "Military Base":{"fa": "flag", "bg":"royalblue", "group":"factions", "type":"Tommies", "weight": 1000},
+  "Goodneighbor": {"fa": "hotel", "type": "Hotel", "group": "facilities"},
+  "School": {"fa": "graduation-cap", "group": "facilities"},
+  "Military Base":{"fa": "flag", "bg": "royalblue", "group": "factions", "type": "Tommies", "weight": 1000},
   "Forested":{ "fa": "tree", "group": "places of interest"},
-  "Observatory":{"fa": "landmark-dome", "group":"facilities"},
-  "Elevated Highway": {"fa": "bridge", "type":"Bridge", "group":"places of interest"},
+  "Observatory":{"fa": "landmark-dome", "group": "facilities"},
+  "Elevated Highway": {"fa": "bridge", "type": "Bridge", "group": "places of interest"},
   "Irish Pride": {"fa": "bridge", "type": "Tower Bridge", "group": "places of interest"},
   "Metro Station":{ "fa": "subway", "bg": "dodgerblue", "group": "travel" },
-  "Skyscraper": {"fa":"building", "group": "buildings"},
-  "Hospital": { "fa": "house-medical", "group":"facilities"},
+  "Skyscraper": {"fa": "building", "group": "buildings"},
+  "Hospital": { "fa": "house-medical", "group": "facilities"},
   "Office / Civic Building": {"fa": "house", "group": "buildings"},
   "Factory / Industrial Site": {"fa": "industry", "group": "buildings"},
-  "Church": {"fa": "church", "group":"facilities"},
-  "Low-Rise Building": {"fa":"house-crack", "group": "buildings"},
-  "Brownstone Townhouse": {"fa":"house-chimney", "group": "buildings"},
+  "Church": {"fa": "church", "group": "facilities"},
+  "Low-Rise Building": {"fa": "house-crack", "group": "buildings"},
+  "Brownstone Townhouse": {"fa": "house-chimney", "group": "buildings"},
   "Encampment": {"fa": "campground", "group": "settlements"},
   "Camper": {"fa": "campground", "group": "settlements"},
   "Industrial Dome": {"fa": "industry","group": "buildings"},
@@ -45,59 +45,59 @@
   "Satellite": {"fa": "satellite-dish", "group": "facilities"},
   "Graveyard": {"fa": "cross", "group": "places of interest"},
   "Cave": {"fa": "mound", "group": "places of interest"},
-  "Railroad - Faction": {"fa": "store", "type": "Marketplace", "group":"facilities"},
+  "Railroad - Faction": {"fa": "store", "type": "Marketplace", "group": "facilities"},
   "Drive-In": {"fa": "rotate", "type": "Road Junction", "group": "facilities"},
   "Car": {"fa": "car", "type": "Parking", "group": "facilities"},
   "Diamond City": {"fa": "archway", "bg": "orange", "type": "Gates", "group": "travel"},
-  "Minutemen": {"fa": "dragon", "bg":"darkorange", "type": "Camelot", "group": "factions"},
+  "Minutemen": {"fa": "dragon", "bg": "darkorange", "type": "Camelot", "group": "factions"},
   "Institute": {"fa": "compass-drafting", "bg": "red", "type": "Angels", "group": "factions"},
   "Country Club": {"fa": "crown", "type": "Palace", "group": "places of interest"},
   "Custom House": {"fa": "landmark-dome", "group": "facilities"},
   "Police Station": {"fa": "helmet-safety", "group": "facilities"},
   "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement": {"fa": "shopping-cart", "type": "Shopping Area ", "group": "places of interest"},
-  "Brotherhood of Steel": {"fa": "cat", "bg":"darkorchid", "type": "5th Column", "group": "factions"},
+  "Brotherhood of Steel": {"fa": "cat", "bg": "darkorchid", "type": "5th Column", "group": "factions"},
   "Radioactive Area": {"fa": "radiation", "group": "places of interest"},
-  "Sentinel": {"fa": "igloo", "type": "The Dome", "group":"places of interest"},
+  "Sentinel": {"fa": "igloo", "type": "The Dome", "group": "places of interest"},
   "Salem": {"fa": "place-of-worship", "type": "Temple", "group": "places of interest"},
 
-  "Prydwen": {"fa": "hand-fist", "bg": "slategrey", "type" : "Pistols", "group":"factions"},
+  "Prydwen": {"fa": "hand-fist", "bg": "slategrey", "type" : "Pistols", "group": "factions"},
 
-  "Custom 66": {"fa": "anchor",  "type": "Naval College", "group":"facilities"},
+  "Custom 66": {"fa": "anchor",  "type": "Naval College", "group": "facilities"},
   "Custom 67": {"fa": "bullseye", "bg": "darkgoldenrod", "type": "Roundels", "group": "factions"},
   "Custom 69": {"fa": "wine-glass",  "type": "Pub", "group": "facilities"},
-  "Custom 70": {"fa": "tents", "bg": "darkcyan", "type": "Biggin Hill", "group":"settlements" },
-  "Custom 71": {"fa": "bread-slice", "type": "Restaurant", "group":"facilities"},
+  "Custom 70": {"fa": "tents", "bg": "darkcyan", "type": "Biggin Hill", "group": "settlements" },
+  "Custom 71": {"fa": "bread-slice", "type": "Restaurant", "group": "facilities"},
   "Custom 73": {"fa": "cable-car", "type": "Monorail","group": "travel" },
-  "Custom 74": {"fa": "dharmachakra", "type": "Ferris Wheel", "group":"places of interest" },
+  "Custom 74": {"fa": "dharmachakra", "type": "Ferris Wheel", "group": "places of interest" },
   "Custom 75": {"fa": "tree", "type": "Tree House", "group": "places of interest" },
-  "Custom 77": {"fa": "location-crosshairs", "type": "Location", "group":"travel" },
+  "Custom 77": {"fa": "location-crosshairs", "type": "Location", "group": "travel" },
   "Custom 79": {"fa": "dog", "bg": "forestgreen", "type": "Isle of Dogs", "group": "factions"},
   "Custom 80": {"fa": "hat-cowboy", "bg": "saddlebrown", "type": "Vagabonds", "group": "factions"},
 
   "NPC_": {
     "fa": "person", "bg": "#555", "type": "NPC", "group": "items",
     "items": {
-      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"Dog":"Churchill"}},
-      "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "replace": {"Strange Robot":"Pendragon"}},
-      "Pistols": {"match": "Pistol","bg":"slategrey"},
-      "Isle of Dogs": {"match": "IODS", "bg":"forestgreen"},
-      "5th Column": {"match": "5thColumn", "bg":"darkorchid"},
-      "Vagabonds": {"match": "Vagabonds", "bg":"saddlebrown"},
-      "Camelot": {"match": "NPC_Camelot", "bg":"darkorange"},
-      "Roundels": {"match": "NPC_Roundel", "bg":"darkgoldenrod"},
-      "Angels": {"match": "NPC_Angel", "bg":"red"},
-      "Tommies": {"match": "Tommy", "bg":"royalblue"},
-      "Gentry": {"match": "Gentry", "bg":"lightgrey"},
+      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"Dog": "Churchill"}},
+      "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "replace": {"Strange Robot": "Pendragon"}},
+      "Pistols": {"match": "Pistol","bg": "slategrey"},
+      "Isle of Dogs": {"match": "IODS", "bg": "forestgreen"},
+      "5th Column": {"match": "5thColumn", "bg": "darkorchid"},
+      "Vagabonds": {"match": "Vagabonds", "bg": "saddlebrown"},
+      "Camelot": {"match": "NPC_Camelot", "bg": "darkorange"},
+      "Roundels": {"match": "NPC_Roundel", "bg": "darkgoldenrod"},
+      "Angels": {"match": "NPC_Angel", "bg": "red"},
+      "Tommies": {"match": "Tommy", "bg": "royalblue"},
+      "Gentry": {"match": "Gentry", "bg": "lightgrey"},
       "Thamesfolk": {"match": "NPC_Thameshaven", "bg": "darkslategrey"}
     }
   },
 
   "FURN": {"group_fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "settlements",
     "items": {
-      "Weapons Workbench": {"match":"Folon_WorkbenchWeapons", "fa": "gun"},
-      "Tea Station": {"match":"Folon_WorkbenchTeaStation", "fa":"mug-hot"},
-      "Chemistry Station": {"match":"Folon_WorkbenchChemistry", "fa":"flask"},
-      "Armour Station": {"match":"Folon_WorkbenchArmor", "fa":"shield-halved"}
+      "Weapons Workbench": {"match": "Folon_WorkbenchWeapons", "fa": "gun"},
+      "Tea Station": {"match": "Folon_WorkbenchTeaStation", "fa": "mug-hot"},
+      "Chemistry Station": {"match": "Folon_WorkbenchChemistry", "fa": "flask"},
+      "Armour Station": {"match": "Folon_WorkbenchArmor", "fa": "shield-halved"}
     }
    },
 
@@ -107,48 +107,57 @@
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
   "ALCH": {"fa": "briefcase-medical", "bg": "red", "type": "Meds", "group": "items",
     "items": {
-      "Dog Food": {"match":"Folon_FoodDog", "fa": "shield-dog", "bg": "chocolate", "type": "Dog Food"}
+      "Dog Food": {"match": "Folon_FoodDog", "fa": "shield-dog", "bg": "chocolate", "type": "Dog Food"}
     }
   },
-  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items"},
+  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",
+    "items": {
+      "Mutfruit": { "match": "FloraWildMutfruit", "type": "Mutfruit", "bg": "darkorchid" }
+    }
+  },
 
   "ARMO": {"fa": "shirt", "bg": "slategrey", "type": "Armor", "group": "items"},
 
-  "WEAP": {"fa": "gun", "bg": "tomato", "type":"Weapon", "group": "items",
+  "WEAP": {"fa": "gun", "bg": "tomato", "type": "Weapon", "group": "items",
     "items": {
-      "Umbrella": {"match":"Folon_Weap_Umbrella", "fa": "umbrella"}
+      "Umbrella": {"match": "Folon_Weap_Umbrella", "fa": "umbrella"},
+      "Bomb": {"match": "Grenade|Mine", "fa": "bomb"},
+      "Bat": {"match": "Bat|Truncheon", "fa": "baseball-bat-ball"},
+      "Trowel": {"match": "Trowel", "fa": "trowel"},
+      "Boxcutter": {"match": "Boxcutter|Kukri|Knife|Bayonet", "fa": "scissors"},
+      "ProSnap Hasselfrax PANX": {"match": "Camera", "fa": "camera"}
     }
   },
 
-  "MISC": {"group":"items", "weight": 800,
+  "MISC": {"group": "items", "weight": 800,
     "items": {
-      "Vinyl": {"match":"Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type":"Vinyl Record"},
-      "CigaretteCard": {"match":"MiscCard", "fa": "diamond", "bg": "chocolate", "type": "Cigarette Card"},
-      "Coaster": {"match":"BobbleHead_", "fa": "square", "bg": "peru", "type": "Coaster"},
-      "CuteThulhu": {"match":"Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"}
+      "Vinyl": {"match": "Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type": "Vinyl Record"},
+      "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
+      "Coaster": {"match": "BobbleHead_", "fa": "image", "bg": "peru", "type": "Coaster"},
+      "CuteThulhu": {"match": "Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"}
     }
   },
 
   "ACTI": {"fa": "virus", "bg": "red", "type": "Workshop", "group": "items",
     "items": {
-      "Tardis": {"match":"FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Unusual Call Box"},
-      "Beacon": {"match":"Folon_ACTI_BarryBoatBeacon", "fa": "toggle-off", "bg": "cornflowerblue", "type": "Water Signal Beacon"},
-      "CutethulhuActivator": {"match":"Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus", "bg": "darkslategrey", "type": "CuteThulhu Activator"}
+      "Tardis": {"match": "FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Call Box"},
+      "Beacon": {"match": "Folon_ACTI_BarryBoatBeacon", "fa": "tower-observation", "bg": "cornflowerblue", "type": "Water Signal Beacon"},
+      "CutethulhuActivator": {"match": "Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus", "bg": "darkslategrey", "type": "CuteThulhu Activator"}
     }
   },
 
-  "BOOK": {"fa": "envelope", "bg": "tan", "type":"Message", "group": "items",
+  "BOOK": {"fa": "envelope", "bg": "tan", "type": "Message", "group": "items",
     "items": {
-      "Newspaper": {"match":"Newspaper", "fa": "newspaper", "bg": "#aaa", "type":"Newspaper"},
-      "Note": {"match":"Note", "fa": "note-sticky", "bg": "sandybrown", "type":"Note"},
-      "Magazine": {"match":"PerkMag", "fa": "book", "bg": "steelblue", "type": "Magazine", 
+      "Newspaper": {"match": "Newspaper", "fa": "newspaper", "bg": "#aaa", "type": "Newspaper"},
+      "Note": {"match": "Note", "fa": "note-sticky", "bg": "sandybrown", "type": "Note"},
+      "Magazine": {"match": "PerkMag", "fa": "book", "bg": "steelblue", "type": "Magazine", 
         "replace":{
           "005 Comic": "005 {issue}",
           "D.I.Y.": "DIY: The Householder's Handbook {issue}",
           "Anarchy Timesr": "Anarchy Times"
           }
         },
-      "Card": {"match":"Card", "fa": "id-card", "bg": "goldenrod", "type": "Visiting Card"}
+      "Card": {"match": "Card", "fa": "id-card", "bg": "goldenrod", "type": "Visiting Card"}
     }
   }
 }
