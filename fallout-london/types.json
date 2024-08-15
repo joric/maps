@@ -122,7 +122,8 @@
       "Magazine": {"match":"PerkMag", "fa": "book", "bg": "steelblue", "type": "Magazine", 
         "replace":{
           "005 Comic": "005 {issue}",
-          "D.I.Y.": "DIY: The Householder's Handbook {issue}"
+          "D.I.Y.": "DIY: The Householder's Handbook {issue}",
+          "Anarchy Timesr": "Anarchy Times"
           }
         },
       "Card": {"match":"Card", "fa": "id-card", "bg": "goldenrod", "type": "Visiting Card"}
