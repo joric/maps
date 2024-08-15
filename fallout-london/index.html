@@ -573,13 +573,7 @@ function getMapURL(id) {
   return base + '#' + encodeURIComponent(id);
 }
 
-function getItemURL1(o) {
-  let location_id = count>1 ? canonical(o.marker_id) : o.name;
-  let external_id = location_id.replace(/[^A-Za-z0-9\s]/g, '').trim().replace(/\s+/g, '_');
-  return getMapURL(external_id);
-}
-
-function getItemURL(o) {
+function wikify(o) {
   let count = 0;
   for (const marker of map.getLayer('markers')._geoList) {
     if (marker.properties.name == o.name) {
@@ -588,8 +582,7 @@ function getItemURL(o) {
     }
   }
   let location_id = count > 1 ? canonical(o.marker_id) : o.name;
-  let external_id = location_id.replace(/[^A-Za-z0-9\s]/g, '').trim().replace(/\s+/g, '_');
-  return getMapURL(external_id);
+  return location_id.replace(/[^A-Za-z0-9\s]/g, '').trim().replace(/\s+/g, '_');
 }
 
 let debugParam = '';//'Cigarette_Card_Wild_Animal_No39';
@@ -606,7 +599,7 @@ function findLocation(text) {
       let base = [o.name, o.form_id, canonical(o.form_id)].map(s=>s ? s.toLowerCase():'')
       let scramble = [...split(o.name), itemType(o), itemLocation(o)].map(s=>s?s.toLowerCase():'');
       let tags = [o.name, o.type, itemType(o), itemLocation(o)].map(s=>s ? s.toLowerCase():'');
-      if (stage==0 && (canonical(o.form_id)==canonical(name) || base.includes(name))) return marker;
+      if (stage==0 && (canonical(o.form_id)==canonical(name) || text==wikify(o) || base.includes(name))) return marker;
       if (stage==1 && words.every(e=>scramble.includes(e))) return marker;
       if (stage==2 && words.every(e=>tags.includes(e))) return marker;
     }
@@ -708,7 +701,7 @@ function popupOnClick(e) {
     popup.querySelector('#popup-form-id-link').href = '#' + (o.form_id || '00000010');
     popup.querySelector('#popup-form-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
 
-    popup.querySelector('#popup-map-link').href = getItemURL(o);
+    popup.querySelector('#popup-map-link').href = getMapURL(wikify(o));
     popup.querySelector('#popup-map-link').onclick = copyLink;
 
     popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(o.name);
