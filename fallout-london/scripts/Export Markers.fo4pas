@@ -10,7 +10,7 @@ uses SysUtils;
 function Finalize: integer;
 var
   i, j, k, w, count, doors, ItemsCount, quests, q, value: integer;
-  f, g, e, r, area, cell, refs, a, b, ref, items, item, rec, perk, MapMarkerStat: IInterface;
+  f, g, e, r, area, cell, refs, a, b, ref, items, item, rec, perk, outfit, MapMarkerStat: IInterface;
   Obj, ChildObj: TJsonObject;
   s, id: string;
   sList: TStringList;
@@ -63,7 +63,7 @@ begin
 
   count := 0;
   sList := TStringList.Create;
-  sList.DelimitedText := 'ARMO NPC_ BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN CONT ACTI';
+  sList.DelimitedText := 'NPC_ ARMO BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN CONT ACTI';
 
   for k := 0 to Pred(sList.Count) do begin
     g := GroupBySignature(f, sList[k]);
@@ -168,6 +168,18 @@ begin
             end;
           end;
 
+          outfit := LinksTo(ElementByPath(r, 'DOFT'));
+          if Assigned(outfit) then begin
+            items := ElementByPath(outfit, 'INAM');
+            for w := ElementCount(items) - 1 downto 0 do begin
+              item := ElementByIndex(items, w);
+              ref := LinksTo(item);
+              id := IntToHex(GetLoadOrderFormID(ref), 8);
+              ChildObj.O['outfits'].S[id] := EditorID(ref);
+              if GetElementEditValues(ref, 'FULL') <> '' then
+                ChildObj.O['outfits'].S[id] := GetElementEditValues(ref, 'FULL')
+            end;
+          end;
         end;
 
         value := GetElementNativeValues(r, 'DATA\Value');

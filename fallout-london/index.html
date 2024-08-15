@@ -544,7 +544,7 @@ function fuzzySearch(s, limit, threshold) {
     let o = marker.properties;
     let tags = [];
 
-    for (const list of [o.quests, o.weapons, o.perks]) {
+    for (const list of [o.quests, o.weapons, o.perks, o.outfits]) {
       if (!list) continue;
       for (const [k,v] of Object.entries(list)) { tags.push(k); tags.push(v); }
     }
@@ -599,7 +599,7 @@ function popupOnClick(e) {
     let div = popup.querySelector('#popup-subnote');
     div.replaceChildren();
 
-    for (const list of [o.quests, o.weapons, o.perks]) {
+    for (const list of [o.quests, o.weapons, o.perks, o. outfits]) {
       if (!list) continue;
       div.classList.remove('collapsed');
       div.appendChild(document.createElement('hr'));
