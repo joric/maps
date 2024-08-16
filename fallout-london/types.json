@@ -167,7 +167,7 @@
     }
   },
 
-  "ACTI": {"fa": "virus", "bg": "red", "type": "Workshop", "group": "misc", "group_weight": 910,
+  "ACTI": {"fa": "virus", "bg": "red", "type": "Workshop", "group": "misc", "group_weight": -1000,
     "items": {
       "Tardis": {"match": "FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Call Box"},
       "Beacon": {"match": "Folon_ACTI_BarryBoatBeacon", "fa": "tower-observation", "bg": "cornflowerblue", "type": "Water Signal Beacon"},
