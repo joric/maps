@@ -765,7 +765,7 @@ function loadData() {
     header.id = 'group-header-'+group;
     header.alt = group;
     header.onclick = toggleGroup;
-    header.title = Object.values(counters[group]).reduce((a,c)=>a+c,0) + ' marker(s)';
+    header.title = Object.values(counters[group]).reduce((a,c)=>a+c,0) + ' marker(s) of ' + Object.values(counters[group]).length + ' type(s)';
 
     nodes.push(header);
 
@@ -809,7 +809,7 @@ function loadData() {
       li.appendChild(c2);
       div.appendChild(li);
 
-      li.title = count + ' markers(s) of ' + Object.values(counters2[group][type]).length + ' types(s)';
+      li.title = count + ' markers(s) of ' + Object.values(counters2[group][type]).length + ' subtypes(s)';
 
       //console.log(counters[group][type]);
     }
