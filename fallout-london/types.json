@@ -150,11 +150,14 @@
   "WEAP": {"fa": "gun", "bg": "tomato", "type": "Weapon", "group": "items",
     "items": {
       "Umbrella": {"match": "Folon_Weap_Umbrella", "fa": "umbrella"},
-      "Bomb": {"match": "Grenade|Mine|GrenRad", "fa": "bomb"},
+      "Bomb": {"match": "Weap_Gren|Grenade|Mine", "fa": "bomb"},
       "Bat": {"match": "Bat|Truncheon", "fa": "baseball-bat-ball"},
       "Trowel": {"match": "Trowel", "fa": "trowel"},
-      "Boxcutter": {"match": "Boxcutter|Kukri|Knife|Bayonet|Halberd|Sword|Dagger", "fa": "scissors"},
+      "Boxcutter": {"match": "Axe$|Bryce|Razor|Boxcutter|Kukri|Knife|Bayonet|Halberd|Sword|Dagger", "fa": "scissors"},
       "Camera": {"match": "Camera", "fa": "camera"},
+      "Pickaxe": {"match": "Hammer|PICKAXE", "fa": "hammer"},
+      "Crowbar": {"match": "Crowbar", "fa": "slash"},
+      "Racquet": {"match": "Racquet", "fa": "table-tennis-paddle-ball"},
       "Mace": {"match": "Mace$", "fa": "spray-can-sparkles"}
     }
   },
