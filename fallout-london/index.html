@@ -652,6 +652,7 @@ document.addEventListener('mousemove', function(event){mouseMoved = true;});
 
 function loadData() {
   let counters = {};
+  let counters2 = {};
 
   function getLoc(o) {
     let x = o.x;
@@ -741,14 +742,19 @@ function loadData() {
     counters[t.group] = counters[t.group] || {};
     counters[t.group][t.type] = (counters[t.group][t.type] || 0) + 1;
 
+    counters2[t.group] = counters2[t.group] || {};
+    counters2[t.group][t.type] = counters2[t.group][t.type] || {};
+    counters2[t.group][t.type][t.subtype] = (counters2[t.group][t.type][t.subtype] || 0) + 1;
+
     total += 1;
   }
 
-  document.querySelector('#show-all').title = total +' markers';
+  console.log(counters2);
+
+  document.querySelector('#show-all').title = document.querySelector('#hide-all').title = total +' marker(s)';
 
   let ul = document.querySelector('#categories');
   let nodes = [];
-
   let groups = Object.keys(counters);
 
   for (group of groups.sort( (a,b)=> weights[b]-weights[a] || cmpAlphaNum(a,b)) ) {
@@ -758,8 +764,8 @@ function loadData() {
     header.className = 'header';
     header.id = 'group-header-'+group;
     header.alt = group;
-    header.title = group;
     header.onclick = toggleGroup;
+    header.title = Object.values(counters[group]).reduce((a,c)=>a+c,0) + ' marker(s)';
 
     nodes.push(header);
 
@@ -781,7 +787,6 @@ function loadData() {
       li.className = 'item';
       li.classList.add('category-item');
       li.alt = t.type;
-      li.title = t.type;
       li.onclick = toggleItem;
 
       let c0 = document.createElement('span');
@@ -804,6 +809,9 @@ function loadData() {
       li.appendChild(c2);
       div.appendChild(li);
 
+      li.title = count + ' markers(s) of ' + Object.values(counters2[group][type]).length + ' types(s)';
+
+      //console.log(counters[group][type]);
     }
   }
 
