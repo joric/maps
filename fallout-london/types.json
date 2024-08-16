@@ -79,7 +79,7 @@
   "Custom 80":            {"type":"Factions", "subtype": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy",       "group": "travel"},
 
   "NPC_": {
-    "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "NPCs", "subtype":"NPC", "group_weight": 800,
+    "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "NPCs", "subtype":"NPC", "group_weight": 860,
     "items": {
 
       "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "group": "NPCs",
