@@ -69,16 +69,14 @@
   "Custom 75": {"fa": "tree", "type": "Tree House", "group": "places of interest" },
   "Custom 77": {"fa": "location-crosshairs", "type": "Location", "group": "travel" },
 
-
-  "Brotherhood of Steel": {"type": "5th Column",    "bg": "red",           "fa": "cat", "group": "factions"},
+  "Brotherhood of Steel": {"type": "5th Column",    "bg": "red",           "fa": "cat", "group": "factions", "weight": 1000},
   "Institute":            {"type": "Angels",        "bg": "lightgrey",     "fa": "compass-drafting", "group": "factions"},
   "Minutemen":            {"type": "Camelot",       "bg": "darkorange",    "fa": "dragon", "group": "factions"},
   "Custom 79":            {"type": "Isle of Dogs",  "bg": "royalblue",     "fa": "dog", "group": "factions"},
   "Prydwen":              {"type": "Pistols",       "bg": "darkslategrey", "fa": "hand-fist", "group": "factions"},
   "Custom 67":            {"type": "Roundels",      "bg": "forestgreen",   "fa": "bullseye", "group": "factions"},
-  "Military Base":        {"type": "Tommies",       "bg": "darkkhaki",     "fa": "flag", "group": "factions", "weight": 1000},
+  "Military Base":        {"type": "Tommies",       "bg": "darkkhaki",     "fa": "flag", "group": "factions"},
   "Custom 80":            {"type": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy", "group": "factions"},
-
 
   "NPC_": {
     "fa": "person", "bg": "#555", "type": "NPC", "group": "items",
@@ -86,7 +84,7 @@
       "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"^Dog$": "Churchill", "FOLON_DogmeatQuest":"Protect the Dog"}},
       "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "replace": {"Strange Robot": "Pendragon"}},
 
-      "Thamesfolk":   {"match": "NPC_Thameshaven", "bg": "slategrey"},
+      "Thamesfolk":   {"match": "NPC_Thameshaven|NPC_Thamesfolk", "bg": "slategrey"},
 
       "5th Column":   {"match": "NPC_5thColumn",   "bg": "red"},
       "Angels":       {"match": "NPC_Angel",       "bg": "lightgrey"},

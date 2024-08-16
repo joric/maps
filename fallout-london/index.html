@@ -1100,6 +1100,7 @@ window.onload = function(event) {
 
   window.requestAnimationFrame(update);
 
+
   let promises = ['./types.json'].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
     types = values[0];
