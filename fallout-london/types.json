@@ -1,5 +1,5 @@
 {
-  "City":{"fa": "city", "bg": "red", "group": "travel", "weight": 850},
+  "City":{"fa": "city", "bg": "red", "group": "travel", "weight": 1200},
   "Town":{"fa": "tree-city", "bg": "red", "group": "travel"},
   "Gov't Building / Monument": { "fa": "building-columns", "group": "buildings"},
   "Bunker Hill": {"fa": "monument", "type": "Monument", "group": "places of interest", "weight": 700},
