@@ -79,7 +79,7 @@
   "Custom 80":            {"type":"Factions", "subtype": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy",       "group": "travel"},
 
   "NPC_": {
-    "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "NPCs", "subtype":"NPC", "weight": 1000,
+    "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "NPCs", "subtype":"NPC", "weight": 800,
     "items": {
 
       "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "group": "NPCs",
@@ -131,7 +131,7 @@
       "Hyp-O": {"match": "Psycho", "fa": "syringe"}
     }
   },
-  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",  "weight": 800,
+  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",  "weight": 900,
     "items": {
       "Mutfruit": { "match": "FloraWildMutfruit", "type": "Mutfruit", "bg": "darkorchid" }
     }
