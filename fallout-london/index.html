@@ -383,17 +383,6 @@ const cmpNum = (a,b)=> b[1]!=a[1] ? (b[1]-a[1]) : a[0].localeCompare(b[0]);
 const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true });
 const capitalize = s => s[0].toUpperCase()+s.slice(1);
 
-function toggleGroup(e) {
-  e.preventDefault();
-  // check siblings, if all visible set show to false else true
-  let show = false;
-  let divs = e.target.nextSibling.querySelectorAll('.category-item');
-  [].forEach.call(divs,function(e) {
-    if (e.classList.contains('hidden')) show = true;
-  });
-  return e.target.alt && toggleItems(e, show, divs);
-}
-
 let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = o.cell_name) ? ' (' + cell + ')' : '');
 let itemDescription = o=> itemName(o) + ' (' + itemTypeExtended(o) + ')';
 let itemType = o => getType(o).type;
@@ -411,14 +400,12 @@ function toggleItem(e) {
 
 function toggleGroup(e) {
   e.preventDefault();
-
-  // check siblings, if all visible set show to false else true
-  let show = false;
+  // check siblings, if not all visible set show to false else true
+  let show = true;
   let divs = e.target.nextSibling.querySelectorAll('.category-item');
   [].forEach.call(divs,function(e) {
-    if (e.classList.contains('hidden')) show = true;
+    if (!e.classList.contains('hidden')) show = false;
   });
-
   return e.target.alt && toggleItems(e, show, divs);
 }
 
