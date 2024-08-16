@@ -399,6 +399,7 @@ let itemDescription = o=> itemName(o) + ' (' + itemTypeExtended(o) + ')';
 let itemType = o => getType(o).type;
 let itemTypeExtended = o => {t = getType(o); return t.subtype ? t.type + ' / ' + t.subtype : t.type; } 
 let human = s=>s.replace(/([A-Z]+|[\d]+)/g, ' $1').replace(/^ /, ''); // camel case to space-separated
+let plural = (x,s)=> x + ' ' +(x>1 ? (s.endsWith('y') ? s.slice(0,-1)+'ies':s+'s') : s);
 
 function showAll(e) { toggleItems(e, true, document.querySelectorAll('#categories .category-item')); }
 function hideAll(e) { toggleItems(e, false, document.querySelectorAll('#categories .category-item')); }
@@ -749,9 +750,7 @@ function loadData() {
     total += 1;
   }
 
-  console.log(counters2);
-
-  document.querySelector('#show-all').title = document.querySelector('#hide-all').title = total +' marker(s)';
+  document.querySelector('#show-all').title = document.querySelector('#hide-all').title = plural(total,'marker');
 
   let ul = document.querySelector('#categories');
   let nodes = [];
@@ -765,7 +764,7 @@ function loadData() {
     header.id = 'group-header-'+group;
     header.alt = group;
     header.onclick = toggleGroup;
-    header.title = Object.values(counters[group]).reduce((a,c)=>a+c,0) + ' marker(s) of ' + Object.values(counters[group]).length + ' type(s)';
+    header.title = [plural(Object.values(counters[group]).reduce((a,c)=>a+c,0),'marker'), plural(Object.values(counters[group]).length,'category')].join(' in ');
 
     nodes.push(header);
 
@@ -809,7 +808,7 @@ function loadData() {
       li.appendChild(c2);
       div.appendChild(li);
 
-      li.title = count + ' markers(s) of ' + Object.values(counters2[group][type]).length + ' subtypes(s)';
+      li.title = [plural(count,'marker'),plural(Object.values(counters2[group][type]).length,'type')].join(' of ');
 
       //console.log(counters[group][type]);
     }
@@ -925,7 +924,7 @@ function updateSearchResults(text) {
   a.href = getBaseURL() + '#search/' + encodeURIComponent(text);
   a.onclick = function(e){ copyToClipboard(e.target.href); return false; };
   a.title = 'copy search url to clipboard';
-  a.textContent = result.length + ' search result' + (result.length!=1 ? 's':'');
+  a.textContent = plural(result.length,'search result');
   document.querySelector('#search-count').replaceChildren(a);
 
   if (result.length>0) {
