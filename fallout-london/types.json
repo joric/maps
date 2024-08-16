@@ -158,7 +158,7 @@
     }
   },
 
-  "MISC": {"group": "items",
+  "MISC": {"group": "items", 
     "items": {
       "Vinyl": {"match": "Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type": "Vinyl Record"},
       "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
@@ -167,12 +167,13 @@
     }
   },
 
-  "ACTI": {"fa": "virus", "bg": "red", "type": "Workshop", "group": "items",
+  "ACTI": {"fa": "virus", "bg": "red", "type": "Workshop", "group": "misc", "group_weight": 910,
     "items": {
       "Tardis": {"match": "FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Call Box"},
       "Beacon": {"match": "Folon_ACTI_BarryBoatBeacon", "fa": "tower-observation", "bg": "cornflowerblue", "type": "Water Signal Beacon"},
+
       "CutethulhuActivator": {"match": "Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus",
-        "bg": "darkslategrey", "type": "CuteThulhu Activator", "group":"places of interest"}
+        "bg": "darkslategrey", "type": "CuteThulhu Activator"}
     }
   },
 
