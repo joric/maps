@@ -79,7 +79,7 @@
   "Custom 80":            {"type": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy", "group": "factions"},
 
   "NPC_": {
-    "fa": "person", "bg": "#555", "type": "NPC", "group": "items",
+    "fa": "person", "bg": "#555", "type": "NPC", "group": "items", "weight": 800,
     "items": {
 
       "5th Column":   {"match": "NPC_5thColumn",   "bg": "red"},
@@ -138,7 +138,7 @@
     }
   },
 
-  "MISC": {"group": "items", "weight": 800,
+  "MISC": {"group": "items",
     "items": {
       "Vinyl": {"match": "Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type": "Vinyl Record"},
       "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
