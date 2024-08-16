@@ -290,7 +290,7 @@ function getType(o) {
       if ((o.editor_id||o.name).match(new RegExp(tt.match,'g'))) {
         t = {...t, ...tt, key: key};
         if (!tt.type) {
-          t = {...t, subclass: key};
+          t = {...t, subtype: key};
         }
         return t;
       }
@@ -397,7 +397,7 @@ function toggleGroup(e) {
 let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = o.cell_name) ? ' (' + cell + ')' : '');
 let itemDescription = o=> itemName(o) + ' (' + itemTypeExtended(o) + ')';
 let itemType = o => getType(o).type;
-let itemTypeExtended = o => {t = getType(o); return t.subclass ? t.type + ' / ' + t.subclass : t.type; } 
+let itemTypeExtended = o => {t = getType(o); return t.subtype ? t.type + ' / ' + t.subtype : t.type; } 
 let human = s=>s.replace(/([A-Z]+|[\d]+)/g, ' $1').replace(/^ /, ''); // camel case to space-separated
 
 function showAll(e) { toggleItems(e, true, document.querySelectorAll('#categories .category-item')); }

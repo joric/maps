@@ -67,45 +67,46 @@
   "Custom 73": {"fa": "cable-car", "type": "Monorail","group": "travel" },
   "Custom 74": {"fa": "dharmachakra", "type": "Ferris Wheel", "group": "places of interest" },
   "Custom 75": {"fa": "tree", "type": "Tree House", "group": "places of interest" },
-  "Custom 77": {"fa": "location-crosshairs", "type": "Location", "group": "travel" },
+  "Custom 77": {"fa": "location-crosshairs", "type": "Location", "group": "places of interest" },
 
-  "Brotherhood of Steel": {"type": "5th Column",    "bg": "red",           "fa": "cat", "group": "factions", "weight": 1000},
-  "Institute":            {"type": "Angels",        "bg": "lightgrey",     "fa": "compass-drafting", "group": "factions"},
-  "Minutemen":            {"type": "Camelot",       "bg": "darkorange",    "fa": "dragon", "group": "factions"},
-  "Custom 79":            {"type": "Isle of Dogs",  "bg": "royalblue",     "fa": "dog", "group": "factions"},
-  "Prydwen":              {"type": "Pistols",       "bg": "darkslategrey", "fa": "hand-fist", "group": "factions"},
-  "Custom 67":            {"type": "Roundels",      "bg": "forestgreen",   "fa": "bullseye", "group": "factions"},
-  "Military Base":        {"type": "Tommies",       "bg": "darkkhaki",     "fa": "flag", "group": "factions"},
-  "Custom 80":            {"type": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy", "group": "factions"},
+  "Brotherhood of Steel": {"type":"Factions", "subtype": "5th Column",    "bg": "red",           "fa": "cat",              "group": "travel"},
+  "Institute":            {"type":"Factions", "subtype": "Angels",        "bg": "lightgrey",     "fa": "compass-drafting", "group": "travel"},
+  "Minutemen":            {"type":"Factions", "subtype": "Camelot",       "bg": "darkorange",    "fa": "dragon",           "group": "travel"},
+  "Custom 79":            {"type":"Factions", "subtype": "Isle of Dogs",  "bg": "royalblue",     "fa": "dog",              "group": "travel"},
+  "Prydwen":              {"type":"Factions", "subtype": "Pistols",       "bg": "darkslategrey", "fa": "hand-fist",        "group": "travel"},
+  "Custom 67":            {"type":"Factions", "subtype": "Roundels",      "bg": "forestgreen",   "fa": "bullseye",         "group": "travel"},
+  "Military Base":        {"type":"Factions", "subtype": "Tommies",       "bg": "darkkhaki",     "fa": "flag",             "group": "travel"},
+  "Custom 80":            {"type":"Factions", "subtype": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy",       "group": "travel"},
 
   "NPC_": {
-    "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "factions",
+    "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "NPCs", "subtype":"NPC", "weight": 1000,
     "items": {
 
-      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "group": "factions",
+      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "group": "NPCs",
         "replace": {
           "^Dog$": "Churchill", "FOLON_DogmeatQuest":"Protect the Dog"}
         },
 
-      "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "group": "factions",
+      "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "group": "NPCs",
         "replace": {"Strange Robot": "Pendragon"}
        },
 
-      "5th Column":   {"match": "NPC_5thColumn",   "bg": "red",          "type": "5th Column", "group": "factions" },
-      "Angels":       {"match": "NPC_Angel",       "bg": "lightgrey",    "type": "Angels", "group": "factions" },
-      "Camelot":      {"match": "NPC_Camelot",     "bg": "darkorange",   "type": "Camelot", "group": "factions" },
-      "Isle of Dogs": {"match": "NPC_IODS",        "bg": "royalblue",    "type": "Isle of Dogs", "group": "factions" },
-      "Pistols":      {"match": "NPC_Pistol",      "bg": "darkslategrey","type": "Pistols", "group": "factions" },
-      "Roundels":     {"match": "NPC_Roundel",     "bg": "forestgreen",  "type": "Roundels", "group": "factions" },
-      "Tommies":      {"match": "NPC_Tommy",       "bg": "darkkhaki",    "type": "Tommies", "group": "factions" },
-      "Vagabonds":    {"match": "NPC_Vagabonds",   "bg": "saddlebrown",  "type": "Vagabonds", "group": "factions" },
-      "Gentry":       {"match": "NPC_Gentry",      "bg": "mediumpurple", "type": "Gentry", "group": "factions" },
+      "5th Column":   {"match": "NPC_5thColumn",   "bg": "red",          "type": "5th Column", "group": "NPCs" },
+      "Angels":       {"match": "NPC_Angel",       "bg": "lightgrey",    "type": "Angels", "group": "NPCs" },
+      "Camelot":      {"match": "NPC_Camelot",     "bg": "darkorange",   "type": "Camelot", "group": "NPCs" },
+      "Isle of Dogs": {"match": "NPC_IODS",        "bg": "royalblue",    "type": "Isle of Dogs", "group": "NPCs" },
+      "Pistols":      {"match": "NPC_Pistol",      "bg": "darkslategrey","type": "Pistols", "group": "NPCs" },
+      "Roundels":     {"match": "NPC_Roundel",     "bg": "forestgreen",  "type": "Roundels", "group": "NPCs" },
+      "Tommies":      {"match": "NPC_Tommy",       "bg": "darkkhaki",    "type": "Tommies", "group": "NPCs" },
+      "Vagabonds":    {"match": "NPC_Vagabonds",   "bg": "saddlebrown",  "type": "Vagabonds", "group": "NPCs" },
+      "Gentry":       {"match": "NPC_Gentry",      "bg": "mediumpurple", "type": "Gentry", "group": "NPCs" },
 
-      "Beefeaters":   {"match": "NPC_.*Beefeater", "bg": "brown",        "type": "Beefeaters", "group": "factions" },
-      "Jack Tars":    {"match": "NPC_JackTar",     "bg": "black",        "type": "Jack Tars",  "group": "factions" },
-      "Hooligans":    {"match": "NPC_Hooligan",    "bg": "tomato",       "type": "Hooligans",  "group": "factions" },
+      "Beefeaters":   {"match": "NPC_.*Beefeater", "bg": "brown",        "type": "Beefeaters", "group": "NPCs" },
+      "Jack Tars":    {"match": "NPC_JackTar",     "bg": "black",        "type": "Jack Tars",  "group": "NPCs" },
+      "Hooligans":    {"match": "NPC_Hooligan",    "bg": "tomato",       "type": "Hooligans",  "group": "NPCs" },
+      "Easminster":   {"match": "Eastminster",     "bg": "tan",          "type": "Eastminster", "group": "NPCs" },
 
-      "Thamesfolk":   {"match": "NPC_Thameshaven|NPC_Thamesfolk", "bg": "slategrey"}
+      "Thamesfolk":   {"match": "NPC_Thameshaven|NPC_Thamesfolk", "bg": "slategrey", "group": "NPCs", "type": "Thamesfolk"}
     }
   },
 
