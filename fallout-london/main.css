@@ -516,7 +516,11 @@ hr { opacity: .6;}
 
 .popup-subnote-item {
   margin-left : 0.1em;
-  opacity: .7;
+  opacity: .8;
+}
+
+.popup-subnote-item .icon {
+  opacity: .6;
 }
 
 .popup-subnote-item a {
