@@ -81,10 +81,6 @@
   "NPC_": {
     "fa": "person", "bg": "#555", "type": "NPC", "group": "items",
     "items": {
-      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"^Dog$": "Churchill", "FOLON_DogmeatQuest":"Protect the Dog"}},
-      "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "replace": {"Strange Robot": "Pendragon"}},
-
-      "Thamesfolk":   {"match": "NPC_Thameshaven|NPC_Thamesfolk", "bg": "slategrey"},
 
       "5th Column":   {"match": "NPC_5thColumn",   "bg": "red"},
       "Angels":       {"match": "NPC_Angel",       "bg": "lightgrey"},
@@ -94,8 +90,11 @@
       "Roundels":     {"match": "NPC_Roundel",     "bg": "forestgreen"},
       "Tommies":      {"match": "NPC_Tommy",       "bg": "darkkhaki"},
       "Vagabonds":    {"match": "NPC_Vagabonds",   "bg": "saddlebrown"},
-      "Gentry":       {"match": "NPC_Gentry",      "bg": "mediumpurple"}
+      "Gentry":       {"match": "NPC_Gentry",      "bg": "mediumpurple"},
 
+      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"^Dog$": "Churchill", "FOLON_DogmeatQuest":"Protect the Dog"}},
+      "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "replace": {"Strange Robot": "Pendragon"}},
+      "Thamesfolk":   {"match": "NPC_Thameshaven|NPC_Thamesfolk", "bg": "slategrey"}
     }
   },
 
