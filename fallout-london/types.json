@@ -147,7 +147,7 @@
     }
   },
 
-  "WEAP": {"fa": "gun", "bg": "tomato", "type": "Weapon", "group": "items",
+  "WEAP": {"fa": "gun", "bg": "tomato", "type": "Weapon", "group": "items", "group_fa": "gun",
     "items": {
       "Umbrella": {"match": "Folon_Weap_Umbrella", "fa": "umbrella"},
       "Bomb": {"match": "Weap_Gren|Grenade|Mine", "fa": "bomb"},
