@@ -1,10 +1,10 @@
 {
-  "City":{"fa": "city", "bg": "red", "group": "travel", "weight": 1200},
+  "City":{"fa": "city", "bg": "red", "group": "travel", "group_weight": 1200},
   "Town":{"fa": "tree-city", "bg": "red", "group": "travel"},
   "Gov't Building / Monument": { "fa": "building-columns", "group": "buildings"},
-  "Bunker Hill": {"fa": "monument", "type": "Monument", "group": "places of interest", "weight": 700},
-  "Vault": {"fa": "gear", "group": "settlements", "weight": 810},
-  "Faneuil Hall": {"fa": "dollar-sign", "type": "Bank", "group": "facilities", "weight": 600},
+  "Bunker Hill": {"fa": "monument", "type": "Monument", "group": "places of interest", "group_weight": 700},
+  "Vault": {"fa": "gear", "group": "settlements", "group_weight": 810},
+  "Faneuil Hall": {"fa": "dollar-sign", "type": "Bank", "group": "facilities", "group_weight": 600},
   "Submarine": {"fa": "ship", "group": "places of interest"},
   "USS Constitution": {"fa": "ship", "group": "places of interest"},
   "Synth Head": {"fa": "globe", "type": "Theatre", "group": "places of interest"},
@@ -79,7 +79,7 @@
   "Custom 80":            {"type":"Factions", "subtype": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy",       "group": "travel"},
 
   "NPC_": {
-    "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "NPCs", "subtype":"NPC", "weight": 800,
+    "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "NPCs", "subtype":"NPC", "group_weight": 800,
     "items": {
 
       "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "group": "NPCs",
@@ -134,7 +134,7 @@
       "Hyp-O":    {"match": "Psycho", "fa": "syringe", "bg": "red"}
     }
   },
-  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",  "weight": 900,
+  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",  "group_weight": 900,
     "items": {
       "Mutfruit": { "match": "FloraWildMutfruit", "type": "Mutfruit", "bg": "darkorchid" }
     }

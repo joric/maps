@@ -284,7 +284,7 @@ function itemName(o) {
 
 function getType(o) {
   let defaults = { bg: 'grey', fg: 'white', fa: 'circle-question', group:'misc'};
-  t = {...defaults, type: o.type, weight:0, ...(types[o.type] || {})};
+  t = {...defaults, type: o.type, group_weight:0, ...(types[o.type] || {})};
   for (const [key, tt] of Object.entries(t.items||{})) {
     if (tt.match) {
       if ((o.editor_id||o.name).match(new RegExp(tt.match,'g'))) {
@@ -699,7 +699,7 @@ function loadData() {
     if (!o.type) continue;
 
     let t = getType(o);
-    weights[t.group] = Math.max(weights[t.group]||0, t.weight);
+    weights[t.group] = Math.max(weights[t.group]||0, t.group_weight);
 
     if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) continue;
 
