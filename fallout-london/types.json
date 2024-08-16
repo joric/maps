@@ -142,7 +142,7 @@
 
   "ARMO": {"fa": "shirt", "bg": "slategrey", "type": "Armor", "group": "items",
     "items": {
-      "Glasses": {"match": "Glasses|Goggles", "fa": "glasses"},
+      "Glasses": {"match": "Glasses|Goggles|Gasmask", "fa": "glasses"},
       "Hat": {"match": "Hat$|Armo_Hat|Helmet", "fa": "helmet-safety"}
     }
   },
