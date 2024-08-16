@@ -124,7 +124,7 @@
   "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items"},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
 
-  "ALCH": {"fa": "utensils", "bg": "darkcyan", "type": "Ingestible", "group": "items",
+  "ALCH": {"fa": "utensils", "bg": "darkcyan", "type": "Ingestible", "group": "items", "group_fa": "utensils",
     "items": {
       "Clarity":  {"match":"Mentats", "fa": "briefcase-medical", "bg": "red"},
       "Dog Food": {"match": "Folon_FoodDog", "fa": "shield-dog", "bg": "chocolate", "type": "Ingestible"},
