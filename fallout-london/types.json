@@ -69,7 +69,7 @@
   "Custom 75": {"fa": "tree", "type": "Tree House", "group": "places of interest" },
   "Custom 77": {"fa": "location-crosshairs", "type": "Location", "group": "travel" },
 
-  "Brotherhood of Steel": {"type": "5th Column",    "bg": "red",           "fa": "cat", "group": "factions", "weight": -1000},
+  "Brotherhood of Steel": {"type": "5th Column",    "bg": "red",           "fa": "cat", "group": "factions", "weight": 1000},
   "Institute":            {"type": "Angels",        "bg": "lightgrey",     "fa": "compass-drafting", "group": "factions"},
   "Minutemen":            {"type": "Camelot",       "bg": "darkorange",    "fa": "dragon", "group": "factions"},
   "Custom 79":            {"type": "Isle of Dogs",  "bg": "royalblue",     "fa": "dog", "group": "factions"},
@@ -79,21 +79,32 @@
   "Custom 80":            {"type": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy", "group": "factions"},
 
   "NPC_": {
-    "fa": "person", "bg": "#555", "type": "NPC", "group": "items", "weight": 800,
+    "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "factions",
     "items": {
 
-      "5th Column":   {"match": "NPC_5thColumn",   "bg": "red"},
-      "Angels":       {"match": "NPC_Angel",       "bg": "lightgrey"},
-      "Camelot":      {"match": "NPC_Camelot",     "bg": "darkorange"},
-      "Isle of Dogs": {"match": "NPC_IODS",        "bg": "royalblue"},
-      "Pistols":      {"match": "NPC_Pistol",      "bg": "darkslategrey"},
-      "Roundels":     {"match": "NPC_Roundel",     "bg": "forestgreen"},
-      "Tommies":      {"match": "NPC_Tommy",       "bg": "darkkhaki"},
-      "Vagabonds":    {"match": "NPC_Vagabonds",   "bg": "saddlebrown"},
-      "Gentry":       {"match": "NPC_Gentry",      "bg": "mediumpurple"},
+      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "group": "factions",
+        "replace": {
+          "^Dog$": "Churchill", "FOLON_DogmeatQuest":"Protect the Dog"}
+        },
 
-      "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"^Dog$": "Churchill", "FOLON_DogmeatQuest":"Protect the Dog"}},
-      "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "replace": {"Strange Robot": "Pendragon"}},
+      "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "group": "factions",
+        "replace": {"Strange Robot": "Pendragon"}
+       },
+
+      "5th Column":   {"match": "NPC_5thColumn",   "bg": "red",          "type": "5th Column", "group": "factions" },
+      "Angels":       {"match": "NPC_Angel",       "bg": "lightgrey",    "type": "Angels", "group": "factions" },
+      "Camelot":      {"match": "NPC_Camelot",     "bg": "darkorange",   "type": "Camelot", "group": "factions" },
+      "Isle of Dogs": {"match": "NPC_IODS",        "bg": "royalblue",    "type": "Isle of Dogs", "group": "factions" },
+      "Pistols":      {"match": "NPC_Pistol",      "bg": "darkslategrey","type": "Pistols", "group": "factions" },
+      "Roundels":     {"match": "NPC_Roundel",     "bg": "forestgreen",  "type": "Roundels", "group": "factions" },
+      "Tommies":      {"match": "NPC_Tommy",       "bg": "darkkhaki",    "type": "Tommies", "group": "factions" },
+      "Vagabonds":    {"match": "NPC_Vagabonds",   "bg": "saddlebrown",  "type": "Vagabonds", "group": "factions" },
+      "Gentry":       {"match": "NPC_Gentry",      "bg": "mediumpurple", "type": "Gentry", "group": "factions" },
+
+      "Beefeaters":   {"match": "NPC_.*Beefeater", "bg": "brown",        "type": "Beefeaters", "group": "factions" },
+      "Jack Tars":    {"match": "NPC_JackTar",     "bg": "black",        "type": "Jack Tars",  "group": "factions" },
+      "Hooligans":    {"match": "NPC_Hooligan",    "bg": "tomato",       "type": "Hooligans",  "group": "factions" },
+
       "Thamesfolk":   {"match": "NPC_Thameshaven|NPC_Thamesfolk", "bg": "slategrey"}
     }
   },
@@ -119,7 +130,7 @@
       "Hyp-O": {"match": "Psycho", "fa": "syringe"}
     }
   },
-  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",
+  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",  "weight": 800,
     "items": {
       "Mutfruit": { "match": "FloraWildMutfruit", "type": "Mutfruit", "bg": "darkorchid" }
     }
