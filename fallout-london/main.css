@@ -452,9 +452,9 @@ hr { opacity: .6;}
   padding: 4px;
 }
 
-.popup-controls > *{
+.popup-controls > * {
   cursor: pointer;
-  opacity: 80%;
+  opacity: .7;
 }
 
 .popup-controls > *:hover {
