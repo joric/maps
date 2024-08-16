@@ -692,6 +692,7 @@ function loadData() {
 
   let cached_types = {};
   let weights = {};
+  let total = 0;
 
   for (o of markers.markers) {
     //console.log(o);
@@ -739,7 +740,11 @@ function loadData() {
 
     counters[t.group] = counters[t.group] || {};
     counters[t.group][t.type] = (counters[t.group][t.type] || 0) + 1;
+
+    total += 1;
   }
+
+  document.querySelector('#show-all').title = total +' markers';
 
   let ul = document.querySelector('#categories');
   let nodes = [];
