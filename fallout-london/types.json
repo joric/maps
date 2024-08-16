@@ -126,6 +126,7 @@
 
   "ALCH": {"fa": "utensils", "bg": "darkcyan", "type": "Ingestible", "group": "items", "group_fa": "utensils",
     "items": {
+      "Excalibur":{"match": "XCell", "fa": "jar", "bg": "orange"},
       "Clarity":  {"match":"Mentats", "fa": "briefcase-medical", "bg": "red"},
       "Dog Food": {"match": "Folon_FoodDog", "fa": "shield-dog", "bg": "chocolate", "type": "Ingestible"},
       "Roid":     {"match": "Buffout", "fa": "jar", "bg": "red"},
