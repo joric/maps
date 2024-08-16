@@ -109,7 +109,7 @@ begin
           and (pos('Overdrive', s)=0)
           and (pos('XCell', s)=0)
           and (pos('UltraJet', s)=0)
-          //and (pos('Folon_FoodDog', s)=0)
+          and (pos('Folon_FoodDog', s)=0)
           then continue;
         end else
         if (Signature(r) = 'MISC') and (Signature(e) = 'REFR') then begin
