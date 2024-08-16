@@ -69,7 +69,7 @@
   "Custom 75": {"fa": "tree", "type": "Tree House", "group": "places of interest" },
   "Custom 77": {"fa": "location-crosshairs", "type": "Location", "group": "travel" },
 
-  "Brotherhood of Steel": {"type": "5th Column",    "bg": "red",           "fa": "cat", "group": "factions", "weight": 1000},
+  "Brotherhood of Steel": {"type": "5th Column",    "bg": "red",           "fa": "cat", "group": "factions", "weight": -1000},
   "Institute":            {"type": "Angels",        "bg": "lightgrey",     "fa": "compass-drafting", "group": "factions"},
   "Minutemen":            {"type": "Camelot",       "bg": "darkorange",    "fa": "dragon", "group": "factions"},
   "Custom 79":            {"type": "Isle of Dogs",  "bg": "royalblue",     "fa": "dog", "group": "factions"},
