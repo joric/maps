@@ -28,7 +28,6 @@
   "Natural Landmark": {"fa": "landmark", "group": "places of interest"},
   "Goodneighbor": {"fa": "hotel", "type": "Hotel", "group": "facilities"},
   "School": {"fa": "graduation-cap", "group": "facilities"},
-  "Military Base":{"fa": "flag", "bg": "royalblue", "group": "factions", "type": "Tommies", "weight": 1000},
   "Forested":{ "fa": "tree", "group": "places of interest"},
   "Observatory":{"fa": "landmark-dome", "group": "facilities"},
   "Elevated Highway": {"fa": "bridge", "type": "Bridge", "group": "places of interest"},
@@ -53,21 +52,15 @@
   "Drive-In": {"fa": "rotate", "type": "Road Junction", "group": "facilities"},
   "Car": {"fa": "car", "type": "Parking", "group": "facilities"},
   "Diamond City": {"fa": "archway", "bg": "orange", "type": "Gates", "group": "travel"},
-  "Minutemen": {"fa": "dragon", "bg": "darkorange", "type": "Camelot", "group": "factions"},
-  "Institute": {"fa": "compass-drafting", "bg": "red", "type": "Angels", "group": "factions"},
   "Country Club": {"fa": "crown", "type": "Palace", "group": "places of interest"},
   "Custom House": {"fa": "landmark-dome", "group": "facilities"},
   "Police Station": {"fa": "helmet-safety", "group": "facilities"},
   "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement": {"fa": "shopping-cart", "type": "Shopping Area ", "group": "places of interest"},
-  "Brotherhood of Steel": {"fa": "cat", "bg": "darkorchid", "type": "5th Column", "group": "factions"},
   "Radioactive Area": {"fa": "radiation", "group": "places of interest"},
   "Sentinel": {"fa": "igloo", "type": "The Dome", "group": "places of interest"},
   "Salem": {"fa": "place-of-worship", "type": "Temple", "group": "places of interest"},
 
-  "Prydwen": {"fa": "hand-fist", "bg": "slategrey", "type" : "Pistols", "group": "factions"},
-
   "Custom 66": {"fa": "anchor",  "type": "Naval College", "group": "facilities"},
-  "Custom 67": {"fa": "bullseye", "bg": "darkgoldenrod", "type": "Roundels", "group": "factions"},
   "Custom 69": {"fa": "wine-glass",  "type": "Pub", "group": "facilities"},
   "Custom 70": {"fa": "tents", "bg": "darkcyan", "type": "Biggin Hill", "group": "settlements" },
   "Custom 71": {"fa": "bread-slice", "type": "Restaurant", "group": "facilities"},
@@ -75,24 +68,36 @@
   "Custom 74": {"fa": "dharmachakra", "type": "Ferris Wheel", "group": "places of interest" },
   "Custom 75": {"fa": "tree", "type": "Tree House", "group": "places of interest" },
   "Custom 77": {"fa": "location-crosshairs", "type": "Location", "group": "travel" },
-  "Custom 79": {"fa": "dog", "bg": "forestgreen", "type": "Isle of Dogs", "group": "factions"},
-  "Custom 80": {"fa": "hat-cowboy", "bg": "saddlebrown", "type": "Vagabonds", "group": "factions"},
+
+
+  "Brotherhood of Steel": {"type": "5th Column",    "bg": "red",           "fa": "cat", "group": "factions"},
+  "Institute":            {"type": "Angels",        "bg": "lightgrey",     "fa": "compass-drafting", "group": "factions"},
+  "Minutemen":            {"type": "Camelot",       "bg": "darkorange",    "fa": "dragon", "group": "factions"},
+  "Custom 79":            {"type": "Isle of Dogs",  "bg": "royalblue",     "fa": "dog", "group": "factions"},
+  "Prydwen":              {"type": "Pistols",       "bg": "darkslategrey", "fa": "hand-fist", "group": "factions"},
+  "Custom 67":            {"type": "Roundels",      "bg": "forestgreen",   "fa": "bullseye", "group": "factions"},
+  "Military Base":        {"type": "Tommies",       "bg": "darkkhaki",     "fa": "flag", "group": "factions", "weight": 1000},
+  "Custom 80":            {"type": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy", "group": "factions"},
+
 
   "NPC_": {
     "fa": "person", "bg": "#555", "type": "NPC", "group": "items",
     "items": {
       "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "replace": {"^Dog$": "Churchill", "FOLON_DogmeatQuest":"Protect the Dog"}},
       "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "replace": {"Strange Robot": "Pendragon"}},
-      "Pistols": {"match": "Pistol","bg": "slategrey"},
-      "Isle of Dogs": {"match": "IODS", "bg": "forestgreen"},
-      "5th Column": {"match": "5thColumn", "bg": "darkorchid"},
-      "Vagabonds": {"match": "Vagabonds", "bg": "saddlebrown"},
-      "Camelot": {"match": "NPC_Camelot", "bg": "darkorange"},
-      "Roundels": {"match": "NPC_Roundel", "bg": "darkgoldenrod"},
-      "Angels": {"match": "NPC_Angel", "bg": "red"},
-      "Tommies": {"match": "Tommy", "bg": "royalblue"},
-      "Gentry": {"match": "Gentry", "bg": "lightgrey"},
-      "Thamesfolk": {"match": "NPC_Thameshaven", "bg": "darkslategrey"}
+
+      "Thamesfolk":   {"match": "NPC_Thameshaven", "bg": "slategrey"},
+
+      "5th Column":   {"match": "NPC_5thColumn",   "bg": "red"},
+      "Angels":       {"match": "NPC_Angel",       "bg": "lightgrey"},
+      "Camelot":      {"match": "NPC_Camelot",     "bg": "darkorange"},
+      "Isle of Dogs": {"match": "NPC_IODS",        "bg": "royalblue"},
+      "Pistols":      {"match": "NPC_Pistol",      "bg": "darkslategrey"},
+      "Roundels":     {"match": "NPC_Roundel",     "bg": "forestgreen"},
+      "Tommies":      {"match": "NPC_Tommy",       "bg": "darkkhaki"},
+      "Vagabonds":    {"match": "NPC_Vagabonds",   "bg": "saddlebrown"},
+      "Gentry":       {"match": "NPC_Gentry",      "bg": "mediumpurple"}
+
     }
   },
 
