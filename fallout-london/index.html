@@ -603,18 +603,29 @@ function popupOnClick(e) {
     let div = popup.querySelector('#popup-subnote');
     div.replaceChildren();
 
-    for (const list of [o.quests, o.weapons, o.perks, o. outfits]) {
+    for (const [i,list] of Object.entries([o.quests, o.weapons, o.perks, o. outfits])) {
       if (!list) continue;
       div.classList.remove('collapsed');
       div.appendChild(document.createElement('hr'));
       for (const [k,v] of Object.entries(list)) {
+
+        let li = document.createElement('div');
+        li.className = 'popup-subnote-item';
+
+        let c0 = document.createElement('span');
+        c0.className = 'icon';
+        c0.classList.add('fa');
+        c0.classList.add('fa-' + ['scroll','gun','star','shirt',''][i]);
+
         let a = document.createElement('a');
-        a.className = 'popup-subnote-item';
         a.title = k;
         a.textContent = itemText(v,o);
         a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(v,o));
         a.target = 'blank_';
-        div.appendChild(a);
+
+        li.appendChild(c0);
+        li.appendChild(a);
+        div.appendChild(li);
       }
     }
 
