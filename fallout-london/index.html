@@ -561,7 +561,7 @@ function fuzzySearch(s, limit, threshold) {
   threshold = threshold || 0.75;
 
   let options = {
-    keys: ['description', 'name', 'type', 'form_id', 'marker_id', 'editor_id', 'custom_type', 'location', 'tags', 'key'],
+    keys: ['name', 'type', 'description', 'form_id', 'marker_id', 'editor_id', 'custom_type', 'location', 'tags', 'key'],
     threshold: threshold,
     ignoreLocation: true,
     includeScore: true,
