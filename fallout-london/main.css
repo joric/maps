@@ -365,6 +365,27 @@ hr { opacity: .6;}
   padding-right: 8px;
 }
 
+.btn-link {
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-link:hover{
+  text-decoration: underline;
+}
+
+
+*:disabled {
+  color: linen;
+  pointer-events: none;
+  opacity: .5;
+}
+
 .form-control {
   padding: 4px;
   flex: 1 1 auto;
