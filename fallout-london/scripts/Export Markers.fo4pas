@@ -53,7 +53,7 @@ begin
     ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
     ChildObj['type'] := GetElementEditValues(e, 'Map Marker\TNAM\Type');
     ChildObj['name'] := GetElementEditValues(e, 'Map Marker\FULL');
-    ChildObj['cell_form_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
+    ChildObj['cell_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
     ChildObj.F['x'] := GetElementNativeValues(e, 'DATA\Position\X');
     ChildObj.F['y'] := GetElementNativeValues(e, 'DATA\Position\Y');
     ChildObj.F['z'] := GetElementNativeValues(e, 'DATA\Position\Z');
@@ -210,7 +210,7 @@ begin
 
         if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then
         begin
-          ChildObj['cell_form_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
+          ChildObj['cell_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
           ChildObj['cell_editor_id'] := EditorID(cell);
           ChildObj['cell_name'] := GetElementEditValues(cell, 'FULL');
 
