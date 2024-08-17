@@ -105,7 +105,7 @@
       "Beefeaters":   {"match": "NPC_.*Beefeater", "bg": "brown",        "type": "Beefeaters", "group": "NPCs" },
       "Jack Tars":    {"match": "NPC_JackTar",     "bg": "black",        "type": "Jack Tars",  "group": "NPCs" },
       "Hooligans":    {"match": "NPC_Hooligan",    "bg": "tomato",       "type": "Hooligans",  "group": "NPCs" },
-      "Easminster":   {"match": "Eastminster",     "bg": "tan",          "type": "Eastminster", "group": "NPCs" },
+      "Easminster":   {"match": "Eastminster",     "bg": "darkcyan",          "type": "Eastminster", "group": "NPCs" },
 
       "Thamesfolk":   {"match": "NPC_Thameshaven|NPC_Thamesfolk", "bg": "slategrey", "group": "NPCs", "type": "Thamesfolk"}
     }
