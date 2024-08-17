@@ -84,7 +84,8 @@
 
       "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "group": "NPCs",
         "replace": {
-          "^Dog$": "Churchill", "FOLON_DogmeatQuest":"Protect the Dog"}
+          "^Dog$": "Churchill",
+          "FOLON_DogmeatQuest":"Protect the Dog"}
         },
 
       "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "group": "NPCs",
@@ -190,6 +191,7 @@
         "replace":{
           "005 Comic": "005 {index}",
           "D.I.Y.": "DIY: The Householder's Handbook {index}",
+          "Protect and Survive": "Protect and Survive {index}",
           "Anarchy Timesr": "Anarchy Times"
           }
         },

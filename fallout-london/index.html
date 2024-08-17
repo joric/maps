@@ -398,9 +398,10 @@ function createMap() {
 }
 
 
-function itemText(text, o) {
+function itemText(text, o, noindex=true) {
   let t = getType(o);
   for (let [reg, rep] of Object.entries(t.replace||{})) {
+    if (noindex && rep.includes('{index}')) return text;
     let index = o.editor_id.match(/^.*(\d\d)$/);
     if (index) rep = rep.replace('{index}', parseInt(index[1]));
     text = text.replace(new RegExp(reg,'g'), rep);
@@ -409,7 +410,7 @@ function itemText(text, o) {
 }
 
 function itemName(o) {
-  return itemText(o.name || 'Unnamed', o);
+  return itemText(o.name || 'Unnamed', o, false);
 }
 
 function getType(o) {
@@ -851,7 +852,7 @@ function popupOnClick(e) {
     popup.querySelector('#popup-map-link').href = getMapURL(wikify(o));
     popup.querySelector('#popup-map-link').onclick = copyLink;
 
-    popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(o.name);
+    popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(itemName(o));
     popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
 
     setClass(popup.querySelector('#popup-data'), settings.debugMode!=true, 'collapsed');
