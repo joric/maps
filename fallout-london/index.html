@@ -570,9 +570,9 @@ function markItems() {
   for (marker of markerLayer._geoList) {
     let o = marker.properties;
     let t = getType(o);
-    marker.updateSymbol({markerOpacity: settings.markedItems[o.marker_id] ? 0.5 : 1 });
+    marker.updateSymbol({markerOpacity: settings.markedItems[o.ref_id] ? 0.5 : 1 });
     let hide = !settings.activeItems[t.type];
-    if (settings.hideFound && settings.markedItems[o.marker_id]) hide = true;
+    if (settings.hideFound && settings.markedItems[o.ref_id]) hide = true;
     hide ? marker.hide() : marker.show();
   }
 
@@ -604,7 +604,7 @@ function updateTracking() {
   for (marker of markerLayer._geoList) {
     let o = marker.properties;
     let t = getType(o);
-    let found = settings.markedItems[o.marker_id];
+    let found = settings.markedItems[o.ref_id];
     total[t.type] = (total[t.type] || 0) + 1;
     marked[t.type] = (marked[t.type] || 0) + (found ? 1 : 0);
     cached_types[t.type] = {...cached_types[t.type], ...t};
@@ -674,7 +674,7 @@ function toggleMarked(id) {
 
   for (marker of markerLayer._geoList) {
     let o = marker.properties;
-    if (id == o.marker_id) {
+    if (id == o.ref_id) {
       let found = settings.markedItems[id];
       marker.updateSymbol({markerOpacity: found ? 0.5 : 1 });
       break;
@@ -716,7 +716,7 @@ function wikify(o) {
       if (count>1) break;
     }
   }
-  let location_id = count > 1 ? canonical(o.marker_id) : o.name;
+  let location_id = count > 1 ? canonical(o.ref_id) : o.name;
   return location_id.replace(/[^A-Za-z0-9\s]/g, '').trim().replace(/\s+/g, '_');
 }
 
@@ -768,7 +768,7 @@ function fuzzySearch(s, limit, threshold) {
   threshold = threshold || 0.75;
 
   let options = {
-    keys: ['name', 'type', 'description', 'form_id', 'marker_id', 'editor_id', 'custom_type', 'location', 'tags', 'key'],
+    keys: ['name', 'type', 'description', 'form_id', 'ref_id', 'editor_id', 'custom_type', 'location', 'tags', 'key'],
     threshold: threshold,
     ignoreLocation: true,
     includeScore: true,
@@ -840,10 +840,10 @@ function popupOnClick(e) {
     popup.querySelector('#popup-subtitle').textContent = itemTypeExtended(o);
     popup.querySelector('#popup-note').textContent = itemLocation(o);
     popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
-    popup.querySelector('#popup-found').checked = settings.markedItems[o.marker_id]==true;
-    popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.marker_id) };
+    popup.querySelector('#popup-found').checked = settings.markedItems[o.ref_id]==true;
+    popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.ref_id) };
 
-    popup.querySelector('#popup-marker-id-link').href = '#' + o.marker_id;
+    popup.querySelector('#popup-marker-id-link').href = '#' + o.ref_id;
     popup.querySelector('#popup-marker-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
 
     popup.querySelector('#popup-form-id-link').href = '#' + (o.form_id || '00000010');
@@ -925,8 +925,8 @@ function loadMarkers() {
 
     // hide some of the location markers on the base map
     if (mapId == Object.keys(maps)[0]) {
-      if (['City','Town'].includes(o.type) && o.area != mapId && o.marker_id!='07310FF5') continue;
-      if (o.type == 'Military Base' && o.marker_id != '0732F385') continue;
+      if (['City','Town'].includes(o.type) && o.area != mapId && o.ref_id!='07310FF5') continue;
+      if (o.type == 'Military Base' && o.ref_id != '0732F385') continue;
     }
 
     let c = getLoc(o);
@@ -954,7 +954,7 @@ function loadMarkers() {
     .on('contextmenu', e=> {
       if (mouseMoved) return;
       let o = e.target.properties;
-      toggleMarked(o.marker_id);
+      toggleMarked(o.ref_id);
     })
 
     counters[t.group] = counters[t.group] || {};
@@ -1139,7 +1139,7 @@ function updateSearchResults(text) {
     li.className = 'item';
     li.classList.add('search-item');
     li.title = title + ' [' + o.form_id + ']';
-    li.alt = o.marker_id;
+    li.alt = o.ref_id;
     li.onclick = clickSearchItem;
 
     let c0 = document.createElement('span');
@@ -1182,7 +1182,7 @@ function updateSearchResults(text) {
 function jumpToMarker(id) {
   for (marker of map.getLayer('markers')._geoList) {
     let o = marker.properties;
-    if (id == o.marker_id) {
+    if (id == o.ref_id) {
       //map.animateTo({center: marker._coordinates});
       marker.show();
       popupOnClick({target: marker});
