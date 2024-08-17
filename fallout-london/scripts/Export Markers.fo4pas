@@ -10,7 +10,7 @@ uses SysUtils;
 function Finalize: integer;
 var
   i, j, k, w, count, doors, ItemsCount, quests, q, value: integer;
-  f, g, e, r, area, cell, refs, a, b, ref, items, item, rec, perk, outfit, MapMarkerStat: IInterface;
+  f, g, e, r, area, cell, refs, a, b, ref, items, item, rec, perk, outfit: IInterface;
   Obj, ChildObj: TJsonObject;
   s, id: string;
   sList: TStringList;
@@ -43,13 +43,14 @@ begin
     end;
   end;
 
-  MapMarkerStat := RecordByFormID(FileByIndex(0), $00000010, False);
-  for i := 0 to Pred(ReferencedByCount(MapMarkerStat)) do begin
-    e := ReferencedByIndex(MapMarkerStat, i);
+  r := RecordByFormID(FileByIndex(0), $00000010, False);
+  for i := 0 to Pred(ReferencedByCount(r)) do begin
+    e := ReferencedByIndex(r, i);
     if GetFile(e) <> f then continue;
     cell := LinksTo(ElementByName(e, 'Cell'));
     ChildObj := Obj.A['markers'].AddObject;
     ChildObj['ref_id'] := IntToHex(GetLoadOrderFormID(e), 8);
+    ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
     ChildObj['type'] := GetElementEditValues(e, 'Map Marker\TNAM\Type');
     ChildObj['name'] := GetElementEditValues(e, 'Map Marker\FULL');
     ChildObj['cell_form_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
