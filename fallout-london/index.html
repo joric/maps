@@ -665,7 +665,12 @@ function updateTracking() {
 }
 
 function toggleMarked(id) {
-  settings.markedItems[id] = !settings.markedItems[id];
+  if (settings.markedItems[id]) {
+    delete settings.markedItems[id];
+  } else {
+    settings.markedItems[id] = true;
+  }
+
   for (marker of markerLayer._geoList) {
     let o = marker.properties;
     if (id == o.marker_id) {
