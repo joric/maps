@@ -192,7 +192,7 @@
           "005 Comic": "005 {index}",
           "D.I.Y.": "DIY: The Householder's Handbook {index}",
           "Protect and Survive": "Protect and Survive {index}",
-          "Anarchy Timesr": "Anarchy Times"
+          "Anarchy Times[r]*": "Anarchy Times {index}"
           }
         },
       "Card": {"match": "Card", "fa": "id-card", "bg": "goldenrod", "type": "Visiting Card"}
