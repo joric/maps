@@ -550,9 +550,9 @@ function toggleItems(e, show, parent) {
     let t = getType(o);
     if (!ids[t.type]) continue;
     if (show) {
-      delete settings.hiddenItems[t.type];
+      settings.activeItems[t.type] = true;
     } else {
-      settings.hiddenItems[t.type] = true;
+      delete settings.activeItems[t.type];
     }
   }
 
@@ -570,17 +570,17 @@ function markItems() {
     let o = marker.properties;
     let t = getType(o);
     marker.updateSymbol({markerOpacity: settings.markedItems[o.marker_id] ? 0.5 : 1 });
-    let hide = settings.hiddenItems[t.type];
+    let hide = !settings.activeItems[t.type];
     if (settings.hideFound && settings.markedItems[o.marker_id]) hide = true;
     hide ? marker.hide() : marker.show();
   }
 
   // mark DOM structure on the page
   [].forEach.call(document.querySelectorAll('#categories .item'), function(div) {
-    if (settings.hiddenItems[div.alt]==true) {
-      div.classList.add('hidden');
-    } else {
+    if (settings.activeItems[div.alt]==true) {
       div.classList.remove('hidden');
+    } else {
+      div.classList.add('hidden');
     }
   });
 
@@ -626,7 +626,7 @@ function updateTracking() {
     li.title = t.type;
     li.onclick = toggleTrack;
 
-    if (settings.hiddenItems[type]==true) {
+    if (settings.activeItems[type]!=true) {
       li.classList.add('hidden');
     }
 
@@ -1282,6 +1282,7 @@ window.onload = function(event) {
     }
     localData[id].markedItems = localData[id].markedItems || {};
     localData[id].hiddenItems = localData[id].hiddenItems || {};
+    localData[id].activeItems = localData[id].activeItems || {};
     localData[id].track = localData[id].track || {};
     localData[id].searchText = localData[id].searchText || '';
   }
