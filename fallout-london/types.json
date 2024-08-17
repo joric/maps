@@ -192,7 +192,10 @@
           "005 Comic": "005 {index}",
           "D.I.Y.": "DIY: The Householder's Handbook {index}",
           "Protect and Survive": "Protect and Survive {index}",
-          "Anarchy Times[r]*": "Anarchy Times {index}"
+          "Anarchy Times[r]*": "Anarchy Times {index}",
+          "London Crime Statistics": "London Crime Statistics {index}",
+          "Ministry of National Health": "Ministry of National Health {index}",
+          "Ranger Ridiculous": "Ranger Ridiculous {index}"
           }
         },
       "Card": {"match": "Card", "fa": "id-card", "bg": "goldenrod", "type": "Visiting Card"}
