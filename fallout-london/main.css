@@ -218,7 +218,7 @@ hr { opacity: .6;}
 #categories .group-categories {
   display: block;
   column-count: 2;
-  column-gap: 0;
+  column-gap: 0.1;
   width: 100%;
 }
 
@@ -229,7 +229,7 @@ hr { opacity: .6;}
   display: flex;
   align-items: center;
   position: relative;
-  padding: 3px 6px;
+  padding: 3px;
   cursor: pointer;
 }
 
