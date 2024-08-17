@@ -146,6 +146,7 @@ a:hover { text-decoration: underline; }
   padding: 16px;
   padding-left: 8px;
   padding-right: 10px;
+  padding-bottom: 10px;
   overflow-x: hidden;
   height: 100%;
   scrollbar-gutter: stable both-edges;
