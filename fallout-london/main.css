@@ -145,6 +145,7 @@ a:hover { text-decoration: underline; }
 .panel {
   padding-left: 6px;
   padding-right: 8px;
+  padding-bottom: 10px;
   overflow-x: hidden;
   height: 100%;
   scrollbar-gutter: stable both-edges;
