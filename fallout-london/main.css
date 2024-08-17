@@ -520,13 +520,13 @@ hr { opacity: .6;}
 }
 
 .popup-subnote-item .icon {
-  opacity: .8;
+  opacity: .6;
 }
 
 .popup-subnote-item a {
   color: black;
   font-size: 13px;
-  margin-left : 0.1em;
+  margin-left : 0em;
 }
 
 .popup-subnote-item:hover {
