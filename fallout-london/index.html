@@ -88,7 +88,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
       </div>
 
       <div class="button-panel" id="track-category-button">
-        <span id="track-category" onclick="toggleVisibility(['#track-category-panel','#track-category-button'])">Track Category +</span>
+        <span id="track-category" onclick="closeTrack()">Track Category +</span>
       </div>
 
       <div id="track-category-panel" class="button-panel collapsed">
@@ -199,6 +199,9 @@ let maps = {
   'StPaulsWorld': { name: 'St Pauls', scale: 1, offset: {x:0, y:0}, hidden: true }
 };
 
+function closeTrack(){
+  toggleVisibility(['#track-category-panel','#track-category-button']);
+}
 
 function addTrack(e) {
   let sel = document.querySelector('#track-category-panel > select');
@@ -206,6 +209,7 @@ function addTrack(e) {
     settings.track[value] = true;
     saveSettings();
     markItems();
+    closeTrack();
   }
 }
 
