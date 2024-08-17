@@ -144,9 +144,9 @@ a:hover { text-decoration: underline; }
 
 .panel {
   padding: 16px;
-  overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
+  scrollbar-gutter: stable both-edges;
 }
 
 .button-panel {
