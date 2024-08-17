@@ -181,7 +181,7 @@ a:hover { text-decoration: underline; }
 }
 
 .panel::-webkit-scrollbar-thumb:hover {
-  background: hsla(0, 0%, 53%, .5);
+  background: hsla(0, 0%, 53%, .7);
 }
 
 .panel:hover::-webkit-scrollbar-track {
