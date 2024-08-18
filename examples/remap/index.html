@@ -63,17 +63,12 @@
     localStorage.setItem(localDataName, JSON.stringify(localData));
   }
 
-  let markers;
-
+  let markers = null;
 
   let settings = localData;
   let london = [51.505, -0.09];
 
-  //console.log(L.Toolbar2);
-
   let pos = london;
-  //let pos = [0,0];
-  //let zoom = 0;
   let zoom = 12;
 
   let imageOpacity = .7;
@@ -86,95 +81,47 @@
   let handles = [];
 
   const map = L.map('map', {
-    //crs: L.extend({}, L.CRS.Simple, {}),
-    //zoomDelta: .01,
-    //zoomSnap: .01,
-
     zoomSnap: .1,
     wheelDebounceTime: 100,
-
   }).setView(pos, zoom);
 
   let prov = {};
 
-
-var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+  var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
   prov['OpenStreetMap_Mapnik'] = OpenStreetMap_Mapnik;
 
-var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-  maxZoom: 17,
-  attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-});
-
-  //prov['OpenTopoMap'] = OpenTopoMap;
-
-
-var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-});
+  var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+  });
 
   prov['Esri_WorldImagery'] = Esri_WorldImagery;
 
+  var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 20
+  });
 
-var GeoportailFrance_orthos = L.tileLayer('https://data.geopf.fr/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&STYLE={style}&TILEMATRIXSET=PM&FORMAT={format}&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
-  attribution: '<a target="_blank" href="https://www.geoportail.gouv.fr/">Geoportail France</a>',
-  bounds: [[-75, -180], [81, 180]],
-  minZoom: 2,
-  maxZoom: 19,
-  format: 'image/jpeg',
-  style: 'normal'
-});
-
-  //prov['GeoportailFrance_orthos'] = GeoportailFrance_orthos;
-
-
-
-var USGS_USImagery = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
-  maxZoom: 20,
-  attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
-});
-  
-
-//  prov['USGS_USImagery'] = USGS_USImagery;
-
-
-var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: 'abcd',
-  maxZoom: 20
-});
-
-prov['CartoDB_Voyager'] = CartoDB_Voyager;
-
+  prov['CartoDB_Voyager'] = CartoDB_Voyager;
 
   L.control.mousePosition().addTo(map);
 
-  let images = new L.layerGroup().addTo(map);
-
-  let img = L.distortableImageOverlay(imageURL, {
-    mode: 'lock',
-    //selected: true,
-    //actions: [L.DragAction, L.ScaleAction, L.DistortAction, L.RotateAction, L.FreeRotateAction, L.LockAction, L.OpacityAction, L.BorderAction, L.ExportAction, L.DeleteAction, L.RestoreAction],
-    //actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
-    actions: [L.ScaleAction, L.OpacityAction, L.RestoreAction, L.LockAction],
-  }).on('update', imageUpdated)
-    .on('load', e=>{ setTimeout(function(){ imageLoaded(img) }, 0) })
-    .addTo(map)
-
   let scale = 1/2000000;
 
-  function project(latlng) {
+  function project(loc) {
+
+    let [lng, lat] = loc;
+    let latlng = L.latLng(lat, lng);
 
     let center = img.getCenter();
     let angle = img.getAngle();
     let corners = img.getCorners();
 
     // markers should match image bounds
-
     // Returns the coordinates of the image corners in NW, NE, SW, SE order.
 
     let [[x0,y0], [x1,y1], [x2,y2]] = [
@@ -186,19 +133,14 @@ prov['CartoDB_Voyager'] = CartoDB_Voyager;
     let sw = Math.sqrt( Math.pow(x1-x0,2) + Math.pow(y1-y0,2)  );
     let sh = Math.sqrt( Math.pow(x2-x0,2) + Math.pow(y2-y0,2)  );
 
-    //console.log(sw, sh);
-
     let scalew = sw / w;
     let scaleh = sh / h;
 
-    //console.log(center, angle);
-
-    latlng = L.latLng(latlng);
     let [x, y] = [latlng.lng, latlng.lat];
 
     let r = -angle * (Math.PI / 180);
 
-
+    // figure out what's up with the skew
     let tx = x * Math.cos(r) - y * Math.sin(r);
     let ty = x * Math.sin(r) + y * Math.cos(r);
     x = tx;
@@ -209,7 +151,6 @@ prov['CartoDB_Voyager'] = CartoDB_Voyager;
 
     x += center.lng;
     y += center.lat;
-
 
     return [y,x];
   }
@@ -223,31 +164,39 @@ prov['CartoDB_Voyager'] = CartoDB_Voyager;
           return f.properties.location == settings.area && (!settings.filter || f.properties.description==settings.filter);
         },
         pointToLayer: function (feature, latlng) {
-          return L.marker(project(latlng), {draggable: true, opacity: 1});
+          return L.marker(latlng, {draggable: true, opacity: 1, feature: feature});
         }
       })
-      .bindPopup(l => { console.log(l); return '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng); })
+      .bindPopup(l => { return '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng); })
       .bindTooltip(l => l.feature.properties.title)
       .addTo(map);
 
       postLoading();
-
     })
   }
 
   function postLoading() {
-    var baseMaps = {
-    };
-    var overlayMaps = {
-        "Markers": markers,
-        "Images": img,
-    };
-    var layerControl = L.control.layers(prov, overlayMaps).addTo(map);
+    img = L.distortableImageOverlay(imageURL, {
+      mode: 'lock',
+      //selected: true,
+      //actions: [L.DragAction, L.ScaleAction, L.DistortAction, L.RotateAction, L.FreeRotateAction, L.LockAction, L.OpacityAction, L.BorderAction, L.ExportAction, L.DeleteAction, L.RestoreAction],
+      actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
+      //actions: [L.ScaleAction, L.OpacityAction, L.RestoreAction, L.LockAction],
+    }).on('update', imageUpdated)
+      .on('load', e=>{ setTimeout(function(){ imageLoaded(img) }, 0) })
+      .addTo(map)
+    var layerControl = L.control.layers(prov, { 'Markers': markers, 'Images': img }).addTo(map);
+  }
+
+  function updateMarkers() {
+    for (marker of Object.values(markers._layers)) {
+      marker.setLatLng( project( marker.options.feature.geometry.coordinates ) );
+    }
   }
 
   function imageUpdated(e) {
-    let img = e.target;
-    settings.corners = img.getCorners();
+    settings.corners = e.target.getCorners();
+    updateMarkers();
     saveSettings();
   }
 
@@ -257,15 +206,11 @@ prov['CartoDB_Voyager'] = CartoDB_Voyager;
       img.setCorners( settings.corners )
     }
     img.select();
-    loadMarkers();
+    updateMarkers();
   }
 
+  loadMarkers();
+
 </script>
-
-
-
 </body>
 </html>
-
-
-
