@@ -45,6 +45,15 @@ a:hover { text-decoration: underline; }
   padding: 0;
 }
 
+.link {
+  opacity: .5;
+}
+
+.link:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
 .map-link {
   font-size: 14px;
   flex-grow: 1;
