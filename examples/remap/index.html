@@ -110,49 +110,27 @@
 
   L.control.mousePosition().addTo(map);
 
-  let scale = 1/2000000;
-
   function project(loc) {
+      let [x, y] = loc;
 
-    let [lng, lat] = loc;
-    let latlng = L.latLng(lat, lng);
+      // coordinates of the plane corners in NW, NE, SW, SE order.
+      let [[x0, y0], [x1, y1], [x2, y2], [x3, y3]] = img.getCorners().map(corner => [corner.lng, corner.lat]);
 
-    let center = img.getCenter();
-    let angle = img.getAngle();
-    let corners = img.getCorners();
+      // Normalize input point coordinates from [-131072, 131072] to [0, 1]
+      let nx = (x + 131072) / 262144;
+      let ny = 1 - (y + 131072) / 262144; 
 
-    // markers should match image bounds
-    // Returns the coordinates of the image corners in NW, NE, SW, SE order.
+      const interpolate = (a, b, c, d, nx, ny) => {
+          return (1 - nx) * (1 - ny) * a + 
+                nx * (1 - ny) * b + 
+                (1 - nx) * ny * c + 
+                nx * ny * d;
+      };
 
-    let [[x0,y0], [x1,y1], [x2,y2]] = [
-      [corners[0].lng, corners[0].lat],
-      [corners[1].lng, corners[1].lat],
-      [corners[2].lng, corners[2].lat]
-    ]
+      let projX = interpolate(x0, x1, x2, x3, nx, ny);
+      let projY = interpolate(y0, y1, y2, y3, nx, ny);
 
-    let sw = Math.sqrt( Math.pow(x1-x0,2) + Math.pow(y1-y0,2)  );
-    let sh = Math.sqrt( Math.pow(x2-x0,2) + Math.pow(y2-y0,2)  );
-
-    let scalew = sw / w;
-    let scaleh = sh / h;
-
-    let [x, y] = [latlng.lng, latlng.lat];
-
-    let r = -angle * (Math.PI / 180);
-
-    // figure out what's up with the skew
-    let tx = x * Math.cos(r) - y * Math.sin(r);
-    let ty = x * Math.sin(r) + y * Math.cos(r);
-    x = tx;
-    y = ty;
-
-    x *= scalew;
-    y *= scaleh;
-
-    x += center.lng;
-    y += center.lat;
-
-    return [y,x];
+      return [projY, projX];
   }
 
   function loadMarkers() {
@@ -179,8 +157,8 @@
     img = L.distortableImageOverlay(imageURL, {
       mode: 'lock',
       //selected: true,
-      //actions: [L.DragAction, L.ScaleAction, L.DistortAction, L.RotateAction, L.FreeRotateAction, L.LockAction, L.OpacityAction, L.BorderAction, L.ExportAction, L.DeleteAction, L.RestoreAction],
-      actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
+      actions: [L.DragAction, L.ScaleAction, L.DistortAction, L.RotateAction, L.FreeRotateAction, L.LockAction, L.OpacityAction, L.BorderAction, L.ExportAction, L.DeleteAction, L.RestoreAction],
+      //actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
       //actions: [L.ScaleAction, L.OpacityAction, L.RestoreAction, L.LockAction],
     }).on('update', imageUpdated)
       .on('load', e=>{ setTimeout(function(){ imageLoaded(img) }, 0) })
