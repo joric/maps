@@ -57,13 +57,7 @@
 <script>
 
   let localDataName = 'joricsRemap';
-  let localData = JSON.parse(localStorage.getItem(localDataName)) || 
-    {"corners":[
-      {"lat":51.56931228233354,"lng":-0.17939640351374744},
-      {"lat":51.56931228233354,"lng":0.07202808128508932},
-      {"lat":51.41276629182017,"lng":-0.17939640351374744},
-      {"lat":51.41276629182017,"lng":0.07202808128508932}
-    ]};
+  let localData = JSON.parse(localStorage.getItem(localDataName)) || {"corners":[{"lat":51.567501756256505,"lng":-0.1764177405505252},{"lat":51.567501756256505,"lng":0.06345199242442146},{"lat":51.41815601816625,"lng":-0.1764177405505252},{"lat":51.41815601816625,"lng":0.06345199242442146}]}
 
   function saveSettings() {
     //console.log(settings);
