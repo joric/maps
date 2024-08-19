@@ -414,9 +414,10 @@ new L.Toolbar2.Control({
           subToolbar: new L.Toolbar2({ 
             actions: [
               subAction.extend({
-              options:{toolbarIcon:{html:'Copy Wiki URL', tooltip: ''}},
+              options:{toolbarIcon:{html:'About This Map', tooltip: ''}},
                 addHooks:function() {
-                  copyToClipboard('https://github.com/joric/maps/wiki/Fallout-London');
+                  let url = 'https://github.com/joric/maps/wiki/Fallout-London#remapping';
+                  window.open(url, '_blank');
                   subAction.prototype.addHooks.call(this); // closes sub-action
                 }
               }),
