@@ -169,104 +169,35 @@ map.on('overlayremove', function(e) {
 
 L.control.mousePosition().addTo(map);
 
-function warpSpace(point, controlPoints, settings) {
-  const { smoothing, power } = settings.remap;
+function project(loc, title, controlPoints) {
+  let [x, y] = loc;
+  let corners = settings.remap.corners;
+
+  // coordinates of the plane corners in NW, NE, SW, SE order.(in a "Z" shape)
+  let [[x0, y0], [x1, y1], [x2, y2], [x3, y3]] = corners.map(corner => [corner.lng, corner.lat]);
+
+  // Normalize input point coordinates from [-131072, 131072] to [0, 1]
+  let nx = (x + 131072) / 262144;
+  let ny = 1 - (y + 131072) / 262144; 
+
+  // this is affine transformation, not the css matrix3d
+  const interpolate = (a, b, c, d, nx, ny) => {
+      return (1 - nx) * (1 - ny) * a + 
+            nx * (1 - ny) * b + 
+            (1 - nx) * ny * c + 
+            nx * ny * d;
+  };
+
+  let projX = interpolate(x0, x1, x2, x3, nx, ny);
+  let projY = interpolate(y0, y1, y2, y3, nx, ny);
+
+  let totalWeight = 0;
   let newX = 0;
   let newY = 0;
-  let totalWeight = 0;
 
-  // Check if the point is a control point itself
-  const matchingCP = Object.entries(controlPoints).find(([_, cp]) => 
-    cp.oldX === point.x && cp.oldY === point.y
-  );
-
-  if (matchingCP) {
-    // If it's a control point, return its new position directly
-    return { x: matchingCP[1].newX, y: matchingCP[1].newY };
-  }
-
-  // Calculate the warped position
-  for (const cp of Object.values(controlPoints)) {
-    const dx = cp.newX - cp.oldX;
-    const dy = cp.newY - cp.oldY;
-    const distance = Math.max(
-      Math.sqrt((point.x - cp.oldX)**2 + (point.y - cp.oldY)**2),
-      smoothing
-    );
-    const weight = 1 / (distance ** power);
-    
-    newX += (point.x + dx) * weight;
-    newY += (point.y + dy) * weight;
-    totalWeight += weight;
-  }
-
-  // Normalize the result
-  if (totalWeight > 0) {
-    newX /= totalWeight;
-    newY /= totalWeight;
-  } else {
-    // If totalWeight is 0, return the original point
-    return { x: point.x, y: point.y };
-  }
-
-  return { x: newX, y: newY };
-}
-
-
-function project(loc, title, controlPoints) {
-
-    let [x, y] = loc;
-    let corners = settings.remap.corners;
-
-    // coordinates of the plane corners in NW, NE, SW, SE order.(in a "Z" shape)
-    let [[x0, y0], [x1, y1], [x2, y2], [x3, y3]] = corners.map(corner => [corner.lng, corner.lat]);
-
-    // Normalize input point coordinates from [-131072, 131072] to [0, 1]
-    let nx = (x + 131072) / 262144;
-    let ny = 1 - (y + 131072) / 262144; 
-
-    // this is affine transformation, not the css matrix3d
-    const interpolate = (a, b, c, d, nx, ny) => {
-        return (1 - nx) * (1 - ny) * a + 
-              nx * (1 - ny) * b + 
-              (1 - nx) * ny * c + 
-              nx * ny * d;
-    };
-
-    let projX = interpolate(x0, x1, x2, x3, nx, ny);
-    let projY = interpolate(y0, y1, y2, y3, nx, ny);
-
-
-    let totalWeight = 0;
-    let newX = 0;
-    let newY = 0;
-
-    let point = {x: projX, y: projY};
-    let smoothing = settings.remap.smoothing;
-    let power = settings.remap.power;
-
-    /*
-    // next, we correct the position using space warp with control points
-    for (const[name, cp] of Object.entries(controlPoints)) {
-      if (title == name) {
-        [projY, projX] = [cp.newY, cp.newX];
-      } else if (!controlPoints[title]) {
-        const dx = cp.newX - cp.oldX;
-        const dy = cp.newY - cp.oldY;
-        const distance = Math.sqrt((point.x - cp.oldX)**2 + (point.y - cp.oldY)**2) + smoothing;
-        const weight = 1 / (distance ** power);
-        newX += (point.x + dx) * weight;
-        newY += (point.y + dy) * weight;
-        totalWeight += weight;
-      }
-    }
-
-    if (totalWeight) {
-      projX = newX / totalWeight;
-      projY = newY / totalWeight;
-    }
-
-    */
+  let point = {x: projX, y: projY};
+  let smoothing = settings.remap.smoothing;
+  let power = settings.remap.power;
 
   // if it's a control point, just return saved coordinates
   if (cp = controlPoints[title]) {
@@ -293,10 +224,6 @@ function project(loc, title, controlPoints) {
 
   // If totalWeight is 0, return the original point
   return [point.y, point.x];
-
-
-
-//  return [projY, projX];
 }
 
 function loadMarkers() {
