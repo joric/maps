@@ -166,7 +166,52 @@ map.on('overlayremove', function(e) {
 
 L.control.mousePosition().addTo(map);
 
+function warpSpace(point, controlPoints, settings) {
+  const { smoothing, power } = settings.remap;
+  let newX = 0;
+  let newY = 0;
+  let totalWeight = 0;
+
+  // Check if the point is a control point itself
+  const matchingCP = Object.entries(controlPoints).find(([_, cp]) => 
+    cp.oldX === point.x && cp.oldY === point.y
+  );
+
+  if (matchingCP) {
+    // If it's a control point, return its new position directly
+    return { x: matchingCP[1].newX, y: matchingCP[1].newY };
+  }
+
+  // Calculate the warped position
+  for (const cp of Object.values(controlPoints)) {
+    const dx = cp.newX - cp.oldX;
+    const dy = cp.newY - cp.oldY;
+    const distance = Math.max(
+      Math.sqrt((point.x - cp.oldX)**2 + (point.y - cp.oldY)**2),
+      smoothing
+    );
+    const weight = 1 / (distance ** power);
+    
+    newX += (point.x + dx) * weight;
+    newY += (point.y + dy) * weight;
+    totalWeight += weight;
+  }
+
+  // Normalize the result
+  if (totalWeight > 0) {
+    newX /= totalWeight;
+    newY /= totalWeight;
+  } else {
+    // If totalWeight is 0, return the original point
+    return { x: point.x, y: point.y };
+  }
+
+  return { x: newX, y: newY };
+}
+
+
 function project(loc, title, controlPoints) {
+
     let [x, y] = loc;
     let corners = settings.remap.corners;
 
@@ -197,6 +242,7 @@ function project(loc, title, controlPoints) {
     let smoothing = settings.remap.smoothing;
     let power = settings.remap.power;
 
+    /*
     // next, we correct the position using space warp with control points
     for (const[name, cp] of Object.entries(controlPoints)) {
       if (title == name) {
@@ -217,7 +263,37 @@ function project(loc, title, controlPoints) {
       projY = newY / totalWeight;
     }
 
-    return [projY, projX];
+    */
+
+  // if it's a control point, just return saved coordinates
+  if (cp = controlPoints[title]) {
+    return [cp.newY, cp.newX];
+  }
+
+  // Calculate the warped position
+  for (const [name,cp] of Object.entries(controlPoints)) {
+    const dx = cp.newX - cp.oldX;
+    const dy = cp.newY - cp.oldY;
+    const distance = Math.max( Math.sqrt((point.x - cp.oldX)**2 + (point.y - cp.oldY)**2), smoothing );
+    const weight = 1 / (distance ** power);
+    newX += (point.x + dx) * weight;
+    newY += (point.y + dy) * weight;
+    totalWeight += weight;
+  }
+
+  // Normalize the result
+  if (totalWeight > 0) {
+    newX /= totalWeight;
+    newY /= totalWeight;
+    return [newY, newX];
+  } 
+
+  // If totalWeight is 0, return the original point
+  return [point.y, point.x];
+
+
+
+//  return [projY, projX];
 }
 
 function loadMarkers() {
@@ -262,6 +338,7 @@ function loadImages() {
 
 function updateMarkers() {
   let markers = markersGroup.getLayers(0)[0];
+  if (!markers) return;
 
   let controlPoints = {};
   for (marker of Object.values(markers._layers)) {
@@ -475,26 +552,36 @@ window.onload = e => {
   loadMarkers();
   loadImages();
 
-  const updateSlider = (c, value, update = false) => {
-    c.value = value;
-    c.title = c.id + ' ' + value;
-    if (update) updateMarkers();
-    saveSettings();
-    return value;
-  }
-
   let [sm,pw] = [document.querySelector('#smoothing'), document.querySelector('#power')];
-  sm.oninput = e=> { settings.remap.smoothing = updateSlider(e.target, e.target.value, true); };
-  pw.oninput = e=> { settings.remap.power = updateSlider(e.target, e.target.value, true); };
   updateSlider(sm, settings.remap.smoothing);
   updateSlider(pw, settings.remap.power);
+
+  function updateSliderTitle(c) {
+    c.title = c.id + ': ' + c.value;
+    updateMarkers();
+  }
+
+  function updateSlider(c, value) {
+    c.value = value;
+    updateSliderTitle(c);
+  }
+
+  function sliderEvent(e) {
+    if (e.target.id=='smoothing') settings.remap.smoothing = e.target.value;
+    if (e.target.id=='power') settings.remap.power = e.target.value;
+    updateSliderTitle(e.target);
+    saveSettings();
+  }
+
+  sm.oninput = sm.onchange = sliderEvent;
+  pw.oninput = pw.onchange = sliderEvent;
 }
 
 </script>
 
 <div id="controls">
-  <div><input type="range" step="0.01"  min="0.01" max="5" value="0.1" class="slider" id="smoothing"></div>
-  <div><input type="range" step="0.01"  min="0.01" max="5" value="0.5" class="slider" id="power"></div>
+  <div><input type="range" min="0.0" step="0.00001" max="0.2" value="0.1" class="slider" id="smoothing"></div>
+  <div><input type="range" min="0.0" step="0.00001" max="10" value="0.5" class="slider" id="power"></div>
 </div>
 
 </body>
