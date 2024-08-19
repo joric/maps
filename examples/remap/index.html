@@ -293,31 +293,6 @@ function warpToControlPoints(point, controlPoints, smoothing = 1, power = 2) {
   return point;
 }
 
-function warpToControlPoints1(point, controlPoints, smoothing, power) {
-  let totalWeight = 0;
-  let newX = 0;
-  let newY = 0;
-
-  // calculate the warped position
-  for (const cp of Object.values(controlPoints)) {
-    const dx = cp.newX - cp.oldX;
-    const dy = cp.newY - cp.oldY;
-    const distance = Math.max(Math.sqrt((point.x - cp.oldX)**2 + (point.y - cp.oldY)**2), smoothing);
-    const weight = 1 / (distance ** power);
-    newX += (point.x + dx) * weight;
-    newY += (point.y + dy) * weight;
-    totalWeight += weight;
-  }
-  
-  // normalize the result if weight > 0
-  if (totalWeight > 0) {
-    return {x: newX/totalWeight, y: newY/totalWeight};
-  } 
-
-  // else just return original point
-  return point;
-}
-
 function project(loc, title, controlPoints) {
   // do the bitmap remapping first
   let worldCenter = PointFromArray(settings.remap.world.center);
