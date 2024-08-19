@@ -74,14 +74,19 @@ let defaultLocalData = {
       markers: 'https://joric.github.io/maps/examples/data/geojson.markers.folon.json',
       corners: [{"lat":51.567501756256505,"lng":-0.1764177405505252},{"lat":51.567501756256505,"lng":0.06345199242442146},{"lat":51.41815601816625,"lng":-0.1764177405505252},{"lat":51.41815601816625,"lng":0.06345199242442146}],
       controlPoints: {
-        'London Eye':[51.503292, -0.119559],
-        'Tower Bridge': [51.505507, -0.075365],
-        'Bromley Police Station': [51.399345, 0.018011],
+        'London Eye':[51.50321434582702, -0.11951572655167679],
+        'Tower Bridge': [51.50558406901761, -0.07540017069646172],
+        'Bromley Police Station': [51.399351080832055, 0.017749364528318105],
+        'Camelot': [51.431596648896274, -0.20275026968126383],
+        'London City Airport': [51.504990558960266, 0.04948573753140306],
+        'British Library': [51.530051306080956, -0.12764840735851554],
+        'The Gherkin': [51.51462468445813, -0.08024345156127621],
       },
       smoothing: 0.1,
       power: 5.0,
       activeLayers: {'Images':true, 'Markers': true},
       provider: 'OpenStreetMap_Mapnik',
+      warped: true,
     }
   }
 };
@@ -194,6 +199,31 @@ if (settings.center && settings.zoom) {
 
 L.control.mousePosition().addTo(map);
 
+
+let warpCaption = ()=>settings.remap.warped ? 'Warped' : 'Projected';
+
+L.Control.MyButton = L.Control.extend({
+    onAdd: function(map) {
+        var btn = L.DomUtil.create('button', 'my-button');
+        btn.innerHTML = warpCaption();
+        L.DomEvent.on(btn, 'click', function() {
+          settings.remap.warped = !settings.remap.warped;
+          btn.innerHTML = warpCaption();
+          updateMarkers();
+        });
+        return btn;
+    }
+});
+
+
+L.control.myButton = function(opts) {
+    return new L.Control.MyButton(opts);
+}
+
+L.control.myButton({ position: 'topright' }).addTo(map);
+
+
+
 function PointFromArray(loc) {
   return {x:loc[0], y:loc[1]};
 }
@@ -243,9 +273,6 @@ function warpToControlPoints(point, controlPoints, smoothing, power) {
 }
 
 function project(loc, title, controlPoints) {
-  // if it's a control point, just return saved coordinates
-  if (p = controlPoints[title]) return [p.newY, p.newX];
-
   // do the bitmap remapping first
   let point = PointFromArray(loc);
   let worldCenter = PointFromArray(settings.remap.world.center);
@@ -254,7 +281,11 @@ function project(loc, title, controlPoints) {
   point = remapToRectangle(point, corners, worldSize, worldCenter);
 
   // then warp to control points
-  point = warpToControlPoints(point, controlPoints, settings.remap.smoothing, settings.remap.power);
+  if (settings.remap.warped) {
+    // if it's a control point, just return saved coordinates
+    if (p = controlPoints[title]) return [p.newY, p.newX];
+    point = warpToControlPoints(point, controlPoints, settings.remap.smoothing, settings.remap.power);
+  }
 
   // return point as latlng
   return [point.y, point.x];
@@ -277,7 +308,14 @@ function loadMarkers() {
       }
     })
 
-    markers.bindPopup(l => { return '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng); })
+    markers.bindPopup(l => { 
+      let name = l.feature.properties.title;
+      let content = '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng);
+      if (settings.remap.controlPoints[name]) {
+        content += '<br/><br/><button onclick="unbindMarker(\''+l.feature.properties.name+'\')">Unbind Marker</button>';
+      }
+      return content;
+    })
     markers.bindTooltip(l => l.feature.properties.title)
     markersGroup.addLayer(markers);
     updateMarkers();
@@ -313,6 +351,8 @@ function updateMarkers() {
         newY: settings.remap.controlPoints[o.title][0],
       };
     }
+
+    settings.remap.warped ? marker.dragging.enable() : marker.dragging.disable();
   }
 
   for (marker of Object.values(markers._layers)) {
