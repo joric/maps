@@ -112,6 +112,9 @@ let markersGroup = L.layerGroup();
 //let imgGroup = L.distortableCollection(); // doesn't hide the image, only toolbar
 let imgGroup = L.layerGroup(); // doesn't show the image after hiding
 
+settings.remap = settings.remap||{};
+settings.remap.activeLayers = settings.remap.activeLayers||{};
+
 if (settings.remap.activeLayers['Markers']==true) {
   map.addLayer(markersGroup);
 }
