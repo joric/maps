@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.css">
   <script src="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-search@4.0.0/dist/leaflet-search.src.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@4.0.0/dist/leaflet-search.src.min.css">
+
 <!--
   <link rel="stylesheet" href="leaflet.css" />
   <script src="leaflet.js"></script>
@@ -73,33 +76,175 @@ let defaultLocalData = {
       image: 'https://joric.github.io/maps/examples/data/LondonWorld.jpg',
       markers: 'https://joric.github.io/maps/examples/data/geojson.markers.folon.json',
       corners: [{"lat":51.567501756256505,"lng":-0.1764177405505252},{"lat":51.567501756256505,"lng":0.06345199242442146},{"lat":51.41815601816625,"lng":-0.1764177405505252},{"lat":51.41815601816625,"lng":0.06345199242442146}],
-      controlPoints: {
-        // coordinates from google maps (right click on marker to copy)
-        'London Eye':[51.50321434582702, -0.11951572655167679],
-        'Tower Bridge': [51.50558406901761, -0.07540017069646172],
-        'Bromley Police Station': [51.399351080832055, 0.017749364528318105],
-        'Camelot': [51.431596648896274, -0.20275026968126383],
-        'London City Airport': [51.504990558960266, 0.04948573753140306],
-        'British Library': [51.530051306080956, -0.12764840735851554],
-        'The Gherkin': [51.51462468445813, -0.08024345156127621],
-        'National Portrait Gallery': [51.51030881945582, -0.1283529531747778],
-        'Waterloo Bridge': [51.50866884333985, -0.11685807045491195],
-        'London Bridge': [51.508016432737406, -0.08770161133087216],
-        'Southwark Bridge': [51.50905245934331, -0.09405037235675627],
-        'Blackfriars Bridge': [51.50983145126394, -0.10429026299831769],
-        'One Canada Square': [51.50503451700189, -0.019506823380022808],
-        'Winchester Palace': [51.50702867207373, -0.09100878935130598],
-        'Millennium Bridge': [51.50968072831046, -0.09844008513055418],
-        'Trafalgar Square': [51.50810008166447, -0.1280552079199807],
-        'Leicester Square': [51.510455442178056, -0.13006704685557416],
-        'Piccadilly Circus': [51.50988505564679, -0.1342789545165483],
-        'Buckingham Palace': [51.501374177823884, -0.14188977026816976],
-        'Camden Town Underground Station': [51.539399688690885, -0.14265421056691752],
-        'Royal Albert Hall': [51.50091125268883, -0.1773662194234649],
-        'Natural History Museum': [51.49673453408684, -0.17636726840925745],
-        'St James\'s Palace': [51.50461770647941, -0.13785024457073053],
-        'Tennis Museum': [51.43454046598776, -0.21336507027650478],
-      },
+      controlPoints:
+// start of control poinst
+{
+  "London Eye": [
+    51.50321434582702,
+    -0.11951572655167679
+  ],
+  "Tower Bridge": [
+    51.50558406901761,
+    -0.07540017069646172
+  ],
+  "Bromley Police Station": [
+    51.399351080832055,
+    0.017749364528318105
+  ],
+  "Camelot": [
+    51.431596648896274,
+    -0.20275026968126383
+  ],
+  "London City Airport": [
+    51.504990558960266,
+    0.04948573753140306
+  ],
+  "British Library": [
+    51.530051306080956,
+    -0.12764840735851554
+  ],
+  "The Gherkin": [
+    51.51462468445813,
+    -0.08024345156127621
+  ],
+  "National Portrait Gallery": [
+    51.51030881945582,
+    -0.1283529531747778
+  ],
+  "Waterloo Bridge": [
+    51.50866884333985,
+    -0.11685807045491195
+  ],
+  "London Bridge": [
+    51.508016432737406,
+    -0.08770161133087216
+  ],
+  "Southwark Bridge": [
+    51.50905245934331,
+    -0.09405037235675627
+  ],
+  "Blackfriars Bridge": [
+    51.50983145126394,
+    -0.10429026299831769
+  ],
+  "One Canada Square": [
+    51.50503451700189,
+    -0.019506823380022808
+  ],
+  "Winchester Palace": [
+    51.50702867207373,
+    -0.09100878935130598
+  ],
+  "Millennium Bridge": [
+    51.50968072831046,
+    -0.09844008513055418
+  ],
+  "Trafalgar Square": [
+    51.50810008166447,
+    -0.1280552079199807
+  ],
+  "Leicester Square": [
+    51.510455442178056,
+    -0.13006704685557416
+  ],
+  "Piccadilly Circus": [
+    51.50988505564679,
+    -0.1342789545165483
+  ],
+  "Buckingham Palace": [
+    51.501374177823884,
+    -0.14188977026816976
+  ],
+  "Camden Town Underground Station": [
+    51.539399688690885,
+    -0.14265421056691752
+  ],
+  "Royal Albert Hall": [
+    51.50091125268883,
+    -0.1773662194234649
+  ],
+  "Natural History Museum": [
+    51.49673453408684,
+    -0.17636726840925745
+  ],
+  "St James's Palace": [
+    "51.504532850000004",
+    "-0.1377553423767412"
+  ],
+  "Tennis Museum": [
+    51.43454046598776,
+    -0.21336507027650478
+  ],
+  "Shadwell Fire Station": [
+    "51.510944949999995",
+    "-0.05583709999999986"
+  ],
+  "Bank Of England": [
+    "51.51413225",
+    "-0.08892476721255456"
+  ],
+  "London Mithraeum": [
+    "51.51248495",
+    "-0.09063813651893084"
+  ],
+  "Charing Cross Station": [
+    "51.5085068",
+    "-0.1254004"
+  ],
+  "Bromley South Station": [
+    "51.4006268",
+    "0.0170661"
+  ],
+  "Shakespeare's Globe": [
+    "51.50811965",
+    "-0.0971901351203674"
+  ],
+  "London Aquarium": [
+    "51.5028354",
+    "-0.1185929"
+  ],
+  "St Thomas Hospital": [
+    "51.49906445",
+    "-0.11869021253163324"
+  ],
+  "Lambeth Palace": [
+    "51.4955481",
+    "-0.12008255397320075"
+  ],
+  "Victoria and Albert Museum": [
+    "51.496883800000006",
+    "-0.17163721656927572"
+  ],
+  "Wellington Arch": [
+    "51.5025031",
+    "-0.15081986768597055"
+  ],
+  "Westminster University": [
+    "51.5224585",
+    "-0.1548451"
+  ],
+  "Oxford Circus": [
+    "51.5152681",
+    "-0.1420078"
+  ],
+  "Borough Market": [
+    "51.505581500000005",
+    "-0.09019844606970746"
+  ],
+  "Westminster Abbey": [
+    "51.499399",
+    "-0.1273910483333311"
+  ],
+  "St James's Park": [
+    "51.50312945",
+    "-0.13316503576441757"
+  ],
+  "The Postal Museum": [
+    "51.5247243",
+    "-0.1139982"
+  ]
+}// end of control points
+      ,
       smoothing: 0.0428,
       power: 5.0,
       activeLayers: {'Markers': true},
@@ -415,6 +560,8 @@ function loadMarkers() {
         let type = o.description;
         let skip = (area != mapId && !(maps[mapId].regions && maps[mapId].regions[area]));
 
+        if (!o.description || !o.title) skip= true;
+
         // hide some of the location markers on the base map
         if (mapId == Object.keys(maps)[0]) {
           if (['City','Town'].includes(type) && area != mapId && o.ref_id!='07310FF5') skip = true;
@@ -434,14 +581,32 @@ function loadMarkers() {
     markers.bindPopup(l => { 
       let name = l.feature.properties.title;
       let content = '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng);
+      
+
       if (settings.remap.controlPoints[name]) {
-        content += '<br/><br/><button onclick="unbindMarker(\''+l.feature.properties.title+'\')">Unbind Marker</button>';
+        content += '<br/><br/><button id="unbind-marker-btn">Unbind Marker</button>';
       }
+
+      content += '<br/><br/><button id="search-location-btn">Search Location</button>';
+
+      setTimeout(function() {
+        if (e=document.querySelector('#search-location-btn')) e.onclick = function() { searchLocation(l.feature.properties.title)};
+        if (e=document.querySelector('#unbind-marker-btn')) e.onclick = function() { unbindMarker(l.feature.properties.title)};
+      }, 250,);
+
       return content;
     })
     markers.bindTooltip(l => l.feature.properties.title)
     markersGroup.addLayer(markers);
     updateMarkers();
+
+
+    map.addControl( new L.Control.Search({
+      layer: markers,
+      hideMarkerOnCollapse: true,
+    }) );
+
+
   })
 }
 
@@ -488,15 +653,7 @@ function updateMarkers() {
   for (marker of Object.values(markers._layers)) {
     let o = marker.feature.properties;
     let loc = marker.feature.geometry.coordinates;
-
-
-    if (o.title == 'Camden Town Underground Station') {
-      console.log('here', settings.remap.controlPoints);
-    }
-
     marker.setOpacity(settings.remap.controlPoints[o.title] ? 1 : .3);
-
-
     marker.setLatLng( project(marker, controlPoints ) );
   }
 }
@@ -518,9 +675,12 @@ function markerDragged(e) {
 }
 
 function unbindMarker(name) {
-  delete settings.remap.controlPoints [ name ];
-  saveSettings();
-  updateMarkers();
+  if (confirm('Are you sure you want to unbind this marker?')) {
+    name = decodeURIComponent(name);
+    delete settings.remap.controlPoints [ name ];
+    saveSettings();
+    updateMarkers();
+  }
 }
 
 function markerContextMenu(e) {
@@ -544,34 +704,42 @@ let subAction = L.Toolbar2.Action.extend({
 
 new L.Toolbar2.Control({
     position: 'bottomleft',
+
     actions: [
+
       // share button
       L.Toolbar2.Action.extend({
         options: {
           toolbarIcon:{html: '&#x1F517;', tooltip: 'Share'},
           subToolbar: new L.Toolbar2({ 
             actions: [
+
               subAction.extend({
-              options:{toolbarIcon:{html:'About This Map', tooltip: ''}},
+                options:{toolbarIcon:{html:'About This Map', tooltip: ''}},
                 addHooks:function() {
                   let url = 'https://github.com/joric/maps/wiki/Fallout-London#remapping';
                   window.open(url, '_blank');
                   subAction.prototype.addHooks.call(this); // closes sub-action
                 }
               }),
+
+
               subAction.extend({
                 options:{toolbarIcon:{html:'&times;', tooltip: 'Close'}}
               }),
+
             ],
           })
         }
       }),
-      // load game button
+
+      // settings button
       L.Toolbar2.Action.extend({
         options: {
-          toolbarIcon:{html: '&#x1F4C1;', tooltip: 'Settings Menu'},
+          toolbarIcon:{html: '&#x1F4C1;', tooltip: 'Files'},
           subToolbar: new L.Toolbar2({ 
             actions: [
+
               subAction.extend({
                 options:{toolbarIcon:{html:'Load Settings', tooltip: 'Load Local Data'}},
                 addHooks: function () {
@@ -579,6 +747,7 @@ new L.Toolbar2.Control({
                   subAction.prototype.addHooks.call(this);
                 }
               }),
+
               subAction.extend({
                 options:{toolbarIcon:{html:'Save Settings', tooltip: 'Save Local Data'}},
                 addHooks:function() {
@@ -586,6 +755,7 @@ new L.Toolbar2.Control({
                   subAction.prototype.addHooks.call(this);
                 }
               }),
+
               subAction.extend({
                 options:{toolbarIcon:{html:'Reset Settings', tooltip: 'Reset Local Data'}},
                 addHooks: function () { 
@@ -595,13 +765,16 @@ new L.Toolbar2.Control({
                   subAction.prototype.addHooks.call(this);
                 }
               }),
+
               subAction.extend({
-                options:{toolbarIcon:{html:'Export Markers', tooltip: 'Export Reprojected Markers as GeoJSON'}},
+                options:{toolbarIcon:{html:'Export Markers', tooltip: 'Export All Markers as GeoJSON'}},
                 addHooks:function() {
                   exportMarkers();
                   subAction.prototype.addHooks.call(this);
                 }
               }),
+
+
               subAction.extend({
                 options:{toolbarIcon:{html:'&times;', tooltip: 'Close'}}
               }),
@@ -626,6 +799,9 @@ function loadLocalDataFile() {
         settings = localData[mapId];
         console.log('New settings loaded.');
         saveSettings();
+
+        location.reload();
+
       } catch(e) {
         console.log(e);
       }
@@ -659,9 +835,10 @@ async function saveTextToFile(text, filename) {
 }
 
 function saveLocalData() {
-  let data = localStorage.getItem(localDataName);
+  let str = localStorage.getItem(localDataName);
+  let data = JSON.parse(str);
   let filename = localDataName + '.json';
-  saveTextToFile(data, filename);
+  saveTextToFile(JSON.stringify(data, null, 2), filename);
 }
 
 function resetLocalData() {
@@ -669,6 +846,13 @@ function resetLocalData() {
   saveSettings();
   location.reload();
 }
+
+function exportControlPoints() {
+  let data = settings.remap.controlPoints;
+  let filename = 'controlPoints.'+mapId+'.json';
+  saveTextToFile(JSON.stringify(data, null, 2), filename);
+}
+
 
 function exportMarkers() {
   let markers = markersGroup.getLayers(0)[0];
@@ -685,8 +869,45 @@ function exportMarkers() {
     data.features.push(f)
   }
 
-  let filename = 'remapped.geojson.markers.'+mapId+'.json';
+  let filename = 'markers.'+mapId+'.json';
   saveTextToFile(JSON.stringify(data, null, 2), filename);
+}
+
+function searchLocation(placeName) { 
+  let q = encodeURIComponent(placeName + " London");
+
+  const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1`;
+
+  fetch(url)
+      .then(response => response.json())
+      .then(data => {
+          if (data.length > 0) {
+              const latitude = data[0].lat;
+              const longitude = data[0].lon;
+
+              const displayName = data[0].display_name;
+
+              console.log(JSON.stringify(data, null, 2));
+
+              map.closePopup();
+
+              let text = `Place found! Are you sure you want to set new control point?`
+              + `\n\n${data[0].name}\n${data[0].addresstype}\n\n${data[0].display_name}\n[${latitude}, ${longitude}]`;
+
+              if (confirm(text)) {
+                //alert(`Latitude: ${latitude}, Longitude: ${longitude}`);
+                settings.remap.controlPoints[placeName] = [latitude, longitude];
+                map.flyTo([latitude, longitude]);
+                saveSettings();
+                updateMarkers();
+              }
+
+
+          } else {
+              alert('Place not found');
+          }
+      })
+      .catch(error => alert('Error:', error));
 }
 
 window.onload = e => {
