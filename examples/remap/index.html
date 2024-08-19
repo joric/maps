@@ -42,139 +42,460 @@
       height: 100%;
       width:  100%;
     }
+    #controls {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      z-index: 1000;
+      margin-bottom: 40px;
+      
+      text-align: center;
+      width: 50%;
+    }
+    .slider {
+      width: 100%;
+    }
   </style>
 </head>
 <body>
 
-<div id="map" ></div>
+<div id="map"></div>
+<input id="file" type='file' hidden/>
+
 <script>
+let defaultLocalData = {
+  'LondonWorld': {
+    remap: {
+      world: { size: 262144, center:[0,0] },
+      image: 'https://joric.github.io/maps/examples/data/LondonWorld.jpg',
+      markers: 'https://joric.github.io/maps/examples/data/geojson.markers.folon.json',
+      corners: [{"lat":51.567501756256505,"lng":-0.1764177405505252},{"lat":51.567501756256505,"lng":0.06345199242442146},{"lat":51.41815601816625,"lng":-0.1764177405505252},{"lat":51.41815601816625,"lng":0.06345199242442146}],
+      controlPoints: {
+        'London Eye':[51.503292, -0.119559],
+        'Tower Bridge': [51.505507, -0.075365],
+      },
+      smoothing: 1.0,
+      power: 5.0,
+      activeLayers: {'Images':true, 'Markers': true},
+    }
+  }
+};
 
-  let localDataName = 'joricsRemap';
-  let localData = JSON.parse(localStorage.getItem(localDataName)) || {"corners":[{"lat":51.567501756256505,"lng":-0.1764177405505252},{"lat":51.567501756256505,"lng":0.06345199242442146},{"lat":51.41815601816625,"lng":-0.1764177405505252},{"lat":51.41815601816625,"lng":0.06345199242442146}]}
+let localDataName = 'joricsRemap';
+let localData = JSON.parse(localStorage.getItem(localDataName)) || defaultLocalData;
 
-  let imageURL = 'https://joric.github.io/maps/examples/data/LondonWorld.jpg';
-  let markersURL = 'https://joric.github.io/maps/examples/data/geojson.markers.folon.json';
+let mapId = 'LondonWorld';
+let settings = localData[mapId];
 
-  let markers = null;
+function saveSettings() {
+  //console.log(localData);
+  localStorage.setItem(localDataName, JSON.stringify(localData));
+}
 
-  let settings = localData;
-  let london = [51.505, -0.09];
+// we can have multiple areas in a single map, that one matches the name
+let area = mapId;
 
-  let pos = london;
-  let zoom = 12;
+let london = [51.505, -0.09];
+let pos = london;
+let zoom = 11;
+let handles = [];
 
-  let handles = [];
+const map = L.map('map', {
+  zoomSnap: .1,
+  wheelDebounceTime: 100,
+}).setView(pos, zoom);
 
-  const map = L.map('map', {
-    zoomSnap: .1,
-    wheelDebounceTime: 100,
-  }).setView(pos, zoom);
+let markersGroup = L.layerGroup();
+//let imgGroup = L.distortableCollection(); // doesn't hide the image, only toolbar
+let imgGroup = L.layerGroup(); // doesn't show the image after hiding
 
-  //let imgGroup = L.distortableCollection().addTo(map); // doesn't hide the image, only toolbar
-  let imgGroup = L.layerGroup().addTo(map); // doesn't show the image after hiding
+if (settings.remap.activeLayers['Markers']==true) {
+  map.addLayer(markersGroup);
+}
 
-  let prov = {};
+if (settings.remap.activeLayers['Images']==true) {
+  map.addLayer(imgGroup);
+}
 
-  var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 20
-  }).addTo(map);
+let prov = {};
 
-  prov['CartoDB_Voyager'] = CartoDB_Voyager;
+var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 20
+}).addTo(map);
 
-  var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  });
+prov['CartoDB_Voyager'] = CartoDB_Voyager;
 
-  prov['OpenStreetMap_Mapnik'] = OpenStreetMap_Mapnik;
+var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
 
-  var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-  });
+prov['OpenStreetMap_Mapnik'] = OpenStreetMap_Mapnik;
 
-  prov['Esri_WorldImagery'] = Esri_WorldImagery;
+var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
 
-  L.control.mousePosition().addTo(map);
+prov['Esri_WorldImagery'] = Esri_WorldImagery;
 
-  function project(loc) {
-      let [x, y] = loc;
 
-      // coordinates of the plane corners in NW, NE, SW, SE order.(in a "Z" shape)
-      let [[x0, y0], [x1, y1], [x2, y2], [x3, y3]] = img.getCorners().map(corner => [corner.lng, corner.lat]);
+let layercontrol = L.control.layers(prov, {'Markers': markersGroup, 'Images': imgGroup}).addTo(map);
 
-      // Normalize input point coordinates from [-131072, 131072] to [0, 1]
-      let nx = (x + 131072) / 262144;
-      let ny = 1 - (y + 131072) / 262144; 
+map.on('overlayadd', function(e) {
+  settings.remap.activeLayers[e.name] = true;
 
-      // this is affine transformation, not the css matrix3d
-      const interpolate = (a, b, c, d, nx, ny) => {
-          return (1 - nx) * (1 - ny) * a + 
-                nx * (1 - ny) * b + 
-                (1 - nx) * ny * c + 
-                nx * ny * d;
-      };
+  // see https://github.com/publiclab/Leaflet.DistortableImage/issues/1323#issuecomment-2295487916
+  // distortableimage apparently doesn't reappear on adding, let's reload the image then
 
-      let projX = interpolate(x0, x1, x2, x3, nx, ny);
-      let projY = interpolate(y0, y1, y2, y3, nx, ny);
-
-      return [projY, projX];
+  if (e.name == 'Images') {
+    loadImages();
   }
 
-  function loadMarkers() {
-    fetch(markersURL).then(r=>r.json()).then(data=>{
-      let settings = {area:'LondonWorld'};
-      markers = L.geoJSON(data, {
-        style: f => {color: f.properties.color},
-        filter: f=> {
-          return f.properties.location == settings.area && (!settings.filter || f.properties.description==settings.filter);
-        },
-        pointToLayer: function (feature, latlng) {
-          return L.marker(latlng, {draggable: false, opacity: 1, feature: feature});
-        }
-      })
-      .bindPopup(l => { return '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng); })
-      .bindTooltip(l => l.feature.properties.title)
-      .addTo(map);
+  saveSettings();
+});
 
-      postLoading();
+map.on('overlayremove', function(e) {
+  delete settings.remap.activeLayers[e.name];
+  saveSettings();
+});
+
+L.control.mousePosition().addTo(map);
+
+function project(loc, title, controlPoints) {
+    let [x, y] = loc;
+    let corners = settings.remap.corners;
+
+    // coordinates of the plane corners in NW, NE, SW, SE order.(in a "Z" shape)
+    let [[x0, y0], [x1, y1], [x2, y2], [x3, y3]] = corners.map(corner => [corner.lng, corner.lat]);
+
+    // Normalize input point coordinates from [-131072, 131072] to [0, 1]
+    let nx = (x + 131072) / 262144;
+    let ny = 1 - (y + 131072) / 262144; 
+
+    // this is affine transformation, not the css matrix3d
+    const interpolate = (a, b, c, d, nx, ny) => {
+        return (1 - nx) * (1 - ny) * a + 
+              nx * (1 - ny) * b + 
+              (1 - nx) * ny * c + 
+              nx * ny * d;
+    };
+
+    let projX = interpolate(x0, x1, x2, x3, nx, ny);
+    let projY = interpolate(y0, y1, y2, y3, nx, ny);
+
+
+    let totalWeight = 0;
+    let newX = 0;
+    let newY = 0;
+
+    let point = {x: projX, y: projY};
+    let smoothing = settings.remap.smoothing;
+    let power = settings.remap.power;
+
+    // next, we correct the position using space warp with control points
+    for (const[name, cp] of Object.entries(controlPoints)) {
+      if (title == name) {
+        [projY, projX] = [cp.newY, cp.newX];
+      } else if (!controlPoints[title]) {
+        const dx = cp.newX - cp.oldX;
+        const dy = cp.newY - cp.oldY;
+        const distance = Math.sqrt((point.x - cp.oldX)**2 + (point.y - cp.oldY)**2) + smoothing;
+        const weight = 1 / (distance ** power);
+        newX += (point.x + dx) * weight;
+        newY += (point.y + dy) * weight;
+        totalWeight += weight;
+      }
+    }
+
+    if (totalWeight) {
+      projX = newX / totalWeight;
+      projY = newY / totalWeight;
+    }
+
+    return [projY, projX];
+}
+
+function loadMarkers() {
+  fetch(settings.remap.markers).then(r=>r.json()).then(data=>{
+    let allowedTypes = null;
+
+    let markers = L.geoJSON(data, {
+      style: f => {color: f.properties.color},
+      filter: f=> {
+        return f.properties.location == area && (!allowedTypes || allowedTypes[f.properties.description]);
+      },
+      pointToLayer: function (feature, latlng) {
+        let marker = L.marker(latlng, {draggable: true, opacity: 1});
+
+        marker.on('drag', markerDragged)
+        marker.on('contextmenu', markerContextMenu)
+
+        return marker;
+      }
     })
-  }
 
-  function postLoading() {
+    markers.bindPopup(l => { return '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng); })
+    markers.bindTooltip(l => l.feature.properties.title)
 
-    img = L.distortableImageOverlay(imageURL, {
-      mode: 'lock',
-      selected: true,
-      //actions: [L.DragAction, L.ScaleAction, L.DistortAction, L.RotateAction, L.FreeRotateAction, L.LockAction, L.OpacityAction, L.BorderAction, L.ExportAction, L.DeleteAction, L.RestoreAction],
-      actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
-      corners: settings.corners,
-    }).on('update', imageUpdated).on('load', updateMarkers)
+    markersGroup.addLayer(markers);
 
-    imgGroup.addLayer(img);
+    updateMarkers();
+  })
+}
 
-    var layerControl = L.control.layers(prov, { 'Markers': markers, 'Images': imgGroup }).addTo(map);
-  }
+function loadImages() {
+  let img = L.distortableImageOverlay(settings.remap.image, {
+    mode: 'lock',
+    selected: true,
+    //actions: [L.DragAction, L.ScaleAction, L.DistortAction, L.RotateAction, L.FreeRotateAction, L.LockAction, L.OpacityAction, L.BorderAction, L.ExportAction, L.DeleteAction, L.RestoreAction],
+    actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
+    corners: settings.remap.corners,
+  }).on('update', imageUpdated).on('load', updateMarkers)
 
-  function updateMarkers() {
-    for (marker of Object.values(markers._layers)) {
-      marker.setLatLng( project( marker.options.feature.geometry.coordinates ) );
+  imgGroup.addLayer(img);
+}
+
+function updateMarkers() {
+  let markers = markersGroup.getLayers(0)[0];
+
+  let controlPoints = {};
+  for (marker of Object.values(markers._layers)) {
+    let o = marker.feature.properties;
+    let loc = marker.feature.geometry.coordinates;
+    if (e = settings.remap.controlPoints[o.title]) {
+      let latlng = project(loc, o.title, {});
+      controlPoints[o.title] = {
+        oldX: latlng[1],
+        oldY: latlng[0],
+        newX: settings.remap.controlPoints[o.title][1],
+        newY: settings.remap.controlPoints[o.title][0],
+      };
     }
   }
 
-  function imageUpdated(e) {
-    settings.corners = e.target.getCorners();
-    updateMarkers();
-    saveSettings();
+  for (marker of Object.values(markers._layers)) {
+    let o = marker.feature.properties;
+    let loc = marker.feature.geometry.coordinates;
+    marker.setOpacity(settings.remap.controlPoints[o.title] ? 1 : .3);
+    marker.setLatLng( project( loc, o.title, controlPoints ) );
+  }
+}
+
+function imageUpdated(e) {
+  settings.remap.corners = e.target.getCorners();
+  updateMarkers();
+  saveSettings();
+}
+
+function markerDragged(e) {
+  // every dragged marker gets in control points
+  let marker = e.target;
+  let o = marker.feature.properties;
+  let loc = marker.feature.geometry.coordinates;
+  settings.remap.controlPoints[o.title] = [e.latlng.lat, e.latlng.lng];
+  saveSettings();
+  updateMarkers();
+}
+
+function markerContextMenu(e) {
+  delete settings.remap.controlPoints [ e.target.feature.properties.title ];
+  saveSettings();
+  updateMarkers();
+}
+
+function copyToClipboard(text) {
+  let input = document.body.appendChild(document.createElement("input"));
+  input.value = text;
+  input.focus();
+  input.select();
+  document.execCommand('copy');
+  input.parentNode.removeChild(input);
+  console.log(text + ' copied to clipboard');
+}
+
+let subAction = L.Toolbar2.Action.extend({
+  initialize:function(map,myAction){this.map=map;this.myAction=myAction;L.Toolbar2.Action.prototype.initialize.call(this);},
+  addHooks:function(){ this.myAction.disable(); }
+});
+
+new L.Toolbar2.Control({
+    position: 'bottomleft',
+    actions: [
+      // share button
+      L.Toolbar2.Action.extend({
+        options: {
+          toolbarIcon:{html: '&#x1F517;', tooltip: 'Share'},
+          subToolbar: new L.Toolbar2({ 
+            actions: [
+              subAction.extend({
+              options:{toolbarIcon:{html:'Copy Wiki URL', tooltip: ''}},
+                addHooks:function() {
+                  copyToClipboard('https://github.com/joric/maps/wiki/Fallout-London');
+                  subAction.prototype.addHooks.call(this); // closes sub-action
+                }
+              }),
+              subAction.extend({
+                options:{toolbarIcon:{html:'&times;', tooltip: 'Close'}}
+              }),
+            ],
+          })
+        }
+      }),
+      // load game button
+      L.Toolbar2.Action.extend({
+        options: {
+          toolbarIcon:{html: '&#x1F4C1;', tooltip: 'Settings Menu'},
+          subToolbar: new L.Toolbar2({ 
+            actions: [
+              subAction.extend({
+                options:{toolbarIcon:{html:'Load Settings', tooltip: 'Load Local Data'}},
+                addHooks: function () {
+                  loadLocalData();
+                  subAction.prototype.addHooks.call(this);
+                }
+              }),
+              subAction.extend({
+                options:{toolbarIcon:{html:'Save Settings', tooltip: 'Save Local Data'}},
+                addHooks:function() {
+                  saveLocalData();
+                  subAction.prototype.addHooks.call(this);
+                }
+              }),
+              subAction.extend({
+                options:{toolbarIcon:{html:'Reset Settings', tooltip: 'Reset Local Data'}},
+                addHooks: function () { 
+                  if (confirm('Are you sure you want to reset settings?')) {
+                    resetLocalData();
+                  }
+                  subAction.prototype.addHooks.call(this);
+                }
+              }),
+              subAction.extend({
+                options:{toolbarIcon:{html:'Export Markers', tooltip: 'Export Reprojected Markers as GeoJSON'}},
+                addHooks:function() {
+                  saveMarkers();
+                  subAction.prototype.addHooks.call(this);
+                }
+              }),
+              subAction.extend({
+                options:{toolbarIcon:{html:'&times;', tooltip: 'Close'}}
+              }),
+            ],
+          })
+        }
+      }),
+    ],
+}).addTo(map);
+
+
+function loadLocalDataFile() {
+  var file = document.querySelector("#file").files[0];
+  if (file) {
+    var reader = new FileReader();
+    reader.readAsText(file, "UTF-8");
+    reader.onload = function (evt) {
+      let data = evt.target.result;
+      evt.target.value = null;
+      try {
+        localData = JSON.parse(data);
+        settings = localData[mapId];
+        console.log('New settings loaded.');
+        saveSettings();
+      } catch(e) {
+        console.log(e);
+      }
+    }
+    reader.onerror = function (evt) {
+      alert('error reading file');
+    }
+  }
+}
+
+function loadLocalData() {
+  document.querySelector('#file').onchange = function(e) {
+    loadLocalDataFile();
+  }
+  document.querySelector('#file').value = null;
+  document.querySelector('#file').accept = '.json';
+  document.querySelector('#file').click();
+}
+
+async function saveTextToFile(text, filename) {
+  const fileHandle = await window.showSaveFilePicker({
+    suggestedName: filename,
+    types: [{
+      description: 'JSON Files',
+      accept: {'text/json': ['.json']},
+    }],
+  });
+  const writableStream = await fileHandle.createWritable();
+  await writableStream.write(text);
+  await writableStream.close();
+}
+
+function saveLocalData() {
+  let data = localStorage.getItem(localDataName);
+  let filename = localDataName + '.json';
+  saveTextToFile(data, filename);
+}
+
+function resetLocalData() {
+  localData = defaultLocalData;
+  settings = localData[mapId];
+  saveSettings();
+  updateMarkers();
+}
+
+function saveMarkers() {
+  let markers = markersGroup.getLayers(0)[0];
+  let data = {'type': 'FeatureCollection', 'features':[]}
+
+  for (marker of Object.values(markers._layers)) {
+    let o = marker.feature.properties;
+    let loc = marker.feature.geometry.coordinates;
+    let f = structuredClone(marker.feature)
+    let latlng = marker.getLatLng();
+    f.geometry.coordinates[0] = latlng.lat;
+    f.geometry.coordinates[1] = latlng.lng;
+    f.geometry.coordinates[2] = loc[2] / 128 * 1.828; // 128 units = 1.828m
+    data.features.push(f)
   }
 
-  function saveSettings() {
-    localStorage.setItem(localDataName, JSON.stringify(localData));
-  }
+  let filename = 'remapped.geojson.markers.'+mapId+'.json';
+  saveTextToFile(JSON.stringify(data, null, 2), filename);
+}
+
+window.onload = e => {
 
   loadMarkers();
+  loadImages();
+
+  const updateSlider = (c, value, update = false) => {
+    c.value = value;
+    c.title = c.id + ' ' + value;
+    if (update) updateMarkers();
+    saveSettings();
+    return value;
+  }
+
+  let [sm,pw] = [document.querySelector('#smoothing'), document.querySelector('#power')];
+  sm.oninput = e=> { settings.remap.smoothing = updateSlider(e.target, e.target.value, true); };
+  pw.oninput = e=> { settings.remap.power = updateSlider(e.target, e.target.value, true); };
+  updateSlider(sm, settings.remap.smoothing);
+  updateSlider(pw, settings.remap.power);
+}
 
 </script>
+
+<div id="controls">
+  <div><input type="range" step="0.01"  min="0.01" max="5" value="0.1" class="slider" id="smoothing"></div>
+  <div><input type="range" step="0.01"  min="0.01" max="5" value="0.5" class="slider" id="power"></div>
+</div>
+
 </body>
 </html>
