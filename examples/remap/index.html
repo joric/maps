@@ -417,7 +417,7 @@ function loadMarkers() {
 
         // hide some of the location markers on the base map
         if (mapId == Object.keys(maps)[0]) {
-          if (['City','Town'].includes(o.title) && area != mapId && o.ref_id!='07310FF5') skip = true;
+          if (['City','Town'].includes(type) && area != mapId && o.ref_id!='07310FF5') skip = true;
           if (type == 'Military Base' && o.ref_id != '0732F385') skip = true;
         }
 
