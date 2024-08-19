@@ -202,10 +202,30 @@ baseLayers['googleTraffic'] = L.tileLayer('https://{s}.google.com/vt/lyrs=m@2210
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
     });
 
+
+baseLayers['yandex core'] = new L.TileLayer('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&lang=en', {
+    reuseTiles: true, 
+    updateWhenIdle: false
+});
+
+baseLayers['yandex sat'] = new L.TileLayer('https://core-sat.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&lang=en', {
+    reuseTiles: true, 
+    updateWhenIdle: false
+});
+
+function updateCRS(provider) {
+  if (settings.remap.provider.match( /yandex/gi )) {
+    map.options.crs = L.CRS.EPSG3395;
+  } else {
+    map.options.crs = L.CRS.EPSG3857;
+  }
+}
+
 settings.remap.provider = settings.remap.provider||'OpenStreetMap_Mapnik';
-for (const [name, baseLayer] of Object.entries(baseLayers)) {
-  if (settings.remap.provider == name) {
+for (const [provider, baseLayer] of Object.entries(baseLayers)) {
+  if (settings.remap.provider == provider) {
     map.addLayer(baseLayer);
+    updateCRS();
   }
 }
 
@@ -213,6 +233,7 @@ let layercontrol = L.control.layers(baseLayers, {'Markers': markersGroup, 'Image
 
 map.on('baselayerchange', function(e) {
   settings.remap.provider = e.name;
+  updateCRS();
   saveSettings();
 });
 
@@ -445,7 +466,7 @@ function updateMarkers() {
       };
     }
 
-    settings.remap.warped ? marker.dragging.enable() : marker.dragging.disable();
+    marker && marker.dragging && (settings.remap.warped ? marker.dragging.enable() : marker.dragging.disable());
   }
 
   for (marker of Object.values(markers._layers)) {
