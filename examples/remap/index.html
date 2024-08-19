@@ -499,7 +499,7 @@ function updateMarkers() {
   for (marker of Object.values(markers._layers)) {
     let o = marker.feature.properties;
     let loc = marker.feature.geometry.coordinates;
-    marker.setOpacity(settings.remap.controlPoints[o.title] ? 1 : .3);
+    marker.setOpacity(settings.remap.controlPoints[o.title] && settings.remap.warped ? 1 : .3);
     marker.setLatLng( project(marker, controlPoints ) );
   }
 }
