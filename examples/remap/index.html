@@ -91,6 +91,8 @@ let defaultLocalData = {
         'Winchester Palace': [51.50702867207373, -0.09100878935130598],
         'Millennium Bridge': [51.50968072831046, -0.09844008513055418],
         'Trafalgar Square': [51.50810008166447, -0.1280552079199807],
+        'Leicester Square': [51.510455442178056, -0.13006704685557416],
+        'Piccadilly Circus': [51.50988505564679, -0.1342789545165483],
       },
       smoothing: 0.1,
       power: 5.0,
@@ -100,6 +102,21 @@ let defaultLocalData = {
     }
   }
 };
+
+maps = {
+  'LondonWorld' : { name: 'London', scale: 1, offset: {x:0, y:0},
+    regions: {
+      'WestminsterWorld' : { scale: 0.6, offset: {x:-104300, y:27900}, rotation: 0.57 },
+      'CamdenWorld': { scale: 1, offset: {x:-79000, y:74000}, rotation: 0 },
+      'IslingtonWorld': { scale: 0.95, offset: {x:-26600, y:66500}, rotation: 0.57 },
+      'HackneyWorld': { scale: 0.95, offset: {x:19100, y:44000}, rotation: 0.78 },
+      'BankofEnglandWorld': { scale: 1, offset: {x:-32000, y:35500} },
+      'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
+      'StPaulsWorld': { scale: 1, offset: {x:3000, y:0} },
+      'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
+    },
+  },
+}
 
 let localDataName = 'joricsRemap';
 let localData = JSON.parse(localStorage.getItem(localDataName)) || defaultLocalData;
@@ -260,7 +277,7 @@ function PointFromArray(loc) {
 function remapPoint(point, quadCorners, rectSize, rectCenter) {
   // Normalize point to 0-1 range
   let nx = (point.x + rectCenter.x) / rectSize.x;
-  let ny = (point.y + rectCenter.y) / rectSize.y;
+  let ny = 1 - (point.y + rectCenter.y) / rectSize.y;
 
   // Unpack quadrilateral corners
   let [topLeft, topRight, bottomLeft, bottomRight] = quadCorners;
@@ -316,17 +333,42 @@ function warpToControlPoints(point, controlPoints, smoothing = 1, power = 2) {
   return point;
 }
 
-function project(loc, title, controlPoints) {
-  // do the bitmap remapping first
+function processRegions(marker) {
+  let [x, y] = marker.feature.geometry.coordinates;
+  let area = marker.feature.properties.location;
+
+  if (t = (maps[mapId].regions && maps[mapId].regions[area])) {
+    x = x * t.scale + t.offset.x;
+    y = y * t.scale + t.offset.y;
+    if (t.rotation) {
+      let cx = t.offset.x;
+      let cy = t.offset.y;
+      x = x - cx;
+      y = y - cy;
+      let tx = x * Math.cos(t.rotation) - y * Math.sin(t.rotation);
+      let ty = x * Math.sin(t.rotation) + y * Math.cos(t.rotation);
+      x = tx + cx;
+      y = ty + cy;
+    }
+  }
+  return {x: x, y: y};
+}
+
+function project(marker, controlPoints) {
+  // process regions, get starting point
+  let point = processRegions(marker);
+
+  // do the bitmap remapping
   let worldCenter = PointFromArray(settings.remap.world.center);
   let worldSize = PointFromArray([settings.remap.world.size, settings.remap.world.size]);
   let corners = settings.remap.corners.map(corner => PointFromArray([corner.lng, corner.lat]));
-  point = remapPoint({x: loc[0], y: -loc[1]}, corners, worldSize, worldCenter);
+
+  point = remapPoint(point, corners, worldSize, worldCenter);
 
   // then warp to control points
   if (settings.remap.warped) {
     // if it's a control point, just return saved coordinates
-    if (p = controlPoints[title]) return [p.newY, p.newX];
+    if (p = controlPoints[marker.feature.properties.title]) return [p.newY, p.newX];
     point = warpToControlPoints(point, controlPoints, settings.remap.smoothing, settings.remap.power);
   }
 
@@ -336,12 +378,13 @@ function project(loc, title, controlPoints) {
 
 function loadMarkers() {
   fetch(settings.remap.markers).then(r=>r.json()).then(data=>{
-    let allowedTypes = null;
 
     let markers = L.geoJSON(data, {
       style: f => {color: f.properties.color},
       filter: f=> {
-        return f.properties.location == area && (!allowedTypes || allowedTypes[f.properties.description]);
+        let area = f.properties.location;
+        let skip = (area != mapId && !(maps[mapId].regions && maps[mapId].regions[area]));
+        return !skip;
       },
       pointToLayer: function (feature, latlng) {
         let marker = L.marker(latlng, {draggable: true, opacity: 1});
@@ -392,9 +435,8 @@ function updateMarkers() {
   let controlPoints = {};
   for (marker of Object.values(markers._layers)) {
     let o = marker.feature.properties;
-    let loc = marker.feature.geometry.coordinates;
     if (e = settings.remap.controlPoints[o.title]) {
-      let latlng = project(loc, o.title, {});
+      let latlng = project(marker, {});
       controlPoints[o.title] = {
         oldX: latlng[1],
         oldY: latlng[0],
@@ -410,7 +452,7 @@ function updateMarkers() {
     let o = marker.feature.properties;
     let loc = marker.feature.geometry.coordinates;
     marker.setOpacity(settings.remap.controlPoints[o.title] ? 1 : .3);
-    marker.setLatLng( project( loc, o.title, controlPoints ) );
+    marker.setLatLng( project(marker, controlPoints ) );
   }
 }
 
