@@ -8,6 +8,7 @@
   <title>Leaflet - Remap</title>
   <link rel="shortcut icon" type="image/x-icon" href="data:," />
 
+  <!--
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
@@ -20,8 +21,8 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.css">
   <script src="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.js"></script>
+-->
 
-  <!--
   <link rel="stylesheet" href="leaflet.css" />
   <script src="leaflet.js"></script>
   <link rel="stylesheet" href="leaflet.toolbar.min.css"/>
@@ -30,7 +31,6 @@
   <script src="vendor.js"></script>
   <script src="leaflet.distortableimage.js"></script>
   <script src="L.Control.MousePosition.js"></script>
-  -->
 
   <style>
     html, body {
@@ -70,15 +70,23 @@
     wheelDebounceTime: 100,
   }).setView(pos, zoom);
 
-  //let imgGroup = L.distortableCollection().addTo(map); // doesn't hide the image
-  let imgGroup = L.layerGroup().addTo(map); // doesn't show the image
+  //let imgGroup = L.distortableCollection().addTo(map); // doesn't hide the image, only toolbar
+  let imgGroup = L.layerGroup().addTo(map); // doesn't show the image after hiding
 
   let prov = {};
+
+  var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 20
+  }).addTo(map);
+
+  prov['CartoDB_Voyager'] = CartoDB_Voyager;
 
   var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  });
 
   prov['OpenStreetMap_Mapnik'] = OpenStreetMap_Mapnik;
 
@@ -87,14 +95,6 @@
   });
 
   prov['Esri_WorldImagery'] = Esri_WorldImagery;
-
-  var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 20
-  });
-
-  prov['CartoDB_Voyager'] = CartoDB_Voyager;
 
   L.control.mousePosition().addTo(map);
 
@@ -148,7 +148,7 @@
       mode: 'lock',
       selected: true,
       //actions: [L.DragAction, L.ScaleAction, L.DistortAction, L.RotateAction, L.FreeRotateAction, L.LockAction, L.OpacityAction, L.BorderAction, L.ExportAction, L.DeleteAction, L.RestoreAction],
-      actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
+      //actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
       corners: settings.corners,
     }).on('update', imageUpdated).on('load', updateMarkers)
 
