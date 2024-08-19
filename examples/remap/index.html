@@ -261,7 +261,39 @@ function remapPoint(point, quadCorners, rectSize, rectCenter) {
   return {x, y};
 }
 
-function warpToControlPoints(point, controlPoints, smoothing, power) {
+
+function warpToControlPoints(point, controlPoints, smoothing = 1, power = 2) {
+  let totalWeight = 0;
+  let weightedXSum = 0;
+  let weightedYSum = 0;
+
+  // Calculate the warped position
+  for (const { oldX, oldY, newX, newY } of Object.values(controlPoints)) {
+    const dx = newX - oldX;
+    const dy = newY - oldY;
+    
+    const distance = Math.sqrt((point.x - oldX) ** 2 + (point.y - oldY) ** 2);
+    const adjustedDistance = Math.max(distance, smoothing);
+    const weight = 1 / (adjustedDistance ** power);
+
+    weightedXSum += (point.x + dx) * weight;
+    weightedYSum += (point.y + dy) * weight;
+    totalWeight += weight;
+  }
+  
+  // Normalize the result
+  if (totalWeight > 0) {
+    return {
+      x: weightedXSum / totalWeight,
+      y: weightedYSum / totalWeight
+    };
+  } 
+  
+  // Fallback to original point if totalWeight is zero
+  return point;
+}
+
+function warpToControlPoints1(point, controlPoints, smoothing, power) {
   let totalWeight = 0;
   let newX = 0;
   let newY = 0;
