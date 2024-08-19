@@ -81,6 +81,7 @@ let defaultLocalData = {
       smoothing: 0.1,
       power: 5.0,
       activeLayers: {'Images':true, 'Markers': true},
+      provider: 'OpenStreetMap_Mapnik',
     }
   }
 };
@@ -124,7 +125,7 @@ if (settings.remap.activeLayers['Images']==true) {
   map.addLayer(imgGroup);
 }
 
-let prov = {};
+let baseLayers = {};
 
 // open street map is seriously better than voyager, because it has names
 
@@ -133,32 +134,46 @@ var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
-prov['OpenStreetMap_Mapnik'] = OpenStreetMap_Mapnik;
+baseLayers['OpenStreetMap_Mapnik'] = OpenStreetMap_Mapnik;
 
 var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: 'abcd',
   maxZoom: 20
-}).addTo(map);
+});
 
-prov['CartoDB_Voyager'] = CartoDB_Voyager;
+baseLayers['CartoDB_Voyager'] = CartoDB_Voyager;
 
 var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
-prov['Esri_WorldImagery'] = Esri_WorldImagery;
+baseLayers['Esri_WorldImagery'] = Esri_WorldImagery;
 
 
-let layercontrol = L.control.layers(prov, {'Markers': markersGroup, 'Images': imgGroup}).addTo(map);
+settings.remap.provider = settings.remap.provider||'OpenStreetMap_Mapnik';
+for (const [name, baseLayer] of Object.entries(baseLayers)) {
+  if (settings.remap.provider == name) {
+    map.addLayer(baseLayer);
+  }
+}
+
+let layercontrol = L.control.layers(baseLayers, {'Markers': markersGroup, 'Images': imgGroup}).addTo(map);
+
+map.on('baselayerchange', function(e) {
+  settings.remap.provider = e.name;
+  saveSettings();
+});
 
 map.on('overlayadd', function(e) {
   settings.remap.activeLayers[e.name] = true;
+
   // see https://github.com/publiclab/Leaflet.DistortableImage/issues/1323#issuecomment-2295487916
   // distortableimage apparently doesn't reappear on adding, let's reload the image then
   if (e.name == 'Images') {
     loadImages();
   }
+
   saveSettings();
 });
 
