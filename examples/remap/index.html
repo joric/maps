@@ -151,14 +151,11 @@ let layercontrol = L.control.layers(prov, {'Markers': markersGroup, 'Images': im
 
 map.on('overlayadd', function(e) {
   settings.remap.activeLayers[e.name] = true;
-
   // see https://github.com/publiclab/Leaflet.DistortableImage/issues/1323#issuecomment-2295487916
   // distortableimage apparently doesn't reappear on adding, let's reload the image then
-
   if (e.name == 'Images') {
     loadImages();
   }
-
   saveSettings();
 });
 
@@ -166,6 +163,16 @@ map.on('overlayremove', function(e) {
   delete settings.remap.activeLayers[e.name];
   saveSettings();
 });
+
+map.on('moveend zoomend', function(e) {
+  settings.center = [map.getCenter().lat, map.getCenter().lng]; // avoid circular refs here
+  settings.zoom = map.getZoom();
+  saveSettings();
+});
+
+if (settings.center && settings.zoom) {
+  map.setView(settings.center, settings.zoom);
+}
 
 L.control.mousePosition().addTo(map);
 
