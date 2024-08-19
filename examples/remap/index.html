@@ -76,6 +76,7 @@ let defaultLocalData = {
       controlPoints: {
         'London Eye':[51.503292, -0.119559],
         'Tower Bridge': [51.505507, -0.075365],
+        'Bromley Police Station': [51.399345, 0.018011],
       },
       smoothing: 1.0,
       power: 5.0,
@@ -125,13 +126,7 @@ if (settings.remap.activeLayers['Images']==true) {
 
 let prov = {};
 
-var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: 'abcd',
-  maxZoom: 20
-}).addTo(map);
-
-prov['CartoDB_Voyager'] = CartoDB_Voyager;
+// open street map is seriously better than voyager, because it has names
 
 var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
@@ -139,6 +134,14 @@ var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{
 });
 
 prov['OpenStreetMap_Mapnik'] = OpenStreetMap_Mapnik;
+
+var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 20
+}).addTo(map);
+
+prov['CartoDB_Voyager'] = CartoDB_Voyager;
 
 var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
