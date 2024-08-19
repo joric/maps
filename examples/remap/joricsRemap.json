@@ -271,13 +271,13 @@
       "activeLayers": {
         "Markers": true
       },
-      "provider": "Esri_WorldImagery",
+      "provider": "CartoDB_Voyager",
       "warped": true
     },
     "center": [
-      51.511093770261105,
-      -0.08361555743263029
+      51.46881791557837,
+      -0.0738434216072137
     ],
-    "zoom": 15.200000000000001
+    "zoom": 11.600000000000001
   }
 }

@@ -114,6 +114,7 @@ if (!localStorage.getItem(localDataName)) {
     console.log('saving local settings');
     settings = localData[mapId];
     saveSettings();
+    location.reload();
   })
 }
 
