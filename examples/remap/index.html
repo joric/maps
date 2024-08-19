@@ -87,6 +87,9 @@ let defaultLocalData = {
         'London Bridge': [51.508016432737406, -0.08770161133087216],
         'Southwark Bridge': [51.50905245934331, -0.09405037235675627],
         'Blackfriars Bridge': [51.50983145126394, -0.10429026299831769],
+        'One Canada Square': [51.50503451700189, -0.019506823380022808],
+        'Winchester Palace': [51.50702867207373, -0.09100878935130598],
+        'Millennium Bridge': [51.50968072831046, -0.09844008513055418],
       },
       smoothing: 0.1,
       power: 5.0,
@@ -140,27 +143,46 @@ let baseLayers = {};
 
 // open street map is seriously better than voyager, because it has names
 
-var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+baseLayers['OpenStreetMap_Mapnik'] = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
-baseLayers['OpenStreetMap_Mapnik'] = OpenStreetMap_Mapnik;
-
-var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+baseLayers['CartoDB_Voyager'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: 'abcd',
   maxZoom: 20
 });
 
-baseLayers['CartoDB_Voyager'] = CartoDB_Voyager;
-
-var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+baseLayers['Esri_WorldImagery'] = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
-baseLayers['Esri_WorldImagery'] = Esri_WorldImagery;
+baseLayers['googleSat'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+        maxZoom: 20,
+        subdomains:['mt0','mt1','mt2','mt3']
+});
 
+baseLayers['googleStreets'] = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+        maxZoom: 20,
+        subdomains:['mt0','mt1','mt2','mt3']
+});
+
+baseLayers['googleHybrid'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+        maxZoom: 20,
+        subdomains:['mt0','mt1','mt2','mt3']
+});
+
+baseLayers['googleTerrain'] = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+        maxZoom: 20,
+        subdomains:['mt0','mt1','mt2','mt3']
+});
+
+baseLayers['googleTraffic'] = L.tileLayer('https://{s}.google.com/vt/lyrs=m@221097413,traffic&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        minZoom: 2,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+    });
 
 settings.remap.provider = settings.remap.provider||'OpenStreetMap_Mapnik';
 for (const [name, baseLayer] of Object.entries(baseLayers)) {
