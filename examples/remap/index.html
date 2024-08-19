@@ -16,16 +16,10 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/leaflet.distortableimage.min.css">
   <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/vendor.min.js"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/leaflet.distortableimage.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/vendor.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/leaflet.distortableimage.min.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.css">
   <script src="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.js"></script>
-
-  <!--
-  -->
 
   <!--
   <link rel="stylesheet" href="leaflet.css" />
@@ -37,7 +31,6 @@
   <script src="leaflet.distortableimage.js"></script>
   <script src="L.Control.MousePosition.js"></script>
   -->
-
 
   <style>
     html, body {
@@ -72,12 +65,7 @@
   let pos = london;
   let zoom = 12;
 
-  let imageOpacity = .7;
-  let imageOverlay = null;
-
   let imageURL = '../data/LondonWorld.jpg';
-
-  let w = h = 262144;
 
   let handles = [];
 
@@ -85,6 +73,8 @@
     zoomSnap: .1,
     wheelDebounceTime: 100,
   }).setView(pos, zoom);
+
+  let imgGroup = L.distortableCollection({editable: true}).addTo(map);
 
   let prov = {};
 
@@ -114,13 +104,14 @@
   function project(loc) {
       let [x, y] = loc;
 
-      // coordinates of the plane corners in NW, NE, SW, SE order.
+      // coordinates of the plane corners in NW, NE, SW, SE order.(in a "Z" shape)
       let [[x0, y0], [x1, y1], [x2, y2], [x3, y3]] = img.getCorners().map(corner => [corner.lng, corner.lat]);
 
       // Normalize input point coordinates from [-131072, 131072] to [0, 1]
       let nx = (x + 131072) / 262144;
       let ny = 1 - (y + 131072) / 262144; 
 
+      // this is affine transformation, not the css matrix3d
       const interpolate = (a, b, c, d, nx, ny) => {
           return (1 - nx) * (1 - ny) * a + 
                 nx * (1 - ny) * b + 
@@ -143,7 +134,7 @@
           return f.properties.location == settings.area && (!settings.filter || f.properties.description==settings.filter);
         },
         pointToLayer: function (feature, latlng) {
-          return L.marker(latlng, {draggable: true, opacity: 1, feature: feature});
+          return L.marker(latlng, {draggable: false, opacity: 1, feature: feature});
         }
       })
       .bindPopup(l => { return '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng); })
@@ -155,15 +146,19 @@
   }
 
   function postLoading() {
+
     img = L.distortableImageOverlay(imageURL, {
-      mode: 'lock',
+      //mode: 'lock',
       //selected: true,
       //actions: [L.DragAction, L.ScaleAction, L.DistortAction, L.RotateAction, L.FreeRotateAction, L.LockAction, L.OpacityAction, L.BorderAction, L.ExportAction, L.DeleteAction, L.RestoreAction],
       actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
     }).on('update', imageUpdated)
       .on('load', e=>{ setTimeout(function(){ imageLoaded(img) }, 0) })
-      .addTo(map)
-    var layerControl = L.control.layers(prov, { 'Markers': markers, 'Images': img }).addTo(map);
+
+    imgGroup.addLayer(img);
+
+    var layerControl = L.control.layers(prov, { 'Markers': markers, 'Images': imgGroup }).addTo(map);
+
   }
 
   function updateMarkers() {
