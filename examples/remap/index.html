@@ -303,7 +303,7 @@ function loadMarkers() {
       pointToLayer: function (feature, latlng) {
         let marker = L.marker(latlng, {draggable: true, opacity: 1});
         marker.on('drag', markerDragged)
-        marker.on('contextmenu', markerContextMenu)
+        //marker.on('contextmenu', markerContextMenu)
         return marker;
       }
     })
@@ -379,10 +379,14 @@ function markerDragged(e) {
   updateMarkers();
 }
 
-function markerContextMenu(e) {
-  delete settings.remap.controlPoints [ e.target.feature.properties.title ];
+function unbindMarker(name) {
+  delete settings.remap.controlPoints [ name ];
   saveSettings();
   updateMarkers();
+}
+
+function markerContextMenu(e) {
+  unbindMarker(e.target.feature.properties.title);
 }
 
 function copyToClipboard(text) {
