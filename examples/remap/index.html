@@ -459,7 +459,7 @@ new L.Toolbar2.Control({
               subAction.extend({
                 options:{toolbarIcon:{html:'Export Markers', tooltip: 'Export Reprojected Markers as GeoJSON'}},
                 addHooks:function() {
-                  saveMarkers();
+                  exportMarkers();
                   subAction.prototype.addHooks.call(this);
                 }
               }),
@@ -532,7 +532,7 @@ function resetLocalData() {
   updateMarkers();
 }
 
-function saveMarkers() {
+function exportMarkers() {
   let markers = markersGroup.getLayers(0)[0];
   let data = {'type': 'FeatureCollection', 'features':[]}
 
