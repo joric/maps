@@ -74,7 +74,8 @@
     wheelDebounceTime: 100,
   }).setView(pos, zoom);
 
-  let imgGroup = L.distortableCollection({editable: true}).addTo(map);
+  //let imgGroup = L.distortableCollection().addTo(map); // doesn't hide the image
+  let imgGroup = L.layerGroup().addTo(map); // doesn't show the image
 
   let prov = {};
 
