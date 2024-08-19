@@ -200,7 +200,7 @@ if (settings.center && settings.zoom) {
 L.control.mousePosition().addTo(map);
 
 
-let warpCaption = ()=>settings.remap.warped ? 'Warped' : 'Projected';
+let warpCaption = ()=>settings.remap.warped ? 'To Projected' : 'To Warped';
 
 L.Control.MyButton = L.Control.extend({
     onAdd: function(map) {
@@ -312,7 +312,7 @@ function loadMarkers() {
       let name = l.feature.properties.title;
       let content = '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng);
       if (settings.remap.controlPoints[name]) {
-        content += '<br/><br/><button onclick="unbindMarker(\''+l.feature.properties.name+'\')">Unbind Marker</button>';
+        content += '<br/><br/><button onclick="unbindMarker(\''+l.feature.properties.title+'\')">Unbind Marker</button>';
       }
       return content;
     })
