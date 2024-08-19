@@ -52,10 +52,8 @@
   let localDataName = 'joricsRemap';
   let localData = JSON.parse(localStorage.getItem(localDataName)) || {"corners":[{"lat":51.567501756256505,"lng":-0.1764177405505252},{"lat":51.567501756256505,"lng":0.06345199242442146},{"lat":51.41815601816625,"lng":-0.1764177405505252},{"lat":51.41815601816625,"lng":0.06345199242442146}]}
 
-  function saveSettings() {
-    //console.log(settings);
-    localStorage.setItem(localDataName, JSON.stringify(localData));
-  }
+  let imageURL = 'https://joric.github.io/maps/examples/data/LondonWorld.jpg';
+  let markersURL = 'https://joric.github.io/maps/examples/data/geojson.markers.folon.json';
 
   let markers = null;
 
@@ -64,8 +62,6 @@
 
   let pos = london;
   let zoom = 12;
-
-  let imageURL = '../data/LondonWorld.jpg';
 
   let handles = [];
 
@@ -127,7 +123,7 @@
   }
 
   function loadMarkers() {
-    fetch('../data/geojson.markers.folon.json').then(r=>r.json()).then(data=>{
+    fetch(markersURL).then(r=>r.json()).then(data=>{
       let settings = {area:'LondonWorld'};
       markers = L.geoJSON(data, {
         style: f => {color: f.properties.color},
@@ -149,17 +145,16 @@
   function postLoading() {
 
     img = L.distortableImageOverlay(imageURL, {
-      //mode: 'lock',
-      //selected: true,
+      mode: 'lock',
+      selected: true,
       //actions: [L.DragAction, L.ScaleAction, L.DistortAction, L.RotateAction, L.FreeRotateAction, L.LockAction, L.OpacityAction, L.BorderAction, L.ExportAction, L.DeleteAction, L.RestoreAction],
       actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
-    }).on('update', imageUpdated)
-      .on('load', e=>{ setTimeout(function(){ imageLoaded(img) }, 0) })
+      corners: settings.corners,
+    }).on('update', imageUpdated).on('load', updateMarkers)
 
     imgGroup.addLayer(img);
 
     var layerControl = L.control.layers(prov, { 'Markers': markers, 'Images': imgGroup }).addTo(map);
-
   }
 
   function updateMarkers() {
@@ -174,13 +169,8 @@
     saveSettings();
   }
 
-  function imageLoaded(img) {
-    if (settings.corners) {
-      //console.log('settings corners to', settings.corners);
-      img.setCorners( settings.corners )
-    }
-    img.select();
-    updateMarkers();
+  function saveSettings() {
+    localStorage.setItem(localDataName, JSON.stringify(localData));
   }
 
   loadMarkers();
