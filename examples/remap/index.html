@@ -176,60 +176,69 @@ if (settings.center && settings.zoom) {
 
 L.control.mousePosition().addTo(map);
 
-function project(loc, title, controlPoints) {
-  let [x, y] = loc;
-  let corners = settings.remap.corners;
+function PointFromArray(loc) {
+  return {x:loc[0], y:loc[1]};
+}
+
+function remapToRectangle(point, corners, size, center) {
+  // Normalize input point from game units to [0, 1]
+  let nx = (point.x + center.x) / size.x;
+  let ny = 1 - (point.y + center.y) / size.y; 
 
   // coordinates of the plane corners in NW, NE, SW, SE order.(in a "Z" shape)
-  let [[x0, y0], [x1, y1], [x2, y2], [x3, y3]] = corners.map(corner => [corner.lng, corner.lat]);
+  let [a, b, c, d] = corners;
 
-  // Normalize input point coordinates from [-131072, 131072] to [0, 1]
-  let nx = (x + 131072) / 262144;
-  let ny = 1 - (y + 131072) / 262144; 
-
-  // this is affine transformation, not the css matrix3d
+  // affine transformation, (not the css matrix3d)
   const interpolate = (a, b, c, d, nx, ny) => {
-      return (1 - nx) * (1 - ny) * a + 
-            nx * (1 - ny) * b + 
-            (1 - nx) * ny * c + 
-            nx * ny * d;
+      return (1-nx)*(1-ny)*a + nx*(1-ny)*b + (1-nx)*ny*c + nx*ny*d;
   };
 
-  let projX = interpolate(x0, x1, x2, x3, nx, ny);
-  let projY = interpolate(y0, y1, y2, y3, nx, ny);
+  let px = interpolate(a.x, b.x, c.x, d.x, nx, ny);
+  let py = interpolate(a.y, b.y, c.y, d.y, nx, ny);
 
+  return {x:px, y:py};
+}
+
+function warpToControlPoints(point, controlPoints, smoothing, power) {
   let totalWeight = 0;
   let newX = 0;
   let newY = 0;
 
-  let point = {x: projX, y: projY};
-  let smoothing = settings.remap.smoothing;
-  let power = settings.remap.power;
-
-  // if it's a control point, just return saved coordinates
-  if (cp = controlPoints[title]) {
-    return [cp.newY, cp.newX];
-  }
-
-  // Calculate the warped position
-  for (const [name,cp] of Object.entries(controlPoints)) {
+  // calculate the warped position
+  for (const cp of Object.values(controlPoints)) {
     const dx = cp.newX - cp.oldX;
     const dy = cp.newY - cp.oldY;
-    const distance = Math.max( Math.sqrt((point.x - cp.oldX)**2 + (point.y - cp.oldY)**2), smoothing );
+    const distance = Math.max(Math.sqrt((point.x - cp.oldX)**2 + (point.y - cp.oldY)**2), smoothing);
     const weight = 1 / (distance ** power);
     newX += (point.x + dx) * weight;
     newY += (point.y + dy) * weight;
     totalWeight += weight;
   }
-
-  // Normalize the result
+  
+  // normalize the result if weight > 0
   if (totalWeight > 0) {
-    newX /= totalWeight;
-    newY /= totalWeight;
-    return [newY, newX];
+    return {x: newX/totalWeight, y: newY/totalWeight};
   } 
 
-  // If totalWeight is 0, return the original point
+  // else just return original point
+  return point;
+}
+
+function project(loc, title, controlPoints) {
+  // if it's a control point, just return saved coordinates
+  if (p = controlPoints[title]) return [p.newY, p.newX];
+
+  // do the bitmap remapping first
+  let point = PointFromArray(loc);
+  let worldCenter = PointFromArray(settings.remap.world.center);
+  let worldSize = PointFromArray([settings.remap.world.size, settings.remap.world.size]);
+  let corners = settings.remap.corners.map(corner => PointFromArray([corner.lng, corner.lat]));
+  point = remapToRectangle(point, corners, worldSize, worldCenter);
+
+  // then warp to control points
+  point = warpToControlPoints(point, controlPoints, settings.remap.smoothing, settings.remap.power);
+
+  // return point as latlng
   return [point.y, point.x];
 }
 
@@ -244,19 +253,15 @@ function loadMarkers() {
       },
       pointToLayer: function (feature, latlng) {
         let marker = L.marker(latlng, {draggable: true, opacity: 1});
-
         marker.on('drag', markerDragged)
         marker.on('contextmenu', markerContextMenu)
-
         return marker;
       }
     })
 
     markers.bindPopup(l => { return '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng); })
     markers.bindTooltip(l => l.feature.properties.title)
-
     markersGroup.addLayer(markers);
-
     updateMarkers();
   })
 }
