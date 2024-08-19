@@ -234,23 +234,31 @@ function PointFromArray(loc) {
   return {x:loc[0], y:loc[1]};
 }
 
-function remapToRectangle(point, corners, size, center) {
-  // Normalize input point from game units to [0, 1]
-  let nx = (point.x + center.x) / size.x;
-  let ny = 1 - (point.y + center.y) / size.y; 
+function remapPoint(point, quadCorners, rectSize, rectCenter) {
+  // Normalize point to 0-1 range
+  let nx = (point.x + rectCenter.x) / rectSize.x;
+  let ny = (point.y + rectCenter.y) / rectSize.y;
 
-  // coordinates of the plane corners in NW, NE, SW, SE order.(in a "Z" shape)
-  let [a, b, c, d] = corners;
+  // Unpack quadrilateral corners
+  let [topLeft, topRight, bottomLeft, bottomRight] = quadCorners;
 
-  // affine transformation, (not the css matrix3d)
-  const interpolate = (a, b, c, d, nx, ny) => {
-      return (1-nx)*(1-ny)*a + nx*(1-ny)*b + (1-nx)*ny*c + nx*ny*d;
-  };
+  // Interpolate x and y separately
+  function interpolate(a, b, factor) {
+    return a + factor * (b - a);
+  }
 
-  let px = interpolate(a.x, b.x, c.x, d.x, nx, ny);
-  let py = interpolate(a.y, b.y, c.y, d.y, nx, ny);
+  // Interpolation along the top and bottom edges
+  let topEdgeX = interpolate(topLeft.x, topRight.x, nx);
+  let topEdgeY = interpolate(topLeft.y, topRight.y, nx);
 
-  return {x:px, y:py};
+  let bottomEdgeX = interpolate(bottomLeft.x, bottomRight.x, nx);
+  let bottomEdgeY = interpolate(bottomLeft.y, bottomRight.y, nx);
+
+  // Final interpolation between the edges
+  let x = interpolate(topEdgeX, bottomEdgeX, ny);
+  let y = interpolate(topEdgeY, bottomEdgeY, ny);
+
+  return {x, y};
 }
 
 function warpToControlPoints(point, controlPoints, smoothing, power) {
@@ -280,11 +288,10 @@ function warpToControlPoints(point, controlPoints, smoothing, power) {
 
 function project(loc, title, controlPoints) {
   // do the bitmap remapping first
-  let point = PointFromArray(loc);
   let worldCenter = PointFromArray(settings.remap.world.center);
   let worldSize = PointFromArray([settings.remap.world.size, settings.remap.world.size]);
   let corners = settings.remap.corners.map(corner => PointFromArray([corner.lng, corner.lat]));
-  point = remapToRectangle(point, corners, worldSize, worldCenter);
+  point = remapPoint({x: loc[0], y: -loc[1]}, corners, worldSize, worldCenter);
 
   // then warp to control points
   if (settings.remap.warped) {
