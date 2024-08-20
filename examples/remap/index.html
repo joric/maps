@@ -76,7 +76,14 @@ let defaultLocalData = {
       image: 'https://joric.github.io/maps/examples/data/LondonWorld.jpg',
       markers: 'https://joric.github.io/maps/examples/data/geojson.markers.folon.json',
       corners: [{"lat":51.567501756256505,"lng":-0.1764177405505252},{"lat":51.567501756256505,"lng":0.06345199242442146},{"lat":51.41815601816625,"lng":-0.1764177405505252},{"lat":51.41815601816625,"lng":0.06345199242442146}],
-      controlPoints:{},
+      controlPoints: {
+        '072FDB86': {
+          title: 'London Eye',
+          osm_id: 204068874,
+          coordinates: [51.5033416, -0.11967649999999999],
+          warp: { smoothing: 0.0428, power: 5.0 },
+        },
+      },
       smoothing: 0.0428,
       power: 5.0,
       activeLayers: {'Markers': true},
@@ -324,13 +331,13 @@ function remapPoint(point, quadCorners, rectSize, rectCenter) {
 }
 
 
-function warpToControlPoints(point, controlPoints, smoothing = 1, power = 2) {
+function warpToControlPoints(point, controlPointsData, smoothing = 1, power = 2) {
   let totalWeight = 0;
   let weightedXSum = 0;
   let weightedYSum = 0;
 
   // Calculate the warped position
-  for (const { oldX, oldY, newX, newY } of Object.values(controlPoints)) {
+  for (const { oldX, oldY, newX, newY } of Object.values(controlPointsData)) {
     const dx = newX - oldX;
     const dy = newY - oldY;
     
@@ -376,7 +383,7 @@ function processRegions(marker) {
   return {x: x, y: y};
 }
 
-function project(marker, controlPoints) {
+function project(marker, controlPointsData) {
   // process regions, get starting point
   let point = processRegions(marker);
 
@@ -389,9 +396,11 @@ function project(marker, controlPoints) {
 
   // then warp to control points
   if (settings.remap.warped) {
-    // if it's a control point, just return saved coordinates
-    if (p = controlPoints[marker.feature.properties.title]) return [p.newY, p.newX];
-    point = warpToControlPoints(point, controlPoints, settings.remap.smoothing, settings.remap.power);
+    let p; // mandatory scope. if it's a control point, just return saved coordinates
+    if (p = controlPointsData [ marker.feature.properties.ref_id ] ) {
+      return [p.newY, p.newX];
+    }
+    point = warpToControlPoints(point, controlPointsData, settings.remap.smoothing, settings.remap.power);
   }
 
   // return point as latlng
@@ -431,7 +440,10 @@ function loadMarkers() {
     markers.bindPopup(l => { 
       l.on('popupclose', removeSelection);
 
-      let name = l.feature.properties.title;
+      let marker = l;
+      let o = marker.feature.properties;
+      let name = o.title;
+
       //let content = '';//'<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
 
       let content = `<b>${l.feature.properties.title}</b><br/>${l.feature.properties.description}<br/><small>${l.feature.properties.location}</small>`;
@@ -441,32 +453,40 @@ function loadMarkers() {
       let strLL = String([latlng.lat, latlng.lng]);
       content += '<hr><a href="https://www.google.com/maps/search/'+encodeURIComponent(strLL)+'" target=_blank>'+strLL+'</a>';
 
-      if (settings.remap.controlPoints[name]) {
+      if (settings.remap.controlPoints[o.ref_id]) {
         content += '<hr><button id="unbind-marker-btn">Unbind Marker</button>';
       }
       content += '<hr>Search results: <span id="possible-location">searching...</span>';
       content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
-      function updatePossibleLocation(s) {
+      function updateSearchResults(text) {
         let oldLatLng = l.getLatLng();
-        getLocationByName(s, function(data, latlng){
+        searchOSM(text, function(data, latlng){
           let div = document.querySelector('#possible-location');
+          let url = 'https://www.google.com/maps/search/' + encodeURIComponent(text);
+
           if (data && latlng) {
+            let info =`${data[0].name} ${data[0].addresstype} ${data[0].display_name}`;
+
             setSelection(latlng);
             let a = document.createElement('a');
-            a.textContent = data[0].display_name;
-            a.href = 'https://www.google.com/maps/search/' + encodeURIComponent(s);
+            a.textContent = info;
+            a.href = url;
             a.target = '_blank';
+
             let button = document.createElement('button');
             button.textContent = 'Fly to location';
-            button.onclick = function() { searchLocation(s, name, oldLatLng) }
+            button.onclick = function() { searchLocation(text, marker) }
+
             let spacer = document.createElement('p');
+
             div.replaceChildren(a, spacer, button);
+
           } else {
 
             let a = document.createElement('a');
             a.textContent = 'Not found in OSM, try Google';
-            a.href = 'https://www.google.com/maps/search/' + encodeURIComponent(s);
+            a.href = url;
             a.target = '_blank';
             div.replaceChildren(a);
           }
@@ -475,19 +495,20 @@ function loadMarkers() {
 
       setTimeout(function() {
         if (input=document.querySelector('#search-location-input')) {
-          let s = l.feature.properties.title;
-          s = [...s.split(' ').filter(e=>e!='Underground'), 'London'].join(' '); // search doesn't like underground
-          updatePossibleLocation(s);
+          let text = l.feature.properties.title;
+          text = [...text.split(' ').filter(e=>e!='Underground'), 'London'].join(' '); // search doesn't like underground
+          updateSearchResults(text);
           if (e=document.querySelector('#search-location-form')) {
-            input.value = s;
+            input.value = text;
             input.select();
             e.onsubmit = function() {
-              updatePossibleLocation(input.value);
+              input.select();
+              updateSearchResults(input.value);
               return false; // critical to prevent reload on submit
             }
           }
         }
-        if (e=document.querySelector('#unbind-marker-btn')) e.onclick = function() { unbindMarker(l.feature.properties.title)};
+        if (e=document.querySelector('#unbind-marker-btn')) e.onclick = function() { unbindMarker(o.ref_id) };
       }, 250, l);
 
       return content;
@@ -526,31 +547,32 @@ function loadImages() {
   reloadImage();
 }
 
-function updateMarkers() {
+function getMarkers() {
   let markers = markersGroup.getLayers(0)[0];
-  if (!markers) return;
+  return Object.values((markers && markers._layers)||{});
+}
 
-  let controlPoints = {};
-  for (marker of Object.values(markers._layers)) {
+function updateMarkers() {
+  let controlPointsData = {};
+  for (marker of getMarkers()) {
     let o = marker.feature.properties;
-    if (e = settings.remap.controlPoints[o.title]) {
+    let p; // mandatory, because global scope allows undefined
+    if ( p = settings.remap.controlPoints[o.ref_id] ) {
       let latlng = project(marker, {});
-      controlPoints[o.title] = {
+      controlPointsData[o.ref_id] = {
         oldX: latlng[1],
         oldY: latlng[0],
-        newX: settings.remap.controlPoints[o.title][1],
-        newY: settings.remap.controlPoints[o.title][0],
+        newX: p.coordinates[1],
+        newY: p.coordinates[0],
       };
     }
-
-    marker && marker.dragging && (settings.remap.warped ? marker.dragging.enable() : marker.dragging.disable());
   }
 
-  for (marker of Object.values(markers._layers)) {
+  for (marker of getMarkers()) {
     let o = marker.feature.properties;
-    let loc = marker.feature.geometry.coordinates;
-    marker.setOpacity(settings.remap.controlPoints[o.title] && settings.remap.warped ? 1 : .3);
-    marker.setLatLng( project(marker, controlPoints ) );
+    marker && marker.dragging && (settings.remap.warped ? marker.dragging.enable() : marker.dragging.disable());
+    marker.setOpacity(settings.remap.controlPoints[o.ref_id] && settings.remap.warped ? 1 : .3);
+    marker.setLatLng( project(marker, controlPointsData ) );
   }
 }
 
@@ -560,21 +582,31 @@ function imageUpdated(e) {
   saveSettings();
 }
 
-function markerDragged(e) {
-  let marker = e.target;
-
-  // every dragged marker gets in control points
+function updateControlPoint(marker, latlng, osm_id) {
+  // create or update control point
   let o = marker.feature.properties;
-  let loc = marker.feature.geometry.coordinates;
-  settings.remap.controlPoints[o.title] = [e.latlng.lat, e.latlng.lng];
+  let cp = settings.remap.controlPoints;
+
+  cp[o.ref_id] = cp[o.ref_id] || {};
+  cp[o.ref_id].coordinates =  [latlng.lat, latlng.lng];
+  cp[o.ref_id].title =  cp[o.ref_id].title || o.title;
+
+  if (osm_id) {
+    cp[o.ref_id].osm_id =  osm_id;
+  }
+
   saveSettings();
   updateMarkers();
 }
 
-function unbindMarker(name) {
+function markerDragged(e) {
+  let marker = e.target;
+  updateControlPoint(marker, marker.getLatLng());
+}
+
+function unbindMarker(ref_id) {
   if (confirm('Are you sure you want to unbind this marker?')) {
-    name = decodeURIComponent(name);
-    delete settings.remap.controlPoints [ name ];
+    delete settings.remap.controlPoints [ ref_id ];
     saveSettings();
     updateMarkers();
   }
@@ -753,10 +785,7 @@ function exportControlPoints() {
 
 
 function exportMarkers() {
-  let markers = markersGroup.getLayers(0)[0];
-  let data = {'type': 'FeatureCollection', 'features':[]}
-
-  for (marker of Object.values(markers._layers)) {
+  for (marker of getMarkers()) {
     let o = marker.feature.properties;
     let loc = marker.feature.geometry.coordinates;
     let f = structuredClone(marker.feature)
@@ -771,8 +800,8 @@ function exportMarkers() {
   saveTextToFile(JSON.stringify(data, null, 2), filename);
 }
 
-function getLocationByName(name, callback) {
-  let q = encodeURIComponent(name);
+function searchOSM(text, callback) {
+  let q = encodeURIComponent(text);
   const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1`;
   fetch(url).then(r => r.json()).then(data => {
     if (data.length > 0) {
@@ -787,39 +816,60 @@ function getLocationByName(name, callback) {
   return true;
 }
 
-function searchLocation(placeName, oldName, oldLatLng) { 
+function searchLocation(text, marker) { 
 
-  getLocationByName(placeName, function(data, latlng) {
+  searchOSM(text, function(data, latlng) {
     map.closePopup();
+
     if (!data || !latlng) {
       alert('Place not found');
       return
     }
 
-    const latitude = data[0].lat;
-    const longitude = data[0].lon;
-    const displayName = data[0].display_name;
-    //console.log(JSON.stringify(data, null, 2));
-
     let info =`${data[0].name} ${data[0].addresstype} ${data[0].display_name}`;
-    let text = ['Set new control point to this location?', info, 'Click Cancel to fly back.'].join('\n\n');
+    let text = ['Set control point to this location?', info, 'Click OK to continue, Cancel to fly back.'].join('\n\n');
 
-    map.flyTo(latlng, map.getZoom());//, {duration: .5});
+    map.flyTo(latlng);
+
     map.once('moveend', function() {
       setSelection(latlng);
+
       setTimeout(function() {
         if (confirm(text)) {
-          settings.remap.controlPoints[oldName] = [latlng.lat, latlng.lng];
+          updateControlPoint(marker, latlng, data[0].osm_id);
           map.flyTo(latlng);
           saveSettings();
           updateMarkers();
         } else {
-          map.flyTo(oldLatLng, map.getZoom());//, {duration: .5});
+          map.flyTo(marker.getLatLng());
         }
         removeSelection();
-      },100);
+      }, 100); // let selection render
+
     });
+
   })
+}
+
+function getMarkerByRefId(ref_id) {
+  for (marker of getMarkers()) {
+    if (marker.feature.properties.ref_id == ref_id) return marker;
+  }
+  return null;
+}
+
+function getMarkerByTitle(title) {
+  for (marker of getMarkers()) {
+    if (marker.feature.properties.title == title) return marker;
+  }
+  return null;
+}
+
+function importOldControlPoint(title, coord) {
+  let marker;
+  if (marker = getMarkerByTitle(title)) {
+    updateControlPoint(marker, L.latLng(coord));
+  }
 }
 
 window.onload = e => {
@@ -831,12 +881,12 @@ window.onload = e => {
   fetch(localDataName+'.json').then(r=>r.json()).then(data=>{
     if (serverPoints = (data[mapId] && data[mapId].remap && data[mapId].remap.controlPoints)) {
       let before = Object.keys(settings.remap.controlPoints).length;
-      settings.remap.controlPoints = {...serverPoints, ... settings.remap.controlPoints};
+      settings.remap.controlPoints = {...serverPoints, ...settings.remap.controlPoints};
       let after = Object.keys(settings.remap.controlPoints).length;
-      console.log(  (after-before) + ' points added from server');
+      console.log(  (after-before) + ' points imported from the server');
     }
     updateMarkers();
-  })
+  }).catch(e=>console.log('handled error', e));
 
   let [sm,pw] = [document.querySelector('#smoothing'), document.querySelector('#power')];
   updateSlider(sm, settings.remap.smoothing);
@@ -853,8 +903,8 @@ window.onload = e => {
   }
 
   function sliderEvent(e) {
-    if (e.target.id=='smoothing') settings.remap.smoothing = e.target.value;
-    if (e.target.id=='power') settings.remap.power = e.target.value;
+    if (e.target.id=='smoothing') settings.remap.smoothing = parseFloat(e.target.value);
+    if (e.target.id=='power') settings.remap.power = parseFloat(e.target.value);
     updateSliderTitle(e.target);
     saveSettings();
   }
