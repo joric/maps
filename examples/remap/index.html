@@ -698,6 +698,8 @@ async function saveTextToFile(text, filename) {
 function saveLocalData() {
   let str = localStorage.getItem(localDataName);
   let data = JSON.parse(str);
+  //let cp = data[mapId].remap.controlPoints;
+  //for (name of Object.keys(cp))) cp[name] = cp[name].map(e=>parseFloat(e));
   let filename = localDataName + '.json';
   saveTextToFile(JSON.stringify(data, null, 2), filename);
 }
