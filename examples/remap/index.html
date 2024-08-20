@@ -753,7 +753,7 @@ function searchLocation(placeName, oldName, oldLat, oldLng) {
               let latlngOld = L.latLng([oldLat, oldLng]);
               let marker = L.circleMarker(latlng, {radius: 10, color: 'red'}).addTo(map);
 
-              map.flyTo(latlng, map.getZoom(), {duration: .5});
+              map.flyTo(latlng, map.getZoom());//, {duration: .5});
 
               map.once('moveend', function() {
                 if (confirm(text)) {
@@ -763,7 +763,7 @@ function searchLocation(placeName, oldName, oldLat, oldLng) {
                   updateMarkers();
                   map.removeLayer(marker);
                 } else {
-                  map.flyTo(latlngOld, map.getZoom(), {duration: .5});
+                  map.flyTo(latlngOld, map.getZoom());//, {duration: .5});
                   map.removeLayer(marker);
                 }
               });
