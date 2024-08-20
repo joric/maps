@@ -70,7 +70,7 @@
   "Custom 77": {"fa": "location-crosshairs", "type": "Location", "group": "places of interest" },
 
   "Brotherhood of Steel": {"type":"Factions", "subtype": "5th Column",    "bg": "red",           "fa": "cat",              "group": "travel"},
-  "Institute":            {"type":"Factions", "subtype": "Angels",        "bg": "lightgrey",     "fa": "compass-drafting", "group": "travel"},
+  "Institute":            {"type":"Factions", "subtype": "Angels",        "bg": "lightgrey",     "fa": "compass-drafting", "group": "travel", "group_fa": "compass-drafting"},
   "Minutemen":            {"type":"Factions", "subtype": "Camelot",       "bg": "darkorange",    "fa": "dragon",           "group": "travel"},
   "Custom 79":            {"type":"Factions", "subtype": "Isle of Dogs",  "bg": "royalblue",     "fa": "dog",              "group": "travel"},
   "Prydwen":              {"type":"Factions", "subtype": "Pistols",       "bg": "darkslategrey", "fa": "hand-fist",        "group": "travel"},
