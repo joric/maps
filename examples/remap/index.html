@@ -432,8 +432,6 @@ function project(marker, controlPointsData) {
 function loadMarkers() {
   fetch(settings.remap.markers).then(r=>r.json()).then(data=>{
 
-    console.log('loaded ', data.features.length, ' markers');
-
     let markers = L.geoJSON(data, {
       style: f => {color: f.properties.color},
       filter: f=> {
