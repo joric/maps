@@ -244,11 +244,17 @@ baseLayers['yandex sat'] = new L.TileLayer('https://core-sat.maps.yandex.net/til
 });
 
 function updateCRS(provider) {
+  let center = map.getCenter();
+
   if (settings.remap.provider.match( /yandex/gi )) {
     map.options.crs = L.CRS.EPSG3395;
   } else {
     map.options.crs = L.CRS.EPSG3857;
   }
+
+  map.setView(center);
+
+  map._resetView(map.getCenter(), map.getZoom());
 }
 
 settings.remap.provider = settings.remap.provider||'OpenStreetMap_Mapnik';
