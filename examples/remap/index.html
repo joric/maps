@@ -809,6 +809,8 @@ function exportControlPoints() {
 
 
 function exportMarkers() {
+  let data = {"type": "FeatureCollection", features:[]};
+
   for (marker of getMarkers()) {
     let o = marker.feature.properties;
     let loc = marker.feature.geometry.coordinates;
