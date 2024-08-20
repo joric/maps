@@ -440,8 +440,6 @@ function loadMarkers() {
       content += '<br/><br/>Search results: <span id="possible-location">searching...</span>';
       content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
-      l.on('popupclose', removeSelection);
-
       function updatePossibleLocation(name) {
         getLocationByName(name, function(data, latlng){
           let div = document.querySelector('#possible-location');
@@ -484,6 +482,7 @@ function loadMarkers() {
     markersGroup.addLayer(markers);
     updateMarkers();
 
+    l.on('popupclose', removeSelection);
 
     map.addControl( new L.Control.Search({
       layer: markers,
@@ -813,42 +812,42 @@ function searchLocation2(placeName, oldName, oldLat, oldLng) {
   let q = encodeURIComponent(placeName);
   const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1`;
   fetch(url)
-      .then(response => response.json())
-      .then(data => {
-          if (data.length > 0) {
-              const latitude = data[0].lat;
-              const longitude = data[0].lon;
-              const displayName = data[0].display_name;
-              //console.log(JSON.stringify(data, null, 2));
-              map.closePopup();
+  .then(response => response.json())
+  .then(data => {
+    if (data.length > 0) {
+      const latitude = data[0].lat;
+      const longitude = data[0].lon;
+      const displayName = data[0].display_name;
+      //console.log(JSON.stringify(data, null, 2));
+      map.closePopup();
 
-              let text = `Place found! Are you sure you want to set new control point?`
-              + `\n\n${data[0].name}\n${data[0].addresstype}\n\n${data[0].display_name}\n[${latitude}, ${longitude}]`;
+      let text = `Place found! Are you sure you want to set new control point?`
+      + `\n\n${data[0].name}\n${data[0].addresstype}\n\n${data[0].display_name}\n[${latitude}, ${longitude}]`;
 
-              let latlng = L.latLng([latitude, longitude]);
-              let latlngOld = L.latLng([oldLat, oldLng]);
-              let marker = L.circleMarker(latlng, {radius: 10, color: 'red'}).addTo(map);
+      let latlng = L.latLng([latitude, longitude]);
+      let latlngOld = L.latLng([oldLat, oldLng]);
+      let marker = L.circleMarker(latlng, {radius: 10, color: 'red'}).addTo(map);
 
-              map.flyTo(latlng, map.getZoom());//, {duration: .5});
+      map.flyTo(latlng, map.getZoom());//, {duration: .5});
 
-              map.once('moveend', function() {
-                if (confirm(text)) {
-                  settings.remap.controlPoints[oldName] = [latlng.lat, latlng.lng];
-                  map.flyTo(latlng);
-                  saveSettings();
-                  updateMarkers();
-                  map.removeLayer(marker);
-                } else {
-                  map.flyTo(latlngOld, map.getZoom());//, {duration: .5});
-                  map.removeLayer(marker);
-                }
-              });
+      map.once('moveend', function() {
+        if (confirm(text)) {
+          settings.remap.controlPoints[oldName] = [latlng.lat, latlng.lng];
+          map.flyTo(latlng);
+          saveSettings();
+          updateMarkers();
+          map.removeLayer(marker);
+        } else {
+          map.flyTo(latlngOld, map.getZoom());//, {duration: .5});
+          map.removeLayer(marker);
+        }
+        removeSelection();
+      });
 
-          } else {
-              alert('Place not found');
-          }
-      })
-      //.catch(error => alert('Error:', error));
+    } else {
+        alert('Place not found');
+    }
+  })
 }
 
 window.onload = e => {
