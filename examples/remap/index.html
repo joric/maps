@@ -859,8 +859,6 @@ function searchLocation(text, marker) {
     map.once('moveend', function() {
       setSelection(latlng);
 
-      console.log(data);
-
       setTimeout(function() {
         if (confirm(text)) {
           updateControlPoint(marker, latlng, data[0].osm_id);
