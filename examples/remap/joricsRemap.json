@@ -334,7 +334,8 @@
             51.50312945,
             -0.13316503576441757
           ],
-          "title": "St James's Park"
+          "title": "St James's Park",
+          "osm_id": 374960368
         },
         "07284914": {
           "coordinates": [
@@ -474,7 +475,8 @@
             51.5027567,
             -0.12426784174184091
           ],
-          "title": "New Scotland Yard"
+          "title": "New Scotland Yard",
+          "osm_id": 31117060
         },
         "072FDC6B": {
           "coordinates": [
@@ -544,7 +546,8 @@
             51.33050255,
             0.03235996813950516
           ],
-          "title": "Biggin Hill Airport"
+          "title": "Biggin Hill Airport",
+          "osm_id": 196861878
         },
         "0728B719": {
           "coordinates": [
@@ -674,10 +677,11 @@
         },
         "072FDB2E": {
           "coordinates": [
-            51.4395718,
-            -0.2685968
+            51.4400407,
+            -0.26867928809954766
           ],
-          "title": "Pen Ponds"
+          "title": "Pen Ponds",
+          "osm_id": 180996607
         },
         "0731302C": {
           "coordinates": [
@@ -695,10 +699,11 @@
         },
         "0731300A": {
           "coordinates": [
-            51.50660755,
-            -0.14274153342748974
+            51.5064926,
+            -0.1429748
           ],
-          "title": "Green Park Underground Station"
+          "title": "Green Park Underground Station",
+          "osm_id": 1706915441
         },
         "07312FED": {
           "coordinates": [
@@ -769,10 +774,34 @@
             -0.1257376
           ],
           "title": "Vauxhall Swamp"
+        },
+        "0728B721": {
+          "coordinates": [
+            51.5031453,
+            -0.11184335514018684
+          ],
+          "title": "Waterloo Station",
+          "osm_id": 428337501
+        },
+        "07313016": {
+          "coordinates": [
+            51.5007167,
+            -0.1622326
+          ],
+          "title": "Knightsbridge Underground Station",
+          "osm_id": 469760951
+        },
+        "07313008": {
+          "coordinates": [
+            51.50445585,
+            -0.1437172112775293
+          ],
+          "title": "Green Park",
+          "osm_id": 863554956
         }
       },
-      "smoothing": 0.0428,
-      "power": 5,
+      "smoothing": 0.00975,
+      "power": 10,
       "activeLayers": {
         "Markers": true
       },
@@ -780,9 +809,9 @@
       "warped": true
     },
     "center": [
-      51.50826345,
-      -0.11659547680022972
+      51.41698044851287,
+      -0.12702941894531253
     ],
-    "zoom": 13
+    "zoom": 11
   }
 }
