@@ -118,18 +118,6 @@ function removeSelection() {
   if (circleMarker) map.removeLayer(circleMarker);
 }
 
-// fetch local settings, if any
-if (!localStorage.getItem(localDataName)) {
-  fetch(localDataName+'.json').then(r=>r.json()).then(data=>{
-    localData = data;
-    updateMarkers();
-    console.log('saving local settings');
-    settings = localData[mapId];
-    saveSettings();
-    location.reload();
-  })
-}
-
 let localData = JSON.parse(localStorage.getItem(localDataName)) || defaultLocalData;
 settings = localData[mapId];
 
@@ -650,7 +638,7 @@ new L.Toolbar2.Control({
               }),
 
               subAction.extend({
-                options:{toolbarIcon:{html:'Load Defaults', tooltip: 'Reset Local Data'}},
+                options:{toolbarIcon:{html:'Reset Settings', tooltip: 'Reset Local Data'}},
                 addHooks: function () { 
                   if (confirm('Are you sure you want to reset settings?')) {
                     resetLocalData();
@@ -863,6 +851,17 @@ window.onload = e => {
 
   loadMarkers();
   loadImages();
+
+  // fetch global markers from server, merge to your control points
+  fetch(localDataName+'.json').then(r=>r.json()).then(data=>{
+    if (serverPoints = (data[mapId] && data[mapId].remap && data[mapId].remap.controlPoints)) {
+      let before = Object.keys(settings.remap.controlPoints).length;
+      settings.remap.controlPoints = {...serverPoints, ... settings.remap.controlPoints};
+      let after = Object.keys(settings.remap.controlPoints).length;
+      console.log(  (after-before) + ' points merged from server, was ' + before + ' points');
+    }
+    updateMarkers();
+  })
 
   let [sm,pw] = [document.querySelector('#smoothing'), document.querySelector('#power')];
   updateSlider(sm, settings.remap.smoothing);
