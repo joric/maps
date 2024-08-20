@@ -432,17 +432,19 @@ function loadMarkers() {
       l.on('popupclose', removeSelection);
 
       let name = l.feature.properties.title;
-      let content = '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
+      //let content = '';//'<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
+
+      let content = `<b>${l.feature.properties.title}</b><br/>${l.feature.properties.description}<br/><small>${l.feature.properties.location}</small>`;
 
       let latlng = l.getLatLng();
 
       let strLL = String([latlng.lat, latlng.lng]);
-      content += '<br/>'+strLL+' <a href="https://www.google.com/maps/search/'+encodeURIComponent(strLL)+'" target=_blank>What\'s there?</a>';
+      content += '<hr><a href="https://www.google.com/maps/search/'+encodeURIComponent(strLL)+'" target=_blank>'+strLL+'</a>';
 
       if (settings.remap.controlPoints[name]) {
-        content += '<br/><br/><button id="unbind-marker-btn">Unbind Marker</button>';
+        content += '<hr><button id="unbind-marker-btn">Unbind Marker</button>';
       }
-      content += '<br/><br/>Search results: <span id="possible-location">searching...</span>';
+      content += '<hr>Search results: <span id="possible-location">searching...</span>';
       content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
       function updatePossibleLocation(s) {
@@ -793,8 +795,8 @@ function searchLocation(placeName, oldName, oldLatLng) {
     const displayName = data[0].display_name;
     //console.log(JSON.stringify(data, null, 2));
 
-    let text = `Set new control point to this location?`
-    + `\n\n${data[0].name}\n${data[0].addresstype}\n\n${data[0].display_name}\n[${latitude}, ${longitude}]`;
+    let info =`${data[0].name} ${data[0].addresstype} ${data[0].display_name}`;
+    let text = ['Set new control point to this location?', info, 'Click Cancel to fly back.'].join('\n\n');
 
     map.flyTo(latlng, map.getZoom());//, {duration: .5});
     map.once('moveend', function() {
