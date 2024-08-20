@@ -797,22 +797,21 @@ function searchLocation(placeName, oldName, oldLatLng) {
     + `\n\n${data[0].name}\n${data[0].addresstype}\n\n${data[0].display_name}\n[${latitude}, ${longitude}]`;
 
     map.flyTo(latlng, map.getZoom());//, {duration: .5});
-    setSelection(latlng);
-
     map.once('moveend', function() {
-      if (confirm(text)) {
-        settings.remap.controlPoints[oldName] = [latlng.lat, latlng.lng];
-        map.flyTo(latlng);
-        saveSettings();
-        updateMarkers();
-      } else {
-        map.flyTo(oldLatLng, map.getZoom());//, {duration: .5});
-      }
-      removeSelection();
+      setSelection(latlng);
+      setTimeout(function() {
+        if (confirm(text)) {
+          settings.remap.controlPoints[oldName] = [latlng.lat, latlng.lng];
+          map.flyTo(latlng);
+          saveSettings();
+          updateMarkers();
+        } else {
+          map.flyTo(oldLatLng, map.getZoom());//, {duration: .5});
+        }
+        removeSelection();
+      },100);
     });
-
   })
-
 }
 
 window.onload = e => {
