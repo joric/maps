@@ -122,9 +122,31 @@ function setSelection(latlng) {
     setTimeout(removeSelection, 15000);
   }
 }
+
 function removeSelection() {
   if (circleMarker) map.removeLayer(circleMarker);
 }
+
+
+let helpers = null;
+
+function addHelpers(marker) {
+  let cp = settings.remap.controlPoints[marker.feature.properties.ref_id];
+  if (cp && cp.warp) {
+    helpers = L.layerGroup();
+    L.circle(marker.getLatLng(), {radius: 100, color: 'blue'}).addTo(helpers);
+    L.circle(marker.getLatLng(), {radius: 120, color: 'green'}).addTo(helpers);
+    helpers.addTo(map);
+  }
+}
+
+function removeHelpers() {
+  if (helpers) {
+    map.removeLayer(helpers);
+    delete helpers;
+  }
+}
+
 
 let localData = JSON.parse(localStorage.getItem(localDataName)) || defaultLocalData;
 settings = localData[mapId];
@@ -437,30 +459,33 @@ function loadMarkers() {
       }
     })
 
-    markers.bindPopup(l => { 
-      l.on('popupclose', removeSelection);
+    markers.bindPopup(marker => { 
+      marker.on('popupclose', function() { removeSelection(); removeHelpers();} );
 
-      let marker = l;
+      addHelpers(marker);
+
       let o = marker.feature.properties;
       let name = o.title;
 
       //let content = '';//'<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
-
-      let content = `<b>${l.feature.properties.title}</b><br/>${l.feature.properties.description}<br/><small>${l.feature.properties.location}</small>`;
-
-      let latlng = l.getLatLng();
+      let content = `<b>${o.title}</b><br/>${o.description}<br/><small>${o.location}</small>`;
+      let latlng = marker.getLatLng();
 
       let strLL = String([latlng.lat, latlng.lng]);
       content += '<hr><a href="https://www.google.com/maps/search/'+encodeURIComponent(strLL)+'" target=_blank>'+strLL+'</a>';
 
-      if (settings.remap.controlPoints[o.ref_id]) {
+      let cp = settings.remap.controlPoints[o.ref_id];
+
+      if (cp) {
         content += '<hr><button id="unbind-marker-btn">Unbind Marker</button>';
+        if (cp.osm_id) content += ' OSM id: <a href="https://www.openstreetmap.org/way/'+cp.osm_id+'" target=_blank>'+cp.osm_id+'</a>';
       }
+
       content += '<hr>Search results: <span id="possible-location">searching...</span>';
       content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
       function updateSearchResults(text) {
-        let oldLatLng = l.getLatLng();
+        let oldLatLng = marker.getLatLng();
         searchOSM(text, function(data, latlng){
           let div = document.querySelector('#possible-location');
           let url = 'https://www.google.com/maps/search/' + encodeURIComponent(text);
@@ -495,7 +520,7 @@ function loadMarkers() {
 
       setTimeout(function() {
         if (input=document.querySelector('#search-location-input')) {
-          let text = l.feature.properties.title;
+          let text = marker.feature.properties.title;
           text = [...text.split(' ').filter(e=>e!='Underground'), 'London'].join(' '); // search doesn't like underground
           updateSearchResults(text);
           if (e=document.querySelector('#search-location-form')) {
@@ -509,11 +534,11 @@ function loadMarkers() {
           }
         }
         if (e=document.querySelector('#unbind-marker-btn')) e.onclick = function() { unbindMarker(o.ref_id) };
-      }, 250, l);
+      }, 250);
 
       return content;
     })
-    markers.bindTooltip(l => l.feature.properties.title)
+    markers.bindTooltip(marker => marker.feature.properties.title)
     markersGroup.addLayer(markers);
     updateMarkers();
 
@@ -833,6 +858,8 @@ function searchLocation(text, marker) {
 
     map.once('moveend', function() {
       setSelection(latlng);
+
+      console.log(data);
 
       setTimeout(function() {
         if (confirm(text)) {
