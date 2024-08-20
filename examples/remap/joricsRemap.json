@@ -396,6 +396,26 @@
         "Pen Ponds": [
           51.4395718,
           -0.2685968
+        ],
+        "Bond Street Station": [
+          51.5142559,
+          -0.1497856
+        ],
+        "Bond Street Underground Station": [
+          51.5142559,
+          -0.1497856
+        ],
+        "Hyde Park Corner Underground Station": [
+          51.5026541,
+          -0.153779
+        ],
+        "Green Park Underground Station": [
+          51.50660755,
+          -0.14274153342748974
+        ],
+        "The Mall": [
+          51.506155,
+          -0.1300842
         ]
       },
       "smoothing": "0.00487",
@@ -407,9 +427,9 @@
       "warped": true
     },
     "center": [
-      51.42083431163785,
-      -0.030899047851562503
+      51.50615816351301,
+      -0.1300764083862305
     ],
-    "zoom": 11
+    "zoom": 16
   }
 }
