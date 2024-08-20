@@ -828,7 +828,7 @@ window.onload = e => {
       let before = Object.keys(settings.remap.controlPoints).length;
       settings.remap.controlPoints = {...serverPoints, ... settings.remap.controlPoints};
       let after = Object.keys(settings.remap.controlPoints).length;
-      console.log(  (after-before) + ' points merged from server, was ' + before + ' points');
+      console.log(  (after-before) + ' points added from server');
     }
     updateMarkers();
   })
