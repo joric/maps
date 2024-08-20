@@ -449,35 +449,36 @@ function loadMarkers() {
         content += '<br/><br/><button id="unbind-marker-btn">Unbind Marker</button>';
       }
       content += '<br/><br/>Possible location: <span id="possible-location">searching...</span>';
-      content += '<br/><br/><form id="search-location-form"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search Location</button></form>';
+      content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
       l.on('popupclose', removeSelection);
 
-      setTimeout(function() {
-
-        if (input=document.querySelector('#search-location-input')) {
-          let name = l.feature.properties.title;
-          getLocationByName(name, function(data, latlng){
+      function updatePossibleLocation(name) {
+        getLocationByName(name, function(data, latlng){
+          if (data) {
             setSelection(latlng);
             let div = document.querySelector('#possible-location');
-            if (data) {
-              let a = document.createElement('div');
-              a.textContent = data[0].display_name;
-              let button = document.createElement('button');
-              button.textContent = 'Set to this location';
-              button.onclick = function() { searchLocation(name, name, latlng); }
+            let a = document.createElement('div');
+            a.textContent = data[0].display_name;
+            let button = document.createElement('button');
+            button.textContent = 'Set to this location';
+            button.onclick = function() { searchLocation(name, name, latlng); }
+            div.replaceChildren(a, button);
+          } else {
+            div.textContent = 'Not found';
+          }
+        })
+      }
 
-              div.replaceChildren(a, button);
-
-            } else {
-              div.textContent = 'Not found';
-            }
-          })
-
+      setTimeout(function() {
+        if (input=document.querySelector('#search-location-input')) {
+          let name = l.feature.properties.title;
+          updatePossibleLocation(name);
           if (e=document.querySelector('#search-location-form')) {
-            document.querySelector('#search-location-input').value = name;
+            input.value = name;
+            input.select();
             e.onsubmit = function() {
-              searchLocation(input.value, name, latlng);
+              updatePossibleLocation(input.value);
               return false; // critical to prevent reload on submit
             }
           }
@@ -795,7 +796,7 @@ function searchLocation(placeName, oldName, oldLatLng) {
     const displayName = data[0].display_name;
     //console.log(JSON.stringify(data, null, 2));
 
-    let text = `Are you sure you want to set new control point?`
+    let text = `Set new control point to this location?`
     + `\n\n${data[0].name}\n${data[0].addresstype}\n\n${data[0].display_name}\n[${latitude}, ${longitude}]`;
 
     setSelection(latlng);
