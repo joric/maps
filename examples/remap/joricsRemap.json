@@ -380,10 +380,22 @@
         "Monument Underground Station": [
           51.5094616,
           -0.086998
+        ],
+        "Mornington Crescent Underground Station": [
+          51.5334179,
+          -0.1385304
+        ],
+        "Oval": [
+          51.4818339,
+          -0.1123953
+        ],
+        "Tobacco Dock": [
+          51.5083074,
+          -0.05947290446257268
         ]
       },
-      "smoothing": "0.02309",
-      "power": "2.22458",
+      "smoothing": "0",
+      "power": "0",
       "activeLayers": {
         "Markers": true
       },
@@ -391,9 +403,9 @@
       "warped": true
     },
     "center": [
-      51.4639539921413,
-      -0.03948211669921876
+      51.463365784156956,
+      -0.06471633911132814
     ],
-    "zoom": 12
+    "zoom": 13
   }
 }

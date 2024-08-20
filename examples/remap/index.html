@@ -448,16 +448,16 @@ function loadMarkers() {
       if (settings.remap.controlPoints[name]) {
         content += '<br/><br/><button id="unbind-marker-btn">Unbind Marker</button>';
       }
-      content += '<br/><br/>Possible location: <span id="possible-location">searching...</span>';
+      content += '<br/><br/>Search results: <span id="possible-location">searching...</span>';
       content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
       l.on('popupclose', removeSelection);
 
       function updatePossibleLocation(name) {
         getLocationByName(name, function(data, latlng){
-          if (data) {
+          let div = document.querySelector('#possible-location');
+          if (data && latlng) {
             setSelection(latlng);
-            let div = document.querySelector('#possible-location');
             let a = document.createElement('div');
             a.textContent = data[0].display_name;
             let button = document.createElement('button');
@@ -780,6 +780,7 @@ function getLocationByName(name, callback) {
       return callback();
     }
   })
+  setTimeout(callback, 10000);
   return true;
 }
 
