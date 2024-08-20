@@ -458,7 +458,7 @@ function loadMarkers() {
             a.href = 'https://www.google.com/maps/search/' + encodeURIComponent(s);
             a.target = '_blank';
             let button = document.createElement('button');
-            button.textContent = 'Fly to this location';
+            button.textContent = 'Use this location';
             button.onclick = function() { searchLocation(s, name, oldLatLng) }
             let spacer = document.createElement('p');
             div.replaceChildren(a, spacer, button);
@@ -556,8 +556,9 @@ function imageUpdated(e) {
 }
 
 function markerDragged(e) {
-  // every dragged marker gets in control points
   let marker = e.target;
+
+  // every dragged marker gets in control points
   let o = marker.feature.properties;
   let loc = marker.feature.geometry.coordinates;
   settings.remap.controlPoints[o.title] = [e.latlng.lat, e.latlng.lng];
