@@ -433,16 +433,21 @@ function loadMarkers() {
         content += '<br/><br/><button id="unbind-marker-btn">Unbind Marker</button>';
       }
 
-      content += '<br/><br/><form id="search-location-form"><input type="hidden" id="oldLat"><input type="hidden" id="oldLng"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search Location</button></form>';
+      content += '<br/><br/><form id="search-location-form"><input type="hidden" id="oldLat"><input type="hidden" id="oldName"><input type="hidden" id="oldLng"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
       setTimeout(function() {
         if (input=document.querySelector('#search-location-input')) {
           input.value = l.feature.properties.title;
           document.querySelector('#oldLat').value = l.getLatLng().lat;
           document.querySelector('#oldLng').value = l.getLatLng().lng;
+          document.querySelector('#oldName').value = l.feature.properties.title;
           if (e=document.querySelector('#search-location-form')) {
             e.onsubmit = function() {
-              searchLocation(input.value, parseFloat(document.querySelector('#oldLat').value), parseFloat(document.querySelector('#oldLng').value))
+              searchLocation(input.value, 
+                document.querySelector('#oldName').value,
+                parseFloat(document.querySelector('#oldLat').value),
+                parseFloat(document.querySelector('#oldLng').value)
+              )
               return false;
             }
           }
@@ -728,7 +733,7 @@ function exportMarkers() {
   saveTextToFile(JSON.stringify(data, null, 2), filename);
 }
 
-function searchLocation(placeName, oldLat, oldLng) { 
+function searchLocation(placeName, oldName, oldLat, oldLng) { 
   let q = encodeURIComponent(placeName);
   const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1`;
   fetch(url)
@@ -752,7 +757,7 @@ function searchLocation(placeName, oldLat, oldLng) {
 
               map.once('moveend', function() {
                 if (confirm(text)) {
-                  settings.remap.controlPoints[placeName] = [latlng.lat, latlng.lng];
+                  settings.remap.controlPoints[oldName] = [latlng.lat, latlng.lng];
                   map.flyTo(latlng);
                   saveSettings();
                   updateMarkers();
