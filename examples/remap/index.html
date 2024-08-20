@@ -426,20 +426,24 @@ function loadMarkers() {
 
     markers.bindPopup(l => { 
       let name = l.feature.properties.title;
-      let content = '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>' + String(l._latlng);
+      let content = '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
+
+      let latlng = l.getLatLng();
+
+      content += String([latlng.lat, latlng.lng]);
+      content += '<br/><a href="https://www.google.com/maps/search/'+encodeURIComponent(String([latlng.lat, latlng.lng]))+'" target=_blank>What is there?</a>';
       
 
       if (settings.remap.controlPoints[name]) {
         content += '<br/><br/><button id="unbind-marker-btn">Unbind Marker</button>';
       }
-
       content += '<br/><br/><form id="search-location-form"><input type="hidden" id="oldLat"><input type="hidden" id="oldName"><input type="hidden" id="oldLng"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
       setTimeout(function() {
         if (input=document.querySelector('#search-location-input')) {
           input.value = l.feature.properties.title;
-          document.querySelector('#oldLat').value = l.getLatLng().lat;
-          document.querySelector('#oldLng').value = l.getLatLng().lng;
+          document.querySelector('#oldLat').value = latlng.lat;
+          document.querySelector('#oldLng').value = latlng.lng;
           document.querySelector('#oldName').value = l.feature.properties.title;
           if (e=document.querySelector('#search-location-form')) {
             e.onsubmit = function() {
