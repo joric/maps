@@ -105,6 +105,18 @@ let localDataName = 'joricsRemap';
 
 let mapId = 'LondonWorld';
 let settings = null;
+let circleMarker = null;
+
+function setSelection(latlng) {
+  removeSelection();
+  if (latlng) {
+    circleMarker = L.circleMarker(latlng, {radius: 10, color: 'red'}).addTo(map);
+    setTimeout(removeSelection, 10000);
+  }
+}
+function removeSelection() {
+  if (circleMarker) map.removeLayer(circleMarker);
+}
 
 // fetch local settings, if any
 if (!localStorage.getItem(localDataName)) {
@@ -430,34 +442,48 @@ function loadMarkers() {
 
       let latlng = l.getLatLng();
 
-      content += String([latlng.lat, latlng.lng]);
-      content += '<br/><a href="https://www.google.com/maps/search/'+encodeURIComponent(String([latlng.lat, latlng.lng]))+'" target=_blank>What is there?</a>';
-      
+      let strLL = String([latlng.lat, latlng.lng]);
+      content += '<br/>'+strLL+' <a href="https://www.google.com/maps/search/'+encodeURIComponent(strLL)+'" target=_blank>What\'s there?</a>';
 
       if (settings.remap.controlPoints[name]) {
         content += '<br/><br/><button id="unbind-marker-btn">Unbind Marker</button>';
       }
-      content += '<br/><br/><form id="search-location-form"><input type="hidden" id="oldLat"><input type="hidden" id="oldName"><input type="hidden" id="oldLng"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search Location</button></form>';
+      content += '<br/><br/>Possible location: <span id="possible-location">searching...</span>';
+      content += '<br/><br/><form id="search-location-form"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search Location</button></form>';
+
+      l.on('popupclose', removeSelection);
 
       setTimeout(function() {
+
         if (input=document.querySelector('#search-location-input')) {
-          input.value = l.feature.properties.title;
-          document.querySelector('#oldLat').value = latlng.lat;
-          document.querySelector('#oldLng').value = latlng.lng;
-          document.querySelector('#oldName').value = l.feature.properties.title;
+          let name = l.feature.properties.title;
+          getLocationByName(name, function(data, latlng){
+            setSelection(latlng);
+            let div = document.querySelector('#possible-location');
+            if (data) {
+              let a = document.createElement('div');
+              a.textContent = data[0].display_name;
+              let button = document.createElement('button');
+              button.textContent = 'Set to this location';
+              button.onclick = function() { searchLocation(name, name, latlng); }
+
+              div.replaceChildren(a, button);
+
+            } else {
+              div.textContent = 'Not found';
+            }
+          })
+
           if (e=document.querySelector('#search-location-form')) {
+            document.querySelector('#search-location-input').value = name;
             e.onsubmit = function() {
-              searchLocation(input.value, 
-                document.querySelector('#oldName').value,
-                parseFloat(document.querySelector('#oldLat').value),
-                parseFloat(document.querySelector('#oldLng').value)
-              )
-              return false;
+              searchLocation(input.value, name, latlng);
+              return false; // critical to prevent reload on submit
             }
           }
         }
         if (e=document.querySelector('#unbind-marker-btn')) e.onclick = function() { unbindMarker(l.feature.properties.title)};
-      }, 250,);
+      }, 250, l);
 
       return content;
     })
@@ -740,7 +766,57 @@ function exportMarkers() {
   saveTextToFile(JSON.stringify(data, null, 2), filename);
 }
 
-function searchLocation(placeName, oldName, oldLat, oldLng) { 
+function getLocationByName(name, callback) {
+  let q = encodeURIComponent(name);
+  const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1`;
+  fetch(url).then(r => r.json()).then(data => {
+    if (data.length > 0) {
+      const latitude = data[0].lat;
+      const longitude = data[0].lon;
+      let latlng = L.latLng([latitude, longitude]);
+      return callback(data, latlng);
+    } else {
+      return callback();
+    }
+  })
+  return true;
+}
+
+function searchLocation(placeName, oldName, oldLatLng) { 
+  getLocationByName(placeName, function(data, latlng) {
+    map.closePopup();
+    if (!data || !latlng) {
+      alert('Place not found');
+      return
+    }
+
+    const latitude = data[0].lat;
+    const longitude = data[0].lon;
+    const displayName = data[0].display_name;
+    //console.log(JSON.stringify(data, null, 2));
+
+    let text = `Are you sure you want to set new control point?`
+    + `\n\n${data[0].name}\n${data[0].addresstype}\n\n${data[0].display_name}\n[${latitude}, ${longitude}]`;
+
+    setSelection(latlng);
+
+    map.flyTo(latlng, map.getZoom());//, {duration: .5});
+
+    map.once('moveend', function() {
+
+      if (confirm(text)) {
+        settings.remap.controlPoints[oldName] = [latlng.lat, latlng.lng];
+        map.flyTo(latlng);
+        saveSettings();
+        updateMarkers();
+      } else {
+        map.flyTo(oldLatLng, map.getZoom());//, {duration: .5});
+      }
+    });
+  })
+}
+
+function searchLocation2(placeName, oldName, oldLat, oldLng) { 
   let q = encodeURIComponent(placeName);
   const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1`;
   fetch(url)
