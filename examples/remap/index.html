@@ -442,18 +442,18 @@ function loadMarkers() {
       content += '<br/><br/>Search results: <span id="possible-location">searching...</span>';
       content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
-      function updatePossibleLocation(name) {
-        getLocationByName(name, function(data, latlng){
+      function updatePossibleLocation(s) {
+        getLocationByName(s, function(data, latlng){
           let div = document.querySelector('#possible-location');
           if (data && latlng) {
             setSelection(latlng);
             let a = document.createElement('a');
             a.textContent = data[0].display_name;
-            a.href = 'https://www.google.com/maps/search/' + encodeURIComponent(name);
+            a.href = 'https://www.google.com/maps/search/' + encodeURIComponent(s);
             a.target = '_blank';
             let button = document.createElement('button');
             button.textContent = 'Set to this location';
-            button.onclick = function() { searchLocation(name, name, latlng); }
+            button.onclick = function() { searchLocation(s, name, latlng); }
             let spacer = document.createElement('p');
             div.replaceChildren(a, spacer, button);
           } else {
@@ -464,10 +464,11 @@ function loadMarkers() {
 
       setTimeout(function() {
         if (input=document.querySelector('#search-location-input')) {
-          let name = l.feature.properties.title;
-          updatePossibleLocation(name);
+          let s = l.feature.properties.title;
+          s = s.split(' ').filter(e=>e!='Underground').join(' '); // search doesn't like underground
+          updatePossibleLocation(s);
           if (e=document.querySelector('#search-location-form')) {
-            input.value = name;
+            input.value = s;
             input.select();
             e.onsubmit = function() {
               updatePossibleLocation(input.value);
