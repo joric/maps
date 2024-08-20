@@ -97,6 +97,7 @@ maps = {
       'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
       'StPaulsWorld': { scale: 1, offset: {x:3000, y:0} },
       'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
+      'IWMWorld':{ scale: 1, offset: {x:0, y:0} },
     },
   },
 }
@@ -411,7 +412,7 @@ function loadMarkers() {
         // hide some of the location markers on the base map
         if (mapId == Object.keys(maps)[0]) {
           if (['City','Town'].includes(type) && area != mapId && o.ref_id!='07310FF5') skip = true;
-          if (type == 'Military Base' && o.ref_id != '0732F385') skip = true;
+          if (type == 'Military Base' && area != 'IWMWorld') skip = true;
         }
 
         return !skip;
@@ -446,12 +447,15 @@ function loadMarkers() {
           let div = document.querySelector('#possible-location');
           if (data && latlng) {
             setSelection(latlng);
-            let a = document.createElement('div');
+            let a = document.createElement('a');
             a.textContent = data[0].display_name;
+            a.href = 'https://www.google.com/maps/search/' + encodeURIComponent(name);
+            a.target = '_blank';
             let button = document.createElement('button');
             button.textContent = 'Set to this location';
             button.onclick = function() { searchLocation(name, name, latlng); }
-            div.replaceChildren(a, button);
+            let spacer = document.createElement('p');
+            div.replaceChildren(a, spacer, button);
           } else {
             div.textContent = 'Not found';
           }

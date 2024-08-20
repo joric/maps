@@ -191,6 +191,7 @@ let maps = {
       'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
       'StPaulsWorld': { scale: 1, offset: {x:3000, y:0} },
       'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
+      'IWMWorld':{ scale: 1, offset: {x:0, y:0} },
     },
   },
   'WestminsterWorld' : { name: 'Westminster', scale: 1.9, offset: {x:7000, y:22000} },
@@ -930,7 +931,7 @@ function loadMarkers() {
     // hide some of the location markers on the base map
     if (mapId == Object.keys(maps)[0]) {
       if (['City','Town'].includes(o.type) && o.area != mapId && o.ref_id!='07310FF5') continue;
-      if (o.type == 'Military Base' && o.ref_id != '0732F385') continue;
+      if (o.type == 'Military Base' && o.area != 'IWMWorld') continue;
     }
 
     let c = getLoc(o);
