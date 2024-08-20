@@ -909,7 +909,7 @@ window.onload = e => {
       let before = Object.keys(settings.remap.controlPoints).length;
       settings.remap.controlPoints = {...serverPoints, ...settings.remap.controlPoints};
       let after = Object.keys(settings.remap.controlPoints).length;
-      console.log(  (after-before) + ' points imported from the server');
+      console.log(  (after-before) + ' control points imported from the server');
     }
     updateMarkers();
   }).catch(e=>console.log('handled error', e));
