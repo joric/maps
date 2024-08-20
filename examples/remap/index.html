@@ -463,7 +463,12 @@ function loadMarkers() {
             let spacer = document.createElement('p');
             div.replaceChildren(a, spacer, button);
           } else {
-            div.textContent = 'Not found';
+
+            let a = document.createElement('a');
+            a.textContent = 'Not found in OSM, try Google';
+            a.href = 'https://www.google.com/maps/search/' + encodeURIComponent(s);
+            a.target = '_blank';
+            div.replaceChildren(a);
           }
         })
       }
@@ -471,7 +476,7 @@ function loadMarkers() {
       setTimeout(function() {
         if (input=document.querySelector('#search-location-input')) {
           let s = l.feature.properties.title;
-          s = s.split(' ').filter(e=>e!='Underground').join(' '); // search doesn't like underground
+          s = [...s.split(' ').filter(e=>e!='Underground'), 'London'].join(' '); // search doesn't like underground
           updatePossibleLocation(s);
           if (e=document.querySelector('#search-location-form')) {
             input.value = s;
