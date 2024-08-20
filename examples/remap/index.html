@@ -426,6 +426,8 @@ function loadMarkers() {
     })
 
     markers.bindPopup(l => { 
+      l.on('popupclose', removeSelection);
+
       let name = l.feature.properties.title;
       let content = '<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
 
@@ -481,8 +483,6 @@ function loadMarkers() {
     markers.bindTooltip(l => l.feature.properties.title)
     markersGroup.addLayer(markers);
     updateMarkers();
-
-    l.on('popupclose', removeSelection);
 
     map.addControl( new L.Control.Search({
       layer: markers,
