@@ -253,7 +253,6 @@ function updateCRS(provider) {
   }
 
   map.setView(center);
-
   map._resetView(map.getCenter(), map.getZoom());
 }
 
@@ -439,7 +438,7 @@ function loadMarkers() {
   fetch(settings.remap.markers).then(r=>r.json()).then(data=>{
 
     let markers = L.geoJSON(data, {
-      style: f => {color: f.properties.color},
+      style: f => { color: f.properties.color },
       filter: f=> {
 
         let o = f.properties;
@@ -906,9 +905,6 @@ function importOldControlPoint(title, coord) {
 
 window.onload = e => {
 
-  loadMarkers();
-  loadImages();
-
   // fetch global markers from server, merge to your control points
   fetch(localDataName+'.json').then(r=>r.json()).then(data=>{
     if (serverPoints = (data[mapId] && data[mapId].remap && data[mapId].remap.controlPoints)) {
@@ -917,8 +913,10 @@ window.onload = e => {
       let after = Object.keys(settings.remap.controlPoints).length;
       console.log(  (after-before) + ' control points imported from the server');
     }
-    updateMarkers();
   }).catch(e=>console.log('handled error', e));
+
+  loadImages();
+  loadMarkers();
 
   let [sm,pw] = [document.querySelector('#smoothing'), document.querySelector('#power')];
   updateSlider(sm, settings.remap.smoothing);

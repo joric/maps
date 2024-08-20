@@ -1315,10 +1315,58 @@
           ],
           "title": "Westminster Underground Station",
           "osm_id": 25534427
+        },
+        "07068600": {
+          "coordinates": [
+            51.331990000000005,
+            0.029007046200001725
+          ],
+          "title": "Biggin Hill",
+          "osm_id": 183489784
+        },
+        "072EE3AE": {
+          "coordinates": [
+            51.495007,
+            -0.1003315
+          ],
+          "title": "Elephant And Castle",
+          "osm_id": 26546003
+        },
+        "072FDC18": {
+          "coordinates": [
+            51.4956878,
+            -0.25471169315339026
+          ],
+          "title": "The Tabard",
+          "osm_id": 209445869
+        },
+        "072FDC7A": {
+          "coordinates": [
+            51.4868164,
+            -0.2874512
+          ],
+          "title": "A205",
+          "osm_id": 4004743
+        },
+        "072EE778": {
+          "coordinates": [
+            51.49575085,
+            -0.1086038398854497
+          ],
+          "title": "Imperial War Museum",
+          "osm_id": 8614496
+        },
+        "072EE3CD": {
+          "coordinates": [
+            51.5048764,
+            -0.0851473
+          ],
+          "title": "London Bridge Station",
+          "osm_id": 4290857012
         }
       },
       "smoothing": 0,
-      "power": 0,
+      "power": 5.34958,
       "activeLayers": {
         "Markers": true
       },
@@ -1326,9 +1374,9 @@
       "warped": true
     },
     "center": [
-      51.498511263481035,
-      -0.06505966186523439
+      51.46502344177947,
+      -0.08342742919921876
     ],
-    "zoom": 14
+    "zoom": 12
   }
 }
