@@ -112,7 +112,7 @@ function setSelection(latlng) {
   removeSelection();
   if (latlng) {
     circleMarker = L.circleMarker(latlng, {radius: 10, color: 'red'}).addTo(map);
-    setTimeout(removeSelection, 10000);
+    setTimeout(removeSelection, 15000);
   }
 }
 function removeSelection() {
@@ -138,6 +138,9 @@ let globalImage = null;
 const map = L.map('map', {
   //zoomSnap: 0.1,
   //wheelDebounceTime: 100,
+    attributionControl: true,
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
+  //attribution: '<a href="https://github.com/joric/maps/wiki/Fallout-London">Joric\'s Fallout London</a>',
 }).setView(pos, zoom);
 
 let markersGroup = L.layerGroup();
@@ -443,6 +446,7 @@ function loadMarkers() {
       content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
 
       function updatePossibleLocation(s) {
+        let oldLatLng = l.getLatLng();
         getLocationByName(s, function(data, latlng){
           let div = document.querySelector('#possible-location');
           if (data && latlng) {
@@ -452,8 +456,8 @@ function loadMarkers() {
             a.href = 'https://www.google.com/maps/search/' + encodeURIComponent(s);
             a.target = '_blank';
             let button = document.createElement('button');
-            button.textContent = 'Set to this location';
-            button.onclick = function() { searchLocation(s, name, latlng); }
+            button.textContent = 'Fly to this location';
+            button.onclick = function() { searchLocation(s, name, oldLatLng) }
             let spacer = document.createElement('p');
             div.replaceChildren(a, spacer, button);
           } else {
@@ -776,6 +780,7 @@ function getLocationByName(name, callback) {
 }
 
 function searchLocation(placeName, oldName, oldLatLng) { 
+
   getLocationByName(placeName, function(data, latlng) {
     map.closePopup();
     if (!data || !latlng) {
@@ -791,12 +796,10 @@ function searchLocation(placeName, oldName, oldLatLng) {
     let text = `Set new control point to this location?`
     + `\n\n${data[0].name}\n${data[0].addresstype}\n\n${data[0].display_name}\n[${latitude}, ${longitude}]`;
 
+    map.flyTo(latlng, map.getZoom());//, {duration: .5});
     setSelection(latlng);
 
-    map.flyTo(latlng, map.getZoom());//, {duration: .5});
-
     map.once('moveend', function() {
-
       if (confirm(text)) {
         settings.remap.controlPoints[oldName] = [latlng.lat, latlng.lng];
         map.flyTo(latlng);
@@ -805,50 +808,11 @@ function searchLocation(placeName, oldName, oldLatLng) {
       } else {
         map.flyTo(oldLatLng, map.getZoom());//, {duration: .5});
       }
+      removeSelection();
     });
+
   })
-}
 
-function searchLocation2(placeName, oldName, oldLat, oldLng) { 
-  let q = encodeURIComponent(placeName);
-  const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1`;
-  fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    if (data.length > 0) {
-      const latitude = data[0].lat;
-      const longitude = data[0].lon;
-      const displayName = data[0].display_name;
-      //console.log(JSON.stringify(data, null, 2));
-      map.closePopup();
-
-      let text = `Place found! Are you sure you want to set new control point?`
-      + `\n\n${data[0].name}\n${data[0].addresstype}\n\n${data[0].display_name}\n[${latitude}, ${longitude}]`;
-
-      let latlng = L.latLng([latitude, longitude]);
-      let latlngOld = L.latLng([oldLat, oldLng]);
-      let marker = L.circleMarker(latlng, {radius: 10, color: 'red'}).addTo(map);
-
-      map.flyTo(latlng, map.getZoom());//, {duration: .5});
-
-      map.once('moveend', function() {
-        if (confirm(text)) {
-          settings.remap.controlPoints[oldName] = [latlng.lat, latlng.lng];
-          map.flyTo(latlng);
-          saveSettings();
-          updateMarkers();
-          map.removeLayer(marker);
-        } else {
-          map.flyTo(latlngOld, map.getZoom());//, {duration: .5});
-          map.removeLayer(marker);
-        }
-        removeSelection();
-      });
-
-    } else {
-        alert('Place not found');
-    }
-  })
 }
 
 window.onload = e => {
