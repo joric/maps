@@ -130,15 +130,55 @@ function removeSelection() {
 }
 
 let helpers = null;
+let helpersPopup = null;
 
 function addHelpers(marker) {
   let cp = settings.remap.controlPoints[marker.feature.properties.ref_id];
   if (cp && cp.warp) {
     helpers = L.layerGroup();
-    L.circle(marker.getLatLng(), {radius: 100, color: 'blue'}).addTo(helpers);
-    L.circle(marker.getLatLng(), {radius: 120, color: 'green'}).addTo(helpers);
+    L.circle(marker.getLatLng(), {radius: 200, color: 'green', interactive: true}).addTo(helpers).on('mousedown', startResize)
+    L.circle(marker.getLatLng(), {radius: 100, color: 'blue', interactive: true}).addTo(helpers).on('mousedown', startResize)
     helpers.addTo(map);
   }
+}
+
+let circle;
+let startRadius;
+let startPoint;
+let popupTimer;
+let startDelta;
+let startGap;
+
+const preventTextSelection = e=>e.preventDefault();
+
+function startResize(e) {
+  L.DomEvent.on(document, 'mousemove', resize);
+  L.DomEvent.on(document, 'mouseup', stopResize);
+  map.options.closePopupOnClick = false;
+  map.dragging.disable();
+  document.addEventListener('selectstart', preventTextSelection );
+  keepPopupOpen = true;
+  clearTimeout(popupTimer);
+
+  circle = e.target;
+  startRadius = circle.getRadius();
+  startPoint = map.mouseEventToLatLng(e.originalEvent);
+  startGap = startRadius - startPoint.distanceTo(circle.getLatLng());
+}
+
+function resize(e) {
+  let newPoint = map.mouseEventToLatLng(e);
+  let distance = newPoint.distanceTo(circle.getLatLng());
+  let newRadius = distance + startGap;
+  circle.setRadius(newRadius);
+}
+
+function stopResize(e) {
+  L.DomEvent.off(document, 'mousemove', resize);
+  L.DomEvent.off(document, 'mouseup', stopResize);
+  map.dragging.enable();
+  document.removeEventListener('selectstart', preventTextSelection); 
+  popupTimer = setTimeout(()=>{keepPopupOpen = false}, 0);
 }
 
 function removeHelpers() {
@@ -181,7 +221,14 @@ let globalImage = null;
 const map = L.map('map', {
   //zoomSnap: 0.1,
   //wheelDebounceTime: 100,
+  closePopupOnClick : false,
 }).setView(pos, zoom);
+
+map.on('click', e=>{
+  if (!keepPopupOpen) {
+    map.closePopup();
+  }
+})
 
 let markersGroup = L.layerGroup();
 //let imgGroup = L.distortableCollection(); // doesn't hide the image, only toolbar
@@ -460,6 +507,93 @@ function project(marker, controlPointsData) {
   return [point.y, point.x];
 }
 
+function bindPopup(marker) {
+  addHelpers(marker);
+
+  let o = marker.feature.properties;
+  let name = o.title;
+
+  //let content = '';//'<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
+  let content = `<b>${o.title}</b><br/>${o.description}<br/><small>${o.area}</small>`;
+  let latlng = marker.getLatLng();
+
+  let strLL = String([latlng.lat, latlng.lng]);
+  content += '<hr><a href="https://www.google.com/maps/search/'+encodeURIComponent(strLL)+'" target=_blank>'+strLL+'</a>';
+
+  let cp = settings.remap.controlPoints[o.ref_id];
+  if (cp) {
+    content += '<hr><button id="unbind-marker-btn">Unbind Marker</button>';
+    if (cp.osm && cp.osm.osm_id) {
+      let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
+      content += ' OSM id: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
+    }
+  }
+
+  content += '<hr>Search results: <span id="possible-location">searching...</span>';
+  content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
+
+  function updateSearchResults(text) {
+    let oldLatLng = marker.getLatLng();
+    searchOSM(text, function(data, latlng){
+      let div = document.querySelector('#possible-location');
+      let url = 'https://www.google.com/maps/search/' + encodeURIComponent(text);
+
+      if (data && latlng) {
+        let info =`${data[0].name} ${data[0].addresstype} ${data[0].display_name}`;
+
+        setSelection(latlng);
+        let a = document.createElement('a');
+        a.textContent = info;
+        a.href = url;
+        a.target = '_blank';
+
+        let button = document.createElement('button');
+        button.textContent = 'Use this location';
+        button.onclick = function() { searchLocation(text, marker) }
+
+        let spacer = document.createElement('p');
+
+        div.replaceChildren(a, spacer, button);
+
+      } else {
+
+        let a = document.createElement('a');
+        a.textContent = 'Not found in OSM, try Google';
+        a.href = url;
+        a.target = '_blank';
+        div.replaceChildren(a);
+      }
+    })
+  }
+
+  setTimeout(function() {
+    if (input=document.querySelector('#search-location-input')) {
+      let text = marker.feature.properties.title;
+
+      let cp;
+      if (cp = settings.remap.controlPoints[o.ref_id]) {
+        if (cp.osm && cp.osm.name) text = cp.osm.name;
+      }
+
+      text = [...text.split(' ').filter(e=>e!='Underground'), 'london'].join(' '); // search doesn't like underground
+
+      updateSearchResults(text);
+      if (e=document.querySelector('#search-location-form')) {
+        input.value = text;
+        input.select();
+        e.onsubmit = function() {
+          input.select();
+          updateSearchResults(input.value);
+          return false; // critical to prevent reload on submit
+        }
+      }
+    }
+    if (e=document.querySelector('#unbind-marker-btn')) e.onclick = function() { unbindMarker(o.ref_id) };
+  }, 250);
+
+  return content;
+}
+
 function loadMarkers() {
   fetch(settings.remap.markers).then(r=>r.json()).then(data=>{
 
@@ -489,99 +623,23 @@ function loadMarkers() {
         marker.on('dragstart', markerDragStart)
         //marker.on('contextmenu', markerContextMenu)
         return marker;
-      }
-    })
-
-    markers.bindPopup(marker => { 
-      marker.on('popupclose', function() { removeSelection(); removeHelpers();} );
-
-      addHelpers(marker);
-
-      let o = marker.feature.properties;
-      let name = o.title;
-
-      //let content = '';//'<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
-      let content = `<b>${o.title}</b><br/>${o.description}<br/><small>${o.area}</small>`;
-      let latlng = marker.getLatLng();
-
-      let strLL = String([latlng.lat, latlng.lng]);
-      content += '<hr><a href="https://www.google.com/maps/search/'+encodeURIComponent(strLL)+'" target=_blank>'+strLL+'</a>';
-
-      let cp = settings.remap.controlPoints[o.ref_id];
-      if (cp) {
-        content += '<hr><button id="unbind-marker-btn">Unbind Marker</button>';
-        if (cp.osm && cp.osm.osm_id) {
-          let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
-          content += ' OSM id: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
-        }
-      }
-
-      content += '<hr>Search results: <span id="possible-location">searching...</span>';
-      content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
-
-      function updateSearchResults(text) {
-        let oldLatLng = marker.getLatLng();
-        searchOSM(text, function(data, latlng){
-          let div = document.querySelector('#possible-location');
-          let url = 'https://www.google.com/maps/search/' + encodeURIComponent(text);
-
-          if (data && latlng) {
-            let info =`${data[0].name} ${data[0].addresstype} ${data[0].display_name}`;
-
-            setSelection(latlng);
-            let a = document.createElement('a');
-            a.textContent = info;
-            a.href = url;
-            a.target = '_blank';
-
-            let button = document.createElement('button');
-            button.textContent = 'Use this location';
-            button.onclick = function() { searchLocation(text, marker) }
-
-            let spacer = document.createElement('p');
-
-            div.replaceChildren(a, spacer, button);
-
-          } else {
-
-            let a = document.createElement('a');
-            a.textContent = 'Not found in OSM, try Google';
-            a.href = url;
-            a.target = '_blank';
-            div.replaceChildren(a);
-          }
+      },
+      onEachFeature: function(feature, marker) {
+        marker.bindPopup(bindPopup)
+        marker.on('popupclose', function() {
+          removeSelection();
+          removeHelpers();
+        })
+        marker.on('popupopen', function(e){
+          helpersPopup = e.popup;
         })
       }
-
-      setTimeout(function() {
-        if (input=document.querySelector('#search-location-input')) {
-          let text = marker.feature.properties.title;
-
-          let cp;
-          if (cp = settings.remap.controlPoints[o.ref_id]) {
-            if (cp.osm && cp.osm.name) text = cp.osm.name;
-          }
-
-          text = [...text.split(' ').filter(e=>e!='Underground'), 'london'].join(' '); // search doesn't like underground
-
-          updateSearchResults(text);
-          if (e=document.querySelector('#search-location-form')) {
-            input.value = text;
-            input.select();
-            e.onsubmit = function() {
-              input.select();
-              updateSearchResults(input.value);
-              return false; // critical to prevent reload on submit
-            }
-          }
-        }
-        if (e=document.querySelector('#unbind-marker-btn')) e.onclick = function() { unbindMarker(o.ref_id) };
-      }, 250);
-
-      return content;
     })
+
     markers.bindTooltip(marker => marker.feature.properties.title)
+
     markersGroup.addLayer(markers);
+
     updateMarkers();
 
     map.addControl( new L.Control.Search({
@@ -944,6 +1002,7 @@ function searchLocation(text, marker) {
       setTimeout(function() {
         if (confirm(text)) {
           updateControlPoint(marker, latlng, data[0]);
+          updateHistory();
           map.flyTo(latlng);
           saveSettings();
         } else {
@@ -1023,6 +1082,8 @@ window.onload = e => {
       if (e.code == 'KeyY') rotateHistory(false);
     }
   });
+
+  updateHistory();
 }
 
 </script>
