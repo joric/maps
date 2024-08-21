@@ -47,12 +47,12 @@
         },
         "072FDB89": {
           "coordinates": [
-            51.5008581,
-            -0.122074
+            51.5008769,
+            -0.1227638
           ],
           "title": "Westminster Bridge",
           "osm": {
-            "osm_id": 920237508,
+            "osm_id": 920237507,
             "osm_type": "way",
             "name": "Westminster Bridge"
           }
@@ -76,7 +76,9 @@
           ],
           "title": "Waterloo Bridge",
           "osm": {
-            "osm_id": 208169532
+            "osm_id": 208169532,
+            "osm_type": "way",
+            "name": "Waterloo Bridge"
           }
         },
         "072FDB82": {
@@ -86,17 +88,21 @@
           ],
           "title": "Blackfriars Bridge",
           "osm": {
-            "osm_id": 123464163
+            "osm_id": 123464163,
+            "osm_type": "way",
+            "name": "Blackfriars Bridge"
           }
         },
         "072FDB7E": {
           "coordinates": [
-            51.5088978,
-            -0.0940433
+            51.5088513,
+            -0.09408954255523858
           ],
           "title": "Southwark Bridge",
           "osm": {
-            "osm_id": 378492763
+            "osm_id": 378492763,
+            "osm_type": "way",
+            "name": "Southwark Bridge"
           }
         },
         "072EE3CB": {
@@ -196,10 +202,15 @@
         },
         "072FDB80": {
           "coordinates": [
-            51.50969734219761,
-            -0.0985175371170044
+            51.50988825,
+            -0.09850764519248378
           ],
-          "title": "Millennium Bridge"
+          "title": "Millennium Bridge",
+          "osm": {
+            "osm_id": 659424463,
+            "osm_type": "way",
+            "name": "Millennium Bridge"
+          }
         },
         "072FDB58": {
           "coordinates": [
@@ -217,17 +228,27 @@
         },
         "07312FEB": {
           "coordinates": [
-            51.50988505564679,
-            -0.1342789545165483
+            51.5097922,
+            -0.13442883634595293
           ],
-          "title": "Piccadilly Circus"
+          "title": "Piccadilly Circus",
+          "osm": {
+            "osm_id": 8250949,
+            "osm_type": "relation",
+            "name": "Piccadilly Circus"
+          }
         },
         "07313004": {
           "coordinates": [
             51.5008349,
             -0.1430045264505431
           ],
-          "title": "Buckingham Palace"
+          "title": "Buckingham Palace",
+          "osm": {
+            "osm_id": 5208404,
+            "osm_type": "relation",
+            "name": "Buckingham Palace"
+          }
         },
         "070F4F2D": {
           "coordinates": [
@@ -352,7 +373,12 @@
             51.5025031,
             -0.15081986768597055
           ],
-          "title": "Wellington Arch"
+          "title": "Wellington Arch",
+          "osm": {
+            "osm_id": 24923117,
+            "osm_type": "way",
+            "name": "Wellington Arch"
+          }
         },
         "07312FF3": {
           "coordinates": [
@@ -366,7 +392,12 @@
             51.5152681,
             -0.1420078
           ],
-          "title": "Oxford Circus"
+          "title": "Oxford Circus",
+          "osm": {
+            "osm_id": 2354980085,
+            "osm_type": "node",
+            "name": "Oxford Circus"
+          }
         },
         "072FDAF0": {
           "coordinates": [
@@ -411,7 +442,12 @@
             51.4634016,
             -0.009621126498514512
           ],
-          "title": "Lewisham Police Station"
+          "title": "Lewisham Police Station",
+          "osm": {
+            "osm_id": 244887255,
+            "osm_type": "way",
+            "name": "Lewisham Police Station"
+          }
         },
         "07035F81": {
           "coordinates": [
@@ -453,13 +489,13 @@
         },
         "07313037": {
           "coordinates": [
-            51.5007395,
-            -0.1296479
+            51.5007722,
+            -0.1295855
           ],
           "title": "Westminster Gate",
           "osm": {
-            "osm_id": 5273526518,
-            "osm_type": "node",
+            "osm_id": 1115487852,
+            "osm_type": "way",
             "name": "Storey's Gate"
           }
         },
@@ -488,7 +524,9 @@
           ],
           "title": "St. Anne's Churchyard",
           "osm": {
-            "osm_id": 40879988
+            "osm_id": 40879988,
+            "osm_type": "way",
+            "name": "St Anne's Churchyard"
           }
         },
         "07313022": {
@@ -508,7 +546,12 @@
             51.5074293,
             -0.09934164882888792
           ],
-          "title": "Bankside Power Station"
+          "title": "Bankside Power Station",
+          "osm": {
+            "osm_id": 24642569,
+            "osm_type": "way",
+            "name": "Tate Modern"
+          }
         },
         "072FDB60": {
           "coordinates": [
@@ -562,12 +605,12 @@
         },
         "07313035": {
           "coordinates": [
-            51.5009846,
-            -0.1273873
+            51.5003241,
+            -0.1274482
           ],
           "title": "Parliament Square Garden",
           "osm": {
-            "osm_id": 419357196,
+            "osm_id": 245379012,
             "osm_type": "way",
             "name": "Parliament Square"
           }
@@ -579,7 +622,9 @@
           ],
           "title": "New Scotland Yard",
           "osm": {
-            "osm_id": 31117060
+            "osm_id": 31117060,
+            "osm_type": "way",
+            "name": "New Scotland Yard"
           }
         },
         "072FDC6B": {
@@ -692,14 +737,24 @@
             51.4792126,
             -0.15705832131502928
           ],
-          "title": "Battersea Park"
+          "title": "Battersea Park",
+          "osm": {
+            "osm_id": 840130236,
+            "osm_type": "way",
+            "name": "Battersea Park"
+          }
         },
         "07068630": {
           "coordinates": [
-            51.481730337217954,
-            -0.1447105407714844
+            51.481780099999995,
+            -0.14455373782331016
           ],
-          "title": "Battersea Power Station"
+          "title": "Battersea Power Station",
+          "osm": {
+            "osm_id": 4965216,
+            "osm_type": "way",
+            "name": "Battersea Power Station"
+          }
         },
         "07068633": {
           "coordinates": [
@@ -762,7 +817,12 @@
             51.5034927,
             -0.12770540128798905
           ],
-          "title": "10 Downing Street"
+          "title": "10 Downing Street",
+          "osm": {
+            "osm_id": 1879842,
+            "osm_type": "relation",
+            "name": "10 Downing Street"
+          }
         },
         "072FDC04": {
           "coordinates": [
@@ -804,10 +864,15 @@
         },
         "071E6A19": {
           "coordinates": [
-            51.483667941057305,
-            -0.11494874954223634
+            51.4818339,
+            -0.1123953
           ],
-          "title": "Oval"
+          "title": "Oval",
+          "osm": {
+            "osm_id": 21507733,
+            "osm_type": "node",
+            "name": "Oval"
+          }
         },
         "0728B6FD": {
           "coordinates": [
@@ -831,14 +896,24 @@
             51.5142559,
             -0.1497856
           ],
-          "title": "Bond Street Underground Station"
+          "title": "Bond Street Underground Station",
+          "osm": {
+            "osm_id": 469759987,
+            "osm_type": "node",
+            "name": "Bond Street Station"
+          }
         },
         "07313014": {
           "coordinates": [
-            51.5029748,
-            -0.1536637
+            51.5026541,
+            -0.153779
           ],
-          "title": "Hyde Park Corner Underground Station"
+          "title": "Hyde Park Corner Underground Station",
+          "osm": {
+            "osm_id": 4588137518,
+            "osm_type": "node",
+            "name": "Hyde Park Corner Station"
+          }
         },
         "0731300A": {
           "coordinates": [
@@ -854,24 +929,39 @@
         },
         "07312FED": {
           "coordinates": [
-            51.506155,
-            -0.1300842
+            51.5060098,
+            -0.130437
           ],
-          "title": "The Mall"
+          "title": "The Mall",
+          "osm": {
+            "osm_id": 776630483,
+            "osm_type": "way",
+            "name": "The Mall"
+          }
         },
         "072FDC06": {
           "coordinates": [
             51.4934207,
             -0.0478319
           ],
-          "title": "Surrey Quays"
+          "title": "Surrey Quays",
+          "osm": {
+            "osm_id": 2438262362,
+            "osm_type": "node",
+            "name": "Surrey Quays"
+          }
         },
         "0728B729": {
           "coordinates": [
-            51.4730115,
-            -0.04366185526664451
+            51.4743949,
+            -0.0442355
           ],
-          "title": "Deptford Bus Garage"
+          "title": "Deptford Bus Garage",
+          "osm": {
+            "osm_id": 469777031,
+            "osm_type": "node",
+            "name": "New Cross Bus Garage"
+          }
         },
         "072EE3BA": {
           "coordinates": [
@@ -882,10 +972,15 @@
         },
         "072ED6F4": {
           "coordinates": [
-            51.526042442612045,
-            -0.07490873336791994
+            51.5257586,
+            -0.0747496
           ],
-          "title": "Arnold Circus"
+          "title": "Arnold Circus",
+          "osm": {
+            "osm_id": 884950255,
+            "osm_type": "way",
+            "name": "Arnold Circus"
+          }
         },
         "0728B6F8": {
           "coordinates": [
@@ -906,7 +1001,12 @@
             51.48329355,
             -0.1091115912363697
           ],
-          "title": "Kennington Park"
+          "title": "Kennington Park",
+          "osm": {
+            "osm_id": 32910400,
+            "osm_type": "way",
+            "name": "Kennington Park"
+          }
         },
         "072ECE05": {
           "coordinates": [
@@ -1393,7 +1493,9 @@
           ],
           "title": "Carnaby Street",
           "osm": {
-            "osm_id": 4253858
+            "osm_id": 4253858,
+            "osm_type": "way",
+            "name": "Carnaby Street"
           }
         },
         "07312FF9": {
@@ -1405,12 +1507,14 @@
         },
         "07312FFB": {
           "coordinates": [
-            51.5099208,
-            -0.1368116
+            51.5098852,
+            -0.1371072
           ],
           "title": "Regent Street",
           "osm": {
-            "osm_id": 1018951433
+            "osm_id": 1018951432,
+            "osm_type": "way",
+            "name": "Regent Street"
           }
         },
         "07313028": {
@@ -1476,22 +1580,24 @@
         },
         "07312FF1": {
           "coordinates": [
-            51.5163791,
-            -0.14720421988721888
+            51.516077100000004,
+            -0.14682822742248763
           ],
           "title": "NuSkin",
           "osm": {
-            "osm_id": 664315341
+            "osm_id": 34878209,
+            "osm_type": "way",
+            "name": "Royal Society of Medicine"
           }
         },
         "07312FDD": {
           "coordinates": [
-            51.5013562,
-            -0.1249302
+            51.5004439,
+            -0.1265398
           ],
           "title": "Westminster Underground Station",
           "osm": {
-            "osm_id": 25534427,
+            "osm_id": 7646215719,
             "osm_type": "node",
             "name": "Westminster"
           }
@@ -1543,7 +1649,9 @@
           ],
           "title": "Imperial War Museum",
           "osm": {
-            "osm_id": 8614496
+            "osm_id": 8614496,
+            "osm_type": "way",
+            "name": "Imperial War Museum"
           }
         },
         "072EE3CD": {
@@ -1623,7 +1731,9 @@
           ],
           "title": "Lewisham",
           "osm": {
-            "osm_id": 6516411104
+            "osm_id": 6516411104,
+            "osm_type": "node",
+            "name": "Lewisham"
           }
         },
         "0706861C": {
@@ -1811,6 +1921,73 @@
             -0.08680701255798341
           ],
           "title": "Ferryman Dockhouse"
+        },
+        "070A70A2": {
+          "coordinates": [
+            51.5240733,
+            -0.1349709972524562
+          ],
+          "title": "Cruciform Building",
+          "osm": {
+            "osm_id": 27432119,
+            "osm_type": "way",
+            "name": "Cruciform Building"
+          }
+        },
+        "073204FD": {
+          "coordinates": [
+            51.52871738646354,
+            -0.08437156677246094
+          ],
+          "title": "Plodd Bins"
+        },
+        "072FDBFA": {
+          "coordinates": [
+            51.5139887,
+            0.0082987
+          ],
+          "title": "Canning Town",
+          "osm": {
+            "osm_id": 5585799426,
+            "osm_type": "node",
+            "name": "Canning Town"
+          }
+        },
+        "0728B6FB": {
+          "coordinates": [
+            51.50737385,
+            -0.07579979436619733
+          ],
+          "title": "Lanthorn Tower",
+          "osm": {
+            "osm_id": 369125627,
+            "osm_type": "way",
+            "name": "Lanthorne Tower"
+          }
+        },
+        "0728B6FE": {
+          "coordinates": [
+            51.510153,
+            -0.058990472320934774
+          ],
+          "title": "St George",
+          "osm": {
+            "osm_id": 24348984,
+            "osm_type": "way",
+            "name": "St George's Gardens"
+          }
+        },
+        "072FDAF8": {
+          "coordinates": [
+            51.4812011,
+            -0.1128323
+          ],
+          "title": "Oval Underground Station",
+          "osm": {
+            "osm_id": 469760492,
+            "osm_type": "node",
+            "name": "Oval Station"
+          }
         }
       },
       "smoothing": 0,
@@ -1818,13 +1995,13 @@
       "activeLayers": {
         "Markers": true
       },
-      "provider": "CartoDB_Voyager",
+      "provider": "OpenStreetMap_Mapnik",
       "warped": true
     },
     "center": [
-      51.45775068998018,
-      -0.0926971435546875
+      51.49575940124326,
+      -0.10857582092285158
     ],
-    "zoom": 12
+    "zoom": 14
   }
 }

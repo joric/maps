@@ -119,14 +119,15 @@ function setSelection(latlng) {
   removeSelection();
   if (latlng) {
     circleMarker = L.circleMarker(latlng, {radius: 10, color: 'red'}).addTo(map);
-    setTimeout(removeSelection, 15000);
   }
 }
 
 function removeSelection() {
-  if (circleMarker) map.removeLayer(circleMarker);
+  if (circleMarker) {
+    map.removeLayer(circleMarker);
+    delete circleMarker;
+  }
 }
-
 
 let helpers = null;
 
@@ -167,9 +168,6 @@ let globalImage = null;
 const map = L.map('map', {
   //zoomSnap: 0.1,
   //wheelDebounceTime: 100,
-    attributionControl: true,
-    attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
-  //attribution: '<a href="https://github.com/joric/maps/wiki/Fallout-London">Joric\'s Fallout London</a>',
 }).setView(pos, zoom);
 
 let markersGroup = L.layerGroup();
@@ -543,12 +541,13 @@ function loadMarkers() {
       setTimeout(function() {
         if (input=document.querySelector('#search-location-input')) {
           let text = marker.feature.properties.title;
-          text = ['London', ...text.split(' ').filter(e=>e!='Underground')].join(' '); // search doesn't like underground
 
           let cp;
           if (cp = settings.remap.controlPoints[o.ref_id]) {
             if (cp.osm && cp.osm.name) text = cp.osm.name;
           }
+
+          text = [...text.split(' ').filter(e=>e!='Underground'), 'london'].join(' '); // search doesn't like underground
 
           updateSearchResults(text);
           if (e=document.querySelector('#search-location-form')) {
@@ -873,7 +872,7 @@ function exportMarkers() {
 
 function searchOSM(text, callback) {
   let q = encodeURIComponent(text);
-  const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1`;
+  const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=gb`;
   fetch(url).then(r => r.json()).then(data => {
     if (data.length > 0) {
       const latitude = data[0].lat;
