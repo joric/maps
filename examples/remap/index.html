@@ -79,7 +79,7 @@ let defaultLocalData = {
       controlPoints: {
         '072FDB86': {
           title: 'London Eye',
-          osm_id: 204068874,
+          osm: { osm_id: 204068874 },
           coordinates: [51.5033416, -0.11967649999999999],
           warp: { smoothing: 0.0428, power: 5.0 },
         },
@@ -196,7 +196,18 @@ baseLayers['OpenStreetMap_Mapnik'] = L.tileLayer('https://tile.openstreetmap.org
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
+baseLayers['OpenStreetMap_HOT'] = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+});
+
 baseLayers['CartoDB_Voyager'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 20
+});
+
+baseLayers['CartoDB_DarkMatter'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: 'abcd',
   maxZoom: 20
@@ -204,6 +215,11 @@ baseLayers['CartoDB_Voyager'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/r
 
 baseLayers['Esri_WorldImagery'] = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
+
+
+baseLayers['Esri_WorldStreetMap'] = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 });
 
 baseLayers['googleSat'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
@@ -231,7 +247,6 @@ baseLayers['googleTraffic'] = L.tileLayer('https://{s}.google.com/vt/lyrs=m@2210
         minZoom: 2,
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
     });
-
 
 baseLayers['yandex core'] = new L.TileLayer('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&lang=en', {
     reuseTiles: true, 
@@ -480,10 +495,12 @@ function loadMarkers() {
       content += '<hr><a href="https://www.google.com/maps/search/'+encodeURIComponent(strLL)+'" target=_blank>'+strLL+'</a>';
 
       let cp = settings.remap.controlPoints[o.ref_id];
-
       if (cp) {
         content += '<hr><button id="unbind-marker-btn">Unbind Marker</button>';
-        if (cp.osm_id) content += ' OSM id: <a href="https://www.openstreetmap.org/way/'+cp.osm_id+'" target=_blank>'+cp.osm_id+'</a>';
+        if (cp.osm && cp.osm.osm_id) {
+          let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
+          content += ' OSM id: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
+        }
       }
 
       content += '<hr>Search results: <span id="possible-location">searching...</span>';
@@ -526,7 +543,13 @@ function loadMarkers() {
       setTimeout(function() {
         if (input=document.querySelector('#search-location-input')) {
           let text = marker.feature.properties.title;
-          text = [...text.split(' ').filter(e=>e!='Underground'), 'London'].join(' '); // search doesn't like underground
+          text = ['London', ...text.split(' ').filter(e=>e!='Underground')].join(' '); // search doesn't like underground
+
+          let cp;
+          if (cp = settings.remap.controlPoints[o.ref_id]) {
+            if (cp.osm && cp.osm.name) text = cp.osm.name;
+          }
+
           updateSearchResults(text);
           if (e=document.querySelector('#search-location-form')) {
             input.value = text;
@@ -611,17 +634,24 @@ function imageUpdated(e) {
   saveSettings();
 }
 
-function updateControlPoint(marker, latlng, osm_id) {
+function updateControlPoint(marker, latlng, osm_data) {
   // create or update control point
   let o = marker.feature.properties;
   let cp = settings.remap.controlPoints;
+  let id = o.ref_id;
 
-  cp[o.ref_id] = cp[o.ref_id] || {};
-  cp[o.ref_id].coordinates =  [latlng.lat, latlng.lng];
-  cp[o.ref_id].title =  cp[o.ref_id].title || o.title;
+  cp[id] = cp[id] || {};
+  let p = cp[id];
 
-  if (osm_id) {
-    cp[o.ref_id].osm_id =  osm_id;
+  p.coordinates =  [latlng.lat, latlng.lng];
+  p.title =  p.title || o.title;
+
+  if (osm_data) {
+    p.osm = p.osm || {};
+    p.osm.osm_id   =  osm_data.osm_id;
+    p.osm.osm_type =  osm_data.osm_type;
+    p.osm.name = osm_data.name;
+    delete p.osm_id;
   }
 
   saveSettings();
@@ -795,8 +825,18 @@ async function saveTextToFile(text, filename) {
 function saveLocalData() {
   let str = localStorage.getItem(localDataName);
   let data = JSON.parse(str);
-  //let cp = data[mapId].remap.controlPoints;
-  //for (name of Object.keys(cp))) cp[name] = cp[name].map(e=>parseFloat(e));
+
+  // update obsolete control points version
+  for (const [ref_id,cp] of Object.entries(data[mapId].remap.controlPoints)) {
+    //cp[name] = cp[name].map(e=>parseFloat(e));
+    if (cp.osm_id) {
+      cp.osm = {osm_id: cp.osm_id, osm_type: cp.osm_type, name: cp.osm_name};
+      delete cp.osm_id;
+      delete cp.osm_name;
+      delete cp.osm_type;
+    }
+  }
+
   let filename = localDataName + '.json';
   saveTextToFile(JSON.stringify(data, null, 2), filename);
 }
@@ -867,7 +907,7 @@ function searchLocation(text, marker) {
 
       setTimeout(function() {
         if (confirm(text)) {
-          updateControlPoint(marker, latlng, data[0].osm_id);
+          updateControlPoint(marker, latlng, data[0]);
           map.flyTo(latlng);
           saveSettings();
           updateMarkers();

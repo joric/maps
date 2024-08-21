@@ -31,7 +31,6 @@
       "controlPoints": {
         "072FDB86": {
           "title": "London Eye",
-          "osm_id": 204068874,
           "coordinates": [
             51.5033416,
             -0.11967649999999999
@@ -39,6 +38,11 @@
           "warp": {
             "smoothing": 0.0428,
             "power": 5
+          },
+          "osm": {
+            "osm_id": 204068874,
+            "osm_type": "way",
+            "name": "London Eye"
           }
         },
         "072FDB89": {
@@ -47,7 +51,11 @@
             -0.122074
           ],
           "title": "Westminster Bridge",
-          "osm_id": 920237507
+          "osm": {
+            "osm_id": 920237508,
+            "osm_type": "way",
+            "name": "Westminster Bridge"
+          }
         },
         "0728B71A": {
           "coordinates": [
@@ -55,7 +63,11 @@
             -0.1185929
           ],
           "title": "London Aquarium",
-          "osm_id": 266843474
+          "osm": {
+            "osm_id": 266843474,
+            "osm_type": "node",
+            "name": "London Aquarium"
+          }
         },
         "072FDB84": {
           "coordinates": [
@@ -63,7 +75,9 @@
             -0.11659547680022972
           ],
           "title": "Waterloo Bridge",
-          "osm_id": 208169532
+          "osm": {
+            "osm_id": 208169532
+          }
         },
         "072FDB82": {
           "coordinates": [
@@ -71,7 +85,9 @@
             -0.10440562555424326
           ],
           "title": "Blackfriars Bridge",
-          "osm_id": 123464163
+          "osm": {
+            "osm_id": 123464163
+          }
         },
         "072FDB7E": {
           "coordinates": [
@@ -79,7 +95,9 @@
             -0.0940433
           ],
           "title": "Southwark Bridge",
-          "osm_id": 378492763
+          "osm": {
+            "osm_id": 378492763
+          }
         },
         "072EE3CB": {
           "coordinates": [
@@ -87,7 +105,9 @@
             -0.09100878935130598
           ],
           "title": "Winchester Palace",
-          "osm_id": 292309084
+          "osm": {
+            "osm_id": 292309084
+          }
         },
         "0728B71C": {
           "coordinates": [
@@ -95,7 +115,11 @@
             -0.11869021253163324
           ],
           "title": "St Thomas Hospital",
-          "osm_id": 122227536
+          "osm": {
+            "osm_id": 122227536,
+            "osm_type": "way",
+            "name": "St Thomas' Hospital"
+          }
         },
         "072EE3BC": {
           "coordinates": [
@@ -103,7 +127,9 @@
             -0.0811196916752953
           ],
           "title": "HMS Belfast",
-          "osm_id": 5006061
+          "osm": {
+            "osm_id": 5006061
+          }
         },
         "072FDC0C": {
           "coordinates": [
@@ -215,14 +241,22 @@
             51.501006950000004,
             -0.17740582939224336
           ],
-          "title": "Royal Albert Hall"
+          "title": "Royal Albert Hall",
+          "osm": {
+            "osm_id": 372860405,
+            "name": "Royal Albert Hall"
+          }
         },
         "0731301E": {
           "coordinates": [
             51.496510900000004,
             -0.17600190725447445
           ],
-          "title": "Natural History Museum"
+          "title": "Natural History Museum",
+          "osm": {
+            "osm_id": 24436446,
+            "name": "Natural History Museum"
+          }
         },
         "07313000": {
           "coordinates": [
@@ -230,7 +264,11 @@
             -0.1377553423767412
           ],
           "title": "St James's Palace",
-          "osm_id": 545040
+          "osm": {
+            "osm_id": 545040,
+            "osm_type": "relation",
+            "name": "Saint James's Palace"
+          }
         },
         "0706862C": {
           "coordinates": [
@@ -251,14 +289,24 @@
             51.51413225,
             -0.08892476721255456
           ],
-          "title": "Bank Of England"
+          "title": "Bank Of England",
+          "osm": {
+            "osm_id": 553472,
+            "osm_type": "relation",
+            "name": "Bank of England"
+          }
         },
         "0728C301": {
           "coordinates": [
             51.51248495,
             -0.09063813651893084
           ],
-          "title": "London Mithraeum"
+          "title": "London Mithraeum",
+          "osm": {
+            "osm_id": 512846335,
+            "osm_type": "way",
+            "name": "London Mithraeum"
+          }
         },
         "072FDB5A": {
           "coordinates": [
@@ -293,7 +341,11 @@
             51.496883800000006,
             -0.17163721656927572
           ],
-          "title": "Victoria and Albert Museum"
+          "title": "Victoria and Albert Museum",
+          "osm": {
+            "osm_id": 29795,
+            "name": "Victoria and Albert Museum"
+          }
         },
         "07313006": {
           "coordinates": [
@@ -328,7 +380,12 @@
             51.499399,
             -0.1273910483333311
           ],
-          "title": "Westminster Abbey"
+          "title": "Westminster Abbey",
+          "osm": {
+            "osm_id": 364313092,
+            "osm_type": "way",
+            "name": "Westminster Abbey"
+          }
         },
         "07313002": {
           "coordinates": [
@@ -336,7 +393,11 @@
             -0.13316503576441757
           ],
           "title": "St James's Park",
-          "osm_id": 374960368
+          "osm": {
+            "osm_id": 374960368,
+            "osm_type": "way",
+            "name": "St. James's Park"
+          }
         },
         "07284914": {
           "coordinates": [
@@ -371,28 +432,47 @@
             51.506734449999996,
             -0.1286181258860433
           ],
-          "title": "Admiralty Arch"
+          "title": "Admiralty Arch",
+          "osm": {
+            "osm_id": 17074208,
+            "osm_type": "relation",
+            "name": "Admiralty Arch"
+          }
         },
         "07312FE5": {
           "coordinates": [
             51.4993886,
             -0.12448097420878798
           ],
-          "title": "Palace of Westminster"
+          "title": "Palace of Westminster",
+          "osm": {
+            "osm_id": 1567699,
+            "osm_type": "relation",
+            "name": "Palace of Westminster"
+          }
         },
         "07313037": {
           "coordinates": [
             51.5007395,
             -0.1296479
           ],
-          "title": "Westminster Gate"
+          "title": "Westminster Gate",
+          "osm": {
+            "osm_id": 5273526518,
+            "osm_type": "node",
+            "name": "Storey's Gate"
+          }
         },
         "0731301C": {
           "coordinates": [
             51.49739825,
             -0.174672605918894
           ],
-          "title": "Science Museum"
+          "title": "Science Museum",
+          "osm": {
+            "osm_id": 27765411,
+            "name": "Science Museum"
+          }
         },
         "070A709D": {
           "coordinates": [
@@ -407,14 +487,21 @@
             -0.13246001579931777
           ],
           "title": "St. Anne's Churchyard",
-          "osm_id": 40879988
+          "osm": {
+            "osm_id": 40879988
+          }
         },
         "07313022": {
           "coordinates": [
             51.5074889,
             -0.1622074056037135
           ],
-          "title": "Hyde Park"
+          "title": "Hyde Park",
+          "osm": {
+            "osm_id": 372975520,
+            "osm_type": "way",
+            "name": "Hyde Park"
+          }
         },
         "072EE3C5": {
           "coordinates": [
@@ -436,7 +523,9 @@
             -0.1281211
           ],
           "title": "Tottenham Court Road Station",
-          "osm_id": 469760242
+          "osm": {
+            "osm_id": 469760242
+          }
         },
         "0728B6FA": {
           "coordinates": [
@@ -464,14 +553,24 @@
             51.511096,
             -0.0836023
           ],
-          "title": "Sky Garden"
+          "title": "Sky Garden",
+          "osm": {
+            "osm_id": 3272712570,
+            "osm_type": "node",
+            "name": "Sky Garden"
+          }
         },
         "07313035": {
           "coordinates": [
-            51.50105463834875,
-            -0.12674183992779312
+            51.5009846,
+            -0.1273873
           ],
-          "title": "Parliament Square Garden"
+          "title": "Parliament Square Garden",
+          "osm": {
+            "osm_id": 419357196,
+            "osm_type": "way",
+            "name": "Parliament Square"
+          }
         },
         "073073F1": {
           "coordinates": [
@@ -479,7 +578,9 @@
             -0.12426784174184091
           ],
           "title": "New Scotland Yard",
-          "osm_id": 31117060
+          "osm": {
+            "osm_id": 31117060
+          }
         },
         "072FDC6B": {
           "coordinates": [
@@ -493,21 +594,36 @@
             51.5118924,
             -0.0952228
           ],
-          "title": "Mansion House"
+          "title": "Mansion House",
+          "osm": {
+            "osm_id": 18395696,
+            "osm_type": "node",
+            "name": "Mansion House"
+          }
         },
         "072FDB68": {
           "coordinates": [
             51.51588635,
             -0.09193056236342884
           ],
-          "title": "Guildhall"
+          "title": "Guildhall",
+          "osm": {
+            "osm_id": 539317283,
+            "osm_type": "way",
+            "name": "Guildhall"
+          }
         },
         "071B54CB": {
           "coordinates": [
-            51.51775995,
-            -0.08119839322126166
+            51.518043,
+            -0.0817735
           ],
-          "title": "Liverpool Street Station"
+          "title": "Liverpool Street Station",
+          "osm": {
+            "osm_id": 3637436408,
+            "osm_type": "node",
+            "name": "London Liverpool Street"
+          }
         },
         "072FDC45": {
           "coordinates": [
@@ -542,7 +658,12 @@
             51.5106328,
             -0.0861271
           ],
-          "title": "Monument"
+          "title": "Monument",
+          "osm": {
+            "osm_id": 3076574237,
+            "osm_type": "node",
+            "name": "Monument"
+          }
         },
         "07068606": {
           "coordinates": [
@@ -550,14 +671,21 @@
             0.03235996813950516
           ],
           "title": "Biggin Hill Airport",
-          "osm_id": 196861878
+          "osm": {
+            "osm_id": 196861878
+          }
         },
         "0728B719": {
           "coordinates": [
             51.485663,
             -0.12482494999999424
           ],
-          "title": "Vauxhall Underground Station"
+          "title": "Vauxhall Underground Station",
+          "osm": {
+            "osm_id": 286733049,
+            "osm_type": "way",
+            "name": "Vauxhall Station"
+          }
         },
         "072FDC27": {
           "coordinates": [
@@ -648,14 +776,24 @@
             51.5002908,
             -0.0436321
           ],
-          "title": "Rotherhithe"
+          "title": "Rotherhithe",
+          "osm": {
+            "osm_id": 27365037,
+            "osm_type": "node",
+            "name": "Rotherhithe"
+          }
         },
         "072FDB7A": {
           "coordinates": [
-            51.5094616,
-            -0.086998
+            51.51084640368313,
+            -0.08663535118103029
           ],
-          "title": "Monument Underground Station"
+          "title": "Monument Underground Station",
+          "osm": {
+            "osm_id": 469774019,
+            "osm_type": "node",
+            "name": "Monument Station"
+          }
         },
         "072EE6B8": {
           "coordinates": [
@@ -684,7 +822,9 @@
             -0.26867928809954766
           ],
           "title": "Pen Ponds",
-          "osm_id": 180996607
+          "osm": {
+            "osm_id": 180996607
+          }
         },
         "0731302C": {
           "coordinates": [
@@ -702,11 +842,15 @@
         },
         "0731300A": {
           "coordinates": [
-            51.5064926,
-            -0.1429748
+            51.50660755,
+            -0.14274153342748974
           ],
           "title": "Green Park Underground Station",
-          "osm_id": 1706915441
+          "osm": {
+            "osm_id": 180159662,
+            "osm_type": "way",
+            "name": "Green Park Station"
+          }
         },
         "07312FED": {
           "coordinates": [
@@ -780,11 +924,15 @@
         },
         "0728B721": {
           "coordinates": [
-            51.5031453,
-            -0.11184335514018684
+            51.5028379,
+            -0.112801
           ],
           "title": "Waterloo Station",
-          "osm_id": 428337501
+          "osm": {
+            "osm_id": 3638795617,
+            "osm_type": "node",
+            "name": "London Waterloo"
+          }
         },
         "07313016": {
           "coordinates": [
@@ -792,7 +940,11 @@
             -0.1601499
           ],
           "title": "Knightsbridge Underground Station",
-          "osm_id": 469760953
+          "osm": {
+            "osm_id": 469760953,
+            "osm_type": "node",
+            "name": "Knightsbridge Station"
+          }
         },
         "07313008": {
           "coordinates": [
@@ -800,7 +952,11 @@
             -0.1437172112775293
           ],
           "title": "Green Park",
-          "osm_id": 863554956
+          "osm": {
+            "osm_id": 863554956,
+            "osm_type": "way",
+            "name": "The Green Park"
+          }
         },
         "London Eye": [
           51.5033416,
@@ -1236,7 +1392,9 @@
             -0.1387747
           ],
           "title": "Carnaby Street",
-          "osm_id": 4253858
+          "osm": {
+            "osm_id": 4253858
+          }
         },
         "07312FF9": {
           "coordinates": [
@@ -1251,7 +1409,9 @@
             -0.1368116
           ],
           "title": "Regent Street",
-          "osm_id": 1018951433
+          "osm": {
+            "osm_id": 1018951433
+          }
         },
         "07313028": {
           "coordinates": [
@@ -1259,7 +1419,11 @@
             -0.15138937325979526
           ],
           "title": "Grosvenor Square",
-          "osm_id": 4081049
+          "osm": {
+            "osm_id": 4081049,
+            "osm_type": "way",
+            "name": "Grosvenor Square"
+          }
         },
         "0731302A": {
           "coordinates": [
@@ -1267,7 +1431,11 @@
             -0.1483142
           ],
           "title": "Mount Street",
-          "osm_id": 198190852
+          "osm": {
+            "osm_id": 198190852,
+            "osm_type": "way",
+            "name": "Mount Street"
+          }
         },
         "072D4388": {
           "coordinates": [
@@ -1275,7 +1443,9 @@
             -0.15893653525883872
           ],
           "title": "Marble Arch",
-          "osm_id": 41772567
+          "osm": {
+            "osm_id": 41772567
+          }
         },
         "07313012": {
           "coordinates": [
@@ -1283,7 +1453,9 @@
             -0.15941441059112552
           ],
           "title": "Marble Arch",
-          "osm_id": 41772567
+          "osm": {
+            "osm_id": 41772567
+          }
         },
         "0730DD3A": {
           "coordinates": [
@@ -1291,7 +1463,9 @@
             -0.14383148508415589
           ],
           "title": "Broadcasting House",
-          "osm_id": 10811256
+          "osm": {
+            "osm_id": 10811256
+          }
         },
         "072FDB4C": {
           "coordinates": [
@@ -1306,7 +1480,9 @@
             -0.14720421988721888
           ],
           "title": "NuSkin",
-          "osm_id": 664315341
+          "osm": {
+            "osm_id": 664315341
+          }
         },
         "07312FDD": {
           "coordinates": [
@@ -1314,7 +1490,11 @@
             -0.1249302
           ],
           "title": "Westminster Underground Station",
-          "osm_id": 25534427
+          "osm": {
+            "osm_id": 25534427,
+            "osm_type": "node",
+            "name": "Westminster"
+          }
         },
         "07068600": {
           "coordinates": [
@@ -1322,7 +1502,9 @@
             0.029007046200001725
           ],
           "title": "Biggin Hill",
-          "osm_id": 183489784
+          "osm": {
+            "osm_id": 183489784
+          }
         },
         "072EE3AE": {
           "coordinates": [
@@ -1330,7 +1512,9 @@
             -0.1003315
           ],
           "title": "Elephant And Castle",
-          "osm_id": 26546003
+          "osm": {
+            "osm_id": 26546003
+          }
         },
         "072FDC18": {
           "coordinates": [
@@ -1338,7 +1522,9 @@
             -0.25471169315339026
           ],
           "title": "The Tabard",
-          "osm_id": 209445869
+          "osm": {
+            "osm_id": 209445869
+          }
         },
         "072FDC7A": {
           "coordinates": [
@@ -1346,7 +1532,9 @@
             -0.2874512
           ],
           "title": "A205",
-          "osm_id": 4004743
+          "osm": {
+            "osm_id": 4004743
+          }
         },
         "072EE778": {
           "coordinates": [
@@ -1354,7 +1542,9 @@
             -0.1086038398854497
           ],
           "title": "Imperial War Museum",
-          "osm_id": 8614496
+          "osm": {
+            "osm_id": 8614496
+          }
         },
         "072EE3CD": {
           "coordinates": [
@@ -1362,11 +1552,269 @@
             -0.0851473
           ],
           "title": "London Bridge Station",
-          "osm_id": 4290857012
+          "osm": {
+            "osm_id": 4290857012
+          }
+        },
+        "072FDC55": {
+          "coordinates": [
+            51.51750265,
+            -0.05988506461942615
+          ],
+          "title": "Royal London Hospital",
+          "osm": {
+            "osm_id": 640495338
+          }
+        },
+        "0728B703": {
+          "coordinates": [
+            51.51753465,
+            -0.10007032620106973
+          ],
+          "title": "St Bartholomew's Hospital",
+          "osm": {
+            "osm_id": 170732745
+          }
+        },
+        "072ED71B": {
+          "coordinates": [
+            51.5375838,
+            -0.07798857166372963
+          ],
+          "title": "Kingsland Basin",
+          "osm": {
+            "osm_id": 533890016
+          }
+        },
+        "072ED71C": {
+          "coordinates": [
+            51.5300267,
+            -0.074467
+          ],
+          "title": "Hoxton Station",
+          "osm": {
+            "osm_id": 469767610
+          }
+        },
+        "072FDC3C": {
+          "coordinates": [
+            51.5054428,
+            -0.0206693
+          ],
+          "title": "Canary Wharf Station",
+          "osm": {
+            "osm_id": 469760049
+          }
+        },
+        "0705BFA9": {
+          "coordinates": [
+            51.502936649999995,
+            0.0032029278126681844
+          ],
+          "title": "The Dome",
+          "osm": {
+            "osm_id": 1895281
+          }
+        },
+        "072FDBB3": {
+          "coordinates": [
+            51.4656437,
+            -0.0139562
+          ],
+          "title": "Lewisham",
+          "osm": {
+            "osm_id": 6516411104
+          }
+        },
+        "0706861C": {
+          "coordinates": [
+            51.4193664,
+            -0.0711328
+          ],
+          "title": "Crystal Palace",
+          "osm": {
+            "osm_id": 21262497
+          }
+        },
+        "072FDC66": {
+          "coordinates": [
+            51.5112788,
+            -0.036394359290238584
+          ],
+          "title": "Limehouse Basin",
+          "osm": {
+            "osm_id": 193352909
+          }
+        },
+        "072FDB74": {
+          "coordinates": [
+            51.511228,
+            -0.077017
+          ],
+          "title": "Fenchurch Street Station",
+          "osm": {
+            "osm_id": 694473687
+          }
+        },
+        "0706861A": {
+          "coordinates": [
+            51.424149799999995,
+            -0.07491359063067013
+          ],
+          "title": "Crystal Palace Radio Tower",
+          "osm": {
+            "osm_id": 4960820,
+            "name": "Crystal Palace Transmitter"
+          }
+        },
+        "0706861D": {
+          "coordinates": [
+            51.424828149999996,
+            -0.07294250320609336
+          ],
+          "title": "Crystal Palace Caravan Park",
+          "osm": {
+            "osm_id": 31820169,
+            "name": "Crystal Palace Caravan Club Site"
+          }
+        },
+        "072A9145": {
+          "coordinates": [
+            51.4979299,
+            -0.0498405
+          ],
+          "title": "Thameshaven",
+          "osm": {
+            "osm_id": 5700149213,
+            "osm_type": "node",
+            "name": "Canada Water"
+          }
+        },
+        "071E6A04": {
+          "coordinates": [
+            51.4825798,
+            -0.13222931547756855
+          ],
+          "title": "US Embassy",
+          "osm": {
+            "osm_id": 360989833,
+            "osm_type": "way",
+            "name": "Embassy of the United States"
+          }
+        },
+        "0731300E": {
+          "coordinates": [
+            51.51168992787172,
+            -0.15543937683105472
+          ],
+          "title": "Tournament Grounds"
+        },
+        "07284907": {
+          "coordinates": [
+            51.5324874,
+            -0.1060356
+          ],
+          "title": "Angel Underground Station",
+          "osm": {
+            "osm_id": 1670707904,
+            "osm_type": "node",
+            "name": "Angel"
+          }
+        },
+        "072EE3C9": {
+          "coordinates": [
+            51.506898899999996,
+            -0.09032156767318134
+          ],
+          "title": "The Golden Hinde",
+          "osm": {
+            "osm_id": 31248849,
+            "osm_type": "way",
+            "name": "Golden Hinde"
+          }
+        },
+        "072EE3B0": {
+          "coordinates": [
+            51.503403199999994,
+            -0.08946614662781002
+          ],
+          "title": "King's College London Guy's Campus",
+          "osm": {
+            "osm_id": 14875126,
+            "osm_type": "relation",
+            "name": "King's College London"
+          }
+        },
+        "072FDC08": {
+          "coordinates": [
+            51.503209850000005,
+            -0.0867273478494055
+          ],
+          "title": "GUM Clinic",
+          "osm": {
+            "osm_id": 707322577,
+            "osm_type": "way",
+            "name": "Guy's Hospital"
+          }
+        },
+        "072EE3B2": {
+          "coordinates": [
+            51.5043421,
+            -0.0864458928542395
+          ],
+          "title": "The Shard",
+          "osm": {
+            "osm_id": 31110737,
+            "osm_type": "way",
+            "name": "The Shard"
+          }
+        },
+        "071E6A02": {
+          "coordinates": [
+            51.467114699999996,
+            -0.16929370000000543
+          ],
+          "title": "London Brigade of Fire HQ",
+          "osm": {
+            "osm_id": 71291821,
+            "osm_type": "way",
+            "name": "Battersea Fire Station"
+          }
+        },
+        "071E6A8A": {
+          "coordinates": [
+            51.475940800000004,
+            -0.1418490125586097
+          ],
+          "title": "Wandsworth Substation",
+          "osm": {
+            "osm_id": 754319888,
+            "osm_type": "way",
+            "name": "Stewarts Road Substation"
+          }
+        },
+        "072FDB64": {
+          "coordinates": [
+            51.5201501,
+            -0.0986832
+          ],
+          "title": "The Barbican",
+          "osm": {
+            "osm_id": 3076573910,
+            "osm_type": "node",
+            "name": "Barbican"
+          }
+        },
+        "072FDB78": {
+          "coordinates": [
+            51.508874772025806,
+            -0.08680701255798341
+          ],
+          "title": "Ferryman Dockhouse"
         }
       },
       "smoothing": 0,
-      "power": 5.34958,
+      "power": 10,
       "activeLayers": {
         "Markers": true
       },
@@ -1374,8 +1822,8 @@
       "warped": true
     },
     "center": [
-      51.46502344177947,
-      -0.08342742919921876
+      51.45775068998018,
+      -0.0926971435546875
     ],
     "zoom": 12
   }
