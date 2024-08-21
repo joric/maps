@@ -152,8 +152,21 @@ function removeHelpers() {
 let localData = JSON.parse(localStorage.getItem(localDataName)) || defaultLocalData;
 settings = localData[mapId];
 
+let history = [];
+let history_steps = 100;
+
+function rotateHistory(back) {
+  if (history.length == 0) return;
+  if (back) {
+    history.unshift(history.pop());
+  } else {
+    history.push(history.shift());
+  }
+  settings.remap.controlPoints = history[history.length-1];
+  updateMarkers();
+}
+
 function saveSettings() {
-  //console.log(localData);
   localStorage.setItem(localDataName, JSON.stringify(localData));
 }
 
@@ -472,6 +485,8 @@ function loadMarkers() {
       pointToLayer: function (feature, latlng) {
         let marker = L.marker(latlng, {draggable: true, opacity: 1});
         marker.on('drag', markerDragged)
+        marker.on('dragend', markerDragEnd)
+        marker.on('dragstart', markerDragStart)
         //marker.on('contextmenu', markerContextMenu)
         return marker;
       }
@@ -652,9 +667,21 @@ function updateControlPoint(marker, latlng, osm_data) {
     p.osm.name = osm_data.name;
     delete p.osm_id;
   }
-
-  saveSettings();
   updateMarkers();
+}
+
+function updateHistory() {
+  if (history.length > history_steps) history.shift();
+  history.push(structuredClone(settings.remap.controlPoints));
+}
+
+function markerDragStart() {
+  updateHistory();
+}
+
+function markerDragEnd(e) {
+  updateHistory();
+  saveSettings();
 }
 
 function markerDragged(e) {
@@ -919,7 +946,6 @@ function searchLocation(text, marker) {
           updateControlPoint(marker, latlng, data[0]);
           map.flyTo(latlng);
           saveSettings();
-          updateMarkers();
         } else {
           map.flyTo(marker.getLatLng());
         }
@@ -985,11 +1011,18 @@ window.onload = e => {
     if (e.target.id=='smoothing') settings.remap.smoothing = parseFloat(e.target.value);
     if (e.target.id=='power') settings.remap.power = parseFloat(e.target.value);
     updateSliderTitle(e.target);
-    saveSettings();
   }
 
   sm.oninput = sm.onchange = sliderEvent;
   pw.oninput = pw.onchange = sliderEvent;
+
+  map.on('keydown', evt=>{
+    let e = evt.originalEvent;
+    if (e.ctrlKey) {
+      if (e.code == 'KeyZ') rotateHistory(true);
+      if (e.code == 'KeyY') rotateHistory(false);
+    }
+  });
 }
 
 </script>
