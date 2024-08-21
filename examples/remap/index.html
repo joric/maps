@@ -378,12 +378,12 @@ function warpToControlPoints(point, controlPointsData, smoothing = 1, power = 2)
 
   // Calculate the warped position
   for (const { oldX, oldY, newX, newY } of Object.values(controlPointsData)) {
-    const dx = newX - oldX;
-    const dy = newY - oldY;
-    
-    const distance = Math.sqrt((point.x - oldX) ** 2 + (point.y - oldY) ** 2);
-    const adjustedDistance = Math.max(distance, smoothing);
-    const weight = 1 / (adjustedDistance ** power);
+    let dx = newX - oldX;
+    let dy = newY - oldY;
+
+    let distance = Math.sqrt((point.x - oldX) ** 2 + (point.y - oldY) ** 2);
+    let adjustedDistance = Math.max(distance, smoothing);
+    let weight = 1 / (adjustedDistance ** power);
 
     weightedXSum += (point.x + dx) * weight;
     weightedYSum += (point.y + dy) * weight;
@@ -863,6 +863,16 @@ function exportMarkers() {
     f.geometry.coordinates[0] = latlng.lat;
     f.geometry.coordinates[1] = latlng.lng;
     f.geometry.coordinates[2] = loc[2] / 128 * 1.828; // 128 units = 1.828m
+
+    let cp, p;
+    if (cp = settings.remap.controlPoints[f.properties.ref_id]) {
+      if (p = cp.osm) {
+        f.properties.osm_id = p.osm_id;
+        f.properties.osm_type = p.osm_type;
+        f.properties.osm_name = p.name;
+      }
+    }
+
     data.features.push(f)
   }
 

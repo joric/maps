@@ -459,10 +459,15 @@
         },
         "07284914": {
           "coordinates": [
-            51.52460561750232,
-            -0.11398315429687501
+            51.5247243,
+            -0.1139982
           ],
-          "title": "The Postal Museum"
+          "title": "The Postal Museum",
+          "osm": {
+            "osm_id": 4973585223,
+            "osm_type": "node",
+            "name": "The Postal Museum"
+          }
         },
         "0728B724": {
           "coordinates": [
@@ -1036,10 +1041,15 @@
         },
         "071E6A21": {
           "coordinates": [
-            51.45844592958755,
-            -0.15260696411132815
+            51.4583791,
+            -0.14895754056160898
           ],
-          "title": "Happy Endings Caravan Park"
+          "title": "Happy Endings Caravan Park",
+          "osm": {
+            "osm_id": 1290065,
+            "osm_type": "relation",
+            "name": "Clapham Common"
+          }
         },
         "072FDB26": {
           "coordinates": [
@@ -1684,7 +1694,9 @@
           ],
           "title": "A205",
           "osm": {
-            "osm_id": 4004743
+            "osm_id": 4004743,
+            "osm_type": "way",
+            "name": "Kew Bridge"
           }
         },
         "072EE778": {
@@ -2061,10 +2073,22 @@
             "osm_type": "way",
             "name": "Coombe Hill Golf Club"
           }
+        },
+        "070685FC": {
+          "coordinates": [
+            51.49316475,
+            -0.15733043252385082
+          ],
+          "title": "Holy Trinity Church",
+          "osm": {
+            "osm_id": 223451081,
+            "osm_type": "way",
+            "name": "Holy Trinity Church"
+          }
         }
       },
       "smoothing": 0,
-      "power": 10,
+      "power": 1.86441,
       "activeLayers": {
         "Markers": true
       },
@@ -2072,9 +2096,9 @@
       "warped": true
     },
     "center": [
-      51.49116368809977,
-      -0.22607803344726562
+      51.44480660379141,
+      -0.22384643554687503
     ],
-    "zoom": 13
+    "zoom": 11
   }
 }
