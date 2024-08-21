@@ -197,16 +197,25 @@ let localData = JSON.parse(localStorage.getItem(localDataName)) || defaultLocalD
 settings = localData[mapId];
 
 let history = [];
-let history_steps = 100;
+let history_size = 100;
+let history_pos = -1;
 
-function rotateHistory(back) {
-  if (history.length == 0) return;
-  if (back) {
-    history.unshift(history.pop());
-  } else {
-    history.push(history.shift());
-  }
-  settings.remap.controlPoints = history[history.length-1];
+function updateHistory() {
+  history_pos = (history_pos + 1) % history_size;
+  history[history_pos] = structuredClone(settings.remap.controlPoints);
+}
+
+function undo() {
+  if (history_pos <= 0) return;
+  history_pos -= 1;
+  settings.remap.controlPoints = history[history_pos];
+  updateMarkers();
+}
+
+function redo() {
+  if (history_pos == history.length-1 || history_pos == history_size-1) return;
+  history_pos += 1;
+  settings.remap.controlPoints = history[history_pos];
   updateMarkers();
 }
 
@@ -645,6 +654,7 @@ function loadMarkers() {
     markersGroup.addLayer(markers);
 
     updateMarkers();
+    updateHistory();
 
     map.addControl( new L.Control.Search({
       layer: markers,
@@ -732,13 +742,7 @@ function updateControlPoint(marker, latlng, osm_data) {
   updateMarkers();
 }
 
-function updateHistory() {
-  if (history.length > history_steps) history.shift();
-  history.push(structuredClone(settings.remap.controlPoints));
-}
-
 function markerDragStart() {
-  updateHistory();
 }
 
 function markerDragEnd(e) {
@@ -1082,12 +1086,10 @@ window.onload = e => {
   map.on('keydown', evt=>{
     let e = evt.originalEvent;
     if (e.ctrlKey) {
-      if (e.code == 'KeyZ') rotateHistory(true);
-      if (e.code == 'KeyY') rotateHistory(false);
+      if (e.code == 'KeyZ') undo();
+      if (e.code == 'KeyY') redo();
     }
   });
-
-  updateHistory();
 }
 
 </script>
