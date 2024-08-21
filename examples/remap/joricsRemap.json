@@ -31,6 +31,9 @@
       "controlPoints": {
         "072FDB86": {
           "title": "London Eye",
+          "osm": {
+            "osm_id": 204068874
+          },
           "coordinates": [
             51.5033416,
             -0.11967649999999999
@@ -38,21 +41,16 @@
           "warp": {
             "smoothing": 0.0428,
             "power": 5
-          },
-          "osm": {
-            "osm_id": 204068874,
-            "osm_type": "way",
-            "name": "London Eye"
           }
         },
         "072FDB89": {
           "coordinates": [
-            51.5008769,
-            -0.1227638
+            51.5008487,
+            -0.12177714511446583
           ],
           "title": "Westminster Bridge",
           "osm": {
-            "osm_id": 920237507,
+            "osm_id": 216999359,
             "osm_type": "way",
             "name": "Westminster Bridge"
           }
@@ -2089,18 +2087,18 @@
           }
         }
       },
-      "smoothing": 0,
-      "power": 1.86441,
+      "smoothing": 0.0428,
+      "power": 5,
       "activeLayers": {
         "Markers": true
       },
-      "provider": "OpenStreetMap_Mapnik",
+      "provider": "CartoDB_Voyager",
       "warped": true
     },
     "center": [
-      51.46095939981568,
-      -0.09990692138671875
+      51.502959310794644,
+      -0.11522769927978517
     ],
-    "zoom": 12
+    "zoom": 15
   }
 }
