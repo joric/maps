@@ -81,7 +81,7 @@ let defaultLocalData = {
           title: 'London Eye',
           osm: { osm_id: 204068874 },
           coordinates: [51.5033416, -0.11967649999999999],
-          warp: { smoothing: 0.0428, power: 5.0 },
+          warp: { inner: 100, outer: 200 },
         },
       },
       smoothing: 0.0428,
@@ -140,14 +140,9 @@ let currentMarker;
 function addHelpers(marker) {
   removeHelpers();
   let cp = settings.remap.controlPoints[marker.feature.properties.ref_id];
-  if (cp && cp.warp) {
-
-    let ro = cp.warp.smoothing * smoothingScale;
-    let ri  = Math.min(ro, cp.warp.power * powerScale);
-
-    outerCircle = L.circle(marker.getLatLng(), {radius: ro, color: 'green', interactive: true}).addTo(map).on('mousedown', startResize);
-    innerCircle = L.circle(marker.getLatLng(), {radius: ri, color: 'blue', interactive: true}).addTo(map).on('mousedown', startResize);
-
+  if (cp && cp.warp && cp.warp.inner && cp.warp.outer) {
+    outerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.outer, color: 'green', interactive: true}).addTo(map).on('mousedown', startResize);
+    innerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.inner, color: 'blue', interactive: true}).addTo(map).on('mousedown', startResize);
     currentMarker = marker;
   }
 }
@@ -192,12 +187,12 @@ function resize(e) {
     if (newRadius > outerCircle.getRadius()) {
       outerCircle.setRadius(newRadius);
     }
-    settings.remap.controlPoints[currentMarker.feature.properties.ref_id].warp.power = newRadius / powerScale;
+    settings.remap.controlPoints[currentMarker.feature.properties.ref_id].warp.inner = newRadius;
   } else if (circle==outerCircle) {
     if (newRadius < innerCircle.getRadius()) {
       innerCircle.setRadius(newRadius);
     }
-    settings.remap.controlPoints[currentMarker.feature.properties.ref_id].warp.smoothing = newRadius / smoothingScale;
+    settings.remap.controlPoints[currentMarker.feature.properties.ref_id].warp.outer = newRadius;
   }
 }
 
@@ -805,7 +800,7 @@ function unwarpMarker(marker, ref_id) {
 }
 
 function warpMarker(marker, ref_id) {
-  settings.remap.controlPoints[ref_id].warp = { smoothing: 0.0428, power: 5.0 };
+  settings.remap.controlPoints[ref_id].warp = { inner: 100, outer: 200 };
   updateMarkers();
   marker.closePopup();
   setTimeout(()=>{marker.openPopup()},0);
