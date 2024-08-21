@@ -241,6 +241,7 @@ const map = L.map('map', {
 map.on('click', e=>{
   if (!keepPopupsOpen) {
     map.closePopup();
+    removeHelpers();
   }
 })
 
@@ -642,7 +643,6 @@ function loadMarkers() {
         marker.bindPopup(bindPopup)
         marker.on('popupclose', function() {
           removeSelection();
-          removeHelpers();
         })
         marker.on('popupopen', function(e){
           helpersPopup = e.popup;
