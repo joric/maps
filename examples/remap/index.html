@@ -211,7 +211,6 @@ function undo() {
   history_pos -= 1;
   settings.remap.controlPoints = history[history_pos];
   updateMarkers();
-  saveSettings();
 }
 
 function redo() {
@@ -219,7 +218,6 @@ function redo() {
   history_pos += 1;
   settings.remap.controlPoints = history[history_pos];
   updateMarkers();
-  saveSettings();
 }
 
 function saveSettings() {
