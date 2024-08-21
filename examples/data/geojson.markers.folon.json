@@ -15,7 +15,7 @@
 				"title": "Greenwich Station",
 				"description": "Railroad",
 				"ref_id": "07035F81",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -32,7 +32,7 @@
 				"title": "Old Royal Naval College",
 				"description": "Custom 66",
 				"ref_id": "07035F84",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -49,7 +49,7 @@
 				"title": "Queen's House",
 				"description": "Goodneighbor",
 				"ref_id": "07035F85",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -66,7 +66,7 @@
 				"title": "Cutty Sark",
 				"description": "USS Constitution",
 				"ref_id": "07035F88",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -83,7 +83,7 @@
 				"title": "North Greenwich Station",
 				"description": "Metro Station",
 				"ref_id": "0705BF11",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -100,7 +100,7 @@
 				"title": "The Dome",
 				"description": "Sentinel",
 				"ref_id": "0705BFA9",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -117,7 +117,7 @@
 				"title": "Royal Observatory",
 				"description": "Observatory",
 				"ref_id": "07068381",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -134,7 +134,7 @@
 				"title": "Greenwich Pindar",
 				"description": "Vault",
 				"ref_id": "070683D3",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -151,7 +151,7 @@
 				"title": "Greenwich Petrol Station",
 				"description": "Filling Station",
 				"ref_id": "070683D4",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -168,7 +168,7 @@
 				"title": "Prilladog Food Factory",
 				"description": "Factory / Industrial Site",
 				"ref_id": "070683D7",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -185,7 +185,7 @@
 				"title": "Greenwich Flotilla",
 				"description": "Shipwreck",
 				"ref_id": "070683DC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -202,7 +202,7 @@
 				"title": "Greenwich Foot Tunnel South",
 				"description": "Pier",
 				"ref_id": "070683DD",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -219,7 +219,7 @@
 				"title": "Lewisham Monorail Station",
 				"description": "Custom 73",
 				"ref_id": "070683DF",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -236,7 +236,7 @@
 				"title": "Holy Trinity Church",
 				"description": "Church",
 				"ref_id": "070685FC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -253,7 +253,7 @@
 				"title": "Outskirts Bunker",
 				"description": "Bunker",
 				"ref_id": "070685FF",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -270,7 +270,7 @@
 				"title": "Biggin Hill",
 				"description": "Ruins - Town",
 				"ref_id": "07068600",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -287,7 +287,7 @@
 				"title": "Biggin Hill Airport",
 				"description": "Custom 70",
 				"ref_id": "07068606",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -304,7 +304,7 @@
 				"title": "Bromley",
 				"description": "Ruins - Urban",
 				"ref_id": "07068609",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -321,7 +321,7 @@
 				"title": "Bromley North Station",
 				"description": "Railroad",
 				"ref_id": "0706860A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -338,7 +338,7 @@
 				"title": "Bromley South Station",
 				"description": "Metro Station",
 				"ref_id": "0706860D",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -355,7 +355,7 @@
 				"title": "Bromley College",
 				"description": "School",
 				"ref_id": "0706860E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -372,7 +372,7 @@
 				"title": "Bromley Police Station",
 				"description": "Police Station",
 				"ref_id": "07068611",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -389,7 +389,7 @@
 				"title": "Traveller Camp",
 				"description": "Junkyard",
 				"ref_id": "07068612",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -406,7 +406,7 @@
 				"title": "West Croydon Station",
 				"description": "Metro Station",
 				"ref_id": "07068615",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -423,7 +423,7 @@
 				"title": "Apollo House",
 				"description": "Custom 77",
 				"ref_id": "07068616",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -440,7 +440,7 @@
 				"title": "Post Office",
 				"description": "Low-Rise Building",
 				"ref_id": "07068619",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -457,7 +457,7 @@
 				"title": "Crystal Palace Radio Tower",
 				"description": "Radio Tower",
 				"ref_id": "0706861A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -474,7 +474,7 @@
 				"title": "Crystal Palace Maze",
 				"description": "Forested",
 				"ref_id": "0706861B",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -491,7 +491,7 @@
 				"title": "Crystal Palace",
 				"description": "Goodneighbor",
 				"ref_id": "0706861C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -508,7 +508,7 @@
 				"title": "Crystal Palace Caravan Park",
 				"description": "Junkyard",
 				"ref_id": "0706861D",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -525,7 +525,7 @@
 				"title": "Bethlem Royal Hospital",
 				"description": "Hospital",
 				"ref_id": "07068623",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -542,7 +542,7 @@
 				"title": "Razorgrain Field",
 				"description": "Farm",
 				"ref_id": "07068627",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -559,7 +559,7 @@
 				"title": "Tennis Museum",
 				"description": "Settlement",
 				"ref_id": "0706862C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -576,7 +576,7 @@
 				"title": "Derelict Farm",
 				"description": "Farm",
 				"ref_id": "0706862F",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -593,7 +593,7 @@
 				"title": "Battersea Power Station",
 				"description": "Factory / Industrial Site",
 				"ref_id": "07068630",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -610,7 +610,7 @@
 				"title": "Battersea Cats and Dogs Home",
 				"description": "Office / Civic Building",
 				"ref_id": "07068633",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -627,7 +627,7 @@
 				"title": "Lewisham Gate 01",
 				"description": "Diamond City",
 				"ref_id": "070A709A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -644,7 +644,7 @@
 				"title": "British Museum",
 				"description": "Gov't Building / Monument",
 				"ref_id": "070A709D",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -661,7 +661,7 @@
 				"title": "Senate House",
 				"description": "Skyscraper",
 				"ref_id": "070A709E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -678,7 +678,7 @@
 				"title": "Cruciform Building",
 				"description": "Low-Rise Building",
 				"ref_id": "070A70A2",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -695,7 +695,7 @@
 				"title": "University College London",
 				"description": "School",
 				"ref_id": "070A70A3",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -712,7 +712,7 @@
 				"title": "LT Tower",
 				"description": "Radio Tower",
 				"ref_id": "070A70A4",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -729,7 +729,7 @@
 				"title": "University College London Hospital",
 				"description": "Hospital",
 				"ref_id": "070A70A5",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -746,7 +746,7 @@
 				"title": "Tottenham Court Road Station",
 				"description": "Metro Station",
 				"ref_id": "070A70AB",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -763,7 +763,7 @@
 				"title": "White Farm",
 				"description": "Farm",
 				"ref_id": "070A70AC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -780,7 +780,7 @@
 				"title": "St. Anne's Churchyard",
 				"description": "Church",
 				"ref_id": "070A70B0",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -797,7 +797,7 @@
 				"title": "Japan Town",
 				"description": "Town",
 				"ref_id": "070A70B1",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -814,7 +814,7 @@
 				"title": "Leicester Square",
 				"description": "Gov't Building / Monument",
 				"ref_id": "070A70B5",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -831,7 +831,7 @@
 				"title": "East Picadilly Circus",
 				"description": "Gov't Building / Monument",
 				"ref_id": "070A70BD",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -848,7 +848,7 @@
 				"title": "Croydon",
 				"description": "Town",
 				"ref_id": "070B829E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -865,7 +865,7 @@
 				"title": "London City Airport",
 				"description": "Airfield",
 				"ref_id": "070CE1B3",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -882,7 +882,7 @@
 				"title": "X-Cell Centre",
 				"description": "Ruins - Urban",
 				"ref_id": "070CE1B4",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -899,7 +899,7 @@
 				"title": "Camden Market",
 				"description": "Railroad - Faction",
 				"ref_id": "070DC8F8",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -916,7 +916,7 @@
 				"title": "Water & Power Syphon",
 				"description": "Castle",
 				"ref_id": "070DCBD4",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -933,7 +933,7 @@
 				"title": "Camden Town Underground Station",
 				"description": "Metro Station",
 				"ref_id": "070F4F2D",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -950,7 +950,7 @@
 				"title": "Rustic Homestead",
 				"description": "Encampment",
 				"ref_id": "070F4F2E",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -967,7 +967,7 @@
 				"title": "Cyberfox",
 				"description": "Prydwen",
 				"ref_id": "07106210",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -984,7 +984,7 @@
 				"title": "Arlington School",
 				"description": "School",
 				"ref_id": "07106315",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -1001,7 +1001,7 @@
 				"title": "",
 				"description": "",
 				"ref_id": "0719580F",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1018,7 +1018,7 @@
 				"title": "Crashed Plane",
 				"description": "Airfield",
 				"ref_id": "0719DC17",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1035,7 +1035,7 @@
 				"title": "Tower of London",
 				"description": "Castle",
 				"ref_id": "071B54C7",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1052,7 +1052,7 @@
 				"title": "The Strand",
 				"description": "Ruins - Urban",
 				"ref_id": "071B54CA",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1069,7 +1069,7 @@
 				"title": "Liverpool Street Station",
 				"description": "Railroad",
 				"ref_id": "071B54CB",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1086,7 +1086,7 @@
 				"title": "Covent Garden",
 				"description": "Settlement",
 				"ref_id": "071CB0CB",
-				"location": "CoventGardenWorldSpace"
+				"area": "CoventGardenWorldSpace"
 			}
 		},
 		{
@@ -1103,7 +1103,7 @@
 				"title": "Shakespeare's Globe",
 				"description": "Synth Head",
 				"ref_id": "071D7597",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1120,7 +1120,7 @@
 				"title": "Dom's Cafe",
 				"description": "Custom 71",
 				"ref_id": "071E6822",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1137,7 +1137,7 @@
 				"title": "Swan & Mitre",
 				"description": "Custom 80",
 				"ref_id": "071E6825",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1154,7 +1154,7 @@
 				"title": "The Glades",
 				"description": "Office / Civic Building",
 				"ref_id": "071E682B",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1171,7 +1171,7 @@
 				"title": "Chain Home Radar",
 				"description": "Satellite",
 				"ref_id": "071E69FC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1188,7 +1188,7 @@
 				"title": "Lambeth Palace",
 				"description": "Castle",
 				"ref_id": "071E69FF",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1205,7 +1205,7 @@
 				"title": "London Brigade of Fire HQ",
 				"description": "Office / Civic Building",
 				"ref_id": "071E6A02",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1222,7 +1222,7 @@
 				"title": "Ministry of Information",
 				"description": "Gov't Building / Monument",
 				"ref_id": "071E6A03",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1239,7 +1239,7 @@
 				"title": "US Embassy",
 				"description": "Office / Civic Building",
 				"ref_id": "071E6A04",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1256,7 +1256,7 @@
 				"title": "Vauxhall Swamp",
 				"description": "Pond / Lake",
 				"ref_id": "071E6A05",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1273,7 +1273,7 @@
 				"title": "Enfield Factory",
 				"description": "Factory / Industrial Site",
 				"ref_id": "071E6A0C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1290,7 +1290,7 @@
 				"title": "Houseguard Gin Distillery",
 				"description": "Factory / Industrial Site",
 				"ref_id": "071E6A0D",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1307,7 +1307,7 @@
 				"title": "Oval",
 				"description": "Settlement",
 				"ref_id": "071E6A19",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1324,7 +1324,7 @@
 				"title": "Retrofitting Centre",
 				"description": "Industrial Dome",
 				"ref_id": "071E6A1E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1341,7 +1341,7 @@
 				"title": "Royal Armaments Depo",
 				"description": "Bunker",
 				"ref_id": "071E6A1F",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1358,7 +1358,7 @@
 				"title": "Processing Plant",
 				"description": "Factory / Industrial Site",
 				"ref_id": "071E6A20",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1375,7 +1375,7 @@
 				"title": "Happy Endings Caravan Park",
 				"description": "Camper",
 				"ref_id": "071E6A21",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1392,7 +1392,7 @@
 				"title": "Great Oak Tree House",
 				"description": "Custom 75",
 				"ref_id": "071E6A24",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1409,7 +1409,7 @@
 				"title": "Cannibal Camp",
 				"description": "Encampment",
 				"ref_id": "071E6A38",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1426,7 +1426,7 @@
 				"title": "Wandsworth Substation",
 				"description": "Low-Rise Building",
 				"ref_id": "071E6A8A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1443,7 +1443,7 @@
 				"title": "Emelio's Caffe House",
 				"description": "Brownstone Townhouse",
 				"ref_id": "071E712C",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -1460,7 +1460,7 @@
 				"title": "Cambridge Arms",
 				"description": "Custom 69",
 				"ref_id": "071E712D",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -1477,7 +1477,7 @@
 				"title": "Lock Penthouse",
 				"description": "Skyscraper",
 				"ref_id": "071E712E",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -1494,7 +1494,7 @@
 				"title": "Subterranean Cave",
 				"description": "Cave",
 				"ref_id": "071E712F",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -1511,7 +1511,7 @@
 				"title": "Anarchist's Tower",
 				"description": "Skyscraper",
 				"ref_id": "071E7130",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -1528,7 +1528,7 @@
 				"title": "Albert House",
 				"description": "Settlement",
 				"ref_id": "071E7131",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -1545,7 +1545,7 @@
 				"title": "Camden TV Station",
 				"description": "Radio Tower",
 				"ref_id": "071E7133",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -1562,7 +1562,7 @@
 				"title": "Buchannann's Art Supply Co.",
 				"description": "Factory / Industrial Site",
 				"ref_id": "071ECC0A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1579,7 +1579,7 @@
 				"title": "Angel Underground Station",
 				"description": "Metro Station",
 				"ref_id": "07284907",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -1596,7 +1596,7 @@
 				"title": "Islington Charter House",
 				"description": "Gov't Building / Monument",
 				"ref_id": "07284909",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -1613,7 +1613,7 @@
 				"title": "Crypt On The Green",
 				"description": "Church",
 				"ref_id": "0728490A",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -1630,7 +1630,7 @@
 				"title": "Islington Sewer",
 				"description": "Sewer / Utility Tunnels",
 				"ref_id": "0728490D",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -1647,7 +1647,7 @@
 				"title": "Greasy Spoon",
 				"description": "Ruins - Urban",
 				"ref_id": "0728490F",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -1664,7 +1664,7 @@
 				"title": "Samurai Garden",
 				"description": "Ruins - Urban",
 				"ref_id": "07284910",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -1681,7 +1681,7 @@
 				"title": "The Postal Museum",
 				"description": "Ruins - Urban",
 				"ref_id": "07284914",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -1698,7 +1698,7 @@
 				"title": "Wolfy's Exchange",
 				"description": "Ruins - Urban",
 				"ref_id": "07284916",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -1715,7 +1715,7 @@
 				"title": "R.A.F Chapel",
 				"description": "Church",
 				"ref_id": "0728B6F1",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1732,7 +1732,7 @@
 				"title": "Bromley Pindar",
 				"description": "Vault",
 				"ref_id": "0728B6F2",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1749,7 +1749,7 @@
 				"title": "The Hound",
 				"description": "Custom 69",
 				"ref_id": "0728B6F3",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1766,7 +1766,7 @@
 				"title": "Blind Begger",
 				"description": "Custom 69",
 				"ref_id": "0728B6F6",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1783,7 +1783,7 @@
 				"title": "Whitechapel Off Licence",
 				"description": "Brownstone Townhouse",
 				"ref_id": "0728B6F8",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1800,7 +1800,7 @@
 				"title": "The Shipmate",
 				"description": "Custom 69",
 				"ref_id": "0728B6F9",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1817,7 +1817,7 @@
 				"title": "Tower Hill Station",
 				"description": "Metro Station",
 				"ref_id": "0728B6FA",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1834,7 +1834,7 @@
 				"title": "Lanthorn Tower",
 				"description": "Settlement",
 				"ref_id": "0728B6FB",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1851,7 +1851,7 @@
 				"title": "Ali Baba's",
 				"description": "Ruins - Urban",
 				"ref_id": "0728B6FC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1868,7 +1868,7 @@
 				"title": "Tobacco Dock",
 				"description": "Factory / Industrial Site",
 				"ref_id": "0728B6FD",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1885,7 +1885,7 @@
 				"title": "St George",
 				"description": "Brotherhood of Steel",
 				"ref_id": "0728B6FE",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1902,7 +1902,7 @@
 				"title": "Shadwell Fire Station",
 				"description": "Ruins - Urban",
 				"ref_id": "0728B6FF",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1919,7 +1919,7 @@
 				"title": "Cable Street School",
 				"description": "School",
 				"ref_id": "0728B700",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1936,7 +1936,7 @@
 				"title": "Propaganda Centre",
 				"description": "Skyscraper",
 				"ref_id": "0728B701",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1953,7 +1953,7 @@
 				"title": "Charlie Browns",
 				"description": "Custom 69",
 				"ref_id": "0728B702",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1970,7 +1970,7 @@
 				"title": "St Bartholomew's Hospital",
 				"description": "Hospital",
 				"ref_id": "0728B703",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -1987,7 +1987,7 @@
 				"title": "Stepney Apartments",
 				"description": "Brownstone Townhouse",
 				"ref_id": "0728B704",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2004,7 +2004,7 @@
 				"title": "Clothing Store",
 				"description": "Brownstone Townhouse",
 				"ref_id": "0728B705",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2021,7 +2021,7 @@
 				"title": "Jack The Ripper Museum",
 				"description": "Brownstone Townhouse",
 				"ref_id": "0728B706",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2038,7 +2038,7 @@
 				"title": "One Canada Square",
 				"description": "Custom 79",
 				"ref_id": "0728B707",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2055,7 +2055,7 @@
 				"title": "East Wintergarden",
 				"description": "Bunker",
 				"ref_id": "0728B708",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2072,7 +2072,7 @@
 				"title": "Ruined Skyscraper",
 				"description": "Skyscraper",
 				"ref_id": "0728B70A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2089,7 +2089,7 @@
 				"title": "Kinoworld Cinema",
 				"description": "Custom 77",
 				"ref_id": "0728B70B",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2106,7 +2106,7 @@
 				"title": "KemPharm Offices",
 				"description": "Ruins - Urban",
 				"ref_id": "0728B70D",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2123,7 +2123,7 @@
 				"title": "Cow's Lick Milk Factory",
 				"description": "Factory / Industrial Site",
 				"ref_id": "0728B70E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2140,7 +2140,7 @@
 				"title": "Tater Factory",
 				"description": "Factory / Industrial Site",
 				"ref_id": "0728B70F",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2157,7 +2157,7 @@
 				"title": "Mudchute Department Store",
 				"description": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
 				"ref_id": "0728B710",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2174,7 +2174,7 @@
 				"title": "Polaris Apartments",
 				"description": "Ruins - Urban",
 				"ref_id": "0728B712",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2191,7 +2191,7 @@
 				"title": "Children Hospital",
 				"description": "Hospital",
 				"ref_id": "0728B713",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2208,7 +2208,7 @@
 				"title": "HMS Dredge",
 				"description": "Shipwreck",
 				"ref_id": "0728B714",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2225,7 +2225,7 @@
 				"title": "Royal Armaments Silo",
 				"description": "Custom 77",
 				"ref_id": "0728B716",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2242,7 +2242,7 @@
 				"title": "Camelot",
 				"description": "Minutemen",
 				"ref_id": "0728B717",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2259,7 +2259,7 @@
 				"title": "Vauxhall Underground Station",
 				"description": "Metro Station",
 				"ref_id": "0728B719",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2276,7 +2276,7 @@
 				"title": "London Aquarium",
 				"description": "Gov't Building / Monument",
 				"ref_id": "0728B71A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2293,7 +2293,7 @@
 				"title": "St Thomas Hospital",
 				"description": "Hospital",
 				"ref_id": "0728B71C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2310,7 +2310,7 @@
 				"title": "Chem Den",
 				"description": "Brownstone Townhouse",
 				"ref_id": "0728B71D",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2327,7 +2327,7 @@
 				"title": "Waterloo Waterworks",
 				"description": "Factory / Industrial Site",
 				"ref_id": "0728B720",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2344,7 +2344,7 @@
 				"title": "Waterloo Station",
 				"description": "Metro Station",
 				"ref_id": "0728B721",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2361,7 +2361,7 @@
 				"title": "Fesco Extra",
 				"description": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
 				"ref_id": "0728B722",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2378,7 +2378,7 @@
 				"title": "Lewisham Police Station",
 				"description": "Police Station",
 				"ref_id": "0728B724",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2395,7 +2395,7 @@
 				"title": "East Mall",
 				"description": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
 				"ref_id": "0728B725",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2412,7 +2412,7 @@
 				"title": "Booths Pharmacy",
 				"description": "Brownstone Townhouse",
 				"ref_id": "0728B726",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2429,7 +2429,7 @@
 				"title": "Laundrette",
 				"description": "Custom 77",
 				"ref_id": "0728B727",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2446,7 +2446,7 @@
 				"title": "New Cross Shopping Centre",
 				"description": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
 				"ref_id": "0728B728",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2463,7 +2463,7 @@
 				"title": "Deptford Bus Garage",
 				"description": "Railroad",
 				"ref_id": "0728B729",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2480,7 +2480,7 @@
 				"title": "Lewisham Pindar",
 				"description": "Vault",
 				"ref_id": "0728B72A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2497,7 +2497,7 @@
 				"title": "Bank of England",
 				"description": "Faneuil Hall",
 				"ref_id": "0728C2FD",
-				"location": "BankofEnglandWorld"
+				"area": "BankofEnglandWorld"
 			}
 		},
 		{
@@ -2514,7 +2514,7 @@
 				"title": "Mansion House",
 				"description": "Office / Civic Building",
 				"ref_id": "0728C300",
-				"location": "BankofEnglandWorld"
+				"area": "BankofEnglandWorld"
 			}
 		},
 		{
@@ -2531,7 +2531,7 @@
 				"title": "London Mithraeum",
 				"description": "Salem",
 				"ref_id": "0728C301",
-				"location": "BankofEnglandWorld"
+				"area": "BankofEnglandWorld"
 			}
 		},
 		{
@@ -2548,7 +2548,7 @@
 				"title": "Islington Public Library",
 				"description": "Low-Rise Building",
 				"ref_id": "0729A784",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -2565,7 +2565,7 @@
 				"title": "London Bridge",
 				"description": "Settlement",
 				"ref_id": "072A0A27",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2582,7 +2582,7 @@
 				"title": "Thameshaven",
 				"description": "Metro Station",
 				"ref_id": "072A9145",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2599,7 +2599,7 @@
 				"title": "Billingsgate Relay Tower",
 				"description": "Radio Tower",
 				"ref_id": "072D3B36",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2616,7 +2616,7 @@
 				"title": "Marble Arch",
 				"description": "Metro Station",
 				"ref_id": "072D4388",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -2633,7 +2633,7 @@
 				"title": "Lambeth Walk",
 				"description": "Settlement",
 				"ref_id": "072ECE05",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -2666,7 +2666,7 @@
 				"title": "Kinoworld Theatre",
 				"description": "Ruins - Town",
 				"ref_id": "072ED6F2",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2683,7 +2683,7 @@
 				"title": "Arnold Circus",
 				"description": "Encampment",
 				"ref_id": "072ED6F4",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2700,7 +2700,7 @@
 				"title": "The Chosen One",
 				"description": "Custom 69",
 				"ref_id": "072ED6F6",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2717,7 +2717,7 @@
 				"title": "The Tandoori Commander",
 				"description": "Custom 71",
 				"ref_id": "072ED6F8",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2734,7 +2734,7 @@
 				"title": "Maab House",
 				"description": "Custom 71",
 				"ref_id": "072ED6FA",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2751,7 +2751,7 @@
 				"title": "Hackney Police Station",
 				"description": "Police Station",
 				"ref_id": "072ED6FD",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2768,7 +2768,7 @@
 				"title": "Vintage Market Shoreditch",
 				"description": "Railroad - Faction",
 				"ref_id": "072ED6FE",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2785,7 +2785,7 @@
 				"title": "The Mend",
 				"description": "Radio Tower",
 				"ref_id": "072ED700",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2802,7 +2802,7 @@
 				"title": "St Leonards Hospital",
 				"description": "Hospital",
 				"ref_id": "072ED702",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2819,7 +2819,7 @@
 				"title": "Courthouse Hotel",
 				"description": "Office / Civic Building",
 				"ref_id": "072ED704",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2836,7 +2836,7 @@
 				"title": "The Shoppe",
 				"description": "Custom 67",
 				"ref_id": "072ED706",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2853,7 +2853,7 @@
 				"title": "Druid Encampment",
 				"description": "Encampment",
 				"ref_id": "072ED708",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2870,7 +2870,7 @@
 				"title": "Shoreditch Fire Station",
 				"description": "Office / Civic Building",
 				"ref_id": "072ED70B",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2887,7 +2887,7 @@
 				"title": "Mrs Whippy Ice Cream Parlour",
 				"description": "Low-Rise Building",
 				"ref_id": "072ED70C",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2904,7 +2904,7 @@
 				"title": "Hackney Checkpoint",
 				"description": "Diamond City",
 				"ref_id": "072ED70E",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2921,7 +2921,7 @@
 				"title": "Islington Checkpoint",
 				"description": "Diamond City",
 				"ref_id": "072ED710",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2938,7 +2938,7 @@
 				"title": "Kingsland Basin",
 				"description": "Pier",
 				"ref_id": "072ED71B",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2955,7 +2955,7 @@
 				"title": "Hoxton Station",
 				"description": "Railroad",
 				"ref_id": "072ED71C",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2972,7 +2972,7 @@
 				"title": "The Wolf and Port",
 				"description": "Custom 69",
 				"ref_id": "072ED71E",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -2989,7 +2989,7 @@
 				"title": "Shoreditch Church",
 				"description": "Church",
 				"ref_id": "072ED720",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -3006,7 +3006,7 @@
 				"title": "Great Eastern Swamp",
 				"description": "Pond / Lake",
 				"ref_id": "072ED722",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -3023,7 +3023,7 @@
 				"title": "Container Park",
 				"description": "Low-Rise Building",
 				"ref_id": "072ED724",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -3040,7 +3040,7 @@
 				"title": "Ace High Hotel",
 				"description": "Ruins - Town",
 				"ref_id": "072ED727",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -3057,7 +3057,7 @@
 				"title": "Spin & Shine Laundromat",
 				"description": "Low-Rise Building",
 				"ref_id": "072ED728",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -3074,7 +3074,7 @@
 				"title": "Brick Lane Curry",
 				"description": "Custom 71",
 				"ref_id": "072ED72A",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -3091,7 +3091,7 @@
 				"title": "Happy Sailor",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072ED72D",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -3108,7 +3108,7 @@
 				"title": "Glam Clubhouse",
 				"description": "Office / Civic Building",
 				"ref_id": "072ED735",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -3125,7 +3125,7 @@
 				"title": "Club Oberon",
 				"description": "Junkyard",
 				"ref_id": "072ED738",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -3142,7 +3142,7 @@
 				"title": "Tunnel Cough Passage",
 				"description": "Custom 77",
 				"ref_id": "072EE36D",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -3159,7 +3159,7 @@
 				"title": "Quarantine Zone",
 				"description": "Custom 77",
 				"ref_id": "072EE36F",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -3176,7 +3176,7 @@
 				"title": "Checkpoint",
 				"description": "Diamond City",
 				"ref_id": "072EE371",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -3193,7 +3193,7 @@
 				"title": "Skylanes Flight 1984",
 				"description": "Airfield",
 				"ref_id": "072EE374",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -3210,7 +3210,7 @@
 				"title": "Hackney Checkpoint",
 				"description": "Diamond City",
 				"ref_id": "072EE378",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -3227,7 +3227,7 @@
 				"title": "Elephant And Castle",
 				"description": "Custom 77",
 				"ref_id": "072EE3AE",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3244,7 +3244,7 @@
 				"title": "King's College London Guy's Campus",
 				"description": "School",
 				"ref_id": "072EE3B0",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3261,7 +3261,7 @@
 				"title": "The Shard",
 				"description": "Skyscraper",
 				"ref_id": "072EE3B2",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3278,7 +3278,7 @@
 				"title": "Guy's Hospital",
 				"description": "Hospital",
 				"ref_id": "072EE3B5",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3295,7 +3295,7 @@
 				"title": "City Hall",
 				"description": "Office / Civic Building",
 				"ref_id": "072EE3BA",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3312,7 +3312,7 @@
 				"title": "HMS Belfast",
 				"description": "Shipwreck",
 				"ref_id": "072EE3BC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3329,7 +3329,7 @@
 				"title": "Upton-Burke Headquarters",
 				"description": "Skyscraper",
 				"ref_id": "072EE3BE",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3346,7 +3346,7 @@
 				"title": "Butlers Wharf",
 				"description": "City",
 				"ref_id": "072EE3C0",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3363,7 +3363,7 @@
 				"title": "Train Crash",
 				"description": "Vault",
 				"ref_id": "072EE3C2",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3380,7 +3380,7 @@
 				"title": "Bankside Power Station",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072EE3C5",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3397,7 +3397,7 @@
 				"title": "Bankside Ruffian Hideaway",
 				"description": "Encampment",
 				"ref_id": "072EE3C7",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3414,7 +3414,7 @@
 				"title": "The Golden Hinde",
 				"description": "USS Constitution",
 				"ref_id": "072EE3C9",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3431,7 +3431,7 @@
 				"title": "Winchester Palace",
 				"description": "Castle",
 				"ref_id": "072EE3CB",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3448,7 +3448,7 @@
 				"title": "London Bridge Station",
 				"description": "Railroad",
 				"ref_id": "072EE3CD",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3465,7 +3465,7 @@
 				"title": "Beefeater Burger",
 				"description": "Custom 71",
 				"ref_id": "072EE6A3",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -3482,7 +3482,7 @@
 				"title": "Crumbling Catwalk",
 				"description": "Elevated Highway",
 				"ref_id": "072EE6AB",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -3499,7 +3499,7 @@
 				"title": "Catacombs",
 				"description": "Graveyard",
 				"ref_id": "072EE6AF",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -3516,7 +3516,7 @@
 				"title": "Stable Market",
 				"description": "Railroad - Faction",
 				"ref_id": "072EE6B3",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -3533,7 +3533,7 @@
 				"title": "The Hippo",
 				"description": "Goodneighbor",
 				"ref_id": "072EE6B5",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -3550,7 +3550,7 @@
 				"title": "Mornington Crescent Underground Station",
 				"description": "Metro Station",
 				"ref_id": "072EE6B8",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -3567,7 +3567,7 @@
 				"title": "Imperial War Museum",
 				"description": "Military Base",
 				"ref_id": "072EE778",
-				"location": "IWMWorld"
+				"area": "IWMWorld"
 			}
 		},
 		{
@@ -3584,7 +3584,7 @@
 				"title": "The Den",
 				"description": "Junkyard",
 				"ref_id": "072EE779",
-				"location": "DumpWorld"
+				"area": "DumpWorld"
 			}
 		},
 		{
@@ -3601,7 +3601,7 @@
 				"title": "Vauxhall Grove Construction Site",
 				"description": "Settlement",
 				"ref_id": "072EE8DB",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3618,7 +3618,7 @@
 				"title": "Easy Tea Company Offices",
 				"description": "Skyscraper",
 				"ref_id": "072EF033",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3635,7 +3635,7 @@
 				"title": "Regent's Park Checkpoint",
 				"description": "Encampment",
 				"ref_id": "072EF035",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3652,7 +3652,7 @@
 				"title": "Mycroft's House",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072EF037",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3669,7 +3669,7 @@
 				"title": "Boston House",
 				"description": "Office / Civic Building",
 				"ref_id": "072EF039",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3686,7 +3686,7 @@
 				"title": "The Drunken Wolf",
 				"description": "Custom 69",
 				"ref_id": "072EF03B",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3703,7 +3703,7 @@
 				"title": "Borough Market",
 				"description": "Railroad - Faction",
 				"ref_id": "072FDAF0",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3720,7 +3720,7 @@
 				"title": "Rotting Schoolhouse",
 				"description": "School",
 				"ref_id": "072FDAF2",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3737,7 +3737,7 @@
 				"title": "Four Leaf Pub",
 				"description": "Custom 69",
 				"ref_id": "072FDAF4",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3754,7 +3754,7 @@
 				"title": "Plumbing Center",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDAF6",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3771,7 +3771,7 @@
 				"title": "Oval Underground Station",
 				"description": "Metro Station",
 				"ref_id": "072FDAF8",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3788,7 +3788,7 @@
 				"title": "Warmite Factory",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072FDAFA",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3805,7 +3805,7 @@
 				"title": "Meadow Point Apartments",
 				"description": "Skyscraper",
 				"ref_id": "072FDAFC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3822,7 +3822,7 @@
 				"title": "Coin Street Flats",
 				"description": "Skyscraper",
 				"ref_id": "072FDAFE",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3839,7 +3839,7 @@
 				"title": "Nelson Mandela House",
 				"description": "Skyscraper",
 				"ref_id": "072FDB00",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3856,7 +3856,7 @@
 				"title": "Peckham",
 				"description": "Ruins - Town",
 				"ref_id": "072FDB02",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3873,7 +3873,7 @@
 				"title": "Fesco",
 				"description": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
 				"ref_id": "072FDB04",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3890,7 +3890,7 @@
 				"title": "Blight Crater",
 				"description": "Ruins - Town",
 				"ref_id": "072FDB06",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3907,7 +3907,7 @@
 				"title": "Fungus Grotto",
 				"description": "Cave",
 				"ref_id": "072FDB08",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3924,7 +3924,7 @@
 				"title": "Hermit Shack",
 				"description": "Encampment",
 				"ref_id": "072FDB0A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3941,7 +3941,7 @@
 				"title": "Mushroom Marsh",
 				"description": "Natural Landmark",
 				"ref_id": "072FDB0C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3958,7 +3958,7 @@
 				"title": "A102",
 				"description": "Elevated Highway",
 				"ref_id": "072FDB0E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3975,7 +3975,7 @@
 				"title": "The Golden Elm",
 				"description": "Custom 69",
 				"ref_id": "072FDB10",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -3992,7 +3992,7 @@
 				"title": "St Alfege's Church",
 				"description": "Church",
 				"ref_id": "072FDB12",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4009,7 +4009,7 @@
 				"title": "Greenwich Crematorium",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072FDB14",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4026,7 +4026,7 @@
 				"title": "Portugal House",
 				"description": "Custom 69",
 				"ref_id": "072FDB16",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4043,7 +4043,7 @@
 				"title": "Brookes Retail Supplies",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDB18",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4060,7 +4060,7 @@
 				"title": "Blackheath",
 				"description": "Radioactive Area",
 				"ref_id": "072FDB1A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4077,7 +4077,7 @@
 				"title": "Lewisham Gate 02",
 				"description": "Diamond City",
 				"ref_id": "072FDB1C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4094,7 +4094,7 @@
 				"title": "Lewisham Gate 03",
 				"description": "Diamond City",
 				"ref_id": "072FDB1E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4111,7 +4111,7 @@
 				"title": "Ravensbourne Construction Site",
 				"description": "Skyscraper",
 				"ref_id": "072FDB20",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4128,7 +4128,7 @@
 				"title": "Brickton",
 				"description": "Encampment",
 				"ref_id": "072FDB22",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4145,7 +4145,7 @@
 				"title": "Wimbledon Park Lake",
 				"description": "Natural Landmark",
 				"ref_id": "072FDB24",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4162,7 +4162,7 @@
 				"title": "Kennington Park",
 				"description": "Forested",
 				"ref_id": "072FDB26",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4179,7 +4179,7 @@
 				"title": "Cutethulhu Camp",
 				"description": "Encampment",
 				"ref_id": "072FDB28",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4196,7 +4196,7 @@
 				"title": "Matrimony Church",
 				"description": "Church",
 				"ref_id": "072FDB2A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4213,7 +4213,7 @@
 				"title": "Camelot Outpost",
 				"description": "Encampment",
 				"ref_id": "072FDB2C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4230,7 +4230,7 @@
 				"title": "Pen Ponds",
 				"description": "Pond / Lake",
 				"ref_id": "072FDB2E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4247,7 +4247,7 @@
 				"title": "Clapham Common Pindar",
 				"description": "Vault",
 				"ref_id": "072FDB30",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4264,7 +4264,7 @@
 				"title": "The Clap",
 				"description": "Ruins - Town",
 				"ref_id": "072FDB32",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4281,7 +4281,7 @@
 				"title": "J. Laws Bank",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDB34",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4298,7 +4298,7 @@
 				"title": "Winston's Toys",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDB36",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4315,7 +4315,7 @@
 				"title": "Red Tiger",
 				"description": "Custom 69",
 				"ref_id": "072FDB38",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4332,7 +4332,7 @@
 				"title": "A501",
 				"description": "Elevated Highway",
 				"ref_id": "072FDB3A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4349,7 +4349,7 @@
 				"title": "Euston Station",
 				"description": "Metro Station",
 				"ref_id": "072FDB3C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4366,7 +4366,7 @@
 				"title": "British Library",
 				"description": "Gov't Building / Monument",
 				"ref_id": "072FDB3E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4383,7 +4383,7 @@
 				"title": "St Pancras International Hotel",
 				"description": "Goodneighbor",
 				"ref_id": "072FDB40",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4400,7 +4400,7 @@
 				"title": "Sink Hole",
 				"description": "Natural Landmark",
 				"ref_id": "072FDB42",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4417,7 +4417,7 @@
 				"title": "Six Dials",
 				"description": "Sewer / Utility Tunnels",
 				"ref_id": "072FDB44",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4434,7 +4434,7 @@
 				"title": "King's Cross St. Pancras Station",
 				"description": "Metro Station",
 				"ref_id": "072FDB46",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4451,7 +4451,7 @@
 				"title": "The Liberty Spikes",
 				"description": "Custom 69",
 				"ref_id": "072FDB48",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4468,7 +4468,7 @@
 				"title": "Abyss Song Studio",
 				"description": "Office / Civic Building",
 				"ref_id": "072FDB4A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4485,7 +4485,7 @@
 				"title": "The Pilgrim",
 				"description": "Custom 69",
 				"ref_id": "072FDB4C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4502,7 +4502,7 @@
 				"title": "The Plumber's Hands",
 				"description": "Custom 69",
 				"ref_id": "072FDB4E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4519,7 +4519,7 @@
 				"title": "Trash Heap",
 				"description": "Junkyard",
 				"ref_id": "072FDB50",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4536,7 +4536,7 @@
 				"title": "Sewer",
 				"description": "Sewer / Utility Tunnels",
 				"ref_id": "072FDB52",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4553,7 +4553,7 @@
 				"title": "Eastminster Slums",
 				"description": "Gov't Building / Monument",
 				"ref_id": "072FDB54",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4570,7 +4570,7 @@
 				"title": "National Portrait Gallery",
 				"description": "Gov't Building / Monument",
 				"ref_id": "072FDB56",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4587,7 +4587,7 @@
 				"title": "Trafalgar Square",
 				"description": "Bunker Hill",
 				"ref_id": "072FDB58",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4604,7 +4604,7 @@
 				"title": "Charing Cross Station",
 				"description": "Metro Station",
 				"ref_id": "072FDB5A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4621,7 +4621,7 @@
 				"title": "Bush House",
 				"description": "Office / Civic Building",
 				"ref_id": "072FDB5C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4638,7 +4638,7 @@
 				"title": "The Gauntlet",
 				"description": "Skyscraper",
 				"ref_id": "072FDB5E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4655,7 +4655,7 @@
 				"title": "The Nags",
 				"description": "Custom 69",
 				"ref_id": "072FDB60",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4672,7 +4672,7 @@
 				"title": "Eastminster Pindar",
 				"description": "Vault",
 				"ref_id": "072FDB62",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4689,7 +4689,7 @@
 				"title": "The Barbican",
 				"description": "City",
 				"ref_id": "072FDB64",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4706,7 +4706,7 @@
 				"title": "General Atomics Headquarters",
 				"description": "Skyscraper",
 				"ref_id": "072FDB66",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4723,7 +4723,7 @@
 				"title": "Guildhall",
 				"description": "Gov't Building / Monument",
 				"ref_id": "072FDB68",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4740,7 +4740,7 @@
 				"title": "Nuka-Cola Headquaters",
 				"description": "Skyscraper",
 				"ref_id": "072FDB6A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4757,7 +4757,7 @@
 				"title": "",
 				"description": "",
 				"ref_id": "072FDB6C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4774,7 +4774,7 @@
 				"title": "Government Rationing Centre",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDB6E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4791,7 +4791,7 @@
 				"title": "Sky Garden",
 				"description": "Forested",
 				"ref_id": "072FDB70",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4808,7 +4808,7 @@
 				"title": "The Gherkin",
 				"description": "Skyscraper",
 				"ref_id": "072FDB72",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4825,7 +4825,7 @@
 				"title": "Fenchurch Street Station",
 				"description": "Railroad",
 				"ref_id": "072FDB74",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4842,7 +4842,7 @@
 				"title": "Madeira Inc. Offices",
 				"description": "Skyscraper",
 				"ref_id": "072FDB76",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4859,7 +4859,7 @@
 				"title": "Ferryman Dockhouse",
 				"description": "Encampment",
 				"ref_id": "072FDB78",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4876,7 +4876,7 @@
 				"title": "Monument Underground Station",
 				"description": "Metro Station",
 				"ref_id": "072FDB7A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4893,7 +4893,7 @@
 				"title": "Monument",
 				"description": "Bunker Hill",
 				"ref_id": "072FDB7C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4910,7 +4910,7 @@
 				"title": "Southwark Bridge",
 				"description": "Elevated Highway",
 				"ref_id": "072FDB7E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4927,7 +4927,7 @@
 				"title": "Millennium Bridge",
 				"description": "Elevated Highway",
 				"ref_id": "072FDB80",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4944,7 +4944,7 @@
 				"title": "Blackfriars Bridge",
 				"description": "Elevated Highway",
 				"ref_id": "072FDB82",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4961,7 +4961,7 @@
 				"title": "Waterloo Bridge",
 				"description": "Elevated Highway",
 				"ref_id": "072FDB84",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4978,7 +4978,7 @@
 				"title": "London Eye",
 				"description": "Custom 74",
 				"ref_id": "072FDB86",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -4995,7 +4995,7 @@
 				"title": "Westminster Bridge",
 				"description": "Elevated Highway",
 				"ref_id": "072FDB89",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5012,7 +5012,7 @@
 				"title": "Old Spitalfields Market",
 				"description": "Railroad - Faction",
 				"ref_id": "072FDB8C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5029,7 +5029,7 @@
 				"title": "Emergency Broadcast Centre",
 				"description": "Radio Tower",
 				"ref_id": "072FDB8E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5046,7 +5046,7 @@
 				"title": "Tenpenny Airlines Inc.",
 				"description": "Ruins - Urban",
 				"ref_id": "072FDB90",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5063,7 +5063,7 @@
 				"title": "British Lion Headquarters",
 				"description": "Skyscraper",
 				"ref_id": "072FDB92",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5080,7 +5080,7 @@
 				"title": "St Peter's Church",
 				"description": "Church",
 				"ref_id": "072FDB94",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5097,7 +5097,7 @@
 				"title": "Flak Emplacement",
 				"description": "Encampment",
 				"ref_id": "072FDB96",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5114,7 +5114,7 @@
 				"title": "Vauxhall Police Station",
 				"description": "Police Station",
 				"ref_id": "072FDB99",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5131,7 +5131,7 @@
 				"title": "Gasworks",
 				"description": "Industrial Dome",
 				"ref_id": "072FDB9B",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5148,7 +5148,7 @@
 				"title": "Squatter's Den",
 				"description": "Skyscraper",
 				"ref_id": "072FDB9D",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5165,7 +5165,7 @@
 				"title": "Stagnant Building",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072FDB9F",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5182,7 +5182,7 @@
 				"title": "Forensic Science Laboratory",
 				"description": "Police Station",
 				"ref_id": "072FDBA2",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5199,7 +5199,7 @@
 				"title": "Corner Shop",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072FDBA4",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5216,7 +5216,7 @@
 				"title": "The Wheelhouse",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072FDBA6",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5233,7 +5233,7 @@
 				"title": "The King's Nose",
 				"description": "Custom 69",
 				"ref_id": "072FDBA8",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5250,7 +5250,7 @@
 				"title": "Pinhead Bowling Alley",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDBAE",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5267,7 +5267,7 @@
 				"title": "Plantagents Florists",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072FDBB0",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5284,7 +5284,7 @@
 				"title": "Lewisham",
 				"description": "Ruins - Town",
 				"ref_id": "072FDBB3",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5301,7 +5301,7 @@
 				"title": "Trashed Shops",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072FDBB7",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5318,7 +5318,7 @@
 				"title": "The Bishop's Toe",
 				"description": "Custom 69",
 				"ref_id": "072FDBB9",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5335,7 +5335,7 @@
 				"title": "Roundabout Campsite",
 				"description": "Custom 77",
 				"ref_id": "072FDBBE",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5352,7 +5352,7 @@
 				"title": "Croydon Pindar",
 				"description": "Vault",
 				"ref_id": "072FDBC2",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5369,7 +5369,7 @@
 				"title": "Victory Gift Shop",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDBC4",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5386,7 +5386,7 @@
 				"title": "Stranded Ship",
 				"description": "Shipwreck",
 				"ref_id": "072FDBC6",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5403,7 +5403,7 @@
 				"title": "Greenwich DLR Monorail",
 				"description": "Custom 73",
 				"ref_id": "072FDBC8",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5420,7 +5420,7 @@
 				"title": "London Gas and Heating Offices",
 				"description": "Ruins - Urban",
 				"ref_id": "072FDBCA",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5437,7 +5437,7 @@
 				"title": "Laundromat",
 				"description": "Office / Civic Building",
 				"ref_id": "072FDBCC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5454,7 +5454,7 @@
 				"title": "Abandoned Resturant",
 				"description": "Custom 71",
 				"ref_id": "072FDBCE",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5471,7 +5471,7 @@
 				"title": "Aluminum Metalworks",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072FDBD0",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5488,7 +5488,7 @@
 				"title": "Yes! Toy Factory",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072FDBD2",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5505,7 +5505,7 @@
 				"title": "Storage Facility",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072FDBD4",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5522,7 +5522,7 @@
 				"title": "Vaulzon Warehouse",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDBD6",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5539,7 +5539,7 @@
 				"title": "Kosuna Bike Factory",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072FDBD8",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5556,7 +5556,7 @@
 				"title": "Ammo Manufacturing Plant",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072FDBDC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5573,7 +5573,7 @@
 				"title": "Strato-Fortress",
 				"description": "Airfield",
 				"ref_id": "072FDBDF",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5590,7 +5590,7 @@
 				"title": "Thames Barrier",
 				"description": "Elevated Highway",
 				"ref_id": "072FDBE1",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5607,7 +5607,7 @@
 				"title": "Caledonia",
 				"description": "Shipwreck",
 				"ref_id": "072FDBE3",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5624,7 +5624,7 @@
 				"title": "London Smelters & Co.",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072FDBE5",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5641,7 +5641,7 @@
 				"title": "Syndicate Factory",
 				"description": "Custom 79",
 				"ref_id": "072FDBE7",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5658,7 +5658,7 @@
 				"title": "Canning Town",
 				"description": "Metro Station",
 				"ref_id": "072FDBFA",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5675,7 +5675,7 @@
 				"title": "Newham Petorl Station",
 				"description": "Filling Station",
 				"ref_id": "072FDBFC",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5692,7 +5692,7 @@
 				"title": "Textile Manufactorium",
 				"description": "Factory / Industrial Site",
 				"ref_id": "072FDBFE",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5709,7 +5709,7 @@
 				"title": "Newham Pindar",
 				"description": "Vault",
 				"ref_id": "072FDC01",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5726,7 +5726,7 @@
 				"title": "Rotherhithe Docks",
 				"description": "Pier",
 				"ref_id": "072FDC04",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5743,7 +5743,7 @@
 				"title": "Surrey Quays",
 				"description": "Pier",
 				"ref_id": "072FDC06",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5760,7 +5760,7 @@
 				"title": "GUM Clinic",
 				"description": "Hospital",
 				"ref_id": "072FDC08",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5777,7 +5777,7 @@
 				"title": "Southwark Ruins",
 				"description": "Ruins - Town",
 				"ref_id": "072FDC0A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5794,7 +5794,7 @@
 				"title": "Tower Bridge",
 				"description": "Irish Pride",
 				"ref_id": "072FDC0C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5811,7 +5811,7 @@
 				"title": "Dusty Terrace",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072FDC0E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5828,7 +5828,7 @@
 				"title": "Southwark Petrol Station",
 				"description": "Filling Station",
 				"ref_id": "072FDC10",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5845,7 +5845,7 @@
 				"title": "Hardware City",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDC12",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5862,7 +5862,7 @@
 				"title": "Yes! Toy HQ",
 				"description": "Skyscraper",
 				"ref_id": "072FDC14",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5879,7 +5879,7 @@
 				"title": "Hooligan Outpost",
 				"description": "Encampment",
 				"ref_id": "072FDC16",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5896,7 +5896,7 @@
 				"title": "The Tabard",
 				"description": "Custom 69",
 				"ref_id": "072FDC18",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5913,7 +5913,7 @@
 				"title": "Submarine Dock",
 				"description": "Pier",
 				"ref_id": "072FDC1A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5930,7 +5930,7 @@
 				"title": "The Wellerman Pub",
 				"description": "Custom 69",
 				"ref_id": "072FDC1C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5947,7 +5947,7 @@
 				"title": "Rotherhithe",
 				"description": "Ruins - Town",
 				"ref_id": "072FDC1E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5964,7 +5964,7 @@
 				"title": "Peckham Inn",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072FDC20",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5981,7 +5981,7 @@
 				"title": "Decrepit Residence",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072FDC23",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -5998,7 +5998,7 @@
 				"title": "U-96",
 				"description": "Submarine",
 				"ref_id": "072FDC25",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6015,7 +6015,7 @@
 				"title": "Battersea Park",
 				"description": "Forested",
 				"ref_id": "072FDC27",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6032,7 +6032,7 @@
 				"title": "Old Cheese of Chesire",
 				"description": "Custom 69",
 				"ref_id": "072FDC29",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6049,7 +6049,7 @@
 				"title": "Robotics Repair",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDC2B",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6066,7 +6066,7 @@
 				"title": "Cement Factory",
 				"description": "Custom 77",
 				"ref_id": "072FDC2D",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6083,7 +6083,7 @@
 				"title": "Scavenger House",
 				"description": "Brownstone Townhouse",
 				"ref_id": "072FDC30",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6100,7 +6100,7 @@
 				"title": "Hidden Bunker",
 				"description": "Bunker",
 				"ref_id": "072FDC32",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6117,7 +6117,7 @@
 				"title": "Raider Camp",
 				"description": "Custom 77",
 				"ref_id": "072FDC34",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6134,7 +6134,7 @@
 				"title": "Blackwall Citadel",
 				"description": "Camper",
 				"ref_id": "072FDC36",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6151,7 +6151,7 @@
 				"title": "The Coach House",
 				"description": "Custom 69",
 				"ref_id": "072FDC38",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6168,7 +6168,7 @@
 				"title": "Canary Wharf Station",
 				"description": "Metro Station",
 				"ref_id": "072FDC3C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6185,7 +6185,7 @@
 				"title": "The Chute Inn",
 				"description": "Custom 69",
 				"ref_id": "072FDC41",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6202,7 +6202,7 @@
 				"title": "Greenwich Foot Tunnel North",
 				"description": "Elevated Highway",
 				"ref_id": "072FDC43",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6219,7 +6219,7 @@
 				"title": "Mudchute Farm",
 				"description": "Farm",
 				"ref_id": "072FDC45",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6236,7 +6236,7 @@
 				"title": "Beefeater Burger",
 				"description": "Low-Rise Building",
 				"ref_id": "072FDC47",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6253,7 +6253,7 @@
 				"title": "Isle of Dogs Ruin",
 				"description": "Ruins - Town",
 				"ref_id": "072FDC4A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6270,7 +6270,7 @@
 				"title": "",
 				"description": "",
 				"ref_id": "072FDC4C",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6287,7 +6287,7 @@
 				"title": "Access Bunker",
 				"description": "Bunker",
 				"ref_id": "072FDC53",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6304,7 +6304,7 @@
 				"title": "Royal London Hospital",
 				"description": "Hospital",
 				"ref_id": "072FDC55",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6321,7 +6321,7 @@
 				"title": "Emergency Bunker",
 				"description": "Bunker",
 				"ref_id": "072FDC5A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6338,7 +6338,7 @@
 				"title": "Ministry of Defence Bunker",
 				"description": "Bunker",
 				"ref_id": "072FDC5E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6355,7 +6355,7 @@
 				"title": "Singhbury's Foodstuffs",
 				"description": "Ruins - Urban",
 				"ref_id": "072FDC60",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6372,7 +6372,7 @@
 				"title": "Gate",
 				"description": "Diamond City",
 				"ref_id": "072FDC62",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6389,7 +6389,7 @@
 				"title": "Tower Hamlets Pindar",
 				"description": "Vault",
 				"ref_id": "072FDC64",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6406,7 +6406,7 @@
 				"title": "Limehouse Basin",
 				"description": "Pier",
 				"ref_id": "072FDC66",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6423,7 +6423,7 @@
 				"title": "Tower Hamlets Petrol Station",
 				"description": "Filling Station",
 				"ref_id": "072FDC68",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6440,7 +6440,7 @@
 				"title": "King Edward Memorial Park",
 				"description": "Forested",
 				"ref_id": "072FDC6B",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6457,7 +6457,7 @@
 				"title": "The Mariner And Albatross",
 				"description": "Custom 69",
 				"ref_id": "072FDC78",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6474,7 +6474,7 @@
 				"title": "A205",
 				"description": "Elevated Highway",
 				"ref_id": "072FDC7A",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6491,7 +6491,7 @@
 				"title": "Rejuvenation Pool",
 				"description": "Pond / Lake",
 				"ref_id": "072FDCBE",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6508,7 +6508,7 @@
 				"title": "New Scotland Yard",
 				"description": "Police Station",
 				"ref_id": "073073F1",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6525,7 +6525,7 @@
 				"title": "Broadcasting House",
 				"description": "Office / Civic Building",
 				"ref_id": "0730DD3A",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6542,7 +6542,7 @@
 				"title": "Islington",
 				"description": "Town",
 				"ref_id": "07310FED",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -6559,7 +6559,7 @@
 				"title": "Camden",
 				"description": "Town",
 				"ref_id": "07310FEE",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -6576,7 +6576,7 @@
 				"title": "Westminster",
 				"description": "City",
 				"ref_id": "07310FEF",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -6593,7 +6593,7 @@
 				"title": "London",
 				"description": "Ruins - Urban",
 				"ref_id": "07310FF0",
-				"location": "HackneyWorld"
+				"area": "HackneyWorld"
 			}
 		},
 		{
@@ -6610,7 +6610,7 @@
 				"title": "Camden",
 				"description": "Town",
 				"ref_id": "07310FF4",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6627,7 +6627,7 @@
 				"title": "London",
 				"description": "Ruins - Urban",
 				"ref_id": "07310FF5",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6644,7 +6644,7 @@
 				"title": "Islington",
 				"description": "Town",
 				"ref_id": "07310FF6",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6661,7 +6661,7 @@
 				"title": "Hackney",
 				"description": "Town",
 				"ref_id": "07310FF7",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6678,7 +6678,7 @@
 				"title": "Hackney",
 				"description": "Town",
 				"ref_id": "07310FFC",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -6695,7 +6695,7 @@
 				"title": "London",
 				"description": "Ruins - Urban",
 				"ref_id": "07310FFD",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -6712,7 +6712,7 @@
 				"title": "Westminster",
 				"description": "City",
 				"ref_id": "07310FFE",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -6729,7 +6729,7 @@
 				"title": "Camden",
 				"description": "Town",
 				"ref_id": "07310FFF",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -6746,7 +6746,7 @@
 				"title": "Hackney",
 				"description": "Town",
 				"ref_id": "07311003",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6763,7 +6763,7 @@
 				"title": "Islington",
 				"description": "Town",
 				"ref_id": "07311004",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6780,7 +6780,7 @@
 				"title": "Camden",
 				"description": "Town",
 				"ref_id": "07311005",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6797,7 +6797,7 @@
 				"title": "Westminster",
 				"description": "City",
 				"ref_id": "07311006",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6814,7 +6814,7 @@
 				"title": "London",
 				"description": "Ruins - Urban",
 				"ref_id": "0731100B",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -6831,7 +6831,7 @@
 				"title": "Westminster",
 				"description": "City",
 				"ref_id": "0731100C",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -6848,7 +6848,7 @@
 				"title": "Islington",
 				"description": "Town",
 				"ref_id": "0731100D",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -6865,7 +6865,7 @@
 				"title": "Hackney",
 				"description": "Town",
 				"ref_id": "0731100E",
-				"location": "CamdenWorld"
+				"area": "CamdenWorld"
 			}
 		},
 		{
@@ -6882,7 +6882,7 @@
 				"title": "",
 				"description": "",
 				"ref_id": "073115B5",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -6899,7 +6899,7 @@
 				"title": "Westminster Underground Station",
 				"description": "Metro Station",
 				"ref_id": "07312FDD",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6916,7 +6916,7 @@
 				"title": "Emelio's Caffe",
 				"description": "Custom 71",
 				"ref_id": "07312FDF",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6933,7 +6933,7 @@
 				"title": "Tenpenny Manor",
 				"description": "Goodneighbor",
 				"ref_id": "07312FE1",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6950,7 +6950,7 @@
 				"title": "Westminster Abbey",
 				"description": "Church",
 				"ref_id": "07312FE3",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6967,7 +6967,7 @@
 				"title": "Palace of Westminster",
 				"description": "Custom House",
 				"ref_id": "07312FE5",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -6984,7 +6984,7 @@
 				"title": "10 Downing Street",
 				"description": "Custom House",
 				"ref_id": "07312FE7",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7001,7 +7001,7 @@
 				"title": "Horse Guards",
 				"description": "Gov't Building / Monument",
 				"ref_id": "07312FE9",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7018,7 +7018,7 @@
 				"title": "Piccadilly Circus",
 				"description": "Drive-In",
 				"ref_id": "07312FEB",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7035,7 +7035,7 @@
 				"title": "The Mall",
 				"description": "Car",
 				"ref_id": "07312FED",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7052,7 +7052,7 @@
 				"title": "Admiralty Arch",
 				"description": "Diamond City",
 				"ref_id": "07312FEF",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7069,7 +7069,7 @@
 				"title": "NuSkin",
 				"description": "Hospital",
 				"ref_id": "07312FF1",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7086,7 +7086,7 @@
 				"title": "Westminster University",
 				"description": "School",
 				"ref_id": "07312FF3",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7103,7 +7103,7 @@
 				"title": "Oxford Circus",
 				"description": "Custom 77",
 				"ref_id": "07312FF5",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7120,7 +7120,7 @@
 				"title": "Westminster Refuse",
 				"description": "Junkyard",
 				"ref_id": "07312FF7",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7137,7 +7137,7 @@
 				"title": "Crash Site",
 				"description": "Custom 77",
 				"ref_id": "07312FF9",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7154,7 +7154,7 @@
 				"title": "Regent Street",
 				"description": "Car",
 				"ref_id": "07312FFB",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7171,7 +7171,7 @@
 				"title": "Carnaby Street",
 				"description": "Custom 77",
 				"ref_id": "07312FFD",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7188,7 +7188,7 @@
 				"title": "St James's Palace",
 				"description": "Castle",
 				"ref_id": "07313000",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7205,7 +7205,7 @@
 				"title": "St James's Park",
 				"description": "Pond / Lake",
 				"ref_id": "07313002",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7222,7 +7222,7 @@
 				"title": "Buckingham Palace",
 				"description": "Country Club",
 				"ref_id": "07313004",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7239,7 +7239,7 @@
 				"title": "Wellington Arch",
 				"description": "Custom 77",
 				"ref_id": "07313006",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7256,7 +7256,7 @@
 				"title": "Green Park",
 				"description": "Forested",
 				"ref_id": "07313008",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7273,7 +7273,7 @@
 				"title": "Green Park Underground Station",
 				"description": "Metro Station",
 				"ref_id": "0731300A",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7290,7 +7290,7 @@
 				"title": "A4",
 				"description": "Car",
 				"ref_id": "0731300C",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7307,7 +7307,7 @@
 				"title": "Tournament Grounds",
 				"description": "Minutemen",
 				"ref_id": "0731300E",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7324,7 +7324,7 @@
 				"title": "Speaker's Corner",
 				"description": "Railroad - Faction",
 				"ref_id": "07313010",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7341,7 +7341,7 @@
 				"title": "Marble Arch",
 				"description": "Custom 77",
 				"ref_id": "07313012",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7358,7 +7358,7 @@
 				"title": "Hyde Park Corner Underground Station",
 				"description": "Metro Station",
 				"ref_id": "07313014",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7375,7 +7375,7 @@
 				"title": "Knightsbridge Underground Station",
 				"description": "Metro Station",
 				"ref_id": "07313016",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7392,7 +7392,7 @@
 				"title": "King Herods",
 				"description": "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement",
 				"ref_id": "07313018",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7409,7 +7409,7 @@
 				"title": "Victoria and Albert Museum",
 				"description": "Gov't Building / Monument",
 				"ref_id": "0731301A",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7426,7 +7426,7 @@
 				"title": "Science Museum",
 				"description": "Gov't Building / Monument",
 				"ref_id": "0731301C",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7443,7 +7443,7 @@
 				"title": "Natural History Museum",
 				"description": "Gov't Building / Monument",
 				"ref_id": "0731301E",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7460,7 +7460,7 @@
 				"title": "Royal Albert Hall",
 				"description": "Observatory",
 				"ref_id": "07313020",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7477,7 +7477,7 @@
 				"title": "Hyde Park",
 				"description": "Forested",
 				"ref_id": "07313022",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7494,7 +7494,7 @@
 				"title": "Grosvenor Square",
 				"description": "Ruins - Town",
 				"ref_id": "07313028",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7511,7 +7511,7 @@
 				"title": "Mount Street",
 				"description": "Custom 77",
 				"ref_id": "0731302A",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7528,7 +7528,7 @@
 				"title": "Bond Street Underground Station",
 				"description": "Metro Station",
 				"ref_id": "0731302C",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7545,7 +7545,7 @@
 				"title": "British Military Checkpoint",
 				"description": "Military Base",
 				"ref_id": "0731302F",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7562,7 +7562,7 @@
 				"title": "Two Westminster Chairmen",
 				"description": "Custom 69",
 				"ref_id": "07313031",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7579,7 +7579,7 @@
 				"title": "Aeneid",
 				"description": "Railroad - Faction",
 				"ref_id": "07313033",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7596,7 +7596,7 @@
 				"title": "Parliament Square Garden",
 				"description": "Custom 77",
 				"ref_id": "07313035",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7613,7 +7613,7 @@
 				"title": "Westminster Gate",
 				"description": "Diamond City",
 				"ref_id": "07313037",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7630,7 +7630,7 @@
 				"title": "Inferno Lake",
 				"description": "Pond / Lake",
 				"ref_id": "07313E08",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7647,7 +7647,7 @@
 				"title": "Nadia's Trade Post",
 				"description": "Custom 77",
 				"ref_id": "07314583",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7664,7 +7664,7 @@
 				"title": "Churchill Library",
 				"description": "Custom 77",
 				"ref_id": "073156A3",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7681,7 +7681,7 @@
 				"title": "Do It Yourself",
 				"description": "Custom 77",
 				"ref_id": "073156A5",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7698,7 +7698,7 @@
 				"title": "Insect Birthing Pool",
 				"description": "Pond / Lake",
 				"ref_id": "073193AA",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7715,7 +7715,7 @@
 				"title": "Wandsworth Pindar",
 				"description": "Vault",
 				"ref_id": "0731A017",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7732,7 +7732,7 @@
 				"title": "Nunhead Cemetary",
 				"description": "Graveyard",
 				"ref_id": "0731E15E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7749,7 +7749,7 @@
 				"title": "Morrisinghs Convenience Store",
 				"description": "Ruins - Urban",
 				"ref_id": "073204F9",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -7766,7 +7766,7 @@
 				"title": "London Electronics Store",
 				"description": "Ruins - Urban",
 				"ref_id": "073204FB",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -7783,7 +7783,7 @@
 				"title": "Plodd Bins",
 				"description": "Ruins - Urban",
 				"ref_id": "073204FD",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -7800,7 +7800,7 @@
 				"title": "Gregori's Bakery",
 				"description": "Ruins - Urban",
 				"ref_id": "073204FF",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -7817,7 +7817,7 @@
 				"title": "Singhsbury Local",
 				"description": "Ruins - Urban",
 				"ref_id": "07320501",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -7834,7 +7834,7 @@
 				"title": "Islington Bank",
 				"description": "Ruins - Urban",
 				"ref_id": "07320503",
-				"location": "IslingtonWorld"
+				"area": "IslingtonWorld"
 			}
 		},
 		{
@@ -7851,7 +7851,7 @@
 				"title": "Observation Point",
 				"description": "Custom 77",
 				"ref_id": "07320B81",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7868,7 +7868,7 @@
 				"title": "",
 				"description": "",
 				"ref_id": "07322746",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7885,7 +7885,7 @@
 				"title": "Thameshaven Market",
 				"description": "Railroad - Faction",
 				"ref_id": "07329F3E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7902,7 +7902,7 @@
 				"title": "Head of Civil Service's Office",
 				"description": "Institute",
 				"ref_id": "0732A2B3",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		},
 		{
@@ -7919,7 +7919,7 @@
 				"title": "St Paul's Cathedral",
 				"description": "Church",
 				"ref_id": "0732ACF2",
-				"location": "StPaulsWorld"
+				"area": "StPaulsWorld"
 			}
 		},
 		{
@@ -7936,7 +7936,7 @@
 				"title": "Bank Of England",
 				"description": "Faneuil Hall",
 				"ref_id": "0732F37E",
-				"location": "LondonWorld"
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -7953,7 +7953,7 @@
 				"title": "London",
 				"description": "Ruins - Urban",
 				"ref_id": "0732F381",
-				"location": "BankofEnglandWorld"
+				"area": "BankofEnglandWorld"
 			}
 		},
 		{
@@ -7970,7 +7970,7 @@
 				"title": "Imperial War Museum",
 				"description": "Military Base",
 				"ref_id": "0732F384",
-				"location": "BankofEnglandWorld"
+				"area": "BankofEnglandWorld"
 			}
 		},
 		{
@@ -7987,7 +7987,7 @@
 				"title": "Imperial War Museum",
 				"description": "Military Base",
 				"ref_id": "0732F385",
-				"location": "WestminsterWorld"
+				"area": "WestminsterWorld"
 			}
 		}
 	]

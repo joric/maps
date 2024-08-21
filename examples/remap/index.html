@@ -404,7 +404,7 @@ function warpToControlPoints(point, controlPointsData, smoothing = 1, power = 2)
 
 function processRegions(marker) {
   let [x, y] = marker.feature.geometry.coordinates;
-  let area = marker.feature.properties.location;
+  let area = marker.feature.properties.area;
 
   if (t = (maps[mapId].regions && maps[mapId].regions[area])) {
     x = x * t.scale + t.offset.x;
@@ -455,7 +455,7 @@ function loadMarkers() {
       filter: f=> {
 
         let o = f.properties;
-        let area = o.location;
+        let area = o.area;
         let type = o.description;
         let skip = (area != mapId && !(maps[mapId].regions && maps[mapId].regions[area]));
 
@@ -486,7 +486,7 @@ function loadMarkers() {
       let name = o.title;
 
       //let content = '';//'<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
-      let content = `<b>${o.title}</b><br/>${o.description}<br/><small>${o.location}</small>`;
+      let content = `<b>${o.title}</b><br/>${o.description}<br/><small>${o.area}</small>`;
       let latlng = marker.getLatLng();
 
       let strLL = String([latlng.lat, latlng.lng]);

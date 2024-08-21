@@ -45,7 +45,7 @@ begin
 
     area := LinksTo(ElementByName(cell, 'Worldspace'));
     if Assigned(area) then begin
-      MarkerObj.O['properties'].S['location'] := EditorID(area);
+      MarkerObj.O['properties'].S['area'] := EditorID(area);
     end;
 
   end;
