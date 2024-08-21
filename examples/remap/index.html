@@ -131,46 +131,57 @@ function removeSelection() {
 
 let helpers = null;
 let helpersPopup = null;
+let innerCircle;
+let outerCircle;
 
 function addHelpers(marker) {
   let cp = settings.remap.controlPoints[marker.feature.properties.ref_id];
   if (cp && cp.warp) {
-    helpers = L.layerGroup();
-    L.circle(marker.getLatLng(), {radius: 200, color: 'green', interactive: true}).addTo(helpers).on('mousedown', startResize)
-    L.circle(marker.getLatLng(), {radius: 100, color: 'blue', interactive: true}).addTo(helpers).on('mousedown', startResize)
-    helpers.addTo(map);
+    outerCircle = L.circle(marker.getLatLng(), {radius: 200, color: 'green', interactive: true}).addTo(map).on('mousedown', startResize);
+    innerCircle = L.circle(marker.getLatLng(), {radius: 100, color: 'blue', interactive: true}).addTo(map).on('mousedown', startResize);
+  }
+}
+
+function removeHelpers() {
+  if (innerCircle || outerCircle) {
+    map.removeLayer(outerCircle);
+    map.removeLayer(innerCircle);
+    delete outerCircle;
+    delete innerCircle;
   }
 }
 
 let circle;
-let startRadius;
-let startPoint;
-let popupTimer;
-let startDelta;
 let startGap;
+let popupTimer = null;
 
 const preventTextSelection = e=>e.preventDefault();
 
 function startResize(e) {
-  L.DomEvent.on(document, 'mousemove', resize);
-  L.DomEvent.on(document, 'mouseup', stopResize);
-  map.options.closePopupOnClick = false;
+  clearTimeout(popupTimer);
+  keepPopupsOpen = true;
   map.dragging.disable();
   document.addEventListener('selectstart', preventTextSelection );
-  keepPopupOpen = true;
-  clearTimeout(popupTimer);
-
+  L.DomEvent.on(document, 'mousemove', resize);
+  L.DomEvent.on(document, 'mouseup', stopResize);
   circle = e.target;
-  startRadius = circle.getRadius();
-  startPoint = map.mouseEventToLatLng(e.originalEvent);
-  startGap = startRadius - startPoint.distanceTo(circle.getLatLng());
+  let startPoint = map.mouseEventToLatLng(e.originalEvent);
+  let startRadius = circle.getRadius();
+  let startDistance = startPoint.distanceTo(circle.getLatLng());
+  startGap = startRadius - startDistance;
 }
 
 function resize(e) {
   let newPoint = map.mouseEventToLatLng(e);
   let distance = newPoint.distanceTo(circle.getLatLng());
   let newRadius = distance + startGap;
-  circle.setRadius(newRadius);
+  circle.setRadius( newRadius );
+  
+  if (circle==innerCircle && newRadius > outerCircle.getRadius()) {
+    outerCircle.setRadius(newRadius);
+  } else if (circle==outerCircle && newRadius < innerCircle.getRadius()) {
+    innerCircle.setRadius(newRadius);
+  }
 }
 
 function stopResize(e) {
@@ -178,14 +189,7 @@ function stopResize(e) {
   L.DomEvent.off(document, 'mouseup', stopResize);
   map.dragging.enable();
   document.removeEventListener('selectstart', preventTextSelection); 
-  popupTimer = setTimeout(()=>{keepPopupOpen = false}, 0);
-}
-
-function removeHelpers() {
-  if (helpers) {
-    map.removeLayer(helpers);
-    delete helpers;
-  }
+  popupTimer = setTimeout(()=>{keepPopupsOpen = false}, 0);
 }
 
 
@@ -225,7 +229,7 @@ const map = L.map('map', {
 }).setView(pos, zoom);
 
 map.on('click', e=>{
-  if (!keepPopupOpen) {
+  if (!keepPopupsOpen) {
     map.closePopup();
   }
 })
