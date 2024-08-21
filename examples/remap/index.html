@@ -214,20 +214,20 @@ let history_pos = -1;
 
 function updateHistory() {
   history_pos = (history_pos + 1) % history_size;
-  history[history_pos] = structuredClone(settings.remap.controlPoints);
+  history[history_pos] = JSON.stringify(settings.remap.controlPoints);
 }
 
 function undo() {
   if (history_pos <= 0) return;
   history_pos -= 1;
-  settings.remap.controlPoints = history[history_pos];
+  settings.remap.controlPoints = JSON.parse(history[history_pos]);
   updateMarkers();
 }
 
 function redo() {
   if (history_pos == history.length-1 || history_pos == history_size-1) return;
   history_pos += 1;
-  settings.remap.controlPoints = history[history_pos];
+  settings.remap.controlPoints = JSON.parse(history[history_pos]);
   updateMarkers();
 }
 
@@ -772,6 +772,7 @@ function updateControlPoint(marker, latlng, osm_data) {
 }
 
 function markerDragStart() {
+  removeHelpers();
 }
 
 function markerDragEnd(e) {
@@ -1045,22 +1046,22 @@ function searchLocation(text, marker) {
     let info =`${data[0].name} ${data[0].addresstype} ${data[0].display_name}`;
     let text = ['Set control point to this location?', info, 'Click OK to continue, Cancel to fly back.'].join('\n\n');
 
+    setSelection(latlng);
     map.flyTo(latlng);
 
     map.once('moveend', function() {
-      setSelection(latlng);
+      removeHelpers();
+ 
+      if (confirm(text)) {
+        updateControlPoint(marker, latlng, data[0]);
+        updateHistory();
+        map.flyTo(latlng);
+        saveSettings();
+      } else {
+        map.flyTo(marker.getLatLng());
+      }
 
-      setTimeout(function() {
-        if (confirm(text)) {
-          updateControlPoint(marker, latlng, data[0]);
-          updateHistory();
-          map.flyTo(latlng);
-          saveSettings();
-        } else {
-          map.flyTo(marker.getLatLng());
-        }
-        removeSelection();
-      }, 100); // let selection render
+      removeSelection();
 
     });
 
