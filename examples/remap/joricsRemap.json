@@ -134,7 +134,9 @@
           ],
           "title": "HMS Belfast",
           "osm": {
-            "osm_id": 5006061
+            "osm_id": 5006061,
+            "osm_type": "way",
+            "name": "HMS Belfast"
           }
         },
         "072FDC0C": {
@@ -153,10 +155,15 @@
         },
         "0728B717": {
           "coordinates": [
-            51.431596648896274,
-            -0.20275026968126383
+            51.4290943,
+            -0.2649870574675258
           ],
-          "title": "Camelot"
+          "title": "Camelot",
+          "osm": {
+            "osm_id": 4769474,
+            "osm_type": "way",
+            "name": "Kingston University (Kingston Hill Campus)"
+          }
         },
         "070CE1B3": {
           "coordinates": [
@@ -167,17 +174,27 @@
         },
         "072FDB3E": {
           "coordinates": [
-            51.530051306080956,
-            -0.12764840735851554
+            51.5299119,
+            -0.1276918163545741
           ],
-          "title": "British Library"
+          "title": "British Library",
+          "osm": {
+            "osm_id": 4680891,
+            "osm_type": "way",
+            "name": "British Library"
+          }
         },
         "072FDB72": {
           "coordinates": [
             51.5145033,
             -0.08033641042296048
           ],
-          "title": "The Gherkin"
+          "title": "The Gherkin",
+          "osm": {
+            "osm_id": 4959489,
+            "osm_type": "way",
+            "name": "30 St Mary Axe"
+          }
         },
         "072FDB56": {
           "coordinates": [
@@ -255,7 +272,12 @@
             51.5393983,
             -0.1415573
           ],
-          "title": "Camden Town Underground Station"
+          "title": "Camden Town Underground Station",
+          "osm": {
+            "osm_id": 469789377,
+            "osm_type": "node",
+            "name": "Camden Town Station"
+          }
         },
         "07313020": {
           "coordinates": [
@@ -293,10 +315,15 @@
         },
         "0706862C": {
           "coordinates": [
-            51.43454046598776,
-            -0.21336507027650478
+            51.434787799999995,
+            -0.21349444561390601
           ],
-          "title": "Tennis Museum"
+          "title": "Tennis Museum",
+          "osm": {
+            "osm_id": 121750021,
+            "osm_type": "way",
+            "name": "Wimbledon Lawn Tennis Museum"
+          }
         },
         "0728B6FF": {
           "coordinates": [
@@ -775,14 +802,24 @@
             51.530609,
             -0.1239491
           ],
-          "title": "King's Cross St. Pancras Station"
+          "title": "King's Cross St. Pancras Station",
+          "osm": {
+            "osm_id": 119274464,
+            "osm_type": "node",
+            "name": "King's Cross St Pancras"
+          }
         },
         "072FDB40": {
           "coordinates": [
-            51.52981035,
-            -0.12599156318559535
+            51.529900999999995,
+            -0.12580119163279896
           ],
-          "title": "St Pancras International Hotel"
+          "title": "St Pancras International Hotel",
+          "osm": {
+            "osm_id": 15694166,
+            "osm_type": "way",
+            "name": "St Pancras Renaissance London Hotel"
+          }
         },
         "072FDB3C": {
           "coordinates": [
@@ -800,10 +837,15 @@
         },
         "070683D7": {
           "coordinates": [
-            51.493617449216615,
-            -0.033183368206135544
+            51.49074405,
+            -0.031545034474094416
           ],
-          "title": "Prilladog Food Factory"
+          "title": "Prilladog Food Factory",
+          "osm": {
+            "osm_id": 25952687,
+            "osm_type": "way",
+            "name": "Aragon Tower"
+          }
         },
         "07312FE9": {
           "coordinates": [
@@ -829,7 +871,12 @@
             51.49959285,
             -0.03342757678163921
           ],
-          "title": "Rotherhithe Docks"
+          "title": "Rotherhithe Docks",
+          "osm": {
+            "osm_id": 101941765,
+            "osm_type": "way",
+            "name": "Surrey Docks Farm"
+          }
         },
         "072FDC1E": {
           "coordinates": [
@@ -860,7 +907,12 @@
             51.5334179,
             -0.1385304
           ],
-          "title": "Mornington Crescent Underground Station"
+          "title": "Mornington Crescent Underground Station",
+          "osm": {
+            "osm_id": 469760434,
+            "osm_type": "node",
+            "name": "Mornington Crescent Station"
+          }
         },
         "071E6A19": {
           "coordinates": [
@@ -972,22 +1024,15 @@
         },
         "072ED6F4": {
           "coordinates": [
-            51.5257586,
-            -0.0747496
+            51.5259868,
+            -0.0753739
           ],
           "title": "Arnold Circus",
           "osm": {
-            "osm_id": 884950255,
+            "osm_id": 745736602,
             "osm_type": "way",
             "name": "Arnold Circus"
           }
-        },
-        "0728B6F8": {
-          "coordinates": [
-            51.52008035,
-            -0.07172216006154152
-          ],
-          "title": "Whitechapel Off Licence"
         },
         "071E6A21": {
           "coordinates": [
@@ -1691,17 +1736,21 @@
           ],
           "title": "Kingsland Basin",
           "osm": {
-            "osm_id": 533890016
+            "osm_id": 533890016,
+            "osm_type": "way",
+            "name": "Kingsland Basin"
           }
         },
         "072ED71C": {
           "coordinates": [
-            51.5300267,
-            -0.074467
+            51.5291543,
+            -0.0749998
           ],
           "title": "Hoxton Station",
           "osm": {
-            "osm_id": 469767610
+            "osm_id": 469774631,
+            "osm_type": "node",
+            "name": "Hoxton Station"
           }
         },
         "072FDC3C": {
@@ -1988,6 +2037,30 @@
             "osm_type": "node",
             "name": "Oval Station"
           }
+        },
+        "0728B70D": {
+          "coordinates": [
+            51.497086800000005,
+            -0.02673899487405057
+          ],
+          "title": "KemPharm Offices",
+          "osm": {
+            "osm_id": 21361182,
+            "osm_type": "way",
+            "name": "Sir John McDougall Gardens"
+          }
+        },
+        "07068627": {
+          "coordinates": [
+            51.42240645,
+            -0.2611743741913509
+          ],
+          "title": "Razorgrain Field",
+          "osm": {
+            "osm_id": 4782157,
+            "osm_type": "way",
+            "name": "Coombe Hill Golf Club"
+          }
         }
       },
       "smoothing": 0,
@@ -1999,9 +2072,9 @@
       "warped": true
     },
     "center": [
-      51.49575940124326,
-      -0.10857582092285158
+      51.49116368809977,
+      -0.22607803344726562
     ],
-    "zoom": 14
+    "zoom": 13
   }
 }
