@@ -133,12 +133,22 @@ let helpers = null;
 let helpersPopup = null;
 let innerCircle;
 let outerCircle;
+let smoothingScale = 5000;
+let powerScale = 20;
+let currentMarker;
 
 function addHelpers(marker) {
+  removeHelpers();
   let cp = settings.remap.controlPoints[marker.feature.properties.ref_id];
   if (cp && cp.warp) {
-    outerCircle = L.circle(marker.getLatLng(), {radius: 200, color: 'green', interactive: true}).addTo(map).on('mousedown', startResize);
-    innerCircle = L.circle(marker.getLatLng(), {radius: 100, color: 'blue', interactive: true}).addTo(map).on('mousedown', startResize);
+
+    let ro = cp.warp.smoothing * smoothingScale;
+    let ri  = Math.min(ro, cp.warp.power * powerScale);
+
+    outerCircle = L.circle(marker.getLatLng(), {radius: ro, color: 'green', interactive: true}).addTo(map).on('mousedown', startResize);
+    innerCircle = L.circle(marker.getLatLng(), {radius: ri, color: 'blue', interactive: true}).addTo(map).on('mousedown', startResize);
+
+    currentMarker = marker;
   }
 }
 
@@ -178,10 +188,16 @@ function resize(e) {
   let newRadius = distance + startGap;
   circle.setRadius( newRadius );
   
-  if (circle==innerCircle && newRadius > outerCircle.getRadius()) {
-    outerCircle.setRadius(newRadius);
-  } else if (circle==outerCircle && newRadius < innerCircle.getRadius()) {
-    innerCircle.setRadius(newRadius);
+  if (circle==innerCircle) {
+    if (newRadius > outerCircle.getRadius()) {
+      outerCircle.setRadius(newRadius);
+    }
+    settings.remap.controlPoints[currentMarker.feature.properties.ref_id].warp.power = newRadius / powerScale;
+  } else if (circle==outerCircle) {
+    if (newRadius < innerCircle.getRadius()) {
+      innerCircle.setRadius(newRadius);
+    }
+    settings.remap.controlPoints[currentMarker.feature.properties.ref_id].warp.smoothing = newRadius / smoothingScale;
   }
 }
 
@@ -537,7 +553,15 @@ function bindPopup(marker) {
 
   let cp = settings.remap.controlPoints[o.ref_id];
   if (cp) {
-    content += '<hr><button id="unbind-marker-btn">Unbind Marker</button>';
+    content += '<hr><button id="unbind-marker-btn">Unbind</button>';
+
+    if (cp.warp) {
+      content += ' <button id="unwarp-marker-btn">Unwarp</button>';
+    } else {
+      content += ' <button id="warp-marker-btn">Warp</button>';
+    }
+
+
     if (cp.osm && cp.osm.osm_id) {
       let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
       content += ' OSM id: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
@@ -545,7 +569,7 @@ function bindPopup(marker) {
   }
 
   content += '<hr>Search results: <span id="possible-location">searching...</span>';
-  content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search Location</button></form>';
+  content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search</button></form>';
 
   function updateSearchResults(text) {
     let oldLatLng = marker.getLatLng();
@@ -603,7 +627,16 @@ function bindPopup(marker) {
         }
       }
     }
-    if (e=document.querySelector('#unbind-marker-btn')) e.onclick = function() { unbindMarker(o.ref_id) };
+
+    let t=document.querySelector('#unbind-marker-btn')
+    if (t) t.onclick = function() { unbindMarker(o.ref_id) };
+
+    t = document.querySelector('#unwarp-marker-btn')
+    if (t) t.onclick = function() { unwarpMarker(marker, o.ref_id) };
+
+    t = document.querySelector('#warp-marker-btn')
+    if (t) t.onclick = function() { warpMarker(marker, o.ref_id) };
+
   }, 250);
 
   return content;
@@ -762,6 +795,20 @@ function unbindMarker(ref_id) {
     saveSettings();
     updateMarkers();
   }
+}
+
+function unwarpMarker(marker, ref_id) {
+  delete settings.remap.controlPoints[ref_id].warp;
+  updateMarkers();
+  marker.closePopup();
+  setTimeout(()=>{marker.openPopup()},0);
+}
+
+function warpMarker(marker, ref_id) {
+  settings.remap.controlPoints[ref_id].warp = { smoothing: 0.0428, power: 5.0 };
+  updateMarkers();
+  marker.closePopup();
+  setTimeout(()=>{marker.openPopup()},0);
 }
 
 function markerContextMenu(e) {
