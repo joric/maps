@@ -69,6 +69,89 @@
 <input id="file" type='file' hidden/>
 
 <script>
+
+let baseLayers = {};
+
+baseLayers['CartoDB Voyager'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 20
+});
+
+baseLayers['CartoDB DarkMatter'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 20
+});
+
+baseLayers['Esri World Imagery'] = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
+
+
+baseLayers['Esri World Street Map'] = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+});
+
+baseLayers['OpenStreetMap Mapnik'] = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+
+baseLayers['OpenStreetMap HOT'] = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+});
+
+baseLayers['Wikimedia'] = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
+  minZoom: 1,
+  maxZoom: 18,
+  attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>'
+});
+
+baseLayers['Google Sattelite'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+  maxZoom: 20,
+  subdomains:['mt0','mt1','mt2','mt3'],
+  attribution: '<a href="https://cloud.google.com/maps-platform/terms?hl=es-419">Google Satellite</a>'
+});
+
+baseLayers['Google Streets'] = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+  maxZoom: 20,
+  subdomains:['mt0','mt1','mt2','mt3'],
+  attribution: '<a href="https://cloud.google.com/maps-platform/terms?hl=es-419">Google Streets</a>'
+});
+
+baseLayers['Google Hybrid'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+  maxZoom: 20,
+  subdomains:['mt0','mt1','mt2','mt3'],
+  attribution: '<a href="https://cloud.google.com/maps-platform/terms?hl=es-419">Google Hybrid</a>'
+});
+
+baseLayers['Google Terrain'] = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+  maxZoom: 20,
+  subdomains:['mt0','mt1','mt2','mt3'],
+  attribution: '<a href="https://cloud.google.com/maps-platform/terms?hl=es-419">Google Terrain</a>'
+});
+
+baseLayers['Google Traffic'] = L.tileLayer('https://{s}.google.com/vt/lyrs=m@221097413,traffic&x={x}&y={y}&z={z}', {
+  maxZoom: 20,
+  minZoom: 2,
+  subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+  attribution: '<a href="https://cloud.google.com/maps-platform/terms?hl=es-419">Google Traffic</a>'
+});
+
+baseLayers['Yandex MapJS'] = new L.TileLayer('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&lang=en', {
+    reuseTiles: true, 
+    updateWhenIdle: false,
+    attribution: '<a href="https://yandex.ru/legal/maps_api/">Yandex Maps</a>'
+});
+
+baseLayers['Yandex Satellite'] = new L.TileLayer('https://core-sat.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&lang=en', {
+    reuseTiles: true, 
+    updateWhenIdle: false,
+    attribution: '<a href="https://yandex.ru/legal/maps_api/">Yandex Satellite</a>'
+});
+
 let defaultLocalData = {
   'LondonWorld': {
     remap: {
@@ -87,7 +170,7 @@ let defaultLocalData = {
       smoothing: 0.0428,
       power: 5.0,
       activeLayers: {'Markers': true},
-      provider: 'CartoDB_Voyager',
+      provider: Object.keys(baseLayers)[0],
       warped: true,
     }
   }
@@ -272,77 +355,6 @@ if (settings.remap.activeLayers['Markers']==true) {
 if (settings.remap.activeLayers['Images']==true) {
   map.addLayer(imgGroup);
 }
-
-let baseLayers = {};
-
-// open street map is seriously better than voyager, because it has names
-
-baseLayers['OpenStreetMap_Mapnik'] = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-});
-
-baseLayers['OpenStreetMap_HOT'] = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
-});
-
-baseLayers['CartoDB_Voyager'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: 'abcd',
-  maxZoom: 20
-});
-
-baseLayers['CartoDB_DarkMatter'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: 'abcd',
-  maxZoom: 20
-});
-
-baseLayers['Esri_WorldImagery'] = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-});
-
-
-baseLayers['Esri_WorldStreetMap'] = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-});
-
-baseLayers['googleSat'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
-        maxZoom: 20,
-        subdomains:['mt0','mt1','mt2','mt3']
-});
-
-baseLayers['googleStreets'] = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
-        maxZoom: 20,
-        subdomains:['mt0','mt1','mt2','mt3']
-});
-
-baseLayers['googleHybrid'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
-        maxZoom: 20,
-        subdomains:['mt0','mt1','mt2','mt3']
-});
-
-baseLayers['googleTerrain'] = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
-        maxZoom: 20,
-        subdomains:['mt0','mt1','mt2','mt3']
-});
-
-baseLayers['googleTraffic'] = L.tileLayer('https://{s}.google.com/vt/lyrs=m@221097413,traffic&x={x}&y={y}&z={z}', {
-        maxZoom: 20,
-        minZoom: 2,
-        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
-    });
-
-baseLayers['yandex core'] = new L.TileLayer('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&lang=en', {
-    reuseTiles: true, 
-    updateWhenIdle: false
-});
-
-baseLayers['yandex sat'] = new L.TileLayer('https://core-sat.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&lang=en', {
-    reuseTiles: true, 
-    updateWhenIdle: false
-});
 
 function updateCRS(provider) {
   let center = map.getCenter();
