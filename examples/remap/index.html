@@ -553,9 +553,44 @@ function project(marker, controlPointsData) {
   return [point.y, point.x];
 }
 
+function getMarkerByRefId(ref_id) {
+  for (marker of getMarkers()) {
+    if (marker.feature.properties.ref_id == ref_id) return marker;
+  }
+  return null;
+}
+
+function getMarkerByTitle(title) {
+  for (marker of getMarkers()) {
+    if (marker.feature.properties.title == title) return marker;
+  }
+  return null;
+}
+
+function unbindMarker(ref_id) { 
+  if (confirm('Are you sure you want to unbind this marker?')) {
+    delete settings.remap.controlPoints [ ref_id ];
+    saveSettings();
+    updateMarkers();
+    map.closePopup();
+  }
+}
+
+function unwarpMarker(ref_id) {
+  delete settings.remap.controlPoints[ref_id].warp;
+  updateMarkers();
+  map.closePopup();  
+}
+
+function warpMarker(ref_id) {
+  settings.remap.controlPoints[ref_id].warp = { inner: 200, outer: 400 };
+  updateMarkers();
+  map.closePopup();    
+}
+
+
 function bindPopup(marker) {
   addHelpers(marker);
-
   let o = marker.feature.properties;
   let name = o.title;
 
@@ -570,23 +605,25 @@ function bindPopup(marker) {
   content += '<hr><a href="https://www.google.com/maps/search/'+encodeURIComponent(strLL)+'" target=_blank>'+strLL+'</a>';
 
   let cp = settings.remap.controlPoints[o.ref_id];
+  let hasOSM = cp && cp.osm && cp.osm.osm_id && cp.osm.osm_type;  
+
   if (cp) {
-    content += '<hr><button id="unbind-marker-btn">Unbind</button>';
+    content += '<hr>';
+    content += '<button id="unbind-marker-btn" onclick=unbindMarker("'+o.ref_id+'")>Unbind</button>';
     if (cp.warp) {
-      content += ' <button id="unwarp-marker-btn">Unwarp</button>';
+      content += ' <button id="unwarp-marker-btn" onclick=unwarpMarker("'+o.ref_id+'")>Unwarp</button>';
     } else {
-      content += ' <button id="warp-marker-btn">Warp</button>';
+      content += ' <button id="warp-marker-btn" onclick=warpMarker("'+o.ref_id+'")>Warp</button>';
     }
   }
 
   content += ' <span id="osm-link"></span><hr/>';
 
-  if (cp && cp.osm) {
-    let caption = cp.osm.coordinates ? 'Set Location to OSM' : 'Get Coordinates from OSM id';
-    content += '<div id="search-results-location"><button id="reset-location">'+caption+'</button></div>';
-  } else {
-    content += '<div id="search-results-location"></div>';
+  content += '<div id="search-results-location">';
+  if (hasOSM) {
+    content += '<button id="reset-location">'+(cp.osm.coordinates ? 'Set Location to Saved OSM' : 'Make Location From OSM')+'</button>';
   }
+  content += '</div>';
 
   content += '<div style="margin-top: 8px;"><form id="search-location-form"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search</button></form></div>';
 
@@ -595,48 +632,40 @@ function bindPopup(marker) {
   let input = div.querySelector('#search-location-input');
   let text = marker.feature.properties.title;
 
-  if (cp.osm && cp.osm.name) {
-    text = cp.osm.name;
+  if (hasOSM) {
+    text = cp.osm.name || text;
 
-    if (cp.osm.osm_id && cp.osm.osm_type) {
+    let span = div.querySelector('#osm-link');
+    let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
+    span.innerHTML = 'OSM: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
 
-      let span = div.querySelector('#osm-link');
-
-      let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
-      span.innerHTML = 'OSM: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
-
-      let button = div.querySelector('#reset-location');
-
-      if (cp.osm.coordinates) {
-        let latlng = L.latLng(cp.osm.coordinates);
-        setSelection(latlng, 'green');
-        button.onclick = function() { setLocation(marker, latlng, cp.osm )};
-      } else {
-        setSelection(latlng);
-        button.onclick = function() { 
-          getOSM(cp.osm.osm_id, cp.osm.osm_type, function(latlng, data) {
-            if (data && latlng) {
-              setSelection(latlng);
-              setLocation(marker, latlng, data);
-            }
-          })
-        }
-      }
+    let button = div.querySelector('#reset-location');
+    if (cp.osm.coordinates) {
+      let latlng = L.latLng(cp.osm.coordinates);
+      setSelection(latlng, 'green');
+      button.addEventListener('click', () => setLocation(marker, latlng, cp.osm));
+    } else {
+      setSelection(latlng);
+      button.addEventListener('click', () => { 
+        getOSM(cp.osm.osm_id, cp.osm.osm_type, (latlng, data) => { 
+          if (data && latlng) { 
+            setSelection(latlng); 
+            setLocation(marker, latlng, data); 
+          } 
+        }); 
+      });
     }
   } 
 
   input.value = text;
-  input.select();
+
+  setTimeout(()=>{input.select()},0);
 
   div.querySelector('#search-location-form').onsubmit = function() {
     input.select();
     updateSearchResults(input.value);
     return false; // critical to prevent reload on submit
   }
-
-  if (t = div.querySelector('#unbind-marker-btn')) t.onclick = function() { unbindMarker(o.ref_id) };
-  if (t = div.querySelector('#unwarp-marker-btn')) t.onclick = function() { unwarpMarker(marker, o.ref_id) };
-  if (t = div.querySelector('#warp-marker-btn')) t.onclick = function() { warpMarker(marker, o.ref_id) };
 
   return div;
 
@@ -844,28 +873,6 @@ function markerDragEnd(e) {
 function markerDragged(e) {
   let marker = e.target;
   updateControlPoint(marker, marker.getLatLng());
-}
-
-function unbindMarker(ref_id) {
-  if (confirm('Are you sure you want to unbind this marker?')) {
-    delete settings.remap.controlPoints [ ref_id ];
-    saveSettings();
-    updateMarkers();
-  }
-}
-
-function unwarpMarker(marker, ref_id) {
-  delete settings.remap.controlPoints[ref_id].warp;
-  updateMarkers();
-  marker.closePopup();
-  setTimeout(()=>{marker.openPopup()},0);
-}
-
-function warpMarker(marker, ref_id) {
-  settings.remap.controlPoints[ref_id].warp = { inner: 200, outer: 400 };
-  updateMarkers();
-  marker.closePopup();
-  setTimeout(()=>{marker.openPopup()},0);
 }
 
 function markerContextMenu(e) {
@@ -1124,20 +1131,6 @@ function searchOSM(text, callback) {
     }
   })
   return true;
-}
-
-function getMarkerByRefId(ref_id) {
-  for (marker of getMarkers()) {
-    if (marker.feature.properties.ref_id == ref_id) return marker;
-  }
-  return null;
-}
-
-function getMarkerByTitle(title) {
-  for (marker of getMarkers()) {
-    if (marker.feature.properties.title == title) return marker;
-  }
-  return null;
 }
 
 function importOldControlPoint(title, coord) {
