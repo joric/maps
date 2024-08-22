@@ -114,6 +114,7 @@ let localDataName = 'joricsRemap';
 let mapId = 'LondonWorld';
 let settings = null;
 let circleMarker = null;
+let searchControl;
 
 function setSelection(latlng) {
   removeSelection();
@@ -173,6 +174,7 @@ function startResize(e) {
   let startRadius = circle.getRadius();
   let startDistance = startPoint.distanceTo(circle.getLatLng());
   startGap = startRadius - startDistance;
+  map.closePopup();
 }
 
 function resize(e) {
@@ -456,38 +458,6 @@ function remapPoint(point, quadCorners, rectSize, rectCenter) {
   return {x, y};
 }
 
-
-function warpToControlPoints1(point, controlPointsData, smoothing = 1, power = 2) {
-  let totalWeight = 0;
-  let weightedXSum = 0;
-  let weightedYSum = 0;
-
-  // Calculate the warped position
-  for (const { oldX, oldY, newX, newY } of Object.values(controlPointsData)) {
-    const dx = newX - oldX;
-    const dy = newY - oldY;
-    
-    const distance = Math.sqrt((point.x - oldX) ** 2 + (point.y - oldY) ** 2);
-    const adjustedDistance = Math.max(distance, smoothing);
-    const weight = 1 / (adjustedDistance ** power);
-
-    weightedXSum += (point.x + dx) * weight;
-    weightedYSum += (point.y + dy) * weight;
-    totalWeight += weight;
-  }
-  
-  // Normalize the result
-  if (totalWeight > 0) {
-    return {
-      x: weightedXSum / totalWeight,
-      y: weightedYSum / totalWeight
-    };
-  } 
-  
-  // Fallback to original point if totalWeight is zero
-  return point;
-}
-
 function warpToControlPoints(point, controlPointsData) {
   let totalWeight = 0;
   let weightedXSum = 0;
@@ -500,14 +470,19 @@ function warpToControlPoints(point, controlPointsData) {
       const {oldX, oldY, newX, newY} = prop;
       let inner = p.warp.inner;
       let outer = p.warp.outer;
-      let distance = map.distance( L.latLng([newY, newX]), L.latLng([point.y, point.x]) );
+
+      let distance = map.distance( L.latLng([oldY, oldX]), L.latLng([point.y, point.x]) );
+
       if (distance < outer) {
-        let power = (1 - inner/outer) * 200;
-        const weight = 1 / (distance ** power);
-        const dx = newX - oldX;
-        const dy = newY - oldY;
-        weightedXSum += dx * weight;
-        weightedYSum += dy * weight;
+
+        //let power = (1 - inner/outer) * 200;
+        //const weight = 1 / (distance ** power);
+
+        const weight = 1;
+
+
+        weightedXSum = (newX - oldX) * weight;
+        weightedYSum = (newY - oldY) * weight;
         totalWeight += weight;
       }
     }
@@ -722,15 +697,13 @@ function loadMarkers() {
     updateMarkers();
     updateHistory();
 
-    map.addControl( new L.Control.Search({
+    searchControl = new L.Control.Search({
       layer: markers,
       hideMarkerOnCollapse: true,
       initial: false,
-    }) );
-
+    }).addTo(map);
   })
 }
-
 
 function reloadImage() {
   if (globalImage) map.removeLayer(globalImage);
@@ -838,7 +811,7 @@ function unwarpMarker(marker, ref_id) {
 }
 
 function warpMarker(marker, ref_id) {
-  settings.remap.controlPoints[ref_id].warp = { inner: 100, outer: 200 };
+  settings.remap.controlPoints[ref_id].warp = { inner: 200, outer: 400 };
   updateMarkers();
   marker.closePopup();
   setTimeout(()=>{marker.openPopup()},0);
@@ -1126,7 +1099,7 @@ function importOldControlPoint(title, coord) {
   }
 }
 
-window.onload = e => {
+onload = e => {
 
   // fetch global markers from server, merge to your control points
   fetch(localDataName+'.json').then(r=>r.json()).then(data=>{
@@ -1141,13 +1114,18 @@ window.onload = e => {
   loadImages();
   loadMarkers();
 
-  map.on('keydown', evt=>{
-    let e = evt.originalEvent;
+  onkeydown = e => {
     if (e.ctrlKey) {
-      if (e.code == 'KeyZ') undo();
-      if (e.code == 'KeyY') redo();
+      switch (e.code) {
+        case 'KeyZ': undo(); break;
+        case 'KeyY': redo(); break;
+        case 'KeyF':
+          searchControl.expand(true);
+          e.preventDefault();
+          break;
+      }
     }
-  });
+  }
 }
 
 </script>
