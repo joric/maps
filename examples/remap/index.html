@@ -83,7 +83,6 @@ baseLayers['Esri World Imagery'] = L.tileLayer('https://server.arcgisonline.com/
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
-
 baseLayers['Esri World Street Map'] = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 });
@@ -93,7 +92,7 @@ baseLayers['OpenStreetMap Mapnik'] = L.tileLayer('https://tile.openstreetmap.org
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
-baseLayers['OpenStreetMap HOT'] = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+baseLayers['OSM Humanitarian'] = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
 });
@@ -359,31 +358,33 @@ for (const [name,layer] of Object.entries(layers)) {
 
 function updateCRS(provider) {
   let center = map.getCenter();
-
   if (settings.remap.provider.match( /yandex/gi )) {
     map.options.crs = L.CRS.EPSG3395;
   } else {
     map.options.crs = L.CRS.EPSG3857;
   }
-
   map.setView(center);
   map._resetView(map.getCenter(), map.getZoom());
 }
 
-settings.remap.provider = settings.remap.provider||'OpenStreetMap_Mapnik';
-for (const [provider, baseLayer] of Object.entries(baseLayers)) {
-  if (settings.remap.provider == provider) {
-    map.addLayer(baseLayer);
-    updateCRS();
+settings.remap.provider = settings.remap.provider || Object.keys(baseLayers)[0];
+
+function baseLayerChange(name) {
+  settings.remap.provider = name;
+  updateCRS();
+}
+
+for (const [name, layer] of Object.entries(baseLayers)) {
+  if (settings.remap.provider == name) {
+    map.addLayer(layer);
+    baseLayerChange(name);
   }
 }
 
 let layercontrol = L.control.layers(baseLayers, layers).addTo(map);
 
 map.on('baselayerchange', function(e) {
-  settings.remap.provider = e.name;
-  updateCRS();
-  //saveSettings();
+  baseLayerChange(e.name);
 });
 
 // see https://github.com/publiclab/Leaflet.DistortableImage/issues/1323#issuecomment-2295487916
@@ -485,13 +486,9 @@ function warpToControlPoints(point, controlPointsData) {
       let distance = map.distance( L.latLng([oldY, oldX]), L.latLng([point.y, point.x]) );
 
       if (distance < outer) {
-
         //let power = (1 - inner/outer) * 200;
         //const weight = 1 / (distance ** power);
-
         const weight = 1;
-
-
         weightedXSum = (newX - oldX) * weight;
         weightedYSum = (newY - oldY) * weight;
         totalWeight += weight;
@@ -745,7 +742,7 @@ function loadMarkers() {
     markersGroup.addLayer(markers);
 
     updateMarkers();
-    updateHistory();
+    saveSettings(); // create a start point for undo
 
     searchControl = new L.Control.Search({
       layer: markers,
@@ -1054,7 +1051,10 @@ function exportControlPoints() {
 
 
 function exportMarkers() {
-  let data = {"type": "FeatureCollection", features:[]};
+  let data = {
+    "type": "FeatureCollection",
+    features: []
+  };
 
   for (marker of getMarkers()) {
     let o = marker.feature.properties;
@@ -1073,37 +1073,38 @@ function exportMarkers() {
         f.properties.osm_name = p.name;
       }
     }
-
     data.features.push(f)
   }
 
-  let filename = 'markers.'+mapId+'.json';
+  let filename = 'markers.' + mapId + '.json';
   saveTextToFile(JSON.stringify(data, null, 2), filename);
 }
 
 function getOSM(osm_id, osm_type, callback) {
   let url = `https://www.openstreetmap.org/api/0.6/${osm_type}/${osm_id}`+(osm_type!='node' ? '/full':'')+'.json';
   //console.log('fetching', url);
-  fetch(url).then(r => r.json()).then(json => {
-    if (json) {
-      //console.log(json);
-      let data = {osm_id: osm_id, osm_type: osm_type, name: 'unknown', display_name: 'unknown'};
-      let bounds = L.latLngBounds();
-      for (e of Object.values(json.elements)) {
-        if (e.tags && e.tags.name) {
-          data.name = data.display_name = e.tags.name;
+  fetch(url)
+    .then(r => r.json())
+    .then(json => {
+      if (json) {
+        //console.log(json);
+        let data = {osm_id: osm_id, osm_type: osm_type, name: 'unknown', display_name: 'unknown'};
+        let bounds = L.latLngBounds();
+        for (e of Object.values(json.elements)) {
+          if (e.tags && e.tags.name) {
+            data.name = data.display_name = e.tags.name;
+          }
+          if (e.type=='node') {
+            bounds.extend( L.latLng([e.lat, e.lon]) );
+          }
         }
-        if (e.type=='node') {
-          bounds.extend( L.latLng([e.lat, e.lon]) );
-        }
+        let latlng = bounds.getCenter();
+        console.log(latlng, data);
+        return callback(latlng, data);
+      } else {
+        return callback();
       }
-      let latlng = bounds.getCenter();
-      console.log(latlng, data);
-      return callback(latlng, data);
-    } else {
-      return callback();
-    }
-  })
+    });
   return true;
 }
 

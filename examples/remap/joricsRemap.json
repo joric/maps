@@ -32,21 +32,15 @@
         "072FDB86": {
           "title": "London Eye",
           "osm": {
-            "osm_id": 204068874,
-            "osm_type": "way",
-            "name": "London Eye",
-            "coordinates": [
-              51.5033416,
-              -0.11967649999999999
-            ]
+            "osm_id": 204068874
           },
           "coordinates": [
             51.5033416,
             -0.11967649999999999
           ],
           "warp": {
-            "inner": 337.80863720157396,
-            "outer": 479.2489666231116
+            "inner": 100,
+            "outer": 200
           }
         },
         "072FDB89": {
@@ -451,8 +445,8 @@
         },
         "0706862C": {
           "coordinates": [
-            51.434787799999995,
-            -0.21349444561390601
+            51.45058375685898,
+            -0.32890319824218756
           ],
           "title": "Tennis Museum",
           "osm": {
@@ -2132,13 +2126,6 @@
             ]
           }
         },
-        "072FDB78": {
-          "coordinates": [
-            51.508874772025806,
-            -0.08680701255798341
-          ],
-          "title": "Ferryman Dockhouse"
-        },
         "070A70A2": {
           "coordinates": [
             51.5240733,
@@ -2286,13 +2273,13 @@
       "activeLayers": {
         "Markers": true
       },
-      "provider": "Yandex MapJS",
+      "provider": "CartoDB Voyager",
       "warped": true
     },
     "center": [
-      51.5072913792444,
-      -0.12119293212890626
+      51.511907519992995,
+      -0.08484363555908203
     ],
-    "zoom": 16
+    "zoom": 15
   }
 }
