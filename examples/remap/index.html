@@ -79,12 +79,6 @@ baseLayers['CartoDB Voyager'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/r
   maxZoom: 20
 });
 
-baseLayers['CartoDB DarkMatter'] = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: 'abcd',
-  maxZoom: 20
-});
-
 baseLayers['Esri World Imagery'] = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
@@ -300,24 +294,29 @@ let history_pos = -1;
 
 function updateHistory() {
   history_pos = (history_pos + 1) % history_size;
-  history[history_pos] = JSON.stringify(settings.remap.controlPoints);
+  //console.log('updating history', history_pos);
+  history[history_pos] = JSON.stringify(settings);
 }
 
 function undo() {
   if (history_pos <= 0) return;
   history_pos -= 1;
-  settings.remap.controlPoints = JSON.parse(history[history_pos]);
+  //console.log('loading history', history_pos);
+  settings = JSON.parse(history[history_pos]);
   updateMarkers();
 }
 
 function redo() {
   if (history_pos == history.length-1 || history_pos == history_size-1) return;
   history_pos += 1;
-  settings.remap.controlPoints = JSON.parse(history[history_pos]);
+  //console.log('loading history', history_pos);
+  settings = JSON.parse(history[history_pos]);
   updateMarkers();
 }
 
 function saveSettings() {
+  //console.log('saving...');
+  updateHistory();
   localStorage.setItem(localDataName, JSON.stringify(localData));
 }
 
@@ -342,6 +341,7 @@ map.on('click', e=>{
   }
 })
 
+let helpersGroup = L.layerGroup();
 let markersGroup = L.layerGroup();
 //let imgGroup = L.distortableCollection(); // doesn't hide the image, only toolbar
 let imgGroup = L.layerGroup(); // doesn't show the image after hiding
@@ -349,12 +349,12 @@ let imgGroup = L.layerGroup(); // doesn't show the image after hiding
 settings.remap = settings.remap||{};
 settings.remap.activeLayers = settings.remap.activeLayers||{};
 
-if (settings.remap.activeLayers['Markers']==true) {
-  map.addLayer(markersGroup);
-}
+let layers = {'Markers': markersGroup, 'Images':imgGroup, 'Helpers': helpersGroup};
 
-if (settings.remap.activeLayers['Images']==true) {
-  map.addLayer(imgGroup);
+for (const [name,layer] of Object.entries(layers)) {
+  if (settings.remap.activeLayers[name]==true) {
+    map.addLayer(layer);
+  }
 }
 
 function updateCRS(provider) {
@@ -378,12 +378,12 @@ for (const [provider, baseLayer] of Object.entries(baseLayers)) {
   }
 }
 
-let layercontrol = L.control.layers(baseLayers, {'Markers': markersGroup, 'Images': imgGroup}).addTo(map);
+let layercontrol = L.control.layers(baseLayers, layers).addTo(map);
 
 map.on('baselayerchange', function(e) {
   settings.remap.provider = e.name;
   updateCRS();
-  saveSettings();
+  //saveSettings();
 });
 
 // see https://github.com/publiclab/Leaflet.DistortableImage/issues/1323#issuecomment-2295487916
@@ -393,18 +393,18 @@ map.on('overlayadd', function(e) {
   if (e.name == 'Images') {
     loadImages();
   }
-  saveSettings();
+  //saveSettings();
 });
 
 map.on('overlayremove', function(e) {
   delete settings.remap.activeLayers[e.name];
-  saveSettings();
+  //saveSettings();
 });
 
 map.on('moveend zoomend', function(e) {
   settings.center = [map.getCenter().lat, map.getCenter().lng]; // avoid circular refs here
   settings.zoom = map.getZoom();
-  saveSettings();
+  //saveSettings(); // too verbose
 });
 
 if (settings.center && settings.zoom) {
@@ -442,10 +442,10 @@ function PointFromArray(loc) {
   return {x:loc[0], y:loc[1]};
 }
 
-function remapPoint(point, quadCorners, rectSize, rectCenter) {
+function bilinearInterpolation(point, quadCorners, rectSize, rectCenter) {
   // Normalize point to 0-1 range
   let nx = (point.x + rectCenter.x) / rectSize.x;
-  let ny = 1 - (point.y + rectCenter.y) / rectSize.y;
+  let ny = (point.y + rectCenter.y) / rectSize.y;
 
   // Unpack quadrilateral corners
   let [topLeft, topRight, bottomLeft, bottomRight] = quadCorners;
@@ -541,7 +541,7 @@ function project(marker, controlPointsData) {
   let worldSize = PointFromArray([settings.remap.world.size, settings.remap.world.size]);
   let corners = settings.remap.corners.map(corner => PointFromArray([corner.lng, corner.lat]));
 
-  point = remapPoint(point, corners, worldSize, worldCenter);
+  point = bilinearInterpolation({x:point.x, y:1-point.y}, corners, worldSize, worldCenter);
 
   // then warp to control points
   if (settings.remap.warped) {
@@ -562,6 +562,7 @@ function bindPopup(marker) {
   let o = marker.feature.properties;
   let name = o.title;
 
+  let div = document.createElement('div');
 
   //let content = '';//'<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
   let content = `<b>${o.title}</b>`;
@@ -590,8 +591,57 @@ function bindPopup(marker) {
     content += '<div id="search-results-location"></div>';
   }
 
-
   content += '<div style="margin-top: 8px;"><form id="search-location-form"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search</button></form></div>';
+
+  div.innerHTML = content;
+
+  let input = div.querySelector('#search-location-input');
+  let text = marker.feature.properties.title;
+
+  if (cp.osm && cp.osm.name) {
+    text = cp.osm.name;
+
+    if (cp.osm.osm_id && cp.osm.osm_type) {
+
+      let span = div.querySelector('#osm-link');
+
+      let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
+      span.innerHTML = 'OSM: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
+
+      let button = div.querySelector('#reset-location');
+
+      if (cp.osm.coordinates) {
+        let latlng = L.latLng(cp.osm.coordinates);
+        setSelection(latlng, 'green');
+        button.onclick = function() { setLocation(marker, latlng, cp.osm )};
+      } else {
+        setSelection(latlng);
+        button.onclick = function() { 
+          getOSM(cp.osm.osm_id, cp.osm.osm_type, function(latlng, data) {
+            if (data && latlng) {
+              setSelection(latlng);
+              setLocation(marker, latlng, data);
+            }
+          })
+        }
+      }
+    }
+  } 
+
+  input.value = text;
+  input.select();
+
+  div.querySelector('#search-location-form').onsubmit = function() {
+    input.select();
+    updateSearchResults(input.value);
+    return false; // critical to prevent reload on submit
+  }
+
+  if (t = div.querySelector('#unbind-marker-btn')) t.onclick = function() { unbindMarker(o.ref_id) };
+  if (t = div.querySelector('#unwarp-marker-btn')) t.onclick = function() { unwarpMarker(marker, o.ref_id) };
+  if (t = div.querySelector('#warp-marker-btn')) t.onclick = function() { warpMarker(marker, o.ref_id) };
+
+  return div;
 
   function setLocation(marker, latlng, data) {
     map.closePopup();
@@ -605,7 +655,6 @@ function bindPopup(marker) {
       removeHelpers(); 
       if (confirm(['Set control point to this location?', `${data.display_name || data.name} (OSM ${data.osm_type}:${data.osm_id})`, 'Click OK to continue, Cancel to fly back.'].join('\n\n'))) {
         updateControlPoint(marker, latlng, data);
-        updateHistory();
         map.flyTo(latlng);
         saveSettings();
       } else {
@@ -648,64 +697,6 @@ function bindPopup(marker) {
       }
     })
   }
-
-  setTimeout(function() {
-
-    let input=document.querySelector('#search-location-input');
-    if (input) {
-      let text = marker.feature.properties.title;
-      let cp;
-      if (cp = settings.remap.controlPoints[o.ref_id]) {
-        if (cp.osm && cp.osm.name) {
-          text = cp.osm.name;
-          if (cp.osm.osm_id && cp.osm.osm_type) {
-            let span=document.querySelector('#osm-link');
-            let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
-            span.innerHTML = 'OSM: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
-
-            if (cp.osm.coordinates) {
-              let button = document.querySelector('#reset-location');
-              let latlng = L.latLng(cp.osm.coordinates);
-              setSelection(latlng, 'green');
-              button.onclick = function() { setLocation(marker, latlng, cp.osm )};
-            } else {
-              let button = document.querySelector('#reset-location');
-              setSelection(latlng);
-              button.onclick = function() { 
-                getOSM(cp.osm.osm_id, cp.osm.osm_type, function(latlng, data) {
-                  if (data && latlng) {
-                    setSelection(latlng);
-                    setLocation(marker, latlng, data);
-                  }
-                })
-              }
-            }
-          }
-        } 
-      }
-
-      input.value = text;
-      input.select();
-
-      document.querySelector('#search-location-form').onsubmit = function() {
-        input.select();
-        updateSearchResults(input.value);
-        return false; // critical to prevent reload on submit
-      }
-    }
-
-    let t=document.querySelector('#unbind-marker-btn')
-    if (t) t.onclick = function() { unbindMarker(o.ref_id) };
-
-    t = document.querySelector('#unwarp-marker-btn')
-    if (t) t.onclick = function() { unwarpMarker(marker, o.ref_id) };
-
-    t = document.querySelector('#warp-marker-btn')
-    if (t) t.onclick = function() { warpMarker(marker, o.ref_id) };
-
-  }, 250);
-
-  return content;
 }
 
 function loadMarkers() {
@@ -850,7 +841,6 @@ function markerDragStart() {
 }
 
 function markerDragEnd(e) {
-  updateHistory();
   saveSettings();
 }
 
