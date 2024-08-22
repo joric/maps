@@ -133,8 +133,6 @@ let helpers = null;
 let helpersPopup = null;
 let innerCircle;
 let outerCircle;
-let smoothingScale = 5000;
-let powerScale = 20;
 let currentMarker;
 
 function addHelpers(marker) {
@@ -159,13 +157,13 @@ function removeHelpers() {
 let circle;
 let startGap;
 let popupTimer = null;
-let keepPopupsOpen;
+let isResizing;
 
 const preventTextSelection = e=>e.preventDefault();
 
 function startResize(e) {
   clearTimeout(popupTimer);
-  keepPopupsOpen = true;
+  isResizing = true;
   map.dragging.disable();
   document.addEventListener('selectstart', preventTextSelection );
   L.DomEvent.on(document, 'mousemove', resize);
@@ -194,6 +192,7 @@ function resize(e) {
     }
     settings.remap.controlPoints[currentMarker.feature.properties.ref_id].warp.outer = newRadius;
   }
+  updateMarkers();
 }
 
 function stopResize(e) {
@@ -201,7 +200,8 @@ function stopResize(e) {
   L.DomEvent.off(document, 'mouseup', stopResize);
   map.dragging.enable();
   document.removeEventListener('selectstart', preventTextSelection); 
-  popupTimer = setTimeout(()=>{keepPopupsOpen = false}, 0);
+  popupTimer = setTimeout(()=>{isResizing = false}, 0);
+  saveSettings();
 }
 
 
@@ -250,7 +250,7 @@ const map = L.map('map', {
 }).setView(pos, zoom);
 
 map.on('click', e=>{
-  if (!keepPopupsOpen) {
+  if (!isResizing) {
     map.closePopup();
     removeHelpers();
   }
@@ -457,19 +457,19 @@ function remapPoint(point, quadCorners, rectSize, rectCenter) {
 }
 
 
-function warpToControlPoints(point, controlPointsData, smoothing = 1, power = 2) {
+function warpToControlPoints1(point, controlPointsData, smoothing = 1, power = 2) {
   let totalWeight = 0;
   let weightedXSum = 0;
   let weightedYSum = 0;
 
   // Calculate the warped position
   for (const { oldX, oldY, newX, newY } of Object.values(controlPointsData)) {
-    let dx = newX - oldX;
-    let dy = newY - oldY;
-
-    let distance = Math.sqrt((point.x - oldX) ** 2 + (point.y - oldY) ** 2);
-    let adjustedDistance = Math.max(distance, smoothing);
-    let weight = 1 / (adjustedDistance ** power);
+    const dx = newX - oldX;
+    const dy = newY - oldY;
+    
+    const distance = Math.sqrt((point.x - oldX) ** 2 + (point.y - oldY) ** 2);
+    const adjustedDistance = Math.max(distance, smoothing);
+    const weight = 1 / (adjustedDistance ** power);
 
     weightedXSum += (point.x + dx) * weight;
     weightedYSum += (point.y + dy) * weight;
@@ -481,6 +481,41 @@ function warpToControlPoints(point, controlPointsData, smoothing = 1, power = 2)
     return {
       x: weightedXSum / totalWeight,
       y: weightedYSum / totalWeight
+    };
+  } 
+  
+  // Fallback to original point if totalWeight is zero
+  return point;
+}
+
+function warpToControlPoints(point, controlPointsData) {
+  let totalWeight = 0;
+  let weightedXSum = 0;
+  let weightedYSum = 0;
+
+  // Calculate the warped position
+  for (const [ref_id, prop] of Object.entries(controlPointsData)) {
+    let p = settings.remap.controlPoints[ref_id];
+    if (p.warp && p.warp.inner && p.warp.outer) {
+      const {oldX, oldY, newX, newY} = prop;
+      let inner = p.warp.inner;
+      let outer = p.warp.outer;
+      let distance = map.distance(L.latLng([newY, newX]), L.latLng([point.y, point.x]) );
+      if (distance < outer) {
+        let power = 10;
+        let weight = 1 / (distance ** power);
+        weightedXSum += point.x * distance * weight;
+        weightedYSum += point.y * distance * weight;
+        totalWeight += weight;
+      }
+    }
+  }
+  
+  // Normalize the result
+  if (totalWeight > 0) {
+    return {
+      x: weightedXSum / totalWeight,
+      y: weightedYSum / totalWeight,
     };
   } 
   
@@ -723,15 +758,15 @@ function updateMarkers() {
   let controlPointsData = {};
   for (marker of getMarkers()) {
     let o = marker.feature.properties;
-    let p; // mandatory, because global scope allows undefined
-    if ( p = settings.remap.controlPoints[o.ref_id] ) {
+    let p = settings.remap.controlPoints[o.ref_id];
+    if (p) {
       let latlng = project(marker, {});
       controlPointsData[o.ref_id] = {
         oldX: latlng[1],
         oldY: latlng[0],
         newX: p.coordinates[1],
         newY: p.coordinates[0],
-      };
+      }
     }
   }
 
@@ -1104,29 +1139,6 @@ window.onload = e => {
   loadImages();
   loadMarkers();
 
-  let [sm,pw] = [document.querySelector('#smoothing'), document.querySelector('#power')];
-  updateSlider(sm, settings.remap.smoothing);
-  updateSlider(pw, settings.remap.power);
-
-  function updateSliderTitle(c) {
-    c.title = c.id + ': ' + c.value;
-    updateMarkers();
-  }
-
-  function updateSlider(c, value) {
-    c.value = value;
-    updateSliderTitle(c);
-  }
-
-  function sliderEvent(e) {
-    if (e.target.id=='smoothing') settings.remap.smoothing = parseFloat(e.target.value);
-    if (e.target.id=='power') settings.remap.power = parseFloat(e.target.value);
-    updateSliderTitle(e.target);
-  }
-
-  sm.oninput = sm.onchange = sliderEvent;
-  pw.oninput = pw.onchange = sliderEvent;
-
   map.on('keydown', evt=>{
     let e = evt.originalEvent;
     if (e.ctrlKey) {
@@ -1137,11 +1149,6 @@ window.onload = e => {
 }
 
 </script>
-
-<div id="controls">
-  <div><input type="range" min="0.0" step="0.00001" max="10" value="0.5" class="slider" id="power"></div>
-  <div><input type="range" min="0.0" step="0.00001" max="0.2" value="0.1" class="slider" id="smoothing"></div>
-</div>
 
 </body>
 </html>

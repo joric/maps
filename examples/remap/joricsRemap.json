@@ -32,16 +32,14 @@
         "072FDB86": {
           "title": "London Eye",
           "osm": {
-            "osm_id": 204068874
+            "osm_id": 204068874,
+            "osm_type": "way",
+            "name": "London Eye"
           },
           "coordinates": [
             51.5033416,
             -0.11967649999999999
-          ],
-          "warp": {
-            "smoothing": 0.0428,
-            "power": 5
-          }
+          ]
         },
         "072FDB89": {
           "coordinates": [
@@ -540,6 +538,10 @@
             "osm_id": 4973585223,
             "osm_type": "node",
             "name": "The Postal Museum"
+          },
+          "warp": {
+            "inner": 643.2657970329221,
+            "outer": 1869.5983790943205
           }
         },
         "0728B724": {
@@ -1470,8 +1472,8 @@
         },
         "072FDC55": {
           "coordinates": [
-            51.51750265,
-            -0.05988506461942615
+            51.51739577570338,
+            -0.05905151367187501
           ],
           "title": "Royal London Hospital",
           "osm": {
@@ -1832,6 +1834,27 @@
             "osm_type": "way",
             "name": "Holy Trinity Church"
           }
+        },
+        "072FDBA6": {
+          "coordinates": [
+            51.49260657816879,
+            -0.08849143981933594
+          ],
+          "title": "The Wheelhouse"
+        },
+        "072FDC0E": {
+          "coordinates": [
+            51.47614423230301,
+            -0.04806518554687501
+          ],
+          "title": "Dusty Terrace"
+        },
+        "07329F3E": {
+          "coordinates": [
+            51.49634719159713,
+            -0.04652023315429688
+          ],
+          "title": "Thameshaven Market"
         }
       },
       "smoothing": 0.0428,
@@ -1843,9 +1866,9 @@
       "warped": true
     },
     "center": [
-      51.502959310794644,
-      -0.11522769927978517
+      51.51606049455287,
+      -0.07072448730468751
     ],
-    "zoom": 15
+    "zoom": 13
   }
 }
