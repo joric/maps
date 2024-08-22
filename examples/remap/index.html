@@ -233,7 +233,7 @@ let outerCircle;
 function addHelpers(ref_id) {
   let cp = settings.remap.controlPoints[ref_id];
   if (cp && cp.warp && cp.warp.inner && cp.warp.outer) {
-    outerCircle = L.circle(cp.coordinates, {radius: cp.warp.outer, color: 'grey', interactive: true, opacity: 0.5, role: 'outer', ref_id: ref_id}).addTo(helpersLayer).on('mousedown', startResize);
+    outerCircle = L.circle(cp.coordinates, {radius: cp.warp.outer, color: 'grey', interactive: true, opacity: 0.25, role: 'outer', ref_id: ref_id}).addTo(helpersLayer).on('mousedown', startResize);
     innerCircle = L.circle(cp.coordinates, {radius: cp.warp.inner, color: 'grey', interactive: true, role: 'inner', ref_id: ref_id}).addTo(helpersLayer).on('mousedown', startResize);
   }
 }
@@ -613,7 +613,6 @@ function setLocation(marker, latlng, data) {
   setSelection(latlng);
   map.flyTo(latlng);
   map.once('moveend', function() {
-    removeHelpers(); 
     if (confirm(['Set control point to this location?',
       `${data.display_name || data.name} (OSM ${data.osm_type}:${data.osm_id})`,
       'Click OK to continue, Cancel to fly back.'].join('\n\n'))) {
@@ -706,7 +705,9 @@ function bindPopup(marker) {
       let url = 'https://www.google.com/maps/search/' + encodeURIComponent(text);
 
       if (data && latlng) {
+
         setSelection(latlng);
+
         let a = document.createElement('a');
         a.textContent = `${data.display_name}`;
         a.href = url;
