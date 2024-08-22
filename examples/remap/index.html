@@ -15,8 +15,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.toolbar.js/0.1.0/Leaflet.Toolbar.min.js" integrity="sha512-5jHQLJ93JywT7NbjOuyHQzqLsTNYc7mjj0U5bBmsnrE1P9+4qqjKak0H+8jSlTzeNcbtDiTbV68pMQNTXbSTHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/leaflet.distortableimage.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/vendor.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/leaflet.distortableimage.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.7/dist/vendor.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.7/dist/leaflet.distortableimage.min.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.css">
   <script src="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.js"></script>
@@ -25,13 +25,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@4.0.0/dist/leaflet-search.src.min.css">
 
 <!--
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/leaflet.distortableimage.min.js"></script>
+  <script src="leaflet.distortableimage.js"></script>
   <link rel="stylesheet" href="leaflet.css" />
   <script src="leaflet.js"></script>
   <link rel="stylesheet" href="leaflet.toolbar.min.css"/>
   <script src="leaflet.toolbar.min.js"></script>
   <link rel="stylesheet" href="leaflet.distortableimage.css"/>
   <script src="vendor.js"></script>
-  <script src="leaflet.distortableimage.js"></script>
   <script src="L.Control.MousePosition.js"></script>
 -->
 
@@ -385,15 +386,13 @@ map.on('baselayerchange', function(e) {
   saveSettings();
 });
 
+// see https://github.com/publiclab/Leaflet.DistortableImage/issues/1323#issuecomment-2295487916
+// distortableimage apparently doesn't reappear on adding, let's reload the image then
 map.on('overlayadd', function(e) {
   settings.remap.activeLayers[e.name] = true;
-
-  // see https://github.com/publiclab/Leaflet.DistortableImage/issues/1323#issuecomment-2295487916
-  // distortableimage apparently doesn't reappear on adding, let's reload the image then
   if (e.name == 'Images') {
     loadImages();
   }
-
   saveSettings();
 });
 
@@ -563,8 +562,10 @@ function bindPopup(marker) {
   let o = marker.feature.properties;
   let name = o.title;
 
+
   //let content = '';//'<pre>'+JSON.stringify(l.feature, null, 2)+'</pre>';
-  let content = `<b>${o.title}</b><br/>${o.description}<br/><small>${o.area}</small>`;
+  let content = `<b>${o.title}</b>`;
+  content += `<br/>${o.description}<br/><small>${o.area}</small>`;
   let latlng = marker.getLatLng();
 
   let strLL = String([latlng.lat, latlng.lng]);
@@ -573,31 +574,47 @@ function bindPopup(marker) {
   let cp = settings.remap.controlPoints[o.ref_id];
   if (cp) {
     content += '<hr><button id="unbind-marker-btn">Unbind</button>';
-
     if (cp.warp) {
       content += ' <button id="unwarp-marker-btn">Unwarp</button>';
     } else {
       content += ' <button id="warp-marker-btn">Warp</button>';
     }
-
-
-    if (cp.osm && cp.osm.osm_id) {
-      let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
-      content += ' OSM id: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
-    }
   }
 
-  content += '<hr>Search results: <span id="possible-location">searching...</span>';
-  content += '<br/><br/><form id="search-location-form"><input id="search-location-input" autofocus> <button id="search-location-btn" type="submit">Search</button></form>';
+  content += ' <span id="osm-link"></span>';
+  content += '<hr><div id="search-results-location"></div>';
+  content += '<div style="margin-top: 8px;"><form id="search-location-form"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search</button></form></div>';
+
+  function setLocation(marker, latlng, data) {
+    map.closePopup();
+    if (!data || !latlng) {
+      alert('Place not found');
+      return
+    }
+    setSelection(latlng);
+    map.flyTo(latlng);
+    map.once('moveend', function() {
+      removeHelpers(); 
+      if (confirm(['Set control point to this location?', `${data.display_name}`, 'Click OK to continue, Cancel to fly back.'].join('\n\n'))) {
+        updateControlPoint(marker, latlng, data);
+        updateHistory();
+        map.flyTo(latlng);
+        saveSettings();
+      } else {
+        map.flyTo(marker.getLatLng());
+      }
+      removeSelection();
+    });
+  }
 
   function updateSearchResults(text) {
     let oldLatLng = marker.getLatLng();
-    searchOSM(text, function(data, latlng){
-      let div = document.querySelector('#possible-location');
+    searchOSM(text, function(latlng, data){
+      let div = document.querySelector('#search-results-location');
       let url = 'https://www.google.com/maps/search/' + encodeURIComponent(text);
 
       if (data && latlng) {
-        let info =`${data[0].name} ${data[0].addresstype} ${data[0].display_name}`;
+        let info =`${data.display_name}`;
 
         setSelection(latlng);
         let a = document.createElement('a');
@@ -607,10 +624,10 @@ function bindPopup(marker) {
 
         let button = document.createElement('button');
         button.textContent = 'Use this location';
-        button.onclick = function() { searchLocation(text, marker) }
-
+        button.onclick = function() {
+          setLocation(marker, latlng, data);
+        }
         let spacer = document.createElement('p');
-
         div.replaceChildren(a, spacer, button);
 
       } else {
@@ -625,25 +642,40 @@ function bindPopup(marker) {
   }
 
   setTimeout(function() {
-    if (input=document.querySelector('#search-location-input')) {
-      let text = marker.feature.properties.title;
 
+    let input=document.querySelector('#search-location-input');
+    if (input) {
+      let text = marker.feature.properties.title;
       let cp;
       if (cp = settings.remap.controlPoints[o.ref_id]) {
-        if (cp.osm && cp.osm.name) text = cp.osm.name;
+        if (cp.osm && cp.osm.name) {
+          text = cp.osm.name;
+          if (cp.osm.osm_id && cp.osm.osm_type) {
+            let span=document.querySelector('#osm-link');
+            let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
+            span.innerHTML = 'OSM: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
+
+            getOSM(cp.osm.osm_id, cp.osm.osm_type, function(latlng, data) {
+              if (data && latlng) {
+                setSelection(latlng);
+                let div = document.querySelector('#search-results-location');
+                let button = document.createElement('button');
+                button.textContent = 'Update location to OSM';
+                button.onclick = function() { setLocation(marker, latlng, data) }
+                div.replaceChildren(button);
+              }
+            });
+          }
+        } 
       }
 
-      text = [...text.split(' ').filter(e=>e!='Underground'), 'london'].join(' '); // search doesn't like underground
+      input.value = text;
+      input.select();
 
-      updateSearchResults(text);
-      if (e=document.querySelector('#search-location-form')) {
-        input.value = text;
+      document.querySelector('#search-location-form').onsubmit = function() {
         input.select();
-        e.onsubmit = function() {
-          input.select();
-          updateSearchResults(input.value);
-          return false; // critical to prevent reload on submit
-        }
+        updateSearchResults(input.value);
+        return false; // critical to prevent reload on submit
       }
     }
 
@@ -771,7 +803,10 @@ function imageUpdated(e) {
   saveSettings();
 }
 
-function updateControlPoint(marker, latlng, osm_data) {
+function updateControlPoint(marker, latlng, data) {
+
+  console.log('updating control point', marker, latlng, data);
+
   // create or update control point
   let o = marker.feature.properties;
   let cp = settings.remap.controlPoints;
@@ -783,13 +818,17 @@ function updateControlPoint(marker, latlng, osm_data) {
   p.coordinates =  [latlng.lat, latlng.lng];
   p.title =  p.title || o.title;
 
-  if (osm_data) {
+  if (data) {
+    console.log('setting point properties, osm_id is', data.osm_id);
     p.osm = p.osm || {};
-    p.osm.osm_id   =  osm_data.osm_id;
-    p.osm.osm_type =  osm_data.osm_type;
-    p.osm.name = osm_data.name;
-    delete p.osm_id;
+    p.osm.osm_id   =  data.osm_id;
+    p.osm.osm_type =  data.osm_type;
+    p.osm.name = data.name;
+    p.osm.coordinates = [latlng.lat, latlng.lng];
   }
+
+  console.log('control point', settings.remap.controlPoints[o.ref_id]);
+
   updateMarkers();
 }
 
@@ -1039,6 +1078,31 @@ function exportMarkers() {
   saveTextToFile(JSON.stringify(data, null, 2), filename);
 }
 
+function getOSM(osm_id, osm_type, callback) {
+  let url = `https://www.openstreetmap.org/api/0.6/${osm_type}/${osm_id}`+(osm_type!='node' ? '/full':'')+'.json';
+  console.log('fetching', url);
+  fetch(url).then(r => r.json()).then(json => {
+    if (json) {
+      console.log(json);
+      let data = {osm_id: osm_id, osm_type: osm_type, name: 'unknown', display_name: 'unknown'};
+      let bounds = L.latLngBounds();
+      for (e of Object.values(json.elements)) {
+        if (e.tags && e.tags.name) {
+          data.name = data.display_name = e.tags.name;
+        }
+        if (e.type=='node') {
+          bounds.extend( L.latLng([e.lat, e.lon]) );
+        }
+      }
+      console.log(data);
+      return callback(bounds.getCenter(), data);
+    } else {
+      return callback();
+    }
+  })
+  return true;
+}
+
 function searchOSM(text, callback) {
   let q = encodeURIComponent(text);
   const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=gb`;
@@ -1047,47 +1111,12 @@ function searchOSM(text, callback) {
       const latitude = data[0].lat;
       const longitude = data[0].lon;
       let latlng = L.latLng([latitude, longitude]);
-      return callback(data, latlng);
+      return callback(latlng, data[0]);
     } else {
       return callback();
     }
   })
   return true;
-}
-
-function searchLocation(text, marker) { 
-
-  searchOSM(text, function(data, latlng) {
-    map.closePopup();
-
-    if (!data || !latlng) {
-      alert('Place not found');
-      return
-    }
-
-    let info =`${data[0].name} ${data[0].addresstype} ${data[0].display_name}`;
-    let text = ['Set control point to this location?', info, 'Click OK to continue, Cancel to fly back.'].join('\n\n');
-
-    setSelection(latlng);
-    map.flyTo(latlng);
-
-    map.once('moveend', function() {
-      removeHelpers();
- 
-      if (confirm(text)) {
-        updateControlPoint(marker, latlng, data[0]);
-        updateHistory();
-        map.flyTo(latlng);
-        saveSettings();
-      } else {
-        map.flyTo(marker.getLatLng());
-      }
-
-      removeSelection();
-
-    });
-
-  })
 }
 
 function getMarkerByRefId(ref_id) {
@@ -1119,7 +1148,7 @@ onload = e => {
       let before = Object.keys(settings.remap.controlPoints).length;
       settings.remap.controlPoints = {...serverPoints, ...settings.remap.controlPoints};
       let after = Object.keys(settings.remap.controlPoints).length;
-      console.log(  (after-before) + ' control points imported from the server');
+      if (after>before) console.log(  (after-before) + ' control points imported from the server');
     }
   }).catch(e=>console.log('handled error', e));
 
