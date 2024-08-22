@@ -500,12 +500,14 @@ function warpToControlPoints(point, controlPointsData) {
       const {oldX, oldY, newX, newY} = prop;
       let inner = p.warp.inner;
       let outer = p.warp.outer;
-      let distance = map.distance(L.latLng([newY, newX]), L.latLng([point.y, point.x]) );
+      let distance = map.distance( L.latLng([newY, newX]), L.latLng([point.y, point.x]) );
       if (distance < outer) {
-        let power = 10;
-        let weight = 1 / (distance ** power);
-        weightedXSum += point.x * distance * weight;
-        weightedYSum += point.y * distance * weight;
+        let power = (1 - inner/outer) * 200;
+        const weight = 1 / (distance ** power);
+        const dx = newX - oldX;
+        const dy = newY - oldY;
+        weightedXSum += dx * weight;
+        weightedYSum += dy * weight;
         totalWeight += weight;
       }
     }
@@ -514,8 +516,8 @@ function warpToControlPoints(point, controlPointsData) {
   // Normalize the result
   if (totalWeight > 0) {
     return {
-      x: weightedXSum / totalWeight,
-      y: weightedYSum / totalWeight,
+      x: point.x + weightedXSum / totalWeight,
+      y: point.y + weightedYSum / totalWeight,
     };
   } 
   
