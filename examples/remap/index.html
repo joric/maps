@@ -163,7 +163,7 @@ let defaultLocalData = {
       },
       smoothing: 0.0428,
       power: 5.0,
-      activeLayers: {'Markers': true},
+      activeLayers: {'Markers': true, 'Helpers': true},
       provider: Object.keys(baseLayers)[0],
       warped: true,
     }
@@ -207,23 +207,22 @@ function removeSelection() {
   }
 }
 
-let helpers = null;
 let helpersPopup = null;
 let innerCircle;
 let outerCircle;
 let currentMarker;
 
 function addHelpers(marker) {
-  removeHelpers();
   let cp = settings.remap.controlPoints[marker.feature.properties.ref_id];
   if (cp && cp.warp && cp.warp.inner && cp.warp.outer) {
-    outerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.outer, color: 'blue', interactive: true}).addTo(map).on('mousedown', startResize);
-    innerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.inner, color: 'yellow', interactive: true}).addTo(map).on('mousedown', startResize);
+    outerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.outer, color: 'blue', interactive: true}).addTo(helpersLayer).on('mousedown', startResize);
+    innerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.inner, color: 'yellow', interactive: true}).addTo(helpersLayer).on('mousedown', startResize);
     currentMarker = marker;
   }
 }
 
 function removeHelpers() {
+  return;
   if (innerCircle || outerCircle) {
     map.removeLayer(outerCircle);
     map.removeLayer(innerCircle);
@@ -340,15 +339,15 @@ map.on('click', e=>{
   }
 })
 
-let helpersGroup = L.layerGroup();
-let markersGroup = L.layerGroup();
-//let imgGroup = L.distortableCollection(); // doesn't hide the image, only toolbar
-let imgGroup = L.layerGroup(); // doesn't show the image after hiding
+let helpersLayer = L.layerGroup();
+let markersLayer = L.layerGroup();
+//let imagesLayer = L.distortableCollection(); // doesn't hide the image, only toolbar
+let imagesLayer = L.layerGroup(); // doesn't show the image after hiding
 
 settings.remap = settings.remap||{};
 settings.remap.activeLayers = settings.remap.activeLayers||{};
 
-let layers = {'Markers': markersGroup, 'Images':imgGroup, 'Helpers': helpersGroup};
+let layers = {'Markers': markersLayer, 'Helpers': helpersLayer, 'Images':imagesLayer};
 
 for (const [name,layer] of Object.entries(layers)) {
   if (settings.remap.activeLayers[name]==true) {
@@ -579,13 +578,13 @@ function unbindMarker(ref_id) {
 function unwarpMarker(ref_id) {
   delete settings.remap.controlPoints[ref_id].warp;
   updateMarkers();
-  map.closePopup();  
+  map.closePopup();
 }
 
 function warpMarker(ref_id) {
   settings.remap.controlPoints[ref_id].warp = { inner: 200, outer: 400 };
   updateMarkers();
-  map.closePopup();    
+  map.closePopup();
 }
 
 function setLocation(marker, latlng, data) {
@@ -767,7 +766,7 @@ function loadMarkers() {
 
     markers.bindTooltip(marker => marker.feature.properties.title)
 
-    markersGroup.addLayer(markers);
+    markersLayer.addLayer(markers);
 
     updateMarkers();
     saveSettings(); // create a start point for undo
@@ -792,7 +791,7 @@ function reloadImage() {
     corners: settings.remap.corners,
   }).on('update', imageUpdated).on('load', updateMarkers)
 
-  imgGroup.addLayer(globalImage);
+  imagesLayer.addLayer(globalImage);
 }
 
 function loadImages() {
@@ -800,7 +799,7 @@ function loadImages() {
 }
 
 function getMarkers() {
-  let markers = markersGroup.getLayers(0)[0];
+  let markers = markersLayer.getLayers(0)[0];
   return Object.values((markers && markers._layers)||{});
 }
 

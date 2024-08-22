@@ -1496,14 +1496,18 @@
         },
         "072ED6F4": {
           "coordinates": [
-            51.5259868,
-            -0.0753739
+            51.5257586,
+            -0.0747496
           ],
           "title": "Arnold Circus",
           "osm": {
-            "osm_id": 745736602,
+            "osm_id": 884950255,
             "osm_type": "way",
-            "name": "Arnold Circus"
+            "name": "Arnold Circus",
+            "coordinates": [
+              51.5257586,
+              -0.0747496
+            ]
           }
         },
         "071E6A21": {
@@ -1828,12 +1832,18 @@
         },
         "072FDC55": {
           "coordinates": [
-            51.51739577570338,
-            -0.05905151367187501
+            51.51750265,
+            -0.05988506461942615
           ],
           "title": "Royal London Hospital",
           "osm": {
-            "osm_id": 640495338
+            "osm_id": 640495338,
+            "osm_type": "way",
+            "name": "Royal London Hospital",
+            "coordinates": [
+              51.51750265,
+              -0.05988506461942615
+            ]
           }
         },
         "0728B703": {
@@ -2266,6 +2276,70 @@
             -0.04652023315429688
           ],
           "title": "Thameshaven Market"
+        },
+        "0728B6F8": {
+          "coordinates": [
+            51.52008035,
+            -0.07172216006154152
+          ],
+          "title": "Whitechapel Off Licence",
+          "osm": {
+            "osm_id": 270439729,
+            "osm_type": "way",
+            "name": "A&Y Off Licence",
+            "coordinates": [
+              51.52008035,
+              -0.07172216006154152
+            ]
+          }
+        },
+        "072FDB8C": {
+          "coordinates": [
+            51.5196,
+            -0.07536301194190631
+          ],
+          "title": "Old Spitalfields Market",
+          "osm": {
+            "osm_id": 16306646,
+            "osm_type": "way",
+            "name": "Old Spitalfields Market",
+            "coordinates": [
+              51.5196,
+              -0.07536301194190631
+            ]
+          }
+        },
+        "07311005": {
+          "coordinates": [
+            51.5423045,
+            -0.1395604
+          ],
+          "title": "Camden",
+          "osm": {
+            "osm_id": 399607277,
+            "osm_type": "node",
+            "name": "Camden Town",
+            "coordinates": [
+              51.5423045,
+              -0.1395604
+            ]
+          }
+        },
+        "07311006": {
+          "coordinates": [
+            51.4973206,
+            -0.137149
+          ],
+          "title": "Westminster",
+          "osm": {
+            "osm_id": 51781,
+            "osm_type": "relation",
+            "name": "City of Westminster",
+            "coordinates": [
+              51.4973206,
+              -0.137149
+            ]
+          }
         }
       },
       "smoothing": 0.0428,
@@ -2277,9 +2351,9 @@
       "warped": true
     },
     "center": [
-      51.43478899396299,
-      -0.21350103933803546
+      51.497335731007794,
+      -0.1371574401855469
     ],
-    "zoom": 16
+    "zoom": 14
   }
 }
