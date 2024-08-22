@@ -200,10 +200,10 @@ let settings = null;
 let circleMarker = null;
 let searchControl;
 
-function setSelection(latlng) {
+function setSelection(latlng, color='red') {
   removeSelection();
   if (latlng) {
-    circleMarker = L.circleMarker(latlng, {radius: 10, color: 'red'}).addTo(map);
+    circleMarker = L.circleMarker(latlng, {radius: 10, color: color}).addTo(map);
   }
 }
 
@@ -224,8 +224,8 @@ function addHelpers(marker) {
   removeHelpers();
   let cp = settings.remap.controlPoints[marker.feature.properties.ref_id];
   if (cp && cp.warp && cp.warp.inner && cp.warp.outer) {
-    outerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.outer, color: 'green', interactive: true}).addTo(map).on('mousedown', startResize);
-    innerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.inner, color: 'blue', interactive: true}).addTo(map).on('mousedown', startResize);
+    outerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.outer, color: 'blue', interactive: true}).addTo(map).on('mousedown', startResize);
+    innerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.inner, color: 'yellow', interactive: true}).addTo(map).on('mousedown', startResize);
     currentMarker = marker;
   }
 }
@@ -581,8 +581,16 @@ function bindPopup(marker) {
     }
   }
 
-  content += ' <span id="osm-link"></span>';
-  content += '<hr><div id="search-results-location"></div>';
+  content += ' <span id="osm-link"></span><hr/>';
+
+  if (cp && cp.osm) {
+    let caption = cp.osm.coordinates ? 'Set Location to OSM' : 'Get Coordinates from OSM id';
+    content += '<div id="search-results-location"><button id="reset-location">'+caption+'</button></div>';
+  } else {
+    content += '<div id="search-results-location"></div>';
+  }
+
+
   content += '<div style="margin-top: 8px;"><form id="search-location-form"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search</button></form></div>';
 
   function setLocation(marker, latlng, data) {
@@ -595,7 +603,7 @@ function bindPopup(marker) {
     map.flyTo(latlng);
     map.once('moveend', function() {
       removeHelpers(); 
-      if (confirm(['Set control point to this location?', `${data.display_name}`, 'Click OK to continue, Cancel to fly back.'].join('\n\n'))) {
+      if (confirm(['Set control point to this location?', `${data.display_name || data.name} (OSM ${data.osm_type}:${data.osm_id})`, 'Click OK to continue, Cancel to fly back.'].join('\n\n'))) {
         updateControlPoint(marker, latlng, data);
         updateHistory();
         map.flyTo(latlng);
@@ -613,12 +621,12 @@ function bindPopup(marker) {
       let div = document.querySelector('#search-results-location');
       let url = 'https://www.google.com/maps/search/' + encodeURIComponent(text);
 
-      if (data && latlng) {
-        let info =`${data.display_name}`;
+      //console.log(data);
 
+      if (data && latlng) {
         setSelection(latlng);
         let a = document.createElement('a');
-        a.textContent = info;
+        a.textContent = `${data.display_name}`;
         a.href = url;
         a.target = '_blank';
 
@@ -655,16 +663,23 @@ function bindPopup(marker) {
             let osm_url = 'https://www.openstreetmap.org/'+cp.osm.osm_type+'/'+cp.osm.osm_id;
             span.innerHTML = 'OSM: <a href="'+osm_url+'" target=_blank>'+cp.osm.osm_id+'</a>';
 
-            getOSM(cp.osm.osm_id, cp.osm.osm_type, function(latlng, data) {
-              if (data && latlng) {
-                setSelection(latlng);
-                let div = document.querySelector('#search-results-location');
-                let button = document.createElement('button');
-                button.textContent = 'Update location to OSM';
-                button.onclick = function() { setLocation(marker, latlng, data) }
-                div.replaceChildren(button);
+            if (cp.osm.coordinates) {
+              let button = document.querySelector('#reset-location');
+              let latlng = L.latLng(cp.osm.coordinates);
+              setSelection(latlng, 'green');
+              button.onclick = function() { setLocation(marker, latlng, cp.osm )};
+            } else {
+              let button = document.querySelector('#reset-location');
+              setSelection(latlng);
+              button.onclick = function() { 
+                getOSM(cp.osm.osm_id, cp.osm.osm_type, function(latlng, data) {
+                  if (data && latlng) {
+                    setSelection(latlng);
+                    setLocation(marker, latlng, data);
+                  }
+                })
               }
-            });
+            }
           }
         } 
       }
@@ -804,9 +819,7 @@ function imageUpdated(e) {
 }
 
 function updateControlPoint(marker, latlng, data) {
-
-  console.log('updating control point', marker, latlng, data);
-
+  //console.log('updating control point', marker, latlng, data);
   // create or update control point
   let o = marker.feature.properties;
   let cp = settings.remap.controlPoints;
@@ -819,7 +832,7 @@ function updateControlPoint(marker, latlng, data) {
   p.title =  p.title || o.title;
 
   if (data) {
-    console.log('setting point properties, osm_id is', data.osm_id);
+    //console.log('setting point properties, osm_id is', data.osm_id);
     p.osm = p.osm || {};
     p.osm.osm_id   =  data.osm_id;
     p.osm.osm_type =  data.osm_type;
@@ -827,7 +840,7 @@ function updateControlPoint(marker, latlng, data) {
     p.osm.coordinates = [latlng.lat, latlng.lng];
   }
 
-  console.log('control point', settings.remap.controlPoints[o.ref_id]);
+  //console.log('control point', settings.remap.controlPoints[o.ref_id]);
 
   updateMarkers();
 }
@@ -1094,8 +1107,9 @@ function getOSM(osm_id, osm_type, callback) {
           bounds.extend( L.latLng([e.lat, e.lon]) );
         }
       }
-      console.log(data);
-      return callback(bounds.getCenter(), data);
+      let latlng = bounds.getCenter();
+      console.log(latlng, data);
+      return callback(latlng, data);
     } else {
       return callback();
     }
@@ -1106,7 +1120,9 @@ function getOSM(osm_id, osm_type, callback) {
 function searchOSM(text, callback) {
   let q = encodeURIComponent(text);
   const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=gb`;
+  console.log('fetching', url);
   fetch(url).then(r => r.json()).then(data => {
+    console.log(data);
     if (data.length > 0) {
       const latitude = data[0].lat;
       const longitude = data[0].lon;
