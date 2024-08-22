@@ -588,9 +588,32 @@ function warpMarker(ref_id) {
   map.closePopup();    
 }
 
+function setLocation(marker, latlng, data) {
+  map.closePopup();
+  if (!data || !latlng) {
+    alert('Place not found');
+    return
+  }
+  setSelection(latlng);
+  map.flyTo(latlng);
+  map.once('moveend', function() {
+    removeHelpers(); 
+    if (confirm(['Set control point to this location?',
+      `${data.display_name || data.name} (OSM ${data.osm_type}:${data.osm_id})`,
+      'Click OK to continue, Cancel to fly back.'].join('\n\n'))) {
+      updateControlPoint(marker, latlng, data);
+      map.flyTo(latlng);
+      saveSettings();
+    } else {
+      map.flyTo(marker.getLatLng());
+    }
+    removeSelection();
+  });
+}
 
 function bindPopup(marker) {
   addHelpers(marker);
+
   let o = marker.feature.properties;
   let name = o.title;
 
@@ -658,45 +681,15 @@ function bindPopup(marker) {
   } 
 
   input.value = text;
-
   setTimeout(()=>{input.select()},0);
 
   div.querySelector('#search-location-form').onsubmit = function() {
+    let text = input.value;
     input.select();
-    updateSearchResults(input.value);
-    return false; // critical to prevent reload on submit
-  }
-
-  return div;
-
-  function setLocation(marker, latlng, data) {
-    map.closePopup();
-    if (!data || !latlng) {
-      alert('Place not found');
-      return
-    }
-    setSelection(latlng);
-    map.flyTo(latlng);
-    map.once('moveend', function() {
-      removeHelpers(); 
-      if (confirm(['Set control point to this location?', `${data.display_name || data.name} (OSM ${data.osm_type}:${data.osm_id})`, 'Click OK to continue, Cancel to fly back.'].join('\n\n'))) {
-        updateControlPoint(marker, latlng, data);
-        map.flyTo(latlng);
-        saveSettings();
-      } else {
-        map.flyTo(marker.getLatLng());
-      }
-      removeSelection();
-    });
-  }
-
-  function updateSearchResults(text) {
     let oldLatLng = marker.getLatLng();
     searchOSM(text, function(latlng, data){
       let div = document.querySelector('#search-results-location');
       let url = 'https://www.google.com/maps/search/' + encodeURIComponent(text);
-
-      //console.log(data);
 
       if (data && latlng) {
         setSelection(latlng);
@@ -707,9 +700,11 @@ function bindPopup(marker) {
 
         let button = document.createElement('button');
         button.textContent = 'Use this location';
+
         button.onclick = function() {
           setLocation(marker, latlng, data);
         }
+
         let spacer = document.createElement('p');
         div.replaceChildren(a, spacer, button);
 
@@ -722,7 +717,11 @@ function bindPopup(marker) {
         div.replaceChildren(a);
       }
     })
+
+    return false; // critical to prevent reload on submit
   }
+
+  return div;
 }
 
 function loadMarkers() {
