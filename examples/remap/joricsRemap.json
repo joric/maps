@@ -32,14 +32,16 @@
         "072FDB86": {
           "title": "London Eye",
           "osm": {
-            "osm_id": 204068874,
-            "osm_type": "way",
-            "name": "London Eye"
+            "osm_id": 204068874
           },
           "coordinates": [
             51.5033416,
             -0.11967649999999999
-          ]
+          ],
+          "warp": {
+            "inner": 100,
+            "outer": 200
+          }
         },
         "072FDB89": {
           "coordinates": [
@@ -540,8 +542,8 @@
             "name": "The Postal Museum"
           },
           "warp": {
-            "inner": 643.2657970329221,
-            "outer": 1869.5983790943205
+            "inner": 2154.5201816148815,
+            "outer": 4514.8108431430755
           }
         },
         "0728B724": {
@@ -884,7 +886,9 @@
           ],
           "title": "Biggin Hill Airport",
           "osm": {
-            "osm_id": 196861878
+            "osm_id": 196861878,
+            "osm_type": "way",
+            "name": "London Biggin Hill Airport"
           }
         },
         "0728B719": {
@@ -925,14 +929,15 @@
         },
         "07068633": {
           "coordinates": [
-            51.447347750000006,
-            -0.5717015191819101
+            51.4799793,
+            -0.1467969836888303
           ],
           "title": "Battersea Cats and Dogs Home",
           "osm": {
-            "osm_id": 159238773,
+            "osm_id": 36961813,
             "osm_type": "way",
-            "osm_name": "Battersea Dogs and Cats Home"
+            "osm_name": "Battersea Dogs and Cats Home",
+            "name": "Battersea Dogs and Cats Home"
           }
         },
         "072FDBE1": {
@@ -1866,9 +1871,9 @@
       "warped": true
     },
     "center": [
-      51.51606049455287,
-      -0.07072448730468751
+      51.458499409118716,
+      -0.0439453125
     ],
-    "zoom": 13
+    "zoom": 11
   }
 }
