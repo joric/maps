@@ -1083,10 +1083,10 @@ function exportMarkers() {
 
 function getOSM(osm_id, osm_type, callback) {
   let url = `https://www.openstreetmap.org/api/0.6/${osm_type}/${osm_id}`+(osm_type!='node' ? '/full':'')+'.json';
-  console.log('fetching', url);
+  //console.log('fetching', url);
   fetch(url).then(r => r.json()).then(json => {
     if (json) {
-      console.log(json);
+      //console.log(json);
       let data = {osm_id: osm_id, osm_type: osm_type, name: 'unknown', display_name: 'unknown'};
       let bounds = L.latLngBounds();
       for (e of Object.values(json.elements)) {
@@ -1110,9 +1110,9 @@ function getOSM(osm_id, osm_type, callback) {
 function searchOSM(text, callback) {
   let q = encodeURIComponent(text);
   const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=gb`;
-  console.log('fetching', url);
+  //console.log('fetching', url);
   fetch(url).then(r => r.json()).then(data => {
-    console.log(data);
+    //console.log(data);
     if (data.length > 0) {
       const latitude = data[0].lat;
       const longitude = data[0].lon;
