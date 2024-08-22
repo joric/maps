@@ -154,12 +154,32 @@ let defaultLocalData = {
       markers: 'https://joric.github.io/maps/examples/data/geojson.markers.folon.json',
       corners: [{"lat":51.567501756256505,"lng":-0.1764177405505252},{"lat":51.567501756256505,"lng":0.06345199242442146},{"lat":51.41815601816625,"lng":-0.1764177405505252},{"lat":51.41815601816625,"lng":0.06345199242442146}],
       controlPoints: {
+
         '072FDB86': {
           title: 'London Eye',
           osm: { osm_id: 204068874 },
           coordinates: [51.5033416, -0.11967649999999999],
-          warp: { inner: 100, outer: 200 },
+          warp: { inner: 1000, outer: 2000 },
         },
+
+        "072FDC18": {
+          "coordinates": [
+            51.4956878,
+            -0.25471169315339026
+          ],
+          "title": "The Tabard",
+          "warp": { inner: 1000, outer: 2000 },
+          "osm": {
+            "name": "The Tabard",
+            "osm_id": 209445869,
+            "osm_type": "way",
+            "coordinates": [
+              51.4956878,
+              -0.25471169315339026
+            ],
+          },
+        },
+
       },
       smoothing: 0.0428,
       power: 5.0,
@@ -207,17 +227,14 @@ function removeSelection() {
   }
 }
 
-let helpersPopup = null;
 let innerCircle;
 let outerCircle;
-let currentMarker;
 
-function addHelpers(marker) {
-  let cp = settings.remap.controlPoints[marker.feature.properties.ref_id];
+function addHelpers(ref_id) {
+  let cp = settings.remap.controlPoints[ref_id];
   if (cp && cp.warp && cp.warp.inner && cp.warp.outer) {
-    outerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.outer, color: 'blue', interactive: true}).addTo(helpersLayer).on('mousedown', startResize);
-    innerCircle = L.circle(marker.getLatLng(), {radius: cp.warp.inner, color: 'yellow', interactive: true}).addTo(helpersLayer).on('mousedown', startResize);
-    currentMarker = marker;
+    outerCircle = L.circle(cp.coordinates, {radius: cp.warp.outer, color: 'grey', interactive: true, opacity: 0.5, role: 'outer', ref_id: ref_id}).addTo(helpersLayer).on('mousedown', startResize);
+    innerCircle = L.circle(cp.coordinates, {radius: cp.warp.inner, color: 'grey', interactive: true, role: 'inner', ref_id: ref_id}).addTo(helpersLayer).on('mousedown', startResize);
   }
 }
 
@@ -257,18 +274,19 @@ function resize(e) {
   let newPoint = map.mouseEventToLatLng(e);
   let distance = newPoint.distanceTo(circle.getLatLng());
   let newRadius = distance + startGap;
+  let ref_id = circle.options.ref_id;
   circle.setRadius( newRadius );
   
   if (circle==innerCircle) {
     if (newRadius > outerCircle.getRadius()) {
       outerCircle.setRadius(newRadius);
     }
-    settings.remap.controlPoints[currentMarker.feature.properties.ref_id].warp.inner = newRadius;
+    settings.remap.controlPoints[ref_id].warp.inner = newRadius;
   } else if (circle==outerCircle) {
     if (newRadius < innerCircle.getRadius()) {
       innerCircle.setRadius(newRadius);
     }
-    settings.remap.controlPoints[currentMarker.feature.properties.ref_id].warp.outer = newRadius;
+    settings.remap.controlPoints[ref_id].warp.outer = newRadius;
   }
   updateMarkers();
 }
@@ -313,7 +331,6 @@ function redo() {
 }
 
 function saveSettings() {
-  //console.log('saving...');
   updateHistory();
   localStorage.setItem(localDataName, JSON.stringify(localData));
 }
@@ -611,8 +628,6 @@ function setLocation(marker, latlng, data) {
 }
 
 function bindPopup(marker) {
-  addHelpers(marker);
-
   let o = marker.feature.properties;
   let name = o.title;
 
@@ -641,13 +656,13 @@ function bindPopup(marker) {
 
   content += ' <span id="osm-link"></span><hr/>';
 
-  content += '<div id="search-results-location">';
+  content += '<div id="search-results-location"  style="margin-bottom: 8px;">';
   if (hasOSM) {
-    content += '<button id="reset-location">'+(cp.osm.coordinates ? 'Set Location to Saved OSM' : 'Make Location From OSM')+'</button>';
+    content += '<button id="reset-location">'+(cp.osm.coordinates ? 'Reset Coordinates to Saved OSM' : 'Query Coordinates From OSM')+'</button>';
   }
   content += '</div>';
 
-  content += '<div style="margin-top: 8px;"><form id="search-location-form"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search</button></form></div>';
+  content += '<form id="search-location-form"><input id="search-location-input"> <button id="search-location-btn" type="submit">Search</button></form>';
 
   div.innerHTML = content;
 
@@ -704,7 +719,7 @@ function bindPopup(marker) {
           setLocation(marker, latlng, data);
         }
 
-        let spacer = document.createElement('p');
+        let spacer = document.createElement('br');
         div.replaceChildren(a, spacer, button);
 
       } else {
@@ -758,9 +773,7 @@ function loadMarkers() {
         marker.on('popupclose', function() {
           removeSelection();
         })
-        marker.on('popupopen', function(e){
-          helpersPopup = e.popup;
-        })
+        addHelpers(feature.properties.ref_id);
       }
     })
 
@@ -803,8 +816,15 @@ function getMarkers() {
   return Object.values((markers && markers._layers)||{});
 }
 
+function getHelpers() {
+  let markers = helpersLayer.getLayers(0);
+  return Object.values(markers||{});
+}
+
 function updateMarkers() {
+
   let controlPointsData = {};
+
   for (marker of getMarkers()) {
     let o = marker.feature.properties;
     let p = settings.remap.controlPoints[o.ref_id];
@@ -819,12 +839,21 @@ function updateMarkers() {
     }
   }
 
+  let cached_markers = {};
+
   for (marker of getMarkers()) {
     let o = marker.feature.properties;
     marker && marker.dragging && (settings.remap.warped ? marker.dragging.enable() : marker.dragging.disable());
     marker.setOpacity(settings.remap.controlPoints[o.ref_id] && settings.remap.warped ? 1 : .3);
     marker.setLatLng( project(marker, controlPointsData ) );
+
+    cached_markers [ o.ref_id ] = marker.getLatLng();
   }
+
+  for (helper of getHelpers()) {
+    helper.setLatLng( cached_markers[ helper.options.ref_id ] );
+  }
+
 }
 
 function imageUpdated(e) {

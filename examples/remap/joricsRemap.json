@@ -2345,14 +2345,15 @@
       "smoothing": 0.0428,
       "power": 5,
       "activeLayers": {
-        "Markers": true
+        "Markers": true,
+        "Helpers": true
       },
       "provider": "CartoDB Voyager",
       "warped": true
     },
     "center": [
-      51.497335731007794,
-      -0.1371574401855469
+      51.4290943,
+      -0.2649870574675258
     ],
     "zoom": 14
   }
