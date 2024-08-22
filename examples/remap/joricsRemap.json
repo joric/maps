@@ -45,8 +45,8 @@
             -0.11967649999999999
           ],
           "warp": {
-            "inner": 344.1292035192501,
-            "outer": 949.6628243392335
+            "inner": 337.80863720157396,
+            "outer": 479.2489666231116
           }
         },
         "072FDB89": {
@@ -655,7 +655,11 @@
           "osm": {
             "osm_id": 364313092,
             "osm_type": "way",
-            "name": "Westminster Abbey"
+            "name": "Westminster Abbey",
+            "coordinates": [
+              51.499399,
+              -0.1273910483333311
+            ]
           }
         },
         "07313002": {
@@ -763,7 +767,11 @@
           "osm": {
             "osm_id": 1115487852,
             "osm_type": "way",
-            "name": "Storey's Gate"
+            "name": "Storey's Gate",
+            "coordinates": [
+              51.50083705,
+              -0.12957380000000002
+            ]
           }
         },
         "0731301C": {
@@ -920,14 +928,18 @@
         },
         "07313035": {
           "coordinates": [
-            51.5003241,
-            -0.1274482
+            51.50032925,
+            -0.12744755000000002
           ],
           "title": "Parliament Square Garden",
           "osm": {
             "osm_id": 245379012,
             "osm_type": "way",
-            "name": "Parliament Square"
+            "name": "Parliament Square",
+            "coordinates": [
+              51.50032925,
+              -0.12744755000000002
+            ]
           }
         },
         "073073F1": {
@@ -1729,7 +1741,11 @@
           "osm": {
             "osm_id": 7646215719,
             "osm_type": "node",
-            "name": "Westminster"
+            "name": "Westminster",
+            "coordinates": [
+              51.5004439,
+              -0.1265398
+            ]
           }
         },
         "07068600": {
@@ -2274,8 +2290,8 @@
       "warped": true
     },
     "center": [
-      51.510330908950145,
-      -0.09846925735473634
+      51.5072913792444,
+      -0.12119293212890626
     ],
     "zoom": 16
   }
