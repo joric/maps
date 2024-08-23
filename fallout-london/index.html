@@ -269,23 +269,9 @@ async function saveTextToFile(text, filename) {
   await writableStream.close();
 }
 
-function saveTextToFileOld(data, filename) {
-  var blob = new Blob([data], {type: 'text/json'});
-  if(navigator.msSaveOrOpenBlob) {
-      navigator.msSaveOrOpenBlob(blob, filename);
-  } else {
-      var a = document.body.appendChild(document.createElement("a"));
-      a.href = URL.createObjectURL(blob);
-      a.download = filename;
-      a.click();
-      a.remove();
-  }
-}
-
 function saveLocalData() {
   let data = localStorage.getItem(localDataName);
-  let filename = localDataName + '.json';
-  saveTextToFile(data, filename);
+  showSaveFilePicker({suggestedName: localDataName+'.json'}).then(f=>f.createWritable()).then(f=>f.write(data).then(()=>f.close()));
 }
 
 function unmarkAll() {

@@ -1058,36 +1058,9 @@ function loadLocalData() {
   document.querySelector('#file').click();
 }
 
-async function saveTextToFile(text, filename) {
-  const fileHandle = await window.showSaveFilePicker({
-    suggestedName: filename,
-    types: [{
-      description: 'JSON Files',
-      accept: {'text/json': ['.json']},
-    }],
-  });
-  const writableStream = await fileHandle.createWritable();
-  await writableStream.write(text);
-  await writableStream.close();
-}
-
 function saveLocalData() {
-  let str = localStorage.getItem(localDataName);
-  let data = JSON.parse(str);
-
-  // update obsolete control points version
-  for (const [ref_id,cp] of Object.entries(data[mapId].remap.controlPoints)) {
-    //cp[name] = cp[name].map(e=>parseFloat(e));
-    if (cp.osm_id) {
-      cp.osm = {osm_id: cp.osm_id, osm_type: cp.osm_type, name: cp.osm_name};
-      delete cp.osm_id;
-      delete cp.osm_name;
-      delete cp.osm_type;
-    }
-  }
-
-  let filename = localDataName + '.json';
-  saveTextToFile(JSON.stringify(data, null, 2), filename);
+  let data = localStorage.getItem(localDataName);
+  showSaveFilePicker({suggestedName: localDataName+'.json'}).then(f=>f.createWritable()).then(f=>f.write(data).then(()=>f.close()));
 }
 
 function resetLocalData() {
