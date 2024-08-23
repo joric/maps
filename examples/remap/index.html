@@ -236,6 +236,11 @@ function addHelpers(ref_id) {
   }
 }
 
+function removeHelpers(ref_id) {
+  map.removeLayer(getHelper(ref_id, 'inner'));
+  map.removeLayer(getHelper(ref_id, 'outer'));
+}
+
 let circle;
 let startGap;
 
@@ -314,7 +319,7 @@ function updateHistory() {
 function undo() {
   if (history_pos <= 0) return;
   history_pos -= 1;
-  //console.log('loading history', history_pos);
+  //console.log('undo', history_pos);
   settings = JSON.parse(history[history_pos]);
   updateMarkers();
   saveSettingsInternal();
@@ -323,7 +328,7 @@ function undo() {
 function redo() {
   if (history_pos == history.length-1 || history_pos == history_size-1) return;
   history_pos += 1;
-  //console.log('loading history', history_pos);
+  //console.log('redo', history_pos);
   settings = JSON.parse(history[history_pos]);
   updateMarkers();
   saveSettingsInternal();
@@ -569,6 +574,7 @@ function unbindMarker(ref_id) {
 }
 
 function unwarpMarker(ref_id) {
+  removeHelpers(ref_id);
   delete settings.remap.controlPoints[ref_id].warp;
   updateMarkers();
   saveSettings();
@@ -577,6 +583,7 @@ function unwarpMarker(ref_id) {
 
 function warpMarker(ref_id) {
   settings.remap.controlPoints[ref_id].warp = { inner: 200, outer: 400 };
+  addHelpers(ref_id);
   updateMarkers();
   saveSettings();
   map.closePopup();
@@ -828,7 +835,16 @@ function updateMarkers() {
   }
 
   for (helper of getHelpers()) {
-    helper.setLatLng( cached_markers[ helper.options.ref_id ] );
+    let ref_id = helper.options.ref_id;
+    let latlng = cached_markers[ ref_id ];
+    if (latlng) {
+      helper.setLatLng( latlng );
+      let p = settings.remap.controlPoints[ ref_id ];
+      if (p && p.warp) {
+        if (helper.options.role == 'inner') helper.setRadius(p.warp.inner);
+        if (helper.options.role == 'outer') helper.setRadius(p.warp.outer);
+      }
+    }
   }
 
 }
