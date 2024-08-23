@@ -299,6 +299,7 @@ function stopResize(e) {
   L.DomEvent.off(document, 'mouseup', stopResize);
   map.dragging.enable();
   document.removeEventListener('selectstart', preventTextSelection); 
+  updateHistory();
   saveSettings();
 }
 
@@ -322,7 +323,7 @@ function undo() {
   //console.log('undo', history_pos);
   settings = JSON.parse(history[history_pos]);
   updateMarkers();
-  saveSettingsInternal();
+  saveSettings();
 }
 
 function redo() {
@@ -331,15 +332,14 @@ function redo() {
   //console.log('redo', history_pos);
   settings = JSON.parse(history[history_pos]);
   updateMarkers();
-  saveSettingsInternal();
+  saveSettings();
 }
 
 function saveSettings() {
-  updateHistory();
-  saveSettingsInternal();
+  saveSettings();
 }
 
-function saveSettingsInternal() {
+function saveSettings() {
   localStorage.setItem(localDataName, JSON.stringify(localData));
 }
 
@@ -410,18 +410,18 @@ map.on('overlayadd', function(e) {
   if (e.name == 'Images') {
     loadImages();
   }
-  //saveSettings();
+  saveSettings();
 });
 
 map.on('overlayremove', function(e) {
   delete settings.remap.activeLayers[e.name];
-  //saveSettings();
+  saveSettings();
 });
 
 map.on('moveend zoomend', function(e) {
   settings.center = [map.getCenter().lat, map.getCenter().lng]; // avoid circular refs here
   settings.zoom = map.getZoom();
-  //saveSettings(); // too verbose
+  saveSettings();
 });
 
 if (settings.center && settings.zoom) {
@@ -512,15 +512,17 @@ function warp(point, controlPoints) {
   let totalWeight = 0;
   let weightedSum = L.point(0, 0);
   Object.values(controlPoints).forEach(controlPoint => {
-    const distance = point.distanceTo(controlPoint.position);
-    if (distance < controlPoint.outerRadius) {
-      const weight = distance < controlPoint.innerRadius
-        ? 1
-        : 1 - (distance - controlPoint.innerRadius) / (controlPoint.outerRadius - controlPoint.innerRadius);
-      totalWeight += weight;
-      const relativePoint = point.subtract(controlPoint.position).divideBy(distance / controlPoint.innerRadius);
-      const adjustedPoint = controlPoint.position.add(relativePoint);
-      weightedSum = weightedSum.add(adjustedPoint.multiplyBy(weight));
+    if (controlPoint.innerRadius && controlPoint.outerRadius) {
+      const distance = point.distanceTo(controlPoint.position);
+      if (distance < controlPoint.outerRadius) {
+        const weight = distance < controlPoint.innerRadius
+          ? 1
+          : 1 - (distance - controlPoint.innerRadius) / (controlPoint.outerRadius - controlPoint.innerRadius);
+        totalWeight += weight;
+        const relativePoint = point.subtract(controlPoint.position).divideBy(distance / controlPoint.innerRadius);
+        const adjustedPoint = controlPoint.position.add(relativePoint);
+        weightedSum = weightedSum.add(adjustedPoint.multiplyBy(weight));
+      }
     }
   });
   return totalWeight > 0 ? weightedSum.divideBy(totalWeight) : point;
@@ -768,7 +770,7 @@ function loadMarkers() {
     markersLayer.addLayer(markers);
 
     updateMarkers();
-    saveSettings(); // create a start point for undo
+    updateHistory(); // create a start point for undo
 
     searchControl = new L.Control.Search({
       layer: markers,
@@ -815,11 +817,15 @@ function updateMarkers() {
     let o = marker.feature.properties;
     let p = settings.remap.controlPoints[o.ref_id];
     if (p) {
-      controlPoints[o.ref_id] = {
-        position: L.point(p.coordinates[1],p.coordinates[0]),
-        innerRadius: p.inner,
-        outerRadius: p.outer,
+      let prop = { position: L.point(p.coordinates[1],p.coordinates[0]) }
+      if (p.warp) {
+        prop = {
+          ...prop,
+          innerRadius: p.warp.inner,
+          outerRadius: p.warp.outer
+        };
       }
+      controlPoints[o.ref_id] = prop;
     }
   }
 
@@ -882,6 +888,7 @@ function markerDragStart() {
 }
 
 function markerDragEnd(e) {
+  updateHistory();
   saveSettings();
 }
 
