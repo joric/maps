@@ -1042,6 +1042,8 @@ function loadMarkers() {
 
   if (debugParam) mapParam.markerName = debugParam;
 
+  settings.searchText = ''; // maybe don't open search results, you know
+
   // marker link
   if (name = mapParam.markerName) {
     jumpToLocation(name);
