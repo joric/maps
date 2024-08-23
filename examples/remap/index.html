@@ -227,37 +227,21 @@ function removeSelection() {
   }
 }
 
-let innerCircle;
-let outerCircle;
-
 function addHelpers(ref_id) {
   let cp = settings.remap.controlPoints[ref_id];
   if (cp && cp.warp && cp.warp.inner && cp.warp.outer) {
-    outerCircle = L.circle(cp.coordinates, {radius: cp.warp.outer, color: 'grey', interactive: true, opacity: 0.25, role: 'outer', ref_id: ref_id}).addTo(helpersLayer).on('mousedown', startResize);
-    innerCircle = L.circle(cp.coordinates, {radius: cp.warp.inner, color: 'grey', interactive: true, role: 'inner', ref_id: ref_id}).addTo(helpersLayer).on('mousedown', startResize);
-  }
-}
-
-function removeHelpers() {
-  return;
-  if (innerCircle || outerCircle) {
-    map.removeLayer(outerCircle);
-    map.removeLayer(innerCircle);
-    delete outerCircle;
-    delete innerCircle;
+    let options = { fill: false, weight: 12, interactive: true, opacity: 0.25, ref_id: ref_id };
+    L.circle(cp.coordinates, {...options, radius: cp.warp.outer, color: 'green', role: 'outer'}).addTo(helpersLayer).on('mousedown', startResize);
+    L.circle(cp.coordinates, {...options, radius: cp.warp.inner, color: 'red', role: 'inner'}).addTo(helpersLayer).on('mousedown', startResize);
   }
 }
 
 let circle;
 let startGap;
-let popupTimer = null;
-let isResizing;
 
 const preventTextSelection = e=>e.preventDefault();
 
 function startResize(e) {
-  clearTimeout(popupTimer);
-  isResizing = true;
   map.dragging.disable();
   document.addEventListener('selectstart', preventTextSelection );
   L.DomEvent.on(document, 'mousemove', resize);
@@ -270,24 +254,38 @@ function startResize(e) {
   map.closePopup();
 }
 
+function getHelper(ref_id, role) {
+  for (layer of getHelpers()) {
+    if (layer.options.ref_id==ref_id && layer.options.role == role) {
+      return layer;
+    }
+  }
+}
+
 function resize(e) {
   let newPoint = map.mouseEventToLatLng(e);
   let distance = newPoint.distanceTo(circle.getLatLng());
   let newRadius = distance + startGap;
   let ref_id = circle.options.ref_id;
   circle.setRadius( newRadius );
-  
+
+  let innerCircle = getHelper(ref_id, 'inner');
+  let outerCircle = getHelper(ref_id, 'outer');
+
   if (circle==innerCircle) {
     if (newRadius > outerCircle.getRadius()) {
       outerCircle.setRadius(newRadius);
+      settings.remap.controlPoints[ref_id].warp.outer = newRadius;
     }
     settings.remap.controlPoints[ref_id].warp.inner = newRadius;
   } else if (circle==outerCircle) {
     if (newRadius < innerCircle.getRadius()) {
       innerCircle.setRadius(newRadius);
+      settings.remap.controlPoints[ref_id].warp.inner = newRadius;
     }
     settings.remap.controlPoints[ref_id].warp.outer = newRadius;
   }
+
   updateMarkers();
 }
 
@@ -296,7 +294,6 @@ function stopResize(e) {
   L.DomEvent.off(document, 'mouseup', stopResize);
   map.dragging.enable();
   document.removeEventListener('selectstart', preventTextSelection); 
-  popupTimer = setTimeout(()=>{isResizing = false}, 0);
   saveSettings();
 }
 
@@ -320,6 +317,7 @@ function undo() {
   //console.log('loading history', history_pos);
   settings = JSON.parse(history[history_pos]);
   updateMarkers();
+  saveSettingsInternal();
 }
 
 function redo() {
@@ -328,10 +326,15 @@ function redo() {
   //console.log('loading history', history_pos);
   settings = JSON.parse(history[history_pos]);
   updateMarkers();
+  saveSettingsInternal();
 }
 
 function saveSettings() {
   updateHistory();
+  saveSettingsInternal();
+}
+
+function saveSettingsInternal() {
   localStorage.setItem(localDataName, JSON.stringify(localData));
 }
 
@@ -346,15 +349,7 @@ let globalImage = null;
 const map = L.map('map', {
   //zoomSnap: 0.1,
   //wheelDebounceTime: 100,
-  closePopupOnClick : false,
 }).setView(pos, zoom);
-
-map.on('click', e=>{
-  if (!isResizing) {
-    map.closePopup();
-    removeHelpers();
-  }
-})
 
 let helpersLayer = L.layerGroup();
 let markersLayer = L.layerGroup();
@@ -453,75 +448,18 @@ L.control.myButton = function(opts) {
 
 L.control.myButton({ position: 'topright' }).addTo(map);
 
-
-
 function PointFromArray(loc) {
   return {x:loc[0], y:loc[1]};
 }
 
-function bilinearInterpolation(point, quadCorners, rectSize, rectCenter) {
-  // Normalize point to 0-1 range
-  let nx = (point.x + rectCenter.x) / rectSize.x;
-  let ny = (point.y + rectCenter.y) / rectSize.y;
-
-  // Unpack quadrilateral corners
-  let [topLeft, topRight, bottomLeft, bottomRight] = quadCorners;
-
-  // Interpolate x and y separately
-  function interpolate(a, b, factor) {
-    return a + factor * (b - a);
-  }
-
-  // Interpolation along the top and bottom edges
-  let topEdgeX = interpolate(topLeft.x, topRight.x, nx);
-  let topEdgeY = interpolate(topLeft.y, topRight.y, nx);
-
-  let bottomEdgeX = interpolate(bottomLeft.x, bottomRight.x, nx);
-  let bottomEdgeY = interpolate(bottomLeft.y, bottomRight.y, nx);
-
-  // Final interpolation between the edges
-  let x = interpolate(topEdgeX, bottomEdgeX, ny);
-  let y = interpolate(topEdgeY, bottomEdgeY, ny);
-
-  return {x, y};
-}
-
-function warpToControlPoints(point, controlPointsData) {
-  let totalWeight = 0;
-  let weightedXSum = 0;
-  let weightedYSum = 0;
-
-  // Calculate the warped position
-  for (const [ref_id, prop] of Object.entries(controlPointsData)) {
-    let p = settings.remap.controlPoints[ref_id];
-    if (p.warp && p.warp.inner && p.warp.outer) {
-      const {oldX, oldY, newX, newY} = prop;
-      let inner = p.warp.inner;
-      let outer = p.warp.outer;
-
-      let distance = map.distance( L.latLng([oldY, oldX]), L.latLng([point.y, point.x]) );
-
-      if (distance < outer) {
-        //let power = (1 - inner/outer) * 200;
-        //const weight = 1 / (distance ** power);
-        const weight = 1;
-        weightedXSum = (newX - oldX) * weight;
-        weightedYSum = (newY - oldY) * weight;
-        totalWeight += weight;
-      }
-    }
-  }
-  
-  // Normalize the result
-  if (totalWeight > 0) {
-    return {
-      x: point.x + weightedXSum / totalWeight,
-      y: point.y + weightedYSum / totalWeight,
-    };
-  } 
-  
-  // Fallback to original point if totalWeight is zero
-  return point;
+function bilinear(point, quadCorners, rectSize, rectCenter) {
+  const normalizedPoint = point.add(rectCenter).divideBy(rectSize);
+  normalizedPoint.y = 1 - normalizedPoint.y;
+  const [topLeft, topRight, bottomLeft, bottomRight] = quadCorners;
+  const interpolate = (a, b, factor) => a.add(b.subtract(a).multiplyBy(factor));
+  const topEdge = interpolate(topLeft, topRight, normalizedPoint.x);
+  const bottomEdge = interpolate(bottomLeft, bottomRight, normalizedPoint.x);
+  return interpolate(topEdge, bottomEdge, normalizedPoint.y);
 }
 
 function processRegions(marker) {
@@ -545,28 +483,66 @@ function processRegions(marker) {
   return {x: x, y: y};
 }
 
-function project(marker, controlPointsData) {
-  // process regions, get starting point
-  let point = processRegions(marker);
+
+function regions(point, area) {
+  L.Point.prototype.rotate = function(angle) {
+    let cos = Math.cos(angle);
+    let sin = Math.sin(angle);
+    let rotatedX = this.x * cos - this.y * sin;
+    let rotatedY = this.x * sin + this.y * cos;
+    return L.point(rotatedX, rotatedY);
+  };
+
+  if (t = (maps[mapId].regions && maps[mapId].regions[area])) {
+    let center = L.point(t.offset);
+    point = point.multiplyBy(t.scale).add(center);
+    if (t.rotation) {
+      point = point.subtract(center).rotate(t.rotation).add(center);
+    }
+  }
+  return point;
+}
+
+function warp(point, controlPoints) {
+  let totalWeight = 0;
+  let weightedSum = L.point(0, 0);
+  Object.values(controlPoints).forEach(controlPoint => {
+    const distance = point.distanceTo(controlPoint.position);
+    if (distance < controlPoint.outerRadius) {
+      const weight = distance < controlPoint.innerRadius
+        ? 1
+        : 1 - (distance - controlPoint.innerRadius) / (controlPoint.outerRadius - controlPoint.innerRadius);
+      totalWeight += weight;
+      const relativePoint = point.subtract(controlPoint.position).divideBy(distance / controlPoint.innerRadius);
+      const adjustedPoint = controlPoint.position.add(relativePoint);
+      weightedSum = weightedSum.add(adjustedPoint.multiplyBy(weight));
+    }
+  });
+  return totalWeight > 0 ? weightedSum.divideBy(totalWeight) : point;
+}
+
+function project(marker, controlPoints) {
+  let point = L.point(marker.feature.geometry.coordinates);
+  point = regions(point, marker.feature.properties.area);
 
   // do the bitmap remapping
-  let worldCenter = PointFromArray(settings.remap.world.center);
-  let worldSize = PointFromArray([settings.remap.world.size, settings.remap.world.size]);
-  let corners = settings.remap.corners.map(corner => PointFromArray([corner.lng, corner.lat]));
+  let worldCenter = L.point(settings.remap.world.center);
+  let worldSize = settings.remap.world.size;
+  let corners = settings.remap.corners.map(corner => L.point([corner.lng, corner.lat]));
 
-  point = bilinearInterpolation({x:point.x, y:1-point.y}, corners, worldSize, worldCenter);
+  point = bilinear(point, corners, worldSize, worldCenter);
 
   // then warp to control points
   if (settings.remap.warped) {
-    let p; // mandatory scope. if it's a control point, just return saved coordinates
-    if (p = controlPointsData [ marker.feature.properties.ref_id ] ) {
-      return [p.newY, p.newX];
+    let p = controlPoints [ marker.feature.properties.ref_id ];
+    if (p) {
+      point = p.position;
+    } else {
+      point = warp(point, controlPoints);
     }
-    point = warpToControlPoints(point, controlPointsData, settings.remap.smoothing, settings.remap.power);
   }
 
-  // return point as latlng
-  return [point.y, point.x];
+  return L.latLng([point.y, point.x]);
 }
 
 function getMarkerByRefId(ref_id) {
@@ -586,8 +562,8 @@ function getMarkerByTitle(title) {
 function unbindMarker(ref_id) { 
   if (confirm('Are you sure you want to unbind this marker?')) {
     delete settings.remap.controlPoints [ ref_id ];
-    saveSettings();
     updateMarkers();
+    saveSettings();
     map.closePopup();
   }
 }
@@ -595,12 +571,14 @@ function unbindMarker(ref_id) {
 function unwarpMarker(ref_id) {
   delete settings.remap.controlPoints[ref_id].warp;
   updateMarkers();
+  saveSettings();
   map.closePopup();
 }
 
 function warpMarker(ref_id) {
   settings.remap.controlPoints[ref_id].warp = { inner: 200, outer: 400 };
   updateMarkers();
+  saveSettings();
   map.closePopup();
 }
 
@@ -824,18 +802,16 @@ function getHelpers() {
 
 function updateMarkers() {
 
-  let controlPointsData = {};
+  let controlPoints = {};
 
   for (marker of getMarkers()) {
     let o = marker.feature.properties;
     let p = settings.remap.controlPoints[o.ref_id];
     if (p) {
-      let latlng = project(marker, {});
-      controlPointsData[o.ref_id] = {
-        oldX: latlng[1],
-        oldY: latlng[0],
-        newX: p.coordinates[1],
-        newY: p.coordinates[0],
+      controlPoints[o.ref_id] = {
+        position: L.point(p.coordinates[1],p.coordinates[0]),
+        innerRadius: p.inner,
+        outerRadius: p.outer,
       }
     }
   }
@@ -846,7 +822,7 @@ function updateMarkers() {
     let o = marker.feature.properties;
     marker && marker.dragging && (settings.remap.warped ? marker.dragging.enable() : marker.dragging.disable());
     marker.setOpacity(settings.remap.controlPoints[o.ref_id] && settings.remap.warped ? 1 : .3);
-    marker.setLatLng( project(marker, controlPointsData ) );
+    marker.setLatLng( project(marker, controlPoints ) );
 
     cached_markers [ o.ref_id ] = marker.getLatLng();
   }
@@ -867,11 +843,7 @@ function updateControlPoint(marker, latlng, data) {
   //console.log('updating control point', marker, latlng, data);
   // create or update control point
   let o = marker.feature.properties;
-  let cp = settings.remap.controlPoints;
-  let id = o.ref_id;
-
-  cp[id] = cp[id] || {};
-  let p = cp[id];
+  let p = settings.remap.controlPoints[o.ref_id] || {};
 
   p.coordinates =  [latlng.lat, latlng.lng];
   p.title =  p.title || o.title;
@@ -879,7 +851,7 @@ function updateControlPoint(marker, latlng, data) {
   if (data) {
     //console.log('setting point properties, osm_id is', data.osm_id);
     p.osm = p.osm || {};
-    p.osm.osm_id   =  data.osm_id;
+    p.osm.osm_id = data.osm_id;
     p.osm.osm_type =  data.osm_type;
     p.osm.name = data.name;
     p.osm.coordinates = [latlng.lat, latlng.lng];
@@ -891,7 +863,6 @@ function updateControlPoint(marker, latlng, data) {
 }
 
 function markerDragStart() {
-  removeHelpers();
 }
 
 function markerDragEnd(e) {

@@ -39,8 +39,8 @@
             -0.11967649999999999
           ],
           "warp": {
-            "inner": 100,
-            "outer": 200
+            "inner": 1609.4303393293844,
+            "outer": 2355.3943238364272
           }
         },
         "072FDB89": {
@@ -642,8 +642,8 @@
         },
         "07312FE3": {
           "coordinates": [
-            51.499399,
-            -0.1273910483333311
+            51.49527847622497,
+            -0.13114929199218753
           ],
           "title": "Westminster Abbey",
           "osm": {
@@ -1103,13 +1103,17 @@
         "0728B719": {
           "coordinates": [
             51.485663,
-            -0.12482495
+            -0.12482494999999424
           ],
           "title": "Vauxhall Underground Station",
           "osm": {
             "osm_id": 286733049,
             "osm_type": "way",
-            "name": "Vauxhall Station"
+            "name": "Vauxhall Station",
+            "coordinates": [
+              51.485663,
+              -0.12482494999999424
+            ]
           }
         },
         "072FDC27": {
@@ -1349,7 +1353,11 @@
           "osm": {
             "osm_id": 21507733,
             "osm_type": "node",
-            "name": "Oval"
+            "name": "Oval",
+            "coordinates": [
+              51.4818339,
+              -0.1123953
+            ]
           }
         },
         "0728B6FD": {
@@ -1774,13 +1782,13 @@
         },
         "072FDC18": {
           "coordinates": [
-            51.47860327187397,
-            -0.30212402343750006
+            51.4956878,
+            -0.25471169315339026
           ],
           "title": "The Tabard",
           "warp": {
-            "inner": 213.3293396690051,
-            "outer": 410.99756923852345
+            "inner": 1588.6803330332698,
+            "outer": 2518.988099597293
           },
           "osm": {
             "name": "The Tabard",
@@ -1789,22 +1797,6 @@
             "coordinates": [
               51.4956878,
               -0.25471169315339026
-            ]
-          }
-        },
-        "072FDC7A": {
-          "coordinates": [
-            51.4868164,
-            -0.2874512
-          ],
-          "title": "A205",
-          "osm": {
-            "osm_id": 4004743,
-            "osm_type": "way",
-            "name": "Kew Bridge",
-            "coordinates": [
-              51.4868164,
-              -0.2874512
             ]
           }
         },
@@ -1945,7 +1937,13 @@
           ],
           "title": "Crystal Palace",
           "osm": {
-            "osm_id": 21262497
+            "osm_id": 21262497,
+            "osm_type": "node",
+            "name": "Crystal Palace",
+            "coordinates": [
+              51.4193664,
+              -0.0711328
+            ]
           }
         },
         "072FDC66": {
@@ -1982,18 +1980,28 @@
           "title": "Crystal Palace Radio Tower",
           "osm": {
             "osm_id": 4960820,
-            "name": "Crystal Palace Transmitter"
+            "name": "Crystal Palace Transmitter",
+            "osm_type": "way",
+            "coordinates": [
+              51.424149799999995,
+              -0.07491359063067013
+            ]
           }
         },
         "0706861D": {
           "coordinates": [
-            51.424828149999996,
-            -0.07294250320609336
+            51.42141735,
+            -0.0742373917315225
           ],
           "title": "Crystal Palace Caravan Park",
           "osm": {
-            "osm_id": 31820169,
-            "name": "Crystal Palace Caravan Club Site"
+            "osm_id": 30170658,
+            "name": "Crystal Palace Park",
+            "osm_type": "way",
+            "coordinates": [
+              51.42141735,
+              -0.0742373917315225
+            ]
           }
         },
         "072A9145": {
@@ -2201,14 +2209,18 @@
         },
         "072FDAF8": {
           "coordinates": [
-            51.4812011,
-            -0.1128323
+            51.481576661665756,
+            -0.1138436794281006
           ],
           "title": "Oval Underground Station",
           "osm": {
-            "osm_id": 469760492,
-            "osm_type": "node",
-            "name": "Oval Station"
+            "osm_id": 185755086,
+            "osm_type": "way",
+            "name": "Oval Station",
+            "coordinates": [
+              51.482048250000005,
+              -0.11283298419118118
+            ]
           }
         },
         "0728B70D": {
@@ -2344,34 +2356,6 @@
               -0.137149
             ]
           }
-        },
-        "072FDB9B": {
-          "coordinates": [
-            51.46662756924308,
-            -0.3016090393066406
-          ],
-          "title": "Gasworks"
-        },
-        "072FDB30": {
-          "coordinates": [
-            51.45721588307608,
-            -0.28427124023437506
-          ],
-          "title": "Clapham Common Pindar"
-        },
-        "072FDB32": {
-          "coordinates": [
-            51.44887208400473,
-            -0.2667617797851563
-          ],
-          "title": "The Clap"
-        },
-        "072FDB28": {
-          "coordinates": [
-            51.44823019014051,
-            -0.27740478515625006
-          ],
-          "title": "Cutethulhu Camp"
         }
       },
       "smoothing": 0.0428,
@@ -2380,13 +2364,13 @@
         "Markers": true,
         "Helpers": true
       },
-      "provider": "Google Traffic",
+      "provider": "CartoDB Voyager",
       "warped": true
     },
     "center": [
-      51.50805132442152,
-      -0.08767604827880861
+      51.467483080832345,
+      -0.22350311279296878
     ],
-    "zoom": 17
+    "zoom": 13
   }
 }
