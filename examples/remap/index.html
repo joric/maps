@@ -181,8 +181,8 @@ let defaultLocalData = {
         },
 
       },
-      smoothing: 0.0428,
-      power: 5.0,
+      smoothing: 2,
+      power: 5,
       activeLayers: {'Markers': true, 'Helpers': true},
       provider: Object.keys(baseLayers)[0],
       warped: true,
@@ -508,37 +508,41 @@ function regions(point, area) {
   return point;
 }
 
-function warp(point, controlPoints, latlng) {
+function warp(point, controlPoints) {
   let totalWeight = 0;
   let weightedSum = L.point(0, 0);
-
-
   Object.values(controlPoints).forEach(controlPoint => {
+    if (!controlPoint.innerRadius || !controlPoint.outerRadius) return
+    let globalPoint = L.latLng([point.y, point.x])
+    let globalOrigin = L.latLng([controlPoint.origin.y, controlPoint.origin.x])
+    const distance = globalPoint.distanceTo(globalOrigin); 
 
-    if (controlPoint.innerRadius && controlPoint.outerRadius) {
-
-      // we need distance in meters, so use latlng points
-      let globalPoint = L.latLng([point.y, point.x])
-      let globalOrigin = L.latLng([controlPoint.origin.y, controlPoint.origin.x])
-      const distance = globalPoint.distanceTo(globalOrigin); 
-
-      if (distance < controlPoint.outerRadius) {
-
-        const weight = distance < controlPoint.innerRadius
-          ? 1
-          : 1 - (distance - controlPoint.innerRadius) / (controlPoint.outerRadius - controlPoint.innerRadius);
-
-        totalWeight += weight;
-
-        const relativePoint = point.subtract(controlPoint.origin);//.divideBy(distance / controlPoint.innerRadius);
-        const adjustedPoint = controlPoint.position.add(relativePoint);
-        weightedSum = weightedSum.add(adjustedPoint.multiplyBy(weight));
-      }
-
+    if (distance < controlPoint.outerRadius) {
+      const weight = distance < controlPoint.innerRadius
+        ? 1
+        : 1 - (distance - controlPoint.innerRadius) / (controlPoint.outerRadius - controlPoint.innerRadius);
+      totalWeight += weight;
+      const relativePoint = point.subtract(controlPoint.origin);//.divideBy(distance / controlPoint.innerRadius);
+      const adjustedPoint = controlPoint.position.add(relativePoint);
+      weightedSum = weightedSum.add(adjustedPoint.multiplyBy(weight));
     }
-
   });
+  return totalWeight > 0 ? weightedSum.divideBy(totalWeight) : point;
+}
 
+function globalWarp(point, controlPoints, smoothing = 0.00428, power = 5) {
+  let totalWeight = 0;
+  let weightedSum = L.point(0, 0);
+  Object.values(controlPoints).forEach(controlPoint => {
+    let globalPoint = L.latLng([point.y, point.x])
+    let globalOrigin = L.latLng([controlPoint.origin.y, controlPoint.origin.x])
+    const distance = Math.max(globalPoint.distanceTo(globalOrigin), smoothing);
+    const weight = 1 / (distance ** power);
+    totalWeight += weight;
+    const relativePoint = point.subtract(controlPoint.origin);
+    const adjustedPoint = controlPoint.position.add(relativePoint);
+    weightedSum = weightedSum.add(adjustedPoint.multiplyBy(weight));
+  });
   return totalWeight > 0 ? weightedSum.divideBy(totalWeight) : point;
 }
 
@@ -560,6 +564,7 @@ function project(marker, controlPoints) {
       point = p.position;
     } else {
       point = warp(point, controlPoints);
+      point = globalWarp(point, controlPoints, settings.remap.smoothing, settings.remap.power);
     }
   }
 
@@ -1185,9 +1190,39 @@ onload = e => {
       }
     }
   }
+
+
+  let [sm,pw] = [document.querySelector('#smoothing'), document.querySelector('#power')];
+  updateSlider(sm, settings.remap.smoothing);
+  updateSlider(pw, settings.remap.power);
+
+  function updateSliderTitle(c) {
+    c.title = c.id + ': ' + c.value;
+    updateMarkers();
+  }
+
+  function updateSlider(c, value) {
+    c.value = value;
+    updateSliderTitle(c);
+  }
+
+  function sliderEvent(e) {
+    if (e.target.id=='smoothing') settings.remap.smoothing = e.target.value;
+    if (e.target.id=='power') settings.remap.power = e.target.value;
+    updateSliderTitle(e.target);
+  }
+
+  sm.oninput = sm.onchange = sliderEvent;
+  pw.oninput = pw.onchange = sliderEvent;
+
 }
 
 </script>
+
+<div id="controls">
+  <div><input type="range" min="0.0" step="1" max="10000" value="0" class="slider" id="smoothing"></div>
+  <div><input type="range" min="0.0" step="0.01" max="25" value="0" class="slider" id="power"></div>
+</div>
 
 </body>
 </html>
