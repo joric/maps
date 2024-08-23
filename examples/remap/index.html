@@ -237,8 +237,8 @@ function addHelpers(ref_id) {
 }
 
 function removeHelpers(ref_id) {
-  map.removeLayer(getHelper(ref_id, 'inner'));
-  map.removeLayer(getHelper(ref_id, 'outer'));
+  getHelper(ref_id, 'inner') && map.removeLayer(getHelper(ref_id, 'inner'));
+  getHelper(ref_id, 'outer') && map.removeLayer(getHelper(ref_id, 'outer'));
 }
 
 let circle;
@@ -508,23 +508,37 @@ function regions(point, area) {
   return point;
 }
 
-function warp(point, controlPoints) {
+function warp(point, controlPoints, latlng) {
   let totalWeight = 0;
   let weightedSum = L.point(0, 0);
+
+
   Object.values(controlPoints).forEach(controlPoint => {
+
     if (controlPoint.innerRadius && controlPoint.outerRadius) {
-      const distance = point.distanceTo(controlPoint.position);
+
+      // we need distance in meters, so use latlng points
+      let globalPoint = L.latLng([point.y, point.x])
+      let globalOrigin = L.latLng([controlPoint.origin.y, controlPoint.origin.x])
+      const distance = globalPoint.distanceTo(globalOrigin); 
+
       if (distance < controlPoint.outerRadius) {
+
         const weight = distance < controlPoint.innerRadius
           ? 1
           : 1 - (distance - controlPoint.innerRadius) / (controlPoint.outerRadius - controlPoint.innerRadius);
+
         totalWeight += weight;
-        const relativePoint = point.subtract(controlPoint.position).divideBy(distance / controlPoint.innerRadius);
+
+        const relativePoint = point.subtract(controlPoint.origin);//.divideBy(distance / controlPoint.innerRadius);
         const adjustedPoint = controlPoint.position.add(relativePoint);
         weightedSum = weightedSum.add(adjustedPoint.multiplyBy(weight));
       }
+
     }
+
   });
+
   return totalWeight > 0 ? weightedSum.divideBy(totalWeight) : point;
 }
 
@@ -568,6 +582,7 @@ function getMarkerByTitle(title) {
 
 function unbindMarker(ref_id) { 
   if (confirm('Are you sure you want to unbind this marker?')) {
+    removeHelpers(ref_id);
     delete settings.remap.controlPoints [ ref_id ];
     updateMarkers();
     saveSettings();
@@ -816,13 +831,18 @@ function updateMarkers() {
   for (marker of getMarkers()) {
     let o = marker.feature.properties;
     let p = settings.remap.controlPoints[o.ref_id];
+    let origin = project(marker, {});
+
     if (p) {
-      let prop = { position: L.point(p.coordinates[1],p.coordinates[0]) }
+      let prop = {
+        position: L.point(p.coordinates[1], p.coordinates[0]),
+        origin: L.point([origin.lng, origin.lat]),
+      }
       if (p.warp) {
         prop = {
           ...prop,
           innerRadius: p.warp.inner,
-          outerRadius: p.warp.outer
+          outerRadius: p.warp.outer,
         };
       }
       controlPoints[o.ref_id] = prop;
@@ -865,7 +885,12 @@ function updateControlPoint(marker, latlng, data) {
   //console.log('updating control point', marker, latlng, data);
   // create or update control point
   let o = marker.feature.properties;
-  let p = settings.remap.controlPoints[o.ref_id] || {};
+  let cp = settings.remap.controlPoints;
+
+  //if (!cp[o.ref_id]) return; //use bind button
+
+  cp[o.ref_id] = cp[o.ref_id] || {};
+  let p = cp[o.ref_id];
 
   p.coordinates =  [latlng.lat, latlng.lng];
   p.title =  p.title || o.title;
@@ -878,8 +903,6 @@ function updateControlPoint(marker, latlng, data) {
     p.osm.name = data.name;
     p.osm.coordinates = [latlng.lat, latlng.lng];
   }
-
-  //console.log('control point', settings.remap.controlPoints[o.ref_id]);
 
   updateMarkers();
 }
