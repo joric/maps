@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base target="_top">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
+<base target="_top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
 
-  <title>Joric's Remap - Leaflet</title>
-  <link rel="shortcut icon" type="image/x-icon" href="data:," />
+<title>Joric's Remap - Leaflet</title>
+<link rel="shortcut icon" type="image/x-icon" href="data:," />
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.toolbar.js/0.1.0/Leaflet.Toolbar.min.css" integrity="sha512-GA6tz0ONkXAXGUnZU9M7mMkiOiXuXis56gRc73qvS+hXP0Sgb/mXihcqs6haKhes6mMeCPIdopIDixMwnnd+Iw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.toolbar.js/0.1.0/Leaflet.Toolbar.min.js" integrity="sha512-5jHQLJ93JywT7NbjOuyHQzqLsTNYc7mjj0U5bBmsnrE1P9+4qqjKak0H+8jSlTzeNcbtDiTbV68pMQNTXbSTHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.toolbar.js/0.1.0/Leaflet.Toolbar.min.css" integrity="sha512-GA6tz0ONkXAXGUnZU9M7mMkiOiXuXis56gRc73qvS+hXP0Sgb/mXihcqs6haKhes6mMeCPIdopIDixMwnnd+Iw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.toolbar.js/0.1.0/Leaflet.Toolbar.min.js" integrity="sha512-5jHQLJ93JywT7NbjOuyHQzqLsTNYc7mjj0U5bBmsnrE1P9+4qqjKak0H+8jSlTzeNcbtDiTbV68pMQNTXbSTHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/leaflet.distortableimage.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.7/dist/vendor.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.7/dist/leaflet.distortableimage.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/leaflet.distortableimage.min.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.7/dist/vendor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.7/dist/leaflet.distortableimage.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-search@4.0.0/dist/leaflet-search.src.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@4.0.0/dist/leaflet-search.src.min.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet-search@4.0.0/dist/leaflet-search.src.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@4.0.0/dist/leaflet-search.src.min.css">
 
 <!--
   <script src="https://cdn.jsdelivr.net/npm/leaflet-distortableimage@0.21.9/dist/leaflet.distortableimage.min.js"></script>
@@ -36,33 +36,33 @@
   <script src="L.Control.MousePosition.js"></script>
 -->
 
-  <style>
-    html, body {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-    }
-    #map {
-      height: 100%;
-      width:  100%;
-    }
-    #controls {
-      position: absolute;
-      margin: auto;
-      left: 0;
-      right: 0;
-      bottom: 0;
+<style>
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+#map {
+  height: 100%;
+  width:  100%;
+}
+#controls {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-      z-index: 1000;
-      margin-bottom: 40px;
-      
-      text-align: center;
-      width: 50%;
-    }
-    .slider {
-      width: 100%;
-    }
-  </style>
+  z-index: 1000;
+  margin-bottom: 40px;
+  
+  text-align: center;
+  width: 50%;
+}
+.slider {
+  width: 100%;
+}
+</style>
 </head>
 <body>
 
@@ -103,7 +103,7 @@ baseLayers['Wikimedia'] = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{
   attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>'
 });
 
-baseLayers['Google Sattelite'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+baseLayers['Google Satellite'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
   maxZoom: 20,
   subdomains:['mt0','mt1','mt2','mt3'],
   attribution: '<a href="https://cloud.google.com/maps-platform/terms?hl=es-419">Google Satellite</a>'
@@ -813,7 +813,6 @@ function reloadImage() {
     actions: [L.ScaleAction, L.RotateAction, L.OpacityAction, L.RestoreAction, L.LockAction],
     corners: settings.remap.corners,
   }).on('update', imageUpdated).on('load', updateMarkers)
-
   imagesLayer.addLayer(globalImage);
 }
 
@@ -1067,7 +1066,8 @@ function loadLocalData() {
 
 function saveLocalData() {
   let data = localStorage.getItem(localDataName);
-  showSaveFilePicker({suggestedName: localDataName+'.json'}).then(f=>f.createWritable()).then(f=>f.write(data).then(()=>f.close()));
+  data = JSON.stringify(JSON.parse(data), null, 2);
+  showSaveFilePicker({suggestedName: localDataName+'.json'}).then(f=>f.createWritable()).then(f=>f.write(data) && f.close());
 }
 
 function resetLocalData() {
