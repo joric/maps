@@ -227,8 +227,17 @@ hr { opacity: .6;}
   cursor: pointer;
 }
 
+#categories .hidden {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
 #categories .header:hover {
   opacity: 1;
+}
+
+#categories .hidden:hover {
+  opacity: .8;
 }
 
 #categories .group-categories {

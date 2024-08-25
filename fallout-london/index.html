@@ -579,13 +579,18 @@ function markItems() {
     hide ? marker.hide() : marker.show();
   }
 
-  // mark DOM structure on the page
-  [].forEach.call(document.querySelectorAll('#categories .item'), function(div) {
-    if (settings.activeItems[div.alt]==true) {
-      div.classList.remove('hidden');
-    } else {
-      div.classList.add('hidden');
-    }
+  [].forEach.call(document.querySelectorAll('#categories .header'), function(header) {
+    let groupShow = false;
+    let divs = header.nextSibling.querySelectorAll('.category-item');
+    [].forEach.call(divs,function(div) {
+      if (settings.activeItems[div.alt]==true) {
+        div.classList.remove('hidden');
+        groupShow = true;
+      } else {
+        div.classList.add('hidden');
+      }
+    });
+    setClass(header, !groupShow, 'hidden');
   });
 
   updateTracking();
