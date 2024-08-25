@@ -147,8 +147,8 @@ a:hover { text-decoration: underline; }
 }
 
 #right-sidebar.closed .triangle {
-  border-left: 0px;
   border-right: 9px solid;
+  border-left: 0px;
 }
 
 .panel {
@@ -670,4 +670,28 @@ input::selection {
   }
 }
 
+@media (max-width: 600px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  #left-sidebar.closed {
+    transform: translateX(-180px)
+  }
+
+  #right-sidebar {
+    width: 180px;
+  }
+
+  #right-sidebar.closed {
+    transform: translateX(180px)
+  }
+
+  #categories .group-categories {
+    column-count: 1;
+  }
+  input::placeholder {
+        color: transparent;
+  }
+}
 
