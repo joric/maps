@@ -753,9 +753,9 @@ input::selection {
     display: none;
   }
 
-  #left-sidebar {
-    transform: translateX(-100%);
-    width: 100%;
+  #left-sidebar, #left-sidebar.closed {
+    transform: translateX(-100vw);
+    width: 100vw;
     top: 60px;
   }
 
@@ -771,9 +771,9 @@ input::selection {
     column-count: 2;
   }
 
-  #right-sidebar {
-    transform: translateX(100%);
-    width: 100%;
+  #right-sidebar, #right-sidebar.closed {
+    transform: translateX(100vw);
+    width: 100vw;
     top: 60px;
   }
 
