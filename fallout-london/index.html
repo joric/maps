@@ -39,8 +39,10 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
 <div id="left-sidebar" class="sidebar">
   <div class="sidebar-close" onclick="toggleNav(this)"><div class="container middle"><i class="triangle"></i></div></div>
   <div class="panel" id="left-panel">
-    <h2>Fallout London</h2>
-    <hr/>
+    <div class="caption">
+      <h2>Fallout London</h2>
+      <hr/>
+    </div>
 
     <div class="map-switcher-panel">
       <a href="#LondonWorld" class="map-link">London</a>
@@ -82,7 +84,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
 <div id="right-sidebar" class="sidebar">
   <div class="sidebar-close" onclick="toggleNav(this)"><div class="container middle"><i class="triangle"></i></div></div>
   <div class="panel">
-    <h2>Progress Tracker</h2>
+    <h2 id="title2">Progress Tracker</h2>
     <hr/>
       <span id="toggle-found" class="button-toggle"><i class="icon fa fa-eye"></i>Found Locations</span>
     <hr/>
@@ -114,6 +116,16 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
     </div>
 
   </div>
+</div>
+
+<div id="topbar" class="sidebar">
+<div class="top-panel">
+  <div class="mobile-container">
+    <h2>Fallout London</h2>
+    <button class="topbar-btn" id="toggle-left">Navigation</button>
+    <button class="topbar-btn" id="toggle-right">Progress</button>
+  </div>
+</div>
 </div>
 
 <div id="alert" class="closed">Copied To Clipboard</div>
@@ -1378,6 +1390,23 @@ window.onload = function(event) {
     markItems();
     saveSettings();
   }
+
+  document.querySelector('#toggle-left').onclick = (e) => {
+    toggleClass(e.target, 'selected');
+    toggleClass(document.querySelector('#left-sidebar'), 'mobile');
+
+    setClass(document.querySelector('#toggle-right'), false, 'selected');
+    setClass(document.querySelector('#right-sidebar'), false, 'mobile');
+  }
+
+  document.querySelector('#toggle-right').onclick = (e) => {
+    toggleClass(e.target, 'selected');
+    toggleClass(document.querySelector('#right-sidebar'), 'mobile');
+
+    setClass(document.querySelector('#toggle-left'), false, 'selected');
+    setClass(document.querySelector('#left-sidebar'), false, 'mobile');
+  }
+
 }
 
 </script>

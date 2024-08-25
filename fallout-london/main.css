@@ -28,12 +28,7 @@ a:hover { text-decoration: underline; }
 .sidebar {
   color: #eee;
   background-color: #333;
-  width: 404px;
   opacity: 95%;
-  bottom: 0;
-  margin: 0;
-  top: 0;
-  position: absolute;
   transition: transform .25s ease-out;
 }
 
@@ -59,7 +54,7 @@ a:hover { text-decoration: underline; }
   flex-grow: 1;
   padding: 6px 6px 6px 6px;
   text-align: center;
-  width: 100px;
+  width: 95px;
 }
 
 .map-link.selected {
@@ -84,13 +79,20 @@ a:hover { text-decoration: underline; }
 }
 
 #left-sidebar {
+  width: 404px;
   left: 0;
+  bottom: 0;
+  margin: 0;
+  top: 0;
+  position: absolute;
 }
 
 #right-sidebar {
   width: 220px;
   right: 0;
+  top: 0;
   bottom: auto;
+  position: absolute;
 }
 
 #right-sidebar select {
@@ -653,13 +655,64 @@ input::selection {
   opacity: .6;
 }
 
+#topbar {
+  width: 100%;
+  margin: 0;
+  top: 0;
+  height: 60px;
+  position: absolute;
+  transform: translateY(-60px);
+  border-bottom: 1px solid dimgrey;
+}
+
+.top-panel {
+  padding: 8px;
+}
+
+.mobile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.mobile-container > * {
+  display: inline-block;
+  text-align: center;
+  height: 40px;
+}
+.mobile-container > h2 {
+  line-height: 40px;
+}
+
+.topbar-btn {
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+  text-align: center;
+  background: none;
+  border: 1px solid grey;
+}
+
+.topbar-btn.selected {
+  background: dimgrey;
+}
+
+
 @media (max-width: 1220px) {
-  .sidebar {
+  #left-sidebar {
     width: 220px;
   }
 
   #left-sidebar.closed {
     transform: translateX(-220px)
+  }
+
+  #right-sidebar {
+    width: 220px;
+  }
+
+  #right-sidebar.closed {
+    transform: translateX(220px)
   }
 
   #categories .group-categories {
@@ -670,8 +723,8 @@ input::selection {
   }
 }
 
-@media (max-width: 600px) {
-  .sidebar {
+@media (max-width: 700px) {
+  #left-sidebar {
     width: 180px;
   }
 
@@ -694,4 +747,44 @@ input::selection {
         color: transparent;
   }
 }
+
+@media (max-width: 450px) {
+  .sidebar-close {
+    display: none;
+  }
+
+  #left-sidebar {
+    transform: translateX(-100%);
+    width: 100%;
+    top: 60px;
+  }
+
+  #left-sidebar.mobile {
+    transform: translateX(0px);
+  }
+
+  #left-sidebar .caption {
+    display: none;
+  }
+
+  #categories .group-categories {
+    column-count: 2;
+  }
+
+  #right-sidebar {
+    transform: translateX(100%);
+    width: 100%;
+    top: 60px;
+  }
+
+  #right-sidebar.mobile {
+    transform: translateX(0px)
+  }
+
+  #topbar {
+    transform: translateY(0px)
+  }
+}
+
+
 
