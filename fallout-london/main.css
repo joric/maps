@@ -682,17 +682,14 @@ input::selection {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
-}
-
-.mobile-container > * {
-  text-align: center;
-  height: 40px;
+  align-items: center;
+  padding-top: 2px;
 }
 
 .mobile-title {
-  line-height: 40px;
   flex: 2 1 auto;
+  padding-top: 2px;
+  padding-right: 5px;
 }
 
 .topbar-btn {
