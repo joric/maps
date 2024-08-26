@@ -284,52 +284,48 @@ hr { opacity: .6;}
   flex: 1;
 }
 
-#user-panel .progress-item-wrapper {
-  display: flex;
+.progress-item-wrapper {
   padding-bottom: 6px;
   width: 100%;
 }
 
-#user-panel .progress-item {
+.progress-item {
   cursor: pointer;
-  padding-right: 5px;
-  display: flex;
-  position: relative;
   align-items: center;
-  width: 90%;
+  display: flex;
 }
 
-#user-panel .progress-item > * {
+.progress-item > * {
   pointer-events: none;
 }
 
-#user-panel .progress-item .icon {
+.progress-item .icon {
   text-align: left;
 }
 
-#user-panel .progress-item .title {
+.progress-item .title {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  flex: 2 1 auto;
 }
 
-#user-panel .progress-item .counter {
-  float: right;
+.progress-item .counter {
+  margin-left: 4px;
   text-align: right;
-  flex: 1;
 }
 
-#user-panel .progress-item-remove {
-  flex: 0;
+.progress-item-remove {
   border: 1px solid grey;
   align-self: center;
   cursor: pointer;
+  margin-left: 4px;
   padding-left: 4px;
   padding-right: 4px;
   color: grey;
 }
 
-#user-panel .progress-item-remove:hover {
+.progress-item-remove:hover {
   color: white;
 }
 

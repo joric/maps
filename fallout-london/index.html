@@ -660,6 +660,7 @@ function updateTracking() {
     c3.className = 'progress-item-remove';
     c3.innerHTML = 'x';
     c3.alt = type;
+
     c3.onclick = function(e) { // removeTrack
       let type = e.target.alt;
       if (confirm('Are you sure you want to delete this category?')) {
@@ -672,8 +673,8 @@ function updateTracking() {
     li.appendChild(c0);
     li.appendChild(c1);
     li.appendChild(c2);
+    li.appendChild(c3);
     div.appendChild(li);
-    div.appendChild(c3);
   }
 }
 
