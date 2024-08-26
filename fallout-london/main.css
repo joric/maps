@@ -296,7 +296,7 @@ hr { opacity: .6;}
   display: flex;
   position: relative;
   align-items: center;
-  width: 100%;
+  width: 90%;
 }
 
 #user-panel .progress-item > * {
