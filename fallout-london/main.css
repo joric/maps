@@ -753,7 +753,7 @@ input::selection {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .sidebar-close {
     display: none;
   }
