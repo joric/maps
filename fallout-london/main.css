@@ -681,7 +681,7 @@ input::selection {
 .mobile-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .mobile-container > * {
@@ -689,8 +689,10 @@ input::selection {
   text-align: center;
   height: 40px;
 }
-.mobile-container > h2 {
+
+.mobile-title {
   line-height: 40px;
+  flex: 2 1 auto;
 }
 
 .topbar-btn {
@@ -700,6 +702,7 @@ input::selection {
   text-align: center;
   background: none;
   border: 1px solid grey;
+  height: 40px;
 }
 
 .topbar-btn.selected {
