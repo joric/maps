@@ -22,6 +22,8 @@ begin
     Exit;
   end;
 
+  Exit;
+
   cell := LinksTo(ElementByName(b, 'Cell'));
   refs := FindChildGroup(ChildGroup(cell), 8, cell);
   for i := 0 to Pred(ElementCount(refs)) do begin
@@ -262,7 +264,6 @@ begin
             area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
             if Assigned(area) then begin
 
-              //ChildObj['door_id'] := IntToHex(GetLoadOrderFormID(a), 8);
               ChildObj['area'] := EditorID(area);
 
               ax := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\X');
