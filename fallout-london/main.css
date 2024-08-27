@@ -299,6 +299,10 @@ hr { opacity: .6;}
   pointer-events: none;
 }
 
+.progress-item-remove {
+  pointer-events: all;
+}
+
 .progress-item .icon {
   text-align: left;
 }
