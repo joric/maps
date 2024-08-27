@@ -209,7 +209,7 @@ let maps = {
       'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
       'IWMWorld':{ scale: 1, offset: {x:0, y:0} },
       'DumpWorld':{ scale: 1, offset: {x:66809.976562, y:-56285.085937} },
-      'BromleyPindarWorld':{ scale: 1, offset: {x:33841.644531, y:-78117.046875} },
+      'BromleyPindarWorld':{ scale: 0.1, offset: {x:33841.644531, y:-78117.046875} },
     },
   },
   'WestminsterWorld' : { name: 'Westminster', scale: 1.9, offset: {x:7000, y:22000} },
@@ -219,7 +219,9 @@ let maps = {
   'BankofEnglandWorld': { name:'Bank of England', scale: 3.77, offset: {x:6000, y:4800} },
   'CoventGardenWorldSpace': { name:'Covent Garden', scale: 3.77, offset: {x:6000, y:4800}, hidden: true },
   'BromleyGladesWorld': { name: 'Bromley Glades', scale: 1, offset: {x:0, y:0}, hidden: true },
-  'StPaulsWorld': { name: 'St Pauls', scale: 1, offset: {x:0, y:0}, hidden: true }
+  'StPaulsWorld': { name: 'St Pauls', scale: 1, offset: {x:0, y:0}, hidden: true },
+  'DumpWorld': { name: 'Dump', scale: 1, offset: {x:0, y:0}, hidden: true },
+  'BromleyPindarWorld': { name: 'Bromley Pindar', scale: 1, offset: {x:0, y:0}, hidden: true },
 };
 
 function closeTrack(){
@@ -949,7 +951,10 @@ function loadMarkers() {
     // skip markers out of bounds
     let [left,top,right,bottom] = mapBounds;
     if (! (c.x>left && c.x<right && c.y>top && c.y<bottom )) {
-      continue;
+      // maybe not skip just align to the edge
+      c.x = Math.min(left, Math.max(right, c.x));
+      c.y = Math.min(top, Math.max(bottom, c.y));
+      //continue;
     }
 
     cached_types[t.type] = {...cached_types[t.type], ...t};
@@ -1066,7 +1071,7 @@ function loadMarkers() {
 
   if (debugParam) mapParam.markerName = debugParam;
 
-  settings.searchText = ''; // maybe don't open search results, you know
+  // settings.searchText = ''; // maybe don't open search results, you know
 
   // marker link
   if (name = mapParam.markerName) {
