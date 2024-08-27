@@ -421,15 +421,15 @@ function itemText(text, o, noindex=true) {
 }
 
 function itemName(o) {
-  return itemText(o.name || 'Unnamed', o, false);
+  return itemText(o.title || 'Unnamed', o, false);
 }
 
 function getType(o) {
   let defaults = { bg: 'grey', fg: 'white', fa: 'circle-question', group:'misc'};
-  t = {...defaults, type: o.type, group_weight:0, ...(types[o.type] || {})};
+  t = {...defaults, type: o.description, group_weight:0, ...(types[o.description] || {})};
   for (const [key, tt] of Object.entries(t.items||{})) {
     if (tt.match) {
-      if ((o.editor_id||o.name).match(new RegExp(tt.match,'g'))) {
+      if ((o.editor_id||o.title).match(new RegExp(tt.match,'g'))) {
         t = {...t, ...tt, key: key};
         if (!tt.type) {
           t = {...t, subtype: key};
@@ -525,7 +525,7 @@ const cmpNum = (a,b)=> b[1]!=a[1] ? (b[1]-a[1]) : a[0].localeCompare(b[0]);
 const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true });
 const capitalize = s => s[0].toUpperCase()+s.slice(1);
 
-let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = o.cell_name) ? ' (' + cell + ')' : '');
+let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = (o.cell && o.cell.name)) ? ' (' + cell + ')' : '');
 let itemDescription = o=> itemName(o) + ' (' + itemTypeExtended(o) + ')';
 let itemType = o => getType(o).type;
 let itemTypeExtended = o => {t = getType(o); return t.subtype ? t.type + ' / ' + t.subtype : t.type; } 
@@ -728,12 +728,12 @@ function getMapURL(id) {
 function wikify(o) {
   let count = 0;
   for (const marker of map.getLayer('markers')._geoList) {
-    if (marker.properties.name == o.name) {
+    if (marker.properties.title == o.title) {
       count += 1;
       if (count>1) break;
     }
   }
-  let location_id = count > 1 ? canonical(o.ref_id) : o.name;
+  let location_id = count > 1 ? canonical(o.ref_id) : o.title;
   return location_id.replace(/[^A-Za-z0-9\s]/g, '').trim().replace(/\s+/g, '_');
 }
 
@@ -749,9 +749,9 @@ function findLocation(text) {
   for (let stage=0; stage<3; stage++) {
     for (marker of collection) {
       let o = marker.properties;
-      let base = [o.name, o.form_id, canonical(o.form_id)].map(s=>s ? s.toLowerCase():'')
-      let scramble = [...split(o.name), itemType(o), itemLocation(o)].map(s=>s?s.toLowerCase():'');
-      let tags = [o.name, o.type, itemType(o), itemLocation(o)].map(s=>s ? s.toLowerCase():'');
+      let base = [o.title, o.form_id, canonical(o.form_id)].map(s=>s ? s.toLowerCase():'')
+      let scramble = [...split(o.title), itemType(o), itemLocation(o)].map(s=>s?s.toLowerCase():'');
+      let tags = [o.title, o.description, itemType(o), itemLocation(o)].map(s=>s ? s.toLowerCase():'');
       if (stage==0 && (canonical(o.form_id)==canonical(name) || text==wikify(o) || base.includes(name))) return marker;
       if (stage==1 && words.every(e=>scramble.includes(e))) return marker;
       if (stage==2 && words.every(e=>tags.includes(e))) return marker;
@@ -778,14 +778,14 @@ function fuzzySearch(s, limit, threshold) {
 
     let t = getType(o);
 
-    data.push({...o, ...{description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), tags: tags, key: t.key, marker: marker}});
+    data.push({...o, ...{display_name: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), tags: tags, key: t.key, marker: marker}});
   }
 
   limit = limit || 100;
   threshold = threshold || 0.75;
 
   let options = {
-    keys: ['name', 'type', 'description', 'form_id', 'ref_id', 'editor_id', 'custom_type', 'location', 'tags', 'key'],
+    keys: ['title', 'description', 'display_name', 'form_id', 'ref_id', 'editor_id', 'custom_type', 'location', 'tags', 'key'],
     threshold: threshold,
     ignoreLocation: true,
     includeScore: true,
@@ -889,23 +889,23 @@ function loadMarkers() {
   let counters = {};
   let counters2 = {};
 
-  function getLoc(o) {
-    let x = o.x;
-    let y = o.y;
-    let z = o.z;
+  function getLoc(feature) {
+    let [x,y,z] = feature.geometry.coordinates;
+
+    let o = feature.properties;
 
     // if we have doors we came through doors, correct coordinates
     if (o.doors) {
-      let [ax,ay,az] = o.doors.a.coordinates;
-      let [bx,by,bz] = o.doors.b.coordinates;
-
+      let [ax,ay,az] = o.doors.inner.coordinates;
+      let [bx,by,bz] = o.doors.outer.coordinates;
       x = x + ax - bx;
       y = y + ay - by;
       z = z + az - bz;
     }
 
+    let w = markers.worldspaces[o.area];
 
-    let t = markers.worldspaces[o.area];
+    let t = {scale: w.scale, offset:{x: w.offset[0],  y: w.offset[1], z: w.offset[2]}};
 
     if (t) {
       x = x * t.scale + t.offset.x;
@@ -941,21 +941,10 @@ function loadMarkers() {
   let weights = {};
   let total = 0;
 
-  //cell_names = {}
+  for (feature of markers.features) {
+    let o = feature.properties;
 
-  for (o of markers.markers) {
-    //console.log(o);
-
-    if (!o.type) continue;
-
-    if (!o.area) {
-      //let cell = (o.cell_editor_id || o.cell_id) +':' + o.cell_name;
-      //cell_names[cell] = (cell_names[cell]||0) +1;
-    }
-
-    if (o.cell_name == "C3Delight Dev Cell") {
-    //  o.area = 'DumpWorld';
-    }
+    if (!o.description) continue;
 
     let t = getType(o);
     weights[t.group] = Math.max(weights[t.group]||0, t.group_weight);
@@ -968,7 +957,10 @@ function loadMarkers() {
       if (o.type == 'Military Base' && o.area != 'IWMWorld') continue;
     }
 
-    let c = getLoc(o);
+    let c = getLoc(feature);
+
+
+    delete feature.properties.doors;
 
     // skip markers out of bounds
     let [left,top,right,bottom] = mapBounds;
