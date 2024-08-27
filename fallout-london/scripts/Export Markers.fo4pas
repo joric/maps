@@ -10,10 +10,11 @@ uses SysUtils;
 function FindExternalDoor(a: IInterface): IInterface;
 var
   i: integer;
-  b, c, refs, area, cell: IInterface;
+  b, refs, area, cell: IInterface;
 begin
 
   b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
+
   area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
 
   Result := b;
@@ -21,8 +22,6 @@ begin
   if Assigned(area) then begin
     Exit;
   end;
-
-  Exit;
 
   cell := LinksTo(ElementByName(b, 'Cell'));
   refs := FindChildGroup(ChildGroup(cell), 8, cell);
@@ -43,15 +42,100 @@ begin
   end;
 end;
 
+procedure SaveDoors(ChildObj, a, b, area: IInterface);
+var
+  door_id, other_door_id: string;
+  ax,ay,az, bx,by,bz: double;
+begin
+  ax := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\X');
+  ay := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Y');
+  az := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Z');
+
+  bx := GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\X');
+  by := GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Y');
+  bz := GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Z');
+
+  door_id := IntToHex(GetLoadOrderFormID(a), 8);
+  other_door_id := IntToHex(GetLoadOrderFormID(b), 8);
+
+  ChildObj.O['doors'].O[ 'a' ].S['ref_id'] := door_id;
+  ChildObj.O['doors'].O[ 'b' ].S['ref_id'] := other_door_id;
+
+  ChildObj.O['doors'].O[ 'a' ].A['coordinates'].Add ( ax );
+  ChildObj.O['doors'].O[ 'a' ].A['coordinates'].Add ( ay );
+  ChildObj.O['doors'].O[ 'a' ].A['coordinates'].Add ( az );
+
+  ChildObj.O['doors'].O[ 'b' ].A['coordinates'].Add ( bx );
+  ChildObj.O['doors'].O[ 'b' ].A['coordinates'].Add ( by );
+  ChildObj.O['doors'].O[ 'b' ].A['coordinates'].Add ( bz );
+
+  ChildObj['area'] := EditorID(area);
+end;
+
+procedure FindArea(ChildObj, cell: IInterface);
+var
+  refs, a,b,c,d, refs2, cell2, area: IInterface;
+  i,i2: integer;
+begin
+
+  refs := FindChildGroup(ChildGroup(cell), 8, cell);
+  for i := 0 to Pred(ElementCount(refs)) do begin
+    a := ElementByIndex(refs, i);
+    if Signature(BaseRecord(a)) <> 'DOOR' then continue;
+    b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
+    if Assigned(b) then begin
+      area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
+      if Assigned(area) then begin
+        SaveDoors(ChildObj, a, b, area);
+        Exit;
+      end;
+    end;
+  end;
+
+  // recursion is broken. try the second level right here
+  for i := 0 to Pred(ElementCount(refs)) do begin
+    a := ElementByIndex(refs, i);
+    if Signature(BaseRecord(a)) <> 'DOOR' then continue;
+    b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
+    if Assigned(b) then begin
+
+      // second pair of doors, first door in the same cell as b but not b
+
+      cell2 := LinksTo(ElementByName(b, 'Cell'));
+      refs2 := FindChildGroup(ChildGroup(cell2), 8, cell2);
+      for i2 := 0 to Pred(ElementCount(refs2)) do begin
+        c := ElementByIndex(refs, i2);
+        if Signature(BaseRecord(c)) <> 'DOOR' then continue;
+        d := WinningOverride(LinksTo(ElementByPath(c, 'XTEL\Door')));
+
+        //if GetLoadOrderFormID(a) = GetLoadOrderFormID(c) then continue;
+        //if GetLoadOrderFormID(a) = GetLoadOrderFormID(d) then continue;
+        //if GetLoadOrderFormID(b) = GetLoadOrderFormID(c) then continue;
+        //if GetLoadOrderFormID(b) = GetLoadOrderFormID(d) then continue;
+
+        if Assigned(d) then begin
+          area := LinksTo(ElementByName(LinksTo(ElementByName(d, 'Cell')), 'Worldspace'));
+          if Assigned(area) then begin
+            AddMessage('found 2nd level door!');
+            SaveDoors(ChildObj, a, d, area);
+            Exit;
+          end;
+        end;
+      end;
+    end;
+  end;
+
+end;
+
 
 function Finalize: integer;
 var
-  i, j, k, w, count, doors, ItemsCount, quests, q, value: integer;
-  f, g, e, r, area, cell, refs, a, b, ref, items, item, rec, perk, outfit: IInterface;
+  i, j, i2, k, w, count, doors, ItemsCount, quests, q, value: integer;
+  f, g, e, r, area, cell, cell2, refs, refs2, a2, b2, a, b, ref, items, item, rec, perk, outfit: IInterface;
   Obj, ChildObj: TJsonObject;
-  s, id: string;
+  s, id, ref_id, door_id, other_door_id: string;
   sList: TStringList;
-  x,y,z, ax,ay,az, bx,by,bz: double;
+  x,y,z: double;
 begin
   f := FileByIndex(8);
   Obj := TJsonObject.Create;
@@ -250,52 +334,15 @@ begin
           ChildObj['cell_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
           ChildObj['cell_editor_id'] := EditorID(cell);
           ChildObj['cell_name'] := GetElementEditValues(cell, 'FULL');
-
           // interior cell, find a door to the worldspace, update coordinates
-
-          refs := FindChildGroup(ChildGroup(cell), 8, cell);
-          for i := 0 to Pred(ElementCount(refs)) do begin
-            a := ElementByIndex(refs, i);
-            if Signature(BaseRecord(a)) <> 'DOOR' then
-              continue;
-
-            b := FindExternalDoor(a);
-
-            area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
-            if Assigned(area) then begin
-
-              ChildObj['area'] := EditorID(area);
-
-              ax := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\X');
-              ay := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Y');
-              az := GetElementNativeValues(a, 'XTEL\Position/Rotation\Position\Z');
-
-              bx := GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\X');
-              by := GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Y');
-              bz := GetElementNativeValues(b, 'XTEL\Position/Rotation\Position\Z');
-
-              x := x + ax - bx;
-              y := y + ay - by;
-              z := z + az - bz;
-
-              ChildObj['x'] := x;
-              ChildObj['y'] := y;
-              ChildObj['z'] := z;
-
-              Inc(doors);
-
-              break;
-            end;
-          end;
-
-          Inc(count);
+          FindArea(ChildObj, cell);
         end;
+        Inc(count);
       end;
     end;
   end;
 
   AddMessage(Format('Collected %d items', [count]));
-  AddMessage(Format('Found %d doors', [doors]));
 
   //AddMessage(AdjustLineBreaks(Obj.ToJSON({Compact:=}False)));
 

@@ -894,6 +894,17 @@ function loadMarkers() {
     let y = o.y;
     let z = o.z;
 
+    // if we have doors we came through doors, correct coordinates
+    if (o.doors) {
+      let [ax,ay,az] = o.doors.a.coordinates;
+      let [bx,by,bz] = o.doors.b.coordinates;
+
+      x = x + ax - bx;
+      y = y + ay - by;
+      z = z + az - bz;
+    }
+
+
     let t = markers.worldspaces[o.area];
 
     if (t) {
@@ -941,7 +952,6 @@ function loadMarkers() {
       //let cell = (o.cell_editor_id || o.cell_id) +':' + o.cell_name;
       //cell_names[cell] = (cell_names[cell]||0) +1;
     }
-
 
     if (o.cell_name == "C3Delight Dev Cell") {
     //  o.area = 'DumpWorld';
