@@ -7,6 +7,41 @@ unit UserScript;
 
 uses SysUtils;
 
+function FindExternalDoor(a: IInterface): IInterface;
+var
+  i: integer;
+  b, c, refs, area, cell: IInterface;
+begin
+
+  b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
+  area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
+
+  Result := b;
+
+  if Assigned(area) then begin
+    Exit;
+  end;
+
+  cell := LinksTo(ElementByName(b, 'Cell'));
+  refs := FindChildGroup(ChildGroup(cell), 8, cell);
+  for i := 0 to Pred(ElementCount(refs)) do begin
+    a := ElementByIndex(refs, i);
+    if Signature(BaseRecord(a)) <> 'DOOR' then
+      continue;
+
+    b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
+    area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
+
+    if Assigned(area) then begin
+      //AddMessage('Found nested door!');
+      Result := b;
+      Exit;
+    end;
+
+  end;
+end;
+
+
 function Finalize: integer;
 var
   i, j, k, w, count, doors, ItemsCount, quests, q, value: integer;
@@ -215,15 +250,14 @@ begin
           ChildObj['cell_name'] := GetElementEditValues(cell, 'FULL');
 
           // interior cell, find a door to the worldspace, update coordinates
+
           refs := FindChildGroup(ChildGroup(cell), 8, cell);
           for i := 0 to Pred(ElementCount(refs)) do begin
             a := ElementByIndex(refs, i);
             if Signature(BaseRecord(a)) <> 'DOOR' then
               continue;
 
-            b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
-            if not Assigned(b) then Continue;
-            if not ElementExists(b, 'XTEL') then Continue;
+            b := FindExternalDoor(a);
 
             area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
             if Assigned(area) then begin
@@ -247,6 +281,8 @@ begin
               ChildObj['y'] := y;
               ChildObj['z'] := z;
 
+              Inc(doors);
+
               break;
             end;
           end;
@@ -258,6 +294,7 @@ begin
   end;
 
   AddMessage(Format('Collected %d items', [count]));
+  AddMessage(Format('Found %d doors', [doors]));
 
   //AddMessage(AdjustLineBreaks(Obj.ToJSON({Compact:=}False)));
 

@@ -930,13 +930,21 @@ function loadMarkers() {
   let weights = {};
   let total = 0;
 
+  //cell_names = {}
+
   for (o of markers.markers) {
     //console.log(o);
 
     if (!o.type) continue;
 
+    if (!o.area) {
+      //let cell = (o.cell_editor_id || o.cell_id) +':' + o.cell_name;
+      //cell_names[cell] = (cell_names[cell]||0) +1;
+    }
+
+
     if (o.cell_name == "C3Delight Dev Cell") {
-      o.area = 'DumpWorld';
+    //  o.area = 'DumpWorld';
     }
 
     let t = getType(o);
@@ -990,6 +998,8 @@ function loadMarkers() {
 
     total += 1;
   }
+
+  //console.log(cell_names);
 
   document.querySelector('#show-all').title = document.querySelector('#hide-all').title = plural(total,'marker');
 
