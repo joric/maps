@@ -935,6 +935,10 @@ function loadMarkers() {
 
     if (!o.type) continue;
 
+    if (o.cell_name == "C3Delight Dev Cell") {
+      o.area = 'DumpWorld';
+    }
+
     let t = getType(o);
     weights[t.group] = Math.max(weights[t.group]||0, t.group_weight);
 
