@@ -986,12 +986,17 @@ function loadMarkers() {
       let path = exits[o.cell];
       if (path && path.length>0) {
         o._doors = path.map(f=>f.properties.ref_id);
+
+        // items look off maybe just use the last door here
+        path = [path[path.length-1]];
+
         for (door of path) {
           let [dx,dy,dz] = door.geometry.coordinates;
-          x = x + dx;
-          y = y + dy;
-          z = z + dz;
+          x = x*0.1 + dx;
+          y = y*0.1 + dy;
+          z = z*0.1 + dz;
         }
+
       }
     }
 
