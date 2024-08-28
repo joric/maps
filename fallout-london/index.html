@@ -421,7 +421,7 @@ function itemText(text, o, noindex=true) {
 }
 
 function itemName(o) {
-  return itemText(o.title || 'Unnamed', o, false);
+  return itemText( o.door_name || o.title || 'Unnamed', o, false);
 }
 
 function getType(o) {
@@ -525,38 +525,12 @@ const cmpNum = (a,b)=> b[1]!=a[1] ? (b[1]-a[1]) : a[0].localeCompare(b[0]);
 const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true });
 const capitalize = s => s[0].toUpperCase()+s.slice(1);
 
-function itemCell(o) {
-  let cell = markers.cells[o.cell];
-  if (cell) {
-    return cell;
-  }
-  let title = cell_lookup[o.cell_name];
-  if (title) {
-    let feature = feature_lookup[title];
-    if (feature) {
-      //console.log('remapped', o.title, '=>', title);
-      return {
-        name: o.cell_name,
-        area: feature.properties.area,
-        doors: {
-          inner: { coordinates: [0,0,0] },
-          outer: { 
-            coordinates: [
-              -feature.geometry.coordinates[0],
-              -feature.geometry.coordinates[1],
-              -feature.geometry.coordinates[2],
-            ]
-          },
-        }
-      }
-    }
-  }
-}
-
 function itemArea(o) {
   if (o.area) return o.area;
-  let cell = itemCell(o);
-  if (cell) return cell.area;
+  let exit = exits[o.cell];
+  if (exit) {
+    return exit.outer.properties.area;
+  }
 }
 
 let itemLocation = o => ((area = itemArea(o)) && (maps[area] && maps[area].name) || area) + ( (cell = (o.cell && o.cell_name)) ? ' (' + cell + ')' : '');
@@ -665,6 +639,7 @@ function updateTracking() {
 
   for (type of Object.keys(settings.track).sort(cmpAlphaNum)) {
     let t = cached_types[type];
+    if (!t) continue;
 
     let div = document.createElement('div');
     div.className = 'progress-item-wrapper';
@@ -958,14 +933,54 @@ let cell_lookup = {
   //"C3Delight Dev Cell": 25,
 }
 
-let feature_lookup = {};
+let title_lookup = {};
+let ref_lookup = {};
+let cell_doors = {};
+let exits = {};
 
 function loadMarkers() {
   let counters = {};
   let counters2 = {};
 
+  // fill lookup tables
   for (feature of markers.features) {
-    feature_lookup[feature.properties.title] = feature;
+    let o = feature.properties;
+    title_lookup[o.title] = feature;
+    ref_lookup[o.ref_id] = feature;
+
+    if (o.cell && o.other_door) {
+      cell_doors[o.cell] = (cell_doors[o.cell]||[]);
+      cell_doors[o.cell].push(feature);
+    }
+  }
+
+  const visited = new Set();
+  function find_exit(cell_id, clear=true) {
+    if (clear) visited.clear();
+    if (visited.has(cell_id)) return null;
+    visited.add(cell_id);
+    let doors = cell_doors[cell_id];
+    for (const door of doors) {
+      const nextDoor = ref_lookup[door.properties.other_door];
+      if (nextDoor.properties.area) return nextDoor;
+      const result = find_exit(nextDoor.properties.cell, false);
+      if (result) return result;
+    }
+    return null;
+  }
+
+  // for each cell, find and remember exits
+  for (cell_id of Object.keys(cell_doors)) {
+    let outer_door = find_exit(cell_id);
+    if (outer_door) {
+      inner_door = ref_lookup[outer_door.properties.other_door];
+      if (inner_door) {
+        exits[cell_id] = {
+          inner: inner_door,
+          outer: outer_door,
+        }
+      }
+    }
   }
 
   function getLoc(feature) {
@@ -974,15 +989,19 @@ function loadMarkers() {
     let o = feature.properties;
 
     let area = itemArea(o);
-    let cell = itemCell(o);
 
-    // assume every cell has doors
-    if (cell) {
-      let [ax,ay,az] = cell.doors.inner.coordinates;
-      let [bx,by,bz] = cell.doors.outer.coordinates;
-      x = x + ax - bx;
-      y = y + ay - by;
-      z = z + az - bz;
+    let exit = exits[o.cell];
+    if (exit) {
+      let [ax,ay,az] = exit.inner.geometry.coordinates;
+      let [bx,by,bz] = exit.outer.geometry.coordinates;
+      x = x + bx - ax;
+      y = y + by - ay;
+      z = z + bz - az;
+
+      o.calculated_exit = {
+        inner: exit.inner.properties.ref_id,
+        outer: exit.outer.properties.ref_id,
+      }
     }
 
     let w = markers.worldspaces[area];

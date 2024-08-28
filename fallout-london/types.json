@@ -182,6 +182,8 @@
     }
   },
 
+  "DOOR": {"fa": "door-open", "bg": "grey", "type": "Door", "group": "items"},
+
   "BOOK": {"fa": "envelope", "bg": "tan", "type": "Message", "group": "items",
     "items": {
       "Newspaper": {"match": "Newspaper", "fa": "newspaper", "bg": "#aaa", "type": "Newspaper"},
