@@ -975,6 +975,16 @@ function loadMarkers() {
     exits[cell_id] = find_path(cell_id);
   }
 
+  function rotate2d( x,y, angle, cx, cy ) {
+    x = x - cx;
+    y = y - cy;
+    let tx = x * Math.cos(angle) - y * Math.sin(angle);
+    let ty = x * Math.sin(angle) + y * Math.cos(angle);
+    x = tx + cx;
+    y = ty + cy;
+    return [x,y];
+  }
+
   function getLoc(feature) {
     let [x,y,z] = feature.geometry.coordinates;
 
@@ -989,12 +999,15 @@ function loadMarkers() {
 
         // items look off maybe just use the last door here
         path = [path[path.length-1]];
+        //path = path.slice().reverse();
+        let scale = 0.25;
 
         for (door of path) {
           let [dx,dy,dz] = door.geometry.coordinates;
-          x = x*0.25 + dx;
-          y = y*0.25 + dy;
-          z = z*0.25 + dz;
+          //[x,y] = rotate2d(x,y, door.properties.rotation[2]*Math.PI/180, dx,dy);
+          x = x*scale + dx;
+          y = y*scale + dy;
+          z = z*scale + dz;
         }
 
       }
@@ -1013,16 +1026,8 @@ function loadMarkers() {
 
       x = x * t.scale + t.offset.x;
       y = y * t.scale + t.offset.y;
-
       if (t.rotation) {
-        let cx = t.offset.x;
-        let cy = t.offset.y;
-        x = x - cx;
-        y = y - cy;
-        let tx = x * Math.cos(t.rotation) - y * Math.sin(t.rotation);
-        let ty = x * Math.sin(t.rotation) + y * Math.cos(t.rotation);
-        x = tx + cx;
-        y = ty + cy;
+        [x,y] = rotate2d(x,y, t.rotation, t.offset.x, t.offset.y);
       }
 
     } else if (t = maps[area]) {
