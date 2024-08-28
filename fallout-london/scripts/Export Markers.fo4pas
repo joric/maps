@@ -8,22 +8,28 @@ unit UserScript;
 uses SysUtils;
 
 procedure SaveCoordinates(ChildObj: TJsonObject; ref: IInterface; path: string);
+var data: TJsonObject;
 begin
   ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\X'));
   ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\Y'));
   ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\Z'));
 end;
 
-procedure SaveDoors(ChildObj, a, b, area: IInterface);
+procedure SaveDoors(Obj, ChildObj, a, b, cell, area: IInterface);
+var cell_id: string;
 begin
-  ChildObj.O['properties'].O['doors'].O['inner'].S['ref_id'] := IntToHex(GetLoadOrderFormID(a), 8);
-  ChildObj.O['properties'].O['doors'].O['outer'].S['ref_id'] := IntToHex(GetLoadOrderFormID(b), 8);
-  SaveCoordinates(ChildObj.O['properties'].O['doors'].O['inner'], a, 'XTEL\Position/Rotation\Position');
-  SaveCoordinates(ChildObj.O['properties'].O['doors'].O['outer'], b, 'XTEL\Position/Rotation\Position');
-  ChildObj.O['properties'].S['area'] := EditorID(area);
+  cell_id := IntToHex(GetLoadOrderFormID(cell), 8);
+  if (Obj.O['cells'].Contains(cell_id)) then Exit;
+  Obj.O['cells'].O[cell_id].S['editor_id'] := EditorID(cell);
+  Obj.O['cells'].O[cell_id].S['name'] := GetElementEditValues(cell, 'FULL');
+  Obj.O['cells'].O[cell_id].S['area'] := EditorID(area);
+  Obj.O['cells'].O[cell_id].O['doors'].O['inner'].S['ref_id'] := IntToHex(GetLoadOrderFormID(a), 8);
+  Obj.O['cells'].O[cell_id].O['doors'].O['outer'].S['ref_id'] := IntToHex(GetLoadOrderFormID(b), 8);
+  SaveCoordinates(Obj.O['cells'].O[cell_id].O['doors'].O['inner'], a, 'XTEL\Position/Rotation\Position');
+  SaveCoordinates(Obj.O['cells'].O[cell_id].O['doors'].O['outer'], b, 'XTEL\Position/Rotation\Position');
 end;
 
-procedure FindArea(ChildObj, cell: IInterface);
+procedure FindArea(Obj, ChildObj, cell: IInterface);
 var
   refs, a, b, area: IInterface;
   i: integer;
@@ -36,11 +42,23 @@ begin
     if Assigned(b) then begin
       area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
       if Assigned(area) then begin
-        SaveDoors(ChildObj, a, b, area);
+        SaveDoors(Obj, ChildObj, a, b, cell, area);
         Exit;
       end;
     end;
   end;
+end;
+
+procedure AddItem(Obj, ChildObj: TJsonObject; ref: IInterface; section: string);
+var ref_id: string;
+begin
+  ref_id := IntToHex(GetLoadOrderFormID(ref), 8);
+  ChildObj.O['properties'].A[section].Add(ref_id);
+  Obj.O[section].O[ref_id].S['editor_id'] := EditorID(ref);
+  if GetElementEditValues(ref, 'FULL') <> '' then
+    Obj.O[section].O[ref_id].S['name'] := GetElementEditValues(ref, 'FULL');
+  if GetElementEditValues(ref, 'DESC') <> '' then
+    Obj.O[section].O[ref_id].S['description'] := GetElementEditValues(ref, 'DESC');
 end;
 
 function Finalize: integer;
@@ -48,7 +66,7 @@ var
   i, j, k, count, quests, q, value: integer;
   f, g, e, r, area, cell, refs, a, b, ref, items, item, perk, outfit: IInterface;
   Obj, ChildObj: TJsonObject;
-  s, id: string;
+  s, id, section: string;
   sList: TStringList;
 begin
   f := FileByIndex(8);
@@ -148,13 +166,11 @@ begin
         ChildObj.O['properties'].S['editor_id'] := EditorID(r);
 
         if quests > 0 then begin
+
           for q := 0 to Pred(ReferencedByCount(r)) do begin
             ref := ReferencedByIndex(r, q);
             if Signature(ref) = 'QUST' then begin
-              id := IntToHex(GetLoadOrderFormID(ref), 8);
-              ChildObj.O['properties'].O['quests'].S[id] := EditorID(ref);
-              if GetElementEditValues(ref, 'FULL') <> '' then
-                ChildObj.O['properties'].O['quests'].S[id] := GetElementEditValues(ref, 'FULL');
+              AddItem(Obj, ChildObj, ref, 'quests');
             end;
           end;
 
@@ -164,10 +180,7 @@ begin
               item := ElementByIndex(items, q);
               ref := LinksTo(ElementByPath(item, 'CNTO\Item'));
               if Signature(ref) = 'WEAP' then begin
-                id := IntToHex(GetLoadOrderFormID(ref), 8);
-                ChildObj.O['properties'].O['weapons'].S[id] := EditorID(ref);
-                if GetElementEditValues(ref, 'FULL') <> '' then
-                  ChildObj.O['properties'].O['weapons'].S[id] := GetElementEditValues(ref, 'FULL');
+                AddItem(Obj, ChildObj, ref, 'weapons');
               end;
             end;
           end;
@@ -177,11 +190,7 @@ begin
             items := ElementByPath(outfit, 'INAM');
             for q := ElementCount(items) - 1 downto 0 do begin
               item := ElementByIndex(items, q);
-              ref := LinksTo(item);
-              id := IntToHex(GetLoadOrderFormID(ref), 8);
-              ChildObj.O['properties'].O['outfits'].S[id] := EditorID(ref);
-              if GetElementEditValues(ref, 'FULL') <> '' then
-                ChildObj.O['properties'].O['outfits'].S[id] := GetElementEditValues(ref, 'FULL');
+              AddItem(Obj, ChildObj, LinksTo(item), 'outfits');
             end;
           end;
         end;
@@ -191,9 +200,9 @@ begin
           ChildObj.O['properties'].I['value'] := value;
         end;
 
-        perk := LinksTo(ElementByPath(r, 'DNAM\Perk'));
-        if Assigned(perk) then begin
-          ChildObj.O['properties'].O['perks'].S[GetElementEditValues(perk, 'DESC')] := GetElementEditValues(perk, 'FULL');
+        ref := LinksTo(ElementByPath(r, 'DNAM\Perk'));
+        if Assigned(ref) then begin
+          AddItem(Obj, ChildObj, ref, 'perks');
         end;
 
         cell := LinksTo(ElementByName(e, 'Cell'));
@@ -203,10 +212,9 @@ begin
         end;
 
         if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then begin
-          ChildObj.O['properties'].O['cell'].S['form_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
-          ChildObj.O['properties'].O['cell'].S['editor_id'] := EditorID(cell);
-          ChildObj.O['properties'].O['cell'].S['name'] := GetElementEditValues(cell, 'FULL');
-          FindArea(ChildObj, cell);
+          ChildObj.O['properties'].S['cell'] := IntToHex(GetLoadOrderFormID(cell), 8);
+          ChildObj.O['properties'].S['cell_name'] := GetElementEditValues(cell, 'FULL');
+          FindArea(Obj, ChildObj, cell);
         end;
         Inc(count);
       end;

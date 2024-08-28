@@ -525,7 +525,41 @@ const cmpNum = (a,b)=> b[1]!=a[1] ? (b[1]-a[1]) : a[0].localeCompare(b[0]);
 const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true });
 const capitalize = s => s[0].toUpperCase()+s.slice(1);
 
-let itemLocation = o => ((maps[o.area] && maps[o.area].name) || o.area) + ( (cell = (o.cell && o.cell.name)) ? ' (' + cell + ')' : '');
+function itemCell(o) {
+  let cell = markers.cells[o.cell];
+  if (cell) {
+    return cell;
+  }
+  let title = cell_lookup[o.cell_name];
+  if (title) {
+    let feature = feature_lookup[title];
+    if (feature) {
+      //console.log('remapped', o.title, '=>', title);
+      return {
+        name: o.cell_name,
+        area: feature.properties.area,
+        doors: {
+          inner: { coordinates: [0,0,0] },
+          outer: { 
+            coordinates: [
+              -feature.geometry.coordinates[0],
+              -feature.geometry.coordinates[1],
+              -feature.geometry.coordinates[2],
+            ]
+          },
+        }
+      }
+    }
+  }
+}
+
+function itemArea(o) {
+  if (o.area) return o.area;
+  let cell = itemCell(o);
+  if (cell) return cell.area;
+}
+
+let itemLocation = o => ((area = itemArea(o)) && (maps[area] && maps[area].name) || area) + ( (cell = (o.cell && o.cell_name)) ? ' (' + cell + ')' : '');
 let itemDescription = o=> itemName(o) + ' (' + itemTypeExtended(o) + ')';
 let itemType = o => getType(o).type;
 let itemTypeExtended = o => {t = getType(o); return t.subtype ? t.type + ' / ' + t.subtype : t.type; } 
@@ -728,7 +762,8 @@ function getMapURL(id) {
 function wikify(o) {
   let count = 0;
   for (const marker of map.getLayer('markers')._geoList) {
-    if (marker.properties.title == o.title) {
+    let m = marker.properties;
+    if (m.title == o.title) {
       count += 1;
       if (count>1) break;
     }
@@ -771,9 +806,16 @@ function fuzzySearch(s, limit, threshold) {
     let o = marker.properties;
     let tags = [];
 
-    for (const list of [o.quests, o.weapons, o.perks, o.outfits]) {
+    for (const section of ['quests','weapons', 'perks', 'outfits']) {
+      let list = o[section];
       if (!list) continue;
-      for (const [k,v] of Object.entries(list)) { tags.push(k); tags.push(itemText(v,o)); }
+      for (const id of list) {
+        let name = markers[section][id].name || markers[section][id].editor_id || id;
+        let desc = markers[section][id].description;
+        let title = desc ? ( name +': ' + desc ) : name;
+        tags.push(id);
+        tags.push(itemText(title, o));
+      }
     }
 
     let t = getType(o);
@@ -826,11 +868,18 @@ function popupOnClick(e) {
     let div = popup.querySelector('#popup-subnote');
     div.replaceChildren();
 
-    for (const [i,list] of Object.entries([o.quests, o.weapons, o.perks, o. outfits])) {
+    for (const [i, section] of Object.entries(['quests','weapons', 'perks', 'outfits'])) {
+      let list = o[section];
       if (!list) continue;
+
       div.classList.remove('collapsed');
       div.appendChild(document.createElement('hr'));
-      for (const [k,v] of Object.entries(list)) {
+
+      for (const id of list) {
+        let name = markers[section][id].name || markers[section][id].editor_id || id;
+        let desc = markers[section][id].description;
+
+        let title = desc ? ( name +': ' + desc ) : name;
 
         let li = document.createElement('div');
         li.className = 'popup-subnote-item';
@@ -841,9 +890,9 @@ function popupOnClick(e) {
         c0.classList.add('fa-' + ['scroll','gun','star','shirt',''][i]);
 
         let a = document.createElement('a');
-        a.title = k;
-        a.textContent = itemText(v,o);
-        a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(v,o));
+        a.title = id;
+        a.textContent = itemText(title, o);
+        a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(name, o));
         a.target = 'blank_';
 
         li.appendChild(c0);
@@ -885,25 +934,58 @@ let mouseMoved = false;
 document.addEventListener('mousedown', function(event) {mouseMoved = false; });
 document.addEventListener('mousemove', function(event){mouseMoved = true;});
 
+let cell_lookup = {
+  "Courtside Bazaar": 'Courthouse Hotel',
+  "National Portrait Gallery": 'National Portrait Gallery',
+  "Thameshaven Market": 'Thameshaven Market',
+  "Angel Lab Lower Levels": 'Wesley Herbertson',
+  "Chuckster's US Embassy": 'US Embassy',
+  "Cutty Sark": 'Cutty Sark',
+  "Spire Tower": 'LBF Headquarters Report',
+  "Research and IT Department": 'Ministry of Defence Bunker',
+  "Nuka-Cola Headquaters Top Floor": 'Nuka-Cola Headquaters',
+  "Emergency Broadcast Centre": 'Emergency Broadcast Centre',
+  "Angel Lab": 'Wesley Herbertson',
+  "London Bridge Underground Station": 'London Bridge Station',
+  "Aquarium Lower Levels": 'London Aquarium',
+  "Cave": 'Cutethulhu Doll',
+  "Elizabeth Tower": 'Tower of London',
+  //"Quick Test Cell": 519,
+  //"Mysterious Lab": 4,
+  //"Saffron Dev Cell": 29,
+  //"Prilladog Dev Cell": 1,
+  //"Callum Dev Cell": 48,
+  //"C3Delight Dev Cell": 25,
+}
+
+let feature_lookup = {};
+
 function loadMarkers() {
   let counters = {};
   let counters2 = {};
+
+  for (feature of markers.features) {
+    feature_lookup[feature.properties.title] = feature;
+  }
 
   function getLoc(feature) {
     let [x,y,z] = feature.geometry.coordinates;
 
     let o = feature.properties;
 
-    // if we have doors we came through doors, correct coordinates
-    if (o.doors) {
-      let [ax,ay,az] = o.doors.inner.coordinates;
-      let [bx,by,bz] = o.doors.outer.coordinates;
+    let area = itemArea(o);
+    let cell = itemCell(o);
+
+    // assume every cell has doors
+    if (cell) {
+      let [ax,ay,az] = cell.doors.inner.coordinates;
+      let [bx,by,bz] = cell.doors.outer.coordinates;
       x = x + ax - bx;
       y = y + ay - by;
       z = z + az - bz;
     }
 
-    let w = markers.worldspaces[o.area];
+    let w = markers.worldspaces[area];
 
     let t = {scale: w.scale, offset:{x: w.offset[0],  y: w.offset[1], z: w.offset[2]}};
 
@@ -912,7 +994,7 @@ function loadMarkers() {
       y = y * t.scale + t.offset.y;
     }
 
-    if (t = (maps[mapId].regions && maps[mapId].regions[o.area])) {
+    if (t = (maps[mapId].regions && maps[mapId].regions[area])) {
 
       x = x * t.scale + t.offset.x;
       y = y * t.scale + t.offset.y;
@@ -928,7 +1010,7 @@ function loadMarkers() {
         y = ty + cy;
       }
 
-    } else if (t = maps[o.area]) {
+    } else if (t = maps[area]) {
 
       x = x * t.scale + t.offset.x;
       y = y * t.scale + t.offset.y;
@@ -943,38 +1025,6 @@ function loadMarkers() {
 
   let cells = {};
 
-  let cell_lookup = {}
-
-  for (feature of markers.features) {
-    cell_lookup[feature.properties.title] = feature;
-  }
-
-  let cell_remap = {
-    "FOLINTGreenwichDomeStadium:Courtside Bazaar": 'Courthouse Hotel',
-    "FOLINTEastminsterNPG:National Portrait Gallery": 'National Portrait Gallery',
-    "FOLINTSouthwarkThameshavenMarket:Thameshaven Market": 'Thameshaven Market',
-    "FOLINTSouthwarkABCWlab02:Angel Lab Lower Levels": 'Wesley Herbertson',
-    "FOLDEVChuchksterStandlonePrep:Chuckster's US Embassy": 'US Embassy',
-    "FOLINTGreenwichCuttySarkInt:Cutty Sark": 'Cutty Sark',
-    "FOLINTCOLTVStudioInt2:Spire Tower": 'LBF Headquarters Report',
-    "FOLINTTowerHamletsIDSSTGCell02:Research and IT Department": 'Tower of London',
-    //"FOLDEVDebugRange:Quick Test Cell": 519,
-    //"FOLINTSTART001:Mysterious Lab": 4,
-    "FOLINTCOLNukaBruHQTopFloor:Nuka-Cola Headquaters Top Floor": 'Nuka-Cola Headquaters',
-    //"FOLDEVSaffronTemp:Saffron Dev Cell": 29,
-    "FOLINTCOLTVStudioInt3:Emergency Broadcast Centre": 'Emergency Broadcast Centre',
-    "FOLINTIslingtonAngelStationLab:Angel Lab": 'Wesley Herbertson',
-    "FOLINTSouthwarkLondonBridgeUStation01:London Bridge Underground Station": 'London Bridge Station',
-    //"FOLDEVPrilladogCell:Prilladog Dev Cell": 1,
-    //"FOLDEVCallum:Callum Dev Cell": 48,
-    //"FOLDEVSunnyAssetCell:C3Delight Dev Cell": 25,
-    "FOLINTLambethAquariumLowLevel:Aquarium Lower Levels": 'London Aquarium',
-    "FOLINTGreenwichCuteThulhuCave01:Cave": 'Cutethulhu Doll',
-    "FOLINTGreenwichCuteThulhuCave02:Cave": 'Cutethulhu Doll',
-    "FOLINTWestminsterBigBen:Elizabeth Tower": 'Tower of London',
-    //"PackInZZWEIRDTSATUEStorageCell:": 1
-  }
-
   for (feature of markers.features) {
     let o = feature.properties;
 
@@ -983,45 +1033,24 @@ function loadMarkers() {
     let t = getType(o);
     weights[t.group] = Math.max(weights[t.group]||0, t.group_weight);
 
-    if (!o.area && o.cell) {
-      let id = o.cell.editor_id +':'+ o.cell.name;
-      cells[ id ] = (cells[ id ]||0) + 1;
+    let area = itemArea(o);
+    let type = t.type;
 
-      if (cell_remap[id]) {
-
-        let title = cell_remap[id];
-
-        let f = cell_lookup[ title ];
-        o.area = f.properties.area;
-
-        o.remapped = title;
-
-        feature.geometry.coordinates[0] += f.geometry.coordinates[0];
-        feature.geometry.coordinates[1] += f.geometry.coordinates[1];
-        feature.geometry.coordinates[2] += f.geometry.coordinates[2];
-      }
-    }
-
-    if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) continue;
+    if (area != mapId && !(maps[mapId].regions && maps[mapId].regions[area])) continue;
 
     // hide some of the location markers on the base map
     if (mapId == Object.keys(maps)[0]) {
-      if (['City','Town'].includes(o.type) && o.area != mapId && o.ref_id!='07310FF5') continue;
-      if (o.type == 'Military Base' && o.area != 'IWMWorld') continue;
+      if (['City','Town'].includes(type) && area != mapId && o.ref_id!='07310FF5') continue; // duplicate city markers
+      if (type == 'Military Base' && area != 'IWMWorld') continue; // duplicate tommies base
     }
 
     let c = getLoc(feature);
 
-
-    delete feature.properties.doors;
-
-    // skip markers out of bounds
+    // align markers out of bounds to the edges
     let [left,top,right,bottom] = mapBounds;
     if (! (c.x>left && c.x<right && c.y>top && c.y<bottom )) {
-      // maybe not skip just align to the edge
       c.x = Math.min(left, Math.max(right, c.x));
       c.y = Math.min(top, Math.max(bottom, c.y));
-      //continue;
     }
 
     cached_types[t.type] = {...cached_types[t.type], ...t};
