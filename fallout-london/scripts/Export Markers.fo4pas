@@ -9,15 +9,15 @@ uses SysUtils;
 
 procedure SaveCoordinates(ChildObj: TJsonObject; ref: IInterface; path: string);
 begin
-  ChildObj.A['coordinates'].Add ( GetElementNativeValues(ref, path+'\X') );
-  ChildObj.A['coordinates'].Add ( GetElementNativeValues(ref, path+'\Y') );
-  ChildObj.A['coordinates'].Add ( GetElementNativeValues(ref, path+'\Z') );
+  ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\X'));
+  ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\Y'));
+  ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\Z'));
 end;
 
 procedure SaveDoors(ChildObj, a, b, area: IInterface);
 begin
-  ChildObj.O['properties'].O['doors'].O[ 'inner' ].S['ref_id'] := IntToHex(GetLoadOrderFormID(a), 8);
-  ChildObj.O['properties'].O['doors'].O[ 'outer' ].S['ref_id'] := IntToHex(GetLoadOrderFormID(b), 8);
+  ChildObj.O['properties'].O['doors'].O['inner'].S['ref_id'] := IntToHex(GetLoadOrderFormID(a), 8);
+  ChildObj.O['properties'].O['doors'].O['outer'].S['ref_id'] := IntToHex(GetLoadOrderFormID(b), 8);
   SaveCoordinates(ChildObj.O['properties'].O['doors'].O['inner'], a, 'XTEL\Position/Rotation\Position');
   SaveCoordinates(ChildObj.O['properties'].O['doors'].O['outer'], b, 'XTEL\Position/Rotation\Position');
   ChildObj.O['properties'].S['area'] := EditorID(area);
@@ -43,19 +43,16 @@ begin
   end;
 end;
 
-
 function Finalize: integer;
 var
-  i, j, i2, k, w, count, doors, ItemsCount, quests, q, value: integer;
-  f, g, e, r, area, cell, cell2, refs, refs2, a2, b2, a, b, ref, items, item, rec, perk, outfit: IInterface;
+  i, j, k, count, quests, q, value: integer;
+  f, g, e, r, area, cell, refs, a, b, ref, items, item, perk, outfit: IInterface;
   Obj, ChildObj: TJsonObject;
-  s, id, ref_id, door_id, other_door_id: string;
+  s, id: string;
   sList: TStringList;
-  x,y,z: double;
 begin
   f := FileByIndex(8);
   Obj := TJsonObject.Create;
-
   Obj.S['type'] := 'FeatureCollection';
 
   r := RecordByFormID(FileByIndex(0), $00000010, False);
@@ -79,7 +76,6 @@ begin
     if Assigned(area) then begin
       ChildObj.O['properties'].S['area'] := EditorID(area);
     end;
-
   end;
 
   count := 0;
@@ -88,74 +84,56 @@ begin
 
   for k := 0 to Pred(sList.Count) do begin
     g := GroupBySignature(f, sList[k]);
-    AddMessage('Collecting ' + sList[k] +' ...');
+    AddMessage('Collecting ' + sList[k] + ' ...');
     for j := 0 to Pred(ElementCount(g)) do begin
       r := ElementByIndex(g, j);
-      for i := 0 to Pred(ReferencedByCount(r)) do
-      begin
+      for i := 0 to Pred(ReferencedByCount(r)) do begin
         e := ReferencedByIndex(r, i);
         s := EditorID(r);
         if GetFile(e) <> f then continue;
 
         if (Signature(r) = 'ARMO') and (Signature(e) = 'REFR') then begin
-        end else
-        if (Signature(r) = 'ACTI') and (Signature(e) = 'REFR') then begin
-          if (pos('Folon_ACTI_CutethulhuDollActivator', s)=0)
-          and (pos('FOLON_ACTI_LQLondon100',s)=0)
-          and (pos('Folon_ACTI_BarryBoatBeacon',s)=0)
-          then continue;
-        end else
-        if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
-          if (pos('Folon_Workbench', s)=0) then continue;
-        end else
-        if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
-          if (pos('Folon_SettlementWorkbench', s)=0)
-          then continue;
-        end else
-        if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin
-        end else
-        if (Signature(r) = 'FLOR') and (Signature(e) = 'REFR') then begin
-          if (pos('WildMutfruit', s)=0) then continue;
-        end else
-        if (Signature(r) = 'AMMO') and (Signature(e) = 'REFR') then begin
-        end else
-        if (Signature(r) = 'WEAP') and (Signature(e) = 'REFR') then begin
-        end else
-        if (Signature(r) = 'ALCH') and (Signature(e) = 'REFR') then begin
-          if (pos('RadX', s)=0)
-          and (pos('Buffout', s)=0)
-          and (pos('Med-X', s)=0) 
-          and (pos('Psycho', s)=0)
-          and (pos('Mentats', s)=0)
-          and (pos('Overdrive', s)=0)
-          and (pos('XCell', s)=0)
-          and (pos('UltraJet', s)=0)
-          and (pos('Folon_FoodDog', s)=0)
-          then continue;
-        end else
-        if (Signature(r) = 'MISC') and (Signature(e) = 'REFR') then begin
-          if (pos('VinylRecord', s)=0)
-          and (pos('BobbleHead_', s)=0)
-          and (pos('Folon_MiscCuteThulhu',s)=0)
-          and (pos('Folon_MiscCard',s)=0)
-          then continue;
-        end else
-        if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
-          //if (pos('PerkMag', s)=0) and (pos('CallingCard', s)=0) then continue;
-        end else
-        if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin
-          if pos('_NPC_', s)=0 then continue;
+        end else if (Signature(r) = 'ACTI') and (Signature(e) = 'REFR') then begin
+          if (pos('Folon_ACTI_CutethulhuDollActivator', s) = 0)
+          and (pos('FOLON_ACTI_LQLondon100', s) = 0)
+          and (pos('Folon_ACTI_BarryBoatBeacon', s) = 0) then continue;
+        end else if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
+          if (pos('Folon_Workbench', s) = 0) then continue;
+        end else if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
+          if (pos('Folon_SettlementWorkbench', s) = 0) then continue;
+        end else if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin
+        end else if (Signature(r) = 'FLOR') and (Signature(e) = 'REFR') then begin
+          if (pos('WildMutfruit', s) = 0) then continue;
+        end else if (Signature(r) = 'AMMO') and (Signature(e) = 'REFR') then begin
+        end else if (Signature(r) = 'WEAP') and (Signature(e) = 'REFR') then begin
+        end else if (Signature(r) = 'ALCH') and (Signature(e) = 'REFR') then begin
+          if (pos('RadX', s) = 0)
+          and (pos('Buffout', s) = 0)
+          and (pos('Med-X', s) = 0)
+          and (pos('Psycho', s) = 0)
+          and (pos('Mentats', s) = 0)
+          and (pos('Overdrive', s) = 0)
+          and (pos('XCell', s) = 0)
+          and (pos('UltraJet', s) = 0)
+          and (pos('Folon_FoodDog', s) = 0) then continue;
+        end else if (Signature(r) = 'MISC') and (Signature(e) = 'REFR') then begin
+          if (pos('VinylRecord', s) = 0)
+          and (pos('BobbleHead_', s) = 0)
+          and (pos('Folon_MiscCuteThulhu', s) = 0)
+          and (pos('Folon_MiscCard', s) = 0) then continue;
+        end else if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
+        end else if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin
+          if pos('_NPC_', s) = 0 then continue;
           quests := 0;
           for q := 0 to Pred(ReferencedByCount(r)) do begin
             ref := ReferencedByIndex(r, q);
-            if Signature(ref)='QUST' then begin
+            if Signature(ref) = 'QUST' then begin
               Inc(quests);
               break;
             end;
           end;
           if quests = 0 then continue;
-        end else continue
-
+        end else continue;
 
         ChildObj := Obj.A['features'].AddObject;
         ChildObj.S['type'] := 'Feature';
@@ -169,28 +147,27 @@ begin
         ChildObj.O['properties'].S['form_id'] := IntToHex(GetLoadOrderFormID(r), 8);
         ChildObj.O['properties'].S['editor_id'] := EditorID(r);
 
-
         if quests > 0 then begin
           for q := 0 to Pred(ReferencedByCount(r)) do begin
             ref := ReferencedByIndex(r, q);
-            if Signature(ref)='QUST' then begin
-                id := IntToHex(GetLoadOrderFormID(ref), 8);
-                ChildObj.O['properties'].O['quests'].S[id] := EditorID(ref);
-                if GetElementEditValues(ref, 'FULL') <> '' then
-                  ChildObj.O['properties'].O['quests'].S[id] := GetElementEditValues(ref, 'FULL')
+            if Signature(ref) = 'QUST' then begin
+              id := IntToHex(GetLoadOrderFormID(ref), 8);
+              ChildObj.O['properties'].O['quests'].S[id] := EditorID(ref);
+              if GetElementEditValues(ref, 'FULL') <> '' then
+                ChildObj.O['properties'].O['quests'].S[id] := GetElementEditValues(ref, 'FULL');
             end;
           end;
 
           items := ElementByName(r, 'Items');
           if Assigned(items) then begin
-            for w := ElementCount(items) - 1 downto 0 do begin
-              item := ElementByIndex(items, w);
+            for q := ElementCount(items) - 1 downto 0 do begin
+              item := ElementByIndex(items, q);
               ref := LinksTo(ElementByPath(item, 'CNTO\Item'));
               if Signature(ref) = 'WEAP' then begin
                 id := IntToHex(GetLoadOrderFormID(ref), 8);
                 ChildObj.O['properties'].O['weapons'].S[id] := EditorID(ref);
                 if GetElementEditValues(ref, 'FULL') <> '' then
-                  ChildObj.O['properties'].O['weapons'].S[id] := GetElementEditValues(ref, 'FULL')
+                  ChildObj.O['properties'].O['weapons'].S[id] := GetElementEditValues(ref, 'FULL');
               end;
             end;
           end;
@@ -198,44 +175,37 @@ begin
           outfit := LinksTo(ElementByPath(r, 'DOFT'));
           if Assigned(outfit) then begin
             items := ElementByPath(outfit, 'INAM');
-            for w := ElementCount(items) - 1 downto 0 do begin
-              item := ElementByIndex(items, w);
+            for q := ElementCount(items) - 1 downto 0 do begin
+              item := ElementByIndex(items, q);
               ref := LinksTo(item);
               id := IntToHex(GetLoadOrderFormID(ref), 8);
               ChildObj.O['properties'].O['outfits'].S[id] := EditorID(ref);
               if GetElementEditValues(ref, 'FULL') <> '' then
-                ChildObj.O['properties'].O['outfits'].S[id] := GetElementEditValues(ref, 'FULL')
+                ChildObj.O['properties'].O['outfits'].S[id] := GetElementEditValues(ref, 'FULL');
             end;
           end;
         end;
 
         value := GetElementNativeValues(r, 'DATA\Value');
-        if (value <> 0) then begin
+        if value <> 0 then begin
           ChildObj.O['properties'].I['value'] := value;
         end;
 
         perk := LinksTo(ElementByPath(r, 'DNAM\Perk'));
         if Assigned(perk) then begin
           ChildObj.O['properties'].O['perks'].S[GetElementEditValues(perk, 'DESC')] := GetElementEditValues(perk, 'FULL');
-        end
+        end;
 
-
-        // figure out location on the map
         cell := LinksTo(ElementByName(e, 'Cell'));
         area := LinksTo(ElementByName(cell, 'Worldspace'));
         if Assigned(area) then begin
           ChildObj.O['properties'].S['area'] := EditorID(area);
         end;
 
-        if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then
-        begin
-
+        if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then begin
           ChildObj.O['properties'].O['cell'].S['form_id'] := IntToHex(GetLoadOrderFormID(cell), 8);
           ChildObj.O['properties'].O['cell'].S['editor_id'] := EditorID(cell);
           ChildObj.O['properties'].O['cell'].S['name'] := GetElementEditValues(cell, 'FULL');
-
-
-          // interior cell, find a door to the worldspace, update coordinates
           FindArea(ChildObj, cell);
         end;
         Inc(count);
@@ -251,19 +221,15 @@ begin
       ChildObj['form_id'] := IntToHex(GetLoadOrderFormID(e), 8);
       ChildObj['title'] := GetElementEditValues(e, 'FULL');
       ChildObj.F['scale'] := GetElementNativeValues(e, 'ONAM\World Map Scale');
-      ChildObj.A['offset'].Add ( GetElementNativeValues(e, 'ONAM\Cell X Offset') );
-      ChildObj.A['offset'].Add ( GetElementNativeValues(e, 'ONAM\Cell Y Offset') );
-      ChildObj.A['offset'].Add ( GetElementNativeValues(e, 'ONAM\Cell Z Offset') );
+      ChildObj.A['offset'].Add(GetElementNativeValues(e, 'ONAM\Cell X Offset'));
+      ChildObj.A['offset'].Add(GetElementNativeValues(e, 'ONAM\Cell Y Offset'));
+      ChildObj.A['offset'].Add(GetElementNativeValues(e, 'ONAM\Cell Z Offset'));
     end;
   end;
 
   AddMessage(Format('Collected %d items', [count]));
-
-  //AddMessage(AdjustLineBreaks(Obj.ToJSON({Compact:=}False)));
-
   AddMessage('Saving markers.json...');
-  Obj.SaveToFile(extractfilepath(paramstr(0))+'../markers.json', False, TEncoding.UTF8, True);
+  Obj.SaveToFile(extractfilepath(paramstr(0)) + '../markers.json', False, TEncoding.UTF8, True);
 end;
 
 end.
-
