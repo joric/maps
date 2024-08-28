@@ -941,6 +941,40 @@ function loadMarkers() {
   let weights = {};
   let total = 0;
 
+  let cells = {};
+
+  let cell_lookup = {}
+
+  for (feature of markers.features) {
+    cell_lookup[feature.properties.title] = feature;
+  }
+
+  let cell_remap = {
+    "FOLINTGreenwichDomeStadium:Courtside Bazaar": 'Courthouse Hotel',
+    "FOLINTEastminsterNPG:National Portrait Gallery": 'National Portrait Gallery',
+    "FOLINTSouthwarkThameshavenMarket:Thameshaven Market": 'Thameshaven Market',
+    "FOLINTSouthwarkABCWlab02:Angel Lab Lower Levels": 'Wesley Herbertson',
+    "FOLDEVChuchksterStandlonePrep:Chuckster's US Embassy": 'US Embassy',
+    "FOLINTGreenwichCuttySarkInt:Cutty Sark": 'Cutty Sark',
+    "FOLINTCOLTVStudioInt2:Spire Tower": 'LBF Headquarters Report',
+    "FOLINTTowerHamletsIDSSTGCell02:Research and IT Department": 'Tower of London',
+    //"FOLDEVDebugRange:Quick Test Cell": 519,
+    //"FOLINTSTART001:Mysterious Lab": 4,
+    "FOLINTCOLNukaBruHQTopFloor:Nuka-Cola Headquaters Top Floor": 'Nuka-Cola Headquaters',
+    //"FOLDEVSaffronTemp:Saffron Dev Cell": 29,
+    "FOLINTCOLTVStudioInt3:Emergency Broadcast Centre": 'Emergency Broadcast Centre',
+    "FOLINTIslingtonAngelStationLab:Angel Lab": 'Wesley Herbertson',
+    "FOLINTSouthwarkLondonBridgeUStation01:London Bridge Underground Station": 'London Bridge Station',
+    //"FOLDEVPrilladogCell:Prilladog Dev Cell": 1,
+    //"FOLDEVCallum:Callum Dev Cell": 48,
+    //"FOLDEVSunnyAssetCell:C3Delight Dev Cell": 25,
+    "FOLINTLambethAquariumLowLevel:Aquarium Lower Levels": 'London Aquarium',
+    "FOLINTGreenwichCuteThulhuCave01:Cave": 'Cutethulhu Doll',
+    "FOLINTGreenwichCuteThulhuCave02:Cave": 'Cutethulhu Doll',
+    "FOLINTWestminsterBigBen:Elizabeth Tower": 'Tower of London',
+    //"PackInZZWEIRDTSATUEStorageCell:": 1
+  }
+
   for (feature of markers.features) {
     let o = feature.properties;
 
@@ -948,6 +982,25 @@ function loadMarkers() {
 
     let t = getType(o);
     weights[t.group] = Math.max(weights[t.group]||0, t.group_weight);
+
+    if (!o.area && o.cell) {
+      let id = o.cell.editor_id +':'+ o.cell.name;
+      cells[ id ] = (cells[ id ]||0) + 1;
+
+      if (cell_remap[id]) {
+
+        let title = cell_remap[id];
+
+        let f = cell_lookup[ title ];
+        o.area = f.properties.area;
+
+        o.modified = true;
+
+        feature.geometry.coordinates[0] += f.geometry.coordinates[0];
+        feature.geometry.coordinates[1] += f.geometry.coordinates[1];
+        feature.geometry.coordinates[2] += f.geometry.coordinates[2];
+      }
+    }
 
     if (o.area != mapId && !(maps[mapId].regions && maps[mapId].regions[o.area])) continue;
 
@@ -1001,7 +1054,7 @@ function loadMarkers() {
     total += 1;
   }
 
-  //console.log(cell_names);
+  //console.log(cells);
 
   document.querySelector('#show-all').title = document.querySelector('#hide-all').title = plural(total,'marker');
 
