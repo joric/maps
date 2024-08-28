@@ -992,9 +992,9 @@ function loadMarkers() {
 
         for (door of path) {
           let [dx,dy,dz] = door.geometry.coordinates;
-          x = x*0.25 + dx;
-          y = y*0.25 + dy;
-          z = z*0.25 + dz;
+          x = x + dx;
+          y = y + dy;
+          z = z + dz;
         }
 
       }
