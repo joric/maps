@@ -992,9 +992,9 @@ function loadMarkers() {
 
         for (door of path) {
           let [dx,dy,dz] = door.geometry.coordinates;
-          x = x*0.1 + dx;
-          y = y*0.1 + dy;
-          z = z*0.1 + dz;
+          x = x*0.25 + dx;
+          y = y*0.25 + dy;
+          z = z*0.25 + dz;
         }
 
       }
@@ -1058,6 +1058,10 @@ function loadMarkers() {
       if (['City','Town'].includes(type) && area != mapId && o.ref_id!='07310FF5') continue; // duplicate city markers
       if (type == 'Military Base' && area != 'IWMWorld') continue; // duplicate tommies base
     }
+
+    // hide interior doors (?)
+    if (type == 'Door' && !o.area) continue;
+
 
     let c = getLoc(feature);
 
