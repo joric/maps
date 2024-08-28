@@ -830,79 +830,80 @@ function jumpToLocation(name) {
 }
 
 function popupOnClick(e) {
-    let o = e.target.properties;
+  let marker = e.target;
+  let o = marker.properties;
 
-    let popup = document.querySelector('#popup').cloneNode(true);
-    let copyLink = e=>{ copyToClipboard(e.target.href); return false; };
+  let popup = document.querySelector('#popup').cloneNode(true);
+  let copyLink = e=>{ copyToClipboard(e.target.href); return false; };
 
-    popup.querySelector('#popup-data-toggle').onclick = function() {
-      let data_id = popup.querySelector('#popup-data-toggle').getAttribute('data-target');
-      settings.debugMode = !toggleClass(document.querySelector('#'+data_id),'collapsed');
-      saveSettings();
-    };
+  popup.querySelector('#popup-data-toggle').onclick = function() {
+    let data_id = popup.querySelector('#popup-data-toggle').getAttribute('data-target');
+    settings.debugMode = !toggleClass(document.querySelector('#'+data_id),'collapsed');
+    saveSettings();
+  };
 
-    let div = popup.querySelector('#popup-subnote');
-    div.replaceChildren();
+  let div = popup.querySelector('#popup-subnote');
+  div.replaceChildren();
 
-    for (const [i, section] of Object.entries(['quests','weapons', 'perks', 'outfits'])) {
-      let list = o[section];
-      if (!list) continue;
+  for (const [i, section] of Object.entries(['quests','weapons', 'perks', 'outfits'])) {
+    let list = o[section];
+    if (!list) continue;
 
-      div.classList.remove('collapsed');
-      div.appendChild(document.createElement('hr'));
+    div.classList.remove('collapsed');
+    div.appendChild(document.createElement('hr'));
 
-      for (const id of list) {
-        let name = markers[section][id].name || markers[section][id].editor_id || id;
-        let desc = markers[section][id].description;
+    for (const id of list) {
+      let name = markers[section][id].name || markers[section][id].editor_id || id;
+      let desc = markers[section][id].description;
 
-        let title = desc ? ( name +': ' + desc ) : name;
+      let title = desc ? ( name +': ' + desc ) : name;
 
-        let li = document.createElement('div');
-        li.className = 'popup-subnote-item';
+      let li = document.createElement('div');
+      li.className = 'popup-subnote-item';
 
-        let c0 = document.createElement('span');
-        c0.className = 'icon';
-        c0.classList.add('fa');
-        c0.classList.add('fa-' + ['scroll','gun','star','shirt',''][i]);
+      let c0 = document.createElement('span');
+      c0.className = 'icon';
+      c0.classList.add('fa');
+      c0.classList.add('fa-' + ['scroll','gun','star','shirt',''][i]);
 
-        let a = document.createElement('a');
-        a.title = id;
-        a.textContent = itemText(title, o);
-        a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(name, o));
-        a.target = 'blank_';
+      let a = document.createElement('a');
+      a.title = id;
+      a.textContent = itemText(title, o);
+      a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(name, o));
+      a.target = 'blank_';
 
-        li.appendChild(c0);
-        li.appendChild(a);
-        div.appendChild(li);
-      }
+      li.appendChild(c0);
+      li.appendChild(a);
+      div.appendChild(li);
     }
+  }
 
-    popup.querySelector('#popup-title').textContent = itemName(o);
-    popup.querySelector('#popup-title').title = o.form_id;
-    popup.querySelector('#popup-subtitle').textContent = itemTypeExtended(o);
-    popup.querySelector('#popup-note').textContent = itemLocation(o);
-    popup.querySelector('#popup-data').innerHTML = '<hr/>'+JSON.stringify(o, null, 2).replaceAll('\n','<br>').replaceAll(' ','&nbsp;');
-    popup.querySelector('#popup-found').checked = settings.markedItems[o.ref_id]==true;
-    popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.ref_id) };
+  popup.querySelector('#popup-title').textContent = itemName(o);
+  popup.querySelector('#popup-title').title = o.form_id;
+  popup.querySelector('#popup-subtitle').textContent = itemTypeExtended(o);
+  popup.querySelector('#popup-note').textContent = itemLocation(o);
+  popup.querySelector('#popup-data').innerHTML = '<hr/><pre>'+JSON.stringify(o, null, 2) + '</pre>';
+  popup.querySelector('#popup-found').checked = settings.markedItems[o.ref_id]==true;
+  popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.ref_id) };
 
-    popup.querySelector('#popup-marker-id-link').href = '#' + o.ref_id;
-    popup.querySelector('#popup-marker-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
+  popup.querySelector('#popup-marker-id-link').href = '#' + o.ref_id;
+  popup.querySelector('#popup-marker-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
 
-    popup.querySelector('#popup-form-id-link').href = '#' + (o.form_id || '00000010');
-    popup.querySelector('#popup-form-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
+  popup.querySelector('#popup-form-id-link').href = '#' + (o.form_id || '00000010');
+  popup.querySelector('#popup-form-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
 
-    popup.querySelector('#popup-map-link').href = getMapURL(wikify(o));
-    popup.querySelector('#popup-map-link').onclick = copyLink;
+  popup.querySelector('#popup-map-link').href = getMapURL(wikify(o));
+  popup.querySelector('#popup-map-link').onclick = copyLink;
 
-    popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(itemName(o));
-    popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
+  popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(itemName(o));
+  popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
 
-    setClass(popup.querySelector('#popup-data'), settings.debugMode!=true, 'collapsed');
+  setClass(popup.querySelector('#popup-data'), settings.debugMode!=true, 'collapsed');
 
-    e.target._infoWindow.setOptions({custom: true, dy: -12});
-    e.target._infoWindow.setContent(popup);
+  e.target._infoWindow.setOptions({custom: true, dy: -12});
+  e.target._infoWindow.setContent(popup);
 
-    popup.addEventListener('contextmenu', function(e) { e.stopPropagation()}, true); // enable default context menu
+  popup.addEventListener('contextmenu', function(e) { e.stopPropagation()}, true); // enable default context menu
 }
 
 
@@ -990,6 +991,8 @@ function loadMarkers() {
 
     let o = feature.properties;
 
+    o._coordinates = feature.geometry.coordinates;
+
     let area = itemArea(o);
 
     if (o.cell) {
@@ -1066,7 +1069,6 @@ function loadMarkers() {
 
     // hide interior doors (?)
     if (type == 'Door' && !o.area) continue;
-
 
     let c = getLoc(feature);
 

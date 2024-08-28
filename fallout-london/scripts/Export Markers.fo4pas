@@ -7,20 +7,12 @@ unit UserScript;
 
 uses SysUtils;
 
-procedure SaveCoordinates(ChildObj: TJsonObject; ref: IInterface; path: string);
+procedure SaveXYZ(ChildObj: TJsonObject; ref: IInterface; path: string);
 var data: TJsonObject;
 begin
-  ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\X'));
-  ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\Y'));
-  ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\Z'));
-end;
-
-procedure SaveRotation(ChildObj: TJsonObject; ref: IInterface; path: string);
-var data: TJsonObject;
-begin
-  ChildObj.A['rotation'].Add(GetElementNativeValues(ref, path + '\X'));
-  ChildObj.A['rotation'].Add(GetElementNativeValues(ref, path + '\Y'));
-  ChildObj.A['rotation'].Add(GetElementNativeValues(ref, path + '\Z'));
+  ChildObj.Add(GetElementNativeValues(ref, path + '\X'));
+  ChildObj.Add(GetElementNativeValues(ref, path + '\Y'));
+  ChildObj.Add(GetElementNativeValues(ref, path + '\Z'));
 end;
 
 procedure AddItem(Obj, ChildObj: TJsonObject; ref: IInterface; section: string);
@@ -59,7 +51,7 @@ begin
     ChildObj.S['type'] := 'Feature';
     ChildObj.O['geometry'].S['type'] := 'Point';
 
-    SaveCoordinates(ChildObj.O['geometry'], e, 'DATA\Position');
+    SaveXYZ(ChildObj.O['geometry'].A['coordinates'], e, 'DATA\Position');
 
     ChildObj.O['properties'].S['title'] := GetElementEditValues(e, 'Map Marker\FULL');
     ChildObj.O['properties'].S['description'] := GetElementEditValues(e, 'Map Marker\TNAM\Type');
@@ -140,7 +132,7 @@ begin
           ChildObj.S['type'] := 'Feature';
           ChildObj.O['geometry'].S['type'] := 'Point';
 
-          SaveCoordinates(ChildObj.O['geometry'], e, 'DATA\Position');
+          SaveXYZ(ChildObj.O['geometry'].A['coordinates'], e, 'DATA\Position');
 
           ChildObj.O['properties'].S['title'] := GetElementEditValues(r, 'FULL');
           ChildObj.O['properties'].S['description'] := Signature(r);
@@ -165,7 +157,8 @@ begin
                 ChildObj.O['properties'].S['door_area'] := EditorID(area);
               end;
 
-              SaveRotation(ChildObj.O['properties'], e, 'DATA\Rotation');
+              SaveXYZ(ChildObj.O['properties'].A['position'], e, 'XTEL\Position/Rotation\Position');
+              SaveXYZ(ChildObj.O['properties'].A['rotation'], e, 'XTEL\Position/Rotation\Rotation');
 
             end;
           end;
