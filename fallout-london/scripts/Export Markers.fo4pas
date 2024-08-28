@@ -15,38 +15,12 @@ begin
   ChildObj.A['coordinates'].Add(GetElementNativeValues(ref, path + '\Z'));
 end;
 
-procedure SaveDoors(Obj, ChildObj, a, b, cell, area: IInterface);
-var cell_id: string;
+procedure SaveRotation(ChildObj: TJsonObject; ref: IInterface; path: string);
+var data: TJsonObject;
 begin
-  cell_id := IntToHex(GetLoadOrderFormID(cell), 8);
-  if (Obj.O['cells'].Contains(cell_id)) then Exit;
-  Obj.O['cells'].O[cell_id].S['editor_id'] := EditorID(cell);
-  Obj.O['cells'].O[cell_id].S['name'] := GetElementEditValues(cell, 'FULL');
-  Obj.O['cells'].O[cell_id].S['area'] := EditorID(area);
-  Obj.O['cells'].O[cell_id].O['doors'].O['inner'].S['ref_id'] := IntToHex(GetLoadOrderFormID(a), 8);
-  Obj.O['cells'].O[cell_id].O['doors'].O['outer'].S['ref_id'] := IntToHex(GetLoadOrderFormID(b), 8);
-  SaveCoordinates(Obj.O['cells'].O[cell_id].O['doors'].O['inner'], a, 'XTEL\Position/Rotation\Position');
-  SaveCoordinates(Obj.O['cells'].O[cell_id].O['doors'].O['outer'], b, 'XTEL\Position/Rotation\Position');
-end;
-
-procedure FindArea(Obj, ChildObj, cell: IInterface);
-var
-  refs, a, b, area: IInterface;
-  i: integer;
-begin
-  refs := FindChildGroup(ChildGroup(cell), 8, cell);
-  for i := 0 to Pred(ElementCount(refs)) do begin
-    a := ElementByIndex(refs, i);
-    if Signature(BaseRecord(a)) <> 'DOOR' then continue;
-    b := WinningOverride(LinksTo(ElementByPath(a, 'XTEL\Door')));
-    if Assigned(b) then begin
-      area := LinksTo(ElementByName(LinksTo(ElementByName(b, 'Cell')), 'Worldspace'));
-      if Assigned(area) then begin
-        SaveDoors(Obj, ChildObj, a, b, cell, area);
-        Exit;
-      end;
-    end;
-  end;
+  ChildObj.A['rotation'].Add(GetElementNativeValues(ref, path + '\X'));
+  ChildObj.A['rotation'].Add(GetElementNativeValues(ref, path + '\Y'));
+  ChildObj.A['rotation'].Add(GetElementNativeValues(ref, path + '\Z'));
 end;
 
 procedure AddItem(Obj, ChildObj: TJsonObject; ref: IInterface; section: string);
@@ -191,6 +165,8 @@ begin
                 ChildObj.O['properties'].S['door_area'] := EditorID(area);
               end;
 
+              SaveRotation(ChildObj.O['properties'], e, 'DATA\Rotation');
+
             end;
           end;
 
@@ -239,7 +215,6 @@ begin
           if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then begin
             ChildObj.O['properties'].S['cell'] := IntToHex(GetLoadOrderFormID(cell), 8);
             ChildObj.O['properties'].S['cell_name'] := GetElementEditValues(cell, 'FULL');
-            //FindArea(Obj, ChildObj, cell);
           end;
 
           area := LinksTo(ElementByName(cell, 'Worldspace'));
