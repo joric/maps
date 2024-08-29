@@ -8465,6 +8465,483 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					-1549.524048,
+					-1257.435303,
+					16308.40918
+				]
+			},
+			"properties": {
+				"title": "",
+				"description": "CONT",
+				"ref_id": "0732CB8C",
+				"form_id": "0732C84F",
+				"editor_id": "Folon_Vendor5thDylan",
+				"weapons": [
+					"070B67B5"
+				],
+				"cell": "071F1221",
+				"cell_name": "Cable Street School"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3763.161377,
+					-6210.441895,
+					-1370.812866
+				]
+			},
+			"properties": {
+				"title": "Safe",
+				"description": "CONT",
+				"ref_id": "07319EAB",
+				"form_id": "07319EA4",
+				"editor_id": "FOLON_COM_KieraQuest_GoldContainer",
+				"weapons": [
+					"07329994"
+				],
+				"cell": "071A2F8F",
+				"cell_name": "Natural History Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2305.141846,
+					1019.90094,
+					462.261627
+				]
+			},
+			"properties": {
+				"title": "British Museum Safe",
+				"description": "CONT",
+				"ref_id": "0731279E",
+				"form_id": "073123F9",
+				"editor_id": "Folon_SQTERRYSafe",
+				"weapons": [
+					"0730B165"
+				],
+				"cell": "07107416",
+				"cell_name": "British Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-36287.523438,
+					4078.689697,
+					-400.509003
+				]
+			},
+			"properties": {
+				"title": "Iseult's Locker",
+				"description": "CONT",
+				"ref_id": "073206F0",
+				"form_id": "0730BC18",
+				"editor_id": "Folon_MQ205IseultsLocker",
+				"weapons": [
+					"00107BD6"
+				],
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-38717.160156,
+					-5889.161133,
+					5111.838379
+				]
+			},
+			"properties": {
+				"title": "Faraday Cage Safe",
+				"description": "CONT",
+				"ref_id": "0730954B",
+				"form_id": "0730954A",
+				"editor_id": "Folon_LQSouthwark104WallSafe",
+				"weapons": [
+					"07198AAF"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-85246.585938,
+					44806.273438,
+					4880.116211
+				]
+			},
+			"properties": {
+				"title": "Locker",
+				"description": "CONT",
+				"ref_id": "072F911E",
+				"form_id": "072F911C",
+				"editor_id": "Folon_VendorEastminsterWeapon",
+				"weapons": [
+					"07281634",
+					"07189AA1",
+					"071898E4",
+					"070C84E0",
+					"070BE4AF"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-461.387482,
+					-1966.054199,
+					-236.773453
+				]
+			},
+			"properties": {
+				"title": "Locker",
+				"description": "CONT",
+				"ref_id": "072DAD35",
+				"form_id": "072DA4CC",
+				"editor_id": "Folon_VendorWestminsterLayla",
+				"weapons": [
+					"070C84E0"
+				],
+				"cell": "071F2347",
+				"cell_name": "Westminster University"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-10343.426758,
+					10958.34082,
+					1075.424561
+				]
+			},
+			"properties": {
+				"title": "",
+				"description": "CONT",
+				"ref_id": "072965BF",
+				"form_id": "072965AB",
+				"editor_id": "Folon_VendorSouthwarkThameshavenArmory",
+				"weapons": [
+					"070B67B5"
+				],
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					39656.023438,
+					-70655.757812,
+					5528
+				]
+			},
+			"properties": {
+				"title": "London Workbench Settlement",
+				"description": "CONT",
+				"ref_id": "0707A5A2",
+				"form_id": "070035C6",
+				"editor_id": "Folon_SettlementWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-57513.058594,
+					-88558.546875,
+					5052.229492
+				]
+			},
+			"properties": {
+				"title": "London Workbench Settlement",
+				"description": "CONT",
+				"ref_id": "071B5545",
+				"form_id": "070035C6",
+				"editor_id": "Folon_SettlementWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1223.05835,
+					2560.749512,
+					106.799606
+				]
+			},
+			"properties": {
+				"title": "London Workbench Settlement",
+				"description": "CONT",
+				"ref_id": "071CB072",
+				"form_id": "070035C6",
+				"editor_id": "Folon_SettlementWorkbench",
+				"area": "CoventGardenWorldSpace"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-6050.296875,
+					8134.300781,
+					830.362671
+				]
+			},
+			"properties": {
+				"title": "London Workbench Settlement",
+				"description": "CONT",
+				"ref_id": "07292CB4",
+				"form_id": "070035C6",
+				"editor_id": "Folon_SettlementWorkbench",
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-333.468933,
+					-208.754013,
+					-63.318764
+				]
+			},
+			"properties": {
+				"title": "London Workbench Settlement",
+				"description": "CONT",
+				"ref_id": "0729D6EC",
+				"form_id": "070035C6",
+				"editor_id": "Folon_SettlementWorkbench",
+				"cell": "070A5CE8",
+				"cell_name": "C3Delight Dev Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-34774.441406,
+					27519.763672,
+					5597.803223
+				]
+			},
+			"properties": {
+				"title": "London Workbench Settlement",
+				"description": "CONT",
+				"ref_id": "072A0A28",
+				"form_id": "070035C6",
+				"editor_id": "Folon_SettlementWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64995.035156,
+					-17187.439453,
+					5283.049316
+				]
+			},
+			"properties": {
+				"title": "London Workbench Settlement",
+				"description": "CONT",
+				"ref_id": "072C0066",
+				"form_id": "070035C6",
+				"editor_id": "Folon_SettlementWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-58055.832031,
+					-2940.209229,
+					5071.809082
+				]
+			},
+			"properties": {
+				"title": "London Workbench Settlement",
+				"description": "CONT",
+				"ref_id": "072ECDF4",
+				"form_id": "070035C6",
+				"editor_id": "Folon_SettlementWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					631.335144,
+					-744.259033,
+					-0.910255
+				]
+			},
+			"properties": {
+				"title": "Footlocker",
+				"description": "CONT",
+				"ref_id": "07278737",
+				"form_id": "070C105B",
+				"editor_id": "Folon_M72Footlocker",
+				"weapons": [
+					"072DC932"
+				],
+				"cell": "0719A05F",
+				"cell_name": "Quick Test Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					519.335144,
+					-744.259033,
+					23.089745
+				]
+			},
+			"properties": {
+				"title": "Webley 1913 Footlocker",
+				"description": "CONT",
+				"ref_id": "07278739",
+				"form_id": "070C105C",
+				"editor_id": "Folon_DEVWebley1931",
+				"weapons": [
+					"070B663D"
+				],
+				"cell": "0719A05F",
+				"cell_name": "Quick Test Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					463.335144,
+					-744.259033,
+					23.089745
+				]
+			},
+			"properties": {
+				"title": "Luger Footlocker",
+				"description": "CONT",
+				"ref_id": "07278736",
+				"form_id": "070C1063",
+				"editor_id": "Folon_DEVLuger",
+				"weapons": [
+					"0704E15E"
+				],
+				"cell": "0719A05F",
+				"cell_name": "Quick Test Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					631.335144,
+					-744.259033,
+					23.089745
+				]
+			},
+			"properties": {
+				"title": "Footlocker",
+				"description": "CONT",
+				"ref_id": "07278738",
+				"form_id": "070C1065",
+				"editor_id": "Folon_DEVMauser",
+				"weapons": [
+					"07278730"
+				],
+				"cell": "0719A05F",
+				"cell_name": "Quick Test Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					463.335144,
+					-744.259033,
+					-0.910255
+				]
+			},
+			"properties": {
+				"title": "British Laser Footlocker",
+				"description": "CONT",
+				"ref_id": "07278733",
+				"form_id": "070C1067",
+				"editor_id": "Folon_DEVBritishLaser",
+				"weapons": [
+					"070BE430"
+				],
+				"cell": "0719A05F",
+				"cell_name": "Quick Test Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-566.274109,
+					2579.375488,
+					606.010803
+				]
+			},
+			"properties": {
+				"title": "Can Footlocker",
+				"description": "CONT",
+				"ref_id": "071F8FBF",
+				"form_id": "070C106C",
+				"editor_id": "Folon_DEVCan",
+				"weapons": [
+					"070BE3C6"
+				],
+				"cell": "071A2FA4",
+				"cell_name": "New Cross Gate Retail Park"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-32097.201172,
 					-9138.349609,
 					4950.215332
@@ -131314,4666 +131791,6 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					349.008057,
-					-631.707275,
-					35.420864
-				]
-			},
-			"properties": {
-				"title": "Manchester Mike's Safe",
-				"description": "CONT",
-				"ref_id": "0731F6F3",
-				"form_id": "0731F6C3",
-				"editor_id": "Folon_Safe_FQRoundels103b",
-				"cell": "0717A514",
-				"cell_name": "Maab House"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					9862.631836,
-					-42187.386719,
-					5087.640625
-				]
-			},
-			"properties": {
-				"title": "Lockbox",
-				"description": "CONT",
-				"ref_id": "0730E345",
-				"form_id": "0730E995",
-				"editor_id": "Folon_Safe_LockBox",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1394.928589,
-					1132.970581,
-					-106.394058
-				]
-			},
-			"properties": {
-				"title": "Lockbox",
-				"description": "CONT",
-				"ref_id": "07318902",
-				"form_id": "0730E995",
-				"editor_id": "Folon_Safe_LockBox",
-				"cell": "071A2F8E",
-				"cell_name": "Swan & Mitre"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-6457.508301,
-					-29857.517578,
-					-375.113861
-				]
-			},
-			"properties": {
-				"title": "Lockbox",
-				"description": "CONT",
-				"ref_id": "073191D6",
-				"form_id": "0730E995",
-				"editor_id": "Folon_Safe_LockBox",
-				"area": "WestminsterWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					856.5672,
-					0,
-					66.530792
-				]
-			},
-			"properties": {
-				"title": "Lockbox",
-				"description": "CONT",
-				"ref_id": "0731AD57",
-				"form_id": "0730E995",
-				"editor_id": "Folon_Safe_LockBox",
-				"cell": "07156520",
-				"cell_name": "Hackney Police Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					4.895114,
-					-765.26886,
-					29.999966
-				]
-			},
-			"properties": {
-				"title": "Lockbox",
-				"description": "CONT",
-				"ref_id": "0732390C",
-				"form_id": "0730E995",
-				"editor_id": "Folon_Safe_LockBox",
-				"cell": "0717A514",
-				"cell_name": "Maab House"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1250.162842,
-					4457.769043,
-					19.815111
-				]
-			},
-			"properties": {
-				"title": "Norman Treasury",
-				"description": "CONT",
-				"ref_id": "073013D6",
-				"form_id": "073013D5",
-				"editor_id": "Folon_Safe_SQNewham102",
-				"area": "DumpWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					480,
-					-378,
-					74.058998
-				]
-			},
-			"properties": {
-				"title": "Lockbox",
-				"description": "CONT",
-				"ref_id": "072EC7DC",
-				"form_id": "072EC6FC",
-				"editor_id": "Folon_Safe_LockBoxEMPTY",
-				"cell": "071A2FB3",
-				"cell_name": "10 Downing Street"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					779.332275,
-					2134.383789,
-					800.104004
-				]
-			},
-			"properties": {
-				"title": "Lockbox",
-				"description": "CONT",
-				"ref_id": "072ED004",
-				"form_id": "072EC6FC",
-				"editor_id": "Folon_Safe_LockBoxEMPTY",
-				"cell": "071A2F9A",
-				"cell_name": "Courthouse Hotel"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					553.276794,
-					-536.410217,
-					106.877869
-				]
-			},
-			"properties": {
-				"title": "Lockbox",
-				"description": "CONT",
-				"ref_id": "0730EAE2",
-				"form_id": "072EC6FC",
-				"editor_id": "Folon_Safe_LockBoxEMPTY",
-				"cell": "072312CA",
-				"cell_name": "The Brass Nail"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					575.335144,
-					-744.259033,
-					23.089745
-				]
-			},
-			"properties": {
-				"title": "Lewis Gun Mods Footlocker",
-				"description": "CONT",
-				"ref_id": "0729BBF5",
-				"form_id": "0729BBF4",
-				"editor_id": "Folon_DEVLewisGun",
-				"cell": "0719A05F",
-				"cell_name": "Quick Test Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1895.291626,
-					2011.928467,
-					8.162973
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07174BBE",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "07174AD9",
-				"cell_name": "Sneering Imperialist"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					352,
-					-4664,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A0",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					352,
-					-4536,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A1",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					352,
-					-4280,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A2",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					352,
-					-4408,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A3",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					352,
-					-4152,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A4",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-128.000122,
-					-4664,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A5",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-128.000092,
-					-4536,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A6",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-128.000092,
-					-4408,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A7",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-128.000153,
-					-4280,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A8",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-128,
-					-4152,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072091A9",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-358.150635,
-					-3688.696045,
-					568.39447
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07219073",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0720E9B1",
-				"cell_name": "Knightsbridge Underground Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2432.760742,
-					-2821.12207,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221DAB",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2688.760742,
-					-2821.12207,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221DAC",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2560.760986,
-					-2821.121826,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221DAD",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2816.760742,
-					-2821.12207,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221DAE",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2944.760498,
-					-2821.12207,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221DAF",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1792.760864,
-					-2821.121338,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221E50",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2048.760742,
-					-2821.121338,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221E51",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1920.761108,
-					-2821.121094,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221E52",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2176.760742,
-					-2821.121338,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221E53",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2304.760498,
-					-2821.121338,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221E54",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3096.76001,
-					-3077.122314,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221EA9",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3096.76001,
-					-3205.12207,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221EAA",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3096.760498,
-					-2949.122314,
-					1512
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221EB0",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1713.344849,
-					-3264.963867,
-					1527.244141
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07221EE2",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0712EC66",
-				"cell_name": "Bank of England"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					448,
-					496,
-					307.736938
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07238F97",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0710423F",
-				"cell_name": "St Pancras International Hotel"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1069.822021,
-					4802.854492,
-					487.91568
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07256D09",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0725614A",
-				"cell_name": "Monument Underground Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3339.925293,
-					857.230347,
-					9.281392
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0725F741",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "071A2FB0",
-				"cell_name": "X-Cell Centre"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1547.942749,
-					-1603.439819,
-					19.22566
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0726DD57",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "07003660",
-				"cell_name": "London Transport Museum"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					780.76178,
-					-1056.808228,
-					6.999985
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07278D26",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "07085868",
-				"cell_name": "The Shipmate"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1834.457275,
-					2677.376465,
-					1748.142456
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0728469F",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "0715A4E6",
-				"cell_name": "Singhsbury Local"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3180.435303,
-					2577.6875,
-					-1976.576538
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0728ACCB",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "071A2FB4",
-				"cell_name": "One Canada Square"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3306.966553,
-					2577.6875,
-					-1976.576538
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0728ACCC",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "071A2FB4",
-				"cell_name": "One Canada Square"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3436.747559,
-					2577.6875,
-					-1976.576538
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0728ACCD",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "071A2FB4",
-				"cell_name": "One Canada Square"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-270.346313,
-					347.65155,
-					14.337851
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07299A36",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "071AD79D",
-				"cell_name": "Punk Press Emporium"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					44881.753906,
-					-45870.992188,
-					5049.942383
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0729CB04",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					44875.535156,
-					-45924.824219,
-					5078.256836
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0729CB05",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-412.665344,
-					-896.330688,
-					-64.681206
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0729E3B2",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "070A5CE8",
-				"cell_name": "C3Delight Dev Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					47555.933594,
-					-22270.566406,
-					5389.980957
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072BA7C3",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					47623.835938,
-					-22383.78125,
-					5389.980957
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072BA7C4",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2441.450195,
-					676.31604,
-					83.133698
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072C0771",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "DumpWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					76490.773438,
-					-89766.34375,
-					5720.813477
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072EBA8E",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					18804.0625,
-					41219.210938,
-					5104.33252
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072EF125",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-166.772293,
-					324.135559,
-					55.836617
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "073072E7",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"cell": "072ADAA5",
-				"cell_name": "Edge of the World"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					40408.5625,
-					7898.078125,
-					5218.744629
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0730D8A1",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					40328.933594,
-					8069.100098,
-					5184.017578
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0730D8A2",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					40286.964844,
-					8069.100098,
-					5184.017578
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0730D8A3",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-28775.572266,
-					34543.425781,
-					4929.173828
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0732D39D",
-				"form_id": "0720904C",
-				"editor_id": "Folon_Safe_Empty",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					39656.023438,
-					-70655.757812,
-					5528
-				]
-			},
-			"properties": {
-				"title": "London Workbench Settlement",
-				"description": "CONT",
-				"ref_id": "0707A5A2",
-				"form_id": "070035C6",
-				"editor_id": "Folon_SettlementWorkbench",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-57513.058594,
-					-88558.546875,
-					5052.229492
-				]
-			},
-			"properties": {
-				"title": "London Workbench Settlement",
-				"description": "CONT",
-				"ref_id": "071B5545",
-				"form_id": "070035C6",
-				"editor_id": "Folon_SettlementWorkbench",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1223.05835,
-					2560.749512,
-					106.799606
-				]
-			},
-			"properties": {
-				"title": "London Workbench Settlement",
-				"description": "CONT",
-				"ref_id": "071CB072",
-				"form_id": "070035C6",
-				"editor_id": "Folon_SettlementWorkbench",
-				"area": "CoventGardenWorldSpace"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-6050.296875,
-					8134.300781,
-					830.362671
-				]
-			},
-			"properties": {
-				"title": "London Workbench Settlement",
-				"description": "CONT",
-				"ref_id": "07292CB4",
-				"form_id": "070035C6",
-				"editor_id": "Folon_SettlementWorkbench",
-				"cell": "070CE960",
-				"cell_name": "Thameshaven Market"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-333.468933,
-					-208.754013,
-					-63.318764
-				]
-			},
-			"properties": {
-				"title": "London Workbench Settlement",
-				"description": "CONT",
-				"ref_id": "0729D6EC",
-				"form_id": "070035C6",
-				"editor_id": "Folon_SettlementWorkbench",
-				"cell": "070A5CE8",
-				"cell_name": "C3Delight Dev Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-34774.441406,
-					27519.763672,
-					5597.803223
-				]
-			},
-			"properties": {
-				"title": "London Workbench Settlement",
-				"description": "CONT",
-				"ref_id": "072A0A28",
-				"form_id": "070035C6",
-				"editor_id": "Folon_SettlementWorkbench",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-64995.035156,
-					-17187.439453,
-					5283.049316
-				]
-			},
-			"properties": {
-				"title": "London Workbench Settlement",
-				"description": "CONT",
-				"ref_id": "072C0066",
-				"form_id": "070035C6",
-				"editor_id": "Folon_SettlementWorkbench",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-58055.832031,
-					-2940.209229,
-					5071.809082
-				]
-			},
-			"properties": {
-				"title": "London Workbench Settlement",
-				"description": "CONT",
-				"ref_id": "072ECDF4",
-				"form_id": "070035C6",
-				"editor_id": "Folon_SettlementWorkbench",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					34039.167969,
-					4888.974121,
-					113.436279
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0700DAB9",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "HackneyWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-1916.709839,
-					1405.249512,
-					2571.072998
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0701D87A",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0701D60F",
-				"cell_name": "Canary Wharf Underground Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					188.896744,
-					-294.102112,
-					-295.720215
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0701FA57",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0701F876",
-				"cell_name": "The Tabard Pub"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-3301.245117,
-					18387.322266,
-					275.993439
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "070298C5",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "IslingtonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-4591.942871,
-					23139.880859,
-					288.240601
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07029A6A",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "IslingtonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-3970.137207,
-					22462.310547,
-					29.172882
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0702E208",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "IslingtonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-7118.602539,
-					46956.0625,
-					1177.292358
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07034068",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "CamdenWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-4549.689941,
-					23147.615234,
-					287.875854
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07034900",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "IslingtonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-4501.362305,
-					23154.232422,
-					288.960815
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07034901",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "IslingtonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					39332.703125,
-					16023.117187,
-					418.167572
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07038A65",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "HackneyWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					67158.773437,
-					-56370.371094,
-					5656.520996
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0704D555",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					85902.554688,
-					-80321.828125,
-					6169.89209
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07053344",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-67001.289062,
-					-58323.652344,
-					5715.071289
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07064F7D",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-25.28508,
-					-161.040375,
-					938.294495
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07091EF5",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0703BB7F",
-				"cell_name": "The Plumbers Hands"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					12565.637695,
-					12979.415039,
-					70.645119
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07094165",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "IslingtonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					482.491943,
-					-28517.730469,
-					5128.097656
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "070969B0",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-80236.398438,
-					45080.289062,
-					5078.865723
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07099507",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-84331.546875,
-					44412.53125,
-					5078.405273
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0709960A",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-765.737976,
-					2554.653809,
-					4947.867188
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "070C9650",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070C8551",
-				"cell_name": "Vaulzon Warehouse"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					84305.929688,
-					45673.359375,
-					4846.944824
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "070CAAA6",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					5609.369629,
-					6402.519043,
-					1332.056763
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "070D0743",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070CFE47",
-				"cell_name": "Tower Hamlets Pindar"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-615.832703,
-					-809.226379,
-					-272.032471
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "070D0EE7",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0701F875",
-				"cell_name": "Stepney Apartments"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-8269.134766,
-					7187.444824,
-					1598.361816
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "070DBB85",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070C74E7",
-				"cell_name": "Thameshaven"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2419.34375,
-					5756.405762,
-					1332.321899
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "070DF147",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070CB1B5",
-				"cell_name": "St Peter's Church"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2204.217285,
-					4905.803223,
-					457.827881
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "070DFAA4",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070465A7",
-				"cell_name": "St George"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-12141.563477,
-					-1003.345581,
-					3968
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07108639",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07039856",
-				"cell_name": "Shoreditch Offices"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2107.305176,
-					1159.556519,
-					77.699646
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07108F0C",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07107EA6",
-				"cell_name": "Tenpenny Airlines Inc."
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3868.728516,
-					3813.456055,
-					4.87381
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0710F2C4",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0706F9CE",
-				"cell_name": "Retrofitting Centre"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-5249.865234,
-					-23620.722656,
-					901.079468
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0711398D",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0710C868",
-				"cell_name": "Emelio's Caffe House"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-288.410767,
-					-2961.651123,
-					1556.950439
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071168F5",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07050E83",
-				"cell_name": "Four Leaf Pub"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-2868.782227,
-					-916.780701,
-					2229.764893
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0711BFAA",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07119769",
-				"cell_name": "Tottenham Court Road Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					4368.54248,
-					3602.97876,
-					248.428497
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0711FF3E",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070DD3B2",
-				"cell_name": "Crypt on the Green"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					40274.035156,
-					42587.609375,
-					5333.261719
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07125BC1",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1697.218018,
-					432.532013,
-					257.36618
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071305DE",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0711DEE4",
-				"cell_name": "The Golden Elm"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2137.440186,
-					5718.452637,
-					155.447601
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0713424F",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07132652",
-				"cell_name": "Monument"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1625.501465,
-					1971.316284,
-					264.783905
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0713AA26",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070CB1B7",
-				"cell_name": "Ministry of Defence Bunker"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2435.818848,
-					4866.932617,
-					776.242676
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0713AD28",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0713A6FA",
-				"cell_name": "Easy Tea Company Offices"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2496.867432,
-					5016.459473,
-					792.164917
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0713AD7A",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0713A6FA",
-				"cell_name": "Easy Tea Company Offices"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-6216.687988,
-					-18771.417969,
-					2736.610596
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0713B819",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0711397B",
-				"cell_name": "Lock Penthouse"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					80995.476562,
-					47589.050781,
-					5039.884766
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07141B9F",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					82156.875,
-					46638.777344,
-					4880.916992
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07141C27",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-6225.529785,
-					-7389.116211,
-					1552
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07143918",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0714327C",
-				"cell_name": "London Bridge Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-2453.598389,
-					4808.580078,
-					-25.574348
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0714799F",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0713070F",
-				"cell_name": "Mysterious Lab"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-603.549744,
-					543.244385,
-					3.19787
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07147AE4",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0701F876",
-				"cell_name": "The Tabard Pub"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3163.201416,
-					-2201.265137,
-					1631.256836
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0714B5A2",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0700FB5F",
-				"cell_name": "Polaris Apartments"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2639.454102,
-					2568.269287,
-					10.477295
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07159086",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07063F07",
-				"cell_name": "Stagnant Building"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1007.187561,
-					460.23233,
-					2230.564941
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0715A674",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715A4E4",
-				"cell_name": "London Electronics Store"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2914.523438,
-					1758.795288,
-					254.634705
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0716094B",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715A4DF",
-				"cell_name": "Samurai Garden"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2946.10376,
-					1787.118652,
-					254.634705
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0716094C",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715A4DF",
-				"cell_name": "Samurai Garden"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					19115.818359,
-					-32980.582031,
-					5083.510742
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07162CBB",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2988.003906,
-					-680.39325,
-					1921.55957
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07168666",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071679E1",
-				"cell_name": "House"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-30103.326172,
-					-68215.625,
-					5709.612305
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071699A8",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					45553.523438,
-					5549.78125,
-					5342.458984
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0716E151",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3395.471191,
-					3274.462158,
-					-264.722321
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0716F305",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0716EEC6",
-				"cell_name": "Angel Lab"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					687.881042,
-					1945.390015,
-					396.642029
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07173230",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07173113",
-				"cell_name": "Crown Mail Post Office"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					922.049805,
-					1843.900024,
-					392.98465
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07173231",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07173113",
-				"cell_name": "Crown Mail Post Office"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					140.287964,
-					375.778198,
-					0
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07174155",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715651D",
-				"cell_name": "Red Tiger"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					420.395111,
-					-1685.914307,
-					-14.97608
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07183977",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0718374F",
-				"cell_name": "Wolfy's Exchange"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-92137.53125,
-					-40933.003906,
-					5068.00293
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07185A54",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-83072.8125,
-					-37737.746094,
-					5036.799316
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0718612D",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-62806.992187,
-					72624.546875,
-					5325.520996
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0718C6F1",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					37143.359375,
-					41629.683594,
-					5106.818848
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0719876D",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22781.490234,
-					37645.644531,
-					4737.072266
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0719A803",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					481.456604,
-					1407.753906,
-					-257.123016
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071A403B",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2F8E",
-				"cell_name": "Swan & Mitre"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2177.031006,
-					1787.74585,
-					255.274826
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071A8493",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07191A07",
-				"cell_name": "Lanthorn Tower"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					6284.124512,
-					12355.771484,
-					5194.834473
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071A8750",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					4157.848633,
-					2105.841797,
-					1878.021606
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071A955D",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070076B9",
-				"cell_name": "Charterhouse"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-921.028809,
-					3069.015381,
-					3368.601807
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071A95E6",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715A4DD",
-				"cell_name": "Decayed Bank"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-879.239258,
-					3082.195801,
-					3368.601807
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071A95E7",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715A4DD",
-				"cell_name": "Decayed Bank"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					733.131592,
-					2138.654297,
-					3345.151611
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071AFA11",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715A4E2",
-				"cell_name": "Gregori's Bakery"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-2846.69043,
-					-56001.148437,
-					4319.007812
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071B268A",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					581.231689,
-					194.723709,
-					-1.5E-5
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071B3020",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0717C068",
-				"cell_name": "Chain Home Radar"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					657.325562,
-					-334.966339,
-					-257.488403
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071B3A76",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071B3834",
-				"cell_name": "House"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-79164.78125,
-					-61526.839844,
-					6275.599609
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071BE3BF",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					9213.742188,
-					5252.992676,
-					1151.504883
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071C2BED",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "WestminsterWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-63470.070312,
-					-39155.082031,
-					5200.273926
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071C6977",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					9406.361328,
-					-20213.558594,
-					3728.041504
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071CCD20",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070CF5A8",
-				"cell_name": "Angel Underground Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-465.594604,
-					-534.529968,
-					-525.210815
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071DF79F",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071CC27F",
-				"cell_name": "Tower Hill Underground Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-43887.3125,
-					20878.005859,
-					5077.97998
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071DFDE6",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-1184.644531,
-					2746.630127,
-					280
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071E0D99",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07074EA2",
-				"cell_name": "The Shoppe"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1445.647583,
-					1790.026978,
-					357.504791
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071EFF3E",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0705E44F",
-				"cell_name": "R.A.F Chapel"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					4539.943359,
-					1423.0448,
-					136.022125
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071F4551",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070E0E12",
-				"cell_name": "Holy Trinity Church"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					4539.943359,
-					1382.784668,
-					136.022125
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071F4552",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070E0E12",
-				"cell_name": "Holy Trinity Church"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-2539.227783,
-					1984.871948,
-					256.276978
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071F8FBA",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2FA4",
-				"cell_name": "New Cross Gate Retail Park"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-51.092545,
-					-795.451477,
-					224.364212
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071FA6D0",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715651C",
-				"cell_name": "Lambeth Fire Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					351.083252,
-					1994.101929,
-					599.216675
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "071FBAAF",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071F121F",
-				"cell_name": "Tobacco Dock"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2688.46582,
-					2200.817871,
-					-684.756104
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07203EBD",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2FA0",
-				"cell_name": "The Dome"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2415.280029,
-					3028.48999,
-					230.634674
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07208D09",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715A4DE",
-				"cell_name": "Greasy Spoon"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1573.662109,
-					-1051.908447,
-					1294.774536
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072177F5",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071E3427",
-				"cell_name": "Arlington School"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3075.979492,
-					-1041.933228,
-					526.189819
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0721791C",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071E3427",
-				"cell_name": "Arlington School"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					544.763855,
-					1869.999146,
-					312.134674
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07217D61",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0720E593",
-				"cell_name": "Mycroft's House"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1586.528809,
-					3724.209717,
-					43.925529
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07220D96",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071E3425",
-				"cell_name": "Stables Market"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					92,
-					3200,
-					408.484619
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0722BF25",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071D795A",
-				"cell_name": "Charing Cross Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					4953.725098,
-					4784.229004,
-					1198.904907
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072303AF",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071F1220",
-				"cell_name": "Royal London Hospital"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3440.571777,
-					3979.881348,
-					1198.904907
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07230519",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071F1220",
-				"cell_name": "Royal London Hospital"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1070.94165,
-					304.454102,
-					48.643082
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07230E2E",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071E3426",
-				"cell_name": "Water & Power Syphon"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-89.709999,
-					515.957275,
-					-479.506409
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07235D5A",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2FAF",
-				"cell_name": "City Hall"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-641.271667,
-					864.354065,
-					-478.302063
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07236022",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2FAF",
-				"cell_name": "City Hall"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-435.539337,
-					-3492.015869,
-					-2394.814697
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07236762",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07083F82",
-				"cell_name": "LT Tower"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1497.353149,
-					2266.254395,
-					1440
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07238D47",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070BF1C9",
-				"cell_name": "Abyss Song Studio"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-76.415543,
-					598.628113,
-					864
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07238F96",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0710423F",
-				"cell_name": "St Pancras International Hotel"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1895.60376,
-					2310.80957,
-					243.776917
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0723A7AE",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07238BDB",
-				"cell_name": "The Mend"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1085.487305,
-					545.585144,
-					903.770874
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0723C2C4",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2F84",
-				"cell_name": "Children's Hospital"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1328.000122,
-					-1055.999756,
-					-239.999176
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07244BFF",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07178760",
-				"cell_name": "Angel Laboratory"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-3798.556152,
-					-11423.314453,
-					4721.340332
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07244F75",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2FBA",
-				"cell_name": "Tater Factory"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3028.397461,
-					739.326355,
-					993.063843
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0724570B",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "072450F4",
-				"cell_name": "Houseguard Gin Distillery"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1527.229858,
-					2156.061523,
-					541.419434
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0724F4C6",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "IslingtonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1360.035767,
-					-1918.396851,
-					640
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072534DE",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0724A0E7",
-				"cell_name": "King Herods"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-10813.199219,
-					8080.253418,
-					1602.615845
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07256119",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070C74E7",
-				"cell_name": "Thameshaven"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-10435.118164,
-					8125.89502,
-					-466.457275
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0725611A",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070C74E7",
-				"cell_name": "Thameshaven"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					10538.166992,
-					5156.25293,
-					500.623291
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07256739",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0725614A",
-				"cell_name": "Monument Underground Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1350.539795,
-					-2786.906738,
-					11122.608398
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0725B270",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2F83",
-				"cell_name": "Elizabeth Tower"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1154.590088,
-					844.486877,
-					-8.434039
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0725F761",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2FB0",
-				"cell_name": "X-Cell Centre"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1228.810181,
-					2508.280762,
-					352
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07260B8D",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0710AAF1",
-				"cell_name": "Camelot"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-24714.359375,
-					-9653.803711,
-					3560
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07267DFC",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07254631",
-				"cell_name": "Westminster Underground"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					27143.144531,
-					-2463.559326,
-					2922.940186
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072692A9",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07254631",
-				"cell_name": "Westminster Underground"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					4572,
-					-1524,
-					0
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07269EAA",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0720801C",
-				"cell_name": "Battersea Power Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-3704,
-					-2080,
-					-1792
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07271055",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2F8F",
-				"cell_name": "Natural History Museum"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					4570.770508,
-					-317.836212,
-					2162.92334
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0728CD6D",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071AE25F",
-				"cell_name": "Broadcasting House"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1713.640259,
-					3490.098145,
-					-60.698486
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07294FF5",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0700B131",
-				"cell_name": "Ace High Hotel"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-12058.667969,
-					6107.067871,
-					5243.97998
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072964E6",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2209.080811,
-					2464.987061,
-					3.669264
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07297A14",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0715A4E1",
-				"cell_name": "AbyssSong"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-1144.359009,
-					-329.998657,
-					1024
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0729A288",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0717282A",
-				"cell_name": "Kempharm Offices"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1059.062622,
-					2332.837646,
-					580.241821
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0729A4EF",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070950A7",
-				"cell_name": "Seven Dials Cistern"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-8429.870117,
-					6499.962402,
-					3726.983643
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0729A4F1",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070BF59B",
-				"cell_name": "Aluminum Metalworks"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					556.879456,
-					1601.110352,
-					254.807297
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0729A55B",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A9C47",
-				"cell_name": "JLaws Bank"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-8202.619141,
-					-127.447922,
-					-3.273361
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0729B9BD",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07120571",
-				"cell_name": "Old Royal Naval College"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					44949.871094,
-					-45908.054688,
-					5034.414062
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0729CB06",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-30418.580078,
-					13470.350586,
-					5092.340332
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072A45B2",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					25294.175781,
-					-28979.529297,
-					5477.100098
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072A54C0",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-54603,
-					18411.158203,
-					5089.052246
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072B536E",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					47538.574219,
-					-22218.287109,
-					5389.980957
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072BA7C2",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2458.517822,
-					-246.012054,
-					368
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072C2412",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "072BA192",
-				"cell_name": "Cutty Sark"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-2356.329834,
-					-3047.612305,
-					1976.877563
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072C954C",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0701D60F",
-				"cell_name": "Canary Wharf Underground Station"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					6908.184082,
-					529.003418,
-					177.7435
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072D3618",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "StPaulsWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					65895.492187,
-					-9343.168945,
-					5079.300293
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072D4C82",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					5282.084473,
-					-4319.254883,
-					5264.205078
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072D618C",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "BromleyGladesWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					3237.721191,
-					4078.777588,
-					1301.563843
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072D9516",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0713A6FA",
-				"cell_name": "Easy Tea Company Offices"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					1122.46936,
-					3253.700439,
-					2064.242676
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072DA151",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0713A6FA",
-				"cell_name": "Easy Tea Company Offices"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-22082.791016,
-					-34492.804688,
-					5079.590332
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072DD14B",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-63.863281,
-					-1864.61377,
-					-116.617767
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072DD7AA",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071F2347",
-				"cell_name": "Westminster University"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2053.413818,
-					159.979202,
-					66.111298
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072DE8CD",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "071A2FB8",
-				"cell_name": "National Portrait Gallery"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					2286.826416,
-					1623.270386,
-					362.330078
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072E5A04",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070CFE45",
-				"cell_name": "Upton-Burke Headquarters"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					304,
-					-952,
-					608
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072EAF8E",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0703BB7E",
-				"cell_name": "The King's Nose"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					145.453293,
-					-5213.231445,
-					295.642578
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072ED589",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "070BF896",
-				"cell_name": "Club Oberon"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					89.984032,
-					-1116.543579,
-					312.42865
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072ED69C",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "0705B759",
-				"cell_name": "Glam Clubhouse"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					18850.058594,
-					41214.261719,
-					5104.33252
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072EF146",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					26868.798828,
-					16054.381836,
-					5889.476562
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "072FC8B7",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-41519.957031,
-					3124.058594,
-					5764
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07301083",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					4152.37207,
-					20958.347656,
-					735.749634
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "073079FF",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"cell": "07165E4E",
-				"cell_name": "Greenwich Foot Tunnel"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-5716.057617,
-					40246.636719,
-					5066.118164
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0730B211",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-44162.238281,
-					14606.649414,
-					5083.540039
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0730E655",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-6962.489258,
-					50022.230469,
-					721.118835
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07322627",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "CamdenWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-82926.351562,
-					85418.640625,
-					5183.435547
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07323D87",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-14886.185547,
-					31427.177734,
-					5070.657715
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "07326A86",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					23119.541016,
-					37874.714844,
-					4736.393555
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "0732823C",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					11483.073242,
-					-77522.210938,
-					5271.012695
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "073282D4",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					11509.892578,
-					-77538.484375,
-					5268.339355
-				]
-			},
-			"properties": {
-				"title": "Safe",
-				"description": "CONT",
-				"ref_id": "073282D5",
-				"form_id": "070035CB",
-				"editor_id": "Folon_Safe",
-				"area": "LondonWorld"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					519.335144,
-					-744.259033,
-					23.089745
-				]
-			},
-			"properties": {
-				"title": "Webley 1913 Footlocker",
-				"description": "CONT",
-				"ref_id": "07278739",
-				"form_id": "070C105C",
-				"editor_id": "Folon_DEVWebley1931",
-				"weapons": [
-					"070B663D"
-				],
-				"cell": "0719A05F",
-				"cell_name": "Quick Test Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					687.335144,
-					-744.259033,
-					-0.910255
-				]
-			},
-			"properties": {
-				"title": "Footlocker",
-				"description": "CONT",
-				"ref_id": "0727873A",
-				"form_id": "070C105D",
-				"editor_id": "Folon_DEVWebleyFosbery",
-				"cell": "0719A05F",
-				"cell_name": "Quick Test Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					463.335144,
-					-744.259033,
-					23.089745
-				]
-			},
-			"properties": {
-				"title": "Luger Footlocker",
-				"description": "CONT",
-				"ref_id": "07278736",
-				"form_id": "070C1063",
-				"editor_id": "Folon_DEVLuger",
-				"weapons": [
-					"0704E15E"
-				],
-				"cell": "0719A05F",
-				"cell_name": "Quick Test Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					631.335144,
-					-744.259033,
-					23.089745
-				]
-			},
-			"properties": {
-				"title": "Footlocker",
-				"description": "CONT",
-				"ref_id": "07278738",
-				"form_id": "070C1065",
-				"editor_id": "Folon_DEVMauser",
-				"weapons": [
-					"07278730"
-				],
-				"cell": "0719A05F",
-				"cell_name": "Quick Test Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					463.335144,
-					-744.259033,
-					-0.910255
-				]
-			},
-			"properties": {
-				"title": "British Laser Footlocker",
-				"description": "CONT",
-				"ref_id": "07278733",
-				"form_id": "070C1067",
-				"editor_id": "Folon_DEVBritishLaser",
-				"weapons": [
-					"070BE430"
-				],
-				"cell": "0719A05F",
-				"cell_name": "Quick Test Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					687.335144,
-					-744.259033,
-					23.089745
-				]
-			},
-			"properties": {
-				"title": "FOLON Outfits",
-				"description": "CONT",
-				"ref_id": "07278735",
-				"form_id": "070C106A",
-				"editor_id": "Folon_DEVOutfitsLocker",
-				"cell": "0719A05F",
-				"cell_name": "Quick Test Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-566.274109,
-					2579.375488,
-					606.010803
-				]
-			},
-			"properties": {
-				"title": "Can Footlocker",
-				"description": "CONT",
-				"ref_id": "071F8FBF",
-				"form_id": "070C106C",
-				"editor_id": "Folon_DEVCan",
-				"weapons": [
-					"070BE3C6"
-				],
-				"cell": "071A2FA4",
-				"cell_name": "New Cross Gate Retail Park"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					-563.584839,
-					1111.296265,
-					-66.104164
-				]
-			},
-			"properties": {
-				"title": "Martini Henry Mods Footlocker",
-				"description": "CONT",
-				"ref_id": "07263657",
-				"form_id": "070C9A12",
-				"editor_id": "Folon_DEVMartiniHenry",
-				"cell": "070A5CE8",
-				"cell_name": "C3Delight Dev Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					575.335144,
-					-744.259033,
-					-0.910255
-				]
-			},
-			"properties": {
-				"title": "Martini Henry Mods Footlocker",
-				"description": "CONT",
-				"ref_id": "0727873B",
-				"form_id": "070C9A12",
-				"editor_id": "Folon_DEVMartiniHenry",
-				"cell": "0719A05F",
-				"cell_name": "Quick Test Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					743.335144,
-					-744.259033,
-					23.089745
-				]
-			},
-			"properties": {
-				"title": "Armor Footlocker",
-				"description": "CONT",
-				"ref_id": "0719A20E",
-				"form_id": "0719A20D",
-				"editor_id": "Folon_DEVOutfits",
-				"cell": "0719A05F",
-				"cell_name": "Quick Test Cell"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
 					-84171.296875,
 					-41657.628906,
 					5164.14502
@@ -136843,6 +132660,297 @@
 			}
 		}
 	],
+	"weapons": {
+		"070B67B5": {
+			"editor_id": "Folon_Weap_GrenThamesiumGoo",
+			"name": "Thamesium Goo",
+			"description": "Weaponized Thames water, that causes an acidic radius that does damage over time."
+		},
+		"07329994": {
+			"editor_id": "Folon_Weap_Ranged_CovertPistol-WelrodGold",
+			"name": "Scaramanga"
+		},
+		"0730B165": {
+			"editor_id": "Folon_Weap_UniqueMongolBow",
+			"name": "Ornate Bow"
+		},
+		"00107BD6": {
+			"editor_id": "BaseballGrenade",
+			"name": "Baseball Grenade"
+		},
+		"07198AAF": {
+			"editor_id": "Folon_Weap_UniqueDirtyWeldy",
+			"name": "Dirty Weldy",
+			"description": "Shoots a stream of kinetic projectiles that stagger enemies on contact."
+		},
+		"07281634": {
+			"editor_id": "Folon_Weap_MeleeChainsaw",
+			"name": "Chainsaw"
+		},
+		"07189AA1": {
+			"editor_id": "Folon_Weap_MeleePipeAxe",
+			"name": "Pipe Axe"
+		},
+		"071898E4": {
+			"editor_id": "Folon_Weap_MeleeTennisRacquet",
+			"name": "Tennis Racquet"
+		},
+		"070C84E0": {
+			"editor_id": "Folon_Weap_MeleeBoxcutter",
+			"name": "Boxcutter"
+		},
+		"070BE4AF": {
+			"editor_id": "Folon_Weap_MeleeTrowel",
+			"name": "Trowel"
+		},
+		"072DC932": {
+			"editor_id": "Folon_Weap_RangedM72GaussRifle",
+			"name": "Gauss Rifle"
+		},
+		"070B663D": {
+			"editor_id": "Folon_Weap_RangedServicePistol-Webley_1913",
+			"name": "Service"
+		},
+		"0704E15E": {
+			"editor_id": "Folon_Weap_Ranged9MM-LugerP09",
+			"name": "9mm"
+		},
+		"07278730": {
+			"editor_id": "Folon_Weap_RangedMauser",
+			"name": "Chinese"
+		},
+		"070BE430": {
+			"editor_id": "Folon_Weap_RangedLaserGun-British",
+			"name": "Upton-Burke Class C Rifle"
+		},
+		"070BE3C6": {
+			"editor_id": "Folon_Weap_UniqueCamelotStunBaton",
+			"name": "Rigby's Baton"
+		},
+		"000CE97D": {
+			"editor_id": "44",
+			"name": ".44"
+		},
+		"0710C867": {
+			"editor_id": "Folon_Weap_UmbrellaWithKnife",
+			"name": "Umbrella"
+		},
+		"070C99AB": {
+			"editor_id": "Folon_Weap_VintageRifle-MartiniHenryICI",
+			"name": "Vintage Rifle"
+		},
+		"072AC4E1": {
+			"editor_id": "Folon_Weap_RangedSSTGWeapon",
+			"name": "Combat Shotgun"
+		},
+		"070B6569": {
+			"editor_id": "Folon_Weap_RangedLMG-BrenMK2",
+			"name": "Light Machine Gun"
+		},
+		"0730B164": {
+			"editor_id": "Folon_Weap_RangedWoodbow_NPC_FireArrow",
+			"name": "Wood Bow"
+		},
+		"070DB2BF": {
+			"editor_id": "Folon_Weap_RangedCrudeSMG_CrudeBlowback",
+			"name": "Crude Gun"
+		},
+		"072B026E": {
+			"editor_id": "Folon_Weap_MeleeDruidMachete",
+			"name": "Sacrificial Blade"
+		},
+		"07307231": {
+			"editor_id": "Folon_Weap_UniqueCamelotGalantine",
+			"name": "Galantine"
+		},
+		"07307235": {
+			"editor_id": "Folon_Weap_UniqueCamelotOlwen",
+			"name": "Olwen"
+		},
+		"070BE3D1": {
+			"editor_id": "Folon_Weap_MeleeLongSword1h",
+			"name": "Long Sword"
+		},
+		"0731ACC7": {
+			"editor_id": "Folon_Weap_UniqueCamelotSecace",
+			"name": "Secace"
+		},
+		"0731ACCA": {
+			"editor_id": "Folon_Weap_UniqueServiceRifleLeeEnfieldAustralia",
+			"name": "Service Rifle"
+		},
+		"072D42C4": {
+			"editor_id": "Folon_Weap_RangedBox_SMG",
+			"name": "Box Submachine Gun"
+		},
+		"0715B9A8": {
+			"editor_id": "Folon_Weap_UniqueCarmine",
+			"name": "Carmine"
+		},
+		"072995DE": {
+			"editor_id": "Folon_Weap_UniqueCamelotArondight",
+			"name": "Arondight"
+		},
+		"070BE3D0": {
+			"editor_id": "Folon_Weap_MeleeLongSword2h",
+			"name": "Two-Handed Long Sword"
+		},
+		"070DB22B": {
+			"editor_id": "Folon_Weap_RangedCrudeRevolver-HandmadeRevolver",
+			"name": "Crude Revolver"
+		},
+		"070DB5BF": {
+			"editor_id": "Folon_Weap_RangedBattleRifle-FNFAL",
+			"name": "Battle Rifle"
+		},
+		"070DB848": {
+			"editor_id": "Folon_Weap_RangedServiceRevolver-Webley",
+			"name": "Service Revolver"
+		},
+		"0005524B": {
+			"editor_id": "Knuckles",
+			"name": "Knuckles"
+		},
+		"072815F2": {
+			"editor_id": "Folon_Weap_MeleeTorchWeapon",
+			"name": "Torch"
+		},
+		"072EC6C4": {
+			"editor_id": "Folon_Weap_MeleeMakeshiftKnife",
+			"name": "Makeshift Knife"
+		},
+		"0713B86D": {
+			"editor_id": "Folon_Weap_UniqueGordoStaff_Melee",
+			"name": "Flower Power Staff"
+		},
+		"0713B853": {
+			"editor_id": "Folon_Weap_UniqueGordoStaff",
+			"name": "Flower Power Blaster"
+		},
+		"070D95C3": {
+			"editor_id": "Folon_Weap_UniqueRamshackleSMGQuadrophenia",
+			"name": "Quadrophenia"
+		},
+		"07307233": {
+			"editor_id": "Folon_Weap_UniqueCamelotIseult",
+			"name": "Iseult"
+		},
+		"07329999": {
+			"editor_id": "Folon_Weap_UniqueServiceRifleLeeEnfieldBritish",
+			"name": "Redcoat"
+		},
+		"072E9804": {
+			"editor_id": "Folon_Weap_MeleeKPAMace",
+			"name": "Haereticus Ferire"
+		},
+		"0731C335": {
+			"editor_id": "Folon_Weap_UniqueCamelotRhongomiant",
+			"name": "Rhongomiant Spear"
+		},
+		"070BE3EA": {
+			"editor_id": "Folon_Weap_MeleeSword1h1",
+			"name": "Long Sword"
+		},
+		"0731ACC8": {
+			"editor_id": "Folon_Weap_UniqueCamelotCaliburn",
+			"name": "Caliburn"
+		},
+		"070D7DC3": {
+			"editor_id": "Folon_Weap_UniqueIronCurtainPMEagle",
+			"name": "Iron Curtain"
+		},
+		"07322583": {
+			"editor_id": "FOLON_Weap_MadJackGloves",
+			"name": "MadJackGlove"
+		},
+		"071898E3": {
+			"editor_id": "Folon_Weap_MeleeCricketBat",
+			"name": "Cricket Bat"
+		},
+		"07272E70": {
+			"editor_id": "Folon_Weap_UniqueClawHammerLegendary",
+			"name": "Oi"
+		},
+		"07322585": {
+			"editor_id": "Folon_Weap_ComKiera_Covert",
+			"name": "Kiera's Covert"
+		},
+		"07307232": {
+			"editor_id": "Folon_Weap_UniqueCamelotCarnwennan",
+			"name": "Carnwennan"
+		},
+		"0731ACC9": {
+			"editor_id": "Folon_Weap_UniqueCamelotRedHilt",
+			"name": "Red Hilt"
+		},
+		"07322586": {
+			"editor_id": "Folon_Weap_ComJohnSmith_SMG",
+			"name": "Submachine Gun"
+		},
+		"07329997": {
+			"editor_id": "Folon_Weap_UniqueBALISONGBONES",
+			"name": "Macabre Balisong"
+		},
+		"0016498F": {
+			"editor_id": "BoxingGlove",
+			"name": "Boxing Glove"
+		},
+		"070BE418": {
+			"editor_id": "Folon_Weap_MeleeKukri_Blade",
+			"name": "Kukri"
+		},
+		"07315569": {
+			"editor_id": "Folon_Weap_RangedWoodbow_NPC_StonePoint",
+			"name": "Wood Bow"
+		},
+		"070BE3E9": {
+			"editor_id": "Folon_Weap_MeleeSword2h1",
+			"name": "Long Sword"
+		},
+		"070BE3CB": {
+			"editor_id": "Folon_Weap_MeleeMace2h",
+			"name": "Mace"
+		},
+		"000D83BF": {
+			"editor_id": "PipeWrench",
+			"name": "Pipe Wrench"
+		},
+		"07189A92": {
+			"editor_id": "Folon_Weap_MeleePolice_Truncheon",
+			"name": "Police Truncheon"
+		},
+		"07272E71": {
+			"editor_id": "Folon_Weap_MeleeClawHammer",
+			"name": "Claw Hammer"
+		},
+		"07322588": {
+			"editor_id": "Folon_Weap_Mountbatten_ServiceRevolver",
+			"name": "Arthur's Gun"
+		},
+		"0710C865": {
+			"editor_id": "Folon_Weap_UmbrellaNoKnife",
+			"name": "Umbrella"
+		},
+		"0710C861": {
+			"editor_id": "Folon_Weap_MeleeRazor",
+			"name": "Razor"
+		},
+		"00113339": {
+			"editor_id": "DeathclawDirtThrow"
+		},
+		"072EC6C8": {
+			"editor_id": "Folon_Weap_MeleeSpear",
+			"name": "Spear"
+		},
+		"0710C864": {
+			"editor_id": "Folon_Weap_UniqueCamelotClarent",
+			"name": "Clarent"
+		},
+		"0014BBDA": {
+			"editor_id": "BehemothBoulder",
+			"name": "Behemoth Bolder"
+		}
+	},
 	"quests": {
 		"072DEFBE": {
 			"editor_id": "Folon_DialogueSPSFlora"
@@ -139556,255 +135664,6 @@
 		"070A134B": {
 			"editor_id": "Folon_Armo_HatRobotBandana",
 			"name": "Robot Bandana"
-		}
-	},
-	"weapons": {
-		"000CE97D": {
-			"editor_id": "44",
-			"name": ".44"
-		},
-		"0710C867": {
-			"editor_id": "Folon_Weap_UmbrellaWithKnife",
-			"name": "Umbrella"
-		},
-		"070C99AB": {
-			"editor_id": "Folon_Weap_VintageRifle-MartiniHenryICI",
-			"name": "Vintage Rifle"
-		},
-		"0704E15E": {
-			"editor_id": "Folon_Weap_Ranged9MM-LugerP09",
-			"name": "9mm"
-		},
-		"072AC4E1": {
-			"editor_id": "Folon_Weap_RangedSSTGWeapon",
-			"name": "Combat Shotgun"
-		},
-		"070B6569": {
-			"editor_id": "Folon_Weap_RangedLMG-BrenMK2",
-			"name": "Light Machine Gun"
-		},
-		"070C84E0": {
-			"editor_id": "Folon_Weap_MeleeBoxcutter",
-			"name": "Boxcutter"
-		},
-		"0730B164": {
-			"editor_id": "Folon_Weap_RangedWoodbow_NPC_FireArrow",
-			"name": "Wood Bow"
-		},
-		"070DB2BF": {
-			"editor_id": "Folon_Weap_RangedCrudeSMG_CrudeBlowback",
-			"name": "Crude Gun"
-		},
-		"072B026E": {
-			"editor_id": "Folon_Weap_MeleeDruidMachete",
-			"name": "Sacrificial Blade"
-		},
-		"07307231": {
-			"editor_id": "Folon_Weap_UniqueCamelotGalantine",
-			"name": "Galantine"
-		},
-		"07307235": {
-			"editor_id": "Folon_Weap_UniqueCamelotOlwen",
-			"name": "Olwen"
-		},
-		"070BE3D1": {
-			"editor_id": "Folon_Weap_MeleeLongSword1h",
-			"name": "Long Sword"
-		},
-		"0731ACC7": {
-			"editor_id": "Folon_Weap_UniqueCamelotSecace",
-			"name": "Secace"
-		},
-		"0731ACCA": {
-			"editor_id": "Folon_Weap_UniqueServiceRifleLeeEnfieldAustralia",
-			"name": "Service Rifle"
-		},
-		"072D42C4": {
-			"editor_id": "Folon_Weap_RangedBox_SMG",
-			"name": "Box Submachine Gun"
-		},
-		"0715B9A8": {
-			"editor_id": "Folon_Weap_UniqueCarmine",
-			"name": "Carmine"
-		},
-		"072995DE": {
-			"editor_id": "Folon_Weap_UniqueCamelotArondight",
-			"name": "Arondight"
-		},
-		"070BE3D0": {
-			"editor_id": "Folon_Weap_MeleeLongSword2h",
-			"name": "Two-Handed Long Sword"
-		},
-		"070DB22B": {
-			"editor_id": "Folon_Weap_RangedCrudeRevolver-HandmadeRevolver",
-			"name": "Crude Revolver"
-		},
-		"070DB5BF": {
-			"editor_id": "Folon_Weap_RangedBattleRifle-FNFAL",
-			"name": "Battle Rifle"
-		},
-		"070DB848": {
-			"editor_id": "Folon_Weap_RangedServiceRevolver-Webley",
-			"name": "Service Revolver"
-		},
-		"0005524B": {
-			"editor_id": "Knuckles",
-			"name": "Knuckles"
-		},
-		"072815F2": {
-			"editor_id": "Folon_Weap_MeleeTorchWeapon",
-			"name": "Torch"
-		},
-		"072EC6C4": {
-			"editor_id": "Folon_Weap_MeleeMakeshiftKnife",
-			"name": "Makeshift Knife"
-		},
-		"0713B86D": {
-			"editor_id": "Folon_Weap_UniqueGordoStaff_Melee",
-			"name": "Flower Power Staff"
-		},
-		"0713B853": {
-			"editor_id": "Folon_Weap_UniqueGordoStaff",
-			"name": "Flower Power Blaster"
-		},
-		"070D95C3": {
-			"editor_id": "Folon_Weap_UniqueRamshackleSMGQuadrophenia",
-			"name": "Quadrophenia"
-		},
-		"07307233": {
-			"editor_id": "Folon_Weap_UniqueCamelotIseult",
-			"name": "Iseult"
-		},
-		"070BE3C6": {
-			"editor_id": "Folon_Weap_UniqueCamelotStunBaton",
-			"name": "Rigby's Baton"
-		},
-		"07329999": {
-			"editor_id": "Folon_Weap_UniqueServiceRifleLeeEnfieldBritish",
-			"name": "Redcoat"
-		},
-		"072E9804": {
-			"editor_id": "Folon_Weap_MeleeKPAMace",
-			"name": "Haereticus Ferire"
-		},
-		"0731C335": {
-			"editor_id": "Folon_Weap_UniqueCamelotRhongomiant",
-			"name": "Rhongomiant Spear"
-		},
-		"070BE3EA": {
-			"editor_id": "Folon_Weap_MeleeSword1h1",
-			"name": "Long Sword"
-		},
-		"0731ACC8": {
-			"editor_id": "Folon_Weap_UniqueCamelotCaliburn",
-			"name": "Caliburn"
-		},
-		"070D7DC3": {
-			"editor_id": "Folon_Weap_UniqueIronCurtainPMEagle",
-			"name": "Iron Curtain"
-		},
-		"07322583": {
-			"editor_id": "FOLON_Weap_MadJackGloves",
-			"name": "MadJackGlove"
-		},
-		"071898E3": {
-			"editor_id": "Folon_Weap_MeleeCricketBat",
-			"name": "Cricket Bat"
-		},
-		"07272E70": {
-			"editor_id": "Folon_Weap_UniqueClawHammerLegendary",
-			"name": "Oi"
-		},
-		"07322585": {
-			"editor_id": "Folon_Weap_ComKiera_Covert",
-			"name": "Kiera's Covert"
-		},
-		"07307232": {
-			"editor_id": "Folon_Weap_UniqueCamelotCarnwennan",
-			"name": "Carnwennan"
-		},
-		"0731ACC9": {
-			"editor_id": "Folon_Weap_UniqueCamelotRedHilt",
-			"name": "Red Hilt"
-		},
-		"07322586": {
-			"editor_id": "Folon_Weap_ComJohnSmith_SMG",
-			"name": "Submachine Gun"
-		},
-		"07329997": {
-			"editor_id": "Folon_Weap_UniqueBALISONGBONES",
-			"name": "Macabre Balisong"
-		},
-		"0016498F": {
-			"editor_id": "BoxingGlove",
-			"name": "Boxing Glove"
-		},
-		"070BE418": {
-			"editor_id": "Folon_Weap_MeleeKukri_Blade",
-			"name": "Kukri"
-		},
-		"07315569": {
-			"editor_id": "Folon_Weap_RangedWoodbow_NPC_StonePoint",
-			"name": "Wood Bow"
-		},
-		"070BE3E9": {
-			"editor_id": "Folon_Weap_MeleeSword2h1",
-			"name": "Long Sword"
-		},
-		"070BE3CB": {
-			"editor_id": "Folon_Weap_MeleeMace2h",
-			"name": "Mace"
-		},
-		"000D83BF": {
-			"editor_id": "PipeWrench",
-			"name": "Pipe Wrench"
-		},
-		"07189A92": {
-			"editor_id": "Folon_Weap_MeleePolice_Truncheon",
-			"name": "Police Truncheon"
-		},
-		"07272E71": {
-			"editor_id": "Folon_Weap_MeleeClawHammer",
-			"name": "Claw Hammer"
-		},
-		"070BE430": {
-			"editor_id": "Folon_Weap_RangedLaserGun-British",
-			"name": "Upton-Burke Class C Rifle"
-		},
-		"07322588": {
-			"editor_id": "Folon_Weap_Mountbatten_ServiceRevolver",
-			"name": "Arthur's Gun"
-		},
-		"0710C865": {
-			"editor_id": "Folon_Weap_UmbrellaNoKnife",
-			"name": "Umbrella"
-		},
-		"0710C861": {
-			"editor_id": "Folon_Weap_MeleeRazor",
-			"name": "Razor"
-		},
-		"00113339": {
-			"editor_id": "DeathclawDirtThrow"
-		},
-		"072EC6C8": {
-			"editor_id": "Folon_Weap_MeleeSpear",
-			"name": "Spear"
-		},
-		"0710C864": {
-			"editor_id": "Folon_Weap_UniqueCamelotClarent",
-			"name": "Clarent"
-		},
-		"0014BBDA": {
-			"editor_id": "BehemothBoulder",
-			"name": "Behemoth Bolder"
-		},
-		"070B663D": {
-			"editor_id": "Folon_Weap_RangedServicePistol-Webley_1913",
-			"name": "Service"
-		},
-		"07278730": {
-			"editor_id": "Folon_Weap_RangedMauser",
-			"name": "Chinese"
 		}
 	},
 	"perks": {
