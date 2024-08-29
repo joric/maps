@@ -908,34 +908,9 @@ function popupOnClick(e) {
   popup.addEventListener('contextmenu', function(e) { e.stopPropagation()}, true); // enable default context menu
 }
 
-
 let mouseMoved = false;
 document.addEventListener('mousedown', function(event) {mouseMoved = false; });
 document.addEventListener('mousemove', function(event){mouseMoved = true;});
-
-let cell_lookup = {
-  "Courtside Bazaar": 'Courthouse Hotel',
-  "National Portrait Gallery": 'National Portrait Gallery',
-  "Thameshaven Market": 'Thameshaven Market',
-  "Angel Lab Lower Levels": 'Wesley Herbertson',
-  "Chuckster's US Embassy": 'US Embassy',
-  "Cutty Sark": 'Cutty Sark',
-  "Spire Tower": 'LBF Headquarters Report',
-  "Research and IT Department": 'Ministry of Defence Bunker',
-  "Nuka-Cola Headquaters Top Floor": 'Nuka-Cola Headquaters',
-  "Emergency Broadcast Centre": 'Emergency Broadcast Centre',
-  "Angel Lab": 'Wesley Herbertson',
-  "London Bridge Underground Station": 'London Bridge Station',
-  "Aquarium Lower Levels": 'London Aquarium',
-  "Cave": 'Cutethulhu Doll',
-  "Elizabeth Tower": 'Tower of London',
-  //"Quick Test Cell": 519,
-  //"Mysterious Lab": 4,
-  //"Saffron Dev Cell": 29,
-  //"Prilladog Dev Cell": 1,
-  //"Callum Dev Cell": 48,
-  //"C3Delight Dev Cell": 25,
-}
 
 let title_lookup = {};
 let ref_lookup = {};
@@ -951,7 +926,6 @@ function loadMarkers() {
     let o = feature.properties;
     title_lookup[o.title] = feature;
     ref_lookup[o.ref_id] = feature;
-
     if (o.cell && o.other_door) {
       cell_doors[o.cell] = (cell_doors[o.cell]||[]);
       cell_doors[o.cell].push(feature);
@@ -960,26 +934,17 @@ function loadMarkers() {
 
   function find_path(cellId) {
     const visited = new Set();
-    const queue = [[cellId, []]]; // Queue of [currentCellId, path]
-
+    const queue = [[cellId, []]];
     while (queue.length > 0) {
       const [currentCellId, path] = queue.shift();
-
       if (visited.has(currentCellId)) continue;
       visited.add(currentCellId);
-
       for (const door of cell_doors[currentCellId]) {
         const nextDoor = ref_lookup[door.properties.other_door];
-
-        if (nextDoor.properties.area) {
-          return [...path, door, nextDoor]; // Return the path
-        }
-
+        if (nextDoor.properties.area) return [...path, door, nextDoor];
         queue.push([nextDoor.properties.cell, [...path, door]]);
       }
     }
-
-    return null;
   }
 
   // for each cell, find and remember exits
@@ -1098,7 +1063,7 @@ function loadMarkers() {
       symbol: markerSymbol(o),
     }).addTo(markerLayer);
 
-    const tooltip = new maptalks.ui.ToolTip( itemDescription(o), {
+    const tooltip = new maptalks.ui.ToolTip( itemDescription(o) + ' in ' + itemLocation(o), {
       showTimeout: 50
     }).addTo(marker);
 
