@@ -915,6 +915,7 @@ let title_lookup = {};
 let ref_lookup = {};
 let cell_doors = {};
 let exits = {};
+//let cc = {};
 
 function loadMarkers() {
   let counters = {};
@@ -925,31 +926,57 @@ function loadMarkers() {
     let o = feature.properties;
     title_lookup[o.title] = feature;
     ref_lookup[o.ref_id] = feature;
+
     if (o.cell && o.other_door) {
       cell_doors[o.cell] = (cell_doors[o.cell]||[]);
       cell_doors[o.cell].push(feature);
     }
+
+    //cc[o.cell] = o.cell_name;
   }
 
-  function find_path(cellId) {
+  function find_path(cell_id) {
     const visited = new Set();
-    const queue = [[cellId, []]];
+    const queue = [[cell_id, []]];
     while (queue.length > 0) {
-      const [currentCellId, path] = queue.shift();
-      if (visited.has(currentCellId)) continue;
-      visited.add(currentCellId);
-      for (const door of cell_doors[currentCellId]) {
-        const nextDoor = ref_lookup[door.properties.other_door];
-        if (nextDoor.properties.area) return [...path, door, nextDoor];
-        queue.push([nextDoor.properties.cell, [...path, door]]);
+      const [current_cell_id, path] = queue.shift();
+      if (visited.has(current_cell_id)) continue;
+      visited.add(current_cell_id);
+      for (const door of cell_doors[current_cell_id]||[]) {
+        const next_door = ref_lookup[door.properties.other_door];
+        if (next_door.properties.area) return [...path, door, next_door];
+        queue.push([next_door.properties.cell, [...path, door]]);
       }
+    }
+  }
+
+  // this is 2x faster
+  const visited = new Set();
+  function find_path_rec(cell_id, clear = true) {
+    if (clear) visited.clear();
+    if (visited.has(cell_id)) return null;
+    visited.add(cell_id);
+    let doors = cell_doors[cell_id];
+    for (const door of doors||[]) {
+      const next_door = ref_lookup[door.properties.other_door];
+      if (next_door.properties.area) return [door, next_door]; // Return the path
+      const result = find_path_rec(next_door.properties.cell, false);
+      if (result) return [door, ...result]; // Append current door to the path
     }
   }
 
   // for each cell, find and remember exits
   for (cell_id of Object.keys(cell_doors)) {
-    exits[cell_id] = find_path(cell_id);
+    exits[cell_id] = find_path_rec(cell_id);
   }
+
+  /*
+  let oc = {};
+  for (cell_id of Object.keys(cc)) {
+    if (!find_path(cell_id)) oc[cell_id] = [cell_id, cc[cell_id], cell_doors[cell_id]];
+  }
+  console.log('orphaned_cells', Object.keys(oc).length, oc);
+  */
 
   function rotate2d( x,y, angle, cx, cy ) {
     x = x - cx;
