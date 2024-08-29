@@ -92,7 +92,10 @@ begin
           end else if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
             if (pos('Folon_Workbench', s) = 0) then continue;
           end else if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
-            if (pos('Folon_SettlementWorkbench', s) = 0) then continue;
+            if (pos('Folon_SettlementWorkbench', s) = 0)
+            and (pos('Folon_DEV', s) = 0)
+            and (pos('Folon_Safe', s) = 0)
+            then continue;
           end else if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'FLOR') and (Signature(e) = 'REFR') then begin
             if (pos('WildMutfruit', s) = 0) then continue;
@@ -107,7 +110,8 @@ begin
             and (pos('Overdrive', s) = 0)
             and (pos('XCell', s) = 0)
             and (pos('UltraJet', s) = 0)
-            and (pos('Folon_FoodDog', s) = 0) then continue;
+            and (pos('Folon_FoodDog', s) = 0)
+            then continue;
           end else if (Signature(r) = 'MISC') and (Signature(e) = 'REFR') then begin
             if (pos('VinylRecord', s) = 0)
             and (pos('BobbleHead_', s) = 0)
@@ -166,34 +170,32 @@ begin
           end;
 
           if quests > 0 then begin
-
             for q := 0 to Pred(ReferencedByCount(r)) do begin
               ref := ReferencedByIndex(r, q);
               if Signature(ref) = 'QUST' then begin
                 AddItem(Obj, ChildObj, ref, 'quests');
               end;
             end;
+          end;
 
-            items := ElementByName(r, 'Items');
-            if Assigned(items) then begin
-              for q := ElementCount(items) - 1 downto 0 do begin
-                item := ElementByIndex(items, q);
-                ref := LinksTo(ElementByPath(item, 'CNTO\Item'));
-                if Signature(ref) = 'WEAP' then begin
-                  AddItem(Obj, ChildObj, ref, 'weapons');
-                end;
+          items := ElementByName(r, 'Items');
+          if Assigned(items) then begin
+            for q := ElementCount(items) - 1 downto 0 do begin
+              item := ElementByIndex(items, q);
+              ref := LinksTo(ElementByPath(item, 'CNTO\Item'));
+              if Signature(ref) = 'WEAP' then begin
+                AddItem(Obj, ChildObj, ref, 'weapons');
               end;
             end;
+          end;
 
-            ref := LinksTo(ElementByPath(r, 'DOFT'));
-            if Assigned(ref) then begin
-              items := ElementByPath(ref, 'INAM');
-              for q := ElementCount(items) - 1 downto 0 do begin
-                item := ElementByIndex(items, q);
-                AddItem(Obj, ChildObj, LinksTo(item), 'outfits');
-              end;
+          ref := LinksTo(ElementByPath(r, 'DOFT'));
+          if Assigned(ref) then begin
+            items := ElementByPath(ref, 'INAM');
+            for q := ElementCount(items) - 1 downto 0 do begin
+              item := ElementByIndex(items, q);
+              AddItem(Obj, ChildObj, LinksTo(item), 'outfits');
             end;
-
           end;
 
           value := GetElementNativeValues(r, 'DATA\Value');

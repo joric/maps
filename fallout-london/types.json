@@ -120,7 +120,11 @@
     }
    },
 
-  "CONT": {"fa": "screwdriver-wrench", "bg": "red", "type": "Workshop", "group": "settlements"},
+  "CONT": {"fa": "box-archive", "bg": "darkcyan", "type": "Container", "group": "items",
+    "items": {
+      "Workshop":{"match": "Folon_SettlementWorkbench", "fa": "screwdriver-wrench", "bg": "red", "group":"settlements", "type": "Workshop" }
+    }
+  },
 
   "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items"},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
