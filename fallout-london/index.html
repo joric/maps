@@ -99,8 +99,10 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
 
       <div id="track-category-panel" class="button-panel collapsed">
         <select id="track-categories" class="form-control"><option>Select a Category</option></select>
-        <button class="btn" onclick="addTrack(this)">Track Category</button>
-        <button class="btn" onclick="toggleVisibility(['#track-category-panel','#track-category-button'])">x</button>
+        <div class="button-group">
+          <button class="btn" onclick="addTrack(this)">Track Category</button>
+          <button class="btn" onclick="toggleVisibility(['#track-category-panel','#track-category-button'])">x</button>
+        </div>
       </div>
 
       <hr/>
