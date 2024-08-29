@@ -1433,8 +1433,12 @@ window.onload = function(event) {
     }
   }
 
+  try {
   // clear location hash
-  history.pushState('', document.title, window.location.pathname + window.location.search);
+    history.pushState('', document.title, window.location.pathname + window.location.search);
+  } catch(error) {
+    console.log('handled error', error);
+  }
 
   mapId = mapParam.mapId || localData.mapId || Object.keys(maps)[0];
 
