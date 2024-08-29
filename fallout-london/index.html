@@ -1075,7 +1075,7 @@ function loadMarkers() {
     // hide some of the location markers on the base map
     if (mapId == Object.keys(maps)[0]) {
       if (['City','Town'].includes(type) && area != mapId && o.ref_id!='07310FF5') continue; // duplicate city markers
-      if (type == 'Military Base' && area != 'IWMWorld') continue; // duplicate tommies base
+      if (o.description == 'Military Base' && area != 'IWMWorld') continue; // duplicate tommies base
     }
 
     // hide interior doors (?)
