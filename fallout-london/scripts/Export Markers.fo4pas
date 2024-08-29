@@ -82,6 +82,8 @@ begin
             id: = IntToHex(GetLoadOrderFormID(e), 8);
             ref := WinningOverride(LinksTo(ElementByPath(e, 'XTEL\Door')));
             if not Assigned(ref) then continue;
+          end else if f<>mod_f then begin
+            continue;
           end else if (Signature(r) = 'ARMO') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'ACTI') and (Signature(e) = 'REFR') then begin
             if (pos('Folon_ACTI_CutethulhuDollActivator', s) = 0)

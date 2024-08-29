@@ -592,7 +592,7 @@ function markItems() {
   for (marker of markerLayer._geoList) {
     let o = marker.properties;
     let t = getType(o);
-    marker.updateSymbol({markerOpacity: settings.markedItems[o.ref_id] ? 0.5 : 1 });
+    marker.updateSymbol({markerOpacity: settings.markedItems[o.ref_id] ? 0.25 : 1 });
     let hide = !settings.activeItems[t.type];
     if (settings.hideFound && settings.markedItems[o.ref_id]) hide = true;
     hide ? marker.hide() : marker.show();
@@ -705,7 +705,7 @@ function toggleMarked(id) {
     let o = marker.properties;
     if (id == o.ref_id) {
       let found = settings.markedItems[id];
-      marker.updateSymbol({markerOpacity: found ? 0.5 : 1 });
+      marker.updateSymbol({markerOpacity: found ? 0.25 : 1 });
       break;
     }
   }
