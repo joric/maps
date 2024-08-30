@@ -52,7 +52,7 @@ xelib.GetRecords(plugin, 'WRLD').forEach((r,i) => {
     name: xelib.GetValue(r,'FULL'),
     editor_id: xelib.EditorID(r),
     scale: xelib.GetValue(r,'ONAM\\World Map Scale'),
-    offset: getArray(r, 'ONAM\\Cell ', ['X Offset','Y Offset', 'Z Offset']),
+    offset: getArray(r, 'ONAM\\Cell ', ['X Offset','Y Offset','Z Offset']),
   });
 });
 
