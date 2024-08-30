@@ -17,7 +17,7 @@ let files = [
   'LondonWorldSpace.esm',
 ];
 
-const spinner = (name)=>process.stdout.write(`${name}: ${'/-\\|'[Math.ceil(Date.now()/100)%4]}\r`);
+const spinner = name => process.stdout.write(`${name}: ${'/-\\|'[Math.ceil(Date.now()/100)%4]}\r`);
 const progress = (name, i,total)=>process.stdout.write(`${name}: ${Math.ceil(i*100/total)}%\r`);
 const getArray = (r, path, keys)=> keys.map(c=>xelib.GetFloatValue(r, `${path}${c}`));
 
