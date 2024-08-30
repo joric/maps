@@ -17,9 +17,9 @@ let files = [
   'LondonWorldSpace.esm',
 ];
 
-const spinner = name=>process.stdout.write(`${name}: ${'/-\\|'[Math.ceil(Date.now()/100)%4]}\r`);
-const progress = (name, i,total)=>process.stdout.write(`${name}: ${Math.ceil(i*100/total)}%\r`);
-const getArray = (r, path, keys)=> keys.map(c=>xelib.GetFloatValue(r, `${path}${c}`));
+const spinner = name => process.stdout.write(`${name}: ${'/-\\|'[Math.ceil(Date.now()/100)%4]}\r`);
+const progress = (name, i,total) => process.stdout.write(`${name}: ${Math.ceil(i*100/total)}%\r`);
+const getArray = (r, path, keys) => keys.map(c=>xelib.GetFloatValue(r, `${path}${c}`));
 
 let xelib = require('xelib').wrapper;
 xelib.Initialize('XEditLib.dll');
