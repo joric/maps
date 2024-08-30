@@ -4,35 +4,62 @@
 
 console.time('total');
 
+let output = {'markers':[], 'worldspaces':[]};
+
+let files = [
+  'Fallout4.esm',
+  'DLCRobot.esm',
+  'DLCWorkshop01.esm',
+  'DLCCoast.esm',
+  'DLCWorkshop02.esm',
+  'DLCWorkshop03.esm',
+  'DLCNukaWorld.esm',
+  'LondonWorldSpace.esm',
+];
+
+const spinner = (name)=>process.stdout.write(`${name}: ${'/-\\|'[Math.ceil(Date.now()/100)%4]}\r`);
+const progress = (name, i,total)=>process.stdout.write(`${name}: ${Math.round(i*100/total)}%\r`);
+const getArray = (r, path, keys)=> keys.map(c=>xelib.GetFloatValue(r, `${path}${c}`));
+
 let xelib = require('xelib').wrapper;
 xelib.Initialize('XEditLib.dll');
 xelib.SetGameMode(xelib.gmFO4);
-let files = ['Fallout4.esm', 'LondonWorldSpace.esm'];
 
-console.time('loaded');
-xelib.LoadPlugins(files.join('\n')); while(xelib.GetLoaderStatus()<2);
-console.timeEnd('loaded');
+console.time('loading');
+xelib.LoadPlugins(files.join('\n'));
+while(xelib.GetLoaderStatus()<2) spinner('loading');
+console.timeEnd('loading');
 
-const progress = (i,total)=>process.stdout.write(`\rprocessed: ${Math.round(i*100/total)}%`);
-const GetXYZ = (r, path)=> ['X','Y','Z'].map(c=>xelib.GetFloatValue(r, `${path}\\${c}`));
-let output = {'markers':[]};
-let plugin = xelib.FileByName(files[1]);
+console.time('parsing');
+
+let plugin = xelib.FileByName(files[files.length-1]);
 let refs = xelib.GetRecords(plugin, 'REFR');
 
 refs.forEach((r,i) => {
   if (xelib.GetFormID(xelib.GetLinksTo(r, 'NAME')) == 0x10) {
     let marker = {
+      ref_id: xelib.GetHexFormID(r),
       name: xelib.GetValue(r, 'Map Marker\\FULL'),
       type: xelib.GetValue(r, 'Map Marker\\TNAM\\Type'),
-      position: GetXYZ(r, 'DATA\\Position'),
+      position: getArray(r, 'DATA\\Position\\', ['X','Y','Z']),
       area: xelib.EditorID(xelib.GetLinksTo(xelib.GetLinksTo(r, 'Cell'), 'Worldspace')),
     };
     output['markers'].push(marker);
-    progress(i, refs.length);
+    progress('parsing', i, refs.length);
   }
 })
 
-console.log('\nwriting...');
+xelib.GetRecords(plugin, 'WRLD').forEach((r,i) => {
+  output['worldspaces'].push({
+    name: xelib.GetValue(r,'FULL'),
+    editor_id: xelib.EditorID(r),
+    scale: xelib.GetValue(r,'ONAM\\World Map Scale'),
+    offset: getArray(r, 'ONAM\\Cell ', ['X Offset','Y Offset', 'Z Offset']),
+  });
+});
+
+console.timeEnd('parsing');
+
 require('fs').writeFile ("output.json", JSON.stringify(output, null, 2), ()=>{});
 
 console.timeEnd('total');
