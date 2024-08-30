@@ -18,7 +18,7 @@ let files = [
 ];
 
 const spinner = (name)=>process.stdout.write(`${name}: ${'/-\\|'[Math.ceil(Date.now()/100)%4]}\r`);
-const progress = (name, i,total)=>process.stdout.write(`${name}: ${Math.round(i*100/total)}%\r`);
+const progress = (name, i,total)=>process.stdout.write(`${name}: ${Math.ceil(i*100/total)}%\r`);
 const getArray = (r, path, keys)=> keys.map(c=>xelib.GetFloatValue(r, `${path}${c}`));
 
 let xelib = require('xelib').wrapper;
@@ -32,20 +32,18 @@ console.timeEnd('loading');
 
 console.time('parsing');
 
-let plugin = xelib.FileByName(files[files.length-1]);
-let refs = xelib.GetRecords(plugin, 'REFR');
+let plugin = xelib.FileByName(files.at(-1));
 
-refs.forEach((r,i) => {
+xelib.GetRecords(plugin, 'REFR').forEach((r,i,arr) => {
   if (xelib.GetFormID(xelib.GetLinksTo(r, 'NAME')) == 0x10) {
-    let marker = {
+    output['markers'].push({
       ref_id: xelib.GetHexFormID(r),
       name: xelib.GetValue(r, 'Map Marker\\FULL'),
       type: xelib.GetValue(r, 'Map Marker\\TNAM\\Type'),
       position: getArray(r, 'DATA\\Position\\', ['X','Y','Z']),
       area: xelib.EditorID(xelib.GetLinksTo(xelib.GetLinksTo(r, 'Cell'), 'Worldspace')),
-    };
-    output['markers'].push(marker);
-    progress('parsing', i, refs.length);
+    });
+    progress('parsing', i, arr.length);
   }
 })
 
