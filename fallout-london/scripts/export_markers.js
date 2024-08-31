@@ -34,7 +34,6 @@ console.time('parsing');
 
 let plugin = xelib.FileByName(files.at(-1));
 
-/*
 data.markers = [];
 xelib.GetRecords(plugin, 'REFR').forEach((r,i,arr) => {
   if (xelib.GetFormID(xelib.GetLinksTo(r, 'NAME')) == 0x10) {
@@ -48,7 +47,6 @@ xelib.GetRecords(plugin, 'REFR').forEach((r,i,arr) => {
     progress('parsing', i, arr.length);
   }
 })
-*/
 
 data.worlds = [];
 xelib.GetRecords(plugin, 'WRLD').forEach((r,i) => {
