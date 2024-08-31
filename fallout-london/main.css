@@ -602,7 +602,6 @@ hr { opacity: .6;}
   left: 50%;
   transform: translate(-50%, -22px);
   font-size: 20px;
-  opacity: 0.75;
 }
 
 #popup-data.collapsed + #popup-data-toggle hr::after {
