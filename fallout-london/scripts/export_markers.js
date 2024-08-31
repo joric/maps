@@ -7,14 +7,8 @@ console.time('total');
 let data = {};
 
 let files = [
-  'Fallout4.esm',
-  'DLCRobot.esm',
-  'DLCWorkshop01.esm',
-  'DLCCoast.esm',
-  'DLCWorkshop02.esm',
-  'DLCWorkshop03.esm',
-  'DLCNukaWorld.esm',
-  'LondonWorldSpace.esm',
+  'Fallout4.esm', 'DLCRobot.esm', 'DLCWorkshop01.esm', 'DLCCoast.esm',
+  'DLCWorkshop02.esm', 'DLCWorkshop03.esm', 'DLCNukaWorld.esm', 'LondonWorldSpace.esm',
 ];
 
 const spinner = name => { var i=~~(Date.now()/100)%4; if (i!=spinner.i) process.stdout.write(`${name}: ${'/-\\|'[i]}\r`); spinner.i = i; }
@@ -67,7 +61,6 @@ xelib.GetRecords(plugin, 'QUST').forEach((r,i) => {
     editor_id: xelib.EditorID(r),
   };
 
-  /*
   let s = xelib.GetElement(r, 'Stages');
   if (!s) return;
 
@@ -87,7 +80,6 @@ xelib.GetRecords(plugin, 'QUST').forEach((r,i) => {
 
     quest.stages.push(stage);
   });
-  */
 
   let o = xelib.GetElement(r, 'Objectives');
   if (!o) return;
