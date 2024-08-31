@@ -1002,18 +1002,23 @@ function loadMarkers() {
       if (path && path.length>0) {
         o._doors = path.reduce((a,f) => ({ ...a, [f.properties.ref_id]:f.properties.area||f.properties.cell_name||f.properties.cell}), {});
 
-        // items look off maybe just use the last door here
-        path = [path[path.length-1]];
-        //path = path.slice().reverse();
-        let scale = 0.25;
+        // just take two last doors and smoosh them together
 
-        for (door of path) {
-          let [dx,dy,dz] = door.geometry.coordinates;
-          //[x,y] = rotate2d(x,y, door.properties.rotation[2]*Math.PI/180, dx,dy);
-          x = x*scale + dx;
-          y = y*scale + dy;
-          z = z*scale + dz;
-        }
+        let door = path[0];
+
+        let [dx,dy,dz] = door.geometry.coordinates;
+        x = x - dx;
+        y = y - dy;
+        z = z - dz;
+
+        door = path[path.length-1];
+        [dx,dy,dz] = door.geometry.coordinates;
+
+        [x,y] = rotate2d(x,y, door.properties.rotation[2]*Math.PI/180, 0,0);
+
+        x = x + dx;
+        y = y + dy;
+        z = z + dz;
 
       }
     }
