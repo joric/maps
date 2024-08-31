@@ -199,6 +199,7 @@ let layerName = 'markers';
 let maps = {
   'LondonWorld' : { name: 'London', scale: 1, offset: {x:0, y:0},
     regions: {
+      // regions must be precisely tuned because game doesn't have this data at all
       'WestminsterWorld' : { scale: 0.6, offset: {x:-104300, y:27900}, rotation: 0.57 },
       'CamdenWorld': { scale: 1, offset: {x:-79000, y:74000}, rotation: 0 },
       'IslingtonWorld': { scale: 0.95, offset: {x:-26600, y:66500}, rotation: 0.57 },
@@ -207,9 +208,11 @@ let maps = {
       'BromleyGladesWorld': { scale: 1, offset: {x:0, y:0} },
       'StPaulsWorld': { scale: 1, offset: {x:3000, y:0} },
       'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
+
+      // those seem to be pretty close to worldspace offsets
       'IWMWorld':{ scale: 1, offset: {x:0, y:0} },
-      'DumpWorld':{ scale: 1, offset: {x: 2000, y:-2000,} }, // placed above Ranger Ridiculous 6
-      'BromleyPindarWorld':{ scale: 0.1, offset: {x:33841.644531, y:-78117.046875} },
+      'DumpWorld':{ scale: 1, offset: {x: 0, y: 0,} },
+      'BromleyPindarWorld':{ scale: 1, offset: {x:0, y:0} },
     },
   },
   // individual maps
@@ -220,7 +223,7 @@ let maps = {
   'BankofEnglandWorld': { name:'Bank of England', scale: 3.77, offset: {x:6000, y:4800} },
 
   // some maps are hidden so offset doesn't matter here
-  'CoventGardenWorldSpace': { name:'Covent Garden', scale: 3.77, offset: {x:0, y:0}, hidden: true },
+  'CoventGardenWorldSpace': { name:'Covent Garden', scale: 1, offset: {x:0, y:0}, hidden: true },
   'BromleyGladesWorld': { name: 'Bromley Glades', scale: 1, offset: {x:0, y:0}, hidden: true },
   'StPaulsWorld': { name: 'St Pauls', scale: 1, offset: {x:0, y:0}, hidden: true },
   'IWMWorld':{ name: "War Museum", scale: 1, offset: {x:0, y:0}, hidden: true },
