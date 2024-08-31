@@ -596,14 +596,17 @@ hr { opacity: .6;}
   text-decoration: none;
 }
 
-#popup-data-toggle hr::after {
-  content: '...';
-  color: dimgrey;
+#popup-data + #popup-data-toggle hr::after {
+  content: '\d7';
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -25px);
-  padding: 0 5px; /* Adjust padding as needed */
-  font-size: 20px; /* Adjust font size as needed */
+  transform: translate(-50%, -22px);
+  font-size: 20px;
+  opacity: 0.75;
+}
+
+#popup-data.collapsed + #popup-data-toggle hr::after {
+  content: '';
 }
 
 #alert {
