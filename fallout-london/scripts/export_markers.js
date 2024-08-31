@@ -7,8 +7,14 @@ console.time('total');
 let data = {};
 
 let files = [
-  'Fallout4.esm', 'DLCRobot.esm', 'DLCWorkshop01.esm', 'DLCCoast.esm',
-  'DLCWorkshop02.esm', 'DLCWorkshop03.esm', 'DLCNukaWorld.esm', 'LondonWorldSpace.esm',
+  'Fallout4.esm',
+  'DLCRobot.esm',
+  'DLCWorkshop01.esm',
+  'DLCCoast.esm',
+  'DLCWorkshop02.esm',
+  'DLCWorkshop03.esm',
+  'DLCNukaWorld.esm',
+  'LondonWorldSpace.esm',
 ];
 
 const spinner = name => { var i=~~(Date.now()/100)%4; if (i!=spinner.i) process.stdout.write(`${name}: ${'/-\\|'[i]}\r`); spinner.i = i; }
