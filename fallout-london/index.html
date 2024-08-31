@@ -1000,7 +1000,7 @@ function loadMarkers() {
     if (o.cell) {
       let path = exits[o.cell];
       if (path && path.length>0) {
-        o._doors = path.map(f=>f.properties.ref_id);
+        o._doors = path.reduce((a,f) => ({ ...a, [f.properties.ref_id]:f.properties.area||f.properties.cell_name||f.properties.cell}), {});
 
         // items look off maybe just use the last door here
         path = [path[path.length-1]];

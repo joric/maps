@@ -4,7 +4,7 @@
 
 console.time('total');
 
-let output = {'markers':[], 'worldspaces':[]};
+let data = {};
 
 let files = [
   'Fallout4.esm',
@@ -17,8 +17,8 @@ let files = [
   'LondonWorldSpace.esm',
 ];
 
-const spinner = name => process.stdout.write(`${name}: ${'/-\\|'[Math.ceil(Date.now()/100)%4]}\r`);
-const progress = (name, i,total) => process.stdout.write(`${name}: ${Math.ceil(i*100/total)}%\r`);
+const spinner = name => { var i=~~(Date.now()/100)%4; if (i!=spinner.i) process.stdout.write(`${name}: ${'/-\\|'[i]}\r`); spinner.i = i; }
+const progress = (name, i,total) => { var i=~~(i*100/total); if (i!=progress.i) process.stdout.write(`${name}: ${i}%\r`); progress.i = i; };
 const getArray = (r, path, keys) => keys.map(c=>xelib.GetFloatValue(r, `${path}${c}`));
 
 let xelib = require('xelib').wrapper;
@@ -34,9 +34,11 @@ console.time('parsing');
 
 let plugin = xelib.FileByName(files.at(-1));
 
+/*
+data.markers = [];
 xelib.GetRecords(plugin, 'REFR').forEach((r,i,arr) => {
   if (xelib.GetFormID(xelib.GetLinksTo(r, 'NAME')) == 0x10) {
-    output['markers'].push({
+    data.markers.push({
       ref_id: xelib.GetHexFormID(r),
       name: xelib.GetValue(r, 'Map Marker\\FULL'),
       type: xelib.GetValue(r, 'Map Marker\\TNAM\\Type'),
@@ -46,9 +48,11 @@ xelib.GetRecords(plugin, 'REFR').forEach((r,i,arr) => {
     progress('parsing', i, arr.length);
   }
 })
+*/
 
+data.worlds = [];
 xelib.GetRecords(plugin, 'WRLD').forEach((r,i) => {
-  output['worldspaces'].push({
+  data.worlds.push({
     name: xelib.GetValue(r,'FULL'),
     editor_id: xelib.EditorID(r),
     scale: xelib.GetValue(r,'ONAM\\World Map Scale'),
@@ -56,8 +60,64 @@ xelib.GetRecords(plugin, 'WRLD').forEach((r,i) => {
   });
 });
 
+
+data.quests = [];
+xelib.GetRecords(plugin, 'QUST').forEach((r,i) => {
+  let quest = {
+    form_id: xelib.GetHexFormID(r),
+    name: xelib.GetValue(r,'FULL'),
+    editor_id: xelib.EditorID(r),
+  };
+
+  /*
+  let s = xelib.GetElement(r, 'Stages');
+  if (!s) return;
+
+  quest.stages = [];
+  xelib.GetElements(s).forEach((e,i) => {
+    let stage = {
+      index: xelib.GetIntValue(e, 'INDX\\Stage Index'),
+    };
+
+    let t = xelib.GetElement(e, 'Log Entries');
+    if (!t) return;
+
+    stage.logs = [];
+    xelib.GetElements(t).forEach((ee,i) => {
+      stage.logs.push(xelib.GetValue(ee, 'NAM2'));
+    });
+
+    quest.stages.push(stage);
+  });
+  */
+
+  let o = xelib.GetElement(r, 'Objectives');
+  if (!o) return;
+
+  quest.objectives = [];
+  xelib.GetElements(o).forEach((e,i) => {
+    let objective = {
+      index: xelib.GetIntValue(e, 'QOBJ'),
+      name: xelib.GetValue(e, 'NNAM'),
+    };
+
+    let t = xelib.GetElement(e, 'Targets');
+    if (!t) return;
+
+    objective.targets = [];
+    xelib.GetElements(t).forEach((ee,i) => {
+      objective.targets.push(xelib.GetValue(ee, 'QSTA\\Alias'));
+    });
+
+    quest.objectives.push(objective);
+  });
+
+  data.quests.push(quest);
+});
+
+
 console.timeEnd('parsing');
 
-require('fs').writeFile ("output.json", JSON.stringify(output, null, 2), ()=>{});
+require('fs').writeFile ("output.json", JSON.stringify(data, null, 2), ()=>{});
 
 console.timeEnd('total');
