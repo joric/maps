@@ -199,7 +199,7 @@ let layerName = 'markers';
 let maps = {
   'LondonWorld' : { name: 'London', scale: 1, offset: {x:0, y:0},
     regions: {
-      // regions must be precisely tuned because game doesn't have this data at all
+      // regions must be precisely tuned. some are rotated
       'WestminsterWorld' : { scale: 0.6, offset: {x:-104300, y:27900}, rotation: 0.57 },
       'CamdenWorld': { scale: 1, offset: {x:-79000, y:74000}, rotation: 0 },
       'IslingtonWorld': { scale: 0.95, offset: {x:-26600, y:66500}, rotation: 0.57 },
@@ -215,7 +215,7 @@ let maps = {
       'BromleyPindarWorld':{ scale: 1, offset: {x:-9000, y:-8000} },
     },
   },
-  // individual maps
+  // individual maps, must be somewhere in the game data. they are never rotated.
   'WestminsterWorld' : { name: 'Westminster', scale: 1.9, offset: {x:7000, y:22000} },
   'IslingtonWorld': { name: 'Islington', scale: 3.82, offset: {x:0, y:-47500} },
   'HackneyWorld' : { name: 'Hackney', scale: 3.77, offset: {x:-77500, y:-63000} },
