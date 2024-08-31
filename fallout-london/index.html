@@ -109,7 +109,7 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
         <input id="file" type='file' hidden/>
         <button onclick="loadLocalData()" class="btn-link">Load</button>
         <button onclick="saveLocalData()" class="btn-link">Save</button>
-        <button onclick="unmarkAll()" class="btn-link">Unmark All</button>
+        <button onclick="resetLocalData()" class="btn-link">Reset All</button>
         <!--button onclick="openLoadFileDialog()" class="btn-link" disabled title="not implemented yet">Load Game</button-->
       </div>
 
@@ -242,6 +242,13 @@ function addTrack(e) {
 function unmarkItems() {
   settings.markedItems={};
   markItems();
+}
+
+function resetLocalData() {
+  if (confirm('Are you sure you want to reset settings?')) {
+    localStorage.removeItem(localDataName);
+    location.reload();
+  }
 }
 
 function loadLocalDataFile() {
