@@ -576,6 +576,7 @@ hr { opacity: .6;}
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  line-height: 14px;
 }
 
 .popup-subnote-item .icon {
@@ -584,8 +585,8 @@ hr { opacity: .6;}
 
 .popup-subnote-item a {
   color: black;
-  font-size: 13px;
   margin-left : 0em;
+  font-size: 13px;
 }
 
 .popup-subnote-item:hover {
