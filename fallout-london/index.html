@@ -870,8 +870,9 @@ function popupOnClick(e) {
       let editor_id = markers[section][form_id].editor_id || form_id;
       let name = markers[section][form_id].name || editor_id;
       let desc = markers[section][form_id].description;
-
       let title = desc ? ( name +': ' + desc ) : name;
+      let objectives = markers[section][form_id]['objectives']||{};
+
 
       let li = document.createElement('div');
       li.className = 'popup-subnote-item';
@@ -882,24 +883,10 @@ function popupOnClick(e) {
       c0.classList.add('fa-' + ['scroll','gun','star','shirt',''][i]);
 
       let a = document.createElement('a');
+      a.title = section == 'quests' ? `Copy Quest ID to Clipboard (${editor_id})` : `Copy Form ID to Clipboard (${form_id})`;
 
-      if (section=='quests') {
-        let title = `Copy Quest ID to Clipboard (${editor_id})`;
-
-        let objectives = markers[section][form_id]['objectives']||{};
-
-        if (Object.keys(objectives).length>0) {
-          title += `\n---`;
-        }
-
-        for (const [stage,desc] of Object.entries(objectives)) {
-          title += `\n${stage}: ${desc}`
-        }
-
-        a.title = title;
-
-      } else {
-        a.title = `Copy Form ID to Clipboard (${form_id})`;
+      if (Object.keys(objectives).length>0) {
+        a.title += '\n---\n' + Object.entries(objectives).map( ([key,value])=>`${key}: ${value}`).join('\n');
       }
 
       a.textContent = itemText(title, o);
@@ -909,6 +896,32 @@ function popupOnClick(e) {
       li.appendChild(c0);
       li.appendChild(a);
       div.appendChild(li);
+
+      if (section=='quests') {
+        if (Object.keys(objectives).length>0) {
+
+          let c = document.createElement('span');
+          c.className = 'popup-subnote-toggle';
+          c.setAttribute('data-toggle','collapse');
+          c.setAttribute('data-target', form_id);
+          c.onclick = function(e) {
+            let id = e.target.getAttribute('data-target');
+            toggleClass(e.target, 'open');
+            toggleClass(document.getElementById(id), 'collapsed');
+            return false;
+          };
+          li.appendChild(c);
+
+          let d = document.createElement('div');
+          d.className = 'popup-subnote-info';
+          d.id = form_id;
+          d.classList.add('collapsed');
+          let items = Object.entries(objectives).map( ([key,value])=>`${key}: ${value}`);
+          d.innerHTML = items.join('<br/>');
+          div.appendChild(d);
+        }
+      }
+
     }
   }
 

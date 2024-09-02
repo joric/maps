@@ -572,11 +572,12 @@ hr { opacity: .6;}
 
 .popup-subnote-item {
   margin-left : 0.1em;
-  opacity: .8;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   line-height: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .popup-subnote-item .icon {
@@ -584,18 +585,44 @@ hr { opacity: .6;}
 }
 
 .popup-subnote-item a {
+  opacity: .75;
   color: black;
   margin-left : 0em;
   font-size: 13px;
-}
-
-.popup-subnote-item:hover {
-  opacity: 1;
+  flex-grow: 1;
 }
 
 .popup-subnote-item a:hover {
   text-decoration: none;
+  opacity: 1;
 }
+
+.popup-subnote-toggle::before {
+  content:'\23f4';
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup-subnote-toggle.open::before {
+  content:'\23f7';
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup-subnote-toggle {
+  opacity: .6;
+}
+.popup-subnote-toggle:hover{
+  opacity: 1;
+}
+
+.popup-subnote-info {
+  margin-left: 8px;
+  font-size: 12px;
+  opacity: .75;
+}
+
+
 
 #popup-data + #popup-data-toggle hr::after {
   content: '\d7';
