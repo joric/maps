@@ -884,16 +884,22 @@ function popupOnClick(e) {
       let a = document.createElement('a');
 
       if (section=='quests') {
-        let title = `Copy Editor ID to Clipboard [${editor_id}] (${form_id})`;
+        let title = `Copy Editor ID to Clipboard (${editor_id})`;
 
-        for (const [stage,desc] of Object.entries(markers[section][form_id]['objectives']||{})) {
+        let objectives = markers[section][form_id]['objectives']||{};
+
+        if (Object.keys(objectives).length>0) {
+          title += `\n---`
+        }
+
+        for (const [stage,desc] of Object.entries(objectives)) {
           title += `\n${stage}: ${desc}`
         }
 
         a.title = title;
 
       } else {
-        a.title = `Copy Form ID to Clipboard [${form_id}]`;
+        a.title = `Copy Form ID to Clipboard (${form_id})`;
       }
 
       a.textContent = itemText(title, o);
