@@ -180,9 +180,16 @@ begin
             end;
           end;
 
-          if quests > 0 then begin
+          if quests <> 0 then begin
             for q := 0 to Pred(ReferencedByCount(r)) do begin
               ref := ReferencedByIndex(r, q);
+              if Signature(ref) = 'QUST' then begin
+                AddItem(Obj, ChildObj, ref, 'quests');
+              end;
+            end;
+          end else begin
+            for q := 0 to Pred(ReferencedByCount(e)) do begin
+              ref := ReferencedByIndex(e, q);
               if Signature(ref) = 'QUST' then begin
                 AddItem(Obj, ChildObj, ref, 'quests');
               end;
