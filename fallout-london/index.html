@@ -866,6 +866,8 @@ function popupOnClick(e) {
     div.classList.remove('collapsed');
     div.appendChild(document.createElement('hr'));
 
+    const strip = s=>s.replace( /<[^>]+>/gi, 'X');
+
     for (const form_id of list) {
       let editor_id = markers[section][form_id].editor_id || form_id;
       let name = markers[section][form_id].name || editor_id;
@@ -886,7 +888,7 @@ function popupOnClick(e) {
       a.title = section == 'quests' ? `Copy Quest ID to Clipboard (${editor_id})` : `Copy Form ID to Clipboard (${form_id})`;
 
       if (Object.keys(objectives).length>0) {
-        a.title += '\n---\n' + Object.entries(objectives).map( ([key,value])=>`${key}: ${value}`).join('\n');
+        a.title += '\n---\n' + Object.entries(objectives).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
       }
 
       a.textContent = itemText(title, o);
@@ -916,7 +918,7 @@ function popupOnClick(e) {
           d.className = 'popup-subnote-info';
           d.id = form_id;
           d.classList.add('collapsed');
-          let items = Object.entries(objectives).map( ([key,value])=>`${key}: ${value}`);
+          let items = Object.entries(objectives).map( ([key,value])=>`${key}: ${strip(value)}`);
           d.innerHTML = items.join('<br/>');
           div.appendChild(d);
         }
