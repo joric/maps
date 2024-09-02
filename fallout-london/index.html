@@ -886,7 +886,7 @@ function popupOnClick(e) {
 
       a.textContent = itemText(title, o);
       a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(name, o));
-      a.onclick = function() { copyToClipboard(editor_id); return false; };
+      a.onclick = function() { copyToClipboard(section=='quests' ? editor_id : form_id); return false; };
 
       li.appendChild(c0);
       li.appendChild(a);
