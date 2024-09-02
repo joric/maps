@@ -576,7 +576,7 @@ hr { opacity: .6;}
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  //line-height: 15px;
+  line-height: 16px;
 }
 
 .popup-subnote-item .icon {
