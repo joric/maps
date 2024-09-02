@@ -1123,7 +1123,7 @@ function loadMarkers() {
     }
 
     // hide interior doors (?)
-    //if (type == 'Door' && !o.area) continue;
+    if (type == 'Door' && !o.area) continue;
 
     let c = getLoc(feature);
 
