@@ -882,7 +882,7 @@ function popupOnClick(e) {
       c0.classList.add('fa-' + ['scroll','gun','star','shirt',''][i]);
 
       let a = document.createElement('a');
-      a.title = section=='quests' ? `[${form_id}] Copy Editor ID ("${editor_id}") to Clipboard` : `[${form_id}] Copy Form ID to Clipboard`
+      a.title = section=='quests' ? `Copy Editor ID to Clipboard [${form_id}] ${editor_id}` : `Copy Form ID to Clipboard [${form_id}]`
 
       a.textContent = itemText(title, o);
       a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(name, o));
