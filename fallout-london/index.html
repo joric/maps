@@ -868,7 +868,7 @@ function popupOnClick(e) {
 
     for (const form_id of list) {
       let editor_id = markers[section][form_id].editor_id || form_id;
-      let name = markers[section][form_id].name || form_id;
+      let name = markers[section][form_id].name || editor_id;
       let desc = markers[section][form_id].description;
 
       let title = desc ? ( name +': ' + desc ) : name;
