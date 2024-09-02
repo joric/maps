@@ -599,12 +599,14 @@ hr { opacity: .6;}
 
 .popup-subnote-toggle::before {
   content:'\23f4';
+  padding-left: 16px;
   font-size: 16px;
   cursor: pointer;
 }
 
 .popup-subnote-toggle.open::before {
   content:'\23f7';
+  padding-left: 16px;
   font-size: 16px;
   cursor: pointer;
 }
