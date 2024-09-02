@@ -133716,7 +133716,19 @@
 	"quests": {
 		"072C24CA": {
 			"editor_id": "FOLON_COM_KieraQuest",
-			"name": "Going for Gold"
+			"name": "Going for Gold",
+			"objectives": {
+				"10": "Investigate Camden TV Station",
+				"15": "Look for communications equipment",
+				"18": "Hunt for more clues on \"Lady G\"",
+				"20": "Find the scarlet chariot at the Natural History Museum",
+				"25": "Check out other cell",
+				"30": "Escape the cells",
+				"32": "Find something rusty",
+				"33": "Give Kiera the grill rack",
+				"40": "Find Lady G within the Natural History Museum",
+				"50": "Find the treasure stash"
+			}
 		},
 		"073121E8": {
 			"editor_id": "FOLON_SQTerry01",
@@ -133724,15 +133736,40 @@
 		},
 		"072A5B2A": {
 			"editor_id": "FOLON_MQ205",
-			"name": "War Games"
+			"name": "War Games",
+			"objectives": {
+				"10": "Attend the tournament",
+				"20": "Convince Guido to leave",
+				"30": "Return to the greeter",
+				"40": "Find the explosives",
+				"50": "Set the charges underneath the box",
+				"60": "Find the Assassin",
+				"65": "Speak to the Assassin",
+				"70": "Wait for the tournament to start"
+			}
 		},
 		"072BA812": {
 			"editor_id": "FOLON_LQSouthwark104",
-			"name": "Faraday Effect"
+			"name": "Faraday Effect",
+			"objectives": {
+				"10": "Deactivate the Tesla Coil"
+			}
 		},
 		"0729C3F4": {
 			"editor_id": "Folon_SQBromley101",
-			"name": "Gordon's Alive"
+			"name": "Gordon's Alive",
+			"objectives": {
+				"10": "Kill the Dryads",
+				"20": "Return to Gordon",
+				"30": "See how else you can help Gordon",
+				"40": "Investigate Bromley Pindar",
+				"50": "(Optional) Report back to Gordon",
+				"60": "Use the Scanner",
+				"70": "Find the cause of Dryad aggression",
+				"80": "Speak to the Synapse Tree",
+				"90": "Report back to Gordon",
+				"100": "Return to Gordon"
+			}
 		},
 		"0729E8C9": {
 			"editor_id": "Folon_BigginHillAirportWorkshopInit"
@@ -133755,71 +133792,328 @@
 		},
 		"072AC4EE": {
 			"editor_id": "FOLON_MQAngel302",
-			"name": "Nature Adores A Crab"
+			"name": "Nature Adores A Crab",
+			"objectives": {
+				"10": "Await to be contacted by Smythe",
+				"20": "Speak to the courier",
+				"30": "Travel to the London Aquarium Lab",
+				"40": "Find the source of the data transmission",
+				"50": "Investigate the giant crab",
+				"60": "Check in with Smythe",
+				"70": "(Optional) Deactivate containment protocols",
+				"80": "Spin the maintenance valve to free Reggie",
+				"90": "Say goodbye to Reggie",
+				"100": "Escape the laboratory",
+				"110": "Leave the aquarium",
+				"120": "Answer the telephone",
+				"130": "Talk to Smythe",
+				"510": "Initiate the lab's self-destruct sequence",
+				"520": "Escape the laboratory",
+				"521": "(Optional) Cancel the self-destruct sequence",
+				"530": "(Optional) Manually initiate the lab's self-destruct sequence",
+				"540": "Escape the laboratory"
+			}
 		},
 		"0719C4CD": {
 			"editor_id": "FOLON_MQ104",
-			"name": "Lands of the Seraph"
+			"name": "Lands of the Seraph",
+			"objectives": {
+				"10": "Find Archie in Rotherhithe",
+				"20": "Destroy the nests",
+				"30": "Speak to Archie",
+				"40": "Return to the Ferryman",
+				"41": "Lower the crane bridge",
+				"42": "Open the gate",
+				"43": "Get on the Ferryman's boat",
+				"44": "Enjoy the ride",
+				"45": "Get off the boat",
+				"50": "Meet Archie and the Ferryman at the fishing dock",
+				"51": "(Optional) Investigate Tower Bridge",
+				"56": "Activate the beacon",
+				"58": "Speak to the Ferryman",
+				"60": "Explore the Monument Lab",
+				"62": "Investigate the noise",
+				"65": "Find a way to open the door",
+				"66": "Turn on the power",
+				"67": "Unlock the door",
+				"70": "Investigate the noise",
+				"75": "Fight the abomination",
+				"80": "Return to Archie and the Ferryman"
+			}
 		},
 		"07259136": {
 			"editor_id": "FOLON_SQCutethulhu101",
-			"name": "Dolls Of The Deep"
+			"name": "Dolls Of The Deep",
+			"objectives": {
+				"10": "Investigate the London Mithraeum",
+				"20": "Investigate the mysterious cabin in Greenwich",
+				"30": "Place the Cutethulhu dolls (<Global=FOLON_SQCutethulhu101_Counter>/16)",
+				"40": "Meditate with the dolls",
+				"50": "Find a way out"
+			}
 		},
 		"072BA817": {
 			"editor_id": "FOLON_MQFifth305",
-			"name": "Songs of Carthage"
+			"name": "Songs of Carthage",
+			"objectives": {
+				"5": "Speak to Derek",
+				"10": "Find the leader of the 'Ardboys",
+				"20": "Convince Hobbes to back the 5th Column",
+				"25": "Meet Hobbes in the ring",
+				"30": "Duel Hobbes",
+				"35": "Speak to Hobbes",
+				"40": "Travel to Charterhouse with the 'Ardboys",
+				"50": "Enter Charterhouse",
+				"60": "Confront Miller with the 'Ardboys",
+				"70": "Defeat Miller in a duel",
+				"80": "Speak with Hobbes",
+				"90": "Return to Eve",
+				"100": "Watch the execution",
+				"110": "Speak to Eve"
+			}
 		},
 		"072BDCC5": {
 			"editor_id": "FOLON_COM_ArchieQuest",
-			"name": "Stranger In A Strange Land"
+			"name": "Stranger In A Strange Land",
+			"objectives": {
+				"10": "Return to the aeroplane",
+				"20": "Clear out the Dryads",
+				"30": "Return to Thameshaven",
+				"40": "Clear out the Stingwings",
+				"50": "Return to the Angel Lab ",
+				"60": "Not much here, guess we'll head out...",
+				"65": "Grab the holotape from the terminal",
+				"67": "Talk to Archie about the tape outside",
+				"70": "Travel to Eastminster",
+				"80": "Locate the Tommy Outpost",
+				"85": "Learn what happened to the Tommies",
+				"87": "Find out where the Tommies went",
+				"88": "Locate the Tommies to the Southeast",
+				"90": "Help the Tommies defeat the Hooligans ",
+				"95": "Learn what happened to Archie’s parents",
+				"98": "Wait a while for Archie to open up",
+				"100": "Archie seems to want to give me something."
+			}
 		},
 		"072AEAA2": {
 			"editor_id": "FOLON_SQWestminster108",
-			"name": "The Sneering Imperialist"
+			"name": "The Sneering Imperialist",
+			"objectives": {
+				"10": "Speak to Allistair Tenpenny at his Manor",
+				"20": "Contact Mr. Emil",
+				"21": "Survive the Ambush",
+				"22": "Speak to Mr. Emil",
+				"25": "Option 1: Bring one Tommy, 5th Column and Camelot uniform to Mr. Emil",
+				"26": "Option 2: Bring 10 Mittenlurk eggs to Mr. Emil",
+				"30": "Option 3: Bribe Mr. Emil",
+				"40": "Speak to Allistair Tenpenny",
+				"41": "Escort Allistair Tenpenny to the port",
+				"42": ""
+			}
 		},
 		"0719FC81": {
 			"editor_id": "Folon_MQ105",
-			"name": "Fidei Defensor"
+			"name": "Fidei Defensor",
+			"objectives": {
+				"10": "Travel to St Paul's Sanctuary",
+				"20": "Speak with the guard",
+				"30": "Defeat the Hooligans",
+				"40": "Speak to the Frenchman",
+				"50": "Kill the Hooligan leader",
+				"60": "Return to the Frenchman",
+				"70": "Speak with Bishop Whaler"
+			}
 		},
 		"07309BC2": {
 			"editor_id": "FOLON_LQCamden106",
-			"name": "Visit your new home in Camden"
+			"name": "Visit your new home in Camden",
+			"objectives": {
+				"10": "Visit your new home in Camden",
+				"20": "Visit your new home in Camden"
+			}
 		},
 		"072C12E9": {
 			"editor_id": "FOLON_MQEnding310",
-			"name": "Parliament Of Fools"
+			"name": "Parliament Of Fools",
+			"objectives": {
+				"20": "Speak to Merlin",
+				"30": "Speak to Derek Castor",
+				"200": "Take over Parliament",
+				"300": "Enter the House of Commons",
+				"400": "Take your place at the dispatch box",
+				"430": "Climb the Elizabeth Tower",
+				"440": "Meet your maker",
+				"460": "Claim your fortune",
+				"470": "Defeat Smythe",
+				"500": "Take your place at the dispatch box"
+			}
 		},
 		"072AC4F1": {
 			"editor_id": "FOLON_MQAngel306",
-			"name": "Crossing the T's"
+			"name": "Crossing the T's",
+			"objectives": {
+				"10": "Return to Smythe's office",
+				"20": "Answer the telephone",
+				"30": "Take Colonel Major's Appointment Notice",
+				"40": "Deliver the Appointment Notice to General Asquith",
+				"60": "Travel to Buckingham Palace to get the Queen's backing",
+				"70": "Enter Buckingham Palace",
+				"80": "Answer the telephone",
+				"110": "Get the Revivification Serum",
+				"120": "Get the Queen's Chambers Key",
+				"130": "Enter the Queen's Chambers",
+				"135": "Find the Queen",
+				"140": "Incapacitate the Queen",
+				"150": "Inject the Revivification Serum",
+				"160": "Get the Appointment Notice signed by the Queen",
+				"180": "Return to the Imperial War Museum",
+				"200": "Meet Asquith outside for a duel",
+				"230": "Defeat Asquith",
+				"250": "Listen to General Major's speech"
+			}
 		},
 		"072BA815": {
 			"editor_id": "FOLON_MQFifth306",
-			"name": "The Queen's Army"
+			"name": "The Queen's Army",
+			"objectives": {
+				"5": "Speak with Derek",
+				"10": "Convene with Eve",
+				"20": "Travel to the Imperial War Museum",
+				"30": "Meet with Derek and Major Jonathan Allen",
+				"40": "Journey to Buckingham Palace",
+				"50": "Plan the attack with Derek",
+				"60": "Wait for Derek to give orders to the militiamen",
+				"65": "Wait for the 5th Column to breach the gate",
+				"70": "Storm Buckingham Palace",
+				"72": "Clear the Palace interior",
+				"75": "Convince Princess Elizabeth to ally with the Fifth Column",
+				"80": "Kill the Royals and take their heads",
+				"90": "Return to Major Allen",
+				"100": "Follow Major Allen",
+				"110": "Present the head to General Asquith",
+				"115": "Present the writ of allegience to General Asquith",
+				"120": "Observe the coup",
+				"130": "Kill the resistors",
+				"140": "Speak to General Allen",
+				"150": "Speak to Derek",
+				"160": "Return to Eve"
+			}
 		},
 		"072AC4EB": {
 			"editor_id": "FOLON_MQAngel303",
-			"name": "Ozymandias"
+			"name": "Ozymandias",
+			"objectives": {
+				"0": "Assassinate Eve Varney",
+				"1": "(Optional) Storm the board room",
+				"10": "Meet Horatio at the 5th Column tavern",
+				"20": "(Optional) Persuade Victor Schmidt to join the plot",
+				"30": "(Optional) Find evidence of Hume's murder before speaking to Victor",
+				"50": "Assassinate Eve Varney at the discrete location"
+			}
 		},
 		"072B658A": {
 			"editor_id": "FOLON_MQCamelot308",
-			"name": "Cable Street Woes"
+			"name": "Cable Street Woes",
+			"objectives": {
+				"10": "Meet Bedivere in the Tower Hamlets",
+				"20": "Sit down with Bedivere",
+				"40": "Clear out the Tower of London",
+				"50": "Return to Bedivere",
+				"60": "Meet Guinevere near the LT Tower",
+				"80": "Equip the 5th Column Disguise",
+				"90": "Walk with Guinevere",
+				"100": "Enter the LT Tower basement",
+				"105": "Sabotage the LT Tower power module",
+				"110": "Don't break cover",
+				"120": "Meet back up with Guinevere",
+				"130": "Speak to Merlin at the Tower of London",
+				"140": "Get the coordinates of Cable Street's defences",
+				"155": "Don't break cover",
+				"160": "Return to Merlin",
+				"170": "Rescue Kay",
+				"190": "Get in position for the battle",
+				"200": "Charge!",
+				"210": "Storm their headquarters!",
+				"220": "Confront Eve",
+				"240": "Speak to Arthur"
+			}
 		},
 		"072B659F": {
 			"editor_id": "FOLON_MQFifth300",
-			"name": "5th Column: Back to Black"
+			"name": "5th Column: Back to Black",
+			"objectives": {
+				"10": "Investigate the Fifth Column after the tournament",
+				"20": "Speak to the recruitment officer on Cable Street",
+				"25": "Follow Guido",
+				"30": "Speak to Eve"
+			}
 		},
 		"072ACE03": {
 			"editor_id": "FOLON_FQRoundels101",
-			"name": "Hurly Burly"
+			"name": "Hurly Burly",
+			"objectives": {
+				"1": "Investigate the gunfire",
+				"5": "Speak to Rosie & Guy",
+				"10": "Deal with the Miller's Men",
+				"20": "Speak to Rosie & Guy",
+				"30": "Go to Crawford Street",
+				"40": "Join the Hurly Burly",
+				"41": "(Optional) Help the injured Roundel",
+				"50": "Follow the Roundels",
+				"60": "Speak to Dennis and Joan",
+				"70": "Go inside the back door with the Roundels",
+				"75": "(Optional) Speak to Joan to change your mind",
+				"80": "Go inside the front door with the Roundels",
+				"90": "Kill the Miller's Men",
+				"100": "(Optional) Speak to Rosie and Guy",
+				"101": "(Optional) Speak to Joan",
+				"102": "(Optional) Speak to Ronnie",
+				"110": "Meet the Roundels outside",
+				"120": "Listen to Dennis' speech"
+			}
 		},
 		"0719FC6F": {
 			"editor_id": "FOLON_MQ103",
-			"name": "Charybdis"
+			"name": "Charybdis",
+			"objectives": {
+				"10": "Find Thameshaven",
+				"20": "Speak to the Tommy guard",
+				"30": "Enter the south entrance",
+				"40": "Speak to Rachel Hall",
+				"41": "Speak to the Thamesfolk leader",
+				"47": "Jump down the elevator shaft",
+				"50": "Find the Ferryman",
+				"53": "Unlock the door",
+				"54": "Save the Ferryman",
+				"55": "Speak to the Ferryman",
+				"60": "Seal the breach in the abandoned district",
+				"65": "Run!",
+				"70": "Report back to Rachel",
+				"80": "Visit the Ferryman in the infirmary"
+			}
 		},
 		"072BA80E": {
 			"editor_id": "FOLON_MQCamelot305",
-			"name": "Under Pressure"
+			"name": "Under Pressure",
+			"objectives": {
+				"10": "Listen to the scout",
+				"20": "Go to the northern courtyard",
+				"40": "Defend the northern courtyard",
+				"60": "Flank the main entrance via the sally port",
+				"100": "Return to the keep",
+				"105": "Take control of the ground floor",
+				"110": "Take control of the lower floor",
+				"120": "Take control of the upper floor",
+				"130": "Rescue Percival",
+				"155": "Meet up with Arthur and Merlin",
+				"170": "Enter the Southern Courtyard",
+				"180": "Defend the southern courtyard",
+				"190": "Receive orders from Arthur",
+				"200": "Drive the Tommies out of Camelot",
+				"210": "Await news from the keep",
+				"230": "Check the northern outpost",
+				"250": "Give your report to Arthur"
+			}
 		},
 		"072CD196": {
 			"editor_id": "FOLON_GMCamelot",
@@ -133827,51 +134121,210 @@
 		},
 		"072329CA": {
 			"editor_id": "FOLON_SQWestminster103",
-			"name": "Return to Sender"
+			"name": "Return to Sender",
+			"objectives": {
+				"10": "Get to Croydon Post Office",
+				"20": "Find the Letter in Croydon Post Office",
+				"30": "Return To Charles McAndrew"
+			}
 		},
 		"072B457F": {
 			"editor_id": "FOLON_GW201",
-			"name": "Revenge, Thy Name Is Fury"
+			"name": "Revenge, Thy Name Is Fury",
+			"objectives": {
+				"10": "Speak to Gaunt",
+				"20": "Ask Winston about Lockheed",
+				"21": "Ask Anthony about Sinclair",
+				"22": "Ask Johnny about Pieter",
+				"30": "Go to Lockheed's mistress's flat",
+				"40": "Deal with John Lockheed",
+				"45": "Kill John Lockhead",
+				"50": "Talk to Lexi",
+				"55": "Use the Key to enter the Factory",
+				"60": "Kill Sinclair",
+				"65": "(Optional) Burn Sinclair's body",
+				"70": "Find Pieter the Fence in Westminster",
+				"75": "Kill Pieter",
+				"77": "Get the ledger",
+				"78": "Collect your Weapons",
+				"80": "Return to Gaunt"
+			}
 		},
 		"072E7EEA": {
 			"editor_id": "Folon_COM_JohnSmithQuest",
-			"name": "Masquerade"
+			"name": "Masquerade",
+			"objectives": {
+				"10": "Go to Islington Public Library",
+				"15": "Enter the Library",
+				"20": "Explore the Library",
+				"25": "Open the Gate",
+				"30": "Follow John Smith",
+				"40": "Enter Observation Room",
+				"70": "Investigate the Scene",
+				"75": "Find more Evidence",
+				"80": "Speak to John",
+				"85": "Listen to the holotape",
+				"87": "Speak to John"
+			}
 		},
 		"072B4580": {
 			"editor_id": "FOLON_GW106",
-			"name": "Prison Break"
+			"name": "Prison Break",
+			"objectives": {
+				"10": "Enter HMS Dredge",
+				"20": "Take out the Syndicate security",
+				"25": "Speak to the Vagabond prisoners",
+				"30": "Release the Vagabonds via the terminal",
+				"35": "Reset the cell terminal password",
+				"40": "Release the Vagabonds via the terminal",
+				"45": "Speak to the Vagabonds",
+				"50": "(Optional) Plant the bombs on the lower deck",
+				"60": "Return to Johnny",
+				"100": "(Optional) Release the rest of the prisoners",
+				"110": "(Optional) Find a way to open the armoury",
+				"120": "Return to Agatha"
+			}
 		},
 		"072BA816": {
 			"editor_id": "FOLON_MQFifth308",
-			"name": "Idylls of the King"
+			"name": "Idylls of the King",
+			"objectives": {
+				"10": "Wait for the 5th Column Leadership",
+				"20": "Discover the 5th Column's next step",
+				"30": "Speak to Eve",
+				"40": "Interrogate the Prisoner",
+				"50": "Speak to Rhys",
+				"60": "Speak to Lancelot",
+				"70": "Force the Guard to leave",
+				"80": "Get information from Lancelot",
+				"90": "Return to Eve",
+				"100": "Begin the assault",
+				"110": "Breach the Camelot headquarters",
+				"120": "Find Arthur",
+				"130": "Speak to Eve",
+				"140": "Find the entrance to the safe room",
+				"150": "Kill Merlin",
+				"160": "Check on Eve",
+				"170": "Find Arthur",
+				"180": "Kill Arthur",
+				"190": "Return to Eve"
+			}
 		},
 		"072AEA99": {
 			"editor_id": "FOLON_FQRoundels104",
-			"name": "Lost & Won"
+			"name": "Lost & Won",
+			"objectives": {
+				"10": "Go to Cawdor Street with the Roundels",
+				"15": "Speak to Dennis",
+				"18": "(Optional) Follow the Roundels",
+				"20": "Clear Cawdor Street of Miller's Men",
+				"30": "Kill the Miller's Men outside Glam Clubhouse",
+				"40": "Kill the Miller's Men outside Maab House",
+				"50": "Speak to Dennis",
+				"60": "Investigate the sound",
+				"70": "Defeat the Radger",
+				"80": "Speak to Dennis",
+				"85": "Speak to the Roundels",
+				"90": "Go to Cawdor Street with the Roundels",
+				"100": "Speak to Manchester Mike",
+				"105": "(Optional) Follow the Roundels",
+				"110": "Kill the Miller's Men inside Club Glam",
+				"120": "Kill the Miller's Men inside Maab House",
+				"130": "Speak to Manchester Mike",
+				"140": "Investigate the sound",
+				"150": "Defeat the Radger",
+				"160": "Speak to the Roundels",
+				"170": "Go to Cawdor Street with the Roundels",
+				"180": "Speak to Price Pete",
+				"190": "(Optional) Follow the Roundels",
+				"200": "Speak to Prince Pete",
+				"210": "Speak to the Roundels"
+			}
 		},
 		"071C76B4": {
 			"editor_id": "Folon_GW101",
-			"name": "Swan & Mitre"
+			"name": "Swan & Mitre",
+			"objectives": {
+				"5": "(Optional) Visit the Vagabonds after investigating Thameshaven",
+				"10": "Follow the Vagabonds",
+				"20": "Find the medkit inside Greenwich Station",
+				"30": "Return to Ricky",
+				"40": "Travel to Swan & Mitre",
+				"50": "Defend the Swan & Mitre",
+				"60": "Talk to Yvette",
+				"70": "Kill Syndicate scout",
+				"80": "Return to Yvette",
+				"90": "Talk to Nelson",
+				"100": "Ask Winston about radio parts",
+				"110": "Find out why Nadia's delivery is late",
+				"115": "Speak to Nadia",
+				"120": "Return to Winston",
+				"130": "Ask Anthony to fix the radio",
+				"140": "Find a crystalline photon agitator",
+				"145": "Bring a crystaline photon agitator to Anthony",
+				"150": "Ask Johnny Shrapnel for a battery",
+				"160": "Deliver Johnny's apology gift",
+				"170": "Return to Johnny",
+				"180": "Return to Nelson"
+			}
 		},
 		"072B6593": {
 			"editor_id": "FOLON_GW204",
-			"name": "Black"
+			"name": "Black",
+			"objectives": {
+				"5": "Speak to Yvette",
+				"7": "Read Nelson's Note",
+				"10": "Go to Nelson's room",
+				"15": "(Optional) Talk to Gaunt",
+				"20": "Intercept Thomas Black's train",
+				"27": "Confront Thomas Black",
+				"28": "Speak to Blind Nelson",
+				"30": "Face Thomas Black",
+				"40": "Kill Black"
+			}
 		},
 		"072B6594": {
 			"editor_id": "FOLON_GW205c",
-			"name": "Breaking the Cycle"
+			"name": "Breaking the Cycle",
+			"objectives": {
+				"10": "Talk to Gaunt",
+				"20": "Follow Gaunt to the lounge",
+				"30": "Follow Gaunt outside",
+				"40": "Kill Gaunt",
+				"50": "Report to Black"
+			}
 		},
 		"072B6595": {
 			"editor_id": "FOLON_GW205b",
-			"name": "Clearing House"
+			"name": "Clearing House",
+			"objectives": {
+				"10": "Speak to Ayesha",
+				"20": "Clear out first safehouse",
+				"30": "Find out the location of the second safehouse",
+				"40": "Clear out second safehouse",
+				"50": "Return to Ayesha"
+			}
 		},
 		"072B6597": {
 			"editor_id": "FOLON_GW207b",
-			"name": "Syndication"
+			"name": "Syndication",
+			"objectives": {
+				"10": "Talk to Black",
+				"20": "Destroy the Vagabonds",
+				"25": "Follow Gaunt",
+				"30": "Return to Black",
+				"40": "Confront Gaunt",
+				"41": "Deal with Gaunt",
+				"45": "Prevent Reactor Meltdown",
+				"50": "Report to Black"
+			}
 		},
 		"0722C5D0": {
 			"editor_id": "FOLON_GMVagabonds",
-			"name": "Vagabonds NPC Manager"
+			"name": "Vagabonds NPC Manager",
+			"objectives": {
+				"105": "(Optional) Visit the Vagabonds"
+			}
 		},
 		"07317440": {
 			"editor_id": "FOLON_MQ309Master",
@@ -133879,63 +134332,308 @@
 		},
 		"07238B82": {
 			"editor_id": "FOLON_SQThameshaven102",
-			"name": "Saint of Style"
+			"name": "Saint of Style",
+			"objectives": {
+				"10": "Travel to the Laundromat in Greenwhich",
+				"20": "Find clothes for Ellen",
+				"30": "Turn on the power",
+				"40": "Put washing powder in the washing machine",
+				"50": "Wait for clothes to wash (<Global=Folon_SQThameshaven102_WMPercent>%)",
+				"55": "Collect the clothes",
+				"60": "Return to Ellen"
+			}
 		},
 		"072B84CA": {
 			"editor_id": "FOLON_MQCamelot304",
-			"name": "The Dolorous Strike"
+			"name": "The Dolorous Strike",
+			"objectives": {
+				"10": "Listen to Percival's news",
+				"20": "Talk to Arthur",
+				"30": "Investigate the explosion at Charing Cross",
+				"40": "(Optional) Ask Merlin and Percival about the explosion",
+				"60": "Speak to Colonel George Major",
+				"70": "Investigate the explosion site",
+				"90": "Investigate the Charing Cross Underground",
+				"100": "Follow the tunnel north",
+				"110": "Speak to the knights",
+				"120": "Go to St Anne's Churchyard",
+				"130": "Speak to the guard",
+				"140": "Speak to Tucker",
+				"150": "Deal with the 5th Columnists",
+				"170": "Free Tristan's family",
+				"180": "Search the churchyard for useful information",
+				"190": "Return to Tristan and Iseult",
+				"200": "Give Arthur a full report"
+			}
 		},
 		"07283CDA": {
 			"editor_id": "FOLON_MQ203",
-			"name": "All To Pot"
+			"name": "All To Pot",
+			"objectives": {
+				"30": "Talk to the man outside your cell",
+				"40": "Escape the prison",
+				"45": "Retrieve your belongings"
+			}
 		},
 		"072B84D1": {
 			"editor_id": "FOLON_MQCamelot303",
-			"name": "Living on a Thin Line"
+			"name": "Living on a Thin Line",
+			"objectives": {
+				"10": "Speak with Merlin",
+				"20": "Travel to the northern outpost",
+				"30": "Speak with Knight Gawain",
+				"40": "Read Knight Gawain's northern outpost report",
+				"50": "Discuss the report with Gawain",
+				"55": "(Optional) Speak with members of the squad about the outpost's combat readiness",
+				"60": "(Optional) Return to Gawain early and inform her that the outpost is ready to attack",
+				"70": "Secure food from the Fletchers",
+				"80": "Secure Timber from the Baileys",
+				"90": "Talk to Lancelot about sandbags",
+				"100": "Speak to Levy Daniels",
+				"110": "Chase Levy Daniels",
+				"120": "Speak to Levy Daniels",
+				"130": "Speak to Scout Duale about heavy weaponry",
+				"140": "Retrieve the heavy weaponry",
+				"150": "Defeat the cannibals to the south",
+				"160": "Encourage Alex to do explosives training",
+				"170": "Help Alex figure out which landmine is correct",
+				"190": "Tell Lancelot about the incident with Alex",
+				"200": "Inform Gawain that the outpost is ready to attack",
+				"210": "Tell the squad to get in position for the raid",
+				"250": "Meet your squad outside the factory",
+				"270": "Take out the hooligans outside the factory",
+				"280": "Enter the factory with your squad",
+				"300": "Fight through the factory",
+				"305": "Open the security gate",
+				"310": "Fight through the factory",
+				"315": "Meet with your squad outside",
+				"320": "Debrief with your squad",
+				"330": "Report to Merlin"
+			}
 		},
 		"071B7318": {
 			"editor_id": "FOLON_MQ106",
-			"name": "Cold Case"
+			"name": "Cold Case",
+			"objectives": {
+				"10": "Speak to Father Luke",
+				"20": "Investigate Lazarus' belongings",
+				"30": "Return to Father Luke",
+				"40": "Figure out who \"bones\" is",
+				"50": "Speak to the undertaker's assistant",
+				"55": "Investigate Christopher's belongings",
+				"60": "Confront Christopher",
+				"70": "Consult Reverend Francis",
+				"80": "Find Lazarus' stash",
+				"90": "Travel to Beefeater Burger",
+				"95": "Search for clues in the restaurant",
+				"100": "Listen to the holotape",
+				"110": "Investigate Wintergarden",
+				"120": "Free Lazarus",
+				"140": "Speak to Lazarus"
+			}
 		},
 		"072AA43E": {
 			"editor_id": "FOLON_LQHamlets101",
-			"name": "A Dish Best Served With Hot Lead"
+			"name": "A Dish Best Served With Hot Lead",
+			"objectives": {
+				"5": "Speak to the Man",
+				"10": "Follow Bruce",
+				"15": "Speak to Bruce",
+				"20": "Enter the Tabacco Docks",
+				"21": "<Optional> Sneak into the Tabacco Docks",
+				"30": "Talk to Clove and Bruce",
+				"35": "Defeat Clove and Bruce"
+			}
 		},
 		"0728C3D0": {
 			"editor_id": "FOLON_LQVagabonds102",
-			"name": "Catching Up"
+			"name": "Catching Up",
+			"objectives": {
+				"20": "Search for the books for Sabertooth Syd",
+				"22": "(Optional) Find Dove's Dilemma",
+				"30": "Return to Syd with the books"
+			}
 		},
 		"072AC4F0": {
 			"editor_id": "FOLON_MQAngel304",
-			"name": "You Only Live Twice"
+			"name": "You Only Live Twice",
+			"objectives": {
+				"0": "Assassinate Arthur",
+				"10": "Meet Dr James North in Westminster",
+				"40": "Go to North's laboratory via Hyde Park Corner Station",
+				"50": "Run to North's laboratory - don't get squished!",
+				"60": "Discuss the plan with Doctor North",
+				"70": "Attend North's party in Westminster",
+				"80": "Kill Guinevere - preferably in the garden",
+				"85": "(Optional) Find hidden surveillance devices (<Global=FOLON_MQAngel304_Counter01>/5)",
+				"100": "Return to Doctor North's laboratory",
+				"110": "Speak to Doctor North",
+				"120": "Complete the experiment",
+				"130": "Check the results",
+				"140": "Contact Smythe",
+				"150": "Listen to Smythe on the telescreen",
+				"200": "Meet Guinevere near Camelot",
+				"210": "Follow Guinevere",
+				"320": "Report back to Smythe at North's lab"
+			}
 		},
 		"072BA80B": {
 			"editor_id": "FOLON_MQCamelot307",
-			"name": "The King's Speech"
+			"name": "The King's Speech",
+			"objectives": {
+				"10": "Speak with Arthur",
+				"20": "Go to the Imperial War Museum",
+				"30": "Convince the Tommies to negotiate",
+				"40": "Question Major Jonathan Allen",
+				"50": "Return to Arthur",
+				"60": "Search the field for Asquith",
+				"80": "Carry Asquith's body out of the field",
+				"90": "Speak to Kay",
+				"100": "Inform Colonel George Major of Asquith's death",
+				"110": "Speak to Arthur in private",
+				"120": "Meet Guinevere in Westminster",
+				"140": "Meet Guinevere at the party",
+				"150": "Blend in and follow Doctor North",
+				"160": "Plant the surveillance devices (<Global=FOLON_MQCamelot307_DeviceCounter>/3)",
+				"190": "Listen to Doctor North's conversation",
+				"200": "Speak to Guinevere",
+				"210": "Find Horatio at the trainwreck site",
+				"220": "Defeat the 5th Columnists",
+				"230": "Get evidence from Horatio",
+				"240": "Return to Guinevere",
+				"260": "Give the evidence to Colonel George Major",
+				"270": "Speak to Arthur"
+			}
 		},
 		"072AC4EA": {
 			"editor_id": "FOLON_MQAngel305",
-			"name": "Out of the Shadows"
+			"name": "Out of the Shadows",
+			"objectives": {
+				"10": "Return to Smythe in Westminster",
+				"30": "Answer the telephone",
+				"50": "Read Smythe's dossier",
+				"60": "Step #1 - Obtain a royal appointment from Baroness Brenda Beaumont",
+				"70": "Step #2 - Stamp the royal appointment with Baron Earle Winthrop's seal",
+				"80": "Step #4 - Get Baron Nigel Honeysett to authenticate the appointment",
+				"90": "Step #3 - Assassinate Cecily Sugar in order to intimidate Nigel Honeysett",
+				"100": "(Optional) Ask Smythe about the targets",
+				"120": "Use force to convince Baroness Brenda Beaumont",
+				"140": "Retrieve a bottle of Catford's Finest for the Baron",
+				"165": "Use force to convince Baron Earle Winthrop",
+				"200": "(Optional) Make preperations for Cecily's death before the electrician fixes the power",
+				"220": "(Optional) Place the Angel explosives near Cecily's podium",
+				"225": "(Optional) Sabotage the power supply to Cecily's microphone",
+				"245": "(Optional) Wait for the electrician to fix the power",
+				"250": "(Optional) Watch the debate",
+				"300": "Wait a day to attend Cecily's funeral",
+				"320": "Hand off the Royal Appointment to the Prime Minister",
+				"322": "Election Night Special: Help speed up election season procedures",
+				"340": "Return to Smythe's office",
+				"350": "Go outside and wait to be contacted by Smythe",
+				"360": "Speak to the courier",
+				"370": "Attend Smythe's appointment ceremony at St James's Palace",
+				"380": "Listen to Smythe's appointment ceremony"
+			}
 		},
 		"072AE49F": {
 			"editor_id": "FOLON_GW102",
-			"name": "Meeting in Millwall"
+			"name": "Meeting in Millwall",
+			"objectives": {
+				"10": "Meet Yvette in Millwall",
+				"20": "Halt the execution",
+				"30": "Distract or Kill the Guards",
+				"32": "Wait for Yvette's distraction",
+				"35": "Free the prisoner",
+				"36": "Speak to Uma",
+				"40": "Return to Yvette",
+				"50": "Escape to the Vagabond safehouse"
+			}
 		},
 		"072AEAA3": {
 			"editor_id": "FOLON_SQWestminster107",
-			"name": "A View To Kill"
+			"name": "A View To Kill",
+			"objectives": {
+				"5": "Speak to Allistair Tenpenny",
+				"10": "Wait for Tenpenny to go to his Manor",
+				"15": "Speak to Allistair Tenpenny at his Manor",
+				"20": "(Optional) Warn the people of the London Eye",
+				"21": "Steal explosives from the Hooligans",
+				"22": "Intercept the Hooligan breach in the Eastminster Pindar",
+				"23": "Look for the payload mentioned in the Hooligan's note",
+				"26": "Plant the explosives at the London Eye",
+				"28": "(Optional) Obtain written evidence of Tenpenny's crime",
+				"29": "Bring evidence to Fowler",
+				"30": "Return to Tenpenny",
+				"35": "Watch the destruction of the London eye"
+			}
 		},
 		"072C2D09": {
 			"editor_id": "FOLON_MQCamelot309",
-			"name": "Unto The Breach"
+			"name": "Unto The Breach",
+			"objectives": {
+				"10": "Meet Arthur back at Camelot",
+				"20": "Wait 7 days for the battle preparations",
+				"30": "Go to Westminster Bridge",
+				"40": "Listen to Arthur's speech",
+				"50": "Launch the trebuchet",
+				"60": "Enter Westminster",
+				"70": "Take control of Parliament Square",
+				"80": "Raise the Camelot banner",
+				"90": "Speak to Merlin",
+				"100": "Take over Downing Street",
+				"110": "Gain entry to 10 Downing Street through the Cabinet War Rooms",
+				"130": "Raise the Camelot banner",
+				"140": "Take over Admiralty Arch",
+				"150": "Open the gate for reinforcements",
+				"160": "Take over the Broadcasting House",
+				"170": "Raise the Camelot banner"
+			}
 		},
 		"072C2D0A": {
 			"editor_id": "FOLON_MQAngel309",
-			"name": "The Gloves Are Off"
+			"name": "The Gloves Are Off",
+			"objectives": {
+				"10": "Return to Smythe's office",
+				"20": "Answer the telephone",
+				"25": "Wait 7 days for the battle preparations",
+				"30": "Plan A: Destroy the trebuchet on Westminster Bridge",
+				"40": "Plan B: Block the underground tunnel beneath Waterloo",
+				"50": "Run!",
+				"80": "Enter Westminster via the other front",
+				"110": "Enter Westminster via the other front",
+				"130": "Take control of Parliament Square",
+				"140": "Take down the enemy flags (<Global=FOLON_MQAngel309_Counter01>/2)",
+				"170": "Speak to the courier",
+				"180": "Retake Downing Street from the insurgents",
+				"190": "Gain entry to 10 Downing Street through the Cabinet War Rooms",
+				"200": "Take down the Camelot flag",
+				"210": "Retake Admiralty Arch from the insurgents",
+				"220": "Close the gate to block off enemy reinforcements",
+				"230": "Retake the Broadcasting House from the insurgents",
+				"240": "Take down the Fifth Column flag"
+			}
 		},
 		"072C2D10": {
 			"editor_id": "FOLON_MQFifth309",
-			"name": "Waterloo Sunset"
+			"name": "Waterloo Sunset",
+			"objectives": {
+				"10": "Meet Eve back at headquarters",
+				"20": "Wait 7 days for the battle preparations",
+				"30": "Go to Westminster Bridge",
+				"40": "Go to the Waterloo Waterworks",
+				"50": "Enter Westminster",
+				"55": "Open the gates!",
+				"90": "Take control of Parliament Square",
+				"100": "Raise the 5th Column banner",
+				"110": "Speak to Derek Castor",
+				"120": "Take over Downing Street",
+				"130": "Gain entry to 10 Downing Street through the Cabinet War Rooms",
+				"150": "Raise the 5th Column banner",
+				"160": "Take over Admiralty Arch",
+				"170": "Open the gate for reinforcements",
+				"180": "Take over the Broadcasting House",
+				"190": "Raise the 5th Column banner"
+			}
 		},
 		"072FA528": {
 			"editor_id": "FOLON_GMWestminster",
@@ -133943,62 +134641,253 @@
 		},
 		"072B6590": {
 			"editor_id": "FOLON_SQLambeth101",
-			"name": "The Lost Tommies"
+			"name": "The Lost Tommies",
+			"objectives": {
+				"5": "Report to Pvt Tommy",
+				"10": " Go to the Pindar Station",
+				"20": "Traverse the Pindar Station",
+				"30": "Find the Lost Tommies",
+				"40": "Acquire some evidence",
+				"50": "Find the source of the Distress Call",
+				"60": "Shut down the Distress Call",
+				"70": "Escape!",
+				"80": "Return the evidence to Mr Tommy"
+			}
 		},
 		"072AC4E9": {
 			"editor_id": "FOLON_MQAngel307",
-			"name": "Acceptable Losses"
+			"name": "Acceptable Losses",
+			"objectives": {
+				"10": "Await contact from Smythe",
+				"20": "Check in with Smythe",
+				"30": "Travel to the Land's End Inn in Peckham",
+				"40": "Retrieve your luggage from Room 5",
+				"45": "Read your new Initiative Briefing",
+				"60": "Pick up the briefcase",
+				"70": "Pick up the flag",
+				"80": "Pick up the flamethrower",
+				"90": "Travel to the Peckham settlement nearby",
+				"100": "Burn down the settlement...",
+				"105": "Leave no survivors!",
+				"120": "Hoist the Angel flag",
+				"140": "\"Assist\" the Tommies with their inquiries",
+				"150": "Deal with the Tommies",
+				"170": "Speak to the 2nd Lieutenant",
+				"190": "Speak to the Lieutenant"
+			}
 		},
 		"072BA80A": {
 			"editor_id": "FOLON_FQThameshaven101",
-			"name": "Scylla"
+			"name": "Scylla",
+			"objectives": {
+				"5": "Visit the Ferryman back in Thameshaven",
+				"40": "Speak to Bob Clarkson",
+				"45": "Search Carl's Shack",
+				"50": "Speak to Jeremy Lewis",
+				"55": "Ask the Thamesfolk about Carl",
+				"57": "Find Carl",
+				"58": "Search Carl's Body",
+				"60": "Bring the Holotape to Rachel",
+				"70": "Return to Bob",
+				"80": "Speak to Angela",
+				"90": "Dethrone the Empress",
+				"91": "Travel to the Greenwich Impact Crater",
+				"95": "Take proof of the Mittenlurk Queen's demise",
+				"100": "Return to Angela",
+				"110": "Bring the evidence to Horace",
+				"120": "Inform Rachel of Horace's decision"
+			}
 		},
 		"07237DB8": {
 			"editor_id": "FOLON_SQCamden101",
-			"name": "The Scottish Play"
+			"name": "The Scottish Play",
+			"objectives": {
+				"20": "Steal the Globe Theatre's copy of Macbeth",
+				"25": "(Optional) Convince the Globe Theatre to give you Macbeth",
+				"30": "Return the play to Scott Nightingale",
+				"40": "Speak to Freddy Fife",
+				"50": "Get the stash of Calmex for Freddy",
+				"80": "Return to Freddy",
+				"90": "Return to Scott",
+				"100": "Speak with Claudia Rampling",
+				"110": "Get the basement key from Scott",
+				"120": "Find the source of the noises",
+				"130": "Speak with the ghouls",
+				"135": "(Optional) Speak with Scott about the ghouls",
+				"140": "Deal with the ghouls",
+				"145": "Kill the ghouls",
+				"150": "Disable the speakers at the terminal",
+				"160": "Return to Claudia",
+				"170": "Return to Scott"
+			}
 		},
 		"0722C5CF": {
 			"editor_id": "FOLON_FQMiller101",
-			"name": "Glad Tidings"
+			"name": "Glad Tidings",
+			"objectives": {
+				"10": "Find John Marsh at St. Paul's Sanctuary",
+				"20": "Travel to the London City Airport",
+				"25": "Find Jane Marsh",
+				"30": "Kill Jane Marsh",
+				"34": "Find Jane Marsh",
+				"38": "Kill Jane Marsh",
+				"40": "Return to John Marsh",
+				"45": "Visit the graveyard",
+				"50": "Return to Miller"
+			}
 		},
 		"072BCEF5": {
 			"editor_id": "FOLON_SQNewham102",
-			"name": "L'appel du Vide"
+			"name": "L'appel du Vide",
+			"objectives": {
+				"10": "Rescue Segolene from the Tommy Outpost",
+				"15": "(Optional) Speak to Sgt Williams",
+				"20": "Find another way to rescue Segolene",
+				"30": "Collect 25 each of 9mm rounds, 308 rounds and Fusion Cells for Sgt Williams",
+				"40": "Return to Sgt Williams",
+				"50": "Release Segolene",
+				"60": "Return to the Normans",
+				"67": "Speak to Segolene",
+				"70": "Gain entrance to the boat",
+				"80": "(Optional) Find a Tommy Uniform",
+				"90": "Let the Normans in",
+				"95": "Wait for the Normans to cross",
+				"100": "Steal the boat",
+				"110": "Speak to the Normans",
+				"120": "Kill Eugene",
+				"130": "Speak to Segolene",
+				"140": "Acquire coal for Segolene",
+				"150": "Return to Segolene",
+				"160": "Acquire munitions for Eugene",
+				"170": "Speak to Monty",
+				"180": "Kill Monty",
+				"190": "Acquire munitions for Eugene",
+				"200": "Return to Eugene"
+			}
 		},
 		"072B659A": {
 			"editor_id": "FOLON_GW105",
-			"name": "The Train Job"
+			"name": "The Train Job",
+			"objectives": {
+				"10": "Travel to Poplar Station",
+				"20": "Stop the Supply Train",
+				"30": "(Optional) Destroy the Train",
+				"40": "(Optional) Redirect the train",
+				"50": "Ride the train",
+				"60": "Return to Winston"
+			}
 		},
 		"072B457E": {
 			"editor_id": "FOLON_GW107",
-			"name": "Arms Race"
+			"name": "Arms Race",
+			"objectives": {
+				"10": "Enter the Syndicate warehouse",
+				"15": "(Optional) Speak with Frosty Valentina",
+				"16": "(Optional) Bring Valentina copper, plastic and a piece of circuitry",
+				"20": "(Optional) Let the Vagabonds in",
+				"25": "Burn the warehouse",
+				"30": "Return to Anthony"
+			}
 		},
 		"072BA807": {
 			"editor_id": "FOLON_FQCroydon101",
-			"name": "No Man's Wasteland"
+			"name": "No Man's Wasteland",
+			"objectives": {
+				"10": "Speak to Lieutenant Doyle",
+				"20": "Travel into Croydon",
+				"30": "Build a bridge deeper into Croydon",
+				"35": "(Optional) Access the building supplies in Croydon Pindar",
+				"40": "(Optional) Find the Croydon Pindar key in the Crystal Palace Maze",
+				"60": "Travel further into Croydon",
+				"70": "Find a new support beam",
+				"80": "Help the stranded Tommies",
+				"90": "Speak to the officer",
+				"100": "Build a bridge deeper into Croydon",
+				"110": "Make contact with the Croydonians",
+				"120": "Speak to Second Lieutenant Buckley",
+				"180": "Report to Lieutenant Doyle",
+				"190": "Return to Chief Roach"
+			}
 		},
 		"072964A4": {
 			"editor_id": "FOLON_FQPistols103",
-			"name": "Guns of Lewisham"
+			"name": "Guns of Lewisham",
+			"objectives": {
+				"10": "Travel to the Lewisham Police Station",
+				"20": "Find the gun shipment in Lewisham Police Station",
+				"30": "Return the gun shipment to Captain Reasonable"
+			}
 		},
 		"071A2F20": {
 			"editor_id": "FOLON_MQ107",
-			"name": "Heavenslayer"
+			"name": "Heavenslayer",
+			"objectives": {
+				"10": "Travel to Imperial War Museum",
+				"20": "Follow the Colonel",
+				"30": "Clear out the Bank of England",
+				"35": "(Optional) Ask the Frenchman for help",
+				"40": "Report back to Colonel",
+				"50": "Go to Islington",
+				"60": "Find the entrance to the Station",
+				"70": "Journey through the Station",
+				"80": "Explore the Angel lab",
+				"90": "Stop the self-destruct sequence",
+				"100": "Traverse the Tube tunnel"
+			}
 		},
 		"072AC4F2": {
 			"editor_id": "FOLON_MQAngel308",
-			"name": "Spin Doctor"
+			"name": "Spin Doctor",
+			"objectives": {
+				"10": "Return to Smythe's office",
+				"20": "Answer the telephone",
+				"30": "Travel to the Broadcasting House",
+				"40": "Deal with the Roundheads",
+				"60": "Head up to the studio",
+				"80": "Deal with the station manager",
+				"120": "Speak to the broadcast technician",
+				"140": "Find and hire Dicky Anderson",
+				"160": "Deal with Dicky Anderson's landlord",
+				"200": "Return to the studio",
+				"210": "Speak to Robert Maxwell-Jones",
+				"215": "Guarantee Maxwell-Jones' compliance",
+				"220": "(Optional) Consult the broadcast technician",
+				"230": "(Optional) Kill Maxwell-Jones' manservant",
+				"250": "Speak to the broadcast technician",
+				"260": "Retrieve a Telescreen Transmitter Circuit from the LT Tower",
+				"270": "Return the circuit to the studio",
+				"275": "Replace the circuit",
+				"280": "Watch the broadcast",
+				"290": "Speak to the broadcast technician"
+			}
 		},
 		"072AEAA8": {
 			"editor_id": "FOLON_SQWestminster105",
-			"name": "Special Performance"
+			"name": "Special Performance",
+			"objectives": {
+				"10": "Speak to Clive",
+				"20": "Break into the BBM with the orchestra",
+				"30": "Confront the Station Manager",
+				"40": "Recover the tape from Empire Records",
+				"50": "Return the tape to Clive",
+				"60": "Input the tape into Bradley Fortworth",
+				"70": "Return to Clive",
+				"100": "Quest End"
+			}
 		},
 		"072DEFBE": {
 			"editor_id": "Folon_DialogueSPSFlora"
 		},
 		"072BA811": {
 			"editor_id": "FOLON_LQSouthwark102",
-			"name": "The Other Other White Meat"
+			"name": "The Other Other White Meat",
+			"objectives": {
+				"7": "Speak to Beefy",
+				"10": "Clear the first group of Cannibals",
+				"20": "Clear the second group of Cannibals",
+				"30": "Clear the third group of Cannibals",
+				"40": "Return to Beefy"
+			}
 		},
 		"07322A8F": {
 			"editor_id": "FOLON_LQEastminster106Post",
@@ -134010,15 +134899,35 @@
 		},
 		"072A9AE9": {
 			"editor_id": "FOLON_LQIslington101",
-			"name": "Clean-Up"
+			"name": "Clean-Up",
+			"objectives": {
+				"5": "Speak to the Crypt Guard",
+				"10": "Kill the Enforcer",
+				"20": "Return to the Guard"
+			}
 		},
 		"072AEAA1": {
 			"editor_id": "FOLON_LQHamlets102",
-			"name": "Abandoned Underground Tunnels"
+			"name": "Abandoned Underground Tunnels",
+			"objectives": {
+				"5": "Listen to Guido's gossip",
+				"10": "Eavesdrop the conversation",
+				"15": "Listen to the conversation",
+				"20": "Inform Guido of the plan",
+				"30": "Head to the meeting point",
+				"40": "Investigate the tunnels",
+				"50": "Report back to Guido"
+			}
 		},
 		"072B659C": {
 			"editor_id": "FOLON_FQFifth101",
-			"name": "Painting the Town Black"
+			"name": "Painting the Town Black",
+			"objectives": {
+				"10": "Speak to Guido",
+				"20": "Put up Guido's Propaganda",
+				"21": "<Optional> Speak to Lily",
+				"30": "Tell Guido of your Success"
+			}
 		},
 		"0730FCF0": {
 			"editor_id": "FOLON_KOFifth",
@@ -134030,7 +134939,13 @@
 		},
 		"073121E7": {
 			"editor_id": "FOLON_LQLondon109",
-			"name": "Barrow Boy"
+			"name": "Barrow Boy",
+			"objectives": {
+				"5": "Listen to Nick's pitch",
+				"10": "Help out Nick",
+				"20": "Find the lost cargo",
+				"30": "Return the cargo to Nick"
+			}
 		},
 		"0730159C": {
 			"editor_id": "Folon_SQWestminster107Post",
@@ -134041,7 +134956,27 @@
 		},
 		"072B5C7C": {
 			"editor_id": "FOLON_FQRoundels103a",
-			"name": "Fair is Foul"
+			"name": "Fair is Foul",
+			"objectives": {
+				"10": "Speak to Dennis",
+				"20": "Meet Dennis at the Oberon",
+				"30": "Find, buy or make 3 Calmex",
+				"40": "Deliver the Calmex to Dennis and Joan at the Shoppe",
+				"50": "Get Rosie's roundel",
+				"55": "Get Guy's roundel",
+				"60": "Return Rosie and Guy's roundels to Dennis",
+				"70": "Speak to Patrick Smiths about Manchester Mike",
+				"80": "Fight Patrick Smiths",
+				"90": "Kill Patrick Smiths",
+				"100": "Return to Dennis",
+				"110": "Speak to Roger Moon",
+				"120": "Kill Roger Moon",
+				"130": "Return to Dennis",
+				"140": "Find Joan at the Oberon",
+				"150": "Meet Dennis on Birnham Drive",
+				"160": "Defeat Manchester Mike and his allies",
+				"170": "Defeat Dennis Blandford and his allies"
+			}
 		},
 		"07319F63": {
 			"editor_id": "FOLON_KORoundels",
@@ -134049,7 +134984,17 @@
 		},
 		"072AE49E": {
 			"editor_id": "FOLON_GW103",
-			"name": "Welcome to the Vagabonds"
+			"name": "Welcome to the Vagabonds",
+			"objectives": {
+				"10": "Return to Swan & Mitre",
+				"20": "Speak with Nelson",
+				"25": "(Optional) Ask lieutenants for supplies",
+				"26": "(Optional) Bring Winston some Gin Cocktail",
+				"27": "(Optional) Bring Johnny a hymn book",
+				"28": "(Optional) Bring Anthony 4 pieces of lead",
+				"30": "Get a lapel pin from an IODS enforcer captain",
+				"40": "Show the lapel pin to Gaunt"
+			}
 		},
 		"072B4581": {
 			"editor_id": "FOLON_PostGW201Conv"
@@ -134064,11 +135009,24 @@
 		},
 		"072AE4A1": {
 			"editor_id": "FOLON_GW104",
-			"name": "Direct Action"
+			"name": "Direct Action",
+			"objectives": {
+				"10": "Follow Gaunt",
+				"20": "Complete the lieutenants' tasks"
+			}
 		},
 		"072B6598": {
 			"editor_id": "FOLON_GW205a",
-			"name": "Isle of Dogs"
+			"name": "Isle of Dogs",
+			"objectives": {
+				"10": "Use Black's radio",
+				"20": "Loot Black's gun",
+				"30": "Meet Gaunt outside",
+				"40": "Help Johnny",
+				"50": "Help Winston",
+				"60": "Help Anthony",
+				"70": "Return to the square"
+			}
 		},
 		"072B84C9": {
 			"editor_id": "FOLON_GW202",
@@ -134076,7 +135034,27 @@
 		},
 		"072BCEF4": {
 			"editor_id": "FOLON_LQVagabonds101",
-			"name": "Memories of Syd"
+			"name": "Memories of Syd",
+			"objectives": {
+				"10": "Speak with Syd",
+				"19": "Wait for Syd to finish writing",
+				"20": "Check in with Syd",
+				"29": "Wait for Syd to finish writing",
+				"30": "Check in with Syd",
+				"39": "Wait for Syd to finish writing",
+				"40": "Check in with Syd",
+				"49": "Wait for Syd to finish writing",
+				"50": "Check in with Syd",
+				"59": "Wait for Syd to finish writing",
+				"60": "Check in with Syd",
+				"69": "Wait for Syd to finish writing",
+				"70": "Check in with Syd",
+				"74": "Wait for Syd to finish writing",
+				"75": "Talk to the Vagabond",
+				"80": "Check the back alley for Syd",
+				"85": "Speak to Gaunt",
+				"90": "Find Syd"
+			}
 		},
 		"072BCEF1": {
 			"editor_id": "FOLON_MQWild303",
@@ -134120,7 +135098,24 @@
 		},
 		"072AEA9C": {
 			"editor_id": "FOLON_SQEastminster104",
-			"name": "It Rises In The East"
+			"name": "It Rises In The East",
+			"objectives": {
+				"10": "Speak to Toby about Eastminster leadership",
+				"20": "Talk to Octavia Holland about the ballots.",
+				"30": "Find the ballots at City Hall in Southwark.",
+				"40": "Return the ballots to Toby.",
+				"50": "Get a majority of the ballots signed by Eastminster residents (<global=FOLON_SQEastminster104counter01>/10).",
+				"60": "Kill the Hooligans at Somerset House.",
+				"70": "Speak to Marley about the lost shipment, OR steal the shipment.",
+				"80": "Report back to Ms. Bruna.",
+				"90": "Reconvene with Meghna.",
+				"100": "Rendezvous with Toby.",
+				"110": "Attend Toby's speech.",
+				"120": "Speak to Toby.",
+				"130": "Recruit candidates for the Good Samaritans (<global=FOLON_SQEastminster104counter02>/5).",
+				"135": "Speak to Stacy",
+				"140": "Speak to Toby."
+			}
 		},
 		"072BDCC8": {
 			"editor_id": "FOLON_GMEastminster",
@@ -134128,26 +135123,94 @@
 		},
 		"0732B326": {
 			"editor_id": "FOLON_SQLondon101",
-			"name": "Meet and Greet"
+			"name": "Meet and Greet",
+			"objectives": {
+				"10": "Meet the Trafalgar Square Greeter"
+			}
 		},
 		"072DF799": {
 			"editor_id": "Folon_GMUniqueTraders"
 		},
 		"072ACDFF": {
 			"editor_id": "FOLON_SQEastminster102",
-			"name": "It Must Be Love"
+			"name": "It Must Be Love",
+			"objectives": {
+				"1": "Ask about helping Eastminster",
+				"10": "Bring love to Eastminster",
+				"30": "Get a Copy of the Hussite Wars",
+				"40": "Give Charlie the Hussite Wars",
+				"49": "Greet Trout",
+				"50": "Get a deck of cards",
+				"60": "Give Trout the deck of cards",
+				"70": "Talk to Gorden",
+				"80": "Talk to Abigail",
+				"90": "Tell Gorden the News",
+				"100": "Return to Toby"
+			}
 		},
 		"072B5F97": {
 			"editor_id": "FOLON_MQFifth301",
-			"name": "Good Samaritan"
+			"name": "Good Samaritan",
+			"objectives": {
+				"5": "Speak to Victor Schmidt",
+				"10": "Speak to Braiden Knight in Eastminster",
+				"20": "Listen to Evelyn Williams' Issue",
+				"30": "Convince Darius to leave the gang",
+				"35": "(Optional) Question Evelyn about why Darius wants this life",
+				"37": "(Optional) Speak with the Isle of Dogs syndicate about Darius' father",
+				"38": "(Optional) Find Rupert's Journal",
+				"39": "Confront Darius",
+				"40": "Tell Evelyn of your success",
+				"41": "Help Caleb Wood",
+				"56": "Report back to Braiden Knight",
+				"57": "Recruit Giovanni",
+				"58": "Take Giovanni to Braiden Knight",
+				"59": "Watch the Recruitment",
+				"60": "Defend Braiden Knight",
+				"61": "Deal with Giovanni",
+				"65": "Speak to Braiden Knight"
+			}
 		},
 		"072AEAA9": {
 			"editor_id": "FOLON_SQEastminster106",
-			"name": "Answers At Last?"
+			"name": "Answers At Last?",
+			"objectives": {
+				"10": "Acquire the Crackle and Pop Special",
+				"11": "Acquire ingredients for Sybil",
+				"12": "(Optional) Get Sybil sober",
+				"20": "Deliver the Crackle and Pop Special to Sybil",
+				"60": "Deliver ingredients to Sybil ",
+				"70": "Report on Sybil's sobriety to Laurence"
+			}
 		},
 		"072BA80D": {
 			"editor_id": "FOLON_MQCamelot302",
-			"name": "Every Breath You Take"
+			"name": "Every Breath You Take",
+			"objectives": {
+				"10": "Speak to Percival in his office",
+				"20": "Speak to the tribal leader in Brickton",
+				"30": "(Optional) Return to Chief Roach",
+				"40": "Poison the rations supplies with laxatives",
+				"50": "Shut down the generator powering the turrets",
+				"60": "Start some rumours about Lieutenant Doyle",
+				"70": "Return to Chief Roach",
+				"80": "(Optional) Return to Chief Roach",
+				"90": "Draw anti-Sneed graffiti around the outpost",
+				"100": "Set fire to cow manure to stink up the outpost",
+				"110": "Start some rumours about Brigadier Sneed",
+				"120": "Return to Chief Roach",
+				"130": "Witness Major Sneed's arrival",
+				"135": "Speak to Laura",
+				"140": "Speak to Chief Roach",
+				"150": "Hold up Sneed's wagon",
+				"170": "Fight the guards",
+				"210": "Take the contents of the wagon",
+				"220": "Break the news to Brigadier Sneed",
+				"230": "Wait for the Tommies to leave",
+				"240": "Return to Chief Roach",
+				"250": "Return to Percival",
+				"270": "Speak to Merlin"
+			}
 		},
 		"0730FCF1": {
 			"editor_id": "FOLON_KOCamelot",
@@ -134155,7 +135218,17 @@
 		},
 		"072B6592": {
 			"editor_id": "FOLON_LQLambeth103",
-			"name": "Three's a Crowd"
+			"name": "Three's a Crowd",
+			"objectives": {
+				"10": "(Optional) Deliver Pvt Baker's orders to Pvt Fox",
+				"11": "(Optional) Speak to Lieutenant Dunn",
+				"15": "(Optional) Deliver Lieutenant Dunn's letter to Pvt Fox",
+				"16": "(Optional) Tell Pvt Baker about the letter",
+				"25": "Take the letter to Pvt Fox",
+				"30": "Return to Pvt Baker",
+				"31": "Return to Lieutenant Dunn",
+				"32": "Speak to Lieutenant Dunn"
+			}
 		},
 		"0731C33A": {
 			"editor_id": "FOLON_LQLambeth103Post",
@@ -134163,15 +135236,34 @@
 		},
 		"072B658F": {
 			"editor_id": "FOLON_SQCamden103",
-			"name": "Tea for Tomb"
+			"name": "Tea for Tomb",
+			"objectives": {
+				"15": "(Optional) Talk to Annalyn Lee",
+				"20": "Go to Deptford bus garage",
+				"30": "Gather five special Rad Nettles",
+				"33": "(Optional) Distract Fluffy",
+				"37": "(Optional) Kill Fluffy",
+				"39": "(Optional) Tell Rosie about the Wedding Band",
+				"40": "Return to Rosie Lee"
+			}
 		},
 		"072A74BC": {
 			"editor_id": "FOLON_LQCamden103",
-			"name": "Artefact for Peru"
+			"name": "Artefact for Peru",
+			"objectives": {
+				"10": "Retrieve the Peruvian Artefact",
+				"20": "Return to Peru"
+			}
 		},
 		"072B6591": {
 			"editor_id": "FOLON_LQCamden104",
-			"name": "Don't set the world on fire"
+			"name": "Don't set the world on fire",
+			"objectives": {
+				"10": "Get the Sheet Music",
+				"20": "Return to Audra",
+				"30": "Return in 3 days after Audra has practiced",
+				"32": "Check in on Audra"
+			}
 		},
 		"072AEA9B": {
 			"editor_id": "FOLON_SQBromley103",
@@ -134179,23 +135271,91 @@
 		},
 		"072C0D89": {
 			"editor_id": "FOLON_SQWestminster101",
-			"name": "Becoming Respectable"
+			"name": "Becoming Respectable",
+			"objectives": {
+				"5": "Talk to Gentry Footman",
+				"10": "Meet Penelope Shah",
+				"20": "Head to Townhouse Auction",
+				"22": "(Optional) Ask Footman for help with auction",
+				"25": "Get ready for an auction",
+				"30": "Buy a house in Westminster",
+				"35": "Return to Penelope Shah",
+				"50": "Visit the Wellington Arch",
+				"51": "Visit Wellington Arch and Listen to the causes",
+				"58": "Return to Penelope Shah",
+				"60": "Choose the Social Club",
+				"61": "The Mugwumps Society: Bring Harry Headger's head to Baroness Robin Bettencourt",
+				"62": "The Aluminium Chapeus: Find pigeon for Earl Wakefield",
+				"63": "The Tea & Garden Club: Read the pre-war gardening catalogue",
+				"66": "The Tea & Garden Club: Return to Madame Stephanie Coates",
+				"67": "The Mugwumps Society: Return to Baroness Robin Bettencourt",
+				"68": "The Aluminium Chapeus: Return to Earl Wakefield",
+				"69": "Return to Penelope Shah",
+				"70": "Visit your new house"
+			}
 		},
 		"072A5DED": {
 			"editor_id": "Folon_LQLambeth104",
-			"name": "Water is Wet"
+			"name": "Water is Wet",
+			"objectives": {
+				"10": "Clear the Collection Points",
+				"20": "Return to Chloe",
+				"30": "Speak with Pope",
+				"40": "Clear the Lower Levels",
+				"41": "Turn the valve",
+				"42": "Turn the valve",
+				"43": "Turn the valve",
+				"50": "Return to Pope",
+				"60": "Turn on the Purifier",
+				"65": "Find a way to open the door",
+				"70": "Speak to Corporal Robinson"
+			}
 		},
 		"072A8FF0": {
 			"editor_id": "FOLON_LQEastminster102",
-			"name": "Trumpet For Edith"
+			"name": "Trumpet For Edith",
+			"objectives": {
+				"10": "Retrieve Edith's trumpet from the sewer",
+				"20": "Return Edith's trumpet"
+			}
 		},
 		"072AEAA4": {
 			"editor_id": "FOLON_FQRoundels102",
-			"name": "Fashion Terrorism"
+			"name": "Fashion Terrorism",
+			"objectives": {
+				"5": "Speak to Patrick",
+				"10": "(Optional) Talk to Milano",
+				"20": "(Optional) Talk to Chanelle",
+				"30": "Retrieve the fabric being delivered to Chanelle",
+				"40": "'Update' the Channelle displays",
+				"45": "(Optional) Convince the shop assistant to take down the display",
+				"50": "Stop Greta from walking in Chanelle's show",
+				"60": "Retrieve the fabric being delivered to Milano",
+				"70": "Remove the display in Casa di Milano",
+				"75": "(Optional) Convince the shop assistant to take down the display",
+				"80": "Stop Greta from walking in Milano's show",
+				"90": "Return to Milano",
+				"100": "Return to Chanelle",
+				"110": "Speak to Patrick wearing the Battle Coat",
+				"120": "Meet Patrick at the Shoppe",
+				"130": "Speak with Prince Pete Davis",
+				"140": "Speak to Patrick"
+			}
 		},
 		"072A9B0D": {
 			"editor_id": "FOLON_FQPistols101",
-			"name": "Water Woes"
+			"name": "Water Woes",
+			"objectives": {
+				"10": "Speak to Polly Ester at the water treatment plant",
+				"30": "Investigate the first source of radiation",
+				"31": "Investigate the second source of radiation",
+				"35": "Kill the contaminating commuter",
+				"36": "Kill the contaminating commuter",
+				"40": "Report your findings to Polly Ester",
+				"50": "Speak to Jesse Gray",
+				"60": "Return to Polly Ester",
+				"70": "Report back to Palmira Romero"
+			}
 		},
 		"07319F66": {
 			"editor_id": "FOLON_KOPistols",
@@ -134211,27 +135371,105 @@
 		},
 		"072BA80C": {
 			"editor_id": "FOLON_MQCamelot301",
-			"name": "Green and Pleasant Land"
+			"name": "Green and Pleasant Land",
+			"objectives": {
+				"10": "Speak to Arthur",
+				"20": "Get both sides of the story (<Global=FOLON_MQCamelot301_Counter01>/2)",
+				"30": "(Optional) Question members of the Bailey family and get a confession",
+				"35": "(Optional) Challenge John Fletcher to a duel",
+				"40": "(Optional) Question members of the Fletcher family and get a confession",
+				"50": "Investigate the scene of the fire",
+				"60": "Follow the blood trail",
+				"70": "Find the person injured during the fire",
+				"80": "Speak to the boy",
+				"90": "Investigate the shack",
+				"120": "Read the letter",
+				"130": "(Optional) Check the letter's authenticity",
+				"140": "(Optional) Question Ryan further about his injury",
+				"150": "(Optional) Find out the truth of Ryan's injury",
+				"200": "Return to Arthur when you're ready to make an accusation"
+			}
 		},
 		"072BF524": {
 			"editor_id": "FOLON_FQGlobe101",
-			"name": "All the World's a Stage"
+			"name": "All the World's a Stage",
+			"objectives": {
+				"10": "Talk to Jeanine, Kelpe's secretary",
+				"21": "Find a copy of Pericles near the Thames",
+				"22": "Find a copy of King John in Camden",
+				"23": "Find a copy of Troilus and Cressida in Islington",
+				"24": "Find a copy of Richard II at the Theatre Royal",
+				"25": "Find a copy of Henry VII at the Imperial War Museum",
+				"26": "Find a copy of Cymbeline at Westminster Abbey",
+				"27": "Find a copy of Timon of Athens in Brixton",
+				"28": "Find a copy of Two Gentlemen of Verona in Bromley",
+				"29": "(Optional) Get Safe Key from Amber",
+				"30": "Return to Kelpe with the plays",
+				"40": "Talk to Jeanine about The History of Cardenio",
+				"45": "Tell Kelpe that the History of Cardenio is lost",
+				"50": "Find a copy of The History of Cardenio in Greenwich",
+				"60": "Confront Jeanine about her lie",
+				"70": "Tell Kelpe that Jeanine lied"
+			}
 		},
 		"072AEAA5": {
 			"editor_id": "FOLON_FQRoundels103b",
-			"name": "Choose Life"
+			"name": "Choose Life",
+			"objectives": {
+				"10": "Speak to Manchester Mike",
+				"20": "Meet Manchester Mike at Maab House",
+				"30": "Secure the safehouse",
+				"40": "Fix the fridge",
+				"50": "Fix the bed",
+				"60": "Replace the doors",
+				"70": "Clean up the gore",
+				"80": "Return to Manchester Mike",
+				"90": "Kill the Hooligans",
+				"100": "Meet Manchester Mike at the safehouse",
+				"110": "Find, buy or make 3 antibiotics and 1 Morph-X",
+				"120": "Deliver the chems to Manchester Mike",
+				"130": "Kill Dennis",
+				"140": "Retrieve the Sober from Manchester Mike's safe",
+				"150": "Give Prince Pete the Sober"
+			}
 		},
 		"0728C3D1": {
 			"editor_id": "FOLON_LQCamden102",
-			"name": "Anarchy in the UK"
+			"name": "Anarchy in the UK",
+			"objectives": {
+				"10": "Find Anarchy",
+				"20": "Return to Nancy"
+			}
 		},
 		"072B5F98": {
 			"editor_id": "FOLON_LQEastminster101",
-			"name": "Professional Relapse"
+			"name": "Professional Relapse",
+			"objectives": {
+				"20": "Treat Ms Davison",
+				"25": "Treat Mr Breen",
+				"30": "Treat Sally Evans",
+				"40": "Tell Caleb Wood about the patients",
+				"50": "Convince the Doctor to Return",
+				"55": "Return to Caleb Wood"
+			}
 		},
 		"072BA80F": {
 			"editor_id": "FOLON_MQCamelot306",
-			"name": "Knight of the Cart"
+			"name": "Knight of the Cart",
+			"objectives": {
+				"10": "Meet Lancelot at the tavern",
+				"20": "Interrogate injured Tommy soldiers",
+				"100": "Get treatment for Lieutenant Tinkler",
+				"110": "Wait for Kay to treat Lieutenant Tinkler",
+				"140": "Speak to Lieutenant Tinkler",
+				"150": "Track down the Post Boxer",
+				"160": "Defeat the Post Boxer",
+				"170": "Search the Post Boxer for clues",
+				"180": "Return to Lancelot",
+				"200": "Defeat Lancelot",
+				"210": "Wait to see who pays up",
+				"220": "Speak to the gambler"
+			}
 		},
 		"072C56AE": {
 			"editor_id": "FOLON_SQWestminster104",
@@ -134239,7 +135477,16 @@
 		},
 		"072BA813": {
 			"editor_id": "FOLON_LQCity103",
-			"name": "The Firm"
+			"name": "The Firm",
+			"objectives": {
+				"10": "Talk to Shaun",
+				"20": "Kill Shaun",
+				"30": "Kill Cambridge",
+				"35": "Kill Farnborough",
+				"40": "Kill Leeds",
+				"100": "Talk to Cambridge",
+				"200": "Talk to Shaun"
+			}
 		},
 		"073071D5": {
 			"editor_id": "FOLON_LQCity103Post",
@@ -134247,19 +135494,52 @@
 		},
 		"072C0D8A": {
 			"editor_id": "FOLON_SQSouthwark102",
-			"name": "Food For Thought"
+			"name": "Food For Thought",
+			"objectives": {
+				"1": "Talk to the Ferryman",
+				"2": "Find clues to the missing Thamesfolk",
+				"3": "Follow the trail",
+				"4": "Talk to the Factory Guard",
+				"17": "Ask Factory Workers About Blood Trail",
+				"19": "Find a way into the Restricted Zone",
+				"20": "Defeat the Snatchers",
+				"21": "Investigate the area",
+				"23": "Convince Cal to tell you what's going on",
+				"24": "Defeat Cal",
+				"25": "Find evidence",
+				"27": "(Optional) Stop the operation",
+				"29": "Speak to the factory boss",
+				"30": "Talk to the Ferryman",
+				"31": "Talk to the Ferryman"
+			}
 		},
 		"072B658C": {
 			"editor_id": "FOLON_LQWestminster101",
-			"name": "Sisterly Closure"
+			"name": "Sisterly Closure",
+			"objectives": {
+				"10": "Tell Veronica about the Note"
+			}
 		},
 		"072AA434": {
 			"editor_id": "FOLON_LQWestminster107",
-			"name": "Meowing up the Wrong Tree"
+			"name": "Meowing up the Wrong Tree",
+			"objectives": {
+				"5": "Discover the source of the noise",
+				"10": "Talk the cat down",
+				"11": "Shake the tree",
+				"12": "Retrieve a ladder",
+				"15": "Put down the ladder",
+				"20": "Talk to Dot"
+			}
 		},
 		"072BC9D0": {
 			"editor_id": "FOLON_SQEastminster101",
-			"name": "Gone Gourd"
+			"name": "Gone Gourd",
+			"objectives": {
+				"10": "Help at White Farm",
+				"20": "Ask around",
+				"30": "Report back to Frederick"
+			}
 		},
 		"072B84CC": {
 			"editor_id": "FOLON_GMPistols",
@@ -134267,25 +135547,45 @@
 		},
 		"07309BC3": {
 			"editor_id": "FOLON_LQCamden105",
-			"name": "Lost Marbles"
+			"name": "Lost Marbles",
+			"objectives": {
+				"10": "Find Krazy Kaylah's lost marbles",
+				"20": "Return Krazy Kaylah's lost marbles"
+			}
 		},
 		"072AE4A0": {
 			"editor_id": "FOLON_ConvPostGW102"
 		},
 		"072B6596": {
 			"editor_id": "FOLON_GW206b",
-			"name": "Shoot the Messengers"
+			"name": "Shoot the Messengers",
+			"objectives": {
+				"10": "Talk to Black",
+				"20": "Clear out Vagabonds' cache points",
+				"30": "Return to Black"
+			}
 		},
 		"072AA43D": {
 			"editor_id": "FOLON_LQEastminster104",
-			"name": "Syringe for Alanah"
+			"name": "Syringe for Alanah",
+			"objectives": {
+				"10": "Investigate Alanah's parent's Footlocker",
+				"20": " Return to Alanah"
+			}
 		},
 		"072ACE00": {
 			"editor_id": "FOLON_FQMiller102",
-			"name": "It's Coming Home"
+			"name": "It's Coming Home",
+			"objectives": {
+				"10": "Retrieve the Football for rat piss",
+				"20": "Return to Rat Piss with the Football"
+			}
 		},
 		"072DC2E2": {
-			"editor_id": "Folon_PostFqMiller102Conv"
+			"editor_id": "Folon_PostFqMiller102Conv",
+			"objectives": {
+				"0": "Find Footballs for Rat piss"
+			}
 		},
 		"072CD195": {
 			"editor_id": "FOLON_MQWild305",
@@ -134293,11 +135593,35 @@
 		},
 		"072C24CB": {
 			"editor_id": "FOLON_COM_MadJackQuest",
-			"name": "Mad Jack Unchained"
+			"name": "Mad Jack Unchained",
+			"objectives": {
+				"10": "Meet Mad Jack at the Pilgrim",
+				"20": "Kill \"Professor\" James Goodrich",
+				"30": "Kill Jonah \"The Gent\"",
+				"40": "Kill Myra Lane",
+				"50": "Kill the Meat Merchant",
+				"55": "Find evidence that Todd Wells is the Meat Merchant (Optional)",
+				"60": "Talk to Mad Jack",
+				"70": "Head to The Ross Home For Orphaned Boys",
+				"80": "Find Dr Ross",
+				"90": "Kill Dr. Ainsley Ross",
+				"100": "Talk to Mad Jack"
+			}
 		},
 		"072BF525": {
 			"editor_id": "FOLON_FQSanctuary101",
-			"name": "Inquire About a Choir"
+			"name": "Inquire About a Choir",
+			"objectives": {
+				"10": "Speak to Reverend Francis",
+				"20": "Ask where to find the hymnals",
+				"22": "Collect the hymnal at the Police Station",
+				"24": "Collect the hymnal at Bromley College",
+				"26": "Collect the hymnal at the Museum",
+				"28": "Collect the hymnal at the airport",
+				"30": "Return to Reverend Francis",
+				"35": "Check on the choir in a week",
+				"37": "Return to the choir"
+			}
 		},
 		"073204C5": {
 			"editor_id": "Folon_LQGreenwich103Post",
@@ -134305,7 +135629,11 @@
 		},
 		"072ACE02": {
 			"editor_id": "FOLON_SQIslington101",
-			"name": "Pictures of Walls"
+			"name": "Pictures of Walls",
+			"objectives": {
+				"10": "Find and photograph graffiti pieces (<Global=FOLON_GLOB_SQIslington101_PhotoCount>/20)",
+				"250": "Return to Frobisher"
+			}
 		},
 		"072B84CB": {
 			"editor_id": "FOLON_GMBrickton",
@@ -134313,27 +135641,122 @@
 		},
 		"072B84D0": {
 			"editor_id": "FOLON_MQ202",
-			"name": "Hear Ye, Hear Ye"
+			"name": "Hear Ye, Hear Ye",
+			"objectives": {
+				"1": "Get your petition signed by the leader of Camden",
+				"2": "Get your petition signed by the leader of Hackney",
+				"3": "Get your petition signed by the leader of Lambeth",
+				"4": "Get your petition signed by the leader of Islington",
+				"5": "(Optional) Talk to Clifford on Bridge Street",
+				"80": "(Backup) Find a document with the leader of Camden's signature",
+				"85": "(Optional) Forge the leader of Camden's signature",
+				"180": "(Backup) Find a document with the leader of Hackney's signature",
+				"185": "(Optional) Forge the leader of Hackney's signature",
+				"280": "(Backup) Find a document with the leader of Lambeth's signature",
+				"285": "(Optional) Forge the leader of Lambeth's signature",
+				"380": "(Backup) Find a document with the leader of Islington's signature",
+				"385": "(Optional) Forge the leader of Islington's signature",
+				"500": "Bring the petition to parliament",
+				"550": "Take the \"Discreet entrance\""
+			}
 		},
 		"072AA440": {
 			"editor_id": "FOLON_LQLewisham103",
-			"name": "Crown Mail"
+			"name": "Crown Mail",
+			"objectives": {
+				"10": "Deliver the letter",
+				"20": "Check on Roger in a few days",
+				"30": "Speak to Rodger"
+			}
 		},
 		"072B84CE": {
 			"editor_id": "FOLON_MQFifth303",
-			"name": "Of Mutants and Men"
+			"name": "Of Mutants and Men",
+			"objectives": {
+				"5": "Talk to John Smith",
+				"10": "Report to Victor Schmidt",
+				"20": "Speak to Horatio Whitehouse",
+				"30": "Investigate Thameshaven",
+				"40": "Talk to Dr. Alan Webb",
+				"50": "Find out about Tunnel Cough immunity in Thameshaven",
+				"60": "Talk to Margery",
+				"64": "Convince Margery to go to Cable Street",
+				"70": "Talk to Horatio",
+				"80": "Inform Dr. Webb about his Granddaughter",
+				"82": "Take Dr. Webb back to the 5th Column",
+				"83": "Discover what is going on"
+			}
 		},
 		"072BA808": {
 			"editor_id": "FOLON_MQFifth307",
-			"name": "A Roar in the Waves"
+			"name": "A Roar in the Waves",
+			"objectives": {
+				"10": "Speak to Eve",
+				"20": "Meet Horatio at the Broadcasting House",
+				"30": "Find the passcode in the Broadcasting House",
+				"40": "Speak to Horatio",
+				"50": "Reinforce the LT Tower",
+				"55": "Report to the Tommy Officer",
+				"56": "Take over the LT Tower",
+				"57": "Deal with the Angel Operative",
+				"60": "Rendezvous with Eve",
+				"70": "Ascend",
+				"71": "Clear the 1st Floor",
+				"72": "Restart the Lift",
+				"73": "Get on the Lift",
+				"76": "Clear the 2nd Floor",
+				"77": "Restart the Lift",
+				"78": "Get on the Lift",
+				"80": "Find a way to the Top",
+				"90": "Speak to Bradley Forthworth",
+				"100": "Insert the holotape into the mainframe",
+				"110": "Speak with Eve",
+				"120": "Descend",
+				"140": "Debrief with Eve"
+			}
 		},
 		"072BA818": {
 			"editor_id": "FOLON_MQFifth304",
-			"name": "Mountain Out Of A Molehill"
+			"name": "Mountain Out Of A Molehill",
+			"objectives": {
+				"10": "Speak to Eve in her office",
+				"20": "Speak to Zach Lloyd",
+				"30": "Wait at the Drop-Off Point",
+				"40": "Defeat the Ambushers",
+				"50": "Report Back to Zach Lloyd",
+				"60": "Make contact with Jeff Mutt",
+				"70": "Clear out the church in Wandsworth",
+				"80": "Return to Jeff Mutt",
+				"90": "Return to the church",
+				"100": "Wait to ambush the Knights",
+				"101": "(Optional) Place a trap at the church door",
+				"110": "Take down Lancelot and kill his allies",
+				"120": "Let Horatio question Lancelot",
+				"130": "Speak to Horatio",
+				"140": "(Optional) Search Lancelot's room",
+				"150": "(Optional) Confront Rhys Clarke",
+				"151": "Return to Zach Lloyd",
+				"160": "Report to Eve"
+			}
 		},
 		"0731101F": {
 			"editor_id": "FOLON_SQWestminster109",
-			"name": "NuSkin, New You"
+			"name": "NuSkin, New You",
+			"objectives": {
+				"10": "Speak to Miss Crake",
+				"11": "Make an appointment for a NuSkin treatment",
+				"20": "Speak to Nurse Peggy",
+				"30": "Enter the Restricted Section of NuSkin",
+				"35": "Speak to the Child",
+				"37": "(Optional) Find out what happened to Renara",
+				"40": "Find out what is happening at NuSkin",
+				"41": "Access Miss Crake's Terminal",
+				"45": "Tell Nurse Peggy of your findings",
+				"50": "Speak to Miss Crake",
+				"60": "Kill Miss Crake and eliminate the Robots",
+				"70": "Speak to Caspian",
+				"80": "Speak to the people of Eastminster"
+			}
 		},
 		"07311022": {
 			"editor_id": "Folon_SQWestminster109Post",
@@ -134341,19 +135764,46 @@
 		},
 		"072AA43C": {
 			"editor_id": "FOLON_LQLewisham104",
-			"name": "Love it or Hate it"
+			"name": "Love it or Hate it",
+			"objectives": {
+				"10": "Retrieve the Warmite shipment",
+				"20": "Return the Warmite shipment"
+			}
 		},
 		"07286D66": {
 			"editor_id": "FOLON_LQWandsworth101",
-			"name": "Eggs for Egbert"
+			"name": "Eggs for Egbert",
+			"objectives": {
+				"10": "Bring 3 Mittenlurk Eggs to Egbert",
+				"20": "Check in on Egbert",
+				"30": "Bring Shelly Mystery Meat Dog Food",
+				"35": "Speak to the Knight",
+				"40": "Search for Young Girl near the pond",
+				"50": "Kill Shelly",
+				"55": "Release Shelly",
+				"60": "Return to Knight with the news"
+			}
 		},
 		"072AD97B": {
 			"editor_id": "FOLON_LQHackney102",
-			"name": "Supplies for Tim the Roundel"
+			"name": "Supplies for Tim the Roundel",
+			"objectives": {
+				"10": "Retrieve Tim the Roundel's supplies from the flooded areas of Hackney",
+				"20": "Return Tim the Roundel's supplies"
+			}
 		},
 		"072C0D8B": {
 			"editor_id": "FOLON_SQEastminster105",
-			"name": "Four Star Daydream"
+			"name": "Four Star Daydream",
+			"objectives": {
+				"10": "Meet Giovanni at the pub",
+				"20": "Find the supplies in the lorry",
+				"30": "Search St Pancras for maintenance records",
+				"40": "Find the ticket machine at Euston Underground Station",
+				"45": "Put the ink in the ticket machine",
+				"50": "Print the tickets",
+				"60": "Return to Giovanni"
+			}
 		},
 		"072E380C": {
 			"editor_id": "Folon_REAssaultKMK_RR102",
@@ -134361,19 +135811,40 @@
 		},
 		"072AA438": {
 			"editor_id": "FOLON_SQCroydon102",
-			"name": "Lunatics Have Taken Over The Asylum"
+			"name": "Lunatics Have Taken Over The Asylum",
+			"objectives": {
+				"200": "Rescue any caravan survivors",
+				"300": "Deal with Section",
+				"400": "Report back to Noah"
+			}
 		},
 		"072ACE01": {
 			"editor_id": "FOLON_SQCroydon101",
-			"name": "Where Women Glow and Men Plunder"
+			"name": "Where Women Glow and Men Plunder",
+			"objectives": {
+				"10": "Clear the Radar Station",
+				"20": "Return to Noah"
+			}
 		},
 		"071F1179": {
 			"editor_id": "FOLON_MQ204",
-			"name": "The Placebo Effect"
+			"name": "The Placebo Effect",
+			"objectives": {
+				"10": "Go to the Science Museum",
+				"20": "Find Mr. X",
+				"30": "Confront Mr. X",
+				"40": "(Optional) Destroy the Angel research before you leave"
+			}
 		},
 		"072AEAA0": {
 			"editor_id": "FOLON_FQDogs101",
-			"name": "It's a Barrel, it rolls"
+			"name": "It's a Barrel, it rolls",
+			"objectives": {
+				"10": "Pick up the Barrel",
+				"20": "Deliver the Barrel",
+				"25": "Barrel",
+				"30": "Report Back to Ayesha"
+			}
 		},
 		"07319F65": {
 			"editor_id": "FOLON_KOSyndicate",
@@ -134385,15 +135856,26 @@
 		},
 		"0729C3F3": {
 			"editor_id": "FOLON_LQGreenwich101",
-			"name": "Weapon for the Crazy Hermit Andy"
+			"name": "Weapon for the Crazy Hermit Andy",
+			"objectives": {
+				"10": "Get the Zetan Blaster",
+				"20": "Return the Zetan Blaster"
+			}
 		},
 		"0730C94E": {
 			"editor_id": "FOLON_LQCroydon103",
-			"name": "Prospero's Book"
+			"name": "Prospero's Book",
+			"objectives": {
+				"10": "Find Prospero's Book",
+				"20": "Return Prospero's Book to Reece"
+			}
 		},
 		"0730C94F": {
 			"editor_id": "FOLON_LQCroydon102",
-			"name": "Speak to the leader of the Croydonians"
+			"name": "Speak to the leader of the Croydonians",
+			"objectives": {
+				"10": "(Optional) Speak to the leader of the Croydonians"
+			}
 		},
 		"072A7C42": {
 			"editor_id": "Folon_DialogueGenericShakespeare",
@@ -134401,42 +135883,115 @@
 		},
 		"0729C3F2": {
 			"editor_id": "Folon_LQWestminster104",
-			"name": "Maintenance Person"
+			"name": "Maintenance Person",
+			"objectives": {
+				"10": "Open the door",
+				"15": "Explore the room",
+				"20": "Speak to the Maintenance Man"
+			}
 		},
 		"072AA43F": {
 			"editor_id": "FOLON_LQHamlets103",
-			"name": "Five Finger Discount"
+			"name": "Five Finger Discount",
+			"objectives": {
+				"10": "Speak with Sumner",
+				"12": "Steal the item for Sumner",
+				"15": "Return to Sumner",
+				"20": "Speak with Rhys",
+				"22": "Steal the item for Rhys",
+				"25": "Return to Rhys",
+				"30": "Speak with Braiden",
+				"32": "Steal the item for Braiden",
+				"35": "Return to Braiden",
+				"40": "Speak with the Bartender",
+				"42": "Steal the item for Bartender",
+				"45": "Return to Bartender",
+				"50": "Speak with Jennifer",
+				"52": "Steal the item for Jennifer",
+				"55": "Return to Jennifer",
+				"65": "Return to McFadden"
+			}
 		},
 		"072B659E": {
 			"editor_id": "FOLON_MQCamelot300",
-			"name": "Camelot: Sword in Hand"
+			"name": "Camelot: Sword in Hand",
+			"objectives": {
+				"10": "Investigate Camelot after the tournament",
+				"20": "Find Arthur",
+				"30": "Watch the quarrelling knights",
+				"40": "Speak to Arthur"
+			}
 		},
 		"072728BB": {
-			"editor_id": "FOLON_DogmeatQuest"
+			"editor_id": "FOLON_DogmeatQuest",
+			"objectives": {
+				"0": "Dogmeat",
+				"100": "Protect the dog",
+				"120": "Speak to the guard",
+				"130": "Greet Churchill"
+			}
 		},
 		"072B65A0": {
 			"editor_id": "FOLON_LQWestminster103",
-			"name": "Behind the Bonnet"
+			"name": "Behind the Bonnet",
+			"objectives": {
+				"10": "Talk to Car Salesman",
+				"20": "Check Car",
+				"30": "Confront Moe"
+			}
 		},
 		"072A7611": {
 			"editor_id": "FOLON_LQWestminster105",
-			"name": "Engagement Ring For Elliot"
+			"name": "Engagement Ring For Elliot",
+			"objectives": {
+				"10": "Retrieve Elliot's engagement ring from the scrapyard ",
+				"20": "Return Elliot's engagement ring"
+			}
 		},
 		"072B4044": {
 			"editor_id": "FOLON_SQCamden102",
-			"name": "A Taste of Gold"
+			"name": "A Taste of Gold",
+			"objectives": {
+				"10": "Search St Pancras International for the cask",
+				"20": "Search Golden Elm for the cask",
+				"30": "Search Eastminster Pindar for the cask",
+				"40": "Search Coach House Pub for the cask",
+				"50": "Search Four Leaf Pub for the cask",
+				"60": "Deliver cask to Zack",
+				"65": "Place the cask",
+				"66": "Piss in the cask",
+				"70": "Serve the Abhainn Oir",
+				"80": "Get payment from Zack"
+			}
 		},
 		"072AEAA6": {
 			"editor_id": "FOLON_LQCity101",
-			"name": "The Old One-Two"
+			"name": "The Old One-Two",
+			"objectives": {
+				"1": "Investigate the fight",
+				"10": "Get the backpack",
+				"15": "Get the herbs",
+				"20": "Return to Sean with the medical items"
+			}
 		},
 		"072BDCC7": {
 			"editor_id": "FOLON_COM_MadJackRecruitment",
-			"name": "A Minute With Mad Jack"
+			"name": "A Minute With Mad Jack",
+			"objectives": {
+				"10": "Go to the basement of the Pilgrim Pub",
+				"20": "Survive a minute with Mad Jack",
+				"30": "Talk to Mad Jack in his office",
+				"40": "Retrieve your things"
+			}
 		},
 		"072AA442": {
 			"editor_id": "FOLON_LQVagabonds103",
-			"name": "Fixer Upper"
+			"name": "Fixer Upper",
+			"objectives": {
+				"5": "Speak to Jan \"The Screw\"",
+				"10": "Clear out the Bromley Hardware Store",
+				"20": "Return to Jan \"The Screw\""
+			}
 		},
 		"072E383F": {
 			"editor_id": "Folon_RESceneKMK_MS09L",
@@ -134444,15 +135999,34 @@
 		},
 		"072AA433": {
 			"editor_id": "FOLON_SQWestminster102",
-			"name": "Election Night Special"
+			"name": "Election Night Special",
+			"objectives": {
+				"5": "Talk to Bernie",
+				"11": "Defend the election posters",
+				"14": "Put up poster near Lancaster House",
+				"15": "Put up poster in Piccadilly Circus",
+				"16": "Put up poster near the cafe",
+				"17": "Put up poster near Chairman Pub",
+				"18": "Put up poster near Royal Albert Hall",
+				"25": "Return to Bernie",
+				"30": "Listen to the results",
+				"40": "Speak to Bernie"
+			}
 		},
 		"07328BC5": {
 			"editor_id": "FOLON_LQWestminster109",
-			"name": "First Past the Post"
+			"name": "First Past the Post",
+			"objectives": {
+				"10": "Get involved in election season procedures"
+			}
 		},
 		"072AA439": {
 			"editor_id": "FOLON_LQEastminster103",
-			"name": "Skull For Edmure"
+			"name": "Skull For Edmure",
+			"objectives": {
+				"10": "Retrieve the skull for Edmure",
+				"20": "Return the skull to Edmure"
+			}
 		},
 		"072AC4EF": {
 			"editor_id": "FOLON_GMFifth",
@@ -134460,19 +136034,61 @@
 		},
 		"072B84CD": {
 			"editor_id": "FOLON_MQFifth302",
-			"name": "Lesson Plan"
+			"name": "Lesson Plan",
+			"objectives": {
+				"5": "Speak to Victor Schmidt",
+				"10": "Speak to John Smith",
+				"20": "Ask Muirgheal about the books",
+				"30": "Find the British Library",
+				"40": "Find books for Lily in the British Museum",
+				"45": "Deal with the museum's curator",
+				"50": "Return to John Smith",
+				"53": "Leave HQ or Wait for the ruckus to end",
+				"55": "Attend Lily's lesson"
+			}
 		},
 		"072ACDFE": {
 			"editor_id": "FOLON_FQThameshaven103",
-			"name": "Around the Thames in 80 Days"
+			"name": "Around the Thames in 80 Days",
+			"objectives": {
+				"10": "Go to Rotherhithe",
+				"15": "Speak to Hector",
+				"20": "Go to Hardware City",
+				"25": "Go to Limehouse",
+				"30": "Investigate the carnage",
+				"35": "Go to the Blackwall Citadel",
+				"40": "Speak to the Thamesfolk Leader",
+				"41": "Speak to Theo",
+				"42": "Place the Morse Telegraph",
+				"43": "Speak to Theo",
+				"45": "Journey to Vauxhall",
+				"50": "Deal with the Angel operatives",
+				"53": "Find a way to make the Angel operatives leave",
+				"54": "Escape to a safe distance",
+				"55": "Find Nemo",
+				"65": "Return to Jeremy"
+			}
 		},
 		"072AA443": {
 			"editor_id": "FOLON_LQWestminster106",
-			"name": "Bletchley Bombe"
+			"name": "Bletchley Bombe",
+			"objectives": {
+				"5": "Investigate the University",
+				"10": "Decypher mysterious code",
+				"20": "Tell the Professor you've cracked the code",
+				"30": "Unlock Master Terminal",
+				"40": "Read the message on the inner terminal",
+				"50": "Kill the Robots",
+				"60": "Return to the Professor"
+			}
 		},
 		"072AA196": {
 			"editor_id": "FOLON_LQLambeth101",
-			"name": "Torch for Tommy Nightwatchman"
+			"name": "Torch for Tommy Nightwatchman",
+			"objectives": {
+				"10": "Get the torch",
+				"20": "Return to the Nightwatchman"
+			}
 		},
 		"072B84CF": {
 			"editor_id": "FOLON_GMRoundels",
@@ -134480,18 +136096,36 @@
 		},
 		"072AEA9D": {
 			"editor_id": "FOLON_LQLambeth102",
-			"name": "One Fell Swoop"
+			"name": "One Fell Swoop",
+			"objectives": {
+				"10": "Clear out the Hooligan dens",
+				"20": "Return to Corporal Nux",
+				"30": "Kill all of the remaining Hooligans",
+				"40": "Return to Corporal Nux"
+			}
 		},
 		"072F9843": {
 			"editor_id": "FOLON_SQLambeth102Post"
 		},
 		"072A9E8B": {
 			"editor_id": "FOLON_LQWandsworth102",
-			"name": "My Kingdom for a Sword"
+			"name": "My Kingdom for a Sword",
+			"objectives": {
+				"10": "Retrieve the Sword from the Camelot Armoury",
+				"20": "Return Sergeant Neil's Sword"
+			}
 		},
 		"072BA805": {
 			"editor_id": "FOLON_FQThameshaven102",
-			"name": "A Doctor's Orders"
+			"name": "A Doctor's Orders",
+			"objectives": {
+				"5": "Speak to Bob",
+				"10": "Speak to Dr. Webb",
+				"15": "Journey to the Bethlem Royal Hospital",
+				"20": "Locate the stash of medication",
+				"25": "Report in to Dr. Webb",
+				"30": "Return to Bob Clarkson"
+			}
 		},
 		"071B7316": {
 			"editor_id": "FOLON_GMThameshaven",
@@ -134499,22 +136133,55 @@
 		},
 		"072F249E": {
 			"editor_id": "FOLON_LQThameshaven104NOTUSED",
-			"name": "Visit the Ferryman back in Thameshaven"
+			"name": "Visit the Ferryman back in Thameshaven",
+			"objectives": {
+				"10": "Visit the Ferryman back in Thameshaven"
+			}
 		},
 		"072969DF": {
 			"editor_id": "FOLON_GMStPauls",
-			"name": "St Pauls NPC Manager"
+			"name": "St Pauls NPC Manager",
+			"objectives": {
+				"10": "Convince Bishop Whaler to take in Lazarus",
+				"20": "Tell Lazarus he's welcome back at Sanctuary"
+			}
 		},
 		"072BF529": {
 			"editor_id": "FOLON_LQEastminster107",
-			"name": "Fishy Business"
+			"name": "Fishy Business",
+			"objectives": {
+				"20": "Talk to the fish",
+				"30": "Find some Sardines for the fish",
+				"40": "Return the Sardines to the fish"
+			}
 		},
 		"072FC590": {
 			"editor_id": "Folon_SQBromley101_Post"
 		},
 		"072C2D0F": {
 			"editor_id": "FOLON_COM_MountbattenQuest",
-			"name": "The Writing on the Wall"
+			"name": "The Writing on the Wall",
+			"objectives": {
+				"5": "Talk to Mountbatten about his list",
+				"10": "Buy a fancy drink at the Westminster pub",
+				"15": "Option 1: Tell Arthur the bottle's gone",
+				"16": "Option 2: Buy the second-best bottle",
+				"17": "Option 3: Retrieve a bottle from the brewery",
+				"20": "Get Arthur's locket back from Drood",
+				"25": "Option 1: Tell Arthur you can't get the locket",
+				"26": "Option 2: Buy the locket from Drood",
+				"27": "Option 3: Steal the locket from Drood",
+				"30": " Build a well in Brickton",
+				"35": "Option 1: Invest the minimum amount needed in the well",
+				"36": "Option 2: Invest the optimal amount needed in the well",
+				"37": "Option 3: Retrieve the building materials",
+				"38": "Tell Arthur the Mountbatten Well has been built",
+				"40": "Find the place where Arthur's parents are buried",
+				"46": "Option 1: Recreate the funeral ceremony",
+				"47": "Option 2: Search through St. Leonard's records to find the burial place",
+				"48": "Option 2: Go to New Chapel Cemetary",
+				"50": "See the sunset with Arthur"
+			}
 		},
 		"072CD193": {
 			"editor_id": "FOLON_MQWild308",
@@ -134522,7 +136189,12 @@
 		},
 		"072B659B": {
 			"editor_id": "FOLON_FQCamelot101",
-			"name": "Proppa' Ganda'"
+			"name": "Proppa' Ganda'",
+			"objectives": {
+				"10": "Place the Poster",
+				"20": "Defend the Poster",
+				"30": "Report Back to Percival"
+			}
 		},
 		"072AC4ED": {
 			"editor_id": "FOLON_GMAngel",
@@ -134530,11 +136202,34 @@
 		},
 		"072B6599": {
 			"editor_id": "FOLON_FQCamelot102",
-			"name": "Excalibur"
+			"name": "Excalibur",
+			"objectives": {
+				"10": "Find the Lady of the Lake",
+				"20": "Drain the Missile Silo",
+				"25": "Wait for the Missile Silo to Drain",
+				"30": "Access the Silo",
+				"40": "Find Excalibur",
+				"50": "Defeat Modred",
+				"60": "Read the Note",
+				"70": "Find Excalibur in Croydon",
+				"80": "Pull the Sword in the Stone",
+				"90": "Defeat Morgana",
+				"100": "Return to Merlin"
+			}
 		},
 		"0729B279": {
 			"editor_id": "FOLON_FQPistols102",
-			"name": "Here's The Pistols"
+			"name": "Here's The Pistols",
+			"objectives": {
+				"10": "Speak to Apache Alice",
+				"20": "Clear out Hooligans",
+				"30": "Report back to Apache Alice",
+				"40": "Get Palmira Romero's endorsement",
+				"42": "Get Captain Reasonable's endorsement",
+				"50": "Report back to Apache Alice",
+				"60": "Get John Strutter's endorsement",
+				"70": "Speak to Apache Alice"
+			}
 		},
 		"072A763C": {
 			"editor_id": "FOLON_COM_MadJack",
@@ -134546,11 +136241,17 @@
 		},
 		"07237DB7": {
 			"editor_id": "FOLON_LQCamden101",
-			"name": "Speak to the stage director at Camden Theatre"
+			"name": "Speak to the stage director at Camden Theatre",
+			"objectives": {
+				"10": "Speak to the stage director at Camden Theatre"
+			}
 		},
 		"072A5DEE": {
 			"editor_id": "FOLON_SQEastminster108",
-			"name": "Pub Crawl"
+			"name": "Pub Crawl",
+			"objectives": {
+				"10": "Find the Beer Mats"
+			}
 		},
 		"072A4DDF": {
 			"editor_id": "FOLON_COM_Kiera",
@@ -134570,7 +136271,16 @@
 		},
 		"072AA343": {
 			"editor_id": "FOLON_LQGreenwich102",
-			"name": "Magic Milk"
+			"name": "Magic Milk",
+			"objectives": {
+				"10": "Find the children",
+				"15": "Help Mandy's Brother",
+				"17": "Find a way to free Stevie",
+				"20": "Follow the children back to their parents",
+				"22": "Speak to Queenie",
+				"25": "Speak to Charlie",
+				"30": "Milk the Brahmin"
+			}
 		},
 		"072F11EF": {
 			"editor_id": "Folon_LQGreenwich102Post",
@@ -134586,15 +136296,30 @@
 		},
 		"072A07D3": {
 			"editor_id": "FOLON_MQAngel300",
-			"name": "Angel: Into the Shadows"
+			"name": "Angel: Into the Shadows",
+			"objectives": {
+				"10": "Go to the Office of the Head of the Civil Service after the tournament",
+				"15": "Find and equip a bowler hat",
+				"20": "Enter Smythe's office",
+				"30": "Answer the telephone",
+				"40": "Pick up the card",
+				"50": "(Optional) Pick up the card"
+			}
 		},
 		"07286D67": {
 			"editor_id": "FOLON_LQThameshaven102",
-			"name": "Cerulean Blues"
+			"name": "Cerulean Blues",
+			"objectives": {
+				"10": "Find the painting for Margery in the National Gallery",
+				"20": "Return to Margery with the painting"
+			}
 		},
 		"07286D68": {
 			"editor_id": "FOLON_LQThameshaven107",
-			"name": "Ion Brew for Greg"
+			"name": "Ion Brew for Greg",
+			"objectives": {
+				"10": "Get Greg a bottle of Ice Cold Ion Brew"
+			}
 		},
 		"07296562": {
 			"editor_id": "FOLON_Thameshaven_BarVendor"
@@ -134607,7 +136332,10 @@
 		},
 		"0729B7E5": {
 			"editor_id": "FOLON_LQWestminsterTour",
-			"name": "Westminster Tour"
+			"name": "Westminster Tour",
+			"objectives": {
+				"10": "Get the tour around Westminster"
+			}
 		},
 		"0729B9D4": {
 			"editor_id": "FOLON_Thameshaven_InfirmaryVendor"
@@ -134626,7 +136354,10 @@
 		},
 		"072AA435": {
 			"editor_id": "FOLON_LQSouthwark101",
-			"name": "Black Death"
+			"name": "Black Death",
+			"objectives": {
+				"10": "Bring 10 Pox Bulbs to Patch"
+			}
 		},
 		"07322A8E": {
 			"editor_id": "FOLON_LQSouthwark101Post",
@@ -134634,42 +136365,120 @@
 		},
 		"072AA43A": {
 			"editor_id": "FOLON_LQSouthwark105",
-			"name": "Pizza for Jordan"
+			"name": "Pizza for Jordan",
+			"objectives": {
+				"10": "Retrieve a pizza for jordan from Thameshaven",
+				"20": "Return with a pizza for jordan"
+			}
 		},
 		"0730124F": {
 			"editor_id": "FOLON_SQNewham102_Post"
 		},
 		"072AEA9E": {
 			"editor_id": "FOLON_LQHamlets104",
-			"name": "Boracic Lint"
+			"name": "Boracic Lint",
+			"objectives": {
+				"30": "Get Godric's money back",
+				"50": "Return the items to Godric",
+				"52": "Follow Xavier to Godric"
+			}
 		},
 		"072BA809": {
 			"editor_id": "FOLON_LQWestminster102",
-			"name": "Chimney Swept"
+			"name": "Chimney Swept",
+			"objectives": {
+				"7": "Talk to Dawkins and Lillian",
+				"10": "Find Timmy",
+				"20": "Converse with Timmy",
+				"21": "Find a way to free Timmy",
+				"31": "Speak to Timmy and Dawkins",
+				"35": "Speak to Lillian",
+				"40": "Speak to Lillian",
+				"62": "Speak to Dawkins",
+				"65": "Speak to Lillian"
+			}
 		},
 		"072AA436": {
 			"editor_id": "FOLON_LQEastminster105",
-			"name": "Changing the Barrel"
+			"name": "Changing the Barrel",
+			"objectives": {
+				"10": "Retrieve the Keg from the Brewery",
+				"15": "Swap out the keg",
+				"20": "Talk to Allen"
+			}
 		},
 		"072AD7B3": {
 			"editor_id": "FOLON_FQPistols104",
-			"name": "What's In A Name"
+			"name": "What's In A Name",
+			"objectives": {
+				"10": "Knock for John Strutter",
+				"20": "Talk to John Strutter",
+				"30": "Get Malcom Rhodes to sign the confession",
+				"31": "Find documents that incriminate Malcolm Rhodes",
+				"40": "Return the signed statement to John Strutter",
+				"50": "Return the incriminating documents to John Strutter",
+				"100": "Distribute the packages to Malcolm's friends",
+				"120": "(Optional) Tell John about the leaflets",
+				"130": "Return to Malcolm Rhodes"
+			}
 		},
 		"072B658D": {
 			"editor_id": "FOLON_LQHackney101",
-			"name": "Self-preservation Society"
+			"name": "Self-preservation Society",
+			"objectives": {
+				"10": "Go to the Bank",
+				"20": "Return the information to Roger Moon",
+				"30": "Find the Getaway Cars",
+				"40": "Report your findings to Roger Moon",
+				"50": "Find the Coach",
+				"60": "Return to Roger Moon"
+			}
 		},
 		"072AA437": {
 			"editor_id": "FOLON_LQLewisham102",
-			"name": "Sisyphus"
+			"name": "Sisyphus",
+			"objectives": {
+				"20": "Quickly pick up the sack",
+				"25": "Take the Sack to the top of the Construction Site",
+				"30": "Speak to Bookie"
+			}
 		},
 		"072AC4EC": {
 			"editor_id": "FOLON_MQAngel301",
-			"name": "Taking Initiative"
+			"name": "Taking Initiative",
+			"objectives": {
+				"10": "Go to your first initiative",
+				"20": "Investigate the voice",
+				"30": "Meet the man in his office",
+				"40": "Collect DNA samples (<Global=FOLON_MQAngel301_Counter01>/4)",
+				"50": "Return to Director Wesley Herbertson",
+				"60": "Enter the first cage",
+				"80": "Deal with the first ghoul",
+				"90": "Enter the second cage",
+				"110": "Deal with the second ghoul",
+				"120": "Enter the third cage",
+				"140": "Interact with the third ghoul",
+				"145": "Deal with the third ghoul",
+				"150": "Enter the fourth cage",
+				"170": "Interact with the fourth ghoul",
+				"185": "Deal with the fourth ghoul",
+				"190": "Speak to Director Wesley Herbertson"
+			}
 		},
 		"072AEAA7": {
 			"editor_id": "FOLON_SQWestminster106",
-			"name": "Colonial's Finest"
+			"name": "Colonial's Finest",
+			"objectives": {
+				"10": "Speak to Middleton",
+				"20": "Find the Caledonia",
+				"30": "Speak with Kumar",
+				"31": "Follow Kumar",
+				"32": "Discuss Trade with Kumar",
+				"35": "(Optional) Tell Middleton of Kumar's Descision",
+				"40": "Retrieve the Charter",
+				"50": "Return to Middleton",
+				"60": "Deliver the Charter"
+			}
 		},
 		"072BA810": {
 			"editor_id": "FOLON_SQCroydon103",
@@ -134677,7 +136486,14 @@
 		},
 		"072BA814": {
 			"editor_id": "FOLON_LQCroydon101",
-			"name": "A-maze-ing"
+			"name": "A-maze-ing",
+			"objectives": {
+				"5": "Greet the Gardener",
+				"10": "Reach the Maze Centre",
+				"11": "Find the Maze Keys",
+				"20": "Get the Maze Exit Key",
+				"30": "Escape the Maze"
+			}
 		},
 		"072A763D": {
 			"editor_id": "FOLON_COM_Mountbatten",
@@ -134685,7 +136501,12 @@
 		},
 		"072BF527": {
 			"editor_id": "FOLON_COM_MountbattenRecruitment",
-			"name": "There You Are"
+			"name": "There You Are",
+			"objectives": {
+				"20": "Investigate the voice",
+				"30": "Let Mountbatten down",
+				"40": "Talk to Mountbatten"
+			}
 		},
 		"072C2D0C": {
 			"editor_id": "FOLON_COM_MountbattenTalk",
@@ -134740,22 +136561,44 @@
 		},
 		"071B77DD": {
 			"editor_id": "FOLON_MQ102",
-			"name": "Broken Angel"
+			"name": "Broken Angel",
+			"objectives": {
+				"10": "Escape the facility",
+				"20": "Pick up the device",
+				"30": "Pick up the torch",
+				"40": "Use the lift",
+				"50": "Find a way out"
+			}
 		},
 		"0731F5CD": {
 			"editor_id": "FOLON_SQSouthwark103_QC"
 		},
 		"0729B7E4": {
 			"editor_id": "FOLON_MQ201",
-			"name": "Lay of the Land"
+			"name": "Lay of the Land",
+			"objectives": {
+				"10": "Gain entry to Westminster",
+				"20": "Enter Westminster",
+				"30": "Explore the crash site",
+				"40": "Meet Smythe in his office at the Palace of Westminster",
+				"50": "Clear out the Cavaliers",
+				"60": "Return to the guard"
+			}
 		},
 		"07326EDE": {
 			"editor_id": "FOLON_LQCity105",
-			"name": "Made from Girders"
+			"name": "Made from Girders",
+			"objectives": {
+				"10": "Learn about Nuka-Cola and Ion Brew (<Global=Folon_GLOB_LQCity105Counter>/8)"
+			}
 		},
 		"0730A958": {
 			"editor_id": "FOLON_LQLondon100",
-			"name": "Unusual Call Box"
+			"name": "Unusual Call Box",
+			"objectives": {
+				"10": "Find Unusual Call Boxes (<Global=Folon_GLOB_LQLondon100Counter>/15)",
+				"20": "Travel to the Police Box coordinates"
+			}
 		},
 		"072FB956": {
 			"editor_id": "FOLON_GMBarry",

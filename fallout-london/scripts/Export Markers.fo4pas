@@ -16,7 +16,11 @@ begin
 end;
 
 procedure AddItem(Obj, ChildObj: TJsonObject; ref: IInterface; section: string);
-var ref_id: string;
+var
+  ref_id: string;
+  i: integer;
+  item, items: IInterface;
+  key: string;
 begin
   ref_id := IntToHex(GetLoadOrderFormID(ref), 8);
   ChildObj.O['properties'].A[section].Add(ref_id);
@@ -25,6 +29,18 @@ begin
     Obj.O[section].O[ref_id].S['name'] := GetElementEditValues(ref, 'FULL');
   if GetElementEditValues(ref, 'DESC') <> '' then
     Obj.O[section].O[ref_id].S['description'] := GetElementEditValues(ref, 'DESC');
+
+  if section = 'quests' then begin
+    items := ElementByName(ref, 'Objectives');
+    if Assigned(items) then begin
+      for i := 0 to Pred(ElementCount(items)) do begin
+        item := ElementByIndex(items, i);
+        key := GetElementEditValues(item, 'QOBJ');
+        Obj.O[section].O[ref_id].O['objectives'].S[key] := GetElementEditValues(item, 'NNAM');
+      end;
+    end;
+  end;
+
 end;
 
 function Finalize: integer;
