@@ -624,11 +624,15 @@ hr { opacity: .6;}
 
 .popup-subnote-info-item {
   font-size: 12px;
-  opacity: .75;
+  opacity: .6;
   cursor: pointer;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.popup-subnote-info-item:hover {
+  opacity: 1;
 }
 
 #popup-data + #popup-data-toggle hr::after {
