@@ -188,8 +188,8 @@
 
   "DOOR": {"fa": "door-open", "bg": "grey", "type": "Door", "group": "items",
     "items": {
-      "Autoload Door": {"match": "AutoloadDoor", "fa": "dungeon" },
-      "Interior Door": {"cell":true, "fa": "door-closed" }
+      "Autoload Door": {"match": "AutoloadDoor", "fa": "dungeon", "type": "Autoload Door" },
+      "Interior Door": {"cell":true, "fa": "door-closed", "type": "Interior Door" }
    }},
 
   "BOOK": {"fa": "envelope", "bg": "tan", "type": "Message", "group": "items",
