@@ -620,9 +620,6 @@ hr { opacity: .6;}
 
 .popup-subnote-info {
   margin: 4px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
 
 .popup-subnote-info-item {
