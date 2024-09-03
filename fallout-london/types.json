@@ -76,7 +76,7 @@
   "Prydwen":              {"type":"Factions", "subtype": "Pistols",       "bg": "darkslategrey", "fa": "hand-fist",        "group": "travel"},
   "Custom 67":            {"type":"Factions", "subtype": "Roundels",      "bg": "forestgreen",   "fa": "bullseye",         "group": "travel"},
   "Military Base":        {"type":"Factions", "subtype": "Tommies",       "bg": "darkkhaki",     "fa": "flag",             "group": "travel"},
-  "Custom 80":            {"type":"Factions", "subtype": "Vagabonds",     "bg": "saddlebrown",   "fa": "hat-cowboy",       "group": "travel"},
+  "Custom 80":            {"type":"Factions", "subtype": "Vagabonds",     "bg": "saddlebrown",   "fa": "dove",             "group": "travel"},
 
   "NPC_": {
     "fa": "person", "bg": "#555", "type": "Uncategorized", "group": "NPCs", "subtype":"NPC", "group_weight": 860,
