@@ -334,7 +334,7 @@ hr { opacity: .6;}
 }
 
 .collapsed {
-  display: none;
+  display: none!important;
 }
 
 .item.hidden > .title {
@@ -620,11 +620,19 @@ hr { opacity: .6;}
 
 .popup-subnote-info {
   margin: 4px;
-  font-size: 12px;
-  opacity: .6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-
+.popup-subnote-info-item {
+  font-size: 12px;
+  opacity: .75;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
 #popup-data + #popup-data-toggle hr::after {
   content: '\d7';

@@ -875,7 +875,6 @@ function popupOnClick(e) {
       let title = desc ? ( name +': ' + desc ) : name;
       let objectives = markers[section][form_id]['objectives']||{};
 
-
       let li = document.createElement('div');
       li.className = 'popup-subnote-item';
 
@@ -918,8 +917,15 @@ function popupOnClick(e) {
           d.className = 'popup-subnote-info';
           d.id = form_id;
           d.classList.add('collapsed');
-          let items = Object.entries(objectives).map( ([key,value])=>`${key}: ${strip(value)}`);
-          d.innerHTML = items.join('<br/>');
+
+          for (const [key,value] of Object.entries(objectives)) {
+            let e = document.createElement('div');
+            e.className = 'popup-subnote-info-item';
+            e.title = `Copy Quest Stage to Clipboard (${key})`;
+            e.onclick = function() { copyToClipboard(key); return false; };
+            e.textContent = `${key}: ${strip(value)}`;
+            d.appendChild(e);
+          }
           div.appendChild(d);
         }
       }
