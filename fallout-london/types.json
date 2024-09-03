@@ -111,7 +111,7 @@
     }
   },
 
-  "FURN": {"group_fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "settlements",
+  "FURN": {"group_fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "items",
     "items": {
       "Weapons Workbench": {"match": "Folon_WorkbenchWeapons", "fa": "gun"},
       "Tea Station": {"match": "Folon_WorkbenchTeaStation", "fa": "mug-hot"},
@@ -122,7 +122,7 @@
 
   "CONT": {"fa": "box-archive", "bg": "darkcyan", "type": "Container", "group": "items",
     "items": {
-      "Workshop":{"match": "Folon_SettlementWorkbench", "fa": "screwdriver-wrench", "bg": "red", "group":"settlements", "type": "Workshop" }
+      "Workshop":{"match": "Folon_SettlementWorkbench", "fa": "screwdriver-wrench", "bg": "red", "group":"items", "type": "Workshop" }
     }
   },
 
