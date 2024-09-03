@@ -442,8 +442,8 @@ function getType(o) {
   let defaults = { bg: 'grey', fg: 'white', fa: 'circle-question', group:'misc'};
   t = {...defaults, type: o.description, group_weight:0, ...(types[o.description] || {})};
   for (const [key, tt] of Object.entries(t.items||{})) {
-    if (tt.match) {
-      if ((o.editor_id||o.title).match(new RegExp(tt.match,'g'))) {
+    if (tt.match || tt.cell) {
+      if ( (tt.match && (o.editor_id||o.title).match(new RegExp(tt.match,'g'))) || (tt.cell && o.cell) ) {
         t = {...t, ...tt, key: key};
         if (!tt.type) {
           t = {...t, subtype: key};
