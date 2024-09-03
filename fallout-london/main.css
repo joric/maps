@@ -619,7 +619,7 @@ hr { opacity: .6;}
 }
 
 .popup-subnote-info {
-  margin-left: 8px;
+  margin: 4px;
   font-size: 12px;
   opacity: .75;
 }
