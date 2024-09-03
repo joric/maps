@@ -624,7 +624,7 @@ hr { opacity: .6;}
 
 .popup-subnote-info-item {
   font-size: 12px;
-  opacity: .6;
+  opacity: .75;
   cursor: pointer;
   white-space: nowrap;
   text-overflow: ellipsis;
