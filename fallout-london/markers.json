@@ -113242,6 +113242,29 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					4182.684082,
+					943.371521,
+					540.075073
+				]
+			},
+			"properties": {
+				"title": "Sipperson's Gin",
+				"description": "ALCH",
+				"ref_id": "072DD3B9",
+				"form_id": "07133AD5",
+				"editor_id": "Folon_DrinksUniqueGin",
+				"quests": [
+					"072C2D0F"
+				],
+				"cell": "072450F4",
+				"cell_name": "Houseguard Gin Distillery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					1390.141846,
 					1144.712036,
 					-2380.394531
