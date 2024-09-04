@@ -62,7 +62,7 @@
 
   "Custom 66": {"fa": "anchor",  "type": "Naval College", "group": "facilities"},
   "Custom 69": {"fa": "wine-glass",  "type": "Pub", "group": "facilities"},
-  "Custom 70": {"fa": "plane", "bg": "darkcyan", "type": "Airport", "group": "facilities" },
+  "Custom 70": {"fa": "plane", "bg": "darkcyan", "type": "Settlement", "group": "places of interest" },
   "Custom 71": {"fa": "bread-slice", "type": "Restaurant", "group": "facilities"},
   "Custom 73": {"fa": "cable-car", "type": "Monorail","group": "travel" },
   "Custom 74": {"fa": "dharmachakra", "type": "Ferris Wheel", "group": "places of interest" },
