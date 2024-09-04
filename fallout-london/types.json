@@ -168,8 +168,9 @@
     }
   },
 
-  "MISC": {"group": "items", 
+  "MISC": {"group": "items",
     "items": {
+      "Feather": {"match": "Folon_MiscFeatherPeacock", "fa": "feather", "bg": "darkslategrey", "type":"Peacock Feather", "group":"misc" },
       "Vinyl": {"match": "Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type": "Vinyl Record"},
       "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
       "Coaster": {"match": "BobbleHead_", "fa": "image", "bg": "peru", "type": "Coaster"},

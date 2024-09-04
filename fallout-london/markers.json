@@ -46897,7 +46897,8 @@
 				"form_id": "070DA150",
 				"editor_id": "Folon_NPC_ProtectronJeremyBentham",
 				"quests": [
-					"07322A8F"
+					"07322A8F",
+					"072AA43B"
 				],
 				"area": "LondonWorld"
 			}
@@ -47121,7 +47122,10 @@
 					"072B84C9",
 					"072BCEF4",
 					"072BDCC6",
-					"07319F64"
+					"07319F64",
+					"0719ABAA",
+					"071B77DD",
+					"071C76B4"
 				],
 				"outfits": [
 					"071805A6",
@@ -47163,7 +47167,10 @@
 					"072CB1F6",
 					"072CD192",
 					"072CD194",
-					"07319F64"
+					"07319F64",
+					"0719ABAA",
+					"071B77DD",
+					"071C76B4"
 				],
 				"weapons": [
 					"070B6569"
@@ -47198,6 +47205,7 @@
 					"071B7318",
 					"072964B9",
 					"072BDCC5",
+					"072C12E8",
 					"072C12E8"
 				],
 				"outfits": [
@@ -47601,7 +47609,9 @@
 				"form_id": "0719CBCA",
 				"editor_id": "Folon_NPC_GentryGoldieRichmond",
 				"quests": [
-					"072C0D89"
+					"072C0D89",
+					"072C0D89",
+					"07314945"
 				],
 				"outfits": [
 					"07299883",
@@ -48010,6 +48020,8 @@
 				"form_id": "0719CBE0",
 				"editor_id": "Folon_NPC_GlobeJeanineHeminger",
 				"quests": [
+					"072BF524",
+					"071F7D56",
 					"072BF524"
 				],
 				"outfits": [
@@ -48284,7 +48296,8 @@
 				"form_id": "0719CBF5",
 				"editor_id": "Folon_NPC_GentryMadameCoates",
 				"quests": [
-					"072C56AE"
+					"072C56AE",
+					"072C0D89"
 				],
 				"outfits": [
 					"071321D2",
@@ -48454,7 +48467,8 @@
 				"form_id": "0719CC01",
 				"editor_id": "Folon_NPC_LewishamNikki",
 				"quests": [
-					"072C0D8A"
+					"072C0D8A",
+					"072BA806"
 				],
 				"outfits": [
 					"0730D215"
@@ -49355,7 +49369,9 @@
 				"form_id": "0719CC5F",
 				"editor_id": "Folon_NPC_GentryPennyCopperfield",
 				"quests": [
-					"072C0D89"
+					"072C0D89",
+					"072C0D89",
+					"07314945"
 				],
 				"outfits": [
 					"0702DF13",
@@ -49408,7 +49424,8 @@
 				"form_id": "0719CC62",
 				"editor_id": "Folon_NPC_LewishamHarvinQuinney",
 				"quests": [
-					"072C0D8A"
+					"072C0D8A",
+					"072BA806"
 				],
 				"outfits": [
 					"070B67A8",
@@ -49539,7 +49556,8 @@
 				"editor_id": "Folon_NPC_EastminsterOctaviaHolland",
 				"quests": [
 					"072ACDFF",
-					"072DF799"
+					"072DF799",
+					"072AEA9C"
 				],
 				"outfits": [
 					"072EC604",
@@ -49616,7 +49634,8 @@
 				"form_id": "0719CC70",
 				"editor_id": "Folon_NPC_GreenwichAvis",
 				"quests": [
-					"073204C5"
+					"073204C5",
+					"072AEAAA"
 				],
 				"outfits": [
 					"071E844E"
@@ -50368,7 +50387,9 @@
 				"editor_id": "Folon_NPC_GlobeWilhelmKelpe",
 				"quests": [
 					"072BDCC6",
-					"072BF524"
+					"072BF524",
+					"071F7D56",
+					"07237DB8"
 				],
 				"outfits": [
 					"07156509",
@@ -50426,7 +50447,8 @@
 					"072AEAA0",
 					"072B6593",
 					"072B6595",
-					"07319F65"
+					"07319F65",
+					"072B6598"
 				],
 				"outfits": [
 					"070B6790",
@@ -50481,7 +50503,8 @@
 				"editor_id": "Folon_NPC_GentryBaronessBrendaBeaumont",
 				"quests": [
 					"072AC4EA",
-					"072AC4F1"
+					"072AC4F1",
+					"072BA815"
 				],
 				"outfits": [
 					"002075BF"
@@ -50507,7 +50530,8 @@
 				"form_id": "0719D3D5",
 				"editor_id": "Folon_NPC_GentryLynneMoors",
 				"quests": [
-					"072AC4EA"
+					"072AC4EA",
+					"072FA528"
 				],
 				"outfits": [
 					"000DFFC5"
@@ -50710,6 +50734,7 @@
 				"form_id": "0719D571",
 				"editor_id": "Folon_NPC_GreenwichHermitAndy",
 				"quests": [
+					"0729C3F3",
 					"0729C3F3"
 				],
 				"outfits": [
@@ -50816,7 +50841,8 @@
 				"editor_id": "Folon_NPC_GlobeRichardBurbank",
 				"quests": [
 					"072A7C42",
-					"072BF524"
+					"072BF524",
+					"071F7D56"
 				],
 				"outfits": [
 					"070DB2D7",
@@ -51169,7 +51195,8 @@
 				"form_id": "0719D893",
 				"editor_id": "Folon_NPC_TommyPFG",
 				"quests": [
-					"072728BB"
+					"072728BB",
+					"072C0D8A"
 				],
 				"outfits": [
 					"0732248B",
@@ -51229,7 +51256,8 @@
 				"form_id": "0719D895",
 				"editor_id": "Folon_NPC_LewishamAllenCalloway",
 				"quests": [
-					"072C0D8A"
+					"072C0D8A",
+					"072BA806"
 				],
 				"outfits": [
 					"071E5B0D",
@@ -51284,7 +51312,8 @@
 				"editor_id": "Folon_NPC_GentryPatelRayner",
 				"quests": [
 					"072AEAA8",
-					"072FA528"
+					"072FA528",
+					"072BA808"
 				],
 				"outfits": [
 					"0023CAA4"
@@ -51606,7 +51635,9 @@
 				"form_id": "0719D8AD",
 				"editor_id": "Folon_NPC_GentryGrahamSilverman",
 				"quests": [
-					"072C0D89"
+					"072C0D89",
+					"072C0D89",
+					"07314945"
 				],
 				"outfits": [
 					"070B679D",
@@ -52133,7 +52164,8 @@
 				"form_id": "0719D8CB",
 				"editor_id": "Folon_NPC_CamelotDylanClitherow",
 				"quests": [
-					"0730FCF1"
+					"0730FCF1",
+					"072B84CA"
 				],
 				"outfits": [
 					"07189A8F"
@@ -52340,7 +52372,8 @@
 					"072BA80E",
 					"072BA80F",
 					"072CD196",
-					"0730FCF1"
+					"0730FCF1",
+					"072BA816"
 				],
 				"outfits": [
 					"071CB180",
@@ -52849,7 +52882,9 @@
 					"072BCEF1",
 					"072BCEF7",
 					"072BDCC5",
-					"072CB1F6"
+					"072CB1F6",
+					"0719FC6F",
+					"071B7316"
 				],
 				"outfits": [
 					"0719A9AE",
@@ -53408,7 +53443,10 @@
 					"072BCEF7",
 					"072CB1F6",
 					"072CD192",
-					"072CD194"
+					"072CD194",
+					"0719ABAA",
+					"071B77DD",
+					"071C76B4"
 				],
 				"weapons": [
 					"070DB2BF"
@@ -53745,7 +53783,8 @@
 					"072BA815",
 					"072CB1F6",
 					"072CD193",
-					"072CD195"
+					"072CD195",
+					"071A2F20"
 				],
 				"weapons": [
 					"07329999"
@@ -54195,7 +54234,8 @@
 					"072BCEF1",
 					"072BCEF7",
 					"072CB1F6",
-					"0730FCF0"
+					"0730FCF0",
+					"0722DA11"
 				],
 				"weapons": [
 					"07272E70"
@@ -54223,6 +54263,7 @@
 				"form_id": "0722C68F",
 				"editor_id": "Folon_NPC_NewhamJane",
 				"quests": [
+					"0722C5CF",
 					"0722C5CF"
 				],
 				"outfits": [
@@ -54249,6 +54290,7 @@
 				"form_id": "0722C690",
 				"editor_id": "Folon_NPC_SPSJohnMarsh",
 				"quests": [
+					"0722C5CF",
 					"0722C5CF"
 				],
 				"outfits": [
@@ -54275,7 +54317,8 @@
 				"editor_id": "Folon_NPC_CamdenScottNightingale",
 				"quests": [
 					"07237DB7",
-					"072B84CC"
+					"072B84CC",
+					"07237DB8"
 				],
 				"outfits": [
 					"000FC100"
@@ -54683,7 +54726,8 @@
 				"form_id": "07240ABA",
 				"editor_id": "Folon_NPC_CamdenClaudiaRampling",
 				"quests": [
-					"072B84CC"
+					"072B84CC",
+					"07237DB8"
 				],
 				"outfits": [
 					"07299880"
@@ -54802,7 +54846,8 @@
 				"form_id": "0724311E",
 				"editor_id": "Folon_NPC_CamdenWitchMackenna",
 				"quests": [
-					"072B84CC"
+					"072B84CC",
+					"07237DB8"
 				],
 				"outfits": [
 					"0719A9AE",
@@ -54829,7 +54874,8 @@
 				"form_id": "0724D70D",
 				"editor_id": "Folon_NPC_CamdenWitchBeatrice",
 				"quests": [
-					"072B84CC"
+					"072B84CC",
+					"07237DB8"
 				],
 				"outfits": [
 					"0719A9AE",
@@ -54856,7 +54902,8 @@
 				"form_id": "0724D70E",
 				"editor_id": "Folon_NPC_CamdenWitchTheodosia",
 				"quests": [
-					"072B84CC"
+					"072B84CC",
+					"07237DB8"
 				],
 				"outfits": [
 					"0719A9AE",
@@ -55373,7 +55420,8 @@
 				"form_id": "0729EC38",
 				"editor_id": "Folon_NPC_CultistMithBrotherMithras",
 				"quests": [
-					"072E3824"
+					"072E3824",
+					"0729EB90"
 				],
 				"cell": "07195B6E",
 				"cell_name": "London Mithraeum"
@@ -55451,7 +55499,8 @@
 				"form_id": "072A5ED4",
 				"editor_id": "Folon_NPC_ThameshavenJordan",
 				"quests": [
-					"072AA43A"
+					"072AA43A",
+					"0719C4CD"
 				],
 				"outfits": [
 					"0731AB8C"
@@ -55586,7 +55635,8 @@
 				"editor_id": "Folon_NPC_NormanJeanDalmat",
 				"quests": [
 					"072BCEF5",
-					"0730124F"
+					"0730124F",
+					"072BCEF5"
 				],
 				"outfits": [
 					"072DE87B",
@@ -55613,7 +55663,8 @@
 				"editor_id": "Folon_NPC_NormanEugeneDongle",
 				"quests": [
 					"072BCEF5",
-					"0730124F"
+					"0730124F",
+					"072BCEF5"
 				],
 				"outfits": [
 					"071805AC",
@@ -55644,7 +55695,8 @@
 				"form_id": "072A7569",
 				"editor_id": "Folon_NPC_GentryGentryFootman",
 				"quests": [
-					"072C0D89"
+					"072C0D89",
+					"07314945"
 				],
 				"outfits": [
 					"000FC395"
@@ -55879,7 +55931,9 @@
 				"form_id": "072A757A",
 				"editor_id": "Folon_NPC_GentryAuctioneer",
 				"quests": [
-					"072C0D89"
+					"072C0D89",
+					"072C0D89",
+					"07314945"
 				],
 				"outfits": [
 					"070B678C"
@@ -57424,7 +57478,8 @@
 				"form_id": "072AAC0B",
 				"editor_id": "Folon_NPC_GentryFreddieNewall",
 				"quests": [
-					"072AC4EA"
+					"072AC4EA",
+					"072FA528"
 				],
 				"outfits": [
 					"070B6793"
@@ -57451,7 +57506,8 @@
 				"editor_id": "Folon_NPC_GentryRPIII",
 				"quests": [
 					"072AC4EA",
-					"072AC4F1"
+					"072AC4F1",
+					"072BA815"
 				],
 				"weapons": [
 					"000CE97D"
@@ -58106,7 +58162,8 @@
 					"072A763D",
 					"072BF527",
 					"072C2D0C",
-					"072C2D0F"
+					"072C2D0F",
+					"072BF527"
 				],
 				"weapons": [
 					"07322588",
@@ -58845,7 +58902,8 @@
 				"form_id": "072D5892",
 				"editor_id": "Folon_NPC_LQWestminster107Nobbles",
 				"quests": [
-					"072FA528"
+					"072FA528",
+					"072AA434"
 				],
 				"area": "WestminsterWorld"
 			}
@@ -58977,7 +59035,8 @@
 				"form_id": "072D8643",
 				"editor_id": "Folon_NPC_RoundelHurley",
 				"quests": [
-					"07319F63"
+					"07319F63",
+					"072ACE03"
 				],
 				"outfits": [
 					"0719D85F"
@@ -59808,7 +59867,8 @@
 				"form_id": "0730167F",
 				"editor_id": "Folon_NPC_CamelotPendragon",
 				"quests": [
-					"073149E4"
+					"073149E4",
+					"072BA816"
 				],
 				"weapons": [
 					"072EC6C8"
@@ -59921,7 +59981,8 @@
 				"form_id": "073023CB",
 				"editor_id": "Folon_NPC_GentryGhoulBoss_QueenVicII",
 				"quests": [
-					"072BA815"
+					"072BA815",
+					"072AC4F1"
 				],
 				"outfits": [
 					"0008EC46",
@@ -60037,7 +60098,8 @@
 				"editor_id": "Folon_NPC_CaravanKirby",
 				"quests": [
 					"072DEFB4",
-					"072DEFC1"
+					"072DEFC1",
+					"072BDCC8"
 				],
 				"outfits": [
 					"07242152"
@@ -60453,7 +60515,8 @@
 				"editor_id": "Folon_NPC_CaravanKirbyCarlaBrahmin",
 				"quests": [
 					"072DEFB4",
-					"072DEFC1"
+					"072DEFC1",
+					"072BDCC8"
 				],
 				"area": "LondonWorld"
 			}
@@ -61099,6 +61162,9 @@
 				"ref_id": "07281698",
 				"form_id": "001F599A",
 				"editor_id": "MS11LieutenantsHat",
+				"quests": [
+					"0009BD11"
+				],
 				"value": 15,
 				"cell": "071A2F87",
 				"cell_name": "Cutty Sark Dry Dock"
@@ -61120,6 +61186,9 @@
 				"ref_id": "072807FA",
 				"form_id": "00019568",
 				"editor_id": "Armor_Raider_Underwear",
+				"quests": [
+					"06000808"
+				],
 				"value": 5,
 				"cell": "071A2F8F",
 				"cell_name": "Natural History Museum"
@@ -62091,6 +62160,11 @@
 				"ref_id": "071DA13A",
 				"form_id": "000DFFC5",
 				"editor_id": "ClothesPrewarSweaterVest",
+				"quests": [
+					"0001ED86",
+					"0001ED86",
+					"07238B82"
+				],
 				"value": 17,
 				"cell": "071AE25F",
 				"cell_name": "Broadcasting House"
@@ -62112,6 +62186,11 @@
 				"ref_id": "072482AD",
 				"form_id": "000DFFC5",
 				"editor_id": "ClothesPrewarSweaterVest",
+				"quests": [
+					"0001ED86",
+					"0001ED86",
+					"07238B82"
+				],
 				"value": 17,
 				"cell": "071A2F85",
 				"cell_name": "Textile Manufactorium"
@@ -62133,6 +62212,11 @@
 				"ref_id": "072482B2",
 				"form_id": "000DFFC5",
 				"editor_id": "ClothesPrewarSweaterVest",
+				"quests": [
+					"0001ED86",
+					"0001ED86",
+					"07238B82"
+				],
 				"value": 17,
 				"cell": "071A2F85",
 				"cell_name": "Textile Manufactorium"
@@ -62154,6 +62238,11 @@
 				"ref_id": "0724B8E3",
 				"form_id": "000DFFC5",
 				"editor_id": "ClothesPrewarSweaterVest",
+				"quests": [
+					"0001ED86",
+					"0001ED86",
+					"07238B82"
+				],
 				"value": 17,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -62175,6 +62264,11 @@
 				"ref_id": "0724B8E4",
 				"form_id": "000DFFC5",
 				"editor_id": "ClothesPrewarSweaterVest",
+				"quests": [
+					"0001ED86",
+					"0001ED86",
+					"07238B82"
+				],
 				"value": 17,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -62196,6 +62290,11 @@
 				"ref_id": "0724B93B",
 				"form_id": "000DFFC5",
 				"editor_id": "ClothesPrewarSweaterVest",
+				"quests": [
+					"0001ED86",
+					"0001ED86",
+					"07238B82"
+				],
 				"value": 17,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -62217,6 +62316,11 @@
 				"ref_id": "07271135",
 				"form_id": "000DFFC5",
 				"editor_id": "ClothesPrewarSweaterVest",
+				"quests": [
+					"0001ED86",
+					"0001ED86",
+					"07238B82"
+				],
 				"value": 17,
 				"cell": "071A2F8F",
 				"cell_name": "Natural History Museum"
@@ -62238,6 +62342,9 @@
 				"ref_id": "0732C1EE",
 				"form_id": "000E2E2C",
 				"editor_id": "ClothesValentineCoat",
+				"quests": [
+					"000282A7"
+				],
 				"value": 15,
 				"cell": "0727D38E",
 				"cell_name": "Scotland Yard"
@@ -62259,6 +62366,9 @@
 				"ref_id": "0708B7B9",
 				"form_id": "000E2E2E",
 				"editor_id": "ClothesValentineHat",
+				"quests": [
+					"000282A7"
+				],
 				"value": 15,
 				"area": "LondonWorld"
 			}
@@ -62279,6 +62389,9 @@
 				"ref_id": "0732C1EF",
 				"form_id": "000E2E2E",
 				"editor_id": "ClothesValentineHat",
+				"quests": [
+					"000282A7"
+				],
 				"value": 15,
 				"cell": "0727D38E",
 				"cell_name": "Scotland Yard"
@@ -62300,6 +62413,9 @@
 				"ref_id": "0732C2A7",
 				"form_id": "000E2E2E",
 				"editor_id": "ClothesValentineHat",
+				"quests": [
+					"000282A7"
+				],
 				"value": 15,
 				"area": "HackneyWorld"
 			}
@@ -62320,6 +62436,9 @@
 				"ref_id": "07103474",
 				"form_id": "000E5084",
 				"editor_id": "ClothesResident3",
+				"quests": [
+					"0006FA37"
+				],
 				"value": 10,
 				"cell": "0710215C",
 				"cell_name": ""
@@ -62341,6 +62460,9 @@
 				"ref_id": "0723B6F7",
 				"form_id": "000E5084",
 				"editor_id": "ClothesResident3",
+				"quests": [
+					"0006FA37"
+				],
 				"value": 10,
 				"area": "BromleyGladesWorld"
 			}
@@ -63024,6 +63146,10 @@
 				"ref_id": "072482A9",
 				"form_id": "000EECF5",
 				"editor_id": "ClothesPreWarDress",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 21,
 				"cell": "071A2F85",
 				"cell_name": "Textile Manufactorium"
@@ -63045,6 +63171,10 @@
 				"ref_id": "0724BA34",
 				"form_id": "000EECF5",
 				"editor_id": "ClothesPreWarDress",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 21,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -63066,6 +63196,10 @@
 				"ref_id": "0724BA35",
 				"form_id": "000EECF5",
 				"editor_id": "ClothesPreWarDress",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 21,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -63087,6 +63221,10 @@
 				"ref_id": "0724BA5D",
 				"form_id": "000EECF5",
 				"editor_id": "ClothesPreWarDress",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 21,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -63108,6 +63246,10 @@
 				"ref_id": "0724BA5F",
 				"form_id": "000EECF5",
 				"editor_id": "ClothesPreWarDress",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 21,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -63129,6 +63271,10 @@
 				"ref_id": "0724BA6E",
 				"form_id": "000EECF5",
 				"editor_id": "ClothesPreWarDress",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 21,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -63150,6 +63296,10 @@
 				"ref_id": "072FDE29",
 				"form_id": "000EECF5",
 				"editor_id": "ClothesPreWarDress",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 21,
 				"area": "LondonWorld"
 			}
@@ -66247,6 +66397,9 @@
 				"ref_id": "072F19A9",
 				"form_id": "00117EB9",
 				"editor_id": "Armor_Rustic_Underarmor",
+				"quests": [
+					"0014DC84"
+				],
 				"value": 10,
 				"cell": "072F1251",
 				"cell_name": "Docklands Light Railway"
@@ -67749,6 +67902,10 @@
 				"ref_id": "0708B7BE",
 				"form_id": "001410EC",
 				"editor_id": "ClothesPrewarWomensCasual",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 16,
 				"area": "LondonWorld"
 			}
@@ -67769,6 +67926,10 @@
 				"ref_id": "0708B7BF",
 				"form_id": "001410EC",
 				"editor_id": "ClothesPrewarWomensCasual",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 16,
 				"area": "LondonWorld"
 			}
@@ -67789,6 +67950,10 @@
 				"ref_id": "071090CC",
 				"form_id": "001410EC",
 				"editor_id": "ClothesPrewarWomensCasual",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 16,
 				"cell": "0701D8A8",
 				"cell_name": "Trashed Shops"
@@ -67810,6 +67975,10 @@
 				"ref_id": "072482AE",
 				"form_id": "001410EC",
 				"editor_id": "ClothesPrewarWomensCasual",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 16,
 				"cell": "071A2F85",
 				"cell_name": "Textile Manufactorium"
@@ -67831,6 +68000,10 @@
 				"ref_id": "0724BA62",
 				"form_id": "001410EC",
 				"editor_id": "ClothesPrewarWomensCasual",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 16,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -68183,6 +68356,9 @@
 				"ref_id": "0732B5F8",
 				"form_id": "0014A0DC",
 				"editor_id": "DN054ZekesJacket",
+				"quests": [
+					"00048516"
+				],
 				"value": 20,
 				"cell": "0711397B",
 				"cell_name": "Lock Penthouse"
@@ -68370,6 +68546,10 @@
 				"ref_id": "072482B1",
 				"form_id": "0014B019",
 				"editor_id": "ClothesPrewarTshirtSlacks",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 14,
 				"cell": "071A2F85",
 				"cell_name": "Textile Manufactorium"
@@ -68391,6 +68571,10 @@
 				"ref_id": "072482BF",
 				"form_id": "0014B019",
 				"editor_id": "ClothesPrewarTshirtSlacks",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 14,
 				"cell": "071A2F85",
 				"cell_name": "Textile Manufactorium"
@@ -68412,6 +68596,10 @@
 				"ref_id": "0732A272",
 				"form_id": "0014B019",
 				"editor_id": "ClothesPrewarTshirtSlacks",
+				"quests": [
+					"0001ED86",
+					"0001ED86"
+				],
 				"value": 14,
 				"cell": "0713070F",
 				"cell_name": "Mysterious Lab"
@@ -68807,6 +68995,9 @@
 				"ref_id": "0730C1F8",
 				"form_id": "0014E58B",
 				"editor_id": "ClothesSilverShroud",
+				"quests": [
+					"00027556"
+				],
 				"value": 40,
 				"area": "WestminsterWorld"
 			}
@@ -68827,6 +69018,9 @@
 				"ref_id": "0732C2A6",
 				"form_id": "0014E58E",
 				"editor_id": "MS04_SilverShroudHat",
+				"quests": [
+					"00027556"
+				],
 				"value": 15,
 				"area": "HackneyWorld"
 			}
@@ -69792,6 +69986,9 @@
 				"ref_id": "0732B5FD",
 				"form_id": "001B5B26",
 				"editor_id": "InstM02LiamsGlasses",
+				"quests": [
+					"000A8257"
+				],
 				"value": 80,
 				"cell": "072B0794",
 				"cell_name": "Emergency Broadcast Centre"
@@ -70294,6 +70491,9 @@
 				"ref_id": "072556EF",
 				"form_id": "001C26B9",
 				"editor_id": "ClothesGenericJumpsuit",
+				"quests": [
+					"010008BB"
+				],
 				"value": 6,
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
@@ -70315,6 +70515,9 @@
 				"ref_id": "0727BD4F",
 				"form_id": "001C26B9",
 				"editor_id": "ClothesGenericJumpsuit",
+				"quests": [
+					"010008BB"
+				],
 				"value": 6,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -70336,6 +70539,9 @@
 				"ref_id": "072FDE27",
 				"form_id": "001C26B9",
 				"editor_id": "ClothesGenericJumpsuit",
+				"quests": [
+					"010008BB"
+				],
 				"value": 6,
 				"area": "LondonWorld"
 			}
@@ -70356,6 +70562,10 @@
 				"ref_id": "07005A61",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"area": "HackneyWorld"
 			}
@@ -70376,6 +70586,10 @@
 				"ref_id": "0701D89A",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "0701D60F",
 				"cell_name": "Canary Wharf Underground Station"
@@ -70397,6 +70611,10 @@
 				"ref_id": "070A5354",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"area": "LondonWorld"
 			}
@@ -70417,6 +70635,10 @@
 				"ref_id": "070D0D32",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "0703BB7D",
 				"cell_name": "Blind Beggar"
@@ -70438,6 +70660,10 @@
 				"ref_id": "070FBF45",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"area": "LondonWorld"
 			}
@@ -70458,6 +70684,10 @@
 				"ref_id": "0711B07B",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "070D7E5A",
 				"cell_name": "The Nags"
@@ -70479,6 +70709,10 @@
 				"ref_id": "07165A58",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "0712C09C",
 				"cell_name": "Strand Tunnels"
@@ -70500,6 +70734,10 @@
 				"ref_id": "071A6BEB",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "0719ACCE",
 				"cell_name": "Camden TV Station"
@@ -70521,6 +70759,10 @@
 				"ref_id": "071B3B9A",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "071B3834",
 				"cell_name": "House"
@@ -70542,6 +70784,10 @@
 				"ref_id": "071DE8CC",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "071A2F9E",
 				"cell_name": "Deptford Bus Garage"
@@ -70563,6 +70809,10 @@
 				"ref_id": "071E6018",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "07091F7E",
 				"cell_name": "The Hound"
@@ -70584,6 +70834,10 @@
 				"ref_id": "071F30B3",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"area": "LondonWorld"
 			}
@@ -70604,6 +70858,10 @@
 				"ref_id": "071F9F5D",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"area": "LondonWorld"
 			}
@@ -70624,6 +70882,10 @@
 				"ref_id": "072175B6",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "071E3427",
 				"cell_name": "Arlington School"
@@ -70645,6 +70907,10 @@
 				"ref_id": "072196C3",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "0712C09C",
 				"cell_name": "Strand Tunnels"
@@ -70666,6 +70932,10 @@
 				"ref_id": "0724BA3B",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -70687,6 +70957,10 @@
 				"ref_id": "0725674C",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "0725614A",
 				"cell_name": "Monument Underground Station"
@@ -70708,6 +70982,10 @@
 				"ref_id": "07267E02",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "07254631",
 				"cell_name": "Westminster Underground"
@@ -70729,6 +71007,10 @@
 				"ref_id": "0726C63B",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "071A2FB3",
 				"cell_name": "10 Downing Street"
@@ -70750,6 +71032,10 @@
 				"ref_id": "0727B986",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -70771,6 +71057,10 @@
 				"ref_id": "0729C536",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "0712EC66",
 				"cell_name": "Bank of England"
@@ -70792,6 +71082,10 @@
 				"ref_id": "072D61CE",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"area": "CoventGardenWorldSpace"
 			}
@@ -70812,6 +71106,10 @@
 				"ref_id": "0730A1C2",
 				"form_id": "001C4BE8",
 				"editor_id": "ClothesEyeGlasses",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 7,
 				"cell": "071E8B99",
 				"cell_name": "St Bart's Hospital"
@@ -70833,6 +71131,9 @@
 				"ref_id": "071F4670",
 				"form_id": "001C67B0",
 				"editor_id": "ClothesDog_DogCollarSpiked",
+				"quests": [
+					"0728C3D1"
+				],
 				"value": 7,
 				"cell": "071A2FA8",
 				"cell_name": "Ruined Skyscraper"
@@ -75067,6 +75368,10 @@
 				"ref_id": "0725DF2D",
 				"form_id": "0705E7D1",
 				"editor_id": "Folon_Armo_UniqueGasMaskSP",
+				"quests": [
+					"071A2F20",
+					"0732A12E"
+				],
 				"value": 50,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -76258,6 +76563,9 @@
 				"ref_id": "072534DF",
 				"form_id": "070B6743",
 				"editor_id": "Folon_Armo_ClothesSportJacket01",
+				"quests": [
+					"072BDCC7"
+				],
 				"value": 15,
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
@@ -76279,6 +76587,9 @@
 				"ref_id": "0725DE7E",
 				"form_id": "070B6743",
 				"editor_id": "Folon_Armo_ClothesSportJacket01",
+				"quests": [
+					"072BDCC7"
+				],
 				"value": 15,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -81358,6 +81669,9 @@
 				"ref_id": "07041E4F",
 				"form_id": "070C852B",
 				"editor_id": "Folon_Armo_BackpackBrahmin",
+				"quests": [
+					"072AEAA6"
+				],
 				"value": 25,
 				"area": "LondonWorld"
 			}
@@ -81378,6 +81692,9 @@
 				"ref_id": "070DFC16",
 				"form_id": "070C852B",
 				"editor_id": "Folon_Armo_BackpackBrahmin",
+				"quests": [
+					"072AEAA6"
+				],
 				"value": 25,
 				"cell": "070465A7",
 				"cell_name": "St George"
@@ -81399,6 +81716,9 @@
 				"ref_id": "0725DE41",
 				"form_id": "070C852B",
 				"editor_id": "Folon_Armo_BackpackBrahmin",
+				"quests": [
+					"072AEAA6"
+				],
 				"value": 25,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -81420,6 +81740,9 @@
 				"ref_id": "07271131",
 				"form_id": "070C852B",
 				"editor_id": "Folon_Armo_BackpackBrahmin",
+				"quests": [
+					"072AEAA6"
+				],
 				"value": 25,
 				"cell": "071A2F8F",
 				"cell_name": "Natural History Museum"
@@ -81441,6 +81764,9 @@
 				"ref_id": "072CC64E",
 				"form_id": "070C852B",
 				"editor_id": "Folon_Armo_BackpackBrahmin",
+				"quests": [
+					"072AEAA6"
+				],
 				"value": 25,
 				"area": "LondonWorld"
 			}
@@ -81461,6 +81787,9 @@
 				"ref_id": "07323A56",
 				"form_id": "070C852B",
 				"editor_id": "Folon_Armo_BackpackBrahmin",
+				"quests": [
+					"072AEAA6"
+				],
 				"value": 25,
 				"area": "HackneyWorld"
 			}
@@ -82456,6 +82785,9 @@
 				"ref_id": "0725DE21",
 				"form_id": "071105B1",
 				"editor_id": "Folon_Armo_ClothesVagabonds_Outfit",
+				"quests": [
+					"072AE49E"
+				],
 				"value": 20,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -83357,6 +83689,9 @@
 				"ref_id": "0725DF65",
 				"form_id": "07156509",
 				"editor_id": "Folon_Armo_HatBeefeaterRuff",
+				"quests": [
+					"072BF524"
+				],
 				"value": 10,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -83839,6 +84174,9 @@
 				"ref_id": "0725DDD4",
 				"form_id": "071727BE",
 				"editor_id": "Folon_Armo_ClothesOasisDruidTCW",
+				"quests": [
+					"072E3809"
+				],
 				"value": 10,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -83881,6 +84219,9 @@
 				"ref_id": "0725DDD2",
 				"form_id": "071727C2",
 				"editor_id": "Folon_Armo_HatDruidHoodTCW",
+				"quests": [
+					"072E3809"
+				],
 				"value": 5,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -86197,6 +86538,9 @@
 				"ref_id": "0725DD86",
 				"form_id": "07189AAB",
 				"editor_id": "Folon_Armo_ClothesResident7Prisoner03",
+				"quests": [
+					"07283CDA"
+				],
 				"value": 10,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -87349,6 +87693,10 @@
 				"ref_id": "0725DD41",
 				"form_id": "0719ABBE",
 				"editor_id": "Folon_Armo_UniqueSmythe_Bowler",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 25,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -87370,6 +87718,10 @@
 				"ref_id": "0729B982",
 				"form_id": "0719ABBE",
 				"editor_id": "Folon_Armo_UniqueSmythe_Bowler",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 25,
 				"area": "WestminsterWorld"
 			}
@@ -87390,6 +87742,10 @@
 				"ref_id": "0732717A",
 				"form_id": "0719ABBE",
 				"editor_id": "Folon_Armo_UniqueSmythe_Bowler",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 25,
 				"cell": "071A2F88",
 				"cell_name": "Head of Civil Service's Office"
@@ -87411,6 +87767,10 @@
 				"ref_id": "07328666",
 				"form_id": "0719ABBE",
 				"editor_id": "Folon_Armo_UniqueSmythe_Bowler",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 25,
 				"cell": "070A3ADD",
 				"cell_name": "Strato-Fortress"
@@ -87432,6 +87792,10 @@
 				"ref_id": "0732CBF7",
 				"form_id": "0719ABBE",
 				"editor_id": "Folon_Armo_UniqueSmythe_Bowler",
+				"quests": [
+					"072C12E9",
+					"073153F7"
+				],
 				"value": 25,
 				"cell": "071A2FAB",
 				"cell_name": "Ministry of Information"
@@ -87852,6 +88216,9 @@
 				"ref_id": "0725DD34",
 				"form_id": "0719CBA6",
 				"editor_id": "Folon_Armo_UniqueStarter_Suit",
+				"quests": [
+					"0719ABAA"
+				],
 				"value": 20,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -88619,6 +88986,9 @@
 				"ref_id": "071B3B79",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "071B3834",
 				"cell_name": "House"
@@ -88640,6 +89010,9 @@
 				"ref_id": "071BD61D",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "0710423F",
 				"cell_name": "St Pancras International Hotel"
@@ -88661,6 +89034,9 @@
 				"ref_id": "071F9F5C",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"area": "LondonWorld"
 			}
@@ -88681,6 +89057,9 @@
 				"ref_id": "0721B9DB",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "07111C71",
 				"cell_name": "Tower of London"
@@ -88702,6 +89081,9 @@
 				"ref_id": "07220F18",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "071E3425",
 				"cell_name": "Stables Market"
@@ -88723,6 +89105,9 @@
 				"ref_id": "07220F19",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "071E3425",
 				"cell_name": "Stables Market"
@@ -88744,6 +89129,9 @@
 				"ref_id": "07220F1A",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "071E3425",
 				"cell_name": "Stables Market"
@@ -88765,6 +89153,9 @@
 				"ref_id": "07220F2D",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "071E3425",
 				"cell_name": "Stables Market"
@@ -88786,6 +89177,9 @@
 				"ref_id": "07220FDE",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "071E3425",
 				"cell_name": "Stables Market"
@@ -88807,6 +89201,9 @@
 				"ref_id": "0725DD27",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -88828,6 +89225,9 @@
 				"ref_id": "07296880",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "070CE960",
 				"cell_name": "Thameshaven Market"
@@ -88849,6 +89249,9 @@
 				"ref_id": "072D61CF",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"area": "CoventGardenWorldSpace"
 			}
@@ -88869,6 +89272,9 @@
 				"ref_id": "072E5A0D",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"cell": "07086AEA",
 				"cell_name": "Decrepit Residence"
@@ -88890,6 +89296,9 @@
 				"ref_id": "072EB4AD",
 				"form_id": "071A001F",
 				"editor_id": "Folon_Armo_HatPith",
+				"quests": [
+					"072B4044"
+				],
 				"value": 25,
 				"area": "WestminsterWorld"
 			}
@@ -88972,6 +89381,9 @@
 				"ref_id": "0725DD1F",
 				"form_id": "071BAF45",
 				"editor_id": "Folon_Armo_UATommy",
+				"quests": [
+					"072BCEF5"
+				],
 				"value": 12,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -88993,6 +89405,9 @@
 				"ref_id": "072C8A20",
 				"form_id": "071BAF45",
 				"editor_id": "Folon_Armo_UATommy",
+				"quests": [
+					"072BCEF5"
+				],
 				"value": 12,
 				"area": "LondonWorld"
 			}
@@ -89013,6 +89428,9 @@
 				"ref_id": "0730C82B",
 				"form_id": "071BAF45",
 				"editor_id": "Folon_Armo_UATommy",
+				"quests": [
+					"072BCEF5"
+				],
 				"value": 12,
 				"area": "LondonWorld"
 			}
@@ -91717,6 +92135,7 @@
 				"form_id": "072D5890",
 				"editor_id": "Folon_Armo_ClothesLQCity101Backpack",
 				"quests": [
+					"072AEAA6",
 					"072AEAA6"
 				],
 				"value": 25,
@@ -91962,6 +92381,9 @@
 				"ref_id": "0732A050",
 				"form_id": "072DDF3D",
 				"editor_id": "Folon_Armo_UniqueDLC03_CoA_InquisitorsCowl",
+				"quests": [
+					"072AEA99"
+				],
 				"value": 250,
 				"cell": "0732A007",
 				"cell_name": "Saffron Dev Cell"
@@ -94969,6 +95391,9 @@
 				"ref_id": "07312423",
 				"form_id": "07311274",
 				"editor_id": "Folon_BOOK_LQVagabonds101NOTE09",
+				"quests": [
+					"072BCEF4"
+				],
 				"cell": "071A2F8E",
 				"cell_name": "Swan & Mitre"
 			}
@@ -94989,6 +95414,9 @@
 				"ref_id": "07312420",
 				"form_id": "07311273",
 				"editor_id": "Folon_BOOK_LQVagabonds101NOTE10",
+				"quests": [
+					"072BCEF4"
+				],
 				"cell": "071A2F8E",
 				"cell_name": "Swan & Mitre"
 			}
@@ -96985,6 +97413,9 @@
 				"ref_id": "0730AC45",
 				"form_id": "0730AC3E",
 				"editor_id": "Folon_BOOK_MQ202_00_Petition01",
+				"quests": [
+					"072B84D0"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -97005,6 +97436,9 @@
 				"ref_id": "07309D3A",
 				"form_id": "07309C58",
 				"editor_id": "Folon_BOOK_FQPistols102_EndorsementJS",
+				"quests": [
+					"0729B279"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -97025,6 +97459,9 @@
 				"ref_id": "07309D39",
 				"form_id": "07309C57",
 				"editor_id": "Folon_BOOK_FQPistols102_EndorsementPR",
+				"quests": [
+					"0729B279"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -97045,6 +97482,9 @@
 				"ref_id": "07309D38",
 				"form_id": "07309C56",
 				"editor_id": "Folon_BOOK_FQPistols102_EndorsementCR",
+				"quests": [
+					"0729B279"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -97464,6 +97904,9 @@
 				"ref_id": "0730240C",
 				"form_id": "073023C2",
 				"editor_id": "Folon_BOOK_MQAngel306AppointmentNoticeSigned",
+				"quests": [
+					"072AC4F1"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -97633,6 +98076,9 @@
 				"ref_id": "07302410",
 				"form_id": "072FA53B",
 				"editor_id": "Folon_BOOK_MQAngel305CeremonyInvitation",
+				"quests": [
+					"072AC4EA"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -97653,6 +98099,9 @@
 				"ref_id": "07302416",
 				"form_id": "072FA53A",
 				"editor_id": "Folon_BOOK_MQAngel305RoyalAppointment02",
+				"quests": [
+					"072AC4EA"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -97673,6 +98122,9 @@
 				"ref_id": "07302415",
 				"form_id": "072FA539",
 				"editor_id": "Folon_BOOK_MQAngel305RoyalAppointment01",
+				"quests": [
+					"072AC4EA"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -97801,6 +98253,9 @@
 				"ref_id": "07302417",
 				"form_id": "072FA534",
 				"editor_id": "Folon_BOOK_MQAngel305RoyalAppointment03",
+				"quests": [
+					"072AC4EA"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -97908,6 +98363,7 @@
 				"form_id": "072F995B",
 				"editor_id": "Folon_BOOK_MQFifth304",
 				"quests": [
+					"072BA818",
 					"072BA818"
 				],
 				"cell": "07045FD1",
@@ -98089,6 +98545,9 @@
 				"ref_id": "07302419",
 				"form_id": "072EEDCE",
 				"editor_id": "Folon_BOOK_MQAngel303PassageLetter",
+				"quests": [
+					"072AC4EB"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -98109,6 +98568,9 @@
 				"ref_id": "0730241A",
 				"form_id": "072EEDCD",
 				"editor_id": "Folon_BOOK_MQAngel303HumeLetter",
+				"quests": [
+					"072AC4EB"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -98173,6 +98635,9 @@
 				"ref_id": "0730240F",
 				"form_id": "072EB419",
 				"editor_id": "Folon_BOOK_MQAngel302SmytheLetter",
+				"quests": [
+					"072AC4EE"
+				],
 				"cell": "071BDB26",
 				"cell_name": "Callum Dev Cell"
 			}
@@ -98213,6 +98678,7 @@
 				"form_id": "072E8706",
 				"editor_id": "Folon_BOOK_SQWestminster106Charter",
 				"quests": [
+					"072AEAA7",
 					"072AEAA7"
 				],
 				"cell": "072E8708",
@@ -98824,6 +99290,7 @@
 				"form_id": "0727D39A",
 				"editor_id": "Folon_BOOK_MagCarryweight",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -98851,6 +99318,7 @@
 				"form_id": "0727D399",
 				"editor_id": "Folon_BOOK_MagFusion",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -98877,6 +99345,7 @@
 				"form_id": "0727D398",
 				"editor_id": "Folon_BOOK_MagBash",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -98904,6 +99373,7 @@
 				"form_id": "0727D397",
 				"editor_id": "Folon_BOOK_MagHooligan",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -98931,6 +99401,7 @@
 				"form_id": "0727D396",
 				"editor_id": "Folon_BOOK_MagMurderer",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -98958,6 +99429,7 @@
 				"form_id": "0727D395",
 				"editor_id": "Folon_BOOK_MagThief",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -98985,6 +99457,7 @@
 				"form_id": "0727D394",
 				"editor_id": "Folon_BOOK_MagIntimidation",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -99012,6 +99485,7 @@
 				"form_id": "0727D393",
 				"editor_id": "Folon_BOOK_MagChemConnoisseur",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -99039,6 +99513,7 @@
 				"form_id": "0727D392",
 				"editor_id": "Folon_BOOK_MagCombat",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -99066,6 +99541,7 @@
 				"form_id": "0727D391",
 				"editor_id": "Folon_BOOK_MagThamesfolk",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -99417,6 +99893,9 @@
 				"ref_id": "072DA534",
 				"form_id": "0008E745",
 				"editor_id": "PerkMagGrognakTheBarbarian05",
+				"quests": [
+					"001338B9"
+				],
 				"value": 100,
 				"perks": [
 					"0008E3A6"
@@ -100332,6 +100811,9 @@
 				"ref_id": "072DAD95",
 				"form_id": "00092A8D",
 				"editor_id": "PerkMagGunsAndBullets08",
+				"quests": [
+					"0006F08A"
+				],
 				"value": 100,
 				"perks": [
 					"00092A82"
@@ -102502,6 +102984,100 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					-50939.300781,
+					-69360.335938,
+					5514.323242
+				]
+			},
+			"properties": {
+				"title": "Peacock Feather",
+				"description": "MISC",
+				"ref_id": "070FC7FA",
+				"form_id": "072EE8BA",
+				"editor_id": "Folon_MiscFeatherPeacock",
+				"quests": [
+					"072BA809"
+				],
+				"value": 1,
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					33361.894531,
+					8752.480469,
+					5078.855469
+				]
+			},
+			"properties": {
+				"title": "Peacock Feather",
+				"description": "MISC",
+				"ref_id": "072F209D",
+				"form_id": "072EE8BA",
+				"editor_id": "Folon_MiscFeatherPeacock",
+				"quests": [
+					"072BA809"
+				],
+				"value": 1,
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2268.594727,
+					-11790.754883,
+					1272.850098
+				]
+			},
+			"properties": {
+				"title": "Peacock Feather",
+				"description": "MISC",
+				"ref_id": "07309F47",
+				"form_id": "072EE8BA",
+				"editor_id": "Folon_MiscFeatherPeacock",
+				"quests": [
+					"072BA809"
+				],
+				"value": 1,
+				"cell": "0701D60F",
+				"cell_name": "Canary Wharf Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1575.005127,
+					-7195.159668,
+					1358.097412
+				]
+			},
+			"properties": {
+				"title": "Peacock Feather",
+				"description": "MISC",
+				"ref_id": "07312AC6",
+				"form_id": "072EE8BA",
+				"editor_id": "Folon_MiscFeatherPeacock",
+				"quests": [
+					"072BA809"
+				],
+				"value": 1,
+				"cell": "0701D60F",
+				"cell_name": "Canary Wharf Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-3632.874756,
 					33509.46875,
 					883.10321
@@ -102514,6 +103090,8 @@
 				"form_id": "00178B64",
 				"editor_id": "BobbleHead_Unarmed",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102537,6 +103115,7 @@
 				"form_id": "00178B59",
 				"editor_id": "BobbleHead_LockPicking",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102561,6 +103140,8 @@
 				"form_id": "00178B58",
 				"editor_id": "BobbleHead_Intelligence",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102585,6 +103166,7 @@
 				"form_id": "00178B57",
 				"editor_id": "BobbleHead_Explosives",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102609,6 +103191,7 @@
 				"form_id": "00178B56",
 				"editor_id": "BobbleHead_EnergyWeapons",
 				"quests": [
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102633,6 +103216,8 @@
 				"form_id": "00178B55",
 				"editor_id": "BobbleHead_Endurance",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102657,6 +103242,8 @@
 				"form_id": "00178B54",
 				"editor_id": "BobbleHead_Charisma",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102681,6 +103268,8 @@
 				"form_id": "00178B53",
 				"editor_id": "BobbleHead_BigGuns",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102705,6 +103294,8 @@
 				"form_id": "00178B52",
 				"editor_id": "BobbleHead_Barter",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102729,6 +103320,8 @@
 				"form_id": "00178B63",
 				"editor_id": "BobbleHead_Strength",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102753,6 +103346,8 @@
 				"form_id": "00178B62",
 				"editor_id": "BobbleHead_Speech",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102777,6 +103372,8 @@
 				"form_id": "00178B51",
 				"editor_id": "BobbleHead_Agility",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102801,6 +103398,8 @@
 				"form_id": "00178B61",
 				"editor_id": "BobbleHead_Sneak",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102825,6 +103424,8 @@
 				"form_id": "00178B60",
 				"editor_id": "BobbleHead_SmallGuns",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102849,6 +103450,8 @@
 				"form_id": "00178B5F",
 				"editor_id": "BobbleHead_Science",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102873,6 +103476,8 @@
 				"form_id": "00178B5A",
 				"editor_id": "BobbleHead_Luck",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102897,6 +103502,8 @@
 				"form_id": "00178B5B",
 				"editor_id": "BobbleHead_Medicine",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102921,6 +103528,8 @@
 				"form_id": "00178B5C",
 				"editor_id": "BobbleHead_Melee",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102945,6 +103554,8 @@
 				"form_id": "00178B5D",
 				"editor_id": "BobbleHead_Perception",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -102969,6 +103580,8 @@
 				"form_id": "00178B5E",
 				"editor_id": "BobbleHead_Repair",
 				"quests": [
+					"000AEC4F",
+					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -106580,6 +107193,10 @@
 				"ref_id": "07053332",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -106599,6 +107216,10 @@
 				"ref_id": "07053333",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -106618,6 +107239,10 @@
 				"ref_id": "07168453",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "071679E3",
 				"cell_name": "House"
 			}
@@ -106638,6 +107263,10 @@
 				"ref_id": "07188D24",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "070B3840",
 				"cell_name": "NuSkin"
 			}
@@ -106658,6 +107287,10 @@
 				"ref_id": "07188D25",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "070B3840",
 				"cell_name": "NuSkin"
 			}
@@ -106678,6 +107311,10 @@
 				"ref_id": "0719EBCD",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -106697,6 +107334,10 @@
 				"ref_id": "0724BE24",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
 			}
@@ -106717,6 +107358,10 @@
 				"ref_id": "0724BE25",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
 			}
@@ -106737,6 +107382,10 @@
 				"ref_id": "07260867",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "0710AAF1",
 				"cell_name": "Camelot"
 			}
@@ -106757,6 +107406,10 @@
 				"ref_id": "072632A7",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "072617D9",
 				"cell_name": "Guys Hospital"
 			}
@@ -106777,6 +107430,10 @@
 				"ref_id": "072632D2",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "072617D9",
 				"cell_name": "Guys Hospital"
 			}
@@ -106797,6 +107454,10 @@
 				"ref_id": "07263597",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "072617D9",
 				"cell_name": "Guys Hospital"
 			}
@@ -106817,6 +107478,10 @@
 				"ref_id": "072B9A5C",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "0715BD24",
 				"cell_name": "Booths Pharmacy"
 			}
@@ -106837,6 +107502,10 @@
 				"ref_id": "072B9A6A",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "0715BD24",
 				"cell_name": "Booths Pharmacy"
 			}
@@ -106857,6 +107526,10 @@
 				"ref_id": "072FAF53",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "072FAE4E",
 				"cell_name": ""
 			}
@@ -106877,6 +107550,10 @@
 				"ref_id": "072FB0F9",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "072FAE49",
 				"cell_name": ""
 			}
@@ -106897,6 +107574,10 @@
 				"ref_id": "072FB0FA",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "072FAE49",
 				"cell_name": ""
 			}
@@ -106917,6 +107598,10 @@
 				"ref_id": "0730AEC4",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "071E8B99",
 				"cell_name": "St Bart's Hospital"
 			}
@@ -106937,6 +107622,10 @@
 				"ref_id": "0730BABC",
 				"form_id": "00024057",
 				"editor_id": "RadX",
+				"quests": [
+					"0002125F",
+					"0719FC6F"
+				],
 				"cell": "07165E4E",
 				"cell_name": "Greenwich Foot Tunnel"
 			}
@@ -106957,6 +107646,11 @@
 				"ref_id": "0700BAB5",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"area": "HackneyWorld"
 			}
 		},
@@ -106976,6 +107670,11 @@
 				"ref_id": "07168457",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071679E3",
 				"cell_name": "House"
 			}
@@ -106996,6 +107695,11 @@
 				"ref_id": "0719B16F",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "0719ACCE",
 				"cell_name": "Camden TV Station"
 			}
@@ -107016,6 +107720,11 @@
 				"ref_id": "071E9592",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071E8B99",
 				"cell_name": "St Bart's Hospital"
 			}
@@ -107036,6 +107745,11 @@
 				"ref_id": "071F542C",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071A2FB5",
 				"cell_name": "Butlers Wharf"
 			}
@@ -107056,6 +107770,11 @@
 				"ref_id": "0720FFA6",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071A2F97",
 				"cell_name": "U-96"
 			}
@@ -107076,6 +107795,11 @@
 				"ref_id": "0720FFA7",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071A2F97",
 				"cell_name": "U-96"
 			}
@@ -107096,6 +107820,11 @@
 				"ref_id": "07219D59",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071A2F97",
 				"cell_name": "U-96"
 			}
@@ -107116,6 +107845,11 @@
 				"ref_id": "07235BD6",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071A2FAF",
 				"cell_name": "City Hall"
 			}
@@ -107136,6 +107870,11 @@
 				"ref_id": "0724BE18",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
 			}
@@ -107156,6 +107895,11 @@
 				"ref_id": "0724BE19",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
 			}
@@ -107176,6 +107920,11 @@
 				"ref_id": "072616DF",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071C0B02",
 				"cell_name": "Yes! Toy HQ Upper Floors"
 			}
@@ -107196,6 +107945,11 @@
 				"ref_id": "072616E0",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071C0B02",
 				"cell_name": "Yes! Toy HQ Upper Floors"
 			}
@@ -107216,6 +107970,11 @@
 				"ref_id": "072632B6",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "072617D9",
 				"cell_name": "Guys Hospital"
 			}
@@ -107236,6 +107995,11 @@
 				"ref_id": "072635E1",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "072617D9",
 				"cell_name": "Guys Hospital"
 			}
@@ -107256,6 +108020,11 @@
 				"ref_id": "07266BA3",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071C0B02",
 				"cell_name": "Yes! Toy HQ Upper Floors"
 			}
@@ -107276,6 +108045,11 @@
 				"ref_id": "0726E51A",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "0720C15A",
 				"cell_name": "St Thomas' Hospital"
 			}
@@ -107296,6 +108070,11 @@
 				"ref_id": "07283782",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "0703CDDB",
 				"cell_name": "Victory Gift Shop"
 			}
@@ -107316,6 +108095,11 @@
 				"ref_id": "0729B423",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071A2FBF",
 				"cell_name": "Bethlem Museum of the Mind"
 			}
@@ -107336,6 +108120,11 @@
 				"ref_id": "0729B424",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "071A2FBF",
 				"cell_name": "Bethlem Museum of the Mind"
 			}
@@ -107356,6 +108145,11 @@
 				"ref_id": "072D025A",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -107375,6 +108169,11 @@
 				"ref_id": "072FB0F8",
 				"form_id": "00033778",
 				"editor_id": "Buffout",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "072FAE49",
 				"cell_name": ""
 			}
@@ -107395,6 +108194,12 @@
 				"ref_id": "0704D194",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -107414,6 +108219,12 @@
 				"ref_id": "07068B29",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "070688B5",
 				"cell_name": "The Liberty Spikes"
 			}
@@ -107434,6 +108245,12 @@
 				"ref_id": "0706E584",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -107453,6 +108270,12 @@
 				"ref_id": "070A25DD",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -107472,6 +108295,12 @@
 				"ref_id": "070E05EC",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "070DE87E",
 				"cell_name": ""
 			}
@@ -107492,6 +108321,12 @@
 				"ref_id": "070E05ED",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "070DE87E",
 				"cell_name": ""
 			}
@@ -107512,6 +108347,12 @@
 				"ref_id": "07102D17",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -107531,6 +108372,12 @@
 				"ref_id": "07103215",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "0710216F",
 				"cell_name": ""
 			}
@@ -107551,6 +108398,12 @@
 				"ref_id": "07103216",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "0710216F",
 				"cell_name": ""
 			}
@@ -107571,6 +108424,12 @@
 				"ref_id": "0711C1A0",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "07119769",
 				"cell_name": "Tottenham Court Road Station"
 			}
@@ -107591,6 +108450,12 @@
 				"ref_id": "0715B834",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
 			}
@@ -107611,6 +108476,12 @@
 				"ref_id": "07168336",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "071679E3",
 				"cell_name": "House"
 			}
@@ -107631,6 +108502,12 @@
 				"ref_id": "071A3A1F",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "071A2F8E",
 				"cell_name": "Swan & Mitre"
 			}
@@ -107651,6 +108528,12 @@
 				"ref_id": "071BDEBC",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "071BDC34",
 				"cell_name": "Madeira Inc. Offices"
 			}
@@ -107671,6 +108554,12 @@
 				"ref_id": "071D8E7F",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"area": "IslingtonWorld"
 			}
 		},
@@ -107690,6 +108579,12 @@
 				"ref_id": "071E3878",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "071A2F88",
 				"cell_name": "Head of Civil Service's Office"
 			}
@@ -107710,6 +108605,12 @@
 				"ref_id": "0723D69A",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "071A2FBA",
 				"cell_name": "Tater Factory"
 			}
@@ -107730,6 +108631,12 @@
 				"ref_id": "0724F4DD",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"area": "IslingtonWorld"
 			}
 		},
@@ -107749,6 +108656,12 @@
 				"ref_id": "0725FD75",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "0710AAF1",
 				"cell_name": "Camelot"
 			}
@@ -107769,6 +108682,12 @@
 				"ref_id": "0725FDAB",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "0710AAF1",
 				"cell_name": "Camelot"
 			}
@@ -107789,6 +108708,12 @@
 				"ref_id": "072632AA",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "072617D9",
 				"cell_name": "Guys Hospital"
 			}
@@ -107809,6 +108734,12 @@
 				"ref_id": "072633F2",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "072617D9",
 				"cell_name": "Guys Hospital"
 			}
@@ -107829,6 +108760,12 @@
 				"ref_id": "07279B91",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
 			}
@@ -107849,6 +108786,12 @@
 				"ref_id": "072E7CD3",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "0713A6FA",
 				"cell_name": "Easy Tea Company Offices"
 			}
@@ -107869,6 +108812,12 @@
 				"ref_id": "072FB215",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "072FAE46",
 				"cell_name": ""
 			}
@@ -107889,6 +108838,12 @@
 				"ref_id": "0730E61D",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -107908,6 +108863,12 @@
 				"ref_id": "07318C38",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"cell": "071A2FB4",
 				"cell_name": "One Canada Square"
 			}
@@ -107928,6 +108889,12 @@
 				"ref_id": "07324A7E",
 				"form_id": "0003377B",
 				"editor_id": "Mentats",
+				"quests": [
+					"0005E9D7",
+					"000B2D47",
+					"000EBE71",
+					"072E3832"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -107947,6 +108914,11 @@
 				"ref_id": "07007153",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"area": "HackneyWorld"
 			}
 		},
@@ -107966,6 +108938,11 @@
 				"ref_id": "0700BAAA",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"area": "HackneyWorld"
 			}
 		},
@@ -107985,6 +108962,11 @@
 				"ref_id": "07047B42",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -108004,6 +108986,11 @@
 				"ref_id": "0724BE17",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
 			}
@@ -108024,6 +109011,11 @@
 				"ref_id": "0724BE23",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "0724A0E7",
 				"cell_name": "King Herods"
 			}
@@ -108044,6 +109036,11 @@
 				"ref_id": "0725FD79",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "0710AAF1",
 				"cell_name": "Camelot"
 			}
@@ -108064,6 +109061,11 @@
 				"ref_id": "0726346A",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "072617D9",
 				"cell_name": "Guys Hospital"
 			}
@@ -108084,6 +109086,11 @@
 				"ref_id": "0726359A",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "072617D9",
 				"cell_name": "Guys Hospital"
 			}
@@ -108104,6 +109111,11 @@
 				"ref_id": "07269870",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "0726960A",
 				"cell_name": "Winston's Toys"
 			}
@@ -108124,6 +109136,11 @@
 				"ref_id": "072B27EC",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"cell": "072B079C",
 				"cell_name": "Destroyed Tower"
 			}
@@ -108144,6 +109161,11 @@
 				"ref_id": "072B76C5",
 				"form_id": "0003377D",
 				"editor_id": "Psycho",
+				"quests": [
+					"0002125F",
+					"0005E9D7",
+					"000EBE71"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -108262,6 +109284,9 @@
 				"ref_id": "070E0669",
 				"form_id": "0010129A",
 				"editor_id": "GrapeMentats",
+				"quests": [
+					"03001B43"
+				],
 				"cell": "070DE87B",
 				"cell_name": ""
 			}
@@ -108282,6 +109307,9 @@
 				"ref_id": "071BBE37",
 				"form_id": "0010129A",
 				"editor_id": "GrapeMentats",
+				"quests": [
+					"03001B43"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -108301,6 +109329,9 @@
 				"ref_id": "0722BD89",
 				"form_id": "0010129A",
 				"editor_id": "GrapeMentats",
+				"quests": [
+					"03001B43"
+				],
 				"cell": "071D795A",
 				"cell_name": "Charing Cross Station"
 			}
@@ -108321,6 +109352,9 @@
 				"ref_id": "072F0484",
 				"form_id": "0010129A",
 				"editor_id": "GrapeMentats",
+				"quests": [
+					"03001B43"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -108340,6 +109374,9 @@
 				"ref_id": "073023F7",
 				"form_id": "0010129A",
 				"editor_id": "GrapeMentats",
+				"quests": [
+					"03001B43"
+				],
 				"cell": "071A2F90",
 				"cell_name": "Royal Albert Hall"
 			}
@@ -113276,6 +114313,9 @@
 				"ref_id": "0730D73B",
 				"form_id": "072D7029",
 				"editor_id": "Folon_FoodDogFoodMysteryHumanMeat",
+				"quests": [
+					"07286D66"
+				],
 				"cell": "0724D422",
 				"cell_name": "Prilladog Chum Factory"
 			}
@@ -113296,6 +114336,9 @@
 				"ref_id": "0730D73C",
 				"form_id": "072D7029",
 				"editor_id": "Folon_FoodDogFoodMysteryHumanMeat",
+				"quests": [
+					"07286D66"
+				],
 				"cell": "0724D422",
 				"cell_name": "Prilladog Chum Factory"
 			}
@@ -113316,6 +114359,9 @@
 				"ref_id": "0730D73D",
 				"form_id": "072D7029",
 				"editor_id": "Folon_FoodDogFoodMysteryHumanMeat",
+				"quests": [
+					"07286D66"
+				],
 				"cell": "0724D422",
 				"cell_name": "Prilladog Chum Factory"
 			}
@@ -113336,6 +114382,9 @@
 				"ref_id": "0730D73E",
 				"form_id": "072D7029",
 				"editor_id": "Folon_FoodDogFoodMysteryHumanMeat",
+				"quests": [
+					"07286D66"
+				],
 				"cell": "0724D422",
 				"cell_name": "Prilladog Chum Factory"
 			}
@@ -113356,6 +114405,9 @@
 				"ref_id": "0731E820",
 				"form_id": "072D7029",
 				"editor_id": "Folon_FoodDogFoodMysteryHumanMeat",
+				"quests": [
+					"07286D66"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -113375,6 +114427,9 @@
 				"ref_id": "073243E4",
 				"form_id": "072D7029",
 				"editor_id": "Folon_FoodDogFoodMysteryHumanMeat",
+				"quests": [
+					"07286D66"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -113394,6 +114449,9 @@
 				"ref_id": "07279F7B",
 				"form_id": "00004822",
 				"editor_id": "10mm",
+				"quests": [
+					"00160147"
+				],
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
 			}
@@ -113414,6 +114472,9 @@
 				"ref_id": "0727BD6D",
 				"form_id": "00004822",
 				"editor_id": "10mm",
+				"quests": [
+					"00160147"
+				],
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
 			}
@@ -113434,6 +114495,9 @@
 				"ref_id": "0727BDE8",
 				"form_id": "00004822",
 				"editor_id": "10mm",
+				"quests": [
+					"00160147"
+				],
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
 			}
@@ -113454,6 +114518,9 @@
 				"ref_id": "0727C7F2",
 				"form_id": "00004822",
 				"editor_id": "10mm",
+				"quests": [
+					"00160147"
+				],
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
 			}
@@ -113732,6 +114799,9 @@
 				"ref_id": "0727BD3C",
 				"form_id": "000CE97D",
 				"editor_id": "44",
+				"quests": [
+					"000229E7"
+				],
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
 			}
@@ -114085,6 +115155,9 @@
 				"ref_id": "071BBA1A",
 				"form_id": "000FF21F",
 				"editor_id": "PulseGrenade",
+				"quests": [
+					"0002C8CB"
+				],
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
 			}
@@ -114105,6 +115178,9 @@
 				"ref_id": "071BBA1B",
 				"form_id": "000FF21F",
 				"editor_id": "PulseGrenade",
+				"quests": [
+					"0002C8CB"
+				],
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
 			}
@@ -114125,6 +115201,11 @@
 				"ref_id": "07312411",
 				"form_id": "0010A33D",
 				"editor_id": "PlasmaGrenade",
+				"quests": [
+					"0002C8CB",
+					"000E2058",
+					"000EDE28"
+				],
 				"cell": "07312405",
 				"cell_name": ""
 			}
@@ -114145,6 +115226,11 @@
 				"ref_id": "07314195",
 				"form_id": "0010A33D",
 				"editor_id": "PlasmaGrenade",
+				"quests": [
+					"0002C8CB",
+					"000E2058",
+					"000EDE28"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -114164,6 +115250,11 @@
 				"ref_id": "0731F118",
 				"form_id": "0010A33D",
 				"editor_id": "PlasmaGrenade",
+				"quests": [
+					"0002C8CB",
+					"000E2058",
+					"000EDE28"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -114183,6 +115274,11 @@
 				"ref_id": "07327749",
 				"form_id": "0010A33D",
 				"editor_id": "PlasmaGrenade",
+				"quests": [
+					"0002C8CB",
+					"000E2058",
+					"000EDE28"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -114202,6 +115298,9 @@
 				"ref_id": "07329A23",
 				"form_id": "0010A342",
 				"editor_id": "PlasmaMine",
+				"quests": [
+					"000E2058"
+				],
 				"cell": "070CE960",
 				"cell_name": "Thameshaven Market"
 			}
@@ -114222,6 +115321,9 @@
 				"ref_id": "07329A24",
 				"form_id": "0010A342",
 				"editor_id": "PlasmaMine",
+				"quests": [
+					"000E2058"
+				],
 				"cell": "070CE960",
 				"cell_name": "Thameshaven Market"
 			}
@@ -114242,6 +115344,9 @@
 				"ref_id": "07329C19",
 				"form_id": "0010A342",
 				"editor_id": "PlasmaMine",
+				"quests": [
+					"000E2058"
+				],
 				"area": "CamdenWorld"
 			}
 		},
@@ -114400,6 +115505,9 @@
 				"ref_id": "070DFBF6",
 				"form_id": "0704E15E",
 				"editor_id": "Folon_Weap_Ranged9MM-LugerP09",
+				"quests": [
+					"07299572"
+				],
 				"cell": "070465A7",
 				"cell_name": "St George"
 			}
@@ -114420,6 +115528,9 @@
 				"ref_id": "072DBD7F",
 				"form_id": "0704E15E",
 				"editor_id": "Folon_Weap_Ranged9MM-LugerP09",
+				"quests": [
+					"07299572"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -114560,6 +115671,9 @@
 				"ref_id": "072DBD7C",
 				"form_id": "070B6600",
 				"editor_id": "Folon_Weap_UniqueDardek",
+				"quests": [
+					"0730A958"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -115782,6 +116896,9 @@
 				"ref_id": "072DBDEB",
 				"form_id": "070BE3C6",
 				"editor_id": "Folon_Weap_UniqueCamelotStunBaton",
+				"quests": [
+					"072B659B"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -115902,6 +117019,9 @@
 				"ref_id": "072DBDE7",
 				"form_id": "070BE3D0",
 				"editor_id": "Folon_Weap_MeleeLongSword2h",
+				"quests": [
+					"072BA816"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -116298,6 +117418,9 @@
 				"ref_id": "071F61AE",
 				"form_id": "070BE47C",
 				"editor_id": "Folon_Weap_MeleeRoundersBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "070076B9",
 				"cell_name": "Charterhouse"
 			}
@@ -116318,6 +117441,9 @@
 				"ref_id": "0724F536",
 				"form_id": "070BE47C",
 				"editor_id": "Folon_Weap_MeleeRoundersBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"area": "IslingtonWorld"
 			}
 		},
@@ -116337,6 +117463,9 @@
 				"ref_id": "072B62A2",
 				"form_id": "070BE47C",
 				"editor_id": "Folon_Weap_MeleeRoundersBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"area": "DumpWorld"
 			}
 		},
@@ -116356,6 +117485,9 @@
 				"ref_id": "072DBDE2",
 				"form_id": "070BE47C",
 				"editor_id": "Folon_Weap_MeleeRoundersBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -116970,6 +118102,9 @@
 				"ref_id": "072DBD78",
 				"form_id": "070C9A15",
 				"editor_id": "Folon_Weap_UniqueVintagerifle-MartiniHenryICITQG",
+				"quests": [
+					"072AEAA2"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -117010,6 +118145,10 @@
 				"ref_id": "072DBD76",
 				"form_id": "070D7E22",
 				"editor_id": "Folon_Weap_UniqueBulldog",
+				"quests": [
+					"072B6597",
+					"072B6598"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -117170,6 +118309,9 @@
 				"ref_id": "072DBD72",
 				"form_id": "070D95C5",
 				"editor_id": "Folon_Weap_UniqueRamshackleSMGTheClash",
+				"quests": [
+					"072964A4"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -117230,6 +118372,9 @@
 				"ref_id": "070DA4B9",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -117249,6 +118394,9 @@
 				"ref_id": "07143D1E",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "0714327C",
 				"cell_name": "London Bridge Station"
 			}
@@ -117269,6 +118417,9 @@
 				"ref_id": "0718076C",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "071805BD",
 				"cell_name": "Fesco Extra"
 			}
@@ -117289,6 +118440,9 @@
 				"ref_id": "07198F35",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "07175077",
 				"cell_name": "Bankside Power Station"
 			}
@@ -117309,6 +118463,9 @@
 				"ref_id": "071B64E5",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "07136638",
 				"cell_name": "Imperial War Museum"
 			}
@@ -117329,6 +118486,9 @@
 				"ref_id": "071B64E6",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "07136638",
 				"cell_name": "Imperial War Museum"
 			}
@@ -117349,6 +118509,9 @@
 				"ref_id": "071B64E7",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "07136638",
 				"cell_name": "Imperial War Museum"
 			}
@@ -117369,6 +118532,9 @@
 				"ref_id": "071B64E8",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "07136638",
 				"cell_name": "Imperial War Museum"
 			}
@@ -117389,6 +118555,9 @@
 				"ref_id": "071B64EA",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "07136638",
 				"cell_name": "Imperial War Museum"
 			}
@@ -117409,6 +118578,9 @@
 				"ref_id": "071B64F0",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "07136638",
 				"cell_name": "Imperial War Museum"
 			}
@@ -117429,6 +118601,9 @@
 				"ref_id": "071B64F6",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "07136638",
 				"cell_name": "Imperial War Museum"
 			}
@@ -117449,6 +118624,9 @@
 				"ref_id": "072178A3",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "071E3427",
 				"cell_name": "Arlington School"
 			}
@@ -117469,6 +118647,9 @@
 				"ref_id": "0725D636",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -117488,6 +118669,9 @@
 				"ref_id": "0726FD51",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
 			}
@@ -117508,6 +118692,9 @@
 				"ref_id": "07270644",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
 			}
@@ -117528,6 +118715,9 @@
 				"ref_id": "07270645",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
 			}
@@ -117548,6 +118738,9 @@
 				"ref_id": "07270646",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
 			}
@@ -117568,6 +118761,9 @@
 				"ref_id": "072815D7",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "071A2F99",
 				"cell_name": "Waterloo Waterworks"
 			}
@@ -117588,6 +118784,9 @@
 				"ref_id": "072C9C03",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"area": "DumpWorld"
 			}
 		},
@@ -117607,6 +118806,9 @@
 				"ref_id": "072DBD70",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -117627,6 +118829,9 @@
 				"ref_id": "072DEF34",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"cell": "071061FB",
 				"cell_name": "Cyberfox"
 			}
@@ -117647,6 +118852,9 @@
 				"ref_id": "07311E52",
 				"form_id": "070D9615",
 				"editor_id": "Folon_Weap_RangedServiceRifleLeeEnfield",
+				"quests": [
+					"072AA196"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -118044,6 +119252,9 @@
 				"ref_id": "072967E3",
 				"form_id": "070DB5BF",
 				"editor_id": "Folon_Weap_RangedBattleRifle-FNFAL",
+				"quests": [
+					"072BDCC5"
+				],
 				"cell": "070CE960",
 				"cell_name": "Thameshaven Market"
 			}
@@ -118064,6 +119275,9 @@
 				"ref_id": "072967E4",
 				"form_id": "070DB5BF",
 				"editor_id": "Folon_Weap_RangedBattleRifle-FNFAL",
+				"quests": [
+					"072BDCC5"
+				],
 				"cell": "070CE960",
 				"cell_name": "Thameshaven Market"
 			}
@@ -118084,6 +119298,9 @@
 				"ref_id": "072967E5",
 				"form_id": "070DB5BF",
 				"editor_id": "Folon_Weap_RangedBattleRifle-FNFAL",
+				"quests": [
+					"072BDCC5"
+				],
 				"cell": "070CE960",
 				"cell_name": "Thameshaven Market"
 			}
@@ -118104,6 +119321,9 @@
 				"ref_id": "072DA1AE",
 				"form_id": "070DB5BF",
 				"editor_id": "Folon_Weap_RangedBattleRifle-FNFAL",
+				"quests": [
+					"072BDCC5"
+				],
 				"cell": "0713A6FA",
 				"cell_name": "Easy Tea Company Offices"
 			}
@@ -118124,6 +119344,9 @@
 				"ref_id": "072DBD68",
 				"form_id": "070DB5BF",
 				"editor_id": "Folon_Weap_RangedBattleRifle-FNFAL",
+				"quests": [
+					"072BDCC5"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -118954,6 +120177,9 @@
 				"ref_id": "071270FB",
 				"form_id": "0710C867",
 				"editor_id": "Folon_Weap_UmbrellaWithKnife",
+				"quests": [
+					"072C12E9"
+				],
 				"area": "IslingtonWorld"
 			}
 		},
@@ -118973,6 +120199,9 @@
 				"ref_id": "0712C9E5",
 				"form_id": "0710C867",
 				"editor_id": "Folon_Weap_UmbrellaWithKnife",
+				"quests": [
+					"072C12E9"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -118992,6 +120221,9 @@
 				"ref_id": "071B3B72",
 				"form_id": "0710C867",
 				"editor_id": "Folon_Weap_UmbrellaWithKnife",
+				"quests": [
+					"072C12E9"
+				],
 				"cell": "071B3834",
 				"cell_name": "House"
 			}
@@ -119012,6 +120244,9 @@
 				"ref_id": "072060FC",
 				"form_id": "0710C867",
 				"editor_id": "Folon_Weap_UmbrellaWithKnife",
+				"quests": [
+					"072C12E9"
+				],
 				"cell": "07130FD3",
 				"cell_name": "Forgotten Store"
 			}
@@ -119032,6 +120267,9 @@
 				"ref_id": "07242694",
 				"form_id": "0710C867",
 				"editor_id": "Folon_Weap_UmbrellaWithKnife",
+				"quests": [
+					"072C12E9"
+				],
 				"cell": "071609B1",
 				"cell_name": "Bromley Police Station"
 			}
@@ -119052,6 +120290,9 @@
 				"ref_id": "072967E0",
 				"form_id": "0710C867",
 				"editor_id": "Folon_Weap_UmbrellaWithKnife",
+				"quests": [
+					"072C12E9"
+				],
 				"cell": "070CE960",
 				"cell_name": "Thameshaven Market"
 			}
@@ -119072,6 +120313,9 @@
 				"ref_id": "072DBDD8",
 				"form_id": "0710C867",
 				"editor_id": "Folon_Weap_UmbrellaWithKnife",
+				"quests": [
+					"072C12E9"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -119092,6 +120336,9 @@
 				"ref_id": "072F03F1",
 				"form_id": "0710C867",
 				"editor_id": "Folon_Weap_UmbrellaWithKnife",
+				"quests": [
+					"072C12E9"
+				],
 				"cell": "071F2347",
 				"cell_name": "Westminster University"
 			}
@@ -119132,6 +120379,9 @@
 				"ref_id": "072DBDD7",
 				"form_id": "0713B86D",
 				"editor_id": "Folon_Weap_UniqueGordoStaff_Melee",
+				"quests": [
+					"0729C3F4"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -119507,6 +120757,9 @@
 				"ref_id": "071F4FF8",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "071A2FA8",
 				"cell_name": "Ruined Skyscraper"
 			}
@@ -119527,6 +120780,9 @@
 				"ref_id": "071F5871",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "071A2FB5",
 				"cell_name": "Butlers Wharf"
 			}
@@ -119547,6 +120803,9 @@
 				"ref_id": "071F5874",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "071A2FB5",
 				"cell_name": "Butlers Wharf"
 			}
@@ -119567,6 +120826,9 @@
 				"ref_id": "07217D75",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "0720E593",
 				"cell_name": "Mycroft's House"
 			}
@@ -119587,6 +120849,9 @@
 				"ref_id": "0724F537",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"area": "IslingtonWorld"
 			}
 		},
@@ -119606,6 +120871,9 @@
 				"ref_id": "07252448",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "0724D422",
 				"cell_name": "Prilladog Chum Factory"
 			}
@@ -119626,6 +120894,9 @@
 				"ref_id": "07253EFA",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -119645,6 +120916,9 @@
 				"ref_id": "07274F51",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "071C0B02",
 				"cell_name": "Yes! Toy HQ Upper Floors"
 			}
@@ -119665,6 +120939,9 @@
 				"ref_id": "072967DE",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "070CE960",
 				"cell_name": "Thameshaven Market"
 			}
@@ -119685,6 +120962,9 @@
 				"ref_id": "072A36E9",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -119704,6 +120984,9 @@
 				"ref_id": "072DBDD3",
 				"form_id": "071898E3",
 				"editor_id": "Folon_Weap_MeleeCricketBat",
+				"quests": [
+					"072AEAA8"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -120494,6 +121777,9 @@
 				"ref_id": "072DBD5E",
 				"form_id": "07198B0F",
 				"editor_id": "Folon_Weap_RangedCrudeLaserGun-ZAPGUN_Saugus",
+				"quests": [
+					"072AC4EE"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -120654,6 +121940,9 @@
 				"ref_id": "072DBDF0",
 				"form_id": "072450F3",
 				"editor_id": "Folon_Weap_GrenFloaterGas",
+				"quests": [
+					"072AC4EC"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -120674,6 +121963,9 @@
 				"ref_id": "072BA7C9",
 				"form_id": "07259168",
 				"editor_id": "Folon_Weap_RangedFlintLockPistol",
+				"quests": [
+					"072AC4F1"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -120693,6 +121985,9 @@
 				"ref_id": "072DBD56",
 				"form_id": "07259168",
 				"editor_id": "Folon_Weap_RangedFlintLockPistol",
+				"quests": [
+					"072AC4F1"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -120753,6 +122048,9 @@
 				"ref_id": "072DBDCB",
 				"form_id": "07272E70",
 				"editor_id": "Folon_Weap_UniqueClawHammerLegendary",
+				"quests": [
+					"072BA817"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -120773,6 +122071,10 @@
 				"ref_id": "07274FC6",
 				"form_id": "07272E71",
 				"editor_id": "Folon_Weap_MeleeClawHammer",
+				"quests": [
+					"072AA442",
+					"072BA817"
+				],
 				"cell": "071C0B02",
 				"cell_name": "Yes! Toy HQ Upper Floors"
 			}
@@ -120793,6 +122095,10 @@
 				"ref_id": "072DBDCA",
 				"form_id": "07272E71",
 				"editor_id": "Folon_Weap_MeleeClawHammer",
+				"quests": [
+					"072AA442",
+					"072BA817"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -120813,6 +122119,9 @@
 				"ref_id": "072DBDC9",
 				"form_id": "07272E72",
 				"editor_id": "Folon_Weap_UniqueClawHammerBlueTapeLegendary",
+				"quests": [
+					"072AEAA1"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -121243,6 +122552,9 @@
 				"ref_id": "072DBD59",
 				"form_id": "07292C8F",
 				"editor_id": "Folon_Weap_Unique32-ArgumentPistol",
+				"quests": [
+					"0719C4CD"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -121263,6 +122575,10 @@
 				"ref_id": "072DBDC4",
 				"form_id": "072995DE",
 				"editor_id": "Folon_Weap_UniqueCamelotArondight",
+				"quests": [
+					"072BA816",
+					"072BA818"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -121344,6 +122660,7 @@
 				"form_id": "072C9AD3",
 				"editor_id": "Folon_Weap_UniqueCamelotExcalibur",
 				"quests": [
+					"072B6599",
 					"072B6599"
 				],
 				"area": "LondonWorld"
@@ -121365,6 +122682,9 @@
 				"ref_id": "072DBDC2",
 				"form_id": "072C9AD3",
 				"editor_id": "Folon_Weap_UniqueCamelotExcalibur",
+				"quests": [
+					"072B6599"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -121385,6 +122705,9 @@
 				"ref_id": "072DBE0A",
 				"form_id": "072D2E8B",
 				"editor_id": "Folon_Weap_GrenMouseTrapMIRV",
+				"quests": [
+					"072BA818"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -121444,6 +122767,9 @@
 				"ref_id": "072DBDC1",
 				"form_id": "072D372B",
 				"editor_id": "Folon_Weap_UniqueBALISONG",
+				"quests": [
+					"071B77DD"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -121961,6 +123287,9 @@
 				"ref_id": "072DC92F",
 				"form_id": "072DC932",
 				"editor_id": "Folon_Weap_RangedM72GaussRifle",
+				"quests": [
+					"072C24CB"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -121982,6 +123311,7 @@
 				"form_id": "072DC932",
 				"editor_id": "Folon_Weap_RangedM72GaussRifle",
 				"quests": [
+					"072C24CB",
 					"072C24CB"
 				],
 				"cell": "07175077",
@@ -122024,6 +123354,9 @@
 				"ref_id": "072F239C",
 				"form_id": "072E9804",
 				"editor_id": "Folon_Weap_MeleeKPAMace",
+				"quests": [
+					"072BA816"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -122306,6 +123639,9 @@
 				"ref_id": "0700A081",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "IslingtonWorld"
 			}
 		},
@@ -122325,6 +123661,9 @@
 				"ref_id": "0700B1FD",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "HackneyWorld"
 			}
 		},
@@ -122344,6 +123683,9 @@
 				"ref_id": "0703DED1",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122363,6 +123705,9 @@
 				"ref_id": "070449C3",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122382,6 +123727,9 @@
 				"ref_id": "07059A47",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122401,6 +123749,9 @@
 				"ref_id": "0707D300",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "BankofEnglandWorld"
 			}
 		},
@@ -122420,6 +123771,9 @@
 				"ref_id": "070C3066",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "DumpWorld"
 			}
 		},
@@ -122439,6 +123793,9 @@
 				"ref_id": "07189404",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122458,6 +123815,9 @@
 				"ref_id": "0719C68F",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122477,6 +123837,9 @@
 				"ref_id": "071C3230",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122496,6 +123859,9 @@
 				"ref_id": "072D1942",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122515,6 +123881,9 @@
 				"ref_id": "072EC7EE",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "IslingtonWorld"
 			}
 		},
@@ -122534,6 +123903,9 @@
 				"ref_id": "072EC9E5",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122553,6 +123925,9 @@
 				"ref_id": "072EC9F2",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122572,6 +123947,9 @@
 				"ref_id": "072ECA46",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122591,6 +123969,9 @@
 				"ref_id": "072ECA5E",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122610,6 +123991,9 @@
 				"ref_id": "072ECA68",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122629,6 +124013,9 @@
 				"ref_id": "072ECB16",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "LondonWorld"
 			}
 		},
@@ -122648,6 +124035,9 @@
 				"ref_id": "072ECB81",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "CamdenWorld"
 			}
 		},
@@ -122667,6 +124057,9 @@
 				"ref_id": "072ECBEB",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"area": "IWMWorld"
 			}
 		},
@@ -122686,6 +124079,9 @@
 				"ref_id": "072F2394",
 				"form_id": "072EFDC0",
 				"editor_id": "Folon_Weap_Camera",
+				"quests": [
+					"072ACE02"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -122789,6 +124185,9 @@
 				"ref_id": "07321293",
 				"form_id": "073071B5",
 				"editor_id": "Folon_Weap_RangedCrudeLauncher",
+				"quests": [
+					"072BA815"
+				],
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
 			}
@@ -123011,6 +124410,11 @@
 				"ref_id": "072DBDA7",
 				"form_id": "000DF279",
 				"editor_id": "AmmoGammaCell",
+				"quests": [
+					"00022A00",
+					"001CCDA5",
+					"01003E85"
+				],
 				"value": 10,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -123032,6 +124436,14 @@
 				"ref_id": "0720CE3F",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123053,6 +124465,14 @@
 				"ref_id": "0720CE40",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123074,6 +124494,14 @@
 				"ref_id": "0720CE41",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123095,6 +124523,14 @@
 				"ref_id": "0720CE42",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123116,6 +124552,14 @@
 				"ref_id": "0720CE43",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123137,6 +124581,14 @@
 				"ref_id": "0720CE44",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123158,6 +124610,14 @@
 				"ref_id": "0720CE45",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123179,6 +124639,14 @@
 				"ref_id": "0720CE46",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123200,6 +124668,14 @@
 				"ref_id": "0720CE47",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123221,6 +124697,14 @@
 				"ref_id": "0720CE48",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123242,6 +124726,14 @@
 				"ref_id": "0720CE49",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123263,6 +124755,14 @@
 				"ref_id": "0720CE4A",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123284,6 +124784,14 @@
 				"ref_id": "0720CE4B",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123305,6 +124813,14 @@
 				"ref_id": "0725610E",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123326,6 +124842,14 @@
 				"ref_id": "0725610F",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123347,6 +124871,14 @@
 				"ref_id": "07256110",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123368,6 +124900,14 @@
 				"ref_id": "07256111",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123389,6 +124929,14 @@
 				"ref_id": "07256112",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123410,6 +124958,14 @@
 				"ref_id": "0725EEBB",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123431,6 +124987,14 @@
 				"ref_id": "0725EEBC",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123452,6 +125016,14 @@
 				"ref_id": "0725EEBD",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123473,6 +125045,14 @@
 				"ref_id": "0726BEB0",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123494,6 +125074,14 @@
 				"ref_id": "0726BEB1",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123515,6 +125103,14 @@
 				"ref_id": "0726BEB2",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123536,6 +125132,14 @@
 				"ref_id": "0726BEB3",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123557,6 +125161,14 @@
 				"ref_id": "0726BEB4",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "070C74E7",
 				"cell_name": "Thameshaven"
@@ -123578,6 +125190,14 @@
 				"ref_id": "072B77D6",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"area": "LondonWorld"
 			}
@@ -123598,6 +125218,14 @@
 				"ref_id": "072B77D7",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"area": "LondonWorld"
 			}
@@ -123618,6 +125246,14 @@
 				"ref_id": "072DBDA5",
 				"form_id": "001025AE",
 				"editor_id": "AmmoFlareGun",
+				"quests": [
+					"0005DEE4",
+					"0005DEE4",
+					"0011B36E",
+					"0011B36E",
+					"001CCDA5",
+					"072E3838"
+				],
 				"value": 1,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -123639,6 +125275,11 @@
 				"ref_id": "0729C47A",
 				"form_id": "001025AA",
 				"editor_id": "AmmoAlienBlaster",
+				"quests": [
+					"001CCDA5",
+					"06000807",
+					"0729C3F3"
+				],
 				"value": 1,
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
@@ -123660,6 +125301,11 @@
 				"ref_id": "0729C480",
 				"form_id": "001025AA",
 				"editor_id": "AmmoAlienBlaster",
+				"quests": [
+					"001CCDA5",
+					"06000807",
+					"0729C3F3"
+				],
 				"value": 1,
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
@@ -123681,6 +125327,11 @@
 				"ref_id": "0729C481",
 				"form_id": "001025AA",
 				"editor_id": "AmmoAlienBlaster",
+				"quests": [
+					"001CCDA5",
+					"06000807",
+					"0729C3F3"
+				],
 				"value": 1,
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
@@ -123702,6 +125353,11 @@
 				"ref_id": "0729C482",
 				"form_id": "001025AA",
 				"editor_id": "AmmoAlienBlaster",
+				"quests": [
+					"001CCDA5",
+					"06000807",
+					"0729C3F3"
+				],
 				"value": 1,
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
@@ -123723,6 +125379,11 @@
 				"ref_id": "0729C483",
 				"form_id": "001025AA",
 				"editor_id": "AmmoAlienBlaster",
+				"quests": [
+					"001CCDA5",
+					"06000807",
+					"0729C3F3"
+				],
 				"value": 1,
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
@@ -123744,6 +125405,11 @@
 				"ref_id": "072DBDA0",
 				"form_id": "001025AA",
 				"editor_id": "AmmoAlienBlaster",
+				"quests": [
+					"001CCDA5",
+					"06000807",
+					"0729C3F3"
+				],
 				"value": 1,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -124289,6 +125955,13 @@
 				"ref_id": "07005FE9",
 				"form_id": "000CABA3",
 				"editor_id": "AmmoMissile",
+				"quests": [
+					"000ADCA6",
+					"00176E24",
+					"001CCDA5",
+					"01003E94",
+					"05004AD5"
+				],
 				"value": 25,
 				"area": "HackneyWorld"
 			}
@@ -124309,6 +125982,13 @@
 				"ref_id": "072C2332",
 				"form_id": "000CABA3",
 				"editor_id": "AmmoMissile",
+				"quests": [
+					"000ADCA6",
+					"00176E24",
+					"001CCDA5",
+					"01003E94",
+					"05004AD5"
+				],
 				"value": 25,
 				"cell": "072BA192",
 				"cell_name": "Cutty Sark"
@@ -124330,6 +126010,13 @@
 				"ref_id": "072C2333",
 				"form_id": "000CABA3",
 				"editor_id": "AmmoMissile",
+				"quests": [
+					"000ADCA6",
+					"00176E24",
+					"001CCDA5",
+					"01003E94",
+					"05004AD5"
+				],
 				"value": 25,
 				"cell": "072BA192",
 				"cell_name": "Cutty Sark"
@@ -124351,6 +126038,13 @@
 				"ref_id": "072C2334",
 				"form_id": "000CABA3",
 				"editor_id": "AmmoMissile",
+				"quests": [
+					"000ADCA6",
+					"00176E24",
+					"001CCDA5",
+					"01003E94",
+					"05004AD5"
+				],
 				"value": 25,
 				"cell": "072BA192",
 				"cell_name": "Cutty Sark"
@@ -124372,6 +126066,13 @@
 				"ref_id": "072C2335",
 				"form_id": "000CABA3",
 				"editor_id": "AmmoMissile",
+				"quests": [
+					"000ADCA6",
+					"00176E24",
+					"001CCDA5",
+					"01003E94",
+					"05004AD5"
+				],
 				"value": 25,
 				"cell": "072BA192",
 				"cell_name": "Cutty Sark"
@@ -124393,6 +126094,13 @@
 				"ref_id": "072DBDA8",
 				"form_id": "000CABA3",
 				"editor_id": "AmmoMissile",
+				"quests": [
+					"000ADCA6",
+					"00176E24",
+					"001CCDA5",
+					"01003E94",
+					"05004AD5"
+				],
 				"value": 25,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -124414,6 +126122,11 @@
 				"ref_id": "0711F46B",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
@@ -124435,6 +126148,11 @@
 				"ref_id": "07149C8E",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "070950A5",
 				"cell_name": "Wandsworth Pindar"
@@ -124456,6 +126174,11 @@
 				"ref_id": "072556DA",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
@@ -124477,6 +126200,11 @@
 				"ref_id": "072556DB",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
@@ -124498,6 +126226,11 @@
 				"ref_id": "072556DC",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
@@ -124519,6 +126252,11 @@
 				"ref_id": "072556DD",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
@@ -124540,6 +126278,11 @@
 				"ref_id": "072556DE",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
@@ -124561,6 +126304,11 @@
 				"ref_id": "0727BD3D",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -124582,6 +126330,11 @@
 				"ref_id": "0727BD3E",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -124603,6 +126356,11 @@
 				"ref_id": "0727BD3F",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -124624,6 +126382,11 @@
 				"ref_id": "0727BD40",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -124645,6 +126408,11 @@
 				"ref_id": "0727BD41",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -124666,6 +126434,11 @@
 				"ref_id": "072DBD9B",
 				"form_id": "0009221C",
 				"editor_id": "Ammo44",
+				"quests": [
+					"001CCDA5",
+					"01003E8B",
+					"060431AB"
+				],
 				"value": 3,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -124687,6 +126460,10 @@
 				"ref_id": "0700B120",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"area": "IslingtonWorld"
 			}
@@ -124707,6 +126484,10 @@
 				"ref_id": "0700B121",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"area": "IslingtonWorld"
 			}
@@ -124727,6 +126508,10 @@
 				"ref_id": "0700B122",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"area": "IslingtonWorld"
 			}
@@ -124747,6 +126532,10 @@
 				"ref_id": "0700B123",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"area": "IslingtonWorld"
 			}
@@ -124767,6 +126556,10 @@
 				"ref_id": "0700B124",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"area": "IslingtonWorld"
 			}
@@ -124787,6 +126580,10 @@
 				"ref_id": "0700B125",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"area": "IslingtonWorld"
 			}
@@ -124807,6 +126604,10 @@
 				"ref_id": "0727EB72",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "071FDF4D",
 				"cell_name": "Westminster Underground Station"
@@ -124828,6 +126629,10 @@
 				"ref_id": "0727EB75",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "071FDF4D",
 				"cell_name": "Westminster Underground Station"
@@ -124849,6 +126654,10 @@
 				"ref_id": "0727EB76",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "071FDF4D",
 				"cell_name": "Westminster Underground Station"
@@ -124870,6 +126679,10 @@
 				"ref_id": "0727EB77",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "071FDF4D",
 				"cell_name": "Westminster Underground Station"
@@ -124891,6 +126704,10 @@
 				"ref_id": "0727EB78",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "071FDF4D",
 				"cell_name": "Westminster Underground Station"
@@ -124912,6 +126729,10 @@
 				"ref_id": "0727EB79",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "071FDF4D",
 				"cell_name": "Westminster Underground Station"
@@ -124933,6 +126754,10 @@
 				"ref_id": "0727EB7A",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "071FDF4D",
 				"cell_name": "Westminster Underground Station"
@@ -124954,6 +126779,10 @@
 				"ref_id": "0727EB7B",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "071FDF4D",
 				"cell_name": "Westminster Underground Station"
@@ -124975,6 +126804,10 @@
 				"ref_id": "0727EB7C",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "071FDF4D",
 				"cell_name": "Westminster Underground Station"
@@ -124996,6 +126829,10 @@
 				"ref_id": "072B7725",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"area": "LondonWorld"
 			}
@@ -125016,6 +126853,10 @@
 				"ref_id": "072B7726",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"area": "LondonWorld"
 			}
@@ -125036,6 +126877,10 @@
 				"ref_id": "072B7727",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"area": "LondonWorld"
 			}
@@ -125056,6 +126901,10 @@
 				"ref_id": "072DBD9A",
 				"form_id": "0004CE87",
 				"editor_id": "Ammo38Caliber",
+				"quests": [
+					"001CCDA5",
+					"0719C4CD"
+				],
 				"value": 1,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -125077,6 +126926,12 @@
 				"ref_id": "072696F7",
 				"form_id": "0001F66C",
 				"editor_id": "Ammo5mm",
+				"quests": [
+					"0012221F",
+					"001CCDA5",
+					"01003E91",
+					"072AA438"
+				],
 				"value": 1,
 				"cell": "0726960A",
 				"cell_name": "Winston's Toys"
@@ -125098,6 +126953,12 @@
 				"ref_id": "072696F8",
 				"form_id": "0001F66C",
 				"editor_id": "Ammo5mm",
+				"quests": [
+					"0012221F",
+					"001CCDA5",
+					"01003E91",
+					"072AA438"
+				],
 				"value": 1,
 				"cell": "0726960A",
 				"cell_name": "Winston's Toys"
@@ -125119,6 +126980,12 @@
 				"ref_id": "072696F9",
 				"form_id": "0001F66C",
 				"editor_id": "Ammo5mm",
+				"quests": [
+					"0012221F",
+					"001CCDA5",
+					"01003E91",
+					"072AA438"
+				],
 				"value": 1,
 				"cell": "0726960A",
 				"cell_name": "Winston's Toys"
@@ -125140,6 +127007,12 @@
 				"ref_id": "072696FA",
 				"form_id": "0001F66C",
 				"editor_id": "Ammo5mm",
+				"quests": [
+					"0012221F",
+					"001CCDA5",
+					"01003E91",
+					"072AA438"
+				],
 				"value": 1,
 				"cell": "0726960A",
 				"cell_name": "Winston's Toys"
@@ -125161,6 +127034,12 @@
 				"ref_id": "072DBD9F",
 				"form_id": "0001F66C",
 				"editor_id": "Ammo5mm",
+				"quests": [
+					"0012221F",
+					"001CCDA5",
+					"01003E91",
+					"072AA438"
+				],
 				"value": 1,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -125182,6 +127061,11 @@
 				"ref_id": "07104E7B",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "0710423F",
 				"cell_name": "St Pancras International Hotel"
@@ -125203,6 +127087,11 @@
 				"ref_id": "07104E7C",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "0710423F",
 				"cell_name": "St Pancras International Hotel"
@@ -125224,6 +127113,11 @@
 				"ref_id": "071199BA",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "070A5CE8",
 				"cell_name": "C3Delight Dev Cell"
@@ -125245,6 +127139,11 @@
 				"ref_id": "0711F46C",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
@@ -125266,6 +127165,11 @@
 				"ref_id": "0715E9CB",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125286,6 +127190,11 @@
 				"ref_id": "0715E9CC",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125306,6 +127215,11 @@
 				"ref_id": "0715E9CD",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125326,6 +127240,11 @@
 				"ref_id": "0715E9CE",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125346,6 +127265,11 @@
 				"ref_id": "0715E9CF",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125366,6 +127290,11 @@
 				"ref_id": "0715E9D0",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125386,6 +127315,11 @@
 				"ref_id": "0719F79D",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "07175077",
 				"cell_name": "Bankside Power Station"
@@ -125407,6 +127341,11 @@
 				"ref_id": "0719F79E",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "07175077",
 				"cell_name": "Bankside Power Station"
@@ -125428,6 +127367,11 @@
 				"ref_id": "071F15A8",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "07156523",
 				"cell_name": "Bromley College"
@@ -125449,6 +127393,11 @@
 				"ref_id": "071F4999",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071A2FA8",
 				"cell_name": "Ruined Skyscraper"
@@ -125470,6 +127419,11 @@
 				"ref_id": "0726AE1E",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125490,6 +127444,11 @@
 				"ref_id": "0726AE1F",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125510,6 +127469,11 @@
 				"ref_id": "0726AE20",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125530,6 +127494,11 @@
 				"ref_id": "0726FD43",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
@@ -125551,6 +127520,11 @@
 				"ref_id": "0726FD44",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
@@ -125572,6 +127546,11 @@
 				"ref_id": "0726FD45",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
@@ -125593,6 +127572,11 @@
 				"ref_id": "0726FD46",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
@@ -125614,6 +127598,11 @@
 				"ref_id": "0726FD47",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
@@ -125635,6 +127624,11 @@
 				"ref_id": "0726FD48",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071982C4",
 				"cell_name": "Enfield Factory"
@@ -125656,6 +127650,11 @@
 				"ref_id": "072815DB",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071A2F99",
 				"cell_name": "Waterloo Waterworks"
@@ -125677,6 +127676,11 @@
 				"ref_id": "0729B14F",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "07254631",
 				"cell_name": "Westminster Underground"
@@ -125698,6 +127702,11 @@
 				"ref_id": "0729B150",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "07254631",
 				"cell_name": "Westminster Underground"
@@ -125719,6 +127728,11 @@
 				"ref_id": "0729B151",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "07254631",
 				"cell_name": "Westminster Underground"
@@ -125740,6 +127754,11 @@
 				"ref_id": "0729B152",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "07254631",
 				"cell_name": "Westminster Underground"
@@ -125761,6 +127780,11 @@
 				"ref_id": "072B744F",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125781,6 +127805,11 @@
 				"ref_id": "072B7450",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125801,6 +127830,11 @@
 				"ref_id": "072B7451",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125821,6 +127855,11 @@
 				"ref_id": "072B7452",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"area": "LondonWorld"
 			}
@@ -125841,6 +127880,11 @@
 				"ref_id": "072CDA27",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071DD492",
 				"cell_name": "Tenpenny Manor"
@@ -125862,6 +127906,11 @@
 				"ref_id": "072CDA28",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071DD492",
 				"cell_name": "Tenpenny Manor"
@@ -125883,6 +127932,11 @@
 				"ref_id": "072CDA29",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071DD492",
 				"cell_name": "Tenpenny Manor"
@@ -125904,6 +127958,11 @@
 				"ref_id": "072CDA2A",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "071DD492",
 				"cell_name": "Tenpenny Manor"
@@ -125925,6 +127984,11 @@
 				"ref_id": "072DBD99",
 				"form_id": "0001F66B",
 				"editor_id": "Ammo308Caliber",
+				"quests": [
+					"001CCDA5",
+					"01003E88",
+					"072BCEF5"
+				],
 				"value": 3,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -125946,6 +128010,10 @@
 				"ref_id": "0724E4F4",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
@@ -125967,6 +128035,10 @@
 				"ref_id": "0724E4F5",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
@@ -125988,6 +128060,10 @@
 				"ref_id": "072755FB",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "07274281",
 				"cell_name": "Nuka-Cola Headquaters Top Floor"
@@ -126009,6 +128085,10 @@
 				"ref_id": "072755FC",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "07274281",
 				"cell_name": "Nuka-Cola Headquaters Top Floor"
@@ -126030,6 +128110,10 @@
 				"ref_id": "072755FD",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "07274281",
 				"cell_name": "Nuka-Cola Headquaters Top Floor"
@@ -126051,6 +128135,10 @@
 				"ref_id": "072755FE",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "07274281",
 				"cell_name": "Nuka-Cola Headquaters Top Floor"
@@ -126072,6 +128160,10 @@
 				"ref_id": "072755FF",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "07274281",
 				"cell_name": "Nuka-Cola Headquaters Top Floor"
@@ -126093,6 +128185,10 @@
 				"ref_id": "07275600",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "07274281",
 				"cell_name": "Nuka-Cola Headquaters Top Floor"
@@ -126114,6 +128210,10 @@
 				"ref_id": "0727A944",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -126135,6 +128235,10 @@
 				"ref_id": "0727A945",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -126156,6 +128260,10 @@
 				"ref_id": "072DBD9E",
 				"form_id": "0001F278",
 				"editor_id": "Ammo556",
+				"quests": [
+					"001CCDA5",
+					"01003E89"
+				],
 				"value": 2,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -126177,6 +128285,13 @@
 				"ref_id": "0724FA34",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "0715AEE8",
 				"cell_name": "US Embassy"
@@ -126198,6 +128313,13 @@
 				"ref_id": "072696F5",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "0726960A",
 				"cell_name": "Winston's Toys"
@@ -126219,6 +128341,13 @@
 				"ref_id": "072696F6",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "0726960A",
 				"cell_name": "Winston's Toys"
@@ -126240,6 +128369,13 @@
 				"ref_id": "07274F4E",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "071C0B02",
 				"cell_name": "Yes! Toy HQ Upper Floors"
@@ -126261,6 +128397,13 @@
 				"ref_id": "07276090",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "071037CF",
 				"cell_name": "Submarine Dock"
@@ -126282,6 +128425,13 @@
 				"ref_id": "07276091",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "071037CF",
 				"cell_name": "Submarine Dock"
@@ -126303,6 +128453,13 @@
 				"ref_id": "07276092",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "071037CF",
 				"cell_name": "Submarine Dock"
@@ -126324,6 +128481,13 @@
 				"ref_id": "07276093",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "071037CF",
 				"cell_name": "Submarine Dock"
@@ -126345,6 +128509,13 @@
 				"ref_id": "07279F77",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -126366,6 +128537,13 @@
 				"ref_id": "07279F78",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -126387,6 +128565,13 @@
 				"ref_id": "07279F79",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -126408,6 +128593,13 @@
 				"ref_id": "07279F7A",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -126429,6 +128621,13 @@
 				"ref_id": "0727AB75",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "07279148",
 				"cell_name": "Chuckster's US Embassy"
@@ -126450,6 +128649,13 @@
 				"ref_id": "072B27ED",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "072B079C",
 				"cell_name": "Destroyed Tower"
@@ -126471,6 +128677,13 @@
 				"ref_id": "072C8CD3",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"area": "LondonWorld"
 			}
@@ -126491,6 +128704,13 @@
 				"ref_id": "072DBD97",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -126512,6 +128732,13 @@
 				"ref_id": "07307A00",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "07165E4E",
 				"cell_name": "Greenwich Foot Tunnel"
@@ -126533,6 +128760,13 @@
 				"ref_id": "0730AC27",
 				"form_id": "0001F276",
 				"editor_id": "Ammo10mm",
+				"quests": [
+					"0003B551",
+					"0006FA37",
+					"00160147",
+					"001CCDA5",
+					"072BCEF5"
+				],
 				"value": 2,
 				"cell": "072AADBC",
 				"cell_name": "Relay Tower Maintenance"
@@ -126554,6 +128788,9 @@
 				"ref_id": "072DBDB0",
 				"form_id": "0725916E",
 				"editor_id": "Folon_AmmoFlintBall",
+				"quests": [
+					"072AC4F1"
+				],
 				"value": 2,
 				"cell": "0719A05F",
 				"cell_name": "Quick Test Cell"
@@ -134916,6 +137153,13 @@
 			"editor_id": "FOLON_LQEastminster106Post",
 			"name": "Lexicon Post"
 		},
+		"072AA43B": {
+			"editor_id": "FOLON_LQEastminster106",
+			"name": "Lexicon",
+			"objectives": {
+				"10": "Debate with Jeremy Benthem"
+			}
+		},
 		"07118D8D": {
 			"editor_id": "Folon_Trader_CryptOnTheGreen",
 			"name": "Crypt On The Green Trader"
@@ -135077,6 +137321,21 @@
 				"80": "Check the back alley for Syd",
 				"85": "Speak to Gaunt",
 				"90": "Find Syd"
+			}
+		},
+		"0719ABAA": {
+			"editor_id": "FOLON_MQ101",
+			"name": "Overture"
+		},
+		"071B77DD": {
+			"editor_id": "FOLON_MQ102",
+			"name": "Broken Angel",
+			"objectives": {
+				"10": "Escape the facility",
+				"20": "Pick up the device",
+				"30": "Pick up the torch",
+				"40": "Use the lift",
+				"50": "Find a way out"
 			}
 		},
 		"072BCEF1": {
@@ -135317,6 +137576,9 @@
 				"70": "Visit your new house"
 			}
 		},
+		"07314945": {
+			"editor_id": "FOLON_SQWestminster101_AuctionController"
+		},
 		"072A5DED": {
 			"editor_id": "Folon_LQLambeth104",
 			"name": "Water is Wet",
@@ -135435,6 +137697,10 @@
 				"70": "Tell Kelpe that Jeanine lied"
 			}
 		},
+		"071F7D56": {
+			"editor_id": "FOLON_GMGlobe",
+			"name": "Globe NPC Manager"
+		},
 		"072AEAA5": {
 			"editor_id": "FOLON_FQRoundels103b",
 			"name": "Choose Life",
@@ -135534,6 +137800,29 @@
 				"29": "Speak to the factory boss",
 				"30": "Talk to the Ferryman",
 				"31": "Talk to the Ferryman"
+			}
+		},
+		"072BA806": {
+			"editor_id": "FOLON_SQSouthwark101",
+			"name": "No More Heroes",
+			"objectives": {
+				"1": "Investigate the shouting",
+				"2": "Listen to Allen's speech",
+				"5": "Talk to Harvin",
+				"10": "Find Harvin's office",
+				"11": "Speak to Harvin",
+				"12": "Follow Harvin",
+				"13": "Speak to Allen",
+				"15": "Follow Harvin",
+				"16": "Talk to Allen",
+				"17": "Follow Harvin",
+				"18": "Eliminate Allen",
+				"19": "Kill Harvin",
+				"20": "Speak to Harvin",
+				"21": "Speak to Allen",
+				"161": "Speak to Harvin",
+				"171": "Speak to Allen",
+				"172": "Speak to Harvin"
 			}
 		},
 		"072B658C": {
@@ -135649,6 +137938,15 @@
 		"073204C5": {
 			"editor_id": "Folon_LQGreenwich103Post",
 			"name": "Tea Leaf Post"
+		},
+		"072AEAAA": {
+			"editor_id": "FOLON_LQGreenwich103",
+			"name": "Tea Leaf",
+			"objectives": {
+				"10": "Discreetly Return the Watch",
+				"15": "<Optional> Inform Amanda about the Watch",
+				"20": "Return to Avis"
+			}
 		},
 		"072ACE02": {
 			"editor_id": "FOLON_SQIslington101",
@@ -136138,6 +138436,10 @@
 				"20": "Return Sergeant Neil's Sword"
 			}
 		},
+		"071B7316": {
+			"editor_id": "FOLON_GMThameshaven",
+			"name": "Thameshaven NPC Manager"
+		},
 		"072BA805": {
 			"editor_id": "FOLON_FQThameshaven102",
 			"name": "A Doctor's Orders",
@@ -136149,10 +138451,6 @@
 				"25": "Report in to Dr. Webb",
 				"30": "Return to Bob Clarkson"
 			}
-		},
-		"071B7316": {
-			"editor_id": "FOLON_GMThameshaven",
-			"name": "Thameshaven NPC Manager"
 		},
 		"072F249E": {
 			"editor_id": "FOLON_LQThameshaven104NOTUSED",
@@ -136261,6 +138559,10 @@
 		"072C2D0D": {
 			"editor_id": "FOLON_COM_MadJackTalk",
 			"name": "Mad Jack Talk/Relationship Scene"
+		},
+		"0722DA11": {
+			"editor_id": "FOLON_GMMiller",
+			"name": "Miller's Men NPC Manager"
 		},
 		"07237DB7": {
 			"editor_id": "FOLON_LQCamden101",
@@ -136374,6 +138676,16 @@
 		"072E3824": {
 			"editor_id": "Folon_WorkshopParent",
 			"name": "Workshop Parent Quest"
+		},
+		"0729EB90": {
+			"editor_id": "FOLON_LQCity104",
+			"name": "Temple Troubles",
+			"objectives": {
+				"10": "Investigate the noise",
+				"20": "Help the Protectron",
+				"30": "Speak to the Protectron",
+				"50": "Kill the Cultists"
+			}
 		},
 		"072AA435": {
 			"editor_id": "FOLON_LQSouthwark101",
@@ -136579,19 +138891,128 @@
 			"editor_id": "Folon_GMCaravanTradePostDrBunting",
 			"name": "PC Settlement - Caravan Stop"
 		},
+		"0009BD11": {
+			"editor_id": "DialogueMS11"
+		},
+		"06000808": {
+			"editor_id": "DLC04Grandchester",
+			"name": "Grandchester Mansion Controller Quest"
+		},
+		"0001ED86": {
+			"editor_id": "MQ101",
+			"name": "War Never Changes",
+			"objectives": {
+				"100": "",
+				"110": "",
+				"130": "",
+				"140": "",
+				"145": "",
+				"150": ""
+			}
+		},
+		"000282A7": {
+			"editor_id": "MS07Intro"
+		},
+		"0006FA37": {
+			"editor_id": "RR102",
+			"name": "Tradecraft",
+			"objectives": {
+				"50": "Talk with Deacon",
+				"150": "Meet Deacon at the old highway",
+				"250": "Follow Deacon and find the \"tourist\"",
+				"300": "Talk to Deacon",
+				"400": "Get inside the escape tunnel",
+				"410": "(Optional) Enter base through front entrance",
+				"600": "Get Carrington's Prototype",
+				"700": "Leave The Switchboard",
+				"750": "Meet Deacon at the Old North Church",
+				"810": "Talk to Desdemona",
+				"900": "Follow Desdemona"
+			}
+		},
+		"0014DC84": {
+			"editor_id": "RETravelKMK_BoSM02",
+			"name": "BoSM02 Postquest - Clarke flees from feral ghouls"
+		},
+		"00048516": {
+			"editor_id": "DN054",
+			"name": "Atom Cats Garage",
+			"objectives": {
+				"5": "Talk to Zeke",
+				"10": "Talk to Rowdy",
+				"20": "Repair the water pump at Warwick",
+				"30": "Tell June Warwick about the fix",
+				"40": "Return to Rowdy",
+				"50": "Defeat the Gunners",
+				"60": "Talk to Zeke"
+			}
+		},
+		"00027556": {
+			"editor_id": "MS04",
+			"name": "The Silver Shroud",
+			"objectives": {
+				"25": "Talk with Kent Connolly",
+				"100": "Get the Silver Shroud costume",
+				"200": "Give Kent the Silver Shroud costume",
+				"390": "Talk with Kent",
+				"405": "Listen to Silver Shroud station in Goodneighbor",
+				"410": "Talk with Whitechapel Charlie",
+				"420": "Kill Kendra",
+				"430": "Put calling card on Kendra's body",
+				"440": "Listen to Silver Shroud station in Goodneighbor",
+				"442": "(Optional) Assassinate Shelly Tiller",
+				"445": "(Optional) Collect assassination payment",
+				"450": "Deal with AJ",
+				"490": "Put calling card on AJ's body",
+				"500": "Kill Wayne Delancy",
+				"590": "Put calling card on Wayne's body",
+				"598": "Talk with Hancock",
+				"599": "Listen to Silver Shroud station in Goodneighbor",
+				"600": "Meet with Hancock as the Shroud",
+				"800": "Kill Smiling Kate",
+				"900": "Kill Northy",
+				"950": "Search body for clues",
+				"1000": "Find Kent",
+				"1100": "Listen to Silver Shroud station",
+				"1200": "Kill Sinjin",
+				"1210": "(Optional) Save Kent Connolly",
+				"1300": "Talk with Kent",
+				"1360": "Talk with Kent",
+				"1400": "Meet with Hancock as the Shroud"
+			}
+		},
+		"000A8257": {
+			"editor_id": "InstM02",
+			"name": "Plugging a Leak",
+			"objectives": {
+				"10": "Talk to Alan Binet",
+				"20": "Investigate the Robotics Terminals",
+				"30": "Investigate Binet's Quarters",
+				"33": "Investigate the SRB Terminals",
+				"36": "Investigate the Maintenance Terminal",
+				"40": "Confront Liam Binet",
+				"50": "Report Your Findings to Justin Ayo",
+				"60": "Disable the Safeguards on Justin Ayo's Terminal",
+				"70": "Return to Liam Binet"
+			}
+		},
+		"010008BB": {
+			"editor_id": "DLC01Lair",
+			"name": "[DLC01 - Mechanist's Lair Dungeon Quest]"
+		},
+		"073153F7": {
+			"editor_id": "Folon_Demo_SmytheFate",
+			"name": "SytheFateTest"
+		},
+		"0732A12E": {
+			"editor_id": "FOLON_GMTunnelCough"
+		},
+		"072E3809": {
+			"editor_id": "Folon_RETravelKMK_BoSM02",
+			"name": "BoSM02 Postquest - Clarke flees from feral ghouls"
+		},
 		"071C1C01": {
 			"editor_id": "FOLON_PipboyManager"
-		},
-		"071B77DD": {
-			"editor_id": "FOLON_MQ102",
-			"name": "Broken Angel",
-			"objectives": {
-				"10": "Escape the facility",
-				"20": "Pick up the device",
-				"30": "Pick up the torch",
-				"40": "Use the lift",
-				"50": "Find a way out"
-			}
 		},
 		"0731F5CD": {
 			"editor_id": "FOLON_SQSouthwark103_QC"
@@ -136608,12 +139029,142 @@
 				"60": "Return to the guard"
 			}
 		},
-		"07326EDE": {
-			"editor_id": "FOLON_LQCity105",
-			"name": "Made from Girders",
+		"001338B9": {
+			"editor_id": "V81_04",
+			"name": "Short Stories",
 			"objectives": {
-				"10": "Learn about Nuka-Cola and Ion Brew (<Global=Folon_GLOB_LQCity105Counter>/8)"
+				"100": "Talk to Katy",
+				"200": "Talk to kids when they are in class"
 			}
+		},
+		"0006F08A": {
+			"editor_id": "DN130",
+			"name": "[DN130 - Cambridge Police Station]"
+		},
+		"000AEC4F": {
+			"editor_id": "DNMasterQuest",
+			"name": "[LD DN Master Quest]"
+		},
+		"0002125F": {
+			"editor_id": "FFDiamondCity03",
+			"name": "Botany Class",
+			"objectives": {
+				"10": "Bring a Mutated Fern Flower to Solomon"
+			}
+		},
+		"0005E9D7": {
+			"editor_id": "RECampRJ01",
+			"name": "Drugs"
+		},
+		"000EBE71": {
+			"editor_id": "MQ00MamaMurphy",
+			"name": "The Sight",
+			"objectives": {
+				"10": "Bring Jet to Mama Murphy",
+				"20": "Build Mama Murphy's Chair in Sanctuary",
+				"30": "Bring Mentats to Mama Murphy",
+				"40": "Bring Med-X to Mama Murphy",
+				"50": "Bring Buffout to Mama Murphy",
+				"60": "Bring Psycho to Mama Murphy"
+			}
+		},
+		"000B2D47": {
+			"editor_id": "InstM03",
+			"name": "A House Divided",
+			"objectives": {
+				"10": "Talk to Newton Oberly",
+				"20": "Follow Newton Oberly",
+				"30": "Go to the BioScience Observation Room",
+				"40": "Talk to Lawrence Higgs",
+				"50": "Talk to Lawrence Higgs",
+				"60": "Resolve the Standoff in Hydroponics",
+				"70": "Talk to Newton Oberly",
+				"80": "Open the BioScience Main Door"
+			}
+		},
+		"072E3832": {
+			"editor_id": "Folon_RECampRJ01",
+			"name": "Drugs"
+		},
+		"03001B43": {
+			"editor_id": "DLC03MQ05",
+			"name": "The Way Life Should Be",
+			"objectives": {
+				"50": "Find out DiMA's secret",
+				"100": "Confront DiMA about Avery's murder",
+				"150": "(Optional) Report back to Kasumi",
+				"200": "Investigate the Far Harbor Hotel basement",
+				"300": "Tell Far Harbor about Avery's murder",
+				"400": "Have Teddy Wright examine the skull",
+				"500": "Determine the fate of Acadia",
+				"700": "See DiMA brought to justice",
+				"800": "Watch or partipicate in the attack on Acadia",
+				"900": "Talk with Allen Lee"
+			}
+		},
+		"00160147": {
+			"editor_id": "Tutorial",
+			"name": "Tutorials"
+		},
+		"000229E7": {
+			"editor_id": "MQ106",
+			"name": "Reunions",
+			"objectives": {
+				"10": "Follow Dogmeat",
+				"11": "Search for clues to Kellogg",
+				"12": "Search for clues to Kellogg",
+				"13": "Search for clues to Kellogg",
+				"14": "Search for clues to Kellogg",
+				"15": "Search for clues to Kellogg",
+				"40": "Check on Dogmeat",
+				"50": "Find a way into Fort Hagen",
+				"75": "Search Fort Hagen",
+				"100": "Confront Kellogg",
+				"125": "Kill Kellogg",
+				"150": "Search for More Information",
+				"200": "Discuss Your Findings with Nick",
+				"250": "Discuss Your Findings with Piper"
+			}
+		},
+		"0002C8CB": {
+			"editor_id": "RR302",
+			"name": "Precipice of War",
+			"objectives": {
+				"101": "Warn Desdemona",
+				"200": "Defend Railroad HQ",
+				"300": "Talk with Desdemona",
+				"400": "Secure the Catacombs",
+				"500": "Secure the Church",
+				"600": "Talk with Desdemona",
+				"700": "Meet Tinker Tom at the Police Station",
+				"800": "Eliminate Brotherhood forces",
+				"900": "Talk with Tinker Tom",
+				"950": "Defend the vertibird",
+				"1000": "Talk with Deacon"
+			}
+		},
+		"000E2058": {
+			"editor_id": "Inst301",
+			"name": "Synth Retention",
+			"objectives": {
+				"5": "Talk to Father",
+				"10": "OLD_Talk to Justin Ayo",
+				"20": "Meet up with the Courser",
+				"30": "Reclaim the Rogue Synth",
+				"40": "Return to Father",
+				"50": "Visit Your Quarters"
+			}
+		},
+		"000EDE28": {
+			"editor_id": "InstR04",
+			"name": "Reclamation: <Alias=Dungeon>",
+			"objectives": {
+				"10": "Take the Transmitter to the Captured Synth",
+				"20": "Return to Alana Secord"
+			}
+		},
+		"07299572": {
+			"editor_id": "Folon_Luger_LL"
 		},
 		"0730A958": {
 			"editor_id": "FOLON_LQLondon100",
@@ -136621,6 +139172,186 @@
 			"objectives": {
 				"10": "Find Unusual Call Boxes (<Global=Folon_GLOB_LQLondon100Counter>/15)",
 				"20": "Travel to the Police Box coordinates"
+			}
+		},
+		"00022A00": {
+			"editor_id": "MS09",
+			"name": "The Secret of Cabot House",
+			"objectives": {
+				"110": "Meet Jack outside Parsons State Insane Asylum",
+				"120": "Help Jack reach his office",
+				"130": "Help Jack reach the basement",
+				"140": "Stop the raiders from freeing Lorenzo Cabot",
+				"150": "Kill or Free Lorenzo Cabot",
+				"155": "Talk to Lorenzo Cabot",
+				"160": "Talk to Jack Cabot",
+				"170": "Return to Cabot House",
+				"175": "Talk to Jack Cabot",
+				"180": "Kill the Cabots",
+				"190": "Kill Lorenzo Cabot",
+				"200": "Talk to Lorenzo Cabot",
+				"210": "Talk to Jack Cabot"
+			}
+		},
+		"001CCDA5": {
+			"editor_id": "LegendaryItemQuest"
+		},
+		"01003E85": {
+			"editor_id": "DLC01WorkshopResourceTargetAmmoGammaCell",
+			"objectives": {
+				"5": "Wait for Eyebot to locate <Alias=ResourceMarker>",
+				"10": "Recover the <Alias=ResourceMarker> from <Alias=Dungeon>"
+			}
+		},
+		"0005DEE4": {
+			"editor_id": "Min01",
+			"name": "Sanctuary",
+			"objectives": {
+				"10": "Join Preston Garvey in Sanctuary",
+				"50": "Talk to Sturges",
+				"1000": "Build sheltered beds for Sanctuary settlers (<Global=Min01BedPercent>%)",
+				"1050": "Talk to Sturges",
+				"1100": "Provide power for Sanctuary settlers",
+				"1150": "Talk to Sturges",
+				"1200": "Provide clean water for Sanctuary settlers (<Global=Min01WaterPercent>%)",
+				"1250": "Talk to Sturges",
+				"1300": "Provide food for Sanctuary settlers (<Global=Min01FoodPercent>%)",
+				"1350": "Talk to Sturges",
+				"1400": "Build defenses for Sanctuary (<Global=Min01SafetyPercent>%)",
+				"1450": "Talk to Sturges"
+			}
+		},
+		"0011B36E": {
+			"editor_id": "MinRecruit00",
+			"name": "The First Step",
+			"objectives": {
+				"10": "Talk to the settlers at <Alias=ActualLocation>",
+				"20": "Kill the raiders in <Alias=RaiderDungeon>",
+				"30": "Report your success to settlers at <Alias=ActualLocation>",
+				"40": "Talk to Preston Garvey"
+			}
+		},
+		"072E3838": {
+			"editor_id": "Folon_VMinRecruit00",
+			"name": "The First Step",
+			"objectives": {
+				"10": "Talk to the settlers at <Alias=ActualLocation>",
+				"20": "Kill the raiders in <Alias=RaiderDungeon>",
+				"30": "Report your success to settlers at <Alias=ActualLocation>",
+				"40": "Talk to Preston Garvey"
+			}
+		},
+		"06000807": {
+			"editor_id": "DLC04MS02",
+			"name": "Trip to the Stars",
+			"objectives": {
+				"200": "Follow Cleansed",
+				"210": "Talk to Dara",
+				"300": "Get spacesuits (<Global=DLC04MS02_Spacesuit_Count>/5)",
+				"400": "Deliver spacesuits to Dara",
+				"500": "Talk to Dara",
+				"550": "Listen to Dara",
+				"600": "Talk to Dara at the junkyard",
+				"650": "Clear the junkyard",
+				"700": "Talk to Dara after her speech",
+				"800": "Use 3 fusion cores to power the spaceship",
+				"805": "Install a power distributor",
+				"900": "Talk to Dara",
+				"905": "Start the ride"
+			}
+		},
+		"000ADCA6": {
+			"editor_id": "DN029SecondWaveA"
+		},
+		"00176E24": {
+			"editor_id": "DNPrime_BoS304"
+		},
+		"01003E94": {
+			"editor_id": "DLC01WorkshopResourceTargetAmmoMissile",
+			"objectives": {
+				"5": "Wait for Eyebot to locate <Alias=ResourceMarker>",
+				"10": "Recover the <Alias=ResourceMarker> from <Alias=Dungeon>"
+			}
+		},
+		"05004AD5": {
+			"editor_id": "DLC06E02",
+			"name": "The Watering Hole",
+			"objectives": {
+				"0": "Talk with the Overseer",
+				"50": "Build the Vault 88 Overseer's Desk",
+				"100": "Get the Chemical Research from Hallucigen, Inc.",
+				"200": "Report back to the Overseer",
+				"300": "Build and Power the Soda Fountain Prototype",
+				"400": "Connect a terminal to the Soda Fountain and select experiment parameters",
+				"500": "Let Clem serve soda for an hour",
+				"600": "Talk with Clem",
+				"700": "Talk with the Overseer"
+			}
+		},
+		"01003E8B": {
+			"editor_id": "DLC01WorkshopResourceTargetAmmo44",
+			"objectives": {
+				"5": "Wait for Eyebot to locate <Alias=ResourceMarker>",
+				"10": "Recover the <Alias=ResourceMarker> from <Alias=Dungeon>"
+			}
+		},
+		"060431AB": {
+			"editor_id": "DLC04DryRockGulch",
+			"name": "High Noon at the Gulch",
+			"objectives": {
+				"10": "Investigate Dry Rock Gulch",
+				"20": "Get the Safe Combination Pieces",
+				"30": "(Optional) Win the Shootout",
+				"40": "(Optional) Serve the Drinks",
+				"45": "(Optional) Talk to Doc Phosphate",
+				"50": "(Optional) Drop a Giddyup Buttercup in the Corral",
+				"60": "Get the Key to Mad Mulligan's Mine",
+				"70": "Enter Mad Mulligan's Mine",
+				"100": "Exterminate the Source of the Bloodworms",
+				"110": "Report Back to the Sheriff",
+				"120": "Kill all the Cowboy Protectrons",
+				"1000": "Assign a Gang to Dry Rock Gulch"
+			}
+		},
+		"0012221F": {
+			"editor_id": "FFBunkerHill03",
+			"name": "Prep School",
+			"objectives": {
+				"200": "Rescue any caravan survivors",
+				"300": "Kill Zeller",
+				"400": "Report back to Kessler"
+			}
+		},
+		"01003E91": {
+			"editor_id": "DLC01WorkshopResourceTargetAmmo5mm",
+			"objectives": {
+				"5": "Wait for Eyebot to locate <Alias=ResourceMarker>",
+				"10": "Recover the <Alias=ResourceMarker> from <Alias=Dungeon>"
+			}
+		},
+		"01003E88": {
+			"editor_id": "DLC01WorkshopResourceTargetAmmo308",
+			"objectives": {
+				"5": "Wait for Eyebot to locate <Alias=ResourceMarker>",
+				"10": "Recover the <Alias=ResourceMarker> from <Alias=Dungeon>"
+			}
+		},
+		"01003E89": {
+			"editor_id": "DLC01WorkshopResourceTargetAmmo556",
+			"objectives": {
+				"5": "Wait for Eyebot to locate <Alias=ResourceMarker>",
+				"10": "Recover the <Alias=ResourceMarker> from <Alias=Dungeon>"
+			}
+		},
+		"0003B551": {
+			"editor_id": "REAssaultSC04",
+			"name": "RE Assault: Raiders vs. Scavengers"
+		},
+		"07326EDE": {
+			"editor_id": "FOLON_LQCity105",
+			"name": "Made from Girders",
+			"objectives": {
+				"10": "Learn about Nuka-Cola and Ion Brew (<Global=Folon_GLOB_LQCity105Counter>/8)"
 			}
 		},
 		"072FB956": {
