@@ -941,11 +941,11 @@ function popupOnClick(e) {
   if (o.cell) {
     popup.querySelector('#popup-note').title = `Copy Cell ID to Clipboard (${o.cell})`;
     popup.querySelector('#popup-note').onclick = function() { copyToClipboard(o.cell); };
-    popup.querySelector('#popup-note').classList.add('active');
+    popup.querySelector('#popup-note').classList.add('clickable');
   } else {
     popup.querySelector('#popup-note').removeAttribute('title');
     popup.querySelector('#popup-note').onclick = null;
-    popup.querySelector('#popup-note').classList.remove('active');
+    popup.querySelector('#popup-note').classList.remove('clickable');
   }
 
   popup.querySelector('#popup-data').innerHTML = '<hr/><pre>'+JSON.stringify(o, null, 2) + '</pre>';

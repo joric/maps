@@ -49,6 +49,15 @@ a:hover { text-decoration: underline; }
   opacity: 1;
 }
 
+.clickable {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.clickable:hover {
+  opacity: 1;
+}
+
 .map-link {
   font-size: 14px;
   flex-grow: 1;
@@ -564,15 +573,6 @@ hr { opacity: .6;}
   font-size: 12px;
   margin-top: 2px;
   list-style-type: none;
-}
-
-#popup-note.active {
-  cursor: pointer;
-  opacity: 0.75;
-}
-
-#popup-note.active:hover {
-  opacity: 1;
 }
 
 #popup-subnote {
