@@ -132,7 +132,7 @@
   "KEYM": {"fa": "key", "bg": "mediumseagreen", "type": "Key", "group": "items",
     "items": [
       {"match":"Password", "fa": "asterisk", "type": "Key", "subtype":"Password"},
-      {"match":"KeyCard", "fa": "sd-card", "type": "Key", "subtype":"Keycard"}
+      {"match":"KeyCard", "fa": "id-card", "type": "Key", "subtype":"Keycard"}
     ]
    },
 
@@ -217,7 +217,7 @@
           "Ranger Ridiculous": "Ranger Ridiculous {index}"
           }
         },
-      "Card": {"match": "Card", "fa": "id-card", "bg": "goldenrod", "type": "Note", "subtype":"Visiting Card"}
+      "Card": {"match": "Card", "fa": "address-card", "bg": "goldenrod", "type": "Note", "subtype":"Visiting Card"}
     }
   }
 }
