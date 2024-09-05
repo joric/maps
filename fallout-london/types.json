@@ -128,7 +128,12 @@
 
   "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items"},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
-  "KEYM": {"fa": "key", "bg": "darkcyan", "type": "Key", "group": "items"},
+
+  "KEYM": {"fa": "key", "bg": "goldenrod", "type": "Key", "group": "items",
+    "items": [
+      {"match":"KeyCard", "fa": "sd-card", "bg": "darkcyan", "type": "Key"}
+    ]
+   },
 
   "ALCH": {"fa": "utensils", "bg": "darkcyan", "type": "Ingestible", "group": "items", "group_fa": "utensils",
     "items": {
