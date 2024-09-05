@@ -128,7 +128,7 @@
 
   "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items"},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
-  "KEYM": {"fa": "id-card", "bg": "darkcyan", "type": "ID Card", "group": "items"},
+  "KEYM": {"fa": "id-card", "bg": "darkcyan", "type": "ID Card", "group": "items", "subtype": "Key Card"},
 
   "ALCH": {"fa": "utensils", "bg": "darkcyan", "type": "Ingestible", "group": "items", "group_fa": "utensils",
     "items": {
@@ -211,7 +211,7 @@
           "Ranger Ridiculous": "Ranger Ridiculous {index}"
           }
         },
-      "Card": {"match": "Card", "fa": "id-card", "bg": "goldenrod", "type": "ID Card"}
+      "Card": {"match": "Card", "fa": "id-card", "bg": "goldenrod", "type": "ID Card", "subtype":"Visiting Card"}
     }
   }
 }
