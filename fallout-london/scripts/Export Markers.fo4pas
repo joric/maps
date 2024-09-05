@@ -81,7 +81,7 @@ begin
   end;
 
   sList := TStringList.Create;
-  sList.DelimitedText := 'CONT DOOR NPC_ ARMO BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN ACTI';
+  sList.DelimitedText := 'KEYM CONT DOOR NPC_ ARMO BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN ACTI';
 
   for k := 0 to Pred(sList.Count) do begin
     subcount := 0;
@@ -101,6 +101,7 @@ begin
           end else if f<>mod_f then begin
             continue;
           end else if (Signature(r) = 'ARMO') and (Signature(e) = 'REFR') then begin
+          end else if (Signature(r) = 'KEYM') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'ACTI') and (Signature(e) = 'REFR') then begin
             if (pos('Folon_ACTI_CutethulhuDollActivator', s) = 0)
             and (pos('FOLON_ACTI_LQLondon100', s) = 0)

@@ -8465,6 +8465,4048 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					-20896.640625,
+					32599.390625,
+					5095.688477
+				]
+			},
+			"properties": {
+				"title": "Tower Of London Gate Key",
+				"description": "KEYM",
+				"ref_id": "0719F22E",
+				"form_id": "0732C63E",
+				"editor_id": "Folon_KEYM_TowerOfLondonGateKey",
+				"quests": [
+					"072B658A"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2299.789062,
+					2256.616211,
+					241.778473
+				]
+			},
+			"properties": {
+				"title": "Nigel's Recording Studio Key",
+				"description": "KEYM",
+				"ref_id": "0723A85C",
+				"form_id": "0732B383",
+				"editor_id": "FOLON_KEYM_HackneyNigel",
+				"cell": "07238BDB",
+				"cell_name": "The Mend"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.193329,
+					-84.87915,
+					2.799622
+				]
+			},
+			"properties": {
+				"title": "Key to Lancelot's Cell",
+				"description": "KEYM",
+				"ref_id": "07326FB5",
+				"form_id": "07329C84",
+				"editor_id": "FOLON_KEYM_MQFifth308LanceCell",
+				"quests": [
+					"072BA816",
+					"072BA816"
+				],
+				"cell": "071B5706",
+				"cell_name": "Shadwell Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4534.076172,
+					798.312683,
+					2062.325684
+				]
+			},
+			"properties": {
+				"title": "Missile System Password",
+				"description": "KEYM",
+				"ref_id": "07326B1C",
+				"form_id": "07328B52",
+				"editor_id": "Folon_KEYM_SQSouthwark103_TerminalPassword",
+				"quests": [
+					"072BCEF3"
+				],
+				"cell": "071A2F97",
+				"cell_name": "U-96"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4347.405762,
+					-1287.441895,
+					2376.150879
+				]
+			},
+			"properties": {
+				"title": "Missile System Password",
+				"description": "KEYM",
+				"ref_id": "07328B53",
+				"form_id": "07328B52",
+				"editor_id": "Folon_KEYM_SQSouthwark103_TerminalPassword",
+				"quests": [
+					"072BCEF3"
+				],
+				"cell": "071A2F97",
+				"cell_name": "U-96"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-19830.824219,
+					31978.113281,
+					5447.688477
+				]
+			},
+			"properties": {
+				"title": "Lanthorn Tower Key",
+				"description": "KEYM",
+				"ref_id": "071A850D",
+				"form_id": "073284A9",
+				"editor_id": "Folon_KEYM_TOLPH",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-64358.894531,
+					10778.056641,
+					5134.036133
+				]
+			},
+			"properties": {
+				"title": "Bridge Plaza Terminal Key Card",
+				"description": "KEYM",
+				"ref_id": "07327C32",
+				"form_id": "07327C33",
+				"editor_id": "Folon_KEYM_LambethBridgePlazaTerminalKeyCard",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65048.496094,
+					10769.366211,
+					5444.833008
+				]
+			},
+			"properties": {
+				"title": "Bridge Plaza Terminal Key Card",
+				"description": "KEYM",
+				"ref_id": "07327C34",
+				"form_id": "07327C33",
+				"editor_id": "Folon_KEYM_LambethBridgePlazaTerminalKeyCard",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					127.557205,
+					-1.111256,
+					256.17276
+				]
+			},
+			"properties": {
+				"title": "Lancelot's Room Key",
+				"description": "KEYM",
+				"ref_id": "0729B61E",
+				"form_id": "07327855",
+				"editor_id": "FOLON_KEYM_MQFifth304",
+				"quests": [
+					"072BA818",
+					"072BA818"
+				],
+				"cell": "07045FD1",
+				"cell_name": "The Old Cheese Of Cheshire"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-66192.117187,
+					46829.167969,
+					5146.660156
+				]
+			},
+			"properties": {
+				"title": "Rusted Safe Key",
+				"description": "KEYM",
+				"ref_id": "07327598",
+				"form_id": "07327847",
+				"editor_id": "Folon_KEYM_FQGlobe101_Book4Key",
+				"quests": [
+					"072BF524"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-80265.523438,
+					44964.707031,
+					5159.617188
+				]
+			},
+			"properties": {
+				"title": "Rusted Safe Key",
+				"description": "KEYM",
+				"ref_id": "0732784D",
+				"form_id": "07327847",
+				"editor_id": "Folon_KEYM_FQGlobe101_Book4Key",
+				"quests": [
+					"072BF524"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2142.593994,
+					3376.146973,
+					2709.189941
+				]
+			},
+			"properties": {
+				"title": "Plodd Bins Safe Key",
+				"description": "KEYM",
+				"ref_id": "0732783B",
+				"form_id": "0732783C",
+				"editor_id": "Folon_KEYM_FQGlobe101_Book3Key",
+				"quests": [
+					"072BF524",
+					"072BF524"
+				],
+				"cell": "0715A4E3",
+				"cell_name": "Plodd Bins"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					346.911102,
+					-637.666565,
+					-76.404877
+				]
+			},
+			"properties": {
+				"title": "University Master Password",
+				"description": "KEYM",
+				"ref_id": "072DD718",
+				"form_id": "073246E9",
+				"editor_id": "FOLON_KEYM_LQWestminster106",
+				"quests": [
+					"072AA443",
+					"072AA443"
+				],
+				"cell": "071F2347",
+				"cell_name": "Westminster University"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-7280.414062,
+					50192.269531,
+					721.387878
+				]
+			},
+			"properties": {
+				"title": "Well's Terminal Password",
+				"description": "KEYM",
+				"ref_id": "0732264A",
+				"form_id": "0732258F",
+				"editor_id": "FOLON_KEYM_MadJackQuest_TerminalPassword",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-9643.427734,
+					9303.677734,
+					1596.387329
+				]
+			},
+			"properties": {
+				"title": "Barrier Key",
+				"description": "KEYM",
+				"ref_id": "0731B2F4",
+				"form_id": "0732258E",
+				"editor_id": "Folon_KEYM_COM_ArchieQuest",
+				"quests": [
+					"072BDCC5"
+				],
+				"cell": "070C74E7",
+				"cell_name": "Thameshaven"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					349.008057,
+					-631.707275,
+					35.420864
+				]
+			},
+			"properties": {
+				"title": "Manchester Mike's Safe Key",
+				"description": "KEYM",
+				"ref_id": "0731F6F3",
+				"form_id": "0731F6C6",
+				"editor_id": "Folon_KEYM_FQRoundels103b_MikeSafeKey",
+				"quests": [
+					"072AEAA5",
+					"072AEAA5"
+				],
+				"cell": "0717A514",
+				"cell_name": "Maab House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					40468.394531,
+					-28901.289062,
+					5067.388672
+				]
+			},
+			"properties": {
+				"title": "Preservation Shelter Key",
+				"description": "KEYM",
+				"ref_id": "07302B1F",
+				"form_id": "0731C3D1",
+				"editor_id": "Folon_KEYM_GW205b",
+				"value": 1,
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-107.303894,
+					82.860855,
+					80.241516
+				]
+			},
+			"properties": {
+				"title": "Preservation Shelter Key",
+				"description": "KEYM",
+				"ref_id": "0731D9BF",
+				"form_id": "0731C3D1",
+				"editor_id": "Folon_KEYM_GW205b",
+				"quests": [
+					"072B6595"
+				],
+				"value": 1,
+				"cell": "07169F31",
+				"cell_name": "Smoking Lounge"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-83831.96875,
+					64152.046875,
+					5495.027344
+				]
+			},
+			"properties": {
+				"title": "Churchyard Cage Key",
+				"description": "KEYM",
+				"ref_id": "072D39CC",
+				"form_id": "0731B4C5",
+				"editor_id": "Folon_KEYM_MQCamelot304_CageKey",
+				"quests": [
+					"072B84CA",
+					"072B84CA"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					72765.515625,
+					44731.066406,
+					5070.130859
+				]
+			},
+			"properties": {
+				"title": "Syndicate Factory Key",
+				"description": "KEYM",
+				"ref_id": "0727E278",
+				"form_id": "073188D0",
+				"editor_id": "Folon_KEYM_NewhamIODSFactory",
+				"quests": [
+					"072B457F",
+					"072B457F"
+				],
+				"value": 1,
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2432.061523,
+					3918.518066,
+					1017.811035
+				]
+			},
+			"properties": {
+				"title": "HMS Dredge Armoury Key",
+				"description": "KEYM",
+				"ref_id": "0723988A",
+				"form_id": "0731556C",
+				"editor_id": "Folon_KEYM_GW106ArmouryKey",
+				"quests": [
+					"072B4580",
+					"072B4580",
+					"072F0C90"
+				],
+				"cell": "07210AC7",
+				"cell_name": "HMS Dredge"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-36134.34375,
+					-77254.335938,
+					4885.840332
+				]
+			},
+			"properties": {
+				"title": "Generator Key",
+				"description": "KEYM",
+				"ref_id": "07311DB5",
+				"form_id": "07311DA4",
+				"editor_id": "Folon_KEYM_MQCamelot302_GeneratorKey",
+				"quests": [
+					"072BA80D"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1731.330078,
+					-1392.000244,
+					383.89801
+				]
+			},
+			"properties": {
+				"title": "NuSkin Facility Key",
+				"description": "KEYM",
+				"ref_id": "071898DB",
+				"form_id": "073112AC",
+				"editor_id": "Folon_KEYM_SQWestminster109",
+				"cell": "070B3840",
+				"cell_name": "NuSkin"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1481.700073,
+					1432.000366,
+					384
+				]
+			},
+			"properties": {
+				"title": "NuSkin Facility Key",
+				"description": "KEYM",
+				"ref_id": "07249457",
+				"form_id": "073112AC",
+				"editor_id": "Folon_KEYM_SQWestminster109",
+				"quests": [
+					"0731101F"
+				],
+				"cell": "070B3840",
+				"cell_name": "NuSkin"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1499.703735,
+					1577.048218,
+					1626.334473
+				]
+			},
+			"properties": {
+				"title": "NuSkin Facility Key",
+				"description": "KEYM",
+				"ref_id": "07311557",
+				"form_id": "073112AC",
+				"editor_id": "Folon_KEYM_SQWestminster109",
+				"cell": "070B3840",
+				"cell_name": "NuSkin"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2824.111572,
+					1987.905884,
+					20.892899
+				]
+			},
+			"properties": {
+				"title": "Chum Factory Key",
+				"description": "KEYM",
+				"ref_id": "0730D601",
+				"form_id": "0730D227",
+				"editor_id": "Folon_KEYM_SQSouthwark102_Key",
+				"quests": [
+					"072C0D8A"
+				],
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2662.000488,
+					1299.99939,
+					-664
+				]
+			},
+			"properties": {
+				"title": "Chum Factory Key",
+				"description": "KEYM",
+				"ref_id": "0730D6C9",
+				"form_id": "0730D227",
+				"editor_id": "Folon_KEYM_SQSouthwark102_Key",
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2819.151855,
+					622.264893,
+					-664
+				]
+			},
+			"properties": {
+				"title": "Chum Factory Key",
+				"description": "KEYM",
+				"ref_id": "0730D6CB",
+				"form_id": "0730D227",
+				"editor_id": "Folon_KEYM_SQSouthwark102_Key",
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3103.194092,
+					1708.215942,
+					51.073635
+				]
+			},
+			"properties": {
+				"title": "Chum Factory Key",
+				"description": "KEYM",
+				"ref_id": "0730D755",
+				"form_id": "0730D227",
+				"editor_id": "Folon_KEYM_SQSouthwark102_Key",
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					237.466782,
+					104.135048,
+					333.259155
+				]
+			},
+			"properties": {
+				"title": "Malcolm Rhodes' Safe Key",
+				"description": "KEYM",
+				"ref_id": "0730C9A6",
+				"form_id": "0730C9A4",
+				"editor_id": "Folon_KEYM_FQPistols104_SafeKey",
+				"quests": [
+					"072AD7B3",
+					"072AD7B3"
+				],
+				"cell": "07125D37",
+				"cell_name": "Two Westminster Chairmen"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-114.372063,
+					-652.577637,
+					46.782669
+				]
+			},
+			"properties": {
+				"title": "Malcolm Rhodes' Safe Key",
+				"description": "KEYM",
+				"ref_id": "0732B3BA",
+				"form_id": "0730C9A4",
+				"editor_id": "Folon_KEYM_FQPistols104_SafeKey",
+				"quests": [
+					"072AD7B3"
+				],
+				"cell": "07125D37",
+				"cell_name": "Two Westminster Chairmen"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-7016,
+					3928,
+					968
+				]
+			},
+			"properties": {
+				"title": "West Croydon Station Key",
+				"description": "KEYM",
+				"ref_id": "070B820A",
+				"form_id": "0730C9A3",
+				"editor_id": "Folon_KEYM_FQCroydon_StationKey",
+				"quests": [
+					"072BA807",
+					"072BA807"
+				],
+				"cell": "070B76E5",
+				"cell_name": "West Croydon Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728516,
+					1626.197388,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "07284033",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728027,
+					1370.197266,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "07284034",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728027,
+					1114.19751,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "07284035",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728271,
+					858.197388,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "07284036",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728027,
+					602.197266,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "07284037",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.728027,
+					522.196777,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "07284038",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.728516,
+					778.196777,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "07284039",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"quests": [
+					"07283CDA"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.727539,
+					1546.197021,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "0728403A",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.728271,
+					1290.197021,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "0728403B",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.728027,
+					1034.197021,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Cell Block A Master Key",
+				"description": "KEYM",
+				"ref_id": "0728403C",
+				"form_id": "0730AC3D",
+				"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+				"quests": [
+					"07283CDA"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-166.772293,
+					324.135559,
+					55.836617
+				]
+			},
+			"properties": {
+				"title": "Alain's Safe Key",
+				"description": "KEYM",
+				"ref_id": "073072E7",
+				"form_id": "0730723D",
+				"editor_id": "Folon_KEYM_EastminsterPub02",
+				"cell": "072ADAA5",
+				"cell_name": "Edge of the World"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					416.817322,
+					238.715668,
+					1536
+				]
+			},
+			"properties": {
+				"title": "Science Museum Lab Key",
+				"description": "KEYM",
+				"ref_id": "071BB00E",
+				"form_id": "07303831",
+				"editor_id": "Folon_KEYM_MQ204_LabKey",
+				"quests": [
+					"071F1179",
+					"07283CDA",
+					"071F1179"
+				],
+				"cell": "0711EF3B",
+				"cell_name": "Science Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2230.180908,
+					-1792.454346,
+					654.297363
+				]
+			},
+			"properties": {
+				"title": "Queen's Chamber Key",
+				"description": "KEYM",
+				"ref_id": "072832ED",
+				"form_id": "073023CE",
+				"editor_id": "Folon_KEYM_MQAngel306_QueensChamber",
+				"quests": [
+					"072AC4F1",
+					"072BA815",
+					"072AC4F1"
+				],
+				"cell": "071A2F89",
+				"cell_name": "Buckingham Palace"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1982.956055,
+					1703.937134,
+					1144.535278
+				]
+			},
+			"properties": {
+				"title": "Charter Display Case Key",
+				"description": "KEYM",
+				"ref_id": "072E886C",
+				"form_id": "07301686",
+				"editor_id": "Folon_KEYM_SQWestminster106CharterKey",
+				"cell": "072E8708",
+				"cell_name": "Caledonia"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1250.162842,
+					4457.769043,
+					19.815111
+				]
+			},
+			"properties": {
+				"title": "Eugene's Key",
+				"description": "KEYM",
+				"ref_id": "073013D6",
+				"form_id": "073013D7",
+				"editor_id": "FOLON_KEYM_SQNewham102_EugeneKey",
+				"quests": [
+					"072BCEF5"
+				],
+				"area": "DumpWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-14408,
+					-25736,
+					5064
+				]
+			},
+			"properties": {
+				"title": "Jail Key",
+				"description": "KEYM",
+				"ref_id": "073037D8",
+				"form_id": "073013BE",
+				"editor_id": "FOLON_KEYM_SQNewham102_JailKey",
+				"quests": [
+					"072BCEF5"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-901.116882,
+					-552.854797,
+					-763.80304
+				]
+			},
+			"properties": {
+				"title": "City Hall Closet Key",
+				"description": "KEYM",
+				"ref_id": "071F360E",
+				"form_id": "073011CC",
+				"editor_id": "FOLON_KEYM_SQEastminster104Key01",
+				"cell": "071A2FAF",
+				"cell_name": "City Hall"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-814.993164,
+					-911.739258,
+					-132.19397
+				]
+			},
+			"properties": {
+				"title": "City Hall Closet Key",
+				"description": "KEYM",
+				"ref_id": "072359C1",
+				"form_id": "073011CC",
+				"editor_id": "FOLON_KEYM_SQEastminster104Key01",
+				"cell": "071A2FAF",
+				"cell_name": "City Hall"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-257.876862,
+					572.315735,
+					-479.756409
+				]
+			},
+			"properties": {
+				"title": "City Hall Closet Key",
+				"description": "KEYM",
+				"ref_id": "07235D5D",
+				"form_id": "073011CC",
+				"editor_id": "FOLON_KEYM_SQEastminster104Key01",
+				"cell": "071A2FAF",
+				"cell_name": "City Hall"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-927.755615,
+					-589.594604,
+					-420.305145
+				]
+			},
+			"properties": {
+				"title": "City Hall Closet Key",
+				"description": "KEYM",
+				"ref_id": "073011D1",
+				"form_id": "073011CC",
+				"editor_id": "FOLON_KEYM_SQEastminster104Key01",
+				"cell": "071A2FAF",
+				"cell_name": "City Hall"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-11416.822266,
+					9889.855469,
+					848.639709
+				]
+			},
+			"properties": {
+				"title": "Carl's Shack Key",
+				"description": "KEYM",
+				"ref_id": "072EF012",
+				"form_id": "072FD602",
+				"editor_id": "Folon_KEYM_FQThameshaven101CarlKey",
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6345.903809,
+					33802.71875,
+					4.010365
+				]
+			},
+			"properties": {
+				"title": "Camden Penthouse Key",
+				"description": "KEYM",
+				"ref_id": "07113AFF",
+				"form_id": "072FD601",
+				"editor_id": "Folon_KEYM_FQPistols_PenthouseKey",
+				"quests": [
+					"072AD7B3"
+				],
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					197.250977,
+					-116.455811,
+					378.953857
+				]
+			},
+			"properties": {
+				"title": "Room 5 Key",
+				"description": "KEYM",
+				"ref_id": "072FBBA7",
+				"form_id": "072FB99B",
+				"editor_id": "Folon_KEYM_MQAngel307_Room5Key",
+				"quests": [
+					"072AC4E9"
+				],
+				"cell": "072FB955",
+				"cell_name": "Land's End Inn"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1681.067505,
+					46.564678,
+					-2321.705078
+				]
+			},
+			"properties": {
+				"title": "Chum Machine Terminal Password",
+				"description": "KEYM",
+				"ref_id": "072FB933",
+				"form_id": "072FB92C",
+				"editor_id": "Folon_KEYM_SQSouthwark102_BasementChumMachineTerminalPassword",
+				"quests": [
+					"072C0D8A"
+				],
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					616,
+					-1296,
+					0
+				]
+			},
+			"properties": {
+				"title": "Pub Fridge Key",
+				"description": "KEYM",
+				"ref_id": "071261A3",
+				"form_id": "072FA543",
+				"editor_id": "Folon_KEYM_WestminsterPubFridgeKey",
+				"value": 1,
+				"cell": "07125D37",
+				"cell_name": "Two Westminster Chairmen"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					140.070541,
+					-589.464355,
+					30.787954
+				]
+			},
+			"properties": {
+				"title": "Pub Fridge Key",
+				"description": "KEYM",
+				"ref_id": "072FA545",
+				"form_id": "072FA543",
+				"editor_id": "Folon_KEYM_WestminsterPubFridgeKey",
+				"value": 1,
+				"cell": "07125D37",
+				"cell_name": "Two Westminster Chairmen"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1687.886841,
+					3077.529785,
+					581.579224
+				]
+			},
+			"properties": {
+				"title": "Weapon Locker Key",
+				"description": "KEYM",
+				"ref_id": "072F9FEE",
+				"form_id": "072F996E",
+				"editor_id": "Folon_KEYM_MQFifth305StorageLocker",
+				"area": "IslingtonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2084.864014,
+					4209.367187,
+					-187.607025
+				]
+			},
+			"properties": {
+				"title": "St George Master Key",
+				"description": "KEYM",
+				"ref_id": "072F9ECC",
+				"form_id": "072F996D",
+				"editor_id": "Folon_KEYM_5thColumnKey",
+				"value": 1,
+				"cell": "070465A7",
+				"cell_name": "St George"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2936.35791,
+					4591.01709,
+					-53.84082
+				]
+			},
+			"properties": {
+				"title": "St George Master Key",
+				"description": "KEYM",
+				"ref_id": "0730AA8A",
+				"form_id": "072F996D",
+				"editor_id": "Folon_KEYM_5thColumnKey",
+				"value": 1,
+				"cell": "070465A7",
+				"cell_name": "St George"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4356,
+					919,
+					-654
+				]
+			},
+			"properties": {
+				"title": "Prilladog Chum Factory Basement Access Card",
+				"description": "KEYM",
+				"ref_id": "07252124",
+				"form_id": "072F983B",
+				"editor_id": "Folon_KEYM_SQSouthwark102_BasementAccessCard",
+				"quests": [
+					"072C0D8A",
+					"072C0D8A"
+				],
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					988.961121,
+					818,
+					-2452
+				]
+			},
+			"properties": {
+				"title": "Chum Factory Basement Terminal Password",
+				"description": "KEYM",
+				"ref_id": "07252ABE",
+				"form_id": "072F983A",
+				"editor_id": "Folon_KEYM_SQSouthwark102_BasementTerminalPassword",
+				"quests": [
+					"072C0D8A"
+				],
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					33317.78125,
+					18034.71875,
+					5112.301758
+				]
+			},
+			"properties": {
+				"title": "HMS Dredge Key",
+				"description": "KEYM",
+				"ref_id": "07284C7A",
+				"form_id": "072F0C99",
+				"editor_id": "Folon_KEYM_HMSDredgeKey",
+				"quests": [
+					"072B4580",
+					"072B4580"
+				],
+				"value": 1,
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2166.012451,
+					3797.529297,
+					-293.84079
+				]
+			},
+			"properties": {
+				"title": "Private Lounge Key",
+				"description": "KEYM",
+				"ref_id": "0727F9C1",
+				"form_id": "072EEDD4",
+				"editor_id": "Folon_KEYM_MQAngel303_LoungeKey",
+				"quests": [
+					"072AC4EB",
+					"072AC4EB",
+					"072B658A",
+					"072B84CE"
+				],
+				"cell": "070465A7",
+				"cell_name": "St George"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2029.988037,
+					4008.190918,
+					-309.87851
+				]
+			},
+			"properties": {
+				"title": "Private Lounge Key",
+				"description": "KEYM",
+				"ref_id": "072EEEE6",
+				"form_id": "072EEDD4",
+				"editor_id": "Folon_KEYM_MQAngel303_LoungeKey",
+				"quests": [
+					"072AC4EB",
+					"072AC4EB",
+					"072B658A"
+				],
+				"cell": "070465A7",
+				"cell_name": "St George"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					768.000061,
+					-256.000031,
+					0
+				]
+			},
+			"properties": {
+				"title": "Westminster House Back Door Key",
+				"description": "KEYM",
+				"ref_id": "072CD8B1",
+				"form_id": "072EEDD3",
+				"editor_id": "Folon_KEYM_WestminsterHouse01GardenKey",
+				"quests": [
+					"072AC4F0",
+					"072AC4F0",
+					"072BA80B"
+				],
+				"cell": "071B3834",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-640,
+					1600,
+					-760
+				]
+			},
+			"properties": {
+				"title": "Aquarium Maintenance Key",
+				"description": "KEYM",
+				"ref_id": "07146EE8",
+				"form_id": "072EBF3D",
+				"editor_id": "Folon_KEYM_MQAngel302_Maintenance",
+				"value": 1,
+				"cell": "070B6922",
+				"cell_name": "Lambeth Aquarium"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-764.493958,
+					1378.318481,
+					-768.302551
+				]
+			},
+			"properties": {
+				"title": "Aquarium Maintenance Key",
+				"description": "KEYM",
+				"ref_id": "072EBF75",
+				"form_id": "072EBF3D",
+				"editor_id": "Folon_KEYM_MQAngel302_Maintenance",
+				"value": 1,
+				"cell": "070B6922",
+				"cell_name": "Lambeth Aquarium"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2168,
+					-888,
+					2368
+				]
+			},
+			"properties": {
+				"title": "Bethlem Royal Hospital Key",
+				"description": "KEYM",
+				"ref_id": "071EB4C9",
+				"form_id": "072EBDA8",
+				"editor_id": "Folon_KEYM_CroydonBedlam",
+				"value": 1,
+				"cell": "071A2FBF",
+				"cell_name": "Bethlem Museum of the Mind"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2072,
+					-888,
+					2368
+				]
+			},
+			"properties": {
+				"title": "Bethlem Royal Hospital Key",
+				"description": "KEYM",
+				"ref_id": "071EB4CA",
+				"form_id": "072EBDA8",
+				"editor_id": "Folon_KEYM_CroydonBedlam",
+				"value": 1,
+				"cell": "071A2FBF",
+				"cell_name": "Bethlem Museum of the Mind"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1352,
+					392,
+					2368
+				]
+			},
+			"properties": {
+				"title": "Bethlem Royal Hospital Key",
+				"description": "KEYM",
+				"ref_id": "072EBDB6",
+				"form_id": "072EBDA8",
+				"editor_id": "Folon_KEYM_CroydonBedlam",
+				"value": 1,
+				"cell": "071A2FBF",
+				"cell_name": "Bethlem Museum of the Mind"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4021.123535,
+					39281.964844,
+					625.922119
+				]
+			},
+			"properties": {
+				"title": "Camden Lock House Key",
+				"description": "KEYM",
+				"ref_id": "0710D58A",
+				"form_id": "072EB15F",
+				"editor_id": "Folon_KEYM_FQPistols_HouseKey",
+				"quests": [
+					"0729B279"
+				],
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-7143.95166,
+					-19252.876953,
+					1142.74231
+				]
+			},
+			"properties": {
+				"title": "Camden Lock House Key",
+				"description": "KEYM",
+				"ref_id": "07113AFA",
+				"form_id": "072EB15F",
+				"editor_id": "Folon_KEYM_FQPistols_HouseKey",
+				"quests": [
+					"0729B279"
+				],
+				"cell": "0711397B",
+				"cell_name": "Lock Penthouse"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4744,
+					2488.000732,
+					8
+				]
+			},
+			"properties": {
+				"title": "Gauntlet Office Key",
+				"description": "KEYM",
+				"ref_id": "072CE511",
+				"form_id": "072EA9E3",
+				"editor_id": "Folon_KEYM_Gauntletofficekey",
+				"value": 1,
+				"cell": "071647E7",
+				"cell_name": "The Gauntlet"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5026.480957,
+					2534.774658,
+					67.068771
+				]
+			},
+			"properties": {
+				"title": "Gauntlet Office Key",
+				"description": "KEYM",
+				"ref_id": "072EAA74",
+				"form_id": "072EA9E3",
+				"editor_id": "Folon_KEYM_Gauntletofficekey",
+				"value": 1,
+				"cell": "071647E7",
+				"cell_name": "The Gauntlet"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-608,
+					560,
+					224
+				]
+			},
+			"properties": {
+				"title": "Lambeth Fire Station Key",
+				"description": "KEYM",
+				"ref_id": "07157C74",
+				"form_id": "072E578A",
+				"editor_id": "Folon_KEYM_LambethFireHQKey01",
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-480,
+					432,
+					224
+				]
+			},
+			"properties": {
+				"title": "Lambeth Fire Station Key",
+				"description": "KEYM",
+				"ref_id": "07157C75",
+				"form_id": "072E578A",
+				"editor_id": "Folon_KEYM_LambethFireHQKey01",
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-352,
+					560,
+					224
+				]
+			},
+			"properties": {
+				"title": "Lambeth Fire Station Key",
+				"description": "KEYM",
+				"ref_id": "07157D5C",
+				"form_id": "072E578A",
+				"editor_id": "Folon_KEYM_LambethFireHQKey01",
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-351.999939,
+					-208,
+					224
+				]
+			},
+			"properties": {
+				"title": "Lambeth Fire Station Key",
+				"description": "KEYM",
+				"ref_id": "071FA41D",
+				"form_id": "072E578A",
+				"editor_id": "Folon_KEYM_LambethFireHQKey01",
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-352,
+					48,
+					224
+				]
+			},
+			"properties": {
+				"title": "Lambeth Fire Station Key",
+				"description": "KEYM",
+				"ref_id": "071FA6EE",
+				"form_id": "072E578A",
+				"editor_id": "Folon_KEYM_LambethFireHQKey01",
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-854.94458,
+					606.097107,
+					228.449524
+				]
+			},
+			"properties": {
+				"title": "Lambeth Fire Station Key",
+				"description": "KEYM",
+				"ref_id": "072E578B",
+				"form_id": "072E578A",
+				"editor_id": "Folon_KEYM_LambethFireHQKey01",
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8,
+					128,
+					0
+				]
+			},
+			"properties": {
+				"title": "Maderia Inc. Security Key Card",
+				"description": "KEYM",
+				"ref_id": "071BDCD4",
+				"form_id": "072DD38B",
+				"editor_id": "Folon_KEYM_LQHamlets103Keycard",
+				"quests": [
+					"072AA43F"
+				],
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8.000046,
+					639.999451,
+					0
+				]
+			},
+			"properties": {
+				"title": "Maderia Inc. Security Key Card",
+				"description": "KEYM",
+				"ref_id": "071BDCE7",
+				"form_id": "072DD38B",
+				"editor_id": "Folon_KEYM_LQHamlets103Keycard",
+				"quests": [
+					"072AA43F"
+				],
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					40197.480469,
+					-29634.300781,
+					5125.420898
+				]
+			},
+			"properties": {
+				"title": "Greenwich Station Key",
+				"description": "KEYM",
+				"ref_id": "071C7B7B",
+				"form_id": "072DCDF1",
+				"editor_id": "FOLON_KEYM_GreenwichStationKey",
+				"quests": [
+					"071C76B4",
+					"071C76B4"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-89124.273438,
+					46444.183594,
+					5577.535156
+				]
+			},
+			"properties": {
+				"title": "Footlocker Keys",
+				"description": "KEYM",
+				"ref_id": "072D61A5",
+				"form_id": "072D61B5",
+				"editor_id": "Folon_KEYM_EastminsterAlanhaKey",
+				"quests": [
+					"072AA43D"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6998.401855,
+					902.848572,
+					180.474396
+				]
+			},
+			"properties": {
+				"title": "Tarnished Key",
+				"description": "KEYM",
+				"ref_id": "072D3605",
+				"form_id": "072D58A3",
+				"editor_id": "Folon_KEYM_StPaulsSafeKey",
+				"area": "StPaulsWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7227.382324,
+					702.205566,
+					491.881378
+				]
+			},
+			"properties": {
+				"title": "Tarnished Key",
+				"description": "KEYM",
+				"ref_id": "072D5A89",
+				"form_id": "072D58A3",
+				"editor_id": "Folon_KEYM_StPaulsSafeKey",
+				"area": "StPaulsWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-228,
+					-704,
+					16
+				]
+			},
+			"properties": {
+				"title": "Churchill Library Book Room Key",
+				"description": "KEYM",
+				"ref_id": "072CE19E",
+				"form_id": "072CDC8B",
+				"editor_id": "Folon_KEYM_BromleyLibraryKey",
+				"cell": "072B079D",
+				"cell_name": "Churchill Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-279.052032,
+					492.701935,
+					585.40271
+				]
+			},
+			"properties": {
+				"title": "Churchill Library Book Room Key",
+				"description": "KEYM",
+				"ref_id": "072CE268",
+				"form_id": "072CDC8B",
+				"editor_id": "Folon_KEYM_BromleyLibraryKey",
+				"cell": "072B079D",
+				"cell_name": "Churchill Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-746.069214,
+					2829.001221,
+					4451.978516
+				]
+			},
+			"properties": {
+				"title": "Post Master's Key",
+				"description": "KEYM",
+				"ref_id": "072CE4DC",
+				"form_id": "072CDC8A",
+				"editor_id": "Folon_KEYM_GreenwichGasOfficeKey",
+				"cell": "07053E1B",
+				"cell_name": "London Gas and Heating Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-115.405273,
+					3006.637451,
+					3887.873535
+				]
+			},
+			"properties": {
+				"title": "Post Master's Key",
+				"description": "KEYM",
+				"ref_id": "072CE4DD",
+				"form_id": "072CDC8A",
+				"editor_id": "Folon_KEYM_GreenwichGasOfficeKey",
+				"cell": "07053E1B",
+				"cell_name": "London Gas and Heating Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					93.486664,
+					397.331909,
+					-178.475082
+				]
+			},
+			"properties": {
+				"title": "Banned Books Key",
+				"description": "KEYM",
+				"ref_id": "072B2E1E",
+				"form_id": "072B07A2",
+				"editor_id": "Folon_KEYM_BromleyLibraryBannedKey",
+				"cell": "072B079D",
+				"cell_name": "Churchill Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					28,
+					-188,
+					-240
+				]
+			},
+			"properties": {
+				"title": "Banned Books Key",
+				"description": "KEYM",
+				"ref_id": "072D4383",
+				"form_id": "072B07A2",
+				"editor_id": "Folon_KEYM_BromleyLibraryBannedKey",
+				"cell": "072B079D",
+				"cell_name": "Churchill Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5294.61084,
+					1682.255615,
+					-116.783005
+				]
+			},
+			"properties": {
+				"title": "Monument Hatch Key",
+				"description": "KEYM",
+				"ref_id": "07159137",
+				"form_id": "0729E3F5",
+				"editor_id": "Folon_KEYM_MQ104_Key01",
+				"quests": [
+					"0719C4CD",
+					"0719C4CD"
+				],
+				"cell": "07132652",
+				"cell_name": "Monument"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2448,
+					-4888,
+					1128
+				]
+			},
+			"properties": {
+				"title": "Bank Pindar Key Card",
+				"description": "KEYM",
+				"ref_id": "072099E5",
+				"form_id": "0729C4D9",
+				"editor_id": "Folon_KEYM_BOEKeyCard02",
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2618.18457,
+					-2827.800537,
+					2340.553711
+				]
+			},
+			"properties": {
+				"title": "Bank Pindar Key Card",
+				"description": "KEYM",
+				"ref_id": "0729C4DA",
+				"form_id": "0729C4D9",
+				"editor_id": "Folon_KEYM_BOEKeyCard02",
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2593.078125,
+					-4373.696289,
+					1183.32666
+				]
+			},
+			"properties": {
+				"title": "Bank Vault Key Card",
+				"description": "KEYM",
+				"ref_id": "0729C4C8",
+				"form_id": "0729C4C7",
+				"editor_id": "Folon_KEYM_BOEKeyCard01",
+				"quests": [
+					"07311020",
+					"072C2B45",
+					"07311020"
+				],
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-6134.414062,
+					8933.609375,
+					830.070312
+				]
+			},
+			"properties": {
+				"title": "Innsmouth Suite Key",
+				"description": "KEYM",
+				"ref_id": "07293162",
+				"form_id": "07292CB0",
+				"editor_id": "Folon_KEYM_ThameshavenPlayerRoomKey",
+				"quests": [
+					"072BA80A",
+					"072BA806"
+				],
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1056,
+					-504,
+					0
+				]
+			},
+			"properties": {
+				"title": "BBM Director's Quarters Key",
+				"description": "KEYM",
+				"ref_id": "071AE32F",
+				"form_id": "0728C778",
+				"editor_id": "Folon_KEYM_BBMDirectorKey",
+				"value": 1,
+				"cell": "071AE25F",
+				"cell_name": "Broadcasting House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4589.029297,
+					-292.357819,
+					2232.848877
+				]
+			},
+			"properties": {
+				"title": "BBM Director's Quarters Key",
+				"description": "KEYM",
+				"ref_id": "0728CD88",
+				"form_id": "0728C778",
+				"editor_id": "Folon_KEYM_BBMDirectorKey",
+				"value": 1,
+				"cell": "071AE25F",
+				"cell_name": "Broadcasting House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					446.500183,
+					-519.552979,
+					56.208851
+				]
+			},
+			"properties": {
+				"title": "Broadcast Floor Keycard",
+				"description": "KEYM",
+				"ref_id": "07285E75",
+				"form_id": "07285BAA",
+				"editor_id": "Folon_KEYM_BroadcastingHouseKeycard",
+				"cell": "071AE25F",
+				"cell_name": "Broadcasting House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4154,
+					7456,
+					-2772
+				]
+			},
+			"properties": {
+				"title": "Pump Control Gate Key",
+				"description": "KEYM",
+				"ref_id": "0728035E",
+				"form_id": "0728030B",
+				"editor_id": "Folon_KEYM_WestminsterGateStationGateKey",
+				"cell": "071FDF4D",
+				"cell_name": "Westminster Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1044,
+					-1254,
+					4139
+				]
+			},
+			"properties": {
+				"title": "Nuka-Cola Headquarters Office Key",
+				"description": "KEYM",
+				"ref_id": "07275631",
+				"form_id": "0727E561",
+				"editor_id": "Folon_KEYM_NukaBruKey01",
+				"cell": "07274281",
+				"cell_name": "Nuka-Cola Headquaters Top Floor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1052.569092,
+					-1483.721436,
+					995.776062
+				]
+			},
+			"properties": {
+				"title": "Nuka-Cola Headquarters Office Key",
+				"description": "KEYM",
+				"ref_id": "0727EC32",
+				"form_id": "0727E561",
+				"editor_id": "Folon_KEYM_NukaBruKey01",
+				"cell": "0719BABF",
+				"cell_name": "Nuka-Cola Headquaters"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3031.551025,
+					1890.166992,
+					-445.630646
+				]
+			},
+			"properties": {
+				"title": "Scotland Yard Key",
+				"description": "KEYM",
+				"ref_id": "0727E134",
+				"form_id": "0727D39C",
+				"editor_id": "Folon_KEYM_ScotYardBackRoom",
+				"cell": "0727D38E",
+				"cell_name": "Scotland Yard"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2943.998047,
+					1984.000977,
+					-512
+				]
+			},
+			"properties": {
+				"title": "Scotland Yard Key",
+				"description": "KEYM",
+				"ref_id": "0727E135",
+				"form_id": "0727D39C",
+				"editor_id": "Folon_KEYM_ScotYardBackRoom",
+				"quests": [
+					"07283CDA"
+				],
+				"cell": "0727D38E",
+				"cell_name": "Scotland Yard"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-355.8526,
+					624.755615,
+					12.976645
+				]
+			},
+			"properties": {
+				"title": "Kinoworld Storeroom Key",
+				"description": "KEYM",
+				"ref_id": "07278F81",
+				"form_id": "07278CD3",
+				"editor_id": "Folon_KEYM_KinoworldStoreRoom",
+				"value": 1,
+				"cell": "07180059",
+				"cell_name": "Kinoworld Cinema"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-383.999695,
+					256.000061,
+					0
+				]
+			},
+			"properties": {
+				"title": "Kinoworld Storeroom Key",
+				"description": "KEYM",
+				"ref_id": "07278F82",
+				"form_id": "07278CD3",
+				"editor_id": "Folon_KEYM_KinoworldStoreRoom",
+				"value": 1,
+				"cell": "07180059",
+				"cell_name": "Kinoworld Cinema"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2361.128662,
+					-26356.421875,
+					5142.108887
+				]
+			},
+			"properties": {
+				"title": "Anderson Shelter Key",
+				"description": "KEYM",
+				"ref_id": "072772A7",
+				"form_id": "07276668",
+				"editor_id": "Folon_KEYM_AndersonShelterKey",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3465.657959,
+					-27859.503906,
+					5077.665527
+				]
+			},
+			"properties": {
+				"title": "Anderson Shelter Key",
+				"description": "KEYM",
+				"ref_id": "072772FA",
+				"form_id": "07276668",
+				"editor_id": "Folon_KEYM_AndersonShelterKey",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1230,
+					87,
+					57
+				]
+			},
+			"properties": {
+				"title": "10 Downing Street Maintenance Key",
+				"description": "KEYM",
+				"ref_id": "0726C4D0",
+				"form_id": "0726C118",
+				"editor_id": "Folon_KEYM_10DownStrMaintKey",
+				"cell": "071A2FB3",
+				"cell_name": "10 Downing Street"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					344,
+					-129,
+					384
+				]
+			},
+			"properties": {
+				"title": "10 Downing Street Maintenance Key",
+				"description": "KEYM",
+				"ref_id": "0726C4D1",
+				"form_id": "0726C118",
+				"editor_id": "Folon_KEYM_10DownStrMaintKey",
+				"cell": "071A2FB3",
+				"cell_name": "10 Downing Street"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2668.485352,
+					1242.184448,
+					1529.581665
+				]
+			},
+			"properties": {
+				"title": "St Pancras Int. Bellboy Key",
+				"description": "KEYM",
+				"ref_id": "0725A933",
+				"form_id": "07259C37",
+				"editor_id": "Folon_KEYM_StPancrasHotelKey01",
+				"cell": "0710423F",
+				"cell_name": "St Pancras International Hotel"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					895.999878,
+					-1280,
+					321.465332
+				]
+			},
+			"properties": {
+				"title": "St Pancras Int. Bellboy Key",
+				"description": "KEYM",
+				"ref_id": "0725A93A",
+				"form_id": "07259C37",
+				"editor_id": "Folon_KEYM_StPancrasHotelKey01",
+				"cell": "0710423F",
+				"cell_name": "St Pancras International Hotel"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2802.596191,
+					2650.410889,
+					-788.624573
+				]
+			},
+			"properties": {
+				"title": "Theatre Terminal Key",
+				"description": "KEYM",
+				"ref_id": "0722E7B0",
+				"form_id": "0725095C",
+				"editor_id": "Folon_KEYM_HippoBasementTerminalKeyCard01",
+				"quests": [
+					"07237DB8",
+					"07237DB8"
+				],
+				"cell": "071AD97D",
+				"cell_name": "Hippodrome"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-412.885254,
+					3017,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Biolab Keycard",
+				"description": "KEYM",
+				"ref_id": "0723CAE9",
+				"form_id": "0724EB34",
+				"editor_id": "Folon_KEYM_ABCWlabKeyCard01",
+				"quests": [
+					"072AC4EC"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5218.885254,
+					2633.734375,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Biolab Keycard",
+				"description": "KEYM",
+				"ref_id": "0723D370",
+				"form_id": "0724EB34",
+				"editor_id": "Folon_KEYM_ABCWlabKeyCard01",
+				"quests": [
+					"072AC4EC"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2915.114746,
+					2632.999512,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Biolab Keycard",
+				"description": "KEYM",
+				"ref_id": "07244C2D",
+				"form_id": "0724EB34",
+				"editor_id": "Folon_KEYM_ABCWlabKeyCard01",
+				"quests": [
+					"072AC4EC"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-408.06485,
+					3272.285645,
+					1447.265625
+				]
+			},
+			"properties": {
+				"title": "Biolab Keycard",
+				"description": "KEYM",
+				"ref_id": "0724EDED",
+				"form_id": "0724EB34",
+				"editor_id": "Folon_KEYM_ABCWlabKeyCard01",
+				"quests": [
+					"072AC4EC",
+					"072AC4EC"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2403.114746,
+					2632.999023,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Biolab Keycard",
+				"description": "KEYM",
+				"ref_id": "0724EDEE",
+				"form_id": "0724EB34",
+				"editor_id": "Folon_KEYM_ABCWlabKeyCard01",
+				"quests": [
+					"072AC4EC"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4578.881836,
+					1097.734741,
+					1508.059082
+				]
+			},
+			"properties": {
+				"title": "Biolab Keycard",
+				"description": "KEYM",
+				"ref_id": "0724EDF0",
+				"form_id": "0724EB34",
+				"editor_id": "Folon_KEYM_ABCWlabKeyCard01",
+				"quests": [
+					"072AC4EC"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6242.885742,
+					3657.727051,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Biolab Keycard",
+				"description": "KEYM",
+				"ref_id": "0724EDF2",
+				"form_id": "0724EB34",
+				"editor_id": "Folon_KEYM_ABCWlabKeyCard01",
+				"quests": [
+					"072AC4EC"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2986.709229,
+					753.421997,
+					1051.947876
+				]
+			},
+			"properties": {
+				"title": "Gin Brewery Lobby Key",
+				"description": "KEYM",
+				"ref_id": "0724570C",
+				"form_id": "072450F5",
+				"editor_id": "Folon_KEYM_GinBreweryKey01",
+				"cell": "072450F4",
+				"cell_name": "Houseguard Gin Distillery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3498.212158,
+					1076.357544,
+					474.64624
+				]
+			},
+			"properties": {
+				"title": "Gin Brewery Lobby Key",
+				"description": "KEYM",
+				"ref_id": "0724570D",
+				"form_id": "072450F5",
+				"editor_id": "Folon_KEYM_GinBreweryKey01",
+				"cell": "072450F4",
+				"cell_name": "Houseguard Gin Distillery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4183.700195,
+					951.98584,
+					474.64624
+				]
+			},
+			"properties": {
+				"title": "Gin Brewery Lobby Key",
+				"description": "KEYM",
+				"ref_id": "0724570E",
+				"form_id": "072450F5",
+				"editor_id": "Folon_KEYM_GinBreweryKey01",
+				"cell": "072450F4",
+				"cell_name": "Houseguard Gin Distillery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3996.215332,
+					2358.111572,
+					-231.048492
+				]
+			},
+			"properties": {
+				"title": "Theatre Basement Key",
+				"description": "KEYM",
+				"ref_id": "071B37AD",
+				"form_id": "07240ABC",
+				"editor_id": "Folon_KEYM_HippoBasementKey01",
+				"quests": [
+					"07237DB8"
+				],
+				"cell": "071AD97D",
+				"cell_name": "Hippodrome"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-140.66893,
+					173.618774,
+					569.014526
+				]
+			},
+			"properties": {
+				"title": "Mithraeum Key",
+				"description": "KEYM",
+				"ref_id": "0723E1E0",
+				"form_id": "0723C0AB",
+				"editor_id": "Folon_KEYM_MithraeumKey01",
+				"cell": "07195B6E",
+				"cell_name": "London Mithraeum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					0,
+					640,
+					512
+				]
+			},
+			"properties": {
+				"title": "Mithraeum Key",
+				"description": "KEYM",
+				"ref_id": "0723E1E5",
+				"form_id": "0723C0AB",
+				"editor_id": "Folon_KEYM_MithraeumKey01",
+				"cell": "07195B6E",
+				"cell_name": "London Mithraeum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4107.969238,
+					1291.121704,
+					-140.670029
+				]
+			},
+			"properties": {
+				"title": "Cyberdog Security Key",
+				"description": "KEYM",
+				"ref_id": "07237ECC",
+				"form_id": "07237ECD",
+				"editor_id": "Folon_KEYM_CyberdogSecurityKey01",
+				"cell": "071061FB",
+				"cell_name": "Cyberfox"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4060.562988,
+					375.644775,
+					-115.556923
+				]
+			},
+			"properties": {
+				"title": "Cyberdog Security Key",
+				"description": "KEYM",
+				"ref_id": "07237ECE",
+				"form_id": "07237ECD",
+				"editor_id": "Folon_KEYM_CyberdogSecurityKey01",
+				"cell": "071061FB",
+				"cell_name": "Cyberfox"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1406.401001,
+					-632.0896,
+					653.850586
+				]
+			},
+			"properties": {
+				"title": "Globe Theatre Safe Key",
+				"description": "KEYM",
+				"ref_id": "07237E98",
+				"form_id": "07237E9A",
+				"editor_id": "Folon_KEYM_GlobeSafeKey01",
+				"cell": "071A2FA9",
+				"cell_name": "Shakespeare's Globe"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11.545755,
+					1338.450562,
+					674.573669
+				]
+			},
+			"properties": {
+				"title": "Globe Theatre Safe Key",
+				"description": "KEYM",
+				"ref_id": "07237E9B",
+				"form_id": "07237E9A",
+				"editor_id": "Folon_KEYM_GlobeSafeKey01",
+				"cell": "071A2FA9",
+				"cell_name": "Shakespeare's Globe"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3320.358643,
+					-5068.352051,
+					338.194397
+				]
+			},
+			"properties": {
+				"title": "LCA Security Keys",
+				"description": "KEYM",
+				"ref_id": "0722C894",
+				"form_id": "0722C691",
+				"editor_id": "Folon_KEYM_NewhamLCASecurityDoorKey01",
+				"cell": "071A2F92",
+				"cell_name": "London City Airport"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4887.229004,
+					-5121.845215,
+					280.219391
+				]
+			},
+			"properties": {
+				"title": "LCA Security Keys",
+				"description": "KEYM",
+				"ref_id": "0722C895",
+				"form_id": "0722C691",
+				"editor_id": "Folon_KEYM_NewhamLCASecurityDoorKey01",
+				"cell": "071A2F92",
+				"cell_name": "London City Airport"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					744.002197,
+					-3496.001953,
+					1512
+				]
+			},
+			"properties": {
+				"title": "Bank Manager Key",
+				"description": "KEYM",
+				"ref_id": "072218CD",
+				"form_id": "0722211B",
+				"editor_id": "Folon_KEYM_BOEKey02",
+				"value": 1,
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					133.637177,
+					-616.005737,
+					1550.53479
+				]
+			},
+			"properties": {
+				"title": "Bank Manager Key",
+				"description": "KEYM",
+				"ref_id": "0722211C",
+				"form_id": "0722211B",
+				"editor_id": "Folon_KEYM_BOEKey02",
+				"value": 1,
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					112.000992,
+					-4131.586426,
+					1512.989746
+				]
+			},
+			"properties": {
+				"title": "Bank of Engand Key",
+				"description": "KEYM",
+				"ref_id": "07221523",
+				"form_id": "072218CA",
+				"editor_id": "Folon_KEYM_BOEKey01",
+				"value": 1,
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-866.461243,
+					-4587.649902,
+					1886.110596
+				]
+			},
+			"properties": {
+				"title": "Bank of Engand Key",
+				"description": "KEYM",
+				"ref_id": "072218CB",
+				"form_id": "072218CA",
+				"editor_id": "Folon_KEYM_BOEKey01",
+				"value": 1,
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-784,
+					-4632,
+					1768
+				]
+			},
+			"properties": {
+				"title": "Bank of Engand Key",
+				"description": "KEYM",
+				"ref_id": "0732B0FF",
+				"form_id": "072218CA",
+				"editor_id": "Folon_KEYM_BOEKey01",
+				"value": 1,
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-345.624603,
+					-2571.528076,
+					-462.886322
+				]
+			},
+			"properties": {
+				"title": "James' Safe Key",
+				"description": "KEYM",
+				"ref_id": "072060FF",
+				"form_id": "072060FE",
+				"editor_id": "Folon_KEYM_COLStrandSafeKey01",
+				"cell": "07130FD3",
+				"cell_name": "Forgotten Store"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					292.295166,
+					274.113342,
+					-124.143135
+				]
+			},
+			"properties": {
+				"title": "James' Safe Key",
+				"description": "KEYM",
+				"ref_id": "07206106",
+				"form_id": "072060FE",
+				"editor_id": "Folon_KEYM_COLStrandSafeKey01",
+				"cell": "07130FD3",
+				"cell_name": "Forgotten Store"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1757.993652,
+					14435.479492,
+					385
+				]
+			},
+			"properties": {
+				"title": "Cutty Sark Safe Key",
+				"description": "KEYM",
+				"ref_id": "07205BE7",
+				"form_id": "07205BE6",
+				"editor_id": "Folon_KEYM_GreenwichPindarKeyToCuttySarkSafe",
+				"cell": "071A2F87",
+				"cell_name": "Cutty Sark Dry Dock"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					849.110535,
+					1217.285278,
+					1535.275391
+				]
+			},
+			"properties": {
+				"title": "Control Panel Key",
+				"description": "KEYM",
+				"ref_id": "071F951E",
+				"form_id": "071F951F",
+				"editor_id": "Folon_KEYM_MQ204_Terminal01Key",
+				"quests": [
+					"071F1179"
+				],
+				"cell": "0711EF3B",
+				"cell_name": "Science Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1362.991089,
+					3032.080811,
+					61.23484
+				]
+			},
+			"properties": {
+				"title": "Wintergarden Key",
+				"description": "KEYM",
+				"ref_id": "071ABE0C",
+				"form_id": "071F1205",
+				"editor_id": "Folon_KEYM_MQ106_Key01",
+				"quests": [
+					"071B7318"
+				],
+				"cell": "071A2FB9",
+				"cell_name": "Wintergarden"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					732.094116,
+					2077.020264,
+					50.74752
+				]
+			},
+			"properties": {
+				"title": "Wintergarden Key",
+				"description": "KEYM",
+				"ref_id": "071ABEC3",
+				"form_id": "071F1205",
+				"editor_id": "Folon_KEYM_MQ106_Key01",
+				"cell": "071A2FB9",
+				"cell_name": "Wintergarden"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2556.645752,
+					-1147.017822,
+					38.938866
+				]
+			},
+			"properties": {
+				"title": "Fesco Key",
+				"description": "KEYM",
+				"ref_id": "071EBDDE",
+				"form_id": "071EBDDD",
+				"editor_id": "Folon_KEYM_SouthwarkFescoKey01",
+				"value": 1,
+				"cell": "07146EAD",
+				"cell_name": "Fesco"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					397.535858,
+					1946.74646,
+					422.531616
+				]
+			},
+			"properties": {
+				"title": "Sorting Room Keys",
+				"description": "KEYM",
+				"ref_id": "0717313F",
+				"form_id": "071E0C4C",
+				"editor_id": "Folon_KEYM_CroydonPOKeys01",
+				"cell": "07173113",
+				"cell_name": "Crown Mail Post Office"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1659.916748,
+					2587.804688,
+					377.731293
+				]
+			},
+			"properties": {
+				"title": "Sorting Room Keys",
+				"description": "KEYM",
+				"ref_id": "071E0C4D",
+				"form_id": "071E0C4C",
+				"editor_id": "Folon_KEYM_CroydonPOKeys01",
+				"cell": "07173113",
+				"cell_name": "Crown Mail Post Office"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-768,
+					-640,
+					3584
+				]
+			},
+			"properties": {
+				"title": "Maderia Inc. Restricted Lab Key",
+				"description": "KEYM",
+				"ref_id": "071BDFAD",
+				"form_id": "071BE10E",
+				"editor_id": "Folon_KEYM_MadeiraOfficeKey02",
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					384,
+					-256,
+					3584
+				]
+			},
+			"properties": {
+				"title": "Maderia Inc. Restricted Lab Key",
+				"description": "KEYM",
+				"ref_id": "071BDFAE",
+				"form_id": "071BE10E",
+				"editor_id": "Folon_KEYM_MadeiraOfficeKey02",
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1443.718506,
+					962.582703,
+					3642.85376
+				]
+			},
+			"properties": {
+				"title": "Maderia Inc. Restricted Lab Key",
+				"description": "KEYM",
+				"ref_id": "071BE10F",
+				"form_id": "071BE10E",
+				"editor_id": "Folon_KEYM_MadeiraOfficeKey02",
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1280,
+					896,
+					3584
+				]
+			},
+			"properties": {
+				"title": "Maderia Inc. Chief's Office Key",
+				"description": "KEYM",
+				"ref_id": "071BDF8E",
+				"form_id": "071BE10C",
+				"editor_id": "Folon_KEYM_MadeiraOfficeKey01",
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-983.335449,
+					541.403809,
+					3641.260986
+				]
+			},
+			"properties": {
+				"title": "Maderia Inc. Chief's Office Key",
+				"description": "KEYM",
+				"ref_id": "071BE10D",
+				"form_id": "071BE10C",
+				"editor_id": "Folon_KEYM_MadeiraOfficeKey01",
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					402.375214,
+					-150.013748,
+					414.726868
+				]
+			},
+			"properties": {
+				"title": "Hotel Keys",
+				"description": "KEYM",
+				"ref_id": "071BD6C3",
+				"form_id": "071BD6C2",
+				"editor_id": "Folon_KEYM_NeoHotel01Key1",
+				"value": 1,
+				"cell": "0710423F",
+				"cell_name": "St Pancras International Hotel"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					680,
+					-48,
+					-2.367612
+				]
+			},
+			"properties": {
+				"title": "Westminster House Basement Key",
+				"description": "KEYM",
+				"ref_id": "071B3A25",
+				"form_id": "071B3A09",
+				"editor_id": "Folon_KEYM_WestminsterHouse01BasementKey",
+				"cell": "071B3834",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-572.216736,
+					18.524965,
+					570.348816
+				]
+			},
+			"properties": {
+				"title": "Westminster House Basement Key",
+				"description": "KEYM",
+				"ref_id": "071B3B94",
+				"form_id": "071B3A09",
+				"editor_id": "Folon_KEYM_WestminsterHouse01BasementKey",
+				"cell": "071B3834",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7140.244629,
+					-73433.859375,
+					5150.692871
+				]
+			},
+			"properties": {
+				"title": "Croydon Pindar Key",
+				"description": "KEYM",
+				"ref_id": "071B27D8",
+				"form_id": "071B27D7",
+				"editor_id": "Folon_KEYM_CroydonPindarKey01",
+				"quests": [
+					"072BA807"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1108.233154,
+					3066.002686,
+					3368.601807
+				]
+			},
+			"properties": {
+				"title": "Islington Bank Vault Key",
+				"description": "KEYM",
+				"ref_id": "071A95CB",
+				"form_id": "071A9A1F",
+				"editor_id": "Folon_KEYM_IslingBankVaultKey01",
+				"cell": "0715A4DD",
+				"cell_name": "Decayed Bank"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-575.530579,
+					2929.936035,
+					3932.772949
+				]
+			},
+			"properties": {
+				"title": "Islington Bank Vault Key",
+				"description": "KEYM",
+				"ref_id": "071A9A20",
+				"form_id": "071A9A1F",
+				"editor_id": "Folon_KEYM_IslingBankVaultKey01",
+				"cell": "0715A4DD",
+				"cell_name": "Decayed Bank"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1292.028076,
+					-340.375977,
+					283.76947
+				]
+			},
+			"properties": {
+				"title": "Camden TV Station Studios Keys",
+				"description": "KEYM",
+				"ref_id": "071A1914",
+				"form_id": "071A1913",
+				"editor_id": "Folon_KEYM_CamdemTVStationKey01",
+				"cell": "0719ACCE",
+				"cell_name": "Camden TV Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-37017.566406,
+					19940.328125,
+					5061.033691
+				]
+			},
+			"properties": {
+				"title": "Submarine Pen Key",
+				"description": "KEYM",
+				"ref_id": "07187AF7",
+				"form_id": "07187AF8",
+				"editor_id": "Folon_KEYM_SouthwarkSubKey01",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4164.186523,
+					1601.630127,
+					44.678188
+				]
+			},
+			"properties": {
+				"title": "Submarine Pen Key",
+				"description": "KEYM",
+				"ref_id": "07187B3A",
+				"form_id": "07187AF8",
+				"editor_id": "Folon_KEYM_SouthwarkSubKey01",
+				"cell": "071037CF",
+				"cell_name": "Submarine Dock"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-256,
+					-384,
+					-512
+				]
+			},
+			"properties": {
+				"title": "Police Station Maintenance Key",
+				"description": "KEYM",
+				"ref_id": "07157A65",
+				"form_id": "071588CA",
+				"editor_id": "Folon_KEYM_WolfpackPrison02_PowerRoomKey02",
+				"quests": [
+					"0715886A"
+				],
+				"value": 1,
+				"cell": "07156520",
+				"cell_name": "Hackney Police Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-175.889648,
+					832.016357,
+					55.696533
+				]
+			},
+			"properties": {
+				"title": "Interrogation Room Key",
+				"description": "KEYM",
+				"ref_id": "07157A34",
+				"form_id": "071588C9",
+				"editor_id": "Folon_KEYM_WolfpackPrison02_InterrogationRoomKey01",
+				"value": 1,
+				"cell": "07156520",
+				"cell_name": "Hackney Police Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.000122,
+					639.537537,
+					0
+				]
+			},
+			"properties": {
+				"title": "Interrogation Room Key",
+				"description": "KEYM",
+				"ref_id": "07157A35",
+				"form_id": "071588C9",
+				"editor_id": "Folon_KEYM_WolfpackPrison02_InterrogationRoomKey01",
+				"value": 1,
+				"cell": "07156520",
+				"cell_name": "Hackney Police Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-256,
+					640,
+					0
+				]
+			},
+			"properties": {
+				"title": "Interrogation Room Key",
+				"description": "KEYM",
+				"ref_id": "07157A36",
+				"form_id": "071588C9",
+				"editor_id": "Folon_KEYM_WolfpackPrison02_InterrogationRoomKey01",
+				"value": 1,
+				"cell": "07156520",
+				"cell_name": "Hackney Police Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					231.385925,
+					-1232.723267,
+					-448
+				]
+			},
+			"properties": {
+				"title": "Sewer Gate Key",
+				"description": "KEYM",
+				"ref_id": "0711FD25",
+				"form_id": "0711FE11",
+				"editor_id": "Folon_KEYM_IslingtonSewerKey01",
+				"cell": "07111257",
+				"cell_name": "Sewer"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					660.864258,
+					-755.233337,
+					-379.433594
+				]
+			},
+			"properties": {
+				"title": "Sewer Gate Key",
+				"description": "KEYM",
+				"ref_id": "0711FE12",
+				"form_id": "0711FE11",
+				"editor_id": "Folon_KEYM_IslingtonSewerKey01",
+				"cell": "07111257",
+				"cell_name": "Sewer"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1853.619751,
+					1460.091675,
+					372.255646
+				]
+			},
+			"properties": {
+				"title": "Hooligan Storage Key",
+				"description": "KEYM",
+				"ref_id": "0711D382",
+				"form_id": "0711D58A",
+				"editor_id": "Folon_KEYM_UCLHKey01",
+				"cell": "0702E9DD",
+				"cell_name": "University College Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1603.302002,
+					2509.899414,
+					937.742004
+				]
+			},
+			"properties": {
+				"title": "Hooligan Storage Key",
+				"description": "KEYM",
+				"ref_id": "0711D58B",
+				"form_id": "0711D58A",
+				"editor_id": "Folon_KEYM_UCLHKey01",
+				"cell": "0702E9DD",
+				"cell_name": "University College Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6811.585937,
+					1166.145386,
+					-447.319305
+				]
+			},
+			"properties": {
+				"title": "The Nags Terminal Password",
+				"description": "KEYM",
+				"ref_id": "0711B3F0",
+				"form_id": "0711B3EE",
+				"editor_id": "Folon_KEYM_PubTerminalPasswordKeyCard01",
+				"cell": "070D7E5A",
+				"cell_name": "The Nags"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6816.738281,
+					1392.876953,
+					-255.456757
+				]
+			},
+			"properties": {
+				"title": "The Nags Terminal Password",
+				"description": "KEYM",
+				"ref_id": "07328553",
+				"form_id": "0711B3EE",
+				"editor_id": "Folon_KEYM_PubTerminalPasswordKeyCard01",
+				"cell": "070D7E5A",
+				"cell_name": "The Nags"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					352.836823,
+					1044.906372,
+					370.333984
+				]
+			},
+			"properties": {
+				"title": "Hotel Manager's Keys",
+				"description": "KEYM",
+				"ref_id": "071074FA",
+				"form_id": "071074F9",
+				"editor_id": "Folon_KEYM_NeoHotelKey01",
+				"value": 1,
+				"cell": "0710423F",
+				"cell_name": "St Pancras International Hotel"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8358.75,
+					7274.220703,
+					1330.933716
+				]
+			},
+			"properties": {
+				"title": "Tower Hamlets Pindar Key Card",
+				"description": "KEYM",
+				"ref_id": "070D061A",
+				"form_id": "070D06EE",
+				"editor_id": "Folon_KEYM_PindarKeyCard01",
+				"cell": "070CFE47",
+				"cell_name": "Tower Hamlets Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7774.528809,
+					7739.95752,
+					1386.640625
+				]
+			},
+			"properties": {
+				"title": "Tower Hamlets Pindar Key Card",
+				"description": "KEYM",
+				"ref_id": "070D06EF",
+				"form_id": "070D06EE",
+				"editor_id": "Folon_KEYM_PindarKeyCard01",
+				"cell": "070CFE47",
+				"cell_name": "Tower Hamlets Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-584.000122,
+					-991.999756,
+					0
+				]
+			},
+			"properties": {
+				"title": "Newham Pindar Key",
+				"description": "KEYM",
+				"ref_id": "070CA602",
+				"form_id": "070CA818",
+				"editor_id": "Folon_KEYM_NewhamPindarKey01",
+				"cell": "070C9EED",
+				"cell_name": "Newham Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					722.700195,
+					-2039.314453,
+					50.656883
+				]
+			},
+			"properties": {
+				"title": "Newham Pindar Key",
+				"description": "KEYM",
+				"ref_id": "070CA819",
+				"form_id": "070CA818",
+				"editor_id": "Folon_KEYM_NewhamPindarKey01",
+				"cell": "070C9EED",
+				"cell_name": "Newham Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10186.851562,
+					-73487.28125,
+					5072.771973
+				]
+			},
+			"properties": {
+				"title": "Maze Exit Key",
+				"description": "KEYM",
+				"ref_id": "07067D2C",
+				"form_id": "07068304",
+				"editor_id": "Folon_KEYM_CroydonMazeKey05",
+				"quests": [
+					"072BA814",
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4182.795898,
+					-73397.976562,
+					5033.169434
+				]
+			},
+			"properties": {
+				"title": "Maze Exit Key",
+				"description": "KEYM",
+				"ref_id": "07067D2F",
+				"form_id": "07068304",
+				"editor_id": "Folon_KEYM_CroydonMazeKey05",
+				"quests": [
+					"072BA814",
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9631.205078,
+					-72302.351562,
+					5140.875977
+				]
+			},
+			"properties": {
+				"title": "Maze Key #4",
+				"description": "KEYM",
+				"ref_id": "07067D2D",
+				"form_id": "07068303",
+				"editor_id": "Folon_KEYM_CroydonMazeKey04",
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7100.33252,
+					-72927.625,
+					5066.030762
+				]
+			},
+			"properties": {
+				"title": "Maze Key #4",
+				"description": "KEYM",
+				"ref_id": "072ECA29",
+				"form_id": "07068303",
+				"editor_id": "Folon_KEYM_CroydonMazeKey04",
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6042.558105,
+					-75726.671875,
+					5057.157715
+				]
+			},
+			"properties": {
+				"title": "Maze Key #3",
+				"description": "KEYM",
+				"ref_id": "072D3E83",
+				"form_id": "0706811B",
+				"editor_id": "Folon_KEYM_CroydonMazeKey03",
+				"quests": [
+					"072BA814",
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7082.038574,
+					-72644.625,
+					5080.686523
+				]
+			},
+			"properties": {
+				"title": "Maze Key #3",
+				"description": "KEYM",
+				"ref_id": "072ECA28",
+				"form_id": "0706811B",
+				"editor_id": "Folon_KEYM_CroydonMazeKey03",
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7082.038574,
+					-72507.03125,
+					5080.686523
+				]
+			},
+			"properties": {
+				"title": "Maze Key #2",
+				"description": "KEYM",
+				"ref_id": "072ECA1D",
+				"form_id": "07067FFF",
+				"editor_id": "Folon_KEYM_CroydonMazeKey02",
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8994.256836,
+					-72521.539062,
+					5063.472168
+				]
+			},
+			"properties": {
+				"title": "Maze Key #1",
+				"description": "KEYM",
+				"ref_id": "07068007",
+				"form_id": "07067FA3",
+				"editor_id": "Folon_KEYM_CroydonMazeKey01",
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8994.34375,
+					-72392.960938,
+					5063.472168
+				]
+			},
+			"properties": {
+				"title": "Maze Key #1",
+				"description": "KEYM",
+				"ref_id": "07068008",
+				"form_id": "07067FA3",
+				"editor_id": "Folon_KEYM_CroydonMazeKey01",
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8994.34375,
+					-72262.507812,
+					5063.472168
+				]
+			},
+			"properties": {
+				"title": "Maze Key #1",
+				"description": "KEYM",
+				"ref_id": "07068009",
+				"form_id": "07067FA3",
+				"editor_id": "Folon_KEYM_CroydonMazeKey01",
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5314.272949,
+					-73340.328125,
+					5056
+				]
+			},
+			"properties": {
+				"title": "Maze Key #1",
+				"description": "KEYM",
+				"ref_id": "072EC80F",
+				"form_id": "07067FA3",
+				"editor_id": "Folon_KEYM_CroydonMazeKey01",
+				"quests": [
+					"072BA814",
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7082.038574,
+					-72368.242188,
+					5080.686523
+				]
+			},
+			"properties": {
+				"title": "Maze Key #1",
+				"description": "KEYM",
+				"ref_id": "072ECA1C",
+				"form_id": "07067FA3",
+				"editor_id": "Folon_KEYM_CroydonMazeKey01",
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-1549.524048,
 					-1257.435303,
 					16308.40918
@@ -135682,298 +139724,808 @@
 			}
 		}
 	],
-	"weapons": {
-		"070B67B5": {
-			"editor_id": "Folon_Weap_GrenThamesiumGoo",
-			"name": "Thamesium Goo",
-			"description": "Weaponized Thames water, that causes an acidic radius that does damage over time."
-		},
-		"07329994": {
-			"editor_id": "Folon_Weap_Ranged_CovertPistol-WelrodGold",
-			"name": "Scaramanga"
-		},
-		"0730B165": {
-			"editor_id": "Folon_Weap_UniqueMongolBow",
-			"name": "Ornate Bow"
-		},
-		"00107BD6": {
-			"editor_id": "BaseballGrenade",
-			"name": "Baseball Grenade"
-		},
-		"07198AAF": {
-			"editor_id": "Folon_Weap_UniqueDirtyWeldy",
-			"name": "Dirty Weldy",
-			"description": "Shoots a stream of kinetic projectiles that stagger enemies on contact."
-		},
-		"07281634": {
-			"editor_id": "Folon_Weap_MeleeChainsaw",
-			"name": "Chainsaw"
-		},
-		"07189AA1": {
-			"editor_id": "Folon_Weap_MeleePipeAxe",
-			"name": "Pipe Axe"
-		},
-		"071898E4": {
-			"editor_id": "Folon_Weap_MeleeTennisRacquet",
-			"name": "Tennis Racquet"
-		},
-		"070C84E0": {
-			"editor_id": "Folon_Weap_MeleeBoxcutter",
-			"name": "Boxcutter"
-		},
-		"070BE4AF": {
-			"editor_id": "Folon_Weap_MeleeTrowel",
-			"name": "Trowel"
-		},
-		"072DC932": {
-			"editor_id": "Folon_Weap_RangedM72GaussRifle",
-			"name": "Gauss Rifle"
-		},
-		"070B663D": {
-			"editor_id": "Folon_Weap_RangedServicePistol-Webley_1913",
-			"name": "Service"
-		},
-		"0704E15E": {
-			"editor_id": "Folon_Weap_Ranged9MM-LugerP09",
-			"name": "9mm"
-		},
-		"07278730": {
-			"editor_id": "Folon_Weap_RangedMauser",
-			"name": "Chinese"
-		},
-		"070BE430": {
-			"editor_id": "Folon_Weap_RangedLaserGun-British",
-			"name": "Upton-Burke Class C Rifle"
-		},
-		"070BE3C6": {
-			"editor_id": "Folon_Weap_UniqueCamelotStunBaton",
-			"name": "Rigby's Baton"
-		},
-		"000CE97D": {
-			"editor_id": "44",
-			"name": ".44"
-		},
-		"0710C867": {
-			"editor_id": "Folon_Weap_UmbrellaWithKnife",
-			"name": "Umbrella"
-		},
-		"070C99AB": {
-			"editor_id": "Folon_Weap_VintageRifle-MartiniHenryICI",
-			"name": "Vintage Rifle"
-		},
-		"072AC4E1": {
-			"editor_id": "Folon_Weap_RangedSSTGWeapon",
-			"name": "Combat Shotgun"
-		},
-		"070B6569": {
-			"editor_id": "Folon_Weap_RangedLMG-BrenMK2",
-			"name": "Light Machine Gun"
-		},
-		"0730B164": {
-			"editor_id": "Folon_Weap_RangedWoodbow_NPC_FireArrow",
-			"name": "Wood Bow"
-		},
-		"070DB2BF": {
-			"editor_id": "Folon_Weap_RangedCrudeSMG_CrudeBlowback",
-			"name": "Crude Gun"
-		},
-		"072B026E": {
-			"editor_id": "Folon_Weap_MeleeDruidMachete",
-			"name": "Sacrificial Blade"
-		},
-		"07307231": {
-			"editor_id": "Folon_Weap_UniqueCamelotGalantine",
-			"name": "Galantine"
-		},
-		"07307235": {
-			"editor_id": "Folon_Weap_UniqueCamelotOlwen",
-			"name": "Olwen"
-		},
-		"070BE3D1": {
-			"editor_id": "Folon_Weap_MeleeLongSword1h",
-			"name": "Long Sword"
-		},
-		"0731ACC7": {
-			"editor_id": "Folon_Weap_UniqueCamelotSecace",
-			"name": "Secace"
-		},
-		"0731ACCA": {
-			"editor_id": "Folon_Weap_UniqueServiceRifleLeeEnfieldAustralia",
-			"name": "Service Rifle"
-		},
-		"072D42C4": {
-			"editor_id": "Folon_Weap_RangedBox_SMG",
-			"name": "Box Submachine Gun"
-		},
-		"0715B9A8": {
-			"editor_id": "Folon_Weap_UniqueCarmine",
-			"name": "Carmine"
-		},
-		"072995DE": {
-			"editor_id": "Folon_Weap_UniqueCamelotArondight",
-			"name": "Arondight"
-		},
-		"070BE3D0": {
-			"editor_id": "Folon_Weap_MeleeLongSword2h",
-			"name": "Two-Handed Long Sword"
-		},
-		"070DB22B": {
-			"editor_id": "Folon_Weap_RangedCrudeRevolver-HandmadeRevolver",
-			"name": "Crude Revolver"
-		},
-		"070DB5BF": {
-			"editor_id": "Folon_Weap_RangedBattleRifle-FNFAL",
-			"name": "Battle Rifle"
-		},
-		"070DB848": {
-			"editor_id": "Folon_Weap_RangedServiceRevolver-Webley",
-			"name": "Service Revolver"
-		},
-		"0005524B": {
-			"editor_id": "Knuckles",
-			"name": "Knuckles"
-		},
-		"072815F2": {
-			"editor_id": "Folon_Weap_MeleeTorchWeapon",
-			"name": "Torch"
-		},
-		"072EC6C4": {
-			"editor_id": "Folon_Weap_MeleeMakeshiftKnife",
-			"name": "Makeshift Knife"
-		},
-		"0713B86D": {
-			"editor_id": "Folon_Weap_UniqueGordoStaff_Melee",
-			"name": "Flower Power Staff"
-		},
-		"0713B853": {
-			"editor_id": "Folon_Weap_UniqueGordoStaff",
-			"name": "Flower Power Blaster"
-		},
-		"070D95C3": {
-			"editor_id": "Folon_Weap_UniqueRamshackleSMGQuadrophenia",
-			"name": "Quadrophenia"
-		},
-		"07307233": {
-			"editor_id": "Folon_Weap_UniqueCamelotIseult",
-			"name": "Iseult"
-		},
-		"07329999": {
-			"editor_id": "Folon_Weap_UniqueServiceRifleLeeEnfieldBritish",
-			"name": "Redcoat"
-		},
-		"072E9804": {
-			"editor_id": "Folon_Weap_MeleeKPAMace",
-			"name": "Haereticus Ferire"
-		},
-		"0731C335": {
-			"editor_id": "Folon_Weap_UniqueCamelotRhongomiant",
-			"name": "Rhongomiant Spear"
-		},
-		"070BE3EA": {
-			"editor_id": "Folon_Weap_MeleeSword1h1",
-			"name": "Long Sword"
-		},
-		"0731ACC8": {
-			"editor_id": "Folon_Weap_UniqueCamelotCaliburn",
-			"name": "Caliburn"
-		},
-		"070D7DC3": {
-			"editor_id": "Folon_Weap_UniqueIronCurtainPMEagle",
-			"name": "Iron Curtain"
-		},
-		"07322583": {
-			"editor_id": "FOLON_Weap_MadJackGloves",
-			"name": "MadJackGlove"
-		},
-		"071898E3": {
-			"editor_id": "Folon_Weap_MeleeCricketBat",
-			"name": "Cricket Bat"
-		},
-		"07272E70": {
-			"editor_id": "Folon_Weap_UniqueClawHammerLegendary",
-			"name": "Oi"
-		},
-		"07322585": {
-			"editor_id": "Folon_Weap_ComKiera_Covert",
-			"name": "Kiera's Covert"
-		},
-		"07307232": {
-			"editor_id": "Folon_Weap_UniqueCamelotCarnwennan",
-			"name": "Carnwennan"
-		},
-		"0731ACC9": {
-			"editor_id": "Folon_Weap_UniqueCamelotRedHilt",
-			"name": "Red Hilt"
-		},
-		"07322586": {
-			"editor_id": "Folon_Weap_ComJohnSmith_SMG",
-			"name": "Submachine Gun"
-		},
-		"07329997": {
-			"editor_id": "Folon_Weap_UniqueBALISONGBONES",
-			"name": "Macabre Balisong"
-		},
-		"0016498F": {
-			"editor_id": "BoxingGlove",
-			"name": "Boxing Glove"
-		},
-		"070BE418": {
-			"editor_id": "Folon_Weap_MeleeKukri_Blade",
-			"name": "Kukri"
-		},
-		"07315569": {
-			"editor_id": "Folon_Weap_RangedWoodbow_NPC_StonePoint",
-			"name": "Wood Bow"
-		},
-		"070BE3E9": {
-			"editor_id": "Folon_Weap_MeleeSword2h1",
-			"name": "Long Sword"
-		},
-		"070BE3CB": {
-			"editor_id": "Folon_Weap_MeleeMace2h",
-			"name": "Mace"
-		},
-		"000D83BF": {
-			"editor_id": "PipeWrench",
-			"name": "Pipe Wrench"
-		},
-		"07189A92": {
-			"editor_id": "Folon_Weap_MeleePolice_Truncheon",
-			"name": "Police Truncheon"
-		},
-		"07272E71": {
-			"editor_id": "Folon_Weap_MeleeClawHammer",
-			"name": "Claw Hammer"
-		},
-		"07322588": {
-			"editor_id": "Folon_Weap_Mountbatten_ServiceRevolver",
-			"name": "Arthur's Gun"
-		},
-		"0710C865": {
-			"editor_id": "Folon_Weap_UmbrellaNoKnife",
-			"name": "Umbrella"
-		},
-		"0710C861": {
-			"editor_id": "Folon_Weap_MeleeRazor",
-			"name": "Razor"
-		},
-		"00113339": {
-			"editor_id": "DeathclawDirtThrow"
-		},
-		"072EC6C8": {
-			"editor_id": "Folon_Weap_MeleeSpear",
-			"name": "Spear"
-		},
-		"0710C864": {
-			"editor_id": "Folon_Weap_UniqueCamelotClarent",
-			"name": "Clarent"
-		},
-		"0014BBDA": {
-			"editor_id": "BehemothBoulder",
-			"name": "Behemoth Bolder"
-		}
-	},
 	"quests": {
+		"072B658A": {
+			"editor_id": "FOLON_MQCamelot308",
+			"name": "Cable Street Woes",
+			"objectives": {
+				"10": "Meet Bedivere in the Tower Hamlets",
+				"20": "Sit down with Bedivere",
+				"40": "Clear out the Tower of London",
+				"50": "Return to Bedivere",
+				"60": "Meet Guinevere near the LT Tower",
+				"80": "Equip the 5th Column Disguise",
+				"90": "Walk with Guinevere",
+				"100": "Enter the LT Tower basement",
+				"105": "Sabotage the LT Tower power module",
+				"110": "Don't break cover",
+				"120": "Meet back up with Guinevere",
+				"130": "Speak to Merlin at the Tower of London",
+				"140": "Get the coordinates of Cable Street's defences",
+				"155": "Don't break cover",
+				"160": "Return to Merlin",
+				"170": "Rescue Kay",
+				"190": "Get in position for the battle",
+				"200": "Charge!",
+				"210": "Storm their headquarters!",
+				"220": "Confront Eve",
+				"240": "Speak to Arthur"
+			}
+		},
+		"072BA816": {
+			"editor_id": "FOLON_MQFifth308",
+			"name": "Idylls of the King",
+			"objectives": {
+				"10": "Wait for the 5th Column Leadership",
+				"20": "Discover the 5th Column's next step",
+				"30": "Speak to Eve",
+				"40": "Interrogate the Prisoner",
+				"50": "Speak to Rhys",
+				"60": "Speak to Lancelot",
+				"70": "Force the Guard to leave",
+				"80": "Get information from Lancelot",
+				"90": "Return to Eve",
+				"100": "Begin the assault",
+				"110": "Breach the Camelot headquarters",
+				"120": "Find Arthur",
+				"130": "Speak to Eve",
+				"140": "Find the entrance to the safe room",
+				"150": "Kill Merlin",
+				"160": "Check on Eve",
+				"170": "Find Arthur",
+				"180": "Kill Arthur",
+				"190": "Return to Eve"
+			}
+		},
+		"072BCEF3": {
+			"editor_id": "FOLON_SQSouthwark103",
+			"name": "Das Boote Von Anderen",
+			"objectives": {
+				"10": "Investigate object in water",
+				"15": "Gain access to the submarine",
+				"16": "Investigate the submarine",
+				"18": "Acquire a language module",
+				"19": "(Optional) Talk to Otto",
+				"21": "(Optional) Talk to Hans",
+				"28": "Return to the submarine",
+				"29": "Talk to Otto",
+				"30": "Get back to the submarine",
+				"40": "Follow Hans",
+				"41": "Install the circuit and talk to Kant",
+				"44": "Find a way to stop Kant",
+				"45": "Talk to Hans and Otto",
+				"50": "Check the first blinking coordinate",
+				"51": "Check the second blinking coordinate",
+				"52": "Check the third blinking coordinate",
+				"53": "Check the fourth blinking coordinate",
+				"54": "Check the fifth blinking coordinate",
+				"55": "Check the final blinking coordinate",
+				"56": "Unlock the terminal and stop Kant for good",
+				"102": "Accept your fate"
+			}
+		},
+		"072BA818": {
+			"editor_id": "FOLON_MQFifth304",
+			"name": "Mountain Out Of A Molehill",
+			"objectives": {
+				"10": "Speak to Eve in her office",
+				"20": "Speak to Zach Lloyd",
+				"30": "Wait at the Drop-Off Point",
+				"40": "Defeat the Ambushers",
+				"50": "Report Back to Zach Lloyd",
+				"60": "Make contact with Jeff Mutt",
+				"70": "Clear out the church in Wandsworth",
+				"80": "Return to Jeff Mutt",
+				"90": "Return to the church",
+				"100": "Wait to ambush the Knights",
+				"101": "(Optional) Place a trap at the church door",
+				"110": "Take down Lancelot and kill his allies",
+				"120": "Let Horatio question Lancelot",
+				"130": "Speak to Horatio",
+				"140": "(Optional) Search Lancelot's room",
+				"150": "(Optional) Confront Rhys Clarke",
+				"151": "Return to Zach Lloyd",
+				"160": "Report to Eve"
+			}
+		},
+		"072BF524": {
+			"editor_id": "FOLON_FQGlobe101",
+			"name": "All the World's a Stage",
+			"objectives": {
+				"10": "Talk to Jeanine, Kelpe's secretary",
+				"21": "Find a copy of Pericles near the Thames",
+				"22": "Find a copy of King John in Camden",
+				"23": "Find a copy of Troilus and Cressida in Islington",
+				"24": "Find a copy of Richard II at the Theatre Royal",
+				"25": "Find a copy of Henry VII at the Imperial War Museum",
+				"26": "Find a copy of Cymbeline at Westminster Abbey",
+				"27": "Find a copy of Timon of Athens in Brixton",
+				"28": "Find a copy of Two Gentlemen of Verona in Bromley",
+				"29": "(Optional) Get Safe Key from Amber",
+				"30": "Return to Kelpe with the plays",
+				"40": "Talk to Jeanine about The History of Cardenio",
+				"45": "Tell Kelpe that the History of Cardenio is lost",
+				"50": "Find a copy of The History of Cardenio in Greenwich",
+				"60": "Confront Jeanine about her lie",
+				"70": "Tell Kelpe that Jeanine lied"
+			}
+		},
+		"072AA443": {
+			"editor_id": "FOLON_LQWestminster106",
+			"name": "Bletchley Bombe",
+			"objectives": {
+				"5": "Investigate the University",
+				"10": "Decypher mysterious code",
+				"20": "Tell the Professor you've cracked the code",
+				"30": "Unlock Master Terminal",
+				"40": "Read the message on the inner terminal",
+				"50": "Kill the Robots",
+				"60": "Return to the Professor"
+			}
+		},
+		"072BDCC5": {
+			"editor_id": "FOLON_COM_ArchieQuest",
+			"name": "Stranger In A Strange Land",
+			"objectives": {
+				"10": "Return to the aeroplane",
+				"20": "Clear out the Dryads",
+				"30": "Return to Thameshaven",
+				"40": "Clear out the Stingwings",
+				"50": "Return to the Angel Lab ",
+				"60": "Not much here, guess we'll head out...",
+				"65": "Grab the holotape from the terminal",
+				"67": "Talk to Archie about the tape outside",
+				"70": "Travel to Eastminster",
+				"80": "Locate the Tommy Outpost",
+				"85": "Learn what happened to the Tommies",
+				"87": "Find out where the Tommies went",
+				"88": "Locate the Tommies to the Southeast",
+				"90": "Help the Tommies defeat the Hooligans ",
+				"95": "Learn what happened to Archie’s parents",
+				"98": "Wait a while for Archie to open up",
+				"100": "Archie seems to want to give me something."
+			}
+		},
+		"072AEAA5": {
+			"editor_id": "FOLON_FQRoundels103b",
+			"name": "Choose Life",
+			"objectives": {
+				"10": "Speak to Manchester Mike",
+				"20": "Meet Manchester Mike at Maab House",
+				"30": "Secure the safehouse",
+				"40": "Fix the fridge",
+				"50": "Fix the bed",
+				"60": "Replace the doors",
+				"70": "Clean up the gore",
+				"80": "Return to Manchester Mike",
+				"90": "Kill the Hooligans",
+				"100": "Meet Manchester Mike at the safehouse",
+				"110": "Find, buy or make 3 antibiotics and 1 Morph-X",
+				"120": "Deliver the chems to Manchester Mike",
+				"130": "Kill Dennis",
+				"140": "Retrieve the Sober from Manchester Mike's safe",
+				"150": "Give Prince Pete the Sober"
+			}
+		},
+		"072B6595": {
+			"editor_id": "FOLON_GW205b",
+			"name": "Clearing House",
+			"objectives": {
+				"10": "Speak to Ayesha",
+				"20": "Clear out first safehouse",
+				"30": "Find out the location of the second safehouse",
+				"40": "Clear out second safehouse",
+				"50": "Return to Ayesha"
+			}
+		},
+		"072B84CA": {
+			"editor_id": "FOLON_MQCamelot304",
+			"name": "The Dolorous Strike",
+			"objectives": {
+				"10": "Listen to Percival's news",
+				"20": "Talk to Arthur",
+				"30": "Investigate the explosion at Charing Cross",
+				"40": "(Optional) Ask Merlin and Percival about the explosion",
+				"60": "Speak to Colonel George Major",
+				"70": "Investigate the explosion site",
+				"90": "Investigate the Charing Cross Underground",
+				"100": "Follow the tunnel north",
+				"110": "Speak to the knights",
+				"120": "Go to St Anne's Churchyard",
+				"130": "Speak to the guard",
+				"140": "Speak to Tucker",
+				"150": "Deal with the 5th Columnists",
+				"170": "Free Tristan's family",
+				"180": "Search the churchyard for useful information",
+				"190": "Return to Tristan and Iseult",
+				"200": "Give Arthur a full report"
+			}
+		},
+		"072B457F": {
+			"editor_id": "FOLON_GW201",
+			"name": "Revenge, Thy Name Is Fury",
+			"objectives": {
+				"10": "Speak to Gaunt",
+				"20": "Ask Winston about Lockheed",
+				"21": "Ask Anthony about Sinclair",
+				"22": "Ask Johnny about Pieter",
+				"30": "Go to Lockheed's mistress's flat",
+				"40": "Deal with John Lockheed",
+				"45": "Kill John Lockhead",
+				"50": "Talk to Lexi",
+				"55": "Use the Key to enter the Factory",
+				"60": "Kill Sinclair",
+				"65": "(Optional) Burn Sinclair's body",
+				"70": "Find Pieter the Fence in Westminster",
+				"75": "Kill Pieter",
+				"77": "Get the ledger",
+				"78": "Collect your Weapons",
+				"80": "Return to Gaunt"
+			}
+		},
+		"072B4580": {
+			"editor_id": "FOLON_GW106",
+			"name": "Prison Break",
+			"objectives": {
+				"10": "Enter HMS Dredge",
+				"20": "Take out the Syndicate security",
+				"25": "Speak to the Vagabond prisoners",
+				"30": "Release the Vagabonds via the terminal",
+				"35": "Reset the cell terminal password",
+				"40": "Release the Vagabonds via the terminal",
+				"45": "Speak to the Vagabonds",
+				"50": "(Optional) Plant the bombs on the lower deck",
+				"60": "Return to Johnny",
+				"100": "(Optional) Release the rest of the prisoners",
+				"110": "(Optional) Find a way to open the armoury",
+				"120": "Return to Agatha"
+			}
+		},
+		"072F0C90": {
+			"editor_id": "FOLON_GW106PrisonersManager"
+		},
+		"072BA80D": {
+			"editor_id": "FOLON_MQCamelot302",
+			"name": "Every Breath You Take",
+			"objectives": {
+				"10": "Speak to Percival in his office",
+				"20": "Speak to the tribal leader in Brickton",
+				"30": "(Optional) Return to Chief Roach",
+				"40": "Poison the rations supplies with laxatives",
+				"50": "Shut down the generator powering the turrets",
+				"60": "Start some rumours about Lieutenant Doyle",
+				"70": "Return to Chief Roach",
+				"80": "(Optional) Return to Chief Roach",
+				"90": "Draw anti-Sneed graffiti around the outpost",
+				"100": "Set fire to cow manure to stink up the outpost",
+				"110": "Start some rumours about Brigadier Sneed",
+				"120": "Return to Chief Roach",
+				"130": "Witness Major Sneed's arrival",
+				"135": "Speak to Laura",
+				"140": "Speak to Chief Roach",
+				"150": "Hold up Sneed's wagon",
+				"170": "Fight the guards",
+				"210": "Take the contents of the wagon",
+				"220": "Break the news to Brigadier Sneed",
+				"230": "Wait for the Tommies to leave",
+				"240": "Return to Chief Roach",
+				"250": "Return to Percival",
+				"270": "Speak to Merlin"
+			}
+		},
+		"0731101F": {
+			"editor_id": "FOLON_SQWestminster109",
+			"name": "NuSkin, New You",
+			"objectives": {
+				"10": "Speak to Miss Crake",
+				"11": "Make an appointment for a NuSkin treatment",
+				"20": "Speak to Nurse Peggy",
+				"30": "Enter the Restricted Section of NuSkin",
+				"35": "Speak to the Child",
+				"37": "(Optional) Find out what happened to Renara",
+				"40": "Find out what is happening at NuSkin",
+				"41": "Access Miss Crake's Terminal",
+				"45": "Tell Nurse Peggy of your findings",
+				"50": "Speak to Miss Crake",
+				"60": "Kill Miss Crake and eliminate the Robots",
+				"70": "Speak to Caspian",
+				"80": "Speak to the people of Eastminster"
+			}
+		},
+		"072C0D8A": {
+			"editor_id": "FOLON_SQSouthwark102",
+			"name": "Food For Thought",
+			"objectives": {
+				"1": "Talk to the Ferryman",
+				"2": "Find clues to the missing Thamesfolk",
+				"3": "Follow the trail",
+				"4": "Talk to the Factory Guard",
+				"17": "Ask Factory Workers About Blood Trail",
+				"19": "Find a way into the Restricted Zone",
+				"20": "Defeat the Snatchers",
+				"21": "Investigate the area",
+				"23": "Convince Cal to tell you what's going on",
+				"24": "Defeat Cal",
+				"25": "Find evidence",
+				"27": "(Optional) Stop the operation",
+				"29": "Speak to the factory boss",
+				"30": "Talk to the Ferryman",
+				"31": "Talk to the Ferryman"
+			}
+		},
+		"072AD7B3": {
+			"editor_id": "FOLON_FQPistols104",
+			"name": "What's In A Name",
+			"objectives": {
+				"10": "Knock for John Strutter",
+				"20": "Talk to John Strutter",
+				"30": "Get Malcom Rhodes to sign the confession",
+				"31": "Find documents that incriminate Malcolm Rhodes",
+				"40": "Return the signed statement to John Strutter",
+				"50": "Return the incriminating documents to John Strutter",
+				"100": "Distribute the packages to Malcolm's friends",
+				"120": "(Optional) Tell John about the leaflets",
+				"130": "Return to Malcolm Rhodes"
+			}
+		},
+		"072BA807": {
+			"editor_id": "FOLON_FQCroydon101",
+			"name": "No Man's Wasteland",
+			"objectives": {
+				"10": "Speak to Lieutenant Doyle",
+				"20": "Travel into Croydon",
+				"30": "Build a bridge deeper into Croydon",
+				"35": "(Optional) Access the building supplies in Croydon Pindar",
+				"40": "(Optional) Find the Croydon Pindar key in the Crystal Palace Maze",
+				"60": "Travel further into Croydon",
+				"70": "Find a new support beam",
+				"80": "Help the stranded Tommies",
+				"90": "Speak to the officer",
+				"100": "Build a bridge deeper into Croydon",
+				"110": "Make contact with the Croydonians",
+				"120": "Speak to Second Lieutenant Buckley",
+				"180": "Report to Lieutenant Doyle",
+				"190": "Return to Chief Roach"
+			}
+		},
+		"07283CDA": {
+			"editor_id": "FOLON_MQ203",
+			"name": "All To Pot",
+			"objectives": {
+				"30": "Talk to the man outside your cell",
+				"40": "Escape the prison",
+				"45": "Retrieve your belongings"
+			}
+		},
+		"071F1179": {
+			"editor_id": "FOLON_MQ204",
+			"name": "The Placebo Effect",
+			"objectives": {
+				"10": "Go to the Science Museum",
+				"20": "Find Mr. X",
+				"30": "Confront Mr. X",
+				"40": "(Optional) Destroy the Angel research before you leave"
+			}
+		},
+		"072AC4F1": {
+			"editor_id": "FOLON_MQAngel306",
+			"name": "Crossing the T's",
+			"objectives": {
+				"10": "Return to Smythe's office",
+				"20": "Answer the telephone",
+				"30": "Take Colonel Major's Appointment Notice",
+				"40": "Deliver the Appointment Notice to General Asquith",
+				"60": "Travel to Buckingham Palace to get the Queen's backing",
+				"70": "Enter Buckingham Palace",
+				"80": "Answer the telephone",
+				"110": "Get the Revivification Serum",
+				"120": "Get the Queen's Chambers Key",
+				"130": "Enter the Queen's Chambers",
+				"135": "Find the Queen",
+				"140": "Incapacitate the Queen",
+				"150": "Inject the Revivification Serum",
+				"160": "Get the Appointment Notice signed by the Queen",
+				"180": "Return to the Imperial War Museum",
+				"200": "Meet Asquith outside for a duel",
+				"230": "Defeat Asquith",
+				"250": "Listen to General Major's speech"
+			}
+		},
+		"072BA815": {
+			"editor_id": "FOLON_MQFifth306",
+			"name": "The Queen's Army",
+			"objectives": {
+				"5": "Speak with Derek",
+				"10": "Convene with Eve",
+				"20": "Travel to the Imperial War Museum",
+				"30": "Meet with Derek and Major Jonathan Allen",
+				"40": "Journey to Buckingham Palace",
+				"50": "Plan the attack with Derek",
+				"60": "Wait for Derek to give orders to the militiamen",
+				"65": "Wait for the 5th Column to breach the gate",
+				"70": "Storm Buckingham Palace",
+				"72": "Clear the Palace interior",
+				"75": "Convince Princess Elizabeth to ally with the Fifth Column",
+				"80": "Kill the Royals and take their heads",
+				"90": "Return to Major Allen",
+				"100": "Follow Major Allen",
+				"110": "Present the head to General Asquith",
+				"115": "Present the writ of allegience to General Asquith",
+				"120": "Observe the coup",
+				"130": "Kill the resistors",
+				"140": "Speak to General Allen",
+				"150": "Speak to Derek",
+				"160": "Return to Eve"
+			}
+		},
+		"072BCEF5": {
+			"editor_id": "FOLON_SQNewham102",
+			"name": "L'appel du Vide",
+			"objectives": {
+				"10": "Rescue Segolene from the Tommy Outpost",
+				"15": "(Optional) Speak to Sgt Williams",
+				"20": "Find another way to rescue Segolene",
+				"30": "Collect 25 each of 9mm rounds, 308 rounds and Fusion Cells for Sgt Williams",
+				"40": "Return to Sgt Williams",
+				"50": "Release Segolene",
+				"60": "Return to the Normans",
+				"67": "Speak to Segolene",
+				"70": "Gain entrance to the boat",
+				"80": "(Optional) Find a Tommy Uniform",
+				"90": "Let the Normans in",
+				"95": "Wait for the Normans to cross",
+				"100": "Steal the boat",
+				"110": "Speak to the Normans",
+				"120": "Kill Eugene",
+				"130": "Speak to Segolene",
+				"140": "Acquire coal for Segolene",
+				"150": "Return to Segolene",
+				"160": "Acquire munitions for Eugene",
+				"170": "Speak to Monty",
+				"180": "Kill Monty",
+				"190": "Acquire munitions for Eugene",
+				"200": "Return to Eugene"
+			}
+		},
+		"072AC4E9": {
+			"editor_id": "FOLON_MQAngel307",
+			"name": "Acceptable Losses",
+			"objectives": {
+				"10": "Await contact from Smythe",
+				"20": "Check in with Smythe",
+				"30": "Travel to the Land's End Inn in Peckham",
+				"40": "Retrieve your luggage from Room 5",
+				"45": "Read your new Initiative Briefing",
+				"60": "Pick up the briefcase",
+				"70": "Pick up the flag",
+				"80": "Pick up the flamethrower",
+				"90": "Travel to the Peckham settlement nearby",
+				"100": "Burn down the settlement...",
+				"105": "Leave no survivors!",
+				"120": "Hoist the Angel flag",
+				"140": "\"Assist\" the Tommies with their inquiries",
+				"150": "Deal with the Tommies",
+				"170": "Speak to the 2nd Lieutenant",
+				"190": "Speak to the Lieutenant"
+			}
+		},
+		"072AC4EB": {
+			"editor_id": "FOLON_MQAngel303",
+			"name": "Ozymandias",
+			"objectives": {
+				"0": "Assassinate Eve Varney",
+				"1": "(Optional) Storm the board room",
+				"10": "Meet Horatio at the 5th Column tavern",
+				"20": "(Optional) Persuade Victor Schmidt to join the plot",
+				"30": "(Optional) Find evidence of Hume's murder before speaking to Victor",
+				"50": "Assassinate Eve Varney at the discrete location"
+			}
+		},
+		"072B84CE": {
+			"editor_id": "FOLON_MQFifth303",
+			"name": "Of Mutants and Men",
+			"objectives": {
+				"5": "Talk to John Smith",
+				"10": "Report to Victor Schmidt",
+				"20": "Speak to Horatio Whitehouse",
+				"30": "Investigate Thameshaven",
+				"40": "Talk to Dr. Alan Webb",
+				"50": "Find out about Tunnel Cough immunity in Thameshaven",
+				"60": "Talk to Margery",
+				"64": "Convince Margery to go to Cable Street",
+				"70": "Talk to Horatio",
+				"80": "Inform Dr. Webb about his Granddaughter",
+				"82": "Take Dr. Webb back to the 5th Column",
+				"83": "Discover what is going on"
+			}
+		},
+		"072AC4F0": {
+			"editor_id": "FOLON_MQAngel304",
+			"name": "You Only Live Twice",
+			"objectives": {
+				"0": "Assassinate Arthur",
+				"10": "Meet Dr James North in Westminster",
+				"40": "Go to North's laboratory via Hyde Park Corner Station",
+				"50": "Run to North's laboratory - don't get squished!",
+				"60": "Discuss the plan with Doctor North",
+				"70": "Attend North's party in Westminster",
+				"80": "Kill Guinevere - preferably in the garden",
+				"85": "(Optional) Find hidden surveillance devices (<Global=FOLON_MQAngel304_Counter01>/5)",
+				"100": "Return to Doctor North's laboratory",
+				"110": "Speak to Doctor North",
+				"120": "Complete the experiment",
+				"130": "Check the results",
+				"140": "Contact Smythe",
+				"150": "Listen to Smythe on the telescreen",
+				"200": "Meet Guinevere near Camelot",
+				"210": "Follow Guinevere",
+				"320": "Report back to Smythe at North's lab"
+			}
+		},
+		"072BA80B": {
+			"editor_id": "FOLON_MQCamelot307",
+			"name": "The King's Speech",
+			"objectives": {
+				"10": "Speak with Arthur",
+				"20": "Go to the Imperial War Museum",
+				"30": "Convince the Tommies to negotiate",
+				"40": "Question Major Jonathan Allen",
+				"50": "Return to Arthur",
+				"60": "Search the field for Asquith",
+				"80": "Carry Asquith's body out of the field",
+				"90": "Speak to Kay",
+				"100": "Inform Colonel George Major of Asquith's death",
+				"110": "Speak to Arthur in private",
+				"120": "Meet Guinevere in Westminster",
+				"140": "Meet Guinevere at the party",
+				"150": "Blend in and follow Doctor North",
+				"160": "Plant the surveillance devices (<Global=FOLON_MQCamelot307_DeviceCounter>/3)",
+				"190": "Listen to Doctor North's conversation",
+				"200": "Speak to Guinevere",
+				"210": "Find Horatio at the trainwreck site",
+				"220": "Defeat the 5th Columnists",
+				"230": "Get evidence from Horatio",
+				"240": "Return to Guinevere",
+				"260": "Give the evidence to Colonel George Major",
+				"270": "Speak to Arthur"
+			}
+		},
+		"0729B279": {
+			"editor_id": "FOLON_FQPistols102",
+			"name": "Here's The Pistols",
+			"objectives": {
+				"10": "Speak to Apache Alice",
+				"20": "Clear out Hooligans",
+				"30": "Report back to Apache Alice",
+				"40": "Get Palmira Romero's endorsement",
+				"42": "Get Captain Reasonable's endorsement",
+				"50": "Report back to Apache Alice",
+				"60": "Get John Strutter's endorsement",
+				"70": "Speak to Apache Alice"
+			}
+		},
+		"072AA43F": {
+			"editor_id": "FOLON_LQHamlets103",
+			"name": "Five Finger Discount",
+			"objectives": {
+				"10": "Speak with Sumner",
+				"12": "Steal the item for Sumner",
+				"15": "Return to Sumner",
+				"20": "Speak with Rhys",
+				"22": "Steal the item for Rhys",
+				"25": "Return to Rhys",
+				"30": "Speak with Braiden",
+				"32": "Steal the item for Braiden",
+				"35": "Return to Braiden",
+				"40": "Speak with the Bartender",
+				"42": "Steal the item for Bartender",
+				"45": "Return to Bartender",
+				"50": "Speak with Jennifer",
+				"52": "Steal the item for Jennifer",
+				"55": "Return to Jennifer",
+				"65": "Return to McFadden"
+			}
+		},
+		"071C76B4": {
+			"editor_id": "Folon_GW101",
+			"name": "Swan & Mitre",
+			"objectives": {
+				"5": "(Optional) Visit the Vagabonds after investigating Thameshaven",
+				"10": "Follow the Vagabonds",
+				"20": "Find the medkit inside Greenwich Station",
+				"30": "Return to Ricky",
+				"40": "Travel to Swan & Mitre",
+				"50": "Defend the Swan & Mitre",
+				"60": "Talk to Yvette",
+				"70": "Kill Syndicate scout",
+				"80": "Return to Yvette",
+				"90": "Talk to Nelson",
+				"100": "Ask Winston about radio parts",
+				"110": "Find out why Nadia's delivery is late",
+				"115": "Speak to Nadia",
+				"120": "Return to Winston",
+				"130": "Ask Anthony to fix the radio",
+				"140": "Find a crystalline photon agitator",
+				"145": "Bring a crystaline photon agitator to Anthony",
+				"150": "Ask Johnny Shrapnel for a battery",
+				"160": "Deliver Johnny's apology gift",
+				"170": "Return to Johnny",
+				"180": "Return to Nelson"
+			}
+		},
+		"072AA43D": {
+			"editor_id": "FOLON_LQEastminster104",
+			"name": "Syringe for Alanah",
+			"objectives": {
+				"10": "Investigate Alanah's parent's Footlocker",
+				"20": " Return to Alanah"
+			}
+		},
+		"0719C4CD": {
+			"editor_id": "FOLON_MQ104",
+			"name": "Lands of the Seraph",
+			"objectives": {
+				"10": "Find Archie in Rotherhithe",
+				"20": "Destroy the nests",
+				"30": "Speak to Archie",
+				"40": "Return to the Ferryman",
+				"41": "Lower the crane bridge",
+				"42": "Open the gate",
+				"43": "Get on the Ferryman's boat",
+				"44": "Enjoy the ride",
+				"45": "Get off the boat",
+				"50": "Meet Archie and the Ferryman at the fishing dock",
+				"51": "(Optional) Investigate Tower Bridge",
+				"56": "Activate the beacon",
+				"58": "Speak to the Ferryman",
+				"60": "Explore the Monument Lab",
+				"62": "Investigate the noise",
+				"65": "Find a way to open the door",
+				"66": "Turn on the power",
+				"67": "Unlock the door",
+				"70": "Investigate the noise",
+				"75": "Fight the abomination",
+				"80": "Return to Archie and the Ferryman"
+			}
+		},
+		"07311020": {
+			"editor_id": "FOLON_LQLondon107",
+			"name": "Millionaires' Row",
+			"objectives": {
+				"10": "Investigate the Bank of England vault",
+				"30": "Open the Bank of England vault"
+			}
+		},
+		"072C2B45": {
+			"editor_id": "FOLON_COM_KieraRecruitment",
+			"name": "Kiera the Treasure Hunter (Kiera Recruitment)"
+		},
+		"072BA80A": {
+			"editor_id": "FOLON_FQThameshaven101",
+			"name": "Scylla",
+			"objectives": {
+				"5": "Visit the Ferryman back in Thameshaven",
+				"40": "Speak to Bob Clarkson",
+				"45": "Search Carl's Shack",
+				"50": "Speak to Jeremy Lewis",
+				"55": "Ask the Thamesfolk about Carl",
+				"57": "Find Carl",
+				"58": "Search Carl's Body",
+				"60": "Bring the Holotape to Rachel",
+				"70": "Return to Bob",
+				"80": "Speak to Angela",
+				"90": "Dethrone the Empress",
+				"91": "Travel to the Greenwich Impact Crater",
+				"95": "Take proof of the Mittenlurk Queen's demise",
+				"100": "Return to Angela",
+				"110": "Bring the evidence to Horace",
+				"120": "Inform Rachel of Horace's decision"
+			}
+		},
+		"072BA806": {
+			"editor_id": "FOLON_SQSouthwark101",
+			"name": "No More Heroes",
+			"objectives": {
+				"1": "Investigate the shouting",
+				"2": "Listen to Allen's speech",
+				"5": "Talk to Harvin",
+				"10": "Find Harvin's office",
+				"11": "Speak to Harvin",
+				"12": "Follow Harvin",
+				"13": "Speak to Allen",
+				"15": "Follow Harvin",
+				"16": "Talk to Allen",
+				"17": "Follow Harvin",
+				"18": "Eliminate Allen",
+				"19": "Kill Harvin",
+				"20": "Speak to Harvin",
+				"21": "Speak to Allen",
+				"161": "Speak to Harvin",
+				"171": "Speak to Allen",
+				"172": "Speak to Harvin"
+			}
+		},
+		"07237DB8": {
+			"editor_id": "FOLON_SQCamden101",
+			"name": "The Scottish Play",
+			"objectives": {
+				"20": "Steal the Globe Theatre's copy of Macbeth",
+				"25": "(Optional) Convince the Globe Theatre to give you Macbeth",
+				"30": "Return the play to Scott Nightingale",
+				"40": "Speak to Freddy Fife",
+				"50": "Get the stash of Calmex for Freddy",
+				"80": "Return to Freddy",
+				"90": "Return to Scott",
+				"100": "Speak with Claudia Rampling",
+				"110": "Get the basement key from Scott",
+				"120": "Find the source of the noises",
+				"130": "Speak with the ghouls",
+				"135": "(Optional) Speak with Scott about the ghouls",
+				"140": "Deal with the ghouls",
+				"145": "Kill the ghouls",
+				"150": "Disable the speakers at the terminal",
+				"160": "Return to Claudia",
+				"170": "Return to Scott"
+			}
+		},
+		"072AC4EC": {
+			"editor_id": "FOLON_MQAngel301",
+			"name": "Taking Initiative",
+			"objectives": {
+				"10": "Go to your first initiative",
+				"20": "Investigate the voice",
+				"30": "Meet the man in his office",
+				"40": "Collect DNA samples (<Global=FOLON_MQAngel301_Counter01>/4)",
+				"50": "Return to Director Wesley Herbertson",
+				"60": "Enter the first cage",
+				"80": "Deal with the first ghoul",
+				"90": "Enter the second cage",
+				"110": "Deal with the second ghoul",
+				"120": "Enter the third cage",
+				"140": "Interact with the third ghoul",
+				"145": "Deal with the third ghoul",
+				"150": "Enter the fourth cage",
+				"170": "Interact with the fourth ghoul",
+				"185": "Deal with the fourth ghoul",
+				"190": "Speak to Director Wesley Herbertson"
+			}
+		},
+		"071B7318": {
+			"editor_id": "FOLON_MQ106",
+			"name": "Cold Case",
+			"objectives": {
+				"10": "Speak to Father Luke",
+				"20": "Investigate Lazarus' belongings",
+				"30": "Return to Father Luke",
+				"40": "Figure out who \"bones\" is",
+				"50": "Speak to the undertaker's assistant",
+				"55": "Investigate Christopher's belongings",
+				"60": "Confront Christopher",
+				"70": "Consult Reverend Francis",
+				"80": "Find Lazarus' stash",
+				"90": "Travel to Beefeater Burger",
+				"95": "Search for clues in the restaurant",
+				"100": "Listen to the holotape",
+				"110": "Investigate Wintergarden",
+				"120": "Free Lazarus",
+				"140": "Speak to Lazarus"
+			}
+		},
+		"0715886A": {
+			"editor_id": "Folon_120_Prison02_JunctionBoxQuest",
+			"name": "A Rude Awakening"
+		},
+		"072BA814": {
+			"editor_id": "FOLON_LQCroydon101",
+			"name": "A-maze-ing",
+			"objectives": {
+				"5": "Greet the Gardener",
+				"10": "Reach the Maze Centre",
+				"11": "Find the Maze Keys",
+				"20": "Get the Maze Exit Key",
+				"30": "Escape the Maze"
+			}
+		},
 		"072C24CA": {
 			"editor_id": "FOLON_COM_KieraQuest",
 			"name": "Going for Gold",
@@ -136074,33 +140626,6 @@
 				"540": "Escape the laboratory"
 			}
 		},
-		"0719C4CD": {
-			"editor_id": "FOLON_MQ104",
-			"name": "Lands of the Seraph",
-			"objectives": {
-				"10": "Find Archie in Rotherhithe",
-				"20": "Destroy the nests",
-				"30": "Speak to Archie",
-				"40": "Return to the Ferryman",
-				"41": "Lower the crane bridge",
-				"42": "Open the gate",
-				"43": "Get on the Ferryman's boat",
-				"44": "Enjoy the ride",
-				"45": "Get off the boat",
-				"50": "Meet Archie and the Ferryman at the fishing dock",
-				"51": "(Optional) Investigate Tower Bridge",
-				"56": "Activate the beacon",
-				"58": "Speak to the Ferryman",
-				"60": "Explore the Monument Lab",
-				"62": "Investigate the noise",
-				"65": "Find a way to open the door",
-				"66": "Turn on the power",
-				"67": "Unlock the door",
-				"70": "Investigate the noise",
-				"75": "Fight the abomination",
-				"80": "Return to Archie and the Ferryman"
-			}
-		},
 		"07259136": {
 			"editor_id": "FOLON_SQCutethulhu101",
 			"name": "Dolls Of The Deep",
@@ -136130,29 +140655,6 @@
 				"90": "Return to Eve",
 				"100": "Watch the execution",
 				"110": "Speak to Eve"
-			}
-		},
-		"072BDCC5": {
-			"editor_id": "FOLON_COM_ArchieQuest",
-			"name": "Stranger In A Strange Land",
-			"objectives": {
-				"10": "Return to the aeroplane",
-				"20": "Clear out the Dryads",
-				"30": "Return to Thameshaven",
-				"40": "Clear out the Stingwings",
-				"50": "Return to the Angel Lab ",
-				"60": "Not much here, guess we'll head out...",
-				"65": "Grab the holotape from the terminal",
-				"67": "Talk to Archie about the tape outside",
-				"70": "Travel to Eastminster",
-				"80": "Locate the Tommy Outpost",
-				"85": "Learn what happened to the Tommies",
-				"87": "Find out where the Tommies went",
-				"88": "Locate the Tommies to the Southeast",
-				"90": "Help the Tommies defeat the Hooligans ",
-				"95": "Learn what happened to Archie’s parents",
-				"98": "Wait a while for Archie to open up",
-				"100": "Archie seems to want to give me something."
 			}
 		},
 		"072AEAA2": {
@@ -136206,96 +140708,6 @@
 				"460": "Claim your fortune",
 				"470": "Defeat Smythe",
 				"500": "Take your place at the dispatch box"
-			}
-		},
-		"072AC4F1": {
-			"editor_id": "FOLON_MQAngel306",
-			"name": "Crossing the T's",
-			"objectives": {
-				"10": "Return to Smythe's office",
-				"20": "Answer the telephone",
-				"30": "Take Colonel Major's Appointment Notice",
-				"40": "Deliver the Appointment Notice to General Asquith",
-				"60": "Travel to Buckingham Palace to get the Queen's backing",
-				"70": "Enter Buckingham Palace",
-				"80": "Answer the telephone",
-				"110": "Get the Revivification Serum",
-				"120": "Get the Queen's Chambers Key",
-				"130": "Enter the Queen's Chambers",
-				"135": "Find the Queen",
-				"140": "Incapacitate the Queen",
-				"150": "Inject the Revivification Serum",
-				"160": "Get the Appointment Notice signed by the Queen",
-				"180": "Return to the Imperial War Museum",
-				"200": "Meet Asquith outside for a duel",
-				"230": "Defeat Asquith",
-				"250": "Listen to General Major's speech"
-			}
-		},
-		"072BA815": {
-			"editor_id": "FOLON_MQFifth306",
-			"name": "The Queen's Army",
-			"objectives": {
-				"5": "Speak with Derek",
-				"10": "Convene with Eve",
-				"20": "Travel to the Imperial War Museum",
-				"30": "Meet with Derek and Major Jonathan Allen",
-				"40": "Journey to Buckingham Palace",
-				"50": "Plan the attack with Derek",
-				"60": "Wait for Derek to give orders to the militiamen",
-				"65": "Wait for the 5th Column to breach the gate",
-				"70": "Storm Buckingham Palace",
-				"72": "Clear the Palace interior",
-				"75": "Convince Princess Elizabeth to ally with the Fifth Column",
-				"80": "Kill the Royals and take their heads",
-				"90": "Return to Major Allen",
-				"100": "Follow Major Allen",
-				"110": "Present the head to General Asquith",
-				"115": "Present the writ of allegience to General Asquith",
-				"120": "Observe the coup",
-				"130": "Kill the resistors",
-				"140": "Speak to General Allen",
-				"150": "Speak to Derek",
-				"160": "Return to Eve"
-			}
-		},
-		"072AC4EB": {
-			"editor_id": "FOLON_MQAngel303",
-			"name": "Ozymandias",
-			"objectives": {
-				"0": "Assassinate Eve Varney",
-				"1": "(Optional) Storm the board room",
-				"10": "Meet Horatio at the 5th Column tavern",
-				"20": "(Optional) Persuade Victor Schmidt to join the plot",
-				"30": "(Optional) Find evidence of Hume's murder before speaking to Victor",
-				"50": "Assassinate Eve Varney at the discrete location"
-			}
-		},
-		"072B658A": {
-			"editor_id": "FOLON_MQCamelot308",
-			"name": "Cable Street Woes",
-			"objectives": {
-				"10": "Meet Bedivere in the Tower Hamlets",
-				"20": "Sit down with Bedivere",
-				"40": "Clear out the Tower of London",
-				"50": "Return to Bedivere",
-				"60": "Meet Guinevere near the LT Tower",
-				"80": "Equip the 5th Column Disguise",
-				"90": "Walk with Guinevere",
-				"100": "Enter the LT Tower basement",
-				"105": "Sabotage the LT Tower power module",
-				"110": "Don't break cover",
-				"120": "Meet back up with Guinevere",
-				"130": "Speak to Merlin at the Tower of London",
-				"140": "Get the coordinates of Cable Street's defences",
-				"155": "Don't break cover",
-				"160": "Return to Merlin",
-				"170": "Rescue Kay",
-				"190": "Get in position for the battle",
-				"200": "Charge!",
-				"210": "Storm their headquarters!",
-				"220": "Confront Eve",
-				"240": "Speak to Arthur"
 			}
 		},
 		"072B659F": {
@@ -136388,28 +140800,6 @@
 				"30": "Return To Charles McAndrew"
 			}
 		},
-		"072B457F": {
-			"editor_id": "FOLON_GW201",
-			"name": "Revenge, Thy Name Is Fury",
-			"objectives": {
-				"10": "Speak to Gaunt",
-				"20": "Ask Winston about Lockheed",
-				"21": "Ask Anthony about Sinclair",
-				"22": "Ask Johnny about Pieter",
-				"30": "Go to Lockheed's mistress's flat",
-				"40": "Deal with John Lockheed",
-				"45": "Kill John Lockhead",
-				"50": "Talk to Lexi",
-				"55": "Use the Key to enter the Factory",
-				"60": "Kill Sinclair",
-				"65": "(Optional) Burn Sinclair's body",
-				"70": "Find Pieter the Fence in Westminster",
-				"75": "Kill Pieter",
-				"77": "Get the ledger",
-				"78": "Collect your Weapons",
-				"80": "Return to Gaunt"
-			}
-		},
 		"072E7EEA": {
 			"editor_id": "Folon_COM_JohnSmithQuest",
 			"name": "Masquerade",
@@ -136425,49 +140815,6 @@
 				"80": "Speak to John",
 				"85": "Listen to the holotape",
 				"87": "Speak to John"
-			}
-		},
-		"072B4580": {
-			"editor_id": "FOLON_GW106",
-			"name": "Prison Break",
-			"objectives": {
-				"10": "Enter HMS Dredge",
-				"20": "Take out the Syndicate security",
-				"25": "Speak to the Vagabond prisoners",
-				"30": "Release the Vagabonds via the terminal",
-				"35": "Reset the cell terminal password",
-				"40": "Release the Vagabonds via the terminal",
-				"45": "Speak to the Vagabonds",
-				"50": "(Optional) Plant the bombs on the lower deck",
-				"60": "Return to Johnny",
-				"100": "(Optional) Release the rest of the prisoners",
-				"110": "(Optional) Find a way to open the armoury",
-				"120": "Return to Agatha"
-			}
-		},
-		"072BA816": {
-			"editor_id": "FOLON_MQFifth308",
-			"name": "Idylls of the King",
-			"objectives": {
-				"10": "Wait for the 5th Column Leadership",
-				"20": "Discover the 5th Column's next step",
-				"30": "Speak to Eve",
-				"40": "Interrogate the Prisoner",
-				"50": "Speak to Rhys",
-				"60": "Speak to Lancelot",
-				"70": "Force the Guard to leave",
-				"80": "Get information from Lancelot",
-				"90": "Return to Eve",
-				"100": "Begin the assault",
-				"110": "Breach the Camelot headquarters",
-				"120": "Find Arthur",
-				"130": "Speak to Eve",
-				"140": "Find the entrance to the safe room",
-				"150": "Kill Merlin",
-				"160": "Check on Eve",
-				"170": "Find Arthur",
-				"180": "Kill Arthur",
-				"190": "Return to Eve"
 			}
 		},
 		"072AEA99": {
@@ -136501,33 +140848,6 @@
 				"210": "Speak to the Roundels"
 			}
 		},
-		"071C76B4": {
-			"editor_id": "Folon_GW101",
-			"name": "Swan & Mitre",
-			"objectives": {
-				"5": "(Optional) Visit the Vagabonds after investigating Thameshaven",
-				"10": "Follow the Vagabonds",
-				"20": "Find the medkit inside Greenwich Station",
-				"30": "Return to Ricky",
-				"40": "Travel to Swan & Mitre",
-				"50": "Defend the Swan & Mitre",
-				"60": "Talk to Yvette",
-				"70": "Kill Syndicate scout",
-				"80": "Return to Yvette",
-				"90": "Talk to Nelson",
-				"100": "Ask Winston about radio parts",
-				"110": "Find out why Nadia's delivery is late",
-				"115": "Speak to Nadia",
-				"120": "Return to Winston",
-				"130": "Ask Anthony to fix the radio",
-				"140": "Find a crystalline photon agitator",
-				"145": "Bring a crystaline photon agitator to Anthony",
-				"150": "Ask Johnny Shrapnel for a battery",
-				"160": "Deliver Johnny's apology gift",
-				"170": "Return to Johnny",
-				"180": "Return to Nelson"
-			}
-		},
 		"072B6593": {
 			"editor_id": "FOLON_GW204",
 			"name": "Black",
@@ -136552,17 +140872,6 @@
 				"30": "Follow Gaunt outside",
 				"40": "Kill Gaunt",
 				"50": "Report to Black"
-			}
-		},
-		"072B6595": {
-			"editor_id": "FOLON_GW205b",
-			"name": "Clearing House",
-			"objectives": {
-				"10": "Speak to Ayesha",
-				"20": "Clear out first safehouse",
-				"30": "Find out the location of the second safehouse",
-				"40": "Clear out second safehouse",
-				"50": "Return to Ayesha"
 			}
 		},
 		"072B6597": {
@@ -136603,38 +140912,6 @@
 				"60": "Return to Ellen"
 			}
 		},
-		"072B84CA": {
-			"editor_id": "FOLON_MQCamelot304",
-			"name": "The Dolorous Strike",
-			"objectives": {
-				"10": "Listen to Percival's news",
-				"20": "Talk to Arthur",
-				"30": "Investigate the explosion at Charing Cross",
-				"40": "(Optional) Ask Merlin and Percival about the explosion",
-				"60": "Speak to Colonel George Major",
-				"70": "Investigate the explosion site",
-				"90": "Investigate the Charing Cross Underground",
-				"100": "Follow the tunnel north",
-				"110": "Speak to the knights",
-				"120": "Go to St Anne's Churchyard",
-				"130": "Speak to the guard",
-				"140": "Speak to Tucker",
-				"150": "Deal with the 5th Columnists",
-				"170": "Free Tristan's family",
-				"180": "Search the churchyard for useful information",
-				"190": "Return to Tristan and Iseult",
-				"200": "Give Arthur a full report"
-			}
-		},
-		"07283CDA": {
-			"editor_id": "FOLON_MQ203",
-			"name": "All To Pot",
-			"objectives": {
-				"30": "Talk to the man outside your cell",
-				"40": "Escape the prison",
-				"45": "Retrieve your belongings"
-			}
-		},
 		"072B84D1": {
 			"editor_id": "FOLON_MQCamelot303",
 			"name": "Living on a Thin Line",
@@ -136671,27 +140948,6 @@
 				"330": "Report to Merlin"
 			}
 		},
-		"071B7318": {
-			"editor_id": "FOLON_MQ106",
-			"name": "Cold Case",
-			"objectives": {
-				"10": "Speak to Father Luke",
-				"20": "Investigate Lazarus' belongings",
-				"30": "Return to Father Luke",
-				"40": "Figure out who \"bones\" is",
-				"50": "Speak to the undertaker's assistant",
-				"55": "Investigate Christopher's belongings",
-				"60": "Confront Christopher",
-				"70": "Consult Reverend Francis",
-				"80": "Find Lazarus' stash",
-				"90": "Travel to Beefeater Burger",
-				"95": "Search for clues in the restaurant",
-				"100": "Listen to the holotape",
-				"110": "Investigate Wintergarden",
-				"120": "Free Lazarus",
-				"140": "Speak to Lazarus"
-			}
-		},
 		"072AA43E": {
 			"editor_id": "FOLON_LQHamlets101",
 			"name": "A Dish Best Served With Hot Lead",
@@ -136712,57 +140968,6 @@
 				"20": "Search for the books for Sabertooth Syd",
 				"22": "(Optional) Find Dove's Dilemma",
 				"30": "Return to Syd with the books"
-			}
-		},
-		"072AC4F0": {
-			"editor_id": "FOLON_MQAngel304",
-			"name": "You Only Live Twice",
-			"objectives": {
-				"0": "Assassinate Arthur",
-				"10": "Meet Dr James North in Westminster",
-				"40": "Go to North's laboratory via Hyde Park Corner Station",
-				"50": "Run to North's laboratory - don't get squished!",
-				"60": "Discuss the plan with Doctor North",
-				"70": "Attend North's party in Westminster",
-				"80": "Kill Guinevere - preferably in the garden",
-				"85": "(Optional) Find hidden surveillance devices (<Global=FOLON_MQAngel304_Counter01>/5)",
-				"100": "Return to Doctor North's laboratory",
-				"110": "Speak to Doctor North",
-				"120": "Complete the experiment",
-				"130": "Check the results",
-				"140": "Contact Smythe",
-				"150": "Listen to Smythe on the telescreen",
-				"200": "Meet Guinevere near Camelot",
-				"210": "Follow Guinevere",
-				"320": "Report back to Smythe at North's lab"
-			}
-		},
-		"072BA80B": {
-			"editor_id": "FOLON_MQCamelot307",
-			"name": "The King's Speech",
-			"objectives": {
-				"10": "Speak with Arthur",
-				"20": "Go to the Imperial War Museum",
-				"30": "Convince the Tommies to negotiate",
-				"40": "Question Major Jonathan Allen",
-				"50": "Return to Arthur",
-				"60": "Search the field for Asquith",
-				"80": "Carry Asquith's body out of the field",
-				"90": "Speak to Kay",
-				"100": "Inform Colonel George Major of Asquith's death",
-				"110": "Speak to Arthur in private",
-				"120": "Meet Guinevere in Westminster",
-				"140": "Meet Guinevere at the party",
-				"150": "Blend in and follow Doctor North",
-				"160": "Plant the surveillance devices (<Global=FOLON_MQCamelot307_DeviceCounter>/3)",
-				"190": "Listen to Doctor North's conversation",
-				"200": "Speak to Guinevere",
-				"210": "Find Horatio at the trainwreck site",
-				"220": "Defeat the 5th Columnists",
-				"230": "Get evidence from Horatio",
-				"240": "Return to Guinevere",
-				"260": "Give the evidence to Colonel George Major",
-				"270": "Speak to Arthur"
 			}
 		},
 		"072AC4EA": {
@@ -136914,73 +141119,6 @@
 				"80": "Return the evidence to Mr Tommy"
 			}
 		},
-		"072AC4E9": {
-			"editor_id": "FOLON_MQAngel307",
-			"name": "Acceptable Losses",
-			"objectives": {
-				"10": "Await contact from Smythe",
-				"20": "Check in with Smythe",
-				"30": "Travel to the Land's End Inn in Peckham",
-				"40": "Retrieve your luggage from Room 5",
-				"45": "Read your new Initiative Briefing",
-				"60": "Pick up the briefcase",
-				"70": "Pick up the flag",
-				"80": "Pick up the flamethrower",
-				"90": "Travel to the Peckham settlement nearby",
-				"100": "Burn down the settlement...",
-				"105": "Leave no survivors!",
-				"120": "Hoist the Angel flag",
-				"140": "\"Assist\" the Tommies with their inquiries",
-				"150": "Deal with the Tommies",
-				"170": "Speak to the 2nd Lieutenant",
-				"190": "Speak to the Lieutenant"
-			}
-		},
-		"072BA80A": {
-			"editor_id": "FOLON_FQThameshaven101",
-			"name": "Scylla",
-			"objectives": {
-				"5": "Visit the Ferryman back in Thameshaven",
-				"40": "Speak to Bob Clarkson",
-				"45": "Search Carl's Shack",
-				"50": "Speak to Jeremy Lewis",
-				"55": "Ask the Thamesfolk about Carl",
-				"57": "Find Carl",
-				"58": "Search Carl's Body",
-				"60": "Bring the Holotape to Rachel",
-				"70": "Return to Bob",
-				"80": "Speak to Angela",
-				"90": "Dethrone the Empress",
-				"91": "Travel to the Greenwich Impact Crater",
-				"95": "Take proof of the Mittenlurk Queen's demise",
-				"100": "Return to Angela",
-				"110": "Bring the evidence to Horace",
-				"120": "Inform Rachel of Horace's decision"
-			}
-		},
-		"07237DB8": {
-			"editor_id": "FOLON_SQCamden101",
-			"name": "The Scottish Play",
-			"objectives": {
-				"20": "Steal the Globe Theatre's copy of Macbeth",
-				"25": "(Optional) Convince the Globe Theatre to give you Macbeth",
-				"30": "Return the play to Scott Nightingale",
-				"40": "Speak to Freddy Fife",
-				"50": "Get the stash of Calmex for Freddy",
-				"80": "Return to Freddy",
-				"90": "Return to Scott",
-				"100": "Speak with Claudia Rampling",
-				"110": "Get the basement key from Scott",
-				"120": "Find the source of the noises",
-				"130": "Speak with the ghouls",
-				"135": "(Optional) Speak with Scott about the ghouls",
-				"140": "Deal with the ghouls",
-				"145": "Kill the ghouls",
-				"150": "Disable the speakers at the terminal",
-				"160": "Return to Claudia",
-				"170": "Return to Scott"
-			}
-		},
 		"0722C5CF": {
 			"editor_id": "FOLON_FQMiller101",
 			"name": "Glad Tidings",
@@ -136994,35 +141132,6 @@
 				"40": "Return to John Marsh",
 				"45": "Visit the graveyard",
 				"50": "Return to Miller"
-			}
-		},
-		"072BCEF5": {
-			"editor_id": "FOLON_SQNewham102",
-			"name": "L'appel du Vide",
-			"objectives": {
-				"10": "Rescue Segolene from the Tommy Outpost",
-				"15": "(Optional) Speak to Sgt Williams",
-				"20": "Find another way to rescue Segolene",
-				"30": "Collect 25 each of 9mm rounds, 308 rounds and Fusion Cells for Sgt Williams",
-				"40": "Return to Sgt Williams",
-				"50": "Release Segolene",
-				"60": "Return to the Normans",
-				"67": "Speak to Segolene",
-				"70": "Gain entrance to the boat",
-				"80": "(Optional) Find a Tommy Uniform",
-				"90": "Let the Normans in",
-				"95": "Wait for the Normans to cross",
-				"100": "Steal the boat",
-				"110": "Speak to the Normans",
-				"120": "Kill Eugene",
-				"130": "Speak to Segolene",
-				"140": "Acquire coal for Segolene",
-				"150": "Return to Segolene",
-				"160": "Acquire munitions for Eugene",
-				"170": "Speak to Monty",
-				"180": "Kill Monty",
-				"190": "Acquire munitions for Eugene",
-				"200": "Return to Eugene"
 			}
 		},
 		"072B659A": {
@@ -137047,26 +141156,6 @@
 				"20": "(Optional) Let the Vagabonds in",
 				"25": "Burn the warehouse",
 				"30": "Return to Anthony"
-			}
-		},
-		"072BA807": {
-			"editor_id": "FOLON_FQCroydon101",
-			"name": "No Man's Wasteland",
-			"objectives": {
-				"10": "Speak to Lieutenant Doyle",
-				"20": "Travel into Croydon",
-				"30": "Build a bridge deeper into Croydon",
-				"35": "(Optional) Access the building supplies in Croydon Pindar",
-				"40": "(Optional) Find the Croydon Pindar key in the Crystal Palace Maze",
-				"60": "Travel further into Croydon",
-				"70": "Find a new support beam",
-				"80": "Help the stranded Tommies",
-				"90": "Speak to the officer",
-				"100": "Build a bridge deeper into Croydon",
-				"110": "Make contact with the Croydonians",
-				"120": "Speak to Second Lieutenant Buckley",
-				"180": "Report to Lieutenant Doyle",
-				"190": "Return to Chief Roach"
 			}
 		},
 		"072964A4": {
@@ -137465,35 +141554,6 @@
 				"70": "Report on Sybil's sobriety to Laurence"
 			}
 		},
-		"072BA80D": {
-			"editor_id": "FOLON_MQCamelot302",
-			"name": "Every Breath You Take",
-			"objectives": {
-				"10": "Speak to Percival in his office",
-				"20": "Speak to the tribal leader in Brickton",
-				"30": "(Optional) Return to Chief Roach",
-				"40": "Poison the rations supplies with laxatives",
-				"50": "Shut down the generator powering the turrets",
-				"60": "Start some rumours about Lieutenant Doyle",
-				"70": "Return to Chief Roach",
-				"80": "(Optional) Return to Chief Roach",
-				"90": "Draw anti-Sneed graffiti around the outpost",
-				"100": "Set fire to cow manure to stink up the outpost",
-				"110": "Start some rumours about Brigadier Sneed",
-				"120": "Return to Chief Roach",
-				"130": "Witness Major Sneed's arrival",
-				"135": "Speak to Laura",
-				"140": "Speak to Chief Roach",
-				"150": "Hold up Sneed's wagon",
-				"170": "Fight the guards",
-				"210": "Take the contents of the wagon",
-				"220": "Break the news to Brigadier Sneed",
-				"230": "Wait for the Tommies to leave",
-				"240": "Return to Chief Roach",
-				"250": "Return to Percival",
-				"270": "Speak to Merlin"
-			}
-		},
 		"0730FCF1": {
 			"editor_id": "FOLON_KOCamelot",
 			"name": "Camelot Kick Out Quest"
@@ -137675,52 +141735,9 @@
 				"200": "Return to Arthur when you're ready to make an accusation"
 			}
 		},
-		"072BF524": {
-			"editor_id": "FOLON_FQGlobe101",
-			"name": "All the World's a Stage",
-			"objectives": {
-				"10": "Talk to Jeanine, Kelpe's secretary",
-				"21": "Find a copy of Pericles near the Thames",
-				"22": "Find a copy of King John in Camden",
-				"23": "Find a copy of Troilus and Cressida in Islington",
-				"24": "Find a copy of Richard II at the Theatre Royal",
-				"25": "Find a copy of Henry VII at the Imperial War Museum",
-				"26": "Find a copy of Cymbeline at Westminster Abbey",
-				"27": "Find a copy of Timon of Athens in Brixton",
-				"28": "Find a copy of Two Gentlemen of Verona in Bromley",
-				"29": "(Optional) Get Safe Key from Amber",
-				"30": "Return to Kelpe with the plays",
-				"40": "Talk to Jeanine about The History of Cardenio",
-				"45": "Tell Kelpe that the History of Cardenio is lost",
-				"50": "Find a copy of The History of Cardenio in Greenwich",
-				"60": "Confront Jeanine about her lie",
-				"70": "Tell Kelpe that Jeanine lied"
-			}
-		},
 		"071F7D56": {
 			"editor_id": "FOLON_GMGlobe",
 			"name": "Globe NPC Manager"
-		},
-		"072AEAA5": {
-			"editor_id": "FOLON_FQRoundels103b",
-			"name": "Choose Life",
-			"objectives": {
-				"10": "Speak to Manchester Mike",
-				"20": "Meet Manchester Mike at Maab House",
-				"30": "Secure the safehouse",
-				"40": "Fix the fridge",
-				"50": "Fix the bed",
-				"60": "Replace the doors",
-				"70": "Clean up the gore",
-				"80": "Return to Manchester Mike",
-				"90": "Kill the Hooligans",
-				"100": "Meet Manchester Mike at the safehouse",
-				"110": "Find, buy or make 3 antibiotics and 1 Morph-X",
-				"120": "Deliver the chems to Manchester Mike",
-				"130": "Kill Dennis",
-				"140": "Retrieve the Sober from Manchester Mike's safe",
-				"150": "Give Prince Pete the Sober"
-			}
 		},
 		"0728C3D1": {
 			"editor_id": "FOLON_LQCamden102",
@@ -137781,50 +141798,6 @@
 			"editor_id": "FOLON_LQCity103Post",
 			"name": "The Firm Post"
 		},
-		"072C0D8A": {
-			"editor_id": "FOLON_SQSouthwark102",
-			"name": "Food For Thought",
-			"objectives": {
-				"1": "Talk to the Ferryman",
-				"2": "Find clues to the missing Thamesfolk",
-				"3": "Follow the trail",
-				"4": "Talk to the Factory Guard",
-				"17": "Ask Factory Workers About Blood Trail",
-				"19": "Find a way into the Restricted Zone",
-				"20": "Defeat the Snatchers",
-				"21": "Investigate the area",
-				"23": "Convince Cal to tell you what's going on",
-				"24": "Defeat Cal",
-				"25": "Find evidence",
-				"27": "(Optional) Stop the operation",
-				"29": "Speak to the factory boss",
-				"30": "Talk to the Ferryman",
-				"31": "Talk to the Ferryman"
-			}
-		},
-		"072BA806": {
-			"editor_id": "FOLON_SQSouthwark101",
-			"name": "No More Heroes",
-			"objectives": {
-				"1": "Investigate the shouting",
-				"2": "Listen to Allen's speech",
-				"5": "Talk to Harvin",
-				"10": "Find Harvin's office",
-				"11": "Speak to Harvin",
-				"12": "Follow Harvin",
-				"13": "Speak to Allen",
-				"15": "Follow Harvin",
-				"16": "Talk to Allen",
-				"17": "Follow Harvin",
-				"18": "Eliminate Allen",
-				"19": "Kill Harvin",
-				"20": "Speak to Harvin",
-				"21": "Speak to Allen",
-				"161": "Speak to Harvin",
-				"171": "Speak to Allen",
-				"172": "Speak to Harvin"
-			}
-		},
 		"072B658C": {
 			"editor_id": "FOLON_LQWestminster101",
 			"name": "Sisterly Closure",
@@ -137875,14 +141848,6 @@
 				"10": "Talk to Black",
 				"20": "Clear out Vagabonds' cache points",
 				"30": "Return to Black"
-			}
-		},
-		"072AA43D": {
-			"editor_id": "FOLON_LQEastminster104",
-			"name": "Syringe for Alanah",
-			"objectives": {
-				"10": "Investigate Alanah's parent's Footlocker",
-				"20": " Return to Alanah"
 			}
 		},
 		"072ACE00": {
@@ -137990,24 +141955,6 @@
 				"30": "Speak to Rodger"
 			}
 		},
-		"072B84CE": {
-			"editor_id": "FOLON_MQFifth303",
-			"name": "Of Mutants and Men",
-			"objectives": {
-				"5": "Talk to John Smith",
-				"10": "Report to Victor Schmidt",
-				"20": "Speak to Horatio Whitehouse",
-				"30": "Investigate Thameshaven",
-				"40": "Talk to Dr. Alan Webb",
-				"50": "Find out about Tunnel Cough immunity in Thameshaven",
-				"60": "Talk to Margery",
-				"64": "Convince Margery to go to Cable Street",
-				"70": "Talk to Horatio",
-				"80": "Inform Dr. Webb about his Granddaughter",
-				"82": "Take Dr. Webb back to the 5th Column",
-				"83": "Discover what is going on"
-			}
-		},
 		"072BA808": {
 			"editor_id": "FOLON_MQFifth307",
 			"name": "A Roar in the Waves",
@@ -138034,49 +141981,6 @@
 				"110": "Speak with Eve",
 				"120": "Descend",
 				"140": "Debrief with Eve"
-			}
-		},
-		"072BA818": {
-			"editor_id": "FOLON_MQFifth304",
-			"name": "Mountain Out Of A Molehill",
-			"objectives": {
-				"10": "Speak to Eve in her office",
-				"20": "Speak to Zach Lloyd",
-				"30": "Wait at the Drop-Off Point",
-				"40": "Defeat the Ambushers",
-				"50": "Report Back to Zach Lloyd",
-				"60": "Make contact with Jeff Mutt",
-				"70": "Clear out the church in Wandsworth",
-				"80": "Return to Jeff Mutt",
-				"90": "Return to the church",
-				"100": "Wait to ambush the Knights",
-				"101": "(Optional) Place a trap at the church door",
-				"110": "Take down Lancelot and kill his allies",
-				"120": "Let Horatio question Lancelot",
-				"130": "Speak to Horatio",
-				"140": "(Optional) Search Lancelot's room",
-				"150": "(Optional) Confront Rhys Clarke",
-				"151": "Return to Zach Lloyd",
-				"160": "Report to Eve"
-			}
-		},
-		"0731101F": {
-			"editor_id": "FOLON_SQWestminster109",
-			"name": "NuSkin, New You",
-			"objectives": {
-				"10": "Speak to Miss Crake",
-				"11": "Make an appointment for a NuSkin treatment",
-				"20": "Speak to Nurse Peggy",
-				"30": "Enter the Restricted Section of NuSkin",
-				"35": "Speak to the Child",
-				"37": "(Optional) Find out what happened to Renara",
-				"40": "Find out what is happening at NuSkin",
-				"41": "Access Miss Crake's Terminal",
-				"45": "Tell Nurse Peggy of your findings",
-				"50": "Speak to Miss Crake",
-				"60": "Kill Miss Crake and eliminate the Robots",
-				"70": "Speak to Caspian",
-				"80": "Speak to the people of Eastminster"
 			}
 		},
 		"07311022": {
@@ -138147,16 +142051,6 @@
 				"20": "Return to Noah"
 			}
 		},
-		"071F1179": {
-			"editor_id": "FOLON_MQ204",
-			"name": "The Placebo Effect",
-			"objectives": {
-				"10": "Go to the Science Museum",
-				"20": "Find Mr. X",
-				"30": "Confront Mr. X",
-				"40": "(Optional) Destroy the Angel research before you leave"
-			}
-		},
 		"072AEAA0": {
 			"editor_id": "FOLON_FQDogs101",
 			"name": "It's a Barrel, it rolls",
@@ -138209,28 +142103,6 @@
 				"10": "Open the door",
 				"15": "Explore the room",
 				"20": "Speak to the Maintenance Man"
-			}
-		},
-		"072AA43F": {
-			"editor_id": "FOLON_LQHamlets103",
-			"name": "Five Finger Discount",
-			"objectives": {
-				"10": "Speak with Sumner",
-				"12": "Steal the item for Sumner",
-				"15": "Return to Sumner",
-				"20": "Speak with Rhys",
-				"22": "Steal the item for Rhys",
-				"25": "Return to Rhys",
-				"30": "Speak with Braiden",
-				"32": "Steal the item for Braiden",
-				"35": "Return to Braiden",
-				"40": "Speak with the Bartender",
-				"42": "Steal the item for Bartender",
-				"45": "Return to Bartender",
-				"50": "Speak with Jennifer",
-				"52": "Steal the item for Jennifer",
-				"55": "Return to Jennifer",
-				"65": "Return to McFadden"
 			}
 		},
 		"072B659E": {
@@ -138390,19 +142262,6 @@
 				"65": "Return to Jeremy"
 			}
 		},
-		"072AA443": {
-			"editor_id": "FOLON_LQWestminster106",
-			"name": "Bletchley Bombe",
-			"objectives": {
-				"5": "Investigate the University",
-				"10": "Decypher mysterious code",
-				"20": "Tell the Professor you've cracked the code",
-				"30": "Unlock Master Terminal",
-				"40": "Read the message on the inner terminal",
-				"50": "Kill the Robots",
-				"60": "Return to the Professor"
-			}
-		},
 		"072AA196": {
 			"editor_id": "FOLON_LQLambeth101",
 			"name": "Torch for Tommy Nightwatchman",
@@ -138538,20 +142397,6 @@
 				"100": "Return to Merlin"
 			}
 		},
-		"0729B279": {
-			"editor_id": "FOLON_FQPistols102",
-			"name": "Here's The Pistols",
-			"objectives": {
-				"10": "Speak to Apache Alice",
-				"20": "Clear out Hooligans",
-				"30": "Report back to Apache Alice",
-				"40": "Get Palmira Romero's endorsement",
-				"42": "Get Captain Reasonable's endorsement",
-				"50": "Report back to Apache Alice",
-				"60": "Get John Strutter's endorsement",
-				"70": "Speak to Apache Alice"
-			}
-		},
 		"072A763C": {
 			"editor_id": "FOLON_COM_MadJack",
 			"name": "Mad Jack Companion Quest"
@@ -138581,10 +142426,6 @@
 		"072A4DDF": {
 			"editor_id": "FOLON_COM_Kiera",
 			"name": "Kiera Companion Quest"
-		},
-		"072C2B45": {
-			"editor_id": "FOLON_COM_KieraRecruitment",
-			"name": "Kiera the Treasure Hunter (Kiera Recruitment)"
 		},
 		"072C2D0E": {
 			"editor_id": "FOLON_COM_KieraTalk",
@@ -138742,21 +142583,6 @@
 				"20": "Talk to Allen"
 			}
 		},
-		"072AD7B3": {
-			"editor_id": "FOLON_FQPistols104",
-			"name": "What's In A Name",
-			"objectives": {
-				"10": "Knock for John Strutter",
-				"20": "Talk to John Strutter",
-				"30": "Get Malcom Rhodes to sign the confession",
-				"31": "Find documents that incriminate Malcolm Rhodes",
-				"40": "Return the signed statement to John Strutter",
-				"50": "Return the incriminating documents to John Strutter",
-				"100": "Distribute the packages to Malcolm's friends",
-				"120": "(Optional) Tell John about the leaflets",
-				"130": "Return to Malcolm Rhodes"
-			}
-		},
 		"072B658D": {
 			"editor_id": "FOLON_LQHackney101",
 			"name": "Self-preservation Society",
@@ -138778,28 +142604,6 @@
 				"30": "Speak to Bookie"
 			}
 		},
-		"072AC4EC": {
-			"editor_id": "FOLON_MQAngel301",
-			"name": "Taking Initiative",
-			"objectives": {
-				"10": "Go to your first initiative",
-				"20": "Investigate the voice",
-				"30": "Meet the man in his office",
-				"40": "Collect DNA samples (<Global=FOLON_MQAngel301_Counter01>/4)",
-				"50": "Return to Director Wesley Herbertson",
-				"60": "Enter the first cage",
-				"80": "Deal with the first ghoul",
-				"90": "Enter the second cage",
-				"110": "Deal with the second ghoul",
-				"120": "Enter the third cage",
-				"140": "Interact with the third ghoul",
-				"145": "Deal with the third ghoul",
-				"150": "Enter the fourth cage",
-				"170": "Interact with the fourth ghoul",
-				"185": "Deal with the fourth ghoul",
-				"190": "Speak to Director Wesley Herbertson"
-			}
-		},
 		"072AEAA7": {
 			"editor_id": "FOLON_SQWestminster106",
 			"name": "Colonial's Finest",
@@ -138818,17 +142622,6 @@
 		"072BA810": {
 			"editor_id": "FOLON_SQCroydon103",
 			"name": "Silly Love Songs"
-		},
-		"072BA814": {
-			"editor_id": "FOLON_LQCroydon101",
-			"name": "A-maze-ing",
-			"objectives": {
-				"5": "Greet the Gardener",
-				"10": "Reach the Maze Centre",
-				"11": "Find the Maze Keys",
-				"20": "Get the Maze Exit Key",
-				"30": "Escape the Maze"
-			}
 		},
 		"072A763D": {
 			"editor_id": "FOLON_COM_Mountbatten",
@@ -139357,6 +143150,297 @@
 		"072FB956": {
 			"editor_id": "FOLON_GMBarry",
 			"name": "Barry Boat Fast Travel Manager"
+		}
+	},
+	"weapons": {
+		"070B67B5": {
+			"editor_id": "Folon_Weap_GrenThamesiumGoo",
+			"name": "Thamesium Goo",
+			"description": "Weaponized Thames water, that causes an acidic radius that does damage over time."
+		},
+		"07329994": {
+			"editor_id": "Folon_Weap_Ranged_CovertPistol-WelrodGold",
+			"name": "Scaramanga"
+		},
+		"0730B165": {
+			"editor_id": "Folon_Weap_UniqueMongolBow",
+			"name": "Ornate Bow"
+		},
+		"00107BD6": {
+			"editor_id": "BaseballGrenade",
+			"name": "Baseball Grenade"
+		},
+		"07198AAF": {
+			"editor_id": "Folon_Weap_UniqueDirtyWeldy",
+			"name": "Dirty Weldy",
+			"description": "Shoots a stream of kinetic projectiles that stagger enemies on contact."
+		},
+		"07281634": {
+			"editor_id": "Folon_Weap_MeleeChainsaw",
+			"name": "Chainsaw"
+		},
+		"07189AA1": {
+			"editor_id": "Folon_Weap_MeleePipeAxe",
+			"name": "Pipe Axe"
+		},
+		"071898E4": {
+			"editor_id": "Folon_Weap_MeleeTennisRacquet",
+			"name": "Tennis Racquet"
+		},
+		"070C84E0": {
+			"editor_id": "Folon_Weap_MeleeBoxcutter",
+			"name": "Boxcutter"
+		},
+		"070BE4AF": {
+			"editor_id": "Folon_Weap_MeleeTrowel",
+			"name": "Trowel"
+		},
+		"072DC932": {
+			"editor_id": "Folon_Weap_RangedM72GaussRifle",
+			"name": "Gauss Rifle"
+		},
+		"070B663D": {
+			"editor_id": "Folon_Weap_RangedServicePistol-Webley_1913",
+			"name": "Service"
+		},
+		"0704E15E": {
+			"editor_id": "Folon_Weap_Ranged9MM-LugerP09",
+			"name": "9mm"
+		},
+		"07278730": {
+			"editor_id": "Folon_Weap_RangedMauser",
+			"name": "Chinese"
+		},
+		"070BE430": {
+			"editor_id": "Folon_Weap_RangedLaserGun-British",
+			"name": "Upton-Burke Class C Rifle"
+		},
+		"070BE3C6": {
+			"editor_id": "Folon_Weap_UniqueCamelotStunBaton",
+			"name": "Rigby's Baton"
+		},
+		"000CE97D": {
+			"editor_id": "44",
+			"name": ".44"
+		},
+		"0710C867": {
+			"editor_id": "Folon_Weap_UmbrellaWithKnife",
+			"name": "Umbrella"
+		},
+		"070C99AB": {
+			"editor_id": "Folon_Weap_VintageRifle-MartiniHenryICI",
+			"name": "Vintage Rifle"
+		},
+		"072AC4E1": {
+			"editor_id": "Folon_Weap_RangedSSTGWeapon",
+			"name": "Combat Shotgun"
+		},
+		"070B6569": {
+			"editor_id": "Folon_Weap_RangedLMG-BrenMK2",
+			"name": "Light Machine Gun"
+		},
+		"0730B164": {
+			"editor_id": "Folon_Weap_RangedWoodbow_NPC_FireArrow",
+			"name": "Wood Bow"
+		},
+		"070DB2BF": {
+			"editor_id": "Folon_Weap_RangedCrudeSMG_CrudeBlowback",
+			"name": "Crude Gun"
+		},
+		"072B026E": {
+			"editor_id": "Folon_Weap_MeleeDruidMachete",
+			"name": "Sacrificial Blade"
+		},
+		"07307231": {
+			"editor_id": "Folon_Weap_UniqueCamelotGalantine",
+			"name": "Galantine"
+		},
+		"07307235": {
+			"editor_id": "Folon_Weap_UniqueCamelotOlwen",
+			"name": "Olwen"
+		},
+		"070BE3D1": {
+			"editor_id": "Folon_Weap_MeleeLongSword1h",
+			"name": "Long Sword"
+		},
+		"0731ACC7": {
+			"editor_id": "Folon_Weap_UniqueCamelotSecace",
+			"name": "Secace"
+		},
+		"0731ACCA": {
+			"editor_id": "Folon_Weap_UniqueServiceRifleLeeEnfieldAustralia",
+			"name": "Service Rifle"
+		},
+		"072D42C4": {
+			"editor_id": "Folon_Weap_RangedBox_SMG",
+			"name": "Box Submachine Gun"
+		},
+		"0715B9A8": {
+			"editor_id": "Folon_Weap_UniqueCarmine",
+			"name": "Carmine"
+		},
+		"072995DE": {
+			"editor_id": "Folon_Weap_UniqueCamelotArondight",
+			"name": "Arondight"
+		},
+		"070BE3D0": {
+			"editor_id": "Folon_Weap_MeleeLongSword2h",
+			"name": "Two-Handed Long Sword"
+		},
+		"070DB22B": {
+			"editor_id": "Folon_Weap_RangedCrudeRevolver-HandmadeRevolver",
+			"name": "Crude Revolver"
+		},
+		"070DB5BF": {
+			"editor_id": "Folon_Weap_RangedBattleRifle-FNFAL",
+			"name": "Battle Rifle"
+		},
+		"070DB848": {
+			"editor_id": "Folon_Weap_RangedServiceRevolver-Webley",
+			"name": "Service Revolver"
+		},
+		"0005524B": {
+			"editor_id": "Knuckles",
+			"name": "Knuckles"
+		},
+		"072815F2": {
+			"editor_id": "Folon_Weap_MeleeTorchWeapon",
+			"name": "Torch"
+		},
+		"072EC6C4": {
+			"editor_id": "Folon_Weap_MeleeMakeshiftKnife",
+			"name": "Makeshift Knife"
+		},
+		"0713B86D": {
+			"editor_id": "Folon_Weap_UniqueGordoStaff_Melee",
+			"name": "Flower Power Staff"
+		},
+		"0713B853": {
+			"editor_id": "Folon_Weap_UniqueGordoStaff",
+			"name": "Flower Power Blaster"
+		},
+		"070D95C3": {
+			"editor_id": "Folon_Weap_UniqueRamshackleSMGQuadrophenia",
+			"name": "Quadrophenia"
+		},
+		"07307233": {
+			"editor_id": "Folon_Weap_UniqueCamelotIseult",
+			"name": "Iseult"
+		},
+		"07329999": {
+			"editor_id": "Folon_Weap_UniqueServiceRifleLeeEnfieldBritish",
+			"name": "Redcoat"
+		},
+		"072E9804": {
+			"editor_id": "Folon_Weap_MeleeKPAMace",
+			"name": "Haereticus Ferire"
+		},
+		"0731C335": {
+			"editor_id": "Folon_Weap_UniqueCamelotRhongomiant",
+			"name": "Rhongomiant Spear"
+		},
+		"070BE3EA": {
+			"editor_id": "Folon_Weap_MeleeSword1h1",
+			"name": "Long Sword"
+		},
+		"0731ACC8": {
+			"editor_id": "Folon_Weap_UniqueCamelotCaliburn",
+			"name": "Caliburn"
+		},
+		"070D7DC3": {
+			"editor_id": "Folon_Weap_UniqueIronCurtainPMEagle",
+			"name": "Iron Curtain"
+		},
+		"07322583": {
+			"editor_id": "FOLON_Weap_MadJackGloves",
+			"name": "MadJackGlove"
+		},
+		"071898E3": {
+			"editor_id": "Folon_Weap_MeleeCricketBat",
+			"name": "Cricket Bat"
+		},
+		"07272E70": {
+			"editor_id": "Folon_Weap_UniqueClawHammerLegendary",
+			"name": "Oi"
+		},
+		"07322585": {
+			"editor_id": "Folon_Weap_ComKiera_Covert",
+			"name": "Kiera's Covert"
+		},
+		"07307232": {
+			"editor_id": "Folon_Weap_UniqueCamelotCarnwennan",
+			"name": "Carnwennan"
+		},
+		"0731ACC9": {
+			"editor_id": "Folon_Weap_UniqueCamelotRedHilt",
+			"name": "Red Hilt"
+		},
+		"07322586": {
+			"editor_id": "Folon_Weap_ComJohnSmith_SMG",
+			"name": "Submachine Gun"
+		},
+		"07329997": {
+			"editor_id": "Folon_Weap_UniqueBALISONGBONES",
+			"name": "Macabre Balisong"
+		},
+		"0016498F": {
+			"editor_id": "BoxingGlove",
+			"name": "Boxing Glove"
+		},
+		"070BE418": {
+			"editor_id": "Folon_Weap_MeleeKukri_Blade",
+			"name": "Kukri"
+		},
+		"07315569": {
+			"editor_id": "Folon_Weap_RangedWoodbow_NPC_StonePoint",
+			"name": "Wood Bow"
+		},
+		"070BE3E9": {
+			"editor_id": "Folon_Weap_MeleeSword2h1",
+			"name": "Long Sword"
+		},
+		"070BE3CB": {
+			"editor_id": "Folon_Weap_MeleeMace2h",
+			"name": "Mace"
+		},
+		"000D83BF": {
+			"editor_id": "PipeWrench",
+			"name": "Pipe Wrench"
+		},
+		"07189A92": {
+			"editor_id": "Folon_Weap_MeleePolice_Truncheon",
+			"name": "Police Truncheon"
+		},
+		"07272E71": {
+			"editor_id": "Folon_Weap_MeleeClawHammer",
+			"name": "Claw Hammer"
+		},
+		"07322588": {
+			"editor_id": "Folon_Weap_Mountbatten_ServiceRevolver",
+			"name": "Arthur's Gun"
+		},
+		"0710C865": {
+			"editor_id": "Folon_Weap_UmbrellaNoKnife",
+			"name": "Umbrella"
+		},
+		"0710C861": {
+			"editor_id": "Folon_Weap_MeleeRazor",
+			"name": "Razor"
+		},
+		"00113339": {
+			"editor_id": "DeathclawDirtThrow"
+		},
+		"072EC6C8": {
+			"editor_id": "Folon_Weap_MeleeSpear",
+			"name": "Spear"
+		},
+		"0710C864": {
+			"editor_id": "Folon_Weap_UniqueCamelotClarent",
+			"name": "Clarent"
+		},
+		"0014BBDA": {
+			"editor_id": "BehemothBoulder",
+			"name": "Behemoth Bolder"
 		}
 	},
 	"outfits": {
