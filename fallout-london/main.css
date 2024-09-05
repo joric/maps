@@ -566,6 +566,15 @@ hr { opacity: .6;}
   list-style-type: none;
 }
 
+#popup-note.active {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+#popup-note.active:hover {
+  opacity: 1;
+}
+
 #popup-subnote {
   margin-top: 3px;
 }
