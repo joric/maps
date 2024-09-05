@@ -131,7 +131,7 @@
 
   "KEYM": {"fa": "key", "bg": "goldenrod", "type": "Key", "group": "items",
     "items": [
-      {"match":"KeyCard", "fa": "sd-card", "bg": "darkcyan", "type": "Key"}
+      {"match":"KeyCard", "fa": "sd-card", "bg": "darkcyan", "type": "Key", "subtype":"Keycard"}
     ]
    },
 
