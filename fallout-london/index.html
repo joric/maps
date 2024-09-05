@@ -945,7 +945,7 @@ function popupOnClick(e) {
   } else {
     popup.querySelector('#popup-note').title = ``;
     popup.querySelector('#popup-note').onclick = function() {};
-    popup.querySelector('#popup-note').style.cursor = 'auto';
+    popup.querySelector('#popup-note').style.cursor = 'arrow';
   }
 
   popup.querySelector('#popup-data').innerHTML = '<hr/><pre>'+JSON.stringify(o, null, 2) + '</pre>';
