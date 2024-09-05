@@ -937,6 +937,13 @@ function popupOnClick(e) {
   popup.querySelector('#popup-title').title = o.form_id;
   popup.querySelector('#popup-subtitle').textContent = itemTypeExtended(o);
   popup.querySelector('#popup-note').textContent = itemLocation(o);
+
+  if (o.cell) {
+    popup.querySelector('#popup-note').title = `Copy Cell ID to Clipboard (${o.cell})`;
+    popup.querySelector('#popup-note').onclick = function() { copyToClipboard(o.cell); };
+    popup.querySelector('#popup-note').style.cursor = 'pointer';
+  }
+
   popup.querySelector('#popup-data').innerHTML = '<hr/><pre>'+JSON.stringify(o, null, 2) + '</pre>';
   popup.querySelector('#popup-found').checked = settings.markedItems[o.ref_id]==true;
   popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.ref_id) };
