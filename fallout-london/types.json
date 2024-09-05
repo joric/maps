@@ -129,10 +129,10 @@
   "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items"},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
 
-  "KEYM": {"fa": "key", "bg": "darkcyan", "type": "Key", "group": "items",
+  "KEYM": {"fa": "key", "bg": "darkgreen", "type": "Key", "group": "items",
     "items": [
-      {"match":"Password", "fa": "asterisk", "bg": "darkcyan", "type": "Key", "subtype":"Password"},
-      {"match":"KeyCard", "fa": "sd-card", "bg": "darkcyan", "type": "Key", "subtype":"Keycard"}
+      {"match":"Password", "fa": "asterisk", "type": "Key", "subtype":"Password"},
+      {"match":"KeyCard", "fa": "sd-card", "type": "Key", "subtype":"Keycard"}
     ]
    },
 
