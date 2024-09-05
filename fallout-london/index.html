@@ -942,6 +942,10 @@ function popupOnClick(e) {
     popup.querySelector('#popup-note').title = `Copy Cell ID to Clipboard (${o.cell})`;
     popup.querySelector('#popup-note').onclick = function() { copyToClipboard(o.cell); };
     popup.querySelector('#popup-note').style.cursor = 'pointer';
+  } else {
+    popup.querySelector('#popup-note').title = ``;
+    popup.querySelector('#popup-note').onclick = function() {};
+    popup.querySelector('#popup-note').style.cursor = 'auto';
   }
 
   popup.querySelector('#popup-data').innerHTML = '<hr/><pre>'+JSON.stringify(o, null, 2) + '</pre>';
