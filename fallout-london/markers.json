@@ -8519,7 +8519,6 @@
 				"form_id": "07329C84",
 				"editor_id": "FOLON_KEYM_MQFifth308LanceCell",
 				"quests": [
-					"072BA816",
 					"072BA816"
 				],
 				"cell": "071B5706",
@@ -8646,7 +8645,6 @@
 				"form_id": "07327855",
 				"editor_id": "FOLON_KEYM_MQFifth304",
 				"quests": [
-					"072BA818",
 					"072BA818"
 				],
 				"cell": "07045FD1",
@@ -8714,7 +8712,6 @@
 				"form_id": "0732783C",
 				"editor_id": "Folon_KEYM_FQGlobe101_Book3Key",
 				"quests": [
-					"072BF524",
 					"072BF524"
 				],
 				"cell": "0715A4E3",
@@ -8738,7 +8735,6 @@
 				"form_id": "073246E9",
 				"editor_id": "FOLON_KEYM_LQWestminster106",
 				"quests": [
-					"072AA443",
 					"072AA443"
 				],
 				"cell": "071F2347",
@@ -8804,7 +8800,6 @@
 				"form_id": "0731F6C6",
 				"editor_id": "Folon_KEYM_FQRoundels103b_MikeSafeKey",
 				"quests": [
-					"072AEAA5",
 					"072AEAA5"
 				],
 				"cell": "0717A514",
@@ -8872,7 +8867,6 @@
 				"form_id": "0731B4C5",
 				"editor_id": "Folon_KEYM_MQCamelot304_CageKey",
 				"quests": [
-					"072B84CA",
 					"072B84CA"
 				],
 				"area": "LondonWorld"
@@ -8895,7 +8889,6 @@
 				"form_id": "073188D0",
 				"editor_id": "Folon_KEYM_NewhamIODSFactory",
 				"quests": [
-					"072B457F",
 					"072B457F"
 				],
 				"value": 1,
@@ -8919,9 +8912,7 @@
 				"form_id": "0731556C",
 				"editor_id": "Folon_KEYM_GW106ArmouryKey",
 				"quests": [
-					"072B4580",
-					"072B4580",
-					"072F0C90"
+					"072B4580"
 				],
 				"cell": "07210AC7",
 				"cell_name": "HMS Dredge"
@@ -9112,7 +9103,6 @@
 				"form_id": "0730C9A4",
 				"editor_id": "Folon_KEYM_FQPistols104_SafeKey",
 				"quests": [
-					"072AD7B3",
 					"072AD7B3"
 				],
 				"cell": "07125D37",
@@ -9159,7 +9149,6 @@
 				"form_id": "0730C9A3",
 				"editor_id": "Folon_KEYM_FQCroydon_StationKey",
 				"quests": [
-					"072BA807",
 					"072BA807"
 				],
 				"cell": "070B76E5",
@@ -9410,8 +9399,7 @@
 				"editor_id": "Folon_KEYM_MQ204_LabKey",
 				"quests": [
 					"071F1179",
-					"07283CDA",
-					"071F1179"
+					"07283CDA"
 				],
 				"cell": "0711EF3B",
 				"cell_name": "Science Museum"
@@ -9435,8 +9423,7 @@
 				"editor_id": "Folon_KEYM_MQAngel306_QueensChamber",
 				"quests": [
 					"072AC4F1",
-					"072BA815",
-					"072AC4F1"
+					"072BA815"
 				],
 				"cell": "071A2F89",
 				"cell_name": "Buckingham Palace"
@@ -9794,7 +9781,6 @@
 				"form_id": "072F983B",
 				"editor_id": "Folon_KEYM_SQSouthwark102_BasementAccessCard",
 				"quests": [
-					"072C0D8A",
 					"072C0D8A"
 				],
 				"cell": "0724D422",
@@ -9841,7 +9827,6 @@
 				"form_id": "072F0C99",
 				"editor_id": "Folon_KEYM_HMSDredgeKey",
 				"quests": [
-					"072B4580",
 					"072B4580"
 				],
 				"value": 1,
@@ -9865,10 +9850,7 @@
 				"form_id": "072EEDD4",
 				"editor_id": "Folon_KEYM_MQAngel303_LoungeKey",
 				"quests": [
-					"072AC4EB",
-					"072AC4EB",
-					"072B658A",
-					"072B84CE"
+					"072AC4EB"
 				],
 				"cell": "070465A7",
 				"cell_name": "St George"
@@ -9891,9 +9873,7 @@
 				"form_id": "072EEDD4",
 				"editor_id": "Folon_KEYM_MQAngel303_LoungeKey",
 				"quests": [
-					"072AC4EB",
-					"072AC4EB",
-					"072B658A"
+					"072AC4EB"
 				],
 				"cell": "070465A7",
 				"cell_name": "St George"
@@ -9916,9 +9896,7 @@
 				"form_id": "072EEDD3",
 				"editor_id": "Folon_KEYM_WestminsterHouse01GardenKey",
 				"quests": [
-					"072AC4F0",
-					"072AC4F0",
-					"072BA80B"
+					"072AC4F0"
 				],
 				"cell": "071B3834",
 				"cell_name": "House"
@@ -10299,7 +10277,6 @@
 				"form_id": "072DCDF1",
 				"editor_id": "FOLON_KEYM_GreenwichStationKey",
 				"quests": [
-					"071C76B4",
 					"071C76B4"
 				],
 				"area": "LondonWorld"
@@ -10502,7 +10479,6 @@
 				"form_id": "0729E3F5",
 				"editor_id": "Folon_KEYM_MQ104_Key01",
 				"quests": [
-					"0719C4CD",
 					"0719C4CD"
 				],
 				"cell": "07132652",
@@ -10566,8 +10542,6 @@
 				"form_id": "0729C4C7",
 				"editor_id": "Folon_KEYM_BOEKeyCard01",
 				"quests": [
-					"07311020",
-					"072C2B45",
 					"07311020"
 				],
 				"cell": "0712EC66",
@@ -10591,8 +10565,7 @@
 				"form_id": "07292CB0",
 				"editor_id": "Folon_KEYM_ThameshavenPlayerRoomKey",
 				"quests": [
-					"072BA80A",
-					"072BA806"
+					"072BA80A"
 				],
 				"cell": "070CE960",
 				"cell_name": "Thameshaven Market"
@@ -10940,7 +10913,6 @@
 				"form_id": "0725095C",
 				"editor_id": "Folon_KEYM_HippoBasementTerminalKeyCard01",
 				"quests": [
-					"07237DB8",
 					"07237DB8"
 				],
 				"cell": "071AD97D",
@@ -11033,7 +11005,6 @@
 				"form_id": "0724EB34",
 				"editor_id": "Folon_KEYM_ABCWlabKeyCard01",
 				"quests": [
-					"072AC4EC",
 					"072AC4EC"
 				],
 				"cell": "0720BD55",
@@ -12251,7 +12222,6 @@
 				"form_id": "07068304",
 				"editor_id": "Folon_KEYM_CroydonMazeKey05",
 				"quests": [
-					"072BA814",
 					"072BA814"
 				],
 				"area": "LondonWorld"
@@ -12274,7 +12244,6 @@
 				"form_id": "07068304",
 				"editor_id": "Folon_KEYM_CroydonMazeKey05",
 				"quests": [
-					"072BA814",
 					"072BA814"
 				],
 				"area": "LondonWorld"
@@ -12341,7 +12310,6 @@
 				"form_id": "0706811B",
 				"editor_id": "Folon_KEYM_CroydonMazeKey03",
 				"quests": [
-					"072BA814",
 					"072BA814"
 				],
 				"area": "LondonWorld"
@@ -12474,7 +12442,6 @@
 				"form_id": "07067FA3",
 				"editor_id": "Folon_KEYM_CroydonMazeKey01",
 				"quests": [
-					"072BA814",
 					"072BA814"
 				],
 				"area": "LondonWorld"
@@ -50939,8 +50906,7 @@
 				"form_id": "070DA150",
 				"editor_id": "Folon_NPC_ProtectronJeremyBentham",
 				"quests": [
-					"07322A8F",
-					"072AA43B"
+					"07322A8F"
 				],
 				"area": "LondonWorld"
 			}
@@ -51164,10 +51130,7 @@
 					"072B84C9",
 					"072BCEF4",
 					"072BDCC6",
-					"07319F64",
-					"0719ABAA",
-					"071B77DD",
-					"071C76B4"
+					"07319F64"
 				],
 				"outfits": [
 					"071805A6",
@@ -51209,10 +51172,7 @@
 					"072CB1F6",
 					"072CD192",
 					"072CD194",
-					"07319F64",
-					"0719ABAA",
-					"071B77DD",
-					"071C76B4"
+					"07319F64"
 				],
 				"weapons": [
 					"070B6569"
@@ -51247,7 +51207,6 @@
 					"071B7318",
 					"072964B9",
 					"072BDCC5",
-					"072C12E8",
 					"072C12E8"
 				],
 				"outfits": [
@@ -51651,9 +51610,7 @@
 				"form_id": "0719CBCA",
 				"editor_id": "Folon_NPC_GentryGoldieRichmond",
 				"quests": [
-					"072C0D89",
-					"072C0D89",
-					"07314945"
+					"072C0D89"
 				],
 				"outfits": [
 					"07299883",
@@ -52062,8 +52019,6 @@
 				"form_id": "0719CBE0",
 				"editor_id": "Folon_NPC_GlobeJeanineHeminger",
 				"quests": [
-					"072BF524",
-					"071F7D56",
 					"072BF524"
 				],
 				"outfits": [
@@ -52338,8 +52293,7 @@
 				"form_id": "0719CBF5",
 				"editor_id": "Folon_NPC_GentryMadameCoates",
 				"quests": [
-					"072C56AE",
-					"072C0D89"
+					"072C56AE"
 				],
 				"outfits": [
 					"071321D2",
@@ -52509,8 +52463,7 @@
 				"form_id": "0719CC01",
 				"editor_id": "Folon_NPC_LewishamNikki",
 				"quests": [
-					"072C0D8A",
-					"072BA806"
+					"072C0D8A"
 				],
 				"outfits": [
 					"0730D215"
@@ -53411,9 +53364,7 @@
 				"form_id": "0719CC5F",
 				"editor_id": "Folon_NPC_GentryPennyCopperfield",
 				"quests": [
-					"072C0D89",
-					"072C0D89",
-					"07314945"
+					"072C0D89"
 				],
 				"outfits": [
 					"0702DF13",
@@ -53466,8 +53417,7 @@
 				"form_id": "0719CC62",
 				"editor_id": "Folon_NPC_LewishamHarvinQuinney",
 				"quests": [
-					"072C0D8A",
-					"072BA806"
+					"072C0D8A"
 				],
 				"outfits": [
 					"070B67A8",
@@ -53598,8 +53548,7 @@
 				"editor_id": "Folon_NPC_EastminsterOctaviaHolland",
 				"quests": [
 					"072ACDFF",
-					"072DF799",
-					"072AEA9C"
+					"072DF799"
 				],
 				"outfits": [
 					"072EC604",
@@ -53676,8 +53625,7 @@
 				"form_id": "0719CC70",
 				"editor_id": "Folon_NPC_GreenwichAvis",
 				"quests": [
-					"073204C5",
-					"072AEAAA"
+					"073204C5"
 				],
 				"outfits": [
 					"071E844E"
@@ -54429,9 +54377,7 @@
 				"editor_id": "Folon_NPC_GlobeWilhelmKelpe",
 				"quests": [
 					"072BDCC6",
-					"072BF524",
-					"071F7D56",
-					"07237DB8"
+					"072BF524"
 				],
 				"outfits": [
 					"07156509",
@@ -54489,8 +54435,7 @@
 					"072AEAA0",
 					"072B6593",
 					"072B6595",
-					"07319F65",
-					"072B6598"
+					"07319F65"
 				],
 				"outfits": [
 					"070B6790",
@@ -54545,8 +54490,7 @@
 				"editor_id": "Folon_NPC_GentryBaronessBrendaBeaumont",
 				"quests": [
 					"072AC4EA",
-					"072AC4F1",
-					"072BA815"
+					"072AC4F1"
 				],
 				"outfits": [
 					"002075BF"
@@ -54572,8 +54516,7 @@
 				"form_id": "0719D3D5",
 				"editor_id": "Folon_NPC_GentryLynneMoors",
 				"quests": [
-					"072AC4EA",
-					"072FA528"
+					"072AC4EA"
 				],
 				"outfits": [
 					"000DFFC5"
@@ -54776,7 +54719,6 @@
 				"form_id": "0719D571",
 				"editor_id": "Folon_NPC_GreenwichHermitAndy",
 				"quests": [
-					"0729C3F3",
 					"0729C3F3"
 				],
 				"outfits": [
@@ -54883,8 +54825,7 @@
 				"editor_id": "Folon_NPC_GlobeRichardBurbank",
 				"quests": [
 					"072A7C42",
-					"072BF524",
-					"071F7D56"
+					"072BF524"
 				],
 				"outfits": [
 					"070DB2D7",
@@ -55237,8 +55178,7 @@
 				"form_id": "0719D893",
 				"editor_id": "Folon_NPC_TommyPFG",
 				"quests": [
-					"072728BB",
-					"072C0D8A"
+					"072728BB"
 				],
 				"outfits": [
 					"0732248B",
@@ -55298,8 +55238,7 @@
 				"form_id": "0719D895",
 				"editor_id": "Folon_NPC_LewishamAllenCalloway",
 				"quests": [
-					"072C0D8A",
-					"072BA806"
+					"072C0D8A"
 				],
 				"outfits": [
 					"071E5B0D",
@@ -55354,8 +55293,7 @@
 				"editor_id": "Folon_NPC_GentryPatelRayner",
 				"quests": [
 					"072AEAA8",
-					"072FA528",
-					"072BA808"
+					"072FA528"
 				],
 				"outfits": [
 					"0023CAA4"
@@ -55677,9 +55615,7 @@
 				"form_id": "0719D8AD",
 				"editor_id": "Folon_NPC_GentryGrahamSilverman",
 				"quests": [
-					"072C0D89",
-					"072C0D89",
-					"07314945"
+					"072C0D89"
 				],
 				"outfits": [
 					"070B679D",
@@ -56206,8 +56142,7 @@
 				"form_id": "0719D8CB",
 				"editor_id": "Folon_NPC_CamelotDylanClitherow",
 				"quests": [
-					"0730FCF1",
-					"072B84CA"
+					"0730FCF1"
 				],
 				"outfits": [
 					"07189A8F"
@@ -56414,8 +56349,7 @@
 					"072BA80E",
 					"072BA80F",
 					"072CD196",
-					"0730FCF1",
-					"072BA816"
+					"0730FCF1"
 				],
 				"outfits": [
 					"071CB180",
@@ -56924,9 +56858,7 @@
 					"072BCEF1",
 					"072BCEF7",
 					"072BDCC5",
-					"072CB1F6",
-					"0719FC6F",
-					"071B7316"
+					"072CB1F6"
 				],
 				"outfits": [
 					"0719A9AE",
@@ -57485,10 +57417,7 @@
 					"072BCEF7",
 					"072CB1F6",
 					"072CD192",
-					"072CD194",
-					"0719ABAA",
-					"071B77DD",
-					"071C76B4"
+					"072CD194"
 				],
 				"weapons": [
 					"070DB2BF"
@@ -57825,8 +57754,7 @@
 					"072BA815",
 					"072CB1F6",
 					"072CD193",
-					"072CD195",
-					"071A2F20"
+					"072CD195"
 				],
 				"weapons": [
 					"07329999"
@@ -58276,8 +58204,7 @@
 					"072BCEF1",
 					"072BCEF7",
 					"072CB1F6",
-					"0730FCF0",
-					"0722DA11"
+					"0730FCF0"
 				],
 				"weapons": [
 					"07272E70"
@@ -58305,7 +58232,6 @@
 				"form_id": "0722C68F",
 				"editor_id": "Folon_NPC_NewhamJane",
 				"quests": [
-					"0722C5CF",
 					"0722C5CF"
 				],
 				"outfits": [
@@ -58332,7 +58258,6 @@
 				"form_id": "0722C690",
 				"editor_id": "Folon_NPC_SPSJohnMarsh",
 				"quests": [
-					"0722C5CF",
 					"0722C5CF"
 				],
 				"outfits": [
@@ -58359,8 +58284,7 @@
 				"editor_id": "Folon_NPC_CamdenScottNightingale",
 				"quests": [
 					"07237DB7",
-					"072B84CC",
-					"07237DB8"
+					"072B84CC"
 				],
 				"outfits": [
 					"000FC100"
@@ -58768,8 +58692,7 @@
 				"form_id": "07240ABA",
 				"editor_id": "Folon_NPC_CamdenClaudiaRampling",
 				"quests": [
-					"072B84CC",
-					"07237DB8"
+					"072B84CC"
 				],
 				"outfits": [
 					"07299880"
@@ -58888,8 +58811,7 @@
 				"form_id": "0724311E",
 				"editor_id": "Folon_NPC_CamdenWitchMackenna",
 				"quests": [
-					"072B84CC",
-					"07237DB8"
+					"072B84CC"
 				],
 				"outfits": [
 					"0719A9AE",
@@ -58916,8 +58838,7 @@
 				"form_id": "0724D70D",
 				"editor_id": "Folon_NPC_CamdenWitchBeatrice",
 				"quests": [
-					"072B84CC",
-					"07237DB8"
+					"072B84CC"
 				],
 				"outfits": [
 					"0719A9AE",
@@ -58944,8 +58865,7 @@
 				"form_id": "0724D70E",
 				"editor_id": "Folon_NPC_CamdenWitchTheodosia",
 				"quests": [
-					"072B84CC",
-					"07237DB8"
+					"072B84CC"
 				],
 				"outfits": [
 					"0719A9AE",
@@ -59462,8 +59382,7 @@
 				"form_id": "0729EC38",
 				"editor_id": "Folon_NPC_CultistMithBrotherMithras",
 				"quests": [
-					"072E3824",
-					"0729EB90"
+					"072E3824"
 				],
 				"cell": "07195B6E",
 				"cell_name": "London Mithraeum"
@@ -59541,8 +59460,7 @@
 				"form_id": "072A5ED4",
 				"editor_id": "Folon_NPC_ThameshavenJordan",
 				"quests": [
-					"072AA43A",
-					"0719C4CD"
+					"072AA43A"
 				],
 				"outfits": [
 					"0731AB8C"
@@ -59677,8 +59595,7 @@
 				"editor_id": "Folon_NPC_NormanJeanDalmat",
 				"quests": [
 					"072BCEF5",
-					"0730124F",
-					"072BCEF5"
+					"0730124F"
 				],
 				"outfits": [
 					"072DE87B",
@@ -59705,8 +59622,7 @@
 				"editor_id": "Folon_NPC_NormanEugeneDongle",
 				"quests": [
 					"072BCEF5",
-					"0730124F",
-					"072BCEF5"
+					"0730124F"
 				],
 				"outfits": [
 					"071805AC",
@@ -59737,8 +59653,7 @@
 				"form_id": "072A7569",
 				"editor_id": "Folon_NPC_GentryGentryFootman",
 				"quests": [
-					"072C0D89",
-					"07314945"
+					"072C0D89"
 				],
 				"outfits": [
 					"000FC395"
@@ -59973,9 +59888,7 @@
 				"form_id": "072A757A",
 				"editor_id": "Folon_NPC_GentryAuctioneer",
 				"quests": [
-					"072C0D89",
-					"072C0D89",
-					"07314945"
+					"072C0D89"
 				],
 				"outfits": [
 					"070B678C"
@@ -61520,8 +61433,7 @@
 				"form_id": "072AAC0B",
 				"editor_id": "Folon_NPC_GentryFreddieNewall",
 				"quests": [
-					"072AC4EA",
-					"072FA528"
+					"072AC4EA"
 				],
 				"outfits": [
 					"070B6793"
@@ -61548,8 +61460,7 @@
 				"editor_id": "Folon_NPC_GentryRPIII",
 				"quests": [
 					"072AC4EA",
-					"072AC4F1",
-					"072BA815"
+					"072AC4F1"
 				],
 				"weapons": [
 					"000CE97D"
@@ -62204,8 +62115,7 @@
 					"072A763D",
 					"072BF527",
 					"072C2D0C",
-					"072C2D0F",
-					"072BF527"
+					"072C2D0F"
 				],
 				"weapons": [
 					"07322588",
@@ -62944,8 +62854,7 @@
 				"form_id": "072D5892",
 				"editor_id": "Folon_NPC_LQWestminster107Nobbles",
 				"quests": [
-					"072FA528",
-					"072AA434"
+					"072FA528"
 				],
 				"area": "WestminsterWorld"
 			}
@@ -63077,8 +62986,7 @@
 				"form_id": "072D8643",
 				"editor_id": "Folon_NPC_RoundelHurley",
 				"quests": [
-					"07319F63",
-					"072ACE03"
+					"07319F63"
 				],
 				"outfits": [
 					"0719D85F"
@@ -63909,8 +63817,7 @@
 				"form_id": "0730167F",
 				"editor_id": "Folon_NPC_CamelotPendragon",
 				"quests": [
-					"073149E4",
-					"072BA816"
+					"073149E4"
 				],
 				"weapons": [
 					"072EC6C8"
@@ -64023,8 +63930,7 @@
 				"form_id": "073023CB",
 				"editor_id": "Folon_NPC_GentryGhoulBoss_QueenVicII",
 				"quests": [
-					"072BA815",
-					"072AC4F1"
+					"072BA815"
 				],
 				"outfits": [
 					"0008EC46",
@@ -64140,8 +64046,7 @@
 				"editor_id": "Folon_NPC_CaravanKirby",
 				"quests": [
 					"072DEFB4",
-					"072DEFC1",
-					"072BDCC8"
+					"072DEFC1"
 				],
 				"outfits": [
 					"07242152"
@@ -64557,8 +64462,7 @@
 				"editor_id": "Folon_NPC_CaravanKirbyCarlaBrahmin",
 				"quests": [
 					"072DEFB4",
-					"072DEFC1",
-					"072BDCC8"
+					"072DEFC1"
 				],
 				"area": "LondonWorld"
 			}
@@ -96177,7 +96081,6 @@
 				"form_id": "072D5890",
 				"editor_id": "Folon_Armo_ClothesLQCity101Backpack",
 				"quests": [
-					"072AEAA6",
 					"072AEAA6"
 				],
 				"value": 25,
@@ -102405,7 +102308,6 @@
 				"form_id": "072F995B",
 				"editor_id": "Folon_BOOK_MQFifth304",
 				"quests": [
-					"072BA818",
 					"072BA818"
 				],
 				"cell": "07045FD1",
@@ -102720,7 +102622,6 @@
 				"form_id": "072E8706",
 				"editor_id": "Folon_BOOK_SQWestminster106Charter",
 				"quests": [
-					"072AEAA7",
 					"072AEAA7"
 				],
 				"cell": "072E8708",
@@ -103332,7 +103233,6 @@
 				"form_id": "0727D39A",
 				"editor_id": "Folon_BOOK_MagCarryweight",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -103360,7 +103260,6 @@
 				"form_id": "0727D399",
 				"editor_id": "Folon_BOOK_MagFusion",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -103387,7 +103286,6 @@
 				"form_id": "0727D398",
 				"editor_id": "Folon_BOOK_MagBash",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -103415,7 +103313,6 @@
 				"form_id": "0727D397",
 				"editor_id": "Folon_BOOK_MagHooligan",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -103443,7 +103340,6 @@
 				"form_id": "0727D396",
 				"editor_id": "Folon_BOOK_MagMurderer",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -103471,7 +103367,6 @@
 				"form_id": "0727D395",
 				"editor_id": "Folon_BOOK_MagThief",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -103499,7 +103394,6 @@
 				"form_id": "0727D394",
 				"editor_id": "Folon_BOOK_MagIntimidation",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -103527,7 +103421,6 @@
 				"form_id": "0727D393",
 				"editor_id": "Folon_BOOK_MagChemConnoisseur",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -103555,7 +103448,6 @@
 				"form_id": "0727D392",
 				"editor_id": "Folon_BOOK_MagCombat",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -103583,7 +103475,6 @@
 				"form_id": "0727D391",
 				"editor_id": "Folon_BOOK_MagThamesfolk",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 100,
@@ -107133,7 +107024,6 @@
 				"editor_id": "BobbleHead_Unarmed",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107157,7 +107047,6 @@
 				"form_id": "00178B59",
 				"editor_id": "BobbleHead_LockPicking",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107183,7 +107072,6 @@
 				"editor_id": "BobbleHead_Intelligence",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107208,7 +107096,6 @@
 				"form_id": "00178B57",
 				"editor_id": "BobbleHead_Explosives",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107233,7 +107120,6 @@
 				"form_id": "00178B56",
 				"editor_id": "BobbleHead_EnergyWeapons",
 				"quests": [
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107259,7 +107145,6 @@
 				"editor_id": "BobbleHead_Endurance",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107285,7 +107170,6 @@
 				"editor_id": "BobbleHead_Charisma",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107311,7 +107195,6 @@
 				"editor_id": "BobbleHead_BigGuns",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107337,7 +107220,6 @@
 				"editor_id": "BobbleHead_Barter",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107363,7 +107245,6 @@
 				"editor_id": "BobbleHead_Strength",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107389,7 +107270,6 @@
 				"editor_id": "BobbleHead_Speech",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107415,7 +107295,6 @@
 				"editor_id": "BobbleHead_Agility",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107441,7 +107320,6 @@
 				"editor_id": "BobbleHead_Sneak",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107467,7 +107345,6 @@
 				"editor_id": "BobbleHead_SmallGuns",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107493,7 +107370,6 @@
 				"editor_id": "BobbleHead_Science",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107519,7 +107395,6 @@
 				"editor_id": "BobbleHead_Luck",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107545,7 +107420,6 @@
 				"editor_id": "BobbleHead_Medicine",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107571,7 +107445,6 @@
 				"editor_id": "BobbleHead_Melee",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107597,7 +107470,6 @@
 				"editor_id": "BobbleHead_Perception",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -107623,7 +107495,6 @@
 				"editor_id": "BobbleHead_Repair",
 				"quests": [
 					"000AEC4F",
-					"072A5DEE",
 					"072A5DEE"
 				],
 				"value": 300,
@@ -126702,7 +126573,6 @@
 				"form_id": "072C9AD3",
 				"editor_id": "Folon_Weap_UniqueCamelotExcalibur",
 				"quests": [
-					"072B6599",
 					"072B6599"
 				],
 				"area": "LondonWorld"
@@ -127353,7 +127223,6 @@
 				"form_id": "072DC932",
 				"editor_id": "Folon_Weap_RangedM72GaussRifle",
 				"quests": [
-					"072C24CB",
 					"072C24CB"
 				],
 				"cell": "07175077",
@@ -139981,9 +139850,6 @@
 				"120": "Return to Agatha"
 			}
 		},
-		"072F0C90": {
-			"editor_id": "FOLON_GW106PrisonersManager"
-		},
 		"072BA80D": {
 			"editor_id": "FOLON_MQCamelot302",
 			"name": "Every Breath You Take",
@@ -140221,24 +140087,6 @@
 				"50": "Assassinate Eve Varney at the discrete location"
 			}
 		},
-		"072B84CE": {
-			"editor_id": "FOLON_MQFifth303",
-			"name": "Of Mutants and Men",
-			"objectives": {
-				"5": "Talk to John Smith",
-				"10": "Report to Victor Schmidt",
-				"20": "Speak to Horatio Whitehouse",
-				"30": "Investigate Thameshaven",
-				"40": "Talk to Dr. Alan Webb",
-				"50": "Find out about Tunnel Cough immunity in Thameshaven",
-				"60": "Talk to Margery",
-				"64": "Convince Margery to go to Cable Street",
-				"70": "Talk to Horatio",
-				"80": "Inform Dr. Webb about his Granddaughter",
-				"82": "Take Dr. Webb back to the 5th Column",
-				"83": "Discover what is going on"
-			}
-		},
 		"072AC4F0": {
 			"editor_id": "FOLON_MQAngel304",
 			"name": "You Only Live Twice",
@@ -140260,34 +140108,6 @@
 				"200": "Meet Guinevere near Camelot",
 				"210": "Follow Guinevere",
 				"320": "Report back to Smythe at North's lab"
-			}
-		},
-		"072BA80B": {
-			"editor_id": "FOLON_MQCamelot307",
-			"name": "The King's Speech",
-			"objectives": {
-				"10": "Speak with Arthur",
-				"20": "Go to the Imperial War Museum",
-				"30": "Convince the Tommies to negotiate",
-				"40": "Question Major Jonathan Allen",
-				"50": "Return to Arthur",
-				"60": "Search the field for Asquith",
-				"80": "Carry Asquith's body out of the field",
-				"90": "Speak to Kay",
-				"100": "Inform Colonel George Major of Asquith's death",
-				"110": "Speak to Arthur in private",
-				"120": "Meet Guinevere in Westminster",
-				"140": "Meet Guinevere at the party",
-				"150": "Blend in and follow Doctor North",
-				"160": "Plant the surveillance devices (<Global=FOLON_MQCamelot307_DeviceCounter>/3)",
-				"190": "Listen to Doctor North's conversation",
-				"200": "Speak to Guinevere",
-				"210": "Find Horatio at the trainwreck site",
-				"220": "Defeat the 5th Columnists",
-				"230": "Get evidence from Horatio",
-				"240": "Return to Guinevere",
-				"260": "Give the evidence to Colonel George Major",
-				"270": "Speak to Arthur"
 			}
 		},
 		"0729B279": {
@@ -140396,10 +140216,6 @@
 				"30": "Open the Bank of England vault"
 			}
 		},
-		"072C2B45": {
-			"editor_id": "FOLON_COM_KieraRecruitment",
-			"name": "Kiera the Treasure Hunter (Kiera Recruitment)"
-		},
 		"072BA80A": {
 			"editor_id": "FOLON_FQThameshaven101",
 			"name": "Scylla",
@@ -140420,29 +140236,6 @@
 				"100": "Return to Angela",
 				"110": "Bring the evidence to Horace",
 				"120": "Inform Rachel of Horace's decision"
-			}
-		},
-		"072BA806": {
-			"editor_id": "FOLON_SQSouthwark101",
-			"name": "No More Heroes",
-			"objectives": {
-				"1": "Investigate the shouting",
-				"2": "Listen to Allen's speech",
-				"5": "Talk to Harvin",
-				"10": "Find Harvin's office",
-				"11": "Speak to Harvin",
-				"12": "Follow Harvin",
-				"13": "Speak to Allen",
-				"15": "Follow Harvin",
-				"16": "Talk to Allen",
-				"17": "Follow Harvin",
-				"18": "Eliminate Allen",
-				"19": "Kill Harvin",
-				"20": "Speak to Harvin",
-				"21": "Speak to Allen",
-				"161": "Speak to Harvin",
-				"171": "Speak to Allen",
-				"172": "Speak to Harvin"
 			}
 		},
 		"07237DB8": {
@@ -140970,6 +140763,34 @@
 				"30": "Return to Syd with the books"
 			}
 		},
+		"072BA80B": {
+			"editor_id": "FOLON_MQCamelot307",
+			"name": "The King's Speech",
+			"objectives": {
+				"10": "Speak with Arthur",
+				"20": "Go to the Imperial War Museum",
+				"30": "Convince the Tommies to negotiate",
+				"40": "Question Major Jonathan Allen",
+				"50": "Return to Arthur",
+				"60": "Search the field for Asquith",
+				"80": "Carry Asquith's body out of the field",
+				"90": "Speak to Kay",
+				"100": "Inform Colonel George Major of Asquith's death",
+				"110": "Speak to Arthur in private",
+				"120": "Meet Guinevere in Westminster",
+				"140": "Meet Guinevere at the party",
+				"150": "Blend in and follow Doctor North",
+				"160": "Plant the surveillance devices (<Global=FOLON_MQCamelot307_DeviceCounter>/3)",
+				"190": "Listen to Doctor North's conversation",
+				"200": "Speak to Guinevere",
+				"210": "Find Horatio at the trainwreck site",
+				"220": "Defeat the 5th Columnists",
+				"230": "Get evidence from Horatio",
+				"240": "Return to Guinevere",
+				"260": "Give the evidence to Colonel George Major",
+				"270": "Speak to Arthur"
+			}
+		},
 		"072AC4EA": {
 			"editor_id": "FOLON_MQAngel305",
 			"name": "Out of the Shadows",
@@ -141242,13 +141063,6 @@
 			"editor_id": "FOLON_LQEastminster106Post",
 			"name": "Lexicon Post"
 		},
-		"072AA43B": {
-			"editor_id": "FOLON_LQEastminster106",
-			"name": "Lexicon",
-			"objectives": {
-				"10": "Debate with Jeremy Benthem"
-			}
-		},
 		"07118D8D": {
 			"editor_id": "Folon_Trader_CryptOnTheGreen",
 			"name": "Crypt On The Green Trader"
@@ -141410,21 +141224,6 @@
 				"80": "Check the back alley for Syd",
 				"85": "Speak to Gaunt",
 				"90": "Find Syd"
-			}
-		},
-		"0719ABAA": {
-			"editor_id": "FOLON_MQ101",
-			"name": "Overture"
-		},
-		"071B77DD": {
-			"editor_id": "FOLON_MQ102",
-			"name": "Broken Angel",
-			"objectives": {
-				"10": "Escape the facility",
-				"20": "Pick up the device",
-				"30": "Pick up the torch",
-				"40": "Use the lift",
-				"50": "Find a way out"
 			}
 		},
 		"072BCEF1": {
@@ -141636,9 +141435,6 @@
 				"70": "Visit your new house"
 			}
 		},
-		"07314945": {
-			"editor_id": "FOLON_SQWestminster101_AuctionController"
-		},
 		"072A5DED": {
 			"editor_id": "Folon_LQLambeth104",
 			"name": "Water is Wet",
@@ -141734,10 +141530,6 @@
 				"150": "(Optional) Find out the truth of Ryan's injury",
 				"200": "Return to Arthur when you're ready to make an accusation"
 			}
-		},
-		"071F7D56": {
-			"editor_id": "FOLON_GMGlobe",
-			"name": "Globe NPC Manager"
 		},
 		"0728C3D1": {
 			"editor_id": "FOLON_LQCamden102",
@@ -141904,15 +141696,6 @@
 			"editor_id": "Folon_LQGreenwich103Post",
 			"name": "Tea Leaf Post"
 		},
-		"072AEAAA": {
-			"editor_id": "FOLON_LQGreenwich103",
-			"name": "Tea Leaf",
-			"objectives": {
-				"10": "Discreetly Return the Watch",
-				"15": "<Optional> Inform Amanda about the Watch",
-				"20": "Return to Avis"
-			}
-		},
 		"072ACE02": {
 			"editor_id": "FOLON_SQIslington101",
 			"name": "Pictures of Walls",
@@ -141953,6 +141736,24 @@
 				"10": "Deliver the letter",
 				"20": "Check on Roger in a few days",
 				"30": "Speak to Rodger"
+			}
+		},
+		"072B84CE": {
+			"editor_id": "FOLON_MQFifth303",
+			"name": "Of Mutants and Men",
+			"objectives": {
+				"5": "Talk to John Smith",
+				"10": "Report to Victor Schmidt",
+				"20": "Speak to Horatio Whitehouse",
+				"30": "Investigate Thameshaven",
+				"40": "Talk to Dr. Alan Webb",
+				"50": "Find out about Tunnel Cough immunity in Thameshaven",
+				"60": "Talk to Margery",
+				"64": "Convince Margery to go to Cable Street",
+				"70": "Talk to Horatio",
+				"80": "Inform Dr. Webb about his Granddaughter",
+				"82": "Take Dr. Webb back to the 5th Column",
+				"83": "Discover what is going on"
 			}
 		},
 		"072BA808": {
@@ -142295,10 +142096,6 @@
 				"20": "Return Sergeant Neil's Sword"
 			}
 		},
-		"071B7316": {
-			"editor_id": "FOLON_GMThameshaven",
-			"name": "Thameshaven NPC Manager"
-		},
 		"072BA805": {
 			"editor_id": "FOLON_FQThameshaven102",
 			"name": "A Doctor's Orders",
@@ -142310,6 +142107,10 @@
 				"25": "Report in to Dr. Webb",
 				"30": "Return to Bob Clarkson"
 			}
+		},
+		"071B7316": {
+			"editor_id": "FOLON_GMThameshaven",
+			"name": "Thameshaven NPC Manager"
 		},
 		"072F249E": {
 			"editor_id": "FOLON_LQThameshaven104NOTUSED",
@@ -142405,10 +142206,6 @@
 			"editor_id": "FOLON_COM_MadJackTalk",
 			"name": "Mad Jack Talk/Relationship Scene"
 		},
-		"0722DA11": {
-			"editor_id": "FOLON_GMMiller",
-			"name": "Miller's Men NPC Manager"
-		},
 		"07237DB7": {
 			"editor_id": "FOLON_LQCamden101",
 			"name": "Speak to the stage director at Camden Theatre",
@@ -142426,6 +142223,10 @@
 		"072A4DDF": {
 			"editor_id": "FOLON_COM_Kiera",
 			"name": "Kiera Companion Quest"
+		},
+		"072C2B45": {
+			"editor_id": "FOLON_COM_KieraRecruitment",
+			"name": "Kiera the Treasure Hunter (Kiera Recruitment)"
 		},
 		"072C2D0E": {
 			"editor_id": "FOLON_COM_KieraTalk",
@@ -142517,16 +142318,6 @@
 		"072E3824": {
 			"editor_id": "Folon_WorkshopParent",
 			"name": "Workshop Parent Quest"
-		},
-		"0729EB90": {
-			"editor_id": "FOLON_LQCity104",
-			"name": "Temple Troubles",
-			"objectives": {
-				"10": "Investigate the noise",
-				"20": "Help the Protectron",
-				"30": "Speak to the Protectron",
-				"50": "Kill the Cultists"
-			}
 		},
 		"072AA435": {
 			"editor_id": "FOLON_LQSouthwark101",
@@ -142804,8 +142595,23 @@
 			"editor_id": "Folon_RETravelKMK_BoSM02",
 			"name": "BoSM02 Postquest - Clarke flees from feral ghouls"
 		},
+		"0719ABAA": {
+			"editor_id": "FOLON_MQ101",
+			"name": "Overture"
+		},
 		"071C1C01": {
 			"editor_id": "FOLON_PipboyManager"
+		},
+		"071B77DD": {
+			"editor_id": "FOLON_MQ102",
+			"name": "Broken Angel",
+			"objectives": {
+				"10": "Escape the facility",
+				"20": "Pick up the device",
+				"30": "Pick up the torch",
+				"40": "Use the lift",
+				"50": "Find a way out"
+			}
 		},
 		"0731F5CD": {
 			"editor_id": "FOLON_SQSouthwark103_QC"

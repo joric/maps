@@ -201,18 +201,22 @@ begin
           end;
 
           // quests assigned to ref id
+          quests := 0;
           for q := 0 to Pred(ReferencedByCount(r)) do begin
             ref := ReferencedByIndex(r, q);
             if Signature(ref) = 'QUST' then begin
               AddItem(Obj, ChildObj, ref, 'quests');
+              Inc(quests);
             end;
           end;
 
           // quests assigned to form id
-          for q := 0 to Pred(ReferencedByCount(e)) do begin
-            ref := ReferencedByIndex(e, q);
-            if Signature(ref) = 'QUST' then begin
-              AddItem(Obj, ChildObj, ref, 'quests');
+          if quests = 0 then begin
+            for q := 0 to Pred(ReferencedByCount(e)) do begin
+              ref := ReferencedByIndex(e, q);
+              if Signature(ref) = 'QUST' then begin
+                AddItem(Obj, ChildObj, ref, 'quests');
+              end;
             end;
           end;
 
