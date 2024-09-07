@@ -214,7 +214,8 @@
           "Anarchy Times[r]*": "Anarchy Times {index}",
           "London Crime Statistics": "London Crime Statistics {index}",
           "Ministry of National Health": "Ministry of National Health {index}",
-          "Ranger Ridiculous": "Ranger Ridiculous {index}"
+          "Ranger Ridiculous": "Ranger Ridiculous {index}",
+          "London Locksmith": "London Locksmith {index}"
           }
         },
       "Card": {"match": "Card", "fa": "address-card", "bg": "goldenrod", "type": "Note", "subtype":"Visiting Card"}
