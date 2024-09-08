@@ -182,7 +182,7 @@
       "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
       "Coaster": {"match": "BobbleHead_", "fa": "image", "bg": "peru", "type": "Coaster"},
       "CuteThulhu": {"match": "Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"},
-      "Book": {"match": "Book", "fa": "book", "bg": "sienna", "type": "Note"}
+      "Book": {"match": "Book", "fa": "book", "bg": "sienna", "type": "Book", "group": "misc"}
     }
   },
 
@@ -219,7 +219,7 @@
           "London Locksmith": "London Locksmith {index}"
           }
         },
-      "Card": {"match": "Card", "fa": "address-card", "bg": "goldenrod", "type": "Note", "subtype":"Visiting Card"}
+      "Card": {"match": "Card", "fa": "address-card", "bg": "goldenrod", "group":"misc", "type": "Visiting Card"}
     }
   }
 }
