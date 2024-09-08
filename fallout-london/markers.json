@@ -106917,6 +106917,28 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					33158.699219,
+					9019.506836,
+					5086.290527
+				]
+			},
+			"properties": {
+				"title": "Hymn Book",
+				"description": "MISC",
+				"ref_id": "0730DBE2",
+				"form_id": "072EFE46",
+				"editor_id": "FOLON_MiscHymnBook",
+				"quests": [
+					"072AE49E"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-50939.300781,
 					-69360.335938,
 					5514.323242

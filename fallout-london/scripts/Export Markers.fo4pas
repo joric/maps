@@ -132,6 +132,7 @@ begin
             and (pos('Folon_MiscCuteThulhu', s) = 0)
             and (pos('Folon_MiscCard', s) = 0)
             and (pos('Folon_MiscFeatherPeacock', s) = 0)
+            and (pos('FOLON_MiscHymnBook', s) = 0) // Welcome to the Vagabonds
             then continue;
           end else if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin

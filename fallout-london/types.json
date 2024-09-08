@@ -181,7 +181,8 @@
       "Vinyl": {"match": "Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type": "Vinyl Record"},
       "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
       "Coaster": {"match": "BobbleHead_", "fa": "image", "bg": "peru", "type": "Coaster"},
-      "CuteThulhu": {"match": "Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"}
+      "CuteThulhu": {"match": "Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"},
+      "Book": {"match": "Book", "fa": "book", "bg": "sienna", "type": "Note"}
     }
   },
 
@@ -204,7 +205,7 @@
   "BOOK": {"fa": "envelope", "bg": "tan", "type": "Message", "group": "items",
     "items": {
       "Newspaper": {"match": "Newspaper", "fa": "newspaper", "bg": "#aaa", "type": "Newspaper"},
-      "Note": {"match": "Note", "fa": "note-sticky", "bg": "sandybrown", "type": "Note"},
+      "Note": {"match": "Note", "fa": "note-sticky", "bg": "sandybrown", "type": "Note", "group_fa": "note-sticky"},
       "Coaster": {"match": "Folon_BOOK_Mag", "fa": "image", "bg": "peru", "type": "Coaster"},
       "Magazine": {"match": "PerkMag", "fa": "book", "bg": "steelblue", "type": "Magazine", 
         "replace":{
