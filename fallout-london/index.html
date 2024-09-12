@@ -231,6 +231,10 @@ let maps = {
   'BromleyPindarWorld': { name: 'Bromley Pindar', scale: 1, offset: {x:0, y:0}, hidden: true },
 };
 
+let cells = {
+  '07254631': {name: 'Westminster Underground', scale: 0, offset: {x: 0, y:0} },
+}
+
 function closeTrack(){
   toggleVisibility(['#track-category-panel','#track-category-button']);
 }
@@ -1118,8 +1122,6 @@ function loadMarkers() {
   let weights = {};
   let total = 0;
 
-  let cells = {};
-
   for (feature of markers.features) {
     let o = feature.properties;
 
@@ -1309,7 +1311,7 @@ function loadMarkers() {
   mapParam = {}; // critical to reload map properly
 }
 
-function loadMap(id) {
+function loadMap(id, cell) {
   map && map.remove();
   mapId = id;
 
