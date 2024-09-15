@@ -45,7 +45,7 @@ end;
 
 function Finalize: integer;
 var
-  i, j, k, w, count, quests, q, value, cnt, subcount: integer;
+  i, j, k, w, count, quests, q, value, cnt, subcount, fid: integer;
   f, mod_f, g, e, r, area, cell, refs, ref, item, items: IInterface;
   Obj, ChildObj: TJsonObject;
   s, id, section: string;
@@ -93,6 +93,7 @@ begin
         for i := 0 to Pred(ReferencedByCount(r)) do begin
           e := ReferencedByIndex(r, i);
           s := EditorID(r);
+          fid := GetLoadOrderFormID(e);
 
           if (Signature(r) = 'DOOR') and (Signature(e) = 'REFR') then begin
             id: = IntToHex(GetLoadOrderFormID(e), 8);
@@ -145,7 +146,10 @@ begin
                 break;
               end;
             end;
-            if quests = 0 then continue;
+            if (quests = 0)
+            and (fid <> $072e605f) // Private Tiffany (arms vendor, 072e605f)
+            and (fid <> $072e6087) // Corporal Rafferty (food vendor, 072e6087)
+            then continue;
           end else continue;
 
           // only local objects allowed

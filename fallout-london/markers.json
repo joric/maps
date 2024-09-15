@@ -55124,6 +55124,31 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					1240.703857,
+					5033.054688,
+					-99.000015
+				]
+			},
+			"properties": {
+				"title": "Corporal Rafferty",
+				"description": "NPC_",
+				"ref_id": "072E6087",
+				"form_id": "0719D889",
+				"editor_id": "Folon_NPC_TommyCplRafferty",
+				"outfits": [
+					"0732BB03",
+					"071BAF4C",
+					"071BAF45"
+				],
+				"cell": "071D795A",
+				"cell_name": "Charing Cross Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					2075.881104,
 					11.661095,
 					-1023.345703
@@ -57331,6 +57356,31 @@
 					"0713B882"
 				],
 				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					821.031738,
+					4166.841797,
+					-99.666016
+				]
+			},
+			"properties": {
+				"title": "Private Tiffany",
+				"description": "NPC_",
+				"ref_id": "072E605F",
+				"form_id": "071A7B4A",
+				"editor_id": "Folon_NPC_TommyPvtTiffany",
+				"outfits": [
+					"0732BB03",
+					"071BAF45",
+					"071730C4"
+				],
+				"cell": "071D795A",
+				"cell_name": "Charing Cross Station"
 			}
 		},
 		{
