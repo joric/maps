@@ -182,7 +182,8 @@
       "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
       "Coaster": {"match": "BobbleHead_", "fa": "image", "bg": "peru", "type": "Coaster"},
       "CuteThulhu": {"match": "Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"},
-      "Book": {"match": "Book", "fa": "book", "bg": "sienna", "type": "Book", "group": "misc"}
+      "Overdue Book": {"match": "^OverdueBook$", "fa": "book", "bg": "sienna", "type": "Book", "group": "misc"},
+      "Book": {"match": "HymnBook", "fa": "book", "bg": "red", "type": "Book", "group": "misc"}
     }
   },
 
@@ -190,9 +191,8 @@
     "items": {
       "Tardis": {"match": "FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Call Box"},
       "Beacon": {"match": "Folon_ACTI_BarryBoatBeacon", "fa": "tower-observation", "bg": "darkcyan", "type": "Water Signal Beacon"},
-
-      "CutethulhuActivator": {"match": "Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus",
-        "bg": "darkslategrey", "type": "CuteThulhu Activator"}
+      "Overdue Book Terminal": {"match":"DN011OverdueBookVendMachine", "fa":"book", "bg": "darkcyan", "type":"Overdue Book Terminal"},
+      "CutethulhuActivator": {"match": "Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus", "bg": "darkslategrey", "type": "CuteThulhu Activator"}
     }
   },
 

@@ -99,14 +99,16 @@ begin
             id: = IntToHex(GetLoadOrderFormID(e), 8);
             ref := WinningOverride(LinksTo(ElementByPath(e, 'XTEL\Door')));
             if not Assigned(ref) then continue;
-          end else if f<>mod_f then begin
-            continue;
+//          end else if f<>mod_f then begin
+//            continue;
           end else if (Signature(r) = 'ARMO') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'KEYM') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'ACTI') and (Signature(e) = 'REFR') then begin
             if (pos('Folon_ACTI_CutethulhuDollActivator', s) = 0)
             and (pos('FOLON_ACTI_LQLondon100', s) = 0)
-            and (pos('Folon_ACTI_BarryBoatBeacon', s) = 0) then continue;
+            and (pos('Folon_ACTI_BarryBoatBeacon', s) = 0)
+            and (pos('DN011OverdueBookVendMachine', s) = 0) // overdue book terminal
+            then continue;
           end else if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
             if (pos('Folon_Workbench', s) = 0) then continue;
           end else if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
@@ -134,6 +136,7 @@ begin
             and (pos('Folon_MiscCard', s) = 0)
             and (pos('Folon_MiscFeatherPeacock', s) = 0)
             and (pos('FOLON_MiscHymnBook', s) = 0) // Welcome to the Vagabonds
+            and (s <> 'OverdueBook') // Overdue Book
             then continue;
           end else if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin
