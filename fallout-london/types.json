@@ -182,7 +182,7 @@
       "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
       "Coaster": {"match": "BobbleHead_", "fa": "image", "bg": "peru", "type": "Coaster"},
       "CuteThulhu": {"match": "Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"},
-      "Overdue Book": {"match": "^OverdueBook$", "fa": "book", "bg": "sienna", "type": "Book", "group": "misc"},
+      "Overdue Book": {"match": "^OverdueBook$", "fa": "book", "bg": "sienna", "type": "Book", "group": "misc", "subtype":"Overdue Book"},
       "Book": {"match": "HymnBook", "fa": "book", "bg": "red", "type": "Book", "group": "misc"}
     }
   },
