@@ -177,13 +177,13 @@
 
   "MISC": {"group": "items",
     "items": {
-      "Feather": {"match": "Folon_MiscFeatherPeacock", "fa": "feather", "bg": "darkslategrey", "type":"Peacock Feather", "group":"misc" },
+      "Feather": {"match": "Folon_MiscFeatherPeacock", "fa": "feather", "bg": "darkslategrey", "type":"Peacock Feather"},
       "Vinyl": {"match": "Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type": "Vinyl Record"},
       "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
       "Coaster": {"match": "BobbleHead_", "fa": "image", "bg": "peru", "type": "Coaster"},
       "CuteThulhu": {"match": "Folon_MiscCuteThulhu", "fa": "virus", "bg": "darkslategrey", "type": "CuteThulhu"},
-      "Overdue Book": {"match": "^OverdueBook$", "fa": "book", "bg": "sienna", "type": "Book", "group": "misc", "subtype":"Overdue Book"},
-      "Book": {"match": "HymnBook", "fa": "book", "bg": "red", "type": "Book", "group": "misc"}
+      "Overdue Book": {"match": "^OverdueBook$", "fa": "book", "bg": "sienna", "type": "Book", "subtype":"Overdue Book"},
+      "Book": {"match": "HymnBook", "fa": "book", "bg": "red", "type": "Book"}
     }
   },
 
@@ -192,7 +192,9 @@
       "Tardis": {"match": "FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Call Box"},
       "Beacon": {"match": "Folon_ACTI_BarryBoatBeacon", "fa": "tower-observation", "bg": "darkcyan", "type": "Water Signal Beacon"},
       "Overdue Book Terminal": {"match":"DN011OverdueBookVendMachine", "fa":"book", "bg": "darkcyan", "type":"Overdue Book Terminal"},
-      "CutethulhuActivator": {"match": "Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus", "bg": "darkslategrey", "type": "CuteThulhu Activator"}
+      "CutethulhuActivator": {"match": "Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus", "bg": "darkslategrey", "type": "CuteThulhu Activator"},
+      "Taxi": {"match":"Folon_ACTI_TaxiActivatorFT", "fa":"taxi", "bg": "darkcyan", "type":"Taxi"},
+      "Tickets": {"match":"loot_capsStash_tin", "fa":"ticket", "bg": "peru", "type":"Tickets", "group": "items"}
     }
   },
 
@@ -219,7 +221,7 @@
           "London Locksmith": "London Locksmith {index}"
           }
         },
-      "Card": {"match": "Card", "fa": "address-card", "bg": "goldenrod", "group":"misc", "type": "Visiting Card"}
+      "Card": {"match": "Card", "fa": "address-card", "bg": "goldenrod", "group":"items", "type": "Visiting Card"}
     }
   }
 }

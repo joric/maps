@@ -108,6 +108,8 @@ begin
             and (pos('FOLON_ACTI_LQLondon100', s) = 0)
             and (pos('Folon_ACTI_BarryBoatBeacon', s) = 0)
             and (pos('DN011OverdueBookVendMachine', s) = 0) // overdue book terminal
+            and (pos('Folon_ACTI_TaxiActivatorFT', s) = 0)
+            and (pos('loot_capsStash_tin', s) = 0) // ticket stash
             then continue;
           end else if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
             if (pos('Folon_Workbench', s) = 0) then continue;
