@@ -198,7 +198,7 @@
     }
   },
 
-  "DOOR": {"fa": "door-open", "bg": "grey", "type": "Door", "group": "items",
+  "DOOR": {"fa": "door-open", "bg": "grey", "type": "Exterior Door", "group": "items",
     "items": {
       "Autoload Door": {"match": "AutoloadDoor", "fa": "dungeon", "type": "Autoload Door" },
       "Interior Door": {"cell":true, "fa": "door-closed", "type": "Interior Door" }
