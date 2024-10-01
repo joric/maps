@@ -591,6 +591,7 @@ hr { opacity: .6;}
 
 .popup-subnote-item .icon {
   opacity: .6;
+  flex: 0 0 auto;
 }
 
 .popup-subnote-item a {
