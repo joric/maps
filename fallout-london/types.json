@@ -1,9 +1,9 @@
 {
-  "City":{"fa": "city", "bg": "red", "group": "markers", "group_weight": -1200},
+  "City":{"fa": "city", "bg": "red", "group": "markers", "group_weight": -1000},
   "Town":{"fa": "tree-city", "bg": "red", "group": "markers"},
   "Gov't Building / Monument": { "fa": "building-columns", "group": "markers"},
   "Bunker Hill": {"fa": "monument", "type": "Monument", "group": "markers"},
-  "Vault": {"fa": "gear", "group": "markers", "group_weight": 810},
+  "Vault": {"fa": "gear", "group": "markers"},
   "Faneuil Hall": {"fa": "dollar-sign", "type": "Bank", "group": "markers"},
   "Submarine": {"fa": "ship", "group": "markers"},
   "USS Constitution": {"fa": "ship", "group": "markers"},
@@ -111,7 +111,7 @@
     }
   },
 
-  "FURN": {"group_fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "items",
+  "FURN": {"group_fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "misc",
     "items": {
       "Weapons Workbench": {"match": "Folon_WorkbenchWeapons", "fa": "gun"},
       "Tea Station": {"match": "Folon_WorkbenchTeaStation", "fa": "mug-hot"},
@@ -120,13 +120,13 @@
     }
    },
 
-  "CONT": {"fa": "box-archive", "bg": "darkcyan", "type": "Container", "group": "items",
+  "CONT": {"fa": "box-archive", "bg": "darkcyan", "type": "Container", "group": "misc",
     "items": {
-      "Workshop":{"match": "Folon_SettlementWorkbench", "fa": "screwdriver-wrench", "bg": "red", "group":"items", "type": "Workshop" }
+      "Workshop":{"match": "Folon_SettlementWorkbench", "fa": "screwdriver-wrench", "bg": "red", "type": "Workbench", "subtype": "Workshop" }
     }
   },
 
-  "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items"},
+  "NOTE": {"fa": "compact-disc", "bg": "peru", "type": "Holotape", "group": "items", "group_weight": 1000},
   "AMMO": {"fa": "toolbox", "bg": "dimgrey", "type": "Ammo", "group": "items"},
 
   "KEYM": {"fa": "key", "bg": "mediumseagreen", "type": "Key", "group": "items",
@@ -147,7 +147,7 @@
       "Hyp-O":    {"match": "Psycho", "fa": "syringe", "bg": "red"}
     }
   },
-  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",  "group_weight": 900,
+  "FLOR": {"fa": "seedling", "bg": "forestgreen", "type": "Plant", "group": "items",
     "items": {
       "Mutfruit": { "match": "FloraWildMutfruit", "type": "Ingestible", "bg": "darkorchid" }
     }
@@ -187,7 +187,7 @@
     }
   },
 
-  "ACTI": {"fa": "virus", "bg": "red", "type": "Workshop", "group": "misc", "group_weight": -1000,
+  "ACTI": {"fa": "virus", "bg": "red", "type": "Workshop", "group": "misc", "group_weight": 900,
     "items": {
       "Tardis": {"match": "FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Call Box"},
       "Beacon": {"match": "Folon_ACTI_BarryBoatBeacon", "fa": "tower-observation", "bg": "darkcyan", "type": "Water Signal Beacon"},
@@ -198,7 +198,7 @@
     }
   },
 
-  "DOOR": {"fa": "door-open", "bg": "grey", "type": "Exterior Door", "group": "items",
+  "DOOR": {"fa": "door-open", "bg": "grey", "type": "Exterior Door", "group": "misc",
     "items": {
       "Autoload Door": {"match": "AutoloadDoor", "fa": "dungeon", "type": "Autoload Door" },
       "Interior Door": {"cell":true, "fa": "door-closed", "type": "Interior Door" }
