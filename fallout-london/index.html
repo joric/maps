@@ -1258,7 +1258,9 @@ function loadMarkers() {
       li.appendChild(c2);
       div.appendChild(li);
 
-      li.title = [plural(count,'marker'), plural(Object.values(counters2[group][type]).length,'type')].join(' , ');
+      let numTypes = Object.values(counters2[group][type]).length;
+
+      li.title = numTypes > 1 ? [plural(count,'marker'), plural(numTypes,'type')].join(' , ') : plural(count,'marker');
 
       //console.log(counters[group][type]);
     }
