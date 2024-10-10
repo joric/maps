@@ -1214,7 +1214,7 @@ function loadMarkers() {
     header.alt = group;
     header.onclick = toggleGroup;
 
-    header.title = [plural(Object.values(counters[group]).reduce((a,c)=>a+c,0),'marker'),plural(Object.values(counters[group]).length,'category')].join(' , ');
+    header.title = [plural(Object.values(counters[group]).reduce((a,c)=>a+c,0),'marker'),plural(Object.values(counters[group]).length,'category')].join(' in ');
 
     nodes.push(header);
 
@@ -1260,7 +1260,7 @@ function loadMarkers() {
 
       let numTypes = Object.values(counters2[group][type]).length;
 
-      li.title = numTypes > 1 ? [plural(count,'marker'), plural(numTypes,'type')].join(' , ') : plural(count,'marker');
+      li.title = numTypes > 1 ? [plural(count,'marker'), plural(numTypes,'type')].join(' of ') : plural(count,'marker');
 
       //console.log(counters[group][type]);
     }
