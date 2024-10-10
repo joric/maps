@@ -1213,7 +1213,8 @@ function loadMarkers() {
     header.id = 'group-header-'+group;
     header.alt = group;
     header.onclick = toggleGroup;
-    header.title = [plural(Object.values(counters[group]).length,'category'),plural(Object.values(counters[group]).reduce((a,c)=>a+c,0),'marker')].join(' of ');
+
+    header.title = [plural(Object.values(counters[group]).reduce((a,c)=>a+c,0),'marker'),plural(Object.values(counters[group]).length,'category')].join(' , ');
 
     nodes.push(header);
 
@@ -1257,7 +1258,7 @@ function loadMarkers() {
       li.appendChild(c2);
       div.appendChild(li);
 
-      li.title = [plural(Object.values(counters2[group][type]).length,'type'), plural(count,'marker')].join(' of ');
+      li.title = [plural(count,'marker'), plural(Object.values(counters2[group][type]).length,'type')].join(' , ');
 
       //console.log(counters[group][type]);
     }
