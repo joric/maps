@@ -141,6 +141,8 @@ begin
             and (s <> 'OverdueBook') // Overdue Book
             then continue;
           end else if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
+            if (GetFile(r) <> mod_f) // exclude all non-london book references
+              then continue;
           end else if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin
             if pos('_NPC_', s) = 0 then continue;
             quests := 0;
@@ -276,7 +278,7 @@ begin
         end;
       end;
     end;
-    AddMessage(Format('Collected %s - %d subitems', [sList[k], subcount]));
+    AddMessage(Format('Collected %s - %d items', [sList[k], subcount]));
   end;
 
   g := GroupBySignature(mod_f, 'WRLD');
