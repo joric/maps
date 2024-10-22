@@ -22,7 +22,7 @@
   "Farm": {"fa": "tractor", "group": "markers"},
   "Bunker": {"fa": "warehouse", "group": "markers"},
   "Radio Tower": {"fa": "tower-cell", "group": "markers"},
-  "Airfield": {"fa": "plane", "type": "Airport", "group": "markers"},
+  "Airfield": {"fa": "plane", "type": "Airfield", "group": "markers"},
   "Sewer / Utility Tunnels": {"fa": "ring", "group": "markers"},
   "Filling Station": {"fa": "gas-pump", "group": "markers"},
   "Natural Landmark": {"fa": "landmark", "group": "markers"},
