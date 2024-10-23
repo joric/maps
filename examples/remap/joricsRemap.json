@@ -1792,8 +1792,8 @@
             ]
           },
           "warp": {
-            "inner": 200,
-            "outer": 2415.0806814024018
+            "inner": 0.5113277783002488,
+            "outer": 33.480453629685414
           }
         },
         "072EE778": {
@@ -2368,19 +2368,19 @@
           "title": "Laundrette"
         }
       },
-      "smoothing": "8104",
-      "power": "12.1",
+      "smoothing": 2,
+      "power": 5,
       "activeLayers": {
         "Markers": true,
         "Helpers": true
       },
-      "provider": "CartoDB Voyager",
+      "provider": "Yandex Satellite",
       "warped": true
     },
     "center": [
-      51.44503395927924,
-      -0.26483058929443365
+      51.44504168674903,
+      -0.2648091316223145
     ],
-    "zoom": 15
+    "zoom": 18
   }
 }
