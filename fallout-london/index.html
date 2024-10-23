@@ -1151,6 +1151,12 @@ function loadMarkers() {
 
     if (area != mapId && !(maps[mapId].regions && maps[mapId].regions[area])) continue;
 
+    // hide dev cell
+    if (o.cell_name=='C3Delight Dev Cell') continue;
+
+    // hide 'Libertalia' (since 1.02, Folon_ACTI_BarryBoatBeacon is better)
+    if (o.description=='Libertalia') continue;
+
     // hide some of the location markers on the base map
     if (mapId == Object.keys(maps)[0]) {
       if (['City','Town'].includes(type) && area != mapId && o.ref_id!='07310FF5') continue; // duplicate city markers
