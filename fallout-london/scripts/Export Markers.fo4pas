@@ -298,7 +298,7 @@ begin
       ChildObj.A['offset'].Add(GetElementNativeValues(e, 'ONAM\Cell Z Offset'));
     end;
   end;
-  AddMessage(Format('Collected %d items', [count]));
+  AddMessage(Format('Collected %d items total', [count]));
 
   AddMessage('Saving markers.json...');
   Obj.SaveToFile(extractfilepath(paramstr(0)) + '../markers.json', False, TEncoding.UTF8, True);
