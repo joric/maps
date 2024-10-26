@@ -161301,6 +161301,2248 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					-7159.716797,
+					46806.230469,
+					1182.450684
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "070A4980",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-517.217773,
+					1374.142334,
+					-64.367401
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "070A5EC8",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "070A5CE8",
+				"cell_name": "C3Delight Dev Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-479.319672,
+					2994.135742,
+					4135.094727
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "070DC7A8",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "07053E1B",
+				"cell_name": "London Gas and Heating Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2530.695312,
+					1272.007812,
+					77.324951
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07108D6F",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "07107EA6",
+				"cell_name": "Tenpenny Airlines Inc."
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					292.546967,
+					97.222923,
+					11.95403
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0710F411",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0706F9CE",
+				"cell_name": "Retrofitting Centre"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2233.384521,
+					1402.694336,
+					-3.40625
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0714B05A",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0702E9DC",
+				"cell_name": "Rag and Bone Merchants"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2102.795166,
+					-756.14386,
+					384
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07157EEB",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0715651B",
+				"cell_name": "Syndicate Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1625.394409,
+					805.550537,
+					1538.631714
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0716873B",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071679E0",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3150.021729,
+					3517.541992,
+					0
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0719BABD",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071982C4",
+				"cell_name": "Enfield Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-16805.080078,
+					35255.214844,
+					5713.547852
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071A831A",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3354.837158,
+					51860.273437,
+					5113.688965
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071C31DA",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-47962.664062,
+					-85762.703125,
+					5065.149414
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071DD0D6",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-50174.019531,
+					-59051.363281,
+					5228.222168
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071E6AF0",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5047.303223,
+					-6370.891602,
+					1395.276611
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071F52E8",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071285E8",
+				"cell_name": "Mansion House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					534.607239,
+					2000.720093,
+					299.258667
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0720E8D7",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0720E593",
+				"cell_name": "Mycroft's House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3656.878906,
+					126.041214,
+					2320.066162
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07210388",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071A2F97",
+				"cell_name": "U-96"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-444.715332,
+					5034.611816,
+					191.52179
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07219A27",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0712C09C",
+				"cell_name": "Strand Tunnels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1123.503418,
+					4194.156738,
+					-101.246307
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0722C1DB",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071D795A",
+				"cell_name": "Charing Cross Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4346.259766,
+					-566.048035,
+					360
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0722E12D",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "070B7378",
+				"cell_name": "Vauxhall Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11100,
+					353,
+					4458
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0723893E",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071A2FAC",
+				"cell_name": "Senate House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1466.821777,
+					2185.246582,
+					222.629089
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07243DC6",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "07240CD4",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6148.63623,
+					2264.966064,
+					392.019684
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0725542C",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0715AEE8",
+				"cell_name": "US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1386.113037,
+					-2374.745361,
+					8562.799805
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0725B295",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071A2F83",
+				"cell_name": "Elizabeth Tower"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6899.248047,
+					-210.551468,
+					-3576
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0725BCA7",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0715AEE8",
+				"cell_name": "US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					32.094254,
+					1823.038086,
+					2229.795898
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0726964D",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0726960A",
+				"cell_name": "Winston's Toys"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					289.230713,
+					2034.597656,
+					2229.855469
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07269709",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0726960A",
+				"cell_name": "Winston's Toys"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2671.243408,
+					1744.848022,
+					363.38327
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0726EDE2",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "070CFE45",
+				"cell_name": "Upton-Burke Headquarters"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2386.647949,
+					3783.45874,
+					0
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072704E9",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071982C4",
+				"cell_name": "Enfield Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3151.168945,
+					3811.202148,
+					0.521797
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072704EB",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071982C4",
+				"cell_name": "Enfield Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2386.648438,
+					3490.996338,
+					0
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072704F8",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071982C4",
+				"cell_name": "Enfield Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6148.63623,
+					2264.966064,
+					392.019684
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0727BAAA",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6892,
+					-192,
+					-3576
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0727C51C",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2052.447266,
+					1897.391113,
+					-106.090385
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0727D735",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0703D117",
+				"cell_name": "Spin & Shine Laundromat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1830.297363,
+					1976.732056,
+					699.396912
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07283AA1",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "070971CE",
+				"cell_name": "British Lion HQ"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-257.242615,
+					1044.840698,
+					0
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0728E9E1",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "071A2FB7",
+				"cell_name": "Islington Public Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1757.660767,
+					2198.880859,
+					6.451926
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07299A71",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "07174AD9",
+				"cell_name": "Sneering Imperialist"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-29072.894531,
+					12994.453125,
+					5066.38916
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072A45CC",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5352.737793,
+					457.803253,
+					-257.86319
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072AC354",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "072AADBC",
+				"cell_name": "Relay Tower Maintenance"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-85563.359375,
+					-80717.210938,
+					5700
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072D9038",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					582.472229,
+					234.55806,
+					264.857697
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072ED63D",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0705B759",
+				"cell_name": "Glam Clubhouse"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-336,
+					640,
+					0
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0732A086",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0732A007",
+				"cell_name": "Saffron Dev Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					748.140564,
+					785.355103,
+					2232.069824
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "073323A0",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"cell": "0715A4E4",
+				"cell_name": "London Electronics Store"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85704.648438,
+					-78504.492188,
+					5641.893066
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "073329E2",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-29016.195312,
+					-9800.56543,
+					5103.625977
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07332D1B",
+				"form_id": "0017B3A4",
+				"editor_id": "workbenchWeaponsA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					66141.570312,
+					-55398.421875,
+					5264.308105
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0704A793",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5760.574707,
+					5959.316406,
+					1331.181519
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "070D07B5",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "070CFE47",
+				"cell_name": "Tower Hamlets Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1526.784424,
+					5076.881836,
+					202.15918
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "070DFA2A",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "070465A7",
+				"cell_name": "St George"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3466.585449,
+					-2104.064941,
+					-199.529129
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0711FE4F",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "07111257",
+				"cell_name": "Sewer"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3849.052979,
+					54179.660156,
+					5274.666992
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07125747",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7423.219238,
+					18042.767578,
+					229.533722
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07127197",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "IslingtonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79297.078125,
+					41270.359375,
+					5065.61084
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0713C595",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-18427.167969,
+					29096.371094,
+					1430.453735
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071471C3",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2720,
+					544,
+					384
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07157EEA",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0715651B",
+				"cell_name": "Syndicate Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-20153.058594,
+					50258.707031,
+					5122.072754
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07159B96",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-33638.125,
+					-70833.460938,
+					5469.387695
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071697CE",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1011.728088,
+					830.343201,
+					0
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071802F7",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "07180265",
+				"cell_name": "Do It Yourself"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34980.371094,
+					-49892.007812,
+					6108.661621
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071926F1",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					38045.683594,
+					-62966.066406,
+					5064.195801
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071998A3",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3285.56958,
+					1042.853638,
+					0.009216
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071A6845",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071909A8",
+				"cell_name": "Lewisham Police Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-21362.228516,
+					39407.601562,
+					5466.567871
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071A8307",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					609.646362,
+					10.60403,
+					-256
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071B3A08",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071B3834",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7729.181152,
+					1662.884033,
+					35.058746
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071B6A82",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "07136638",
+				"cell_name": "Imperial War Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5257.657715,
+					48222.738281,
+					704.583374
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071B7A19",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-70136.859375,
+					-90781.273438,
+					5725.844238
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071DC707",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-79024.414062,
+					-24409.724609,
+					5055.341309
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071DCA0D",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-45402.910156,
+					13336.402344,
+					5054.758301
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071DFC16",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1932.802368,
+					386.603638,
+					667.307068
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071E1036",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "07183D4E",
+				"cell_name": "Kosuna Bike Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25360.011719,
+					13261.646484,
+					5091.26709
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071E76F9",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					404.507599,
+					1604.140503,
+					-55.153358
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071F0490",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071A2FB2",
+				"cell_name": "National Gallery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4969.296875,
+					2864.516357,
+					415.734406
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071F58A5",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071A2FB5",
+				"cell_name": "Butlers Wharf"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4722.577637,
+					2934.349365,
+					415.419098
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071F58AA",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071A2FB5",
+				"cell_name": "Butlers Wharf"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2942.958984,
+					2127.678955,
+					2162
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071F6019",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "070076B9",
+				"cell_name": "Charterhouse"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1776.746338,
+					2944.486328,
+					856.237854
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071FB993",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071F121F",
+				"cell_name": "Tobacco Dock"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-9111.328125,
+					3229.425537,
+					-72
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "071FC0F9",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "07120571",
+				"cell_name": "Old Royal Naval College"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2557.394287,
+					-3928,
+					1512
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07209A67",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-31260.363281,
+					-1975.869019,
+					5152.000977
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0720E3FE",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1210.779053,
+					1755.330811,
+					-44.000015
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07212520",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0716EB10",
+				"cell_name": "Delinquent Hideout"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3161.729248,
+					-1772.491211,
+					1512.559204
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07221C23",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1689.211304,
+					-2159.909912,
+					1512
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07222542",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4096,
+					1456,
+					-742
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0722D634",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071AD97D",
+				"cell_name": "Hippodrome"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2485,
+					-5678,
+					5813
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072404F7",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "BromleyGladesWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2868.256104,
+					1512.477539,
+					474.572723
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07245670",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "072450F4",
+				"cell_name": "Houseguard Gin Distillery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-39284.660156,
+					15232.819336,
+					5069.999512
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07247603",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6015.998535,
+					2007.999268,
+					-3960
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0724C002",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0715AEE8",
+				"cell_name": "US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1692.97644,
+					3957.937256,
+					-654
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072506AB",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3892.141113,
+					2444.445557,
+					512.358398
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0725162D",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071A2FA6",
+				"cell_name": "Royal Observatory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3167.79248,
+					1082.102051,
+					330.078064
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0725C223",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "07107416",
+				"cell_name": "British Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					48.21175,
+					2754.665527,
+					-1664
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07262512",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "072617D9",
+				"cell_name": "Guys Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3582,
+					-2318,
+					0
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07267081",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0720801C",
+				"cell_name": "Battersea Power Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					304.281494,
+					2109.224609,
+					2230.609863
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0726970E",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0726960A",
+				"cell_name": "Winston's Toys"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-33610.597656,
+					-9684.036133,
+					7460.070312
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0726AE7E",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					72.466248,
+					-4811.863281,
+					2651.607422
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07275D05",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0700FB60",
+				"cell_name": "Air Raid Shelter"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6015.998535,
+					2007.999268,
+					-3960
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07279EC6",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5628.666504,
+					-1275.272949,
+					-3576
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0727D381",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5159.310547,
+					7110.956055,
+					-2799.745117
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0727EB5F",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071FDF4D",
+				"cell_name": "Westminster Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-445.153107,
+					1063.981201,
+					0
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0728E9E4",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "071A2FB7",
+				"cell_name": "Islington Public Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-22311.007812,
+					-35161.582031,
+					-490.658264
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07291D65",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-11894.030273,
+					10219.078125,
+					575.009277
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0729330C",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "070C74E7",
+				"cell_name": "Thameshaven"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-10496.914062,
+					10983.716797,
+					829.602783
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07296783",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-10760.461914,
+					10664.351562,
+					852.762329
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07296791",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-10764.146484,
+					10956.297852,
+					852.762329
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07296792",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1126.299561,
+					-2301.927979,
+					632.259888
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0729B5E6",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "070B6922",
+				"cell_name": "Lambeth Aquarium"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-36057.25,
+					-77298.859375,
+					4819.758789
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0729F2C0",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2279.469238,
+					4126.589355,
+					0
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072CBF46",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "DumpWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1276.067871,
+					371.426575,
+					160
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072D08B5",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "072BA192",
+				"cell_name": "Cutty Sark"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-85286.203125,
+					-80896.054688,
+					5700
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072D9039",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					859.84613,
+					-1567.63208,
+					0.231718
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072DBD96",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "0719A05F",
+				"cell_name": "Quick Test Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-542.421082,
+					-5293.353027,
+					295.642578
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "072ED4D6",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"cell": "070BF896",
+				"cell_name": "Club Oberon"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82549.109375,
+					73240.335938,
+					5099.111816
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0730F204",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-16611.671875,
+					56725.339844,
+					5568.893066
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0731EC2E",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-83278.132812,
+					-34713.84375,
+					5100.92334
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "0731ECF2",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79948.632812,
+					-77690.359375,
+					5622.709473
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07332A1D",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-14917.818359,
+					-6376.34375,
+					5074.239746
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07332D00",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-31264.925781,
+					-15924.414062,
+					5083.541016
+				]
+			},
+			"properties": {
+				"title": "Weapons Workbench",
+				"description": "FURN",
+				"ref_id": "07332D1D",
+				"form_id": "0017E787",
+				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-301.380493,
 					592.820251,
 					-64.681244

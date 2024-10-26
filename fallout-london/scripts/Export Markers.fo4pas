@@ -114,7 +114,9 @@ begin
             and (pos('loot_capsStash_tin', s) = 0) // ticket stash
             then continue;
           end else if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
-            if (pos('Folon_Workbench', s) = 0) then continue;
+            if (pos('Folon_Workbench', s) = 0)
+            and (pos('workbenchWeapons', s) = 0)
+            then continue;
           end else if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'FLOR') and (Signature(e) = 'REFR') then begin
