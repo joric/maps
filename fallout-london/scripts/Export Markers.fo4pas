@@ -282,7 +282,7 @@ begin
         end;
       end;
     end;
-    AddMessage(Format('Collected %s - %d items', [sList[k], subcount]));
+    AddMessage(Format('%d%% Collected %s - %d items', [Round((k+1)*100/sList.Count), sList[k], subcount]));
   end;
 
   g := GroupBySignature(mod_f, 'WRLD');
