@@ -219,14 +219,14 @@ begin
 
               SaveXYZ(ChildObj.O['properties'].A['position'], e, 'XTEL\Position/Rotation\Position');
               SaveXYZ(ChildObj.O['properties'].A['rotation'], e, 'XTEL\Position/Rotation\Rotation');
-
-              // check for XLOC entry, add key to the door inventory
-              ref := LinksTo(ElementByPath(e, 'XLOC\Key'));
-              if Assigned(ref) then begin
-                AddItem(Obj, ChildObj, ref, 'keys');
-              end;
-
             end;
+
+            // check for XLOC entry, add key to the door inventory
+            ref := LinksTo(ElementByPath(e, 'XLOC\Key'));
+            if Assigned(ref) then begin
+              AddItem(Obj, ChildObj, ref, 'keys');
+            end;
+
           end;
 
           // quests assigned to ref id
