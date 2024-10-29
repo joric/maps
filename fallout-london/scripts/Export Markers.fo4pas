@@ -181,6 +181,13 @@ begin
             if cnt = 0 then continue;
           end;
 
+          // exclude KEYM entries referred by the XLOC entry of the REFR record that is really a DOOR
+          // we put those keys to the door properties later, along with the door quests
+          if (Signature(r) = 'KEYM') then begin
+            ref := BaseRecord(e);
+            if (Signature(ref) = 'DOOR') then continue;
+          end;
+
           ChildObj := Obj.A['features'].AddObject;
           ChildObj.S['type'] := 'Feature';
           ChildObj.O['geometry'].S['type'] := 'Point';
@@ -212,6 +219,12 @@ begin
 
               SaveXYZ(ChildObj.O['properties'].A['position'], e, 'XTEL\Position/Rotation\Position');
               SaveXYZ(ChildObj.O['properties'].A['rotation'], e, 'XTEL\Position/Rotation\Rotation');
+
+              // check for XLOC entry, add key to the door inventory
+              ref := LinksTo(ElementByPath(e, 'XLOC\Key'));
+              if Assigned(ref) then begin
+                AddItem(Obj, ChildObj, ref, 'keys');
+              end;
 
             end;
           end;

@@ -802,7 +802,7 @@ function fuzzySearch(s, limit, threshold) {
     let o = marker.properties;
     let tags = [];
 
-    for (const section of ['quests','weapons', 'perks', 'outfits']) {
+    for (const section of ['quests','weapons', 'perks', 'outfits', 'keys']) {
       let list = o[section];
       if (!list) continue;
       for (const id of list) {
@@ -865,7 +865,7 @@ function popupOnClick(e) {
   let div = popup.querySelector('#popup-subnote');
   div.replaceChildren();
 
-  for (const [i, section] of Object.entries(['quests','weapons', 'perks', 'outfits'])) {
+  for (const [i, section] of Object.entries(['quests','weapons', 'perks', 'outfits', 'keys'])) {
     let list = o[section];
     if (!list) continue;
 
@@ -889,7 +889,7 @@ function popupOnClick(e) {
 
       let i0 = document.createElement('span');
       i0.classList.add('fa');
-      i0.classList.add('fa-' + ['scroll','gun','star','shirt',''][i]);
+      i0.classList.add('fa-' + ['scroll','gun','star','shirt','key',''][i]);
 
       c0.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(name, o));
       c0.onclick = function() { copyToClipboard(section=='quests' ? editor_id : form_id); return false; };
