@@ -45,10 +45,10 @@ end;
 
 function Finalize: integer;
 var
-  i, j, k, w, count, quests, q, value, cnt, subcount, fid: integer;
+  i, j, k, w, count, quests, q, value, cnt, subcount, fid, rid: integer;
   f, mod_f, g, e, r, area, cell, refs, ref, item, items: IInterface;
   Obj, ChildObj: TJsonObject;
-  s, id, section: string;
+  s, id, section, name: string;
   sList: TStringList;
 begin
   mod_f := FileByIndex(8);
@@ -82,6 +82,7 @@ begin
 
   sList := TStringList.Create;
   sList.DelimitedText := 'KEYM CONT DOOR NPC_ ARMO BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN ACTI';
+  //sList.DelimitedText := 'NPC_';
 
   for k := 0 to Pred(sList.Count) do begin
     subcount := 0;
@@ -157,10 +158,30 @@ begin
                 break;
               end;
             end;
+
+            name := GetElementEditValues(r,'FULL');
+            if (name ='') 
+            or (name ='Resident')
+            then continue;
+
+            // get race id
+            rid := 0;
+            ref := LinksTo(ElementByName(r, 'RNAM - Race'));
+            if Assigned(ref) then begin
+              rid := GetLoadOrderFormID(ref);
+            end;
+
             if (quests = 0)
             and (fid <> $072e605f) // Private Tiffany (arms vendor, 072e605f)
             and (fid <> $072e6087) // Corporal Rafferty (food vendor, 072e6087)
+            and (rid <> $0725EFB0) // thamesfolk
+            and (rid <> $00013746) // human
+            and (rid <> $0011D83F) // karen
+            and (rid <> $0001D698) // doge
+            and (rid <> $000EAFB6) // ghoul
+            and (rid <> $0715650D) // atkins robot (camelot companion)
             then continue;
+
           end else continue;
 
           // only local objects allowed
@@ -277,6 +298,11 @@ begin
           ref := LinksTo(ElementByPath(r, 'DNAM\Perk'));
           if Assigned(ref) then begin
             AddItem(Obj, ChildObj, ref, 'perks');
+          end;
+
+          ref := LinksTo(ElementByName(r, 'RNAM - Race'));
+          if Assigned(ref) then begin
+            ChildObj.O['properties'].S['race'] := IntToHex(GetLoadOrderFormID(ref), 8);
           end;
 
           cell := LinksTo(ElementByName(e, 'Cell'));
