@@ -145,6 +145,9 @@ begin
             and (pos('FOLON_MiscHymnBook', s) = 0) // Welcome to the Vagabonds
             and (s <> 'OverdueBook') // Overdue Book
             then continue;
+
+            if (pos('BobbleHead_', s) <> 0) and (GetFile(r) <> mod_f) then continue; // exclude fo4 bobbleheas
+
           end else if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
             if (GetFile(r) <> mod_f) // exclude all non-london references
               then continue;
