@@ -470,6 +470,12 @@ function markerSymbol2(o) {
 
   let [w1,h1,[s1],c1,p1] = FontAwesome.icon({ iconName: 'location-pin' }).icon;
 
+  // mark all persons with quests
+  if (icon=='person' && !o.quests ) {
+    icon = 'person-walking';
+  }
+
+
   if (!(fa = FontAwesome.icon({ iconName: icon }))) {
     fa = FontAwesome.icon({ icon: 'circle-question' });
   }
