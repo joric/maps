@@ -300,10 +300,10 @@ begin
             AddItem(Obj, ChildObj, ref, 'perks');
           end;
 
-          ref := LinksTo(ElementByName(r, 'RNAM - Race'));
-          if Assigned(ref) then begin
-            ChildObj.O['properties'].S['race'] := IntToHex(GetLoadOrderFormID(ref), 8);
-          end;
+          //ref := LinksTo(ElementByName(r, 'RNAM - Race'));
+          //if Assigned(ref) then begin
+          //  ChildObj.O['properties'].S['race'] := IntToHex(GetLoadOrderFormID(ref), 8);
+          //end;
 
           cell := LinksTo(ElementByName(e, 'Cell'));
           if GetElementNativeValues(cell, 'DATA\Is Interior Cell') then begin
