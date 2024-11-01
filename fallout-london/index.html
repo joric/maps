@@ -820,7 +820,6 @@ function fuzzySearch(s, limit, threshold) {
 
         if (section=='quests') {
           for (let [key,objective] of Object.entries(markers[section][id].objectives||{})) {
-            tags.push(id);
             tags.push(objective);
           }
         }
