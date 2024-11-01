@@ -817,6 +817,14 @@ function fuzzySearch(s, limit, threshold) {
         let title = desc ? ( name +': ' + desc ) : name;
         tags.push(id);
         tags.push(itemText(title, o));
+
+        if (section=='quests') {
+          for (let [key,objective] of Object.entries(markers[section][id].objectives||{})) {
+            tags.push(id);
+            tags.push(objective);
+          }
+        }
+
       }
     }
 
