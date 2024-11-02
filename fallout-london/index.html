@@ -835,6 +835,7 @@ function fuzzySearch(s, limit, threshold) {
   threshold = threshold || 0.75;
 
   let options = {
+    //keys: ['title','description','display_name','form_id','ref_id','editor_id','custom_type','location','items','objectives'],
     keys: [
       { name: 'title', weight: 0.8 },         // Higher weight for titles
       { name: 'description', weight: 0.4 },
