@@ -912,7 +912,7 @@ function popupOnClick(e) {
       let a = document.createElement('a');
       c0.title = section == 'quests' ? `Copy Quest ID to Clipboard (${editor_id})` : `Copy Form ID to Clipboard (${form_id})`;
 
-      a.title = section == 'quests' ? `[${form_id}] ${editor_id} (Click Icon to Copy)` : `Form ID ${form_id}`;
+      a.title = section == 'quests' ? `${form_id} ${editor_id} (Click Icon to Copy)` : `Form ID ${form_id}`;
 
       if (Object.keys(objectives).length>0) {
         a.title += '\n---\n' + Object.entries(objectives).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
