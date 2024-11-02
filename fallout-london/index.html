@@ -806,7 +806,8 @@ function fuzzySearch(s, limit, threshold) {
   let collection = map.getLayer('markers')._geoList;
   for (marker of collection) {
     let o = marker.properties;
-    let tags = [];
+    let items = [];
+    let objectives = [];
 
     for (const section of ['quests','weapons', 'perks', 'outfits', 'keys']) {
       let list = o[section];
@@ -815,12 +816,12 @@ function fuzzySearch(s, limit, threshold) {
         let name = markers[section][id].name || markers[section][id].editor_id || id;
         let desc = markers[section][id].description;
         let title = desc ? ( name +': ' + desc ) : name;
-        tags.push(id);
-        tags.push(itemText(title, o));
+        items.push(id);
+        items.push(itemText(title, o));
 
         if (section=='quests') {
           for (let [key,objective] of Object.entries(markers[section][id].objectives||{})) {
-            tags.push(objective);
+            objectives.push(objective);
           }
         }
 
@@ -829,14 +830,26 @@ function fuzzySearch(s, limit, threshold) {
 
     let t = getType(o);
 
-    data.push({...o, ...{display_name: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), tags: tags, key: t.key, marker: marker}});
+    data.push({...o, ...{display_name: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), items: items, marker: marker, objectives:objectives, key: t.key}});
   }
 
   limit = limit || 100;
   threshold = threshold || 0.75;
 
   let options = {
-    keys: ['title', 'description', 'display_name', 'form_id', 'ref_id', 'editor_id', 'custom_type', 'location', 'tags', 'key'],
+    keys: [
+      { name: 'title', weight: 0.8 },         // Higher weight for titles
+      { name: 'description', weight: 0.4 },
+      { name: 'display_name', weight: 0.3 },
+      { name: 'form_id', weight: 0.2 },
+      { name: 'ref_id', weight: 0.2 },
+      { name: 'editor_id', weight: 0.2 },
+      { name: 'custom_type', weight: 0.2 },
+      { name: 'location', weight: 0.2 },
+      { name: 'key', weight: 0.2 },
+      { name: 'items', weight: 0.1 },           // Lower weight for items
+      { name: 'objectives', weight: 0.05 },
+    ],
     threshold: threshold,
     ignoreLocation: true,
     includeScore: true,
