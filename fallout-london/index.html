@@ -828,9 +828,7 @@ function fuzzySearch(s, limit, threshold) {
       }
     }
 
-    let t = getType(o);
-
-    data.push({...o, ...{display_name: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), items: items, marker: marker, objectives:objectives, key: t.key}});
+    data.push({...o, ...{display_name: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), items: items, marker: marker, objectives:objectives}});
   }
 
   limit = limit || 100;
@@ -846,7 +844,6 @@ function fuzzySearch(s, limit, threshold) {
       { name: 'editor_id', weight: 0.2 },
       { name: 'custom_type', weight: 0.2 },
       { name: 'location', weight: 0.2 },
-      { name: 'key', weight: 0.2 },
       { name: 'items', weight: 0.1 },           // Lower weight for items
       { name: 'objectives', weight: 0.05 },
     ],
