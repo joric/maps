@@ -83,9 +83,7 @@
     "items": {
 
       "Churchill": {"match": "NPC_DogCompanion", "fa": "dog", "bg": "orchid", "type": "Companion", "group": "NPCs",
-        "replace": {
-          "^Dog$": "Churchill",
-          "FOLON_DogmeatQuest":"Protect the Dog"}
+        "replace": {"^Dog$": "Churchill"}
         },
 
       "Companion": {"match": "NPC_Companion|Pendragon", "bg": "orchid", "type": "Companion", "group": "NPCs",
