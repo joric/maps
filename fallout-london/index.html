@@ -197,6 +197,8 @@ let mapParam = {};
 let firstRun = false;
 let layerName = 'markers';
 
+let wikiPrefix = 'https://fallout.wiki/wiki/Mod:Fallout_London/';
+
 let maps = {
   'LondonWorld' : { name: 'London', scale: 1, offset: {x:0, y:0},
     regions: {
@@ -915,7 +917,7 @@ function popupOnClick(e) {
       i0.classList.add('fa');
       i0.classList.add('fa-' + ['scroll','gun','star','shirt','key',''][i]);
 
-      c0.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(name, o));
+      c0.href = wikiPrefix + encodeURIComponent(itemText(name, o));
       //c0.onclick = function() { copyToClipboard(section=='quests' ? editor_id : form_id); return false; };
       c0.onclick = function() { copyToClipboard(form_id); return false; }; // click on icon copies quest id
       c0.appendChild(i0);
@@ -931,12 +933,32 @@ function popupOnClick(e) {
       }
 
       a.textContent = itemText(title, o);
-      a.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(name, o));
+      a.href = wikiPrefix + encodeURIComponent(itemText(name, o));
       a.onclick = function() { copyToClipboard(section=='quests' ? editor_id : form_id); return false; };
 
       li.appendChild(c0);
       li.appendChild(a);
       div.appendChild(li);
+
+      function appendIcon(parent, fa, href, onclick) {
+          let c0 = document.createElement('a');
+          c0.className = 'icon';
+          c0.innerHTML = '&nbsp;';
+          let i0 = document.createElement('span');
+          i0.classList.add('fa');
+          for (s of fa.split(' ')) i0.classList.add(s);
+          c0.href = wikiPrefix + encodeURIComponent(itemText(name, o));
+          c0.target = '_blank';
+          onclick && c0.onclick;
+          c0.appendChild(i0);
+          parent.appendChild(c0);
+      }
+
+      let addWikiIcons = false;
+
+      if (section != 'quests' || Object.keys(objectives).length==0) {
+        addWikiIcons && appendIcon(li, 'fa-brands fa-wikipedia-w', wikiPrefix+encodeURIComponent(itemText(name,o)));
+      }
 
       if (section=='quests') {
         if (Object.keys(objectives).length>0) {
@@ -957,6 +979,8 @@ function popupOnClick(e) {
           a.onclick = function(e) { e.preventDefault(); return c.click(); };
 
           li.appendChild(c);
+
+          addWikiIcons && appendIcon(li, 'fa-brands fa-wikipedia-w', wikiPrefix+encodeURIComponent(itemText(name,o)));
 
           let d = document.createElement('div');
           d.className = 'popup-subnote-info';
@@ -1006,7 +1030,7 @@ function popupOnClick(e) {
   popup.querySelector('#popup-map-link').href = getMapURL(wikify(o));
   popup.querySelector('#popup-map-link').onclick = copyLink;
 
-  popup.querySelector('#popup-wiki-link').href = 'https://fallout.wiki/wiki/Mod:Fallout_London/'+encodeURIComponent(itemName(o));
+  popup.querySelector('#popup-wiki-link').href = wikiPrefix+encodeURIComponent(itemName(o));
   popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
 
   setClass(popup.querySelector('#popup-data'), settings.debugMode!=true, 'collapsed');
