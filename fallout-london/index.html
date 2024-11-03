@@ -916,14 +916,15 @@ function popupOnClick(e) {
       i0.classList.add('fa-' + ['scroll','gun','star','shirt','key',''][i]);
 
       c0.href = 'https://fallout.wiki/wiki/Mod:Fallout_London/' + encodeURIComponent(itemText(name, o));
-      c0.onclick = function() { copyToClipboard(section=='quests' ? editor_id : form_id); return false; };
+      //c0.onclick = function() { copyToClipboard(section=='quests' ? editor_id : form_id); return false; };
+      c0.onclick = function() { copyToClipboard(form_id); return false; }; // click on icon copies quest id
       c0.appendChild(i0);
 
 
       let a = document.createElement('a');
-      c0.title = section == 'quests' ? `Copy Quest ID to Clipboard (${editor_id})` : `Copy Form ID to Clipboard (${form_id})`;
+      c0.title = section == 'quests' ? `Copy Quest ID to Clipboard (${form_id})` : `Copy Form ID to Clipboard (${form_id})`;
 
-      a.title = section == 'quests' ? `${form_id} ${editor_id} (Click Icon to Copy)` : `Form ID ${form_id}`;
+      a.title = section == 'quests' ? `${form_id} ${editor_id} (Click Icon to Copy ID)` : `Form ID ${form_id}`;
 
       if (Object.keys(objectives).length>0) {
         a.title += '\n---\n' + Object.entries(objectives).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
@@ -978,7 +979,7 @@ function popupOnClick(e) {
   }
 
   popup.querySelector('#popup-title').textContent = itemName(o);
-  popup.querySelector('#popup-title').title = o.form_id;
+  popup.querySelector('#popup-title').title = o.form_id + (o.editor_id ? ' '+o.editor_id : '');
   popup.querySelector('#popup-subtitle').textContent = itemTypeExtended(o);
   popup.querySelector('#popup-note').textContent = itemLocation(o);
 
