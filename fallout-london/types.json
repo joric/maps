@@ -119,7 +119,7 @@
     }
    },
 
-  "CONT": {"fa": "box-archive", "bg": "darkcyan", "type": "Container", "group": "misc",
+  "CONT": {"fa": "box-archive", "bg": "darkolivegreen", "type": "Container", "group": "misc",
     "items": {
       "Workshop":{"match": "Folon_SettlementWorkbench", "fa": "screwdriver-wrench", "bg": "red", "type": "Workbench", "subtype": "Workshop" }
     }
@@ -189,10 +189,10 @@
   "ACTI": {"fa": "virus", "bg": "red", "type": "Workshop", "group": "misc", "group_weight": 900,
     "items": {
       "Tardis": {"match": "FOLON_ACTI_LQLondon100", "fa": "phone", "bg": "cornflowerblue", "type": "Call Box"},
-      "Beacon": {"match": "Folon_ACTI_BarryBoatBeacon", "fa": "tower-observation", "bg": "darkcyan", "type": "Water Signal Beacon"},
+      "Beacon": {"match": "Folon_ACTI_BarryBoatBeacon", "fa": "tower-observation", "bg": "seagreen", "type": "Water Signal Beacon"},
       "Book Terminal": {"match":"DN011OverdueBookVendMachine", "fa":"book", "bg": "darkcyan", "type":"Book Terminal"},
       "CutethulhuActivator": {"match": "Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus", "bg": "darkslategrey", "type": "CuteThulhu Activator"},
-      "Taxi": {"match":"Folon_ACTI_TaxiActivatorFT", "fa":"taxi", "bg": "darkcyan", "type":"Taxi"},
+      "Taxi": {"match":"Folon_ACTI_TaxiActivatorFT", "fa":"taxi", "bg": "darkorange", "type":"Taxi"},
       "Tickets": {"match":"loot_capsStash_tin", "fa":"ticket", "bg": "peru", "type":"Tickets", "group": "items"}
     }
   },
