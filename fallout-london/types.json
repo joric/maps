@@ -111,15 +111,10 @@
 
   "FURN": {"group_fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "misc",
     "items": {
-      "Armor Station": {"match": "Folon_WorkbenchArmor", "fa": "shield-halved"},
-      "Weapons Workbench": {"match": "Folon_WorkbenchWeapons", "fa": "gun"},
-      "Tea Station": {"match": "Folon_WorkbenchTeaStation", "fa": "mug-hot"},
-      "Chemistry Station": {"match": "Folon_WorkbenchChemistry", "fa": "flask"},
-
-      "Cooking Station": {"match": "WorkbenchCooking", "fa": "utensils"},
-      "Chemistry Station 2": {"match": "WorkbenchChemistry", "fa": "flask"},
-      "Armor Station 2": {"match": "WorkbenchArmor", "fa": "shield-halved"},
-      "Weapons Workbench 2": {"match": "workbenchWeapons", "fa": "gun", "type":"Workbench"}
+      "Armor Station": {"match": "WorkbenchArmor", "fa": "shield-halved"},
+      "Weapons Workbench": {"match": "orkbenchWeapons", "fa": "gun"},
+      "Tea Station": {"match": "WorkbenchTeaStation", "fa": "mug-hot"},
+      "Chemistry Station": {"match": "WorkbenchChemistry", "fa": "flask"}
     }
    },
 
