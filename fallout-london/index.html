@@ -919,7 +919,7 @@ function popupOnClick(e) {
 
       c0.href = wikiPrefix + encodeURIComponent(itemText(name, o));
       //c0.onclick = function() { copyToClipboard(section=='quests' ? editor_id : form_id); return false; };
-      c0.onclick = function() { copyToClipboard(form_id); return false; }; // click on icon copies quest id
+      c0.onclick = function() { if (!e.ctrlKey) { copyToClipboard(form_id); return false; } }; // click on icon copies quest id
       c0.appendChild(i0);
 
 
@@ -934,7 +934,7 @@ function popupOnClick(e) {
 
       a.textContent = itemText(title, o);
       a.href = wikiPrefix + encodeURIComponent(itemText(name, o));
-      a.onclick = function() { copyToClipboard(section=='quests' ? editor_id : form_id); return false; };
+      a.onclick = function(e) { if (!e.ctrlKey) {copyToClipboard(section=='quests' ? editor_id : form_id); return false;} };
 
       li.appendChild(c0);
       li.appendChild(a);
@@ -976,7 +976,7 @@ function popupOnClick(e) {
           };
 
           // override title click
-          a.onclick = function(e) { e.preventDefault(); return c.click(); };
+          a.onclick = function(e) { if (!e.ctrlKey) { e.preventDefault(); return c.click(); } };
 
           li.appendChild(c);
 
