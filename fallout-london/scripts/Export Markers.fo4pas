@@ -115,12 +115,13 @@ begin
             and (pos('loot_capsStash_tin', s) = 0) // ticket stash
             then continue;
           end else if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
+            //if (GetFile(r) <> mod_f) then continue; // exclude all non-london references
             if (pos('Folon_Workbench', s) = 0)
-            and (pos('workbenchWeapons', s) = 0)
+            and (pos('workbenchWeapons', s) = 0) // fallout 4 models (e.g. Do-It-Yourself building)
             and (pos('WorkbenchArmor', s) = 0)
             and (pos('WorkbenchChemistry', s) = 0)
-            and (pos('WorkbenchCooking', s) = 0)
-            and (pos('WorkbenchPowerArmor', s) = 0)
+            // and (pos('WorkbenchCooking', s) = 0) // too much cooking (fire/pit/etc.)
+            // and (pos('WorkbenchPowerArmor', s) = 0) // no mentions
             then continue;
           end else if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin

@@ -111,14 +111,15 @@
 
   "FURN": {"group_fa": "wrench", "bg": "darkcyan", "type": "Workbench", "group": "misc",
     "items": {
-      "Weapons Workbench1": {"match": "Folon_WorkbenchWeapons", "fa": "gun"},
-      "Weapons Workbench2": {"match": "workbenchWeapons", "fa": "gun", "type":"Workbench"},
+      "Armor Station": {"match": "Folon_WorkbenchArmor", "fa": "shield-halved"},
+      "Weapons Workbench": {"match": "Folon_WorkbenchWeapons", "fa": "gun"},
       "Tea Station": {"match": "Folon_WorkbenchTeaStation", "fa": "mug-hot"},
-      "Cookin Station1": {"match": "WorkbenchCooking", "fa": "mug-hot"},
-      "Chemistry Station1": {"match": "Folon_WorkbenchChemistry", "fa": "flask"},
-      "Chemistry Station2": {"match": "WorkbenchChemistry", "fa": "flask"},
-      "Armor Station1": {"match": "Folon_WorkbenchArmor", "fa": "shield-halved"},
-      "Armor Station2": {"match": "WorkbenchArmor", "fa": "shield-halved"}
+      "Chemistry Station": {"match": "Folon_WorkbenchChemistry", "fa": "flask"},
+
+      "Cooking Station": {"match": "WorkbenchCooking", "fa": "utensils"},
+      "Chemistry Station 2": {"match": "WorkbenchChemistry", "fa": "flask"},
+      "Armor Station 2": {"match": "WorkbenchArmor", "fa": "shield-halved"},
+      "Weapons Workbench 2": {"match": "workbenchWeapons", "fa": "gun", "type":"Workbench"}
     }
    },
 
