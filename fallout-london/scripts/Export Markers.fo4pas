@@ -117,6 +117,10 @@ begin
           end else if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
             if (pos('Folon_Workbench', s) = 0)
             and (pos('workbenchWeapons', s) = 0)
+            and (pos('WorkbenchArmor', s) = 0)
+            and (pos('WorkbenchChemistry', s) = 0)
+            and (pos('WorkbenchCooking', s) = 0)
+            and (pos('WorkbenchPowerArmor', s) = 0)
             then continue;
           end else if (Signature(r) = 'CONT') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'NOTE') and (Signature(e) = 'REFR') then begin

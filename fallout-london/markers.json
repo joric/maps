@@ -162169,6 +162169,5563 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					2004.807129,
+					-2423.987061,
+					4979.818848
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0702D0C3",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					84798.976562,
+					43242.546875,
+					4879.574219
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "070CA196",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14488.145508,
+					38877.957031,
+					5056.450195
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0719A6F9",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-47385.925781,
+					-8925.55957,
+					5336.900879
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071BCDC8",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-51609.9375,
+					-75653.359375,
+					4883.791016
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071DD20F",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					93566.929688,
+					-69498.96875,
+					6093.64209
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071E5EE5",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5732.643555,
+					2782.655518,
+					1672
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07204D17",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"cell": "071647E7",
+				"cell_name": "The Gauntlet"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5701.861816,
+					17369.169922,
+					268
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0723FB63",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "IslingtonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					663.922913,
+					-128.989197,
+					-0.438416
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07245114",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"cell": "072312CA",
+				"cell_name": "The Brass Nail"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5826,
+					7050,
+					-2798
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0728034D",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"cell": "071FDF4D",
+				"cell_name": "Westminster Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-11489.871094,
+					7169.115234,
+					180.554077
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072932D2",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"cell": "070C74E7",
+				"cell_name": "Thameshaven"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8826.268555,
+					60369.015625,
+					4837.633789
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072B79EB",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3090.398682,
+					-2204.588867,
+					1291.072998
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072C9555",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"cell": "0701D60F",
+				"cell_name": "Canary Wharf Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-60213.582031,
+					83803.203125,
+					5136.708008
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072DBF83",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9774.878906,
+					31828.556641,
+					408.948517
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072E7925",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7625.401855,
+					27175.875,
+					211.568878
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072EDFEA",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "HackneyWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74917.546875,
+					38094.277344,
+					5088.25
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072F04C0",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					71.603516,
+					287.757812,
+					2.117676
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072FEC37",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"cell": "072FEA13",
+				"cell_name": ""
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-120.565643,
+					-217.046509,
+					437.032227
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072FF46D",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"cell": "072FEA34",
+				"cell_name": ""
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					60421.75,
+					-56581.449219,
+					5460.914551
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07300E0C",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26638.873047,
+					16022.09668,
+					5126.538574
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07301B1A",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-80222.085938,
+					-87953.835938,
+					5471.163086
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0730AFE7",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-88773.40625,
+					-81803.289062,
+					5680
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0730B05F",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					46471.214844,
+					-27024.851562,
+					5076.95752
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0731964D",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79309.382812,
+					-65854.46875,
+					6337.356445
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0731E7F8",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-18498.607422,
+					55232.542969,
+					5067.456055
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0731EC08",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7613.445801,
+					3175.836182,
+					0.894586
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0731F255",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "DumpWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1598.501709,
+					-9985.420898,
+					-391.75
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07322B81",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					28777.761719,
+					9595.178711,
+					5123.754883
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "073241A8",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-80140.804688,
+					60850.828125,
+					6125.695801
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07326C9F",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					62513.796875,
+					-71854.226562,
+					5928.498047
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "073288E9",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					83980.1875,
+					-84760.867188,
+					5920
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0732D7C0",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					29026.275391,
+					10325.621094,
+					6307.754883
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07331C7E",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					29906.050781,
+					13804.060547,
+					5325.24707
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0733351D",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-22164.681641,
+					-482.573944,
+					5153.621582
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0733369C",
+				"form_id": "000C79B4",
+				"editor_id": "WorkbenchCookingGroundPot",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-69688.820312,
+					-13999.356445,
+					5255.688965
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0702CB3A",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					71101.367188,
+					-72762.046875,
+					5959.958008
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0705B604",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-52585.351562,
+					37696.328125,
+					5156.216309
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "070D6C3C",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-32956.039062,
+					-70677.992188,
+					5324.361816
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "070F47E3",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					38037.730469,
+					41503.167969,
+					5111.816406
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "070FAB99",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-18165.126953,
+					33332.230469,
+					1128.35144
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0710DC48",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6490.84668,
+					-1610.623291,
+					-45.994865
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07119725",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "07118E33",
+				"cell_name": "Guildhall"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6652.608887,
+					17617.988281,
+					4.807897
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07127194",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "IslingtonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					376,
+					-112,
+					0
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0713228F",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "071321D3",
+				"cell_name": "Churchill Library Right Wing"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-13909.222656,
+					51254.589844,
+					6021.628418
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07159666",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1828.55542,
+					1855.441772,
+					696.333984
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0717EF26",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "070971CE",
+				"cell_name": "British Lion HQ"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-88170.1875,
+					-39522.320312,
+					5064.097168
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07185CA6",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-75766.476562,
+					-75816.390625,
+					5053.680176
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07188AA2",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3444.803467,
+					5237.242188,
+					0.369605
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07189A34",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "071805BD",
+				"cell_name": "Fesco Extra"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					424.223724,
+					1392.324219,
+					0
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071A68A6",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "071909A8",
+				"cell_name": "Lewisham Police Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4278.48584,
+					-7121.023926,
+					-354.306213
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071B293A",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "07094BB2",
+				"cell_name": "Magma Tunnels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-11232.617188,
+					47560.269531,
+					816.216919
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071B7B57",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					52502.851562,
+					30417.759766,
+					5104.44043
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071C2261",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					72.575211,
+					-711.366821,
+					-526.723022
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071DF78B",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "071CC27F",
+				"cell_name": "Tower Hill Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1725.109985,
+					2430.577881,
+					-55.844585
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071F05F5",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "071A2FB2",
+				"cell_name": "National Gallery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2753.002197,
+					1795.698364,
+					-6.836996
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07208CD6",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "07063F07",
+				"cell_name": "Stagnant Building"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4508.928711,
+					-5886.526855,
+					-20.884682
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0720F020",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "0720E9B1",
+				"cell_name": "Knightsbridge Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85.231392,
+					3442.947998,
+					-553.617188
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0722D19E",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "0721D76E",
+				"cell_name": "HMS Belfast"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2616.434326,
+					25898.054687,
+					120.13031
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072420DB",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "HackneyWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10511.512695,
+					3433.371582,
+					489.161865
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072569AA",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "0725614A",
+				"cell_name": "Monument Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-19546.007812,
+					50593.203125,
+					5122.072754
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0726DD2E",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5408,
+					-2600,
+					-3704
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0727C51E",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					51728.1875,
+					-57514.230469,
+					5060.87793
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0729CAC6",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					69780.273438,
+					-11446.300781,
+					5164.023438
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072A2F1E",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-69551.992188,
+					84787.523438,
+					4974.299805
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072A65F3",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-32008.716797,
+					18601.917969,
+					4998.050293
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072A9A09",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-52605.292969,
+					24208.244141,
+					4991.132324
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072B5269",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81058.421875,
+					69835.4375,
+					5333.799316
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072C7B38",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					46434.671875,
+					34343.609375,
+					5134.136719
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072D3AFE",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-20088.414062,
+					-35095.121094,
+					5084.798828
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072DD142",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1857.854248,
+					47264.054688,
+					775.871643
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072E790B",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					404.101013,
+					-224.684875,
+					737.762756
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072EBE5D",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "07165E4E",
+				"cell_name": "Greenwich Foot Tunnel"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7621.493652,
+					20412.634766,
+					242.191376
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072EDFF8",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "HackneyWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					40120.628906,
+					-27604.625,
+					6582.719238
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07302A8E",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-33734.410156,
+					56418.691406,
+					5290.356934
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "073075DB",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					89593.3125,
+					-75641.890625,
+					5900.981445
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0730C41F",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					153.640747,
+					1386.710815,
+					-183.36824
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0731AD5A",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"cell": "071A2FB2",
+				"cell_name": "National Gallery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-68888.851562,
+					80315.820312,
+					5072
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0731E8D9",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5317.9375,
+					19861.070312,
+					4977.853516
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07322BBB",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79371.257812,
+					-80302.515625,
+					6001.428711
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0732D7C4",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-16535.171875,
+					41849.234375,
+					5171.089844
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07331DF4",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					83666.171875,
+					-84812.984375,
+					5681.753906
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07332A15",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-30149.996094,
+					-16050.022461,
+					5082.614258
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07332D1C",
+				"form_id": "0010C3B6",
+				"editor_id": "WorkbenchCookingFire",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1570.509644,
+					4363.743164,
+					201.730057
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "070DFA2F",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "070465A7",
+				"cell_name": "St George"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-250.929687,
+					-261.773437,
+					0
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07114FE8",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07113BBD",
+				"cell_name": ""
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11233.296875,
+					-2172.703613,
+					2385.136475
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0713C91E",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07097DDB",
+				"cell_name": "Yes! Toy Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12179.216797,
+					-2992.128662,
+					2385.136475
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0713C923",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07097DDB",
+				"cell_name": "Yes! Toy Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-17500.734375,
+					27993.181641,
+					1166.444702
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07147292",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8016.828125,
+					2468.359619,
+					2039.633667
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071481BC",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "BromleyPindarWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3144.14624,
+					-2259.219727,
+					2142.825684
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0714B770",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0700FB5F",
+				"cell_name": "Polaris Apartments"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1744,
+					-647.047485,
+					384
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07157EF3",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0715651B",
+				"cell_name": "Syndicate Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2568.705322,
+					-870.849243,
+					2848.466553
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071684AA",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071679E3",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1090.207031,
+					3036.726562,
+					-511.972656
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07199CF0",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07199024",
+				"cell_name": ""
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					336,
+					-288,
+					-256
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071B3A07",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071B3834",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7634.900879,
+					1358.225342,
+					35.058746
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071B6A92",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07136638",
+				"cell_name": "Imperial War Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-19018.486328,
+					26607.878906,
+					5323.398926
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071BCA96",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1351.628784,
+					986.999268,
+					667.307068
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071E0FF3",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07183D4E",
+				"cell_name": "Kosuna Bike Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-828,
+					840,
+					512
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071E28F7",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FB7",
+				"cell_name": "Islington Public Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25028.582031,
+					13130.757812,
+					5091.26709
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071E76F4",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-274.076324,
+					1656.149414,
+					-55.675758
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071F0483",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FB2",
+				"cell_name": "National Gallery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3432.806396,
+					-4640.778809,
+					561.603088
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071F4DC1",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FA8",
+				"cell_name": "Ruined Skyscraper"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2146.95166,
+					-2386.165771,
+					-716.88147
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071F4F9F",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FA8",
+				"cell_name": "Ruined Skyscraper"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3899.824707,
+					1343.500854,
+					599.588257
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071FB9A1",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071F121F",
+				"cell_name": "Tobacco Dock"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1519.775757,
+					2954.038818,
+					599.182434
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071FBA05",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071F121F",
+				"cell_name": "Tobacco Dock"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8996.927734,
+					-349.230408,
+					487.243195
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "071FC1FE",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07120571",
+				"cell_name": "Old Royal Naval College"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2528.545654,
+					-3307.307617,
+					1513.099487
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07209A53",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3598.990967,
+					2997.820801,
+					2064
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0721038A",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2F97",
+				"cell_name": "U-96"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3598.990967,
+					2997.820801,
+					2064
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0721038B",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2F97",
+				"cell_name": "U-96"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1419.029175,
+					1811.943359,
+					-44.148609
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07212521",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0716EB10",
+				"cell_name": "Delinquent Hideout"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2442.448486,
+					4539.838867,
+					191.346909
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07219CCD",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0712C09C",
+				"cell_name": "Strand Tunnels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3004.706543,
+					7414.323242,
+					-1639.936646
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0721B918",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "070B2770",
+				"cell_name": "Euston Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-88416.734375,
+					82146.164062,
+					5251.830566
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0722AAA6",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					224.302475,
+					2821.354736,
+					-100.969925
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0722C1D9",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071D795A",
+				"cell_name": "Charing Cross Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5066.85791,
+					-635.579651,
+					360
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0722E12E",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "070B7378",
+				"cell_name": "Vauxhall Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5728.182129,
+					4821.075684,
+					1712.285767
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0722F056",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071F1220",
+				"cell_name": "Royal London Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10479,
+					915,
+					4463
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "072389A2",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FAC",
+				"cell_name": "Senate House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1600.987793,
+					-3308.165771,
+					-3035.680908
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0723E245",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07083F82",
+				"cell_name": "LT Tower"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2659.836426,
+					3951.663574,
+					751.831543
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0723F8B8",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07210AC7",
+				"cell_name": "HMS Dredge"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2672.080322,
+					-663.077942,
+					2874.975098
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07241A42",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07240CD3",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1476.15271,
+					2358.620605,
+					224.930511
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07243E3D",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07240CD4",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2907.233643,
+					-6959.99707,
+					2487.553223
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07244868",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2F85",
+				"cell_name": "Textile Manufactorium"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74006.015625,
+					-36241.800781,
+					5091.583496
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07253A16",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2852.104248,
+					2550.261963,
+					-160
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "072606A2",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0710AAF1",
+				"cell_name": "Camelot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3763,
+					-2516,
+					0
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07267082",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0720801C",
+				"cell_name": "Battersea Power Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-253.193146,
+					-4771.799805,
+					2651.607422
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07275D04",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0700FB60",
+				"cell_name": "Air Raid Shelter"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5816,
+					-1428,
+					-3704
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0727C51D",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5316.671875,
+					7072.999023,
+					-2801.151611
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0727EB64",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071FDF4D",
+				"cell_name": "Westminster Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-28931.958984,
+					12868.140625,
+					5066.38916
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "072A45CB",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8913.474609,
+					60460.242187,
+					4836.314453
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "072B79EA",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-719.894165,
+					285.470276,
+					368.030579
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "072C24A2",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "072BA192",
+				"cell_name": "Cutty Sark"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-88738.554688,
+					-85250.117188,
+					5372.224609
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "072D73C7",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-88334.039062,
+					-85436.078125,
+					5367.567383
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "072D73D7",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1153.023438,
+					-1576.000488,
+					0
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "072DBE02",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0719A05F",
+				"cell_name": "Quick Test Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-19341.240234,
+					-34844.070312,
+					5077.262695
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "072DD15C",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					89374.523438,
+					-76041.398438,
+					5900.981445
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "0730C414",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-89103.796875,
+					40261.703125,
+					5064
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07311E42",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3596.668945,
+					51277.359375,
+					5882.210938
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07315872",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1800.033447,
+					229.334396,
+					-3.1E-5
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07327023",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071B5706",
+				"cell_name": "Shadwell Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					93398.140625,
+					-71226.171875,
+					5693.746582
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07332942",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5492.640137,
+					596.666931,
+					4890.806152
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07332C0A",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-22679.179688,
+					-17894.882812,
+					5087.117188
+				]
+			},
+			"properties": {
+				"title": "Armor Workbench",
+				"description": "FURN",
+				"ref_id": "07332D0C",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1824.575928,
+					3306.614258,
+					-59.639839
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0700DE84",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0700B131",
+				"cell_name": "Ace High Hotel"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1686.570557,
+					2004.077637,
+					-110.883583
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0703CFF6",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0703CDDB",
+				"cell_name": "Victory Gift Shop"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-63425.109375,
+					-39799.257812,
+					5200.273926
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0706264B",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-51686.390625,
+					55086.714844,
+					5600.163574
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "070B58B3",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6424.131836,
+					7106.210449,
+					1330.738281
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "070D0486",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "070CFE47",
+				"cell_name": "Tower Hamlets Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4616.661133,
+					12036.420898,
+					2169.009766
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "070DF03A",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "070CB1B5",
+				"cell_name": "St Peter's Church"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4271.808594,
+					-23468.365234,
+					629.883972
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07113981",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0710C868",
+				"cell_name": "Emelio's Caffe House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-7491.854492,
+					-19187.105469,
+					2747.448975
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07113B7F",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0711397B",
+				"cell_name": "Lock Penthouse"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					808,
+					896,
+					792
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0711FAE7",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0711EF3B",
+				"cell_name": "Science Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1353.451538,
+					2128.000488,
+					256
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0713AA47",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "070CB1B7",
+				"cell_name": "Ministry of Defence Bunker"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-13116.100586,
+					3839.825684,
+					344.635193
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0713EF38",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0706F0F4",
+				"cell_name": "London Smelters & Co."
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-15073.040039,
+					4354.755859,
+					104.503021
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0713F0CD",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0706F0F4",
+				"cell_name": "London Smelters & Co."
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					537.968994,
+					-480.872314,
+					152.000015
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071459DC",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "07040451",
+				"cell_name": "Rotting Schoolhouse"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					275.330017,
+					-480.872314,
+					152.000015
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071459E1",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "07040451",
+				"cell_name": "Rotting Schoolhouse"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-976.469177,
+					2997.949219,
+					-8
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071475A2",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0713070F",
+				"cell_name": "Mysterious Lab"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2955.541504,
+					231.871185,
+					1886.557373
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07147EC4",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"area": "BromleyPindarWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8346.974609,
+					3180.072266,
+					2105.745117
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07148287",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"area": "BromleyPindarWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2570.123779,
+					3455.053955,
+					256
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07149D83",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "070950A5",
+				"cell_name": "Wandsworth Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1062.73645,
+					3089.883789,
+					256
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07149DA8",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "070950A5",
+				"cell_name": "Wandsworth Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					13333.742187,
+					9730.646484,
+					1670.839111
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0715D31A",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0715BD23",
+				"cell_name": "Processing Plant"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1501.914062,
+					2508.258545,
+					84.181717
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07174CEC",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "07174AD8",
+				"cell_name": "Crass Surgery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2511.713623,
+					5894.912109,
+					5787.249023
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0717D46B",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0700FB5E",
+				"cell_name": "General Atomics Headquarters"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1140.749146,
+					1179.54895,
+					1920
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07189731",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "070B3840",
+				"cell_name": "NuSkin"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					42043.601562,
+					-64905.390625,
+					5145.268066
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07199925",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					240.145676,
+					-294.118195,
+					255.90593
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071B2EE9",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0717C068",
+				"cell_name": "Chain Home Radar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4457.356445,
+					4850.094727,
+					373.832031
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071B9321",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2FAB",
+				"cell_name": "Ministry of Information"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4437.973633,
+					4538.001465,
+					373.832031
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071B9323",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2FAB",
+				"cell_name": "Ministry of Information"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4106.428711,
+					4563.811035,
+					400.76062
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071B932D",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2FAB",
+				"cell_name": "Ministry of Information"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					103.503075,
+					1150.619751,
+					1536.048706
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071BB025",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0711EF3B",
+				"cell_name": "Science Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					267.503082,
+					1198.619751,
+					1536.148682
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071BB026",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0711EF3B",
+				"cell_name": "Science Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					579.370728,
+					1118.205811,
+					1536.148682
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071BB027",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0711EF3B",
+				"cell_name": "Science Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					817.461182,
+					1842.035034,
+					1698.734131
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071D7F09",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2FA2",
+				"cell_name": "Cow's Lick Milk Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					655.160889,
+					1965.361694,
+					1698.734131
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071E7560",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2FA2",
+				"cell_name": "Cow's Lick Milk Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4312.547363,
+					2405.511719,
+					-9.141871
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071F15CF",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "07156523",
+				"cell_name": "Bromley College"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3945.665283,
+					-2755.28418,
+					1745.374023
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071F4FD4",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2FA8",
+				"cell_name": "Ruined Skyscraper"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1447.295776,
+					-1250.078491,
+					16471.082031
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071FA9B1",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071F1221",
+				"cell_name": "Cable Street School"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8942.446289,
+					-154.628723,
+					490.063538
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071FC1FF",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "07120571",
+				"cell_name": "Old Royal Naval College"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1766.518799,
+					3928.156494,
+					-96.085175
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07204E54",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "072030DF",
+				"cell_name": "Courtside Bazaar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3577.238525,
+					308.182953,
+					2063.55249
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07210389",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2F97",
+				"cell_name": "U-96"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1290.05249,
+					-1917.941162,
+					526.189819
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0721776A",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071E3427",
+				"cell_name": "Arlington School"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1110.663086,
+					-1914.487305,
+					526.189819
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072178C4",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071E3427",
+				"cell_name": "Arlington School"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					908.804871,
+					-1914.487305,
+					526.189819
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072178C5",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071E3427",
+				"cell_name": "Arlington School"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					876.365601,
+					-1571.678833,
+					526.189819
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072178C6",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071E3427",
+				"cell_name": "Arlington School"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1110.663086,
+					-1616.815918,
+					526.189819
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072178C7",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071E3427",
+				"cell_name": "Arlington School"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1704.215332,
+					3504.993652,
+					-223.990723
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07218A5E",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071E8B99",
+				"cell_name": "St Bart's Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1426.132446,
+					4549.749023,
+					-224
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07218D83",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071E8B99",
+				"cell_name": "St Bart's Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4314.581055,
+					-394.834747,
+					360
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0722E12F",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "070B7378",
+				"cell_name": "Vauxhall Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8130.912109,
+					1913.386108,
+					1060.827637
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072355C8",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2FAC",
+				"cell_name": "Senate House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8130.912109,
+					1627.997803,
+					1060.827637
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072355CD",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2FAC",
+				"cell_name": "Senate House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					162.487198,
+					19.933641,
+					899.133545
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0723C33E",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2F84",
+				"cell_name": "Children's Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6030.63623,
+					4491.952637,
+					5218.224609
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07256276",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "07212745",
+				"cell_name": "Royal Armaments Depo"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1220.004883,
+					4083.162842,
+					-544
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072605B8",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0710AAF1",
+				"cell_name": "Camelot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1488.298828,
+					4266.622559,
+					-544
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0726085F",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0710AAF1",
+				"cell_name": "Camelot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					96.215561,
+					1906.033081,
+					-640
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07262ABB",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "072617D9",
+				"cell_name": "Guys Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3849.770996,
+					3985.290039,
+					1614.994263
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0726DFEF",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0720C15A",
+				"cell_name": "St Thomas' Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5215.70459,
+					3535.37915,
+					2416.495605
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0726EA59",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0720C15A",
+				"cell_name": "St Thomas' Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8092,
+					-1548,
+					-3960
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0727B74C",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5280,
+					-1368,
+					-3576
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0727D382",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2441.071777,
+					2085.249268,
+					-511.362701
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0727DC02",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0727D38E",
+				"cell_name": "Scotland Yard"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-7.192793,
+					-528.69989,
+					-706.02948
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072813FA",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "071A2F99",
+				"cell_name": "Waterloo Waterworks"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12175.110352,
+					-12221.238281,
+					2023.968018
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07294AD0",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "07254631",
+				"cell_name": "Westminster Underground"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3107.608154,
+					1879.3479,
+					-61.314331
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07294D2F",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "0700B131",
+				"cell_name": "Ace High Hotel"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					643.360962,
+					3368.876221,
+					530.701904
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072BEBF7",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"cell": "072BEA93",
+				"cell_name": "Hidden Bunker"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-86684.320312,
+					77860.546875,
+					5083.40332
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07324404",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5052.945312,
+					15585.291016,
+					-228.355164
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07332515",
+				"form_id": "0012F2F5",
+				"editor_id": "WorkbenchChemistryA",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6894.800781,
+					5521.027344,
+					5238.018555
+				]
+			},
+			"properties": {
+				"title": "Power Armor Station",
+				"description": "FURN",
+				"ref_id": "07312540",
+				"form_id": "0013BD08",
+				"editor_id": "WorkbenchPowerArmorSmall",
+				"cell": "07212745",
+				"cell_name": "Royal Armaments Depo"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2656,
+					2544,
+					352
+				]
+			},
+			"properties": {
+				"title": "Power Armor Station",
+				"description": "FURN",
+				"ref_id": "0732A07A",
+				"form_id": "0013BD08",
+				"editor_id": "WorkbenchPowerArmorSmall",
+				"cell": "0710AAF1",
+				"cell_name": "Camelot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-230.124298,
+					482.211609,
+					643.765442
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0703BC8B",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "0703BB80",
+				"cell_name": "Chem Den"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6625.307129,
+					7316.126465,
+					1331.183716
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "070D0481",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "070CFE47",
+				"cell_name": "Tower Hamlets Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-11682.585938,
+					-546.350891,
+					3968
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07108817",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "07039856",
+				"cell_name": "Shoreditch Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-18192.443359,
+					34048.417969,
+					1112.434326
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0710DC49",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4038.728516,
+					3854.640137,
+					3.950745
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0710F284",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "0706F9CE",
+				"cell_name": "Retrofitting Centre"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					236.898224,
+					-1417.217773,
+					-241.972137
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07114771",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "070CF5A7",
+				"cell_name": "Charlie Browns"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7150.782715,
+					-2176,
+					-48
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07119726",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "07118E33",
+				"cell_name": "Guildhall"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6806.455566,
+					1134.677612,
+					-503.460083
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0711B13A",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "070D7E5A",
+				"cell_name": "The Nags"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2161.192627,
+					1783.811646,
+					294.269012
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0711ED54",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "070FF1E3",
+				"cell_name": "Squatter's Den"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					80735.84375,
+					40566.128906,
+					5065.435059
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0713C596",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					73280.015625,
+					43344.21875,
+					5069.260742
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07141CD2",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-18392.0625,
+					28436.125,
+					1261.460205
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0714726C",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2974.636719,
+					-97.600861,
+					2048.3479
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071483DD",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "BromleyPindarWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2317.939941,
+					2207.592773,
+					-6.794678
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07159115",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "07063F07",
+				"cell_name": "Stagnant Building"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2737.597656,
+					1783.203369,
+					1024
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07198F12",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "07175077",
+				"cell_name": "Bankside Power Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					33306.226562,
+					-54180.171875,
+					5560.46582
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0719946C",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					42081.578125,
+					-65446.25,
+					5145.268066
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07199920",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-16226.649414,
+					37048.230469,
+					5656.638184
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071A8322",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2108.412842,
+					2214.79541,
+					260.317932
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071A84E3",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "07191A07",
+				"cell_name": "Lanthorn Tower"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5752.821289,
+					47982.308594,
+					714.478821
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071B7A17",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					431.35199,
+					1095.193115,
+					1536.148682
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071BB028",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "0711EF3B",
+				"cell_name": "Science Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-29519.007812,
+					-15286.325195,
+					5101.216797
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071C1EF2",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					15071.989258,
+					21797.130859,
+					5197.05127
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071C7CA2",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					379.394867,
+					-70.499969,
+					-6.747829
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071DF9A6",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "0703BB7C",
+				"cell_name": "Coin Street Flats"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-854.547974,
+					467.234253,
+					511.644104
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071E28EE",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "071A2FB7",
+				"cell_name": "Islington Public Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-60241.554687,
+					-63604.703125,
+					5890.878418
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071E6A73",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-263.320465,
+					-866.351807,
+					120.792374
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071E7993",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "071A2FB8",
+				"cell_name": "National Portrait Gallery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14370.166992,
+					7655.946289,
+					5127.671387
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071ECD10",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3898.561035,
+					-4689.516602,
+					561.560791
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071F4DC6",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "071A2FA8",
+				"cell_name": "Ruined Skyscraper"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12.371346,
+					590.469727,
+					-544
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071FA6F2",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					117.736679,
+					2963.523926,
+					856.000793
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "071FB998",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "071F121F",
+				"cell_name": "Tobacco Dock"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1562.02002,
+					3064.179199,
+					-35.145557
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072037CB",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "072030DF",
+				"cell_name": "Courtside Bazaar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					226.878922,
+					2171.152832,
+					299.258667
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0720E8D8",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "0720E593",
+				"cell_name": "Mycroft's House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3497.721436,
+					7588.302246,
+					-1639.936646
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072124EF",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "070B2770",
+				"cell_name": "Euston Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1544.313965,
+					78.438446,
+					1512.581421
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07221C24",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5200.922852,
+					4529.90625,
+					1198.904907
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072305E9",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "071F1220",
+				"cell_name": "Royal London Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5903.723633,
+					1201.058472,
+					-533.535828
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072377B3",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "071061FB",
+				"cell_name": "Cyberfox"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1732.489136,
+					2478.030273,
+					229.608398
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07243E3E",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "07240CD4",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					437.800415,
+					6811.349609,
+					-809.486694
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07253663",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "071A2F8C",
+				"cell_name": "Lambeth Palace"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-966.933838,
+					3504.888428,
+					-544
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072605B3",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "0710AAF1",
+				"cell_name": "Camelot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1858.908691,
+					1641.244507,
+					1536
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07266B20",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "071C0B02",
+				"cell_name": "Yes! Toy HQ Upper Floors"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3749,
+					-2313,
+					0
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07267083",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "0720801C",
+				"cell_name": "Battersea Power Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8008,
+					-1694.822754,
+					-3960
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0727B74D",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5324,
+					-2276,
+					-3704
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0727D383",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					77684.90625,
+					-87324.1875,
+					6295.233398
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07297FCB",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-455.956299,
+					438.11377,
+					368
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072C249E",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"cell": "072BA192",
+				"cell_name": "Cutty Sark"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-19881.736328,
+					19454.929688,
+					265.610352
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "072DC63E",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "IslingtonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-14869.741211,
+					-3291.744873,
+					-374.180786
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0731BA9C",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					79231.679688,
+					-65650.59375,
+					6341.853027
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "0731E7F7",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10953.049805,
+					15106.457031,
+					-240
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "073324FC",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-21271.783203,
+					-20031.458984,
+					5187.445312
+				]
+			},
+			"properties": {
+				"title": "Chemistry Station",
+				"description": "FURN",
+				"ref_id": "07332D0B",
+				"form_id": "001487C1",
+				"editor_id": "WorkbenchChemistryB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-31948.443359,
+					-69411.125,
+					5250.062988
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "070FD647",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14.59375,
+					-7062.515625,
+					-337.94989
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07115373",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"cell": "07113BB5",
+				"cell_name": ""
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-39775.800781,
+					-64849.5,
+					5544.797363
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07129C4F",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-79113.867188,
+					-53467.34375,
+					5726.149414
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0712F6DD",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-18715.382812,
+					28575.84375,
+					1238.83313
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0714726D",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-19279.744141,
+					26019.171875,
+					5323.398926
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071BC649",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-12372.974609,
+					-26963.753906,
+					5065.095215
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071E9CC1",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-29979.380859,
+					-31142.005859,
+					5056.317383
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0725415B",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-37454.34375,
+					36620.054688,
+					5072
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0725D174",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1461.014648,
+					3673.285889,
+					35.072514
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072CBF7D",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "DumpWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-83856.789062,
+					63046.480469,
+					5496.01709
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072D1DC7",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-21094.960938,
+					48152.542969,
+					7506.072754
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072D5686",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-88376.65625,
+					-84484.570312,
+					5364.585938
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072D73DB",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-80864.609375,
+					-44970.957031,
+					5166.731445
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072F0963",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					40693.34375,
+					-70592.703125,
+					5528
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07309926",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					81408.195312,
+					-67625.273437,
+					5623.981445
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0730C629",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-91463.15625,
+					-60806.078125,
+					5766.688965
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0731ED45",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-41711.167969,
+					63050.960937,
+					5103.971191
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0732446E",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5825.355469,
+					46071.003906,
+					960.744141
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07329BFC",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-19565.839844,
+					3139.337402,
+					5031.275391
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07332C2C",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5768.918457,
+					6103.166504,
+					-536
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07332F40",
+				"form_id": "0014FBCD",
+				"editor_id": "WorkbenchCookingSpit",
+				"cell": "07120571",
+				"cell_name": "Old Royal Naval College"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8134.904785,
+					2374.390137,
+					-3959.873047
+				]
+			},
+			"properties": {
+				"title": "Power Armor Station",
+				"description": "FURN",
+				"ref_id": "07279FBD",
+				"form_id": "00157FEB",
+				"editor_id": "WorkbenchPowerArmor",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14400,
+					-572,
+					-2880
+				]
+			},
+			"properties": {
+				"title": "Power Armor Station",
+				"description": "FURN",
+				"ref_id": "0727D07A",
+				"form_id": "00157FEB",
+				"editor_id": "WorkbenchPowerArmor",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14400,
+					-400,
+					-2880
+				]
+			},
+			"properties": {
+				"title": "Power Armor Station",
+				"description": "FURN",
+				"ref_id": "0727D07C",
+				"form_id": "00157FEB",
+				"editor_id": "WorkbenchPowerArmor",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14400,
+					-228,
+					-2880
+				]
+			},
+			"properties": {
+				"title": "Power Armor Station",
+				"description": "FURN",
+				"ref_id": "0727D07D",
+				"form_id": "00157FEB",
+				"editor_id": "WorkbenchPowerArmor",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-7159.716797,
 					46806.230469,
 					1182.450684
@@ -164403,6 +169960,2866 @@
 				"ref_id": "07332D1D",
 				"form_id": "0017E787",
 				"editor_id": "workbenchWeaponsB",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9505.162109,
+					28585.251953,
+					145.568512
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0700D58D",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "HackneyWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35582.992188,
+					4178.529785,
+					112
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0700D9AC",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "HackneyWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					68120.242187,
+					-71031.203125,
+					6021.043945
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0705B430",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7991.678711,
+					-3670.668945,
+					-2530.770508
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0708CD36",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "0705C000",
+				"cell_name": "Hermit Shack"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-24431.28125,
+					7623.061035,
+					5805.731445
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "070946DD",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					496,
+					240.000015,
+					176
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "070A5C4B",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "070A4F01",
+				"cell_name": "Dusty Terrace"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8199.866211,
+					-889.67041,
+					0
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "070C223B",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "DumpWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8822.919922,
+					44705.410156,
+					688.217407
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "070C8460",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-971.139282,
+					1208.387207,
+					279.867432
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "070C921A",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "07074EA2",
+				"cell_name": "The Shoppe"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-385.720123,
+					2802.721191,
+					682.124573
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "070D47C3",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "070D4621",
+				"cell_name": "The Pilgrim"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-52549.464844,
+					34455.679688,
+					5559.81543
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "070DCBF8",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4609.273926,
+					4082.267334,
+					262.437103
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "070DD81F",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "070DD3B2",
+				"cell_name": "Crypt on the Green"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-4092.359131,
+					-23402.195312,
+					629.883972
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07113986",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "0710C868",
+				"cell_name": "Emelio's Caffe House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-355.02597,
+					-729.991882,
+					-248.696152
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0711477B",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "070CF5A7",
+				"cell_name": "Charlie Browns"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2463.569824,
+					-1635.564087,
+					2230.771973
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0711BED0",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "07119769",
+				"cell_name": "Tottenham Court Road Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2676.374268,
+					1835.340576,
+					37.042847
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0711ED7F",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "070FF1E3",
+				"cell_name": "Squatter's Den"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5722.550293,
+					26547.267578,
+					799.815674
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0712764B",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1880,
+					-71.999756,
+					0
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "071350CE",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "07134562",
+				"cell_name": "The Shard"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11413.158203,
+					-1969.791504,
+					2640.928223
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0713C8F3",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "07097DDB",
+				"cell_name": "Yes! Toy Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-7943.379395,
+					45147.683594,
+					665.057007
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07154210",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-35982.265625,
+					-81240.421875,
+					5026.955566
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07164249",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4020.567139,
+					154.861725,
+					1790.530273
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0716832A",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "071679E4",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2813.275635,
+					-840.023926,
+					2846.466553
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "071684BF",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "071679E3",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					53730.46875,
+					10716.910156,
+					5108.309082
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0717406D",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					54715.324219,
+					-58947.246094,
+					5167.371094
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "071995D1",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3068.967041,
+					-55801.5625,
+					4333.719238
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "071B2680",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5419.0625,
+					48130.8125,
+					704
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "071B7A18",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					218.04776,
+					1109.968994,
+					1878.345337
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "071F609B",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "070076B9",
+				"cell_name": "Charterhouse"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2752,
+					-4544,
+					1128
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07209AB8",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1241.110962,
+					-5858.641602,
+					315.790161
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0720E9CA",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "0720E9B1",
+				"cell_name": "Knightsbridge Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					634.0224,
+					-3110.085938,
+					2651.97876
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07229AA9",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "0700FB60",
+				"cell_name": "Air Raid Shelter"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1392.060181,
+					359.231812,
+					48.643082
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07230E28",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "071E3426",
+				"cell_name": "Water & Power Syphon"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					330.10614,
+					-273.816986,
+					-0.438416
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072312D1",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "072312CA",
+				"cell_name": "The Brass Nail"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3073.548828,
+					-2762.778809,
+					0
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07239AE3",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "0720801C",
+				"cell_name": "Battersea Power Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1986.945557,
+					2198.243408,
+					516.575745
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07243DAA",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "07240CD4",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1564.778809,
+					359.421753,
+					463.198059
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07243FCD",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "0716CC41",
+				"cell_name": "Mornigton Crescent Underground"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1042.345581,
+					146.514435,
+					642.170044
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0725343E",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "0724A0E7",
+				"cell_name": "King Herods"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74322.71875,
+					-35827.007812,
+					5292.572754
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07253A1B",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1810.264771,
+					1379.917725,
+					1280
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0726AD17",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "071C0B02",
+				"cell_name": "Yes! Toy HQ Upper Floors"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5633.57959,
+					-2133.234131,
+					-3704
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0727D040",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					586.430542,
+					54062.167969,
+					5073.793945
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07298700",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35915.761719,
+					-42436.941406,
+					5105.943848
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0729CD95",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25350.070312,
+					-30212.585937,
+					5478.419922
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072A5489",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-86310.9375,
+					80225.03125,
+					5090.148926
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072C7BD8",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-55262.226562,
+					-5280.744629,
+					5080.347168
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072C8A0E",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					473.899017,
+					3939.936035,
+					0
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072CBF45",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "DumpWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-84955.84375,
+					65545.953125,
+					5332.423828
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072D2513",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					68572.484375,
+					-24062.542969,
+					5259.54248
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072D4CF2",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-69995.289062,
+					-95865.648438,
+					5695.146973
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072E7EA1",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74.530762,
+					-361.840088,
+					0.093872
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072F237A",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "072F2363",
+				"cell_name": ""
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					51356.046875,
+					3901.927246,
+					5093.701172
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "072FC9DA",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					48474.355469,
+					-52537.3125,
+					5203.629395
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07300E89",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-85586.203125,
+					52115.710937,
+					5518.263672
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0730784A",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9349.126953,
+					2925.548096,
+					-229.882126
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "0730B5E0",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					969.962524,
+					0.768826,
+					-512
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "073188E5",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "071A2F8E",
+				"cell_name": "Swan & Mitre"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1639.309204,
+					2212.134521,
+					1231.996826
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07331B24",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"cell": "07331AAC",
+				"cell_name": "Hideout"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8660.400391,
+					9562.512695,
+					-223.087616
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "073324FF",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-39035.847656,
+					-24564.662109,
+					5287.209961
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07332CE0",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-31221.435547,
+					-22843.59375,
+					5060.156738
+				]
+			},
+			"properties": {
+				"title": "Cooking Stove",
+				"description": "FURN",
+				"ref_id": "07332D22",
+				"form_id": "001865B9",
+				"editor_id": "WorkbenchCookingStove",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4392.771973,
+					3319.995605,
+					-141.086746
+				]
+			},
+			"properties": {
+				"title": "",
+				"description": "FURN",
+				"ref_id": "07106414",
+				"form_id": "00203A36",
+				"editor_id": "NPCWorkbenchChemistryMarker",
+				"cell": "071061FB",
+				"cell_name": "Cyberfox"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1421.607422,
+					-728.014954,
+					-511
+				]
+			},
+			"properties": {
+				"title": "",
+				"description": "FURN",
+				"ref_id": "0730EA27",
+				"form_id": "00203A36",
+				"editor_id": "NPCWorkbenchChemistryMarker",
+				"cell": "071A2F8E",
+				"cell_name": "Swan & Mitre"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2424.258789,
+					14248.711914,
+					-2.680707
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07009940",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "IslingtonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					86690.4375,
+					-60429.035156,
+					5619.247559
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07042EF5",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-62880,
+					42080,
+					5088
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "070C0B1D",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-7244.147461,
+					6492.210937,
+					1607.567505
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07118C56",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"cell": "070C74E7",
+				"cell_name": "Thameshaven"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					35632.816406,
+					42742.539062,
+					5634.323242
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0712597B",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1070.335693,
+					1765.584839,
+					531.518677
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0716803B",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"cell": "070950A7",
+				"cell_name": "Seven Dials Cistern"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1362.878906,
+					1046.225586,
+					1538.381714
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0716873E",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"cell": "071679E0",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3856.543701,
+					-415.442322,
+					-120
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07187A61",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"cell": "071037CF",
+				"cell_name": "Submarine Dock"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5968.245605,
+					123.191971,
+					-348.941254
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071B6A93",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"cell": "07136638",
+				"cell_name": "Imperial War Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-60021.765625,
+					-62885.042969,
+					5881.271973
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071E6A78",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4945.078125,
+					1266.086914,
+					-8.075195
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "071F1978",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"cell": "07156523",
+				"cell_name": "Bromley College"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3323.539062,
+					7678.975098,
+					-1639.936646
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072124EE",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"cell": "070B2770",
+				"cell_name": "Euston Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-11239.241211,
+					6401.172852,
+					830.463318
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0725EF4E",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"cell": "070C74E7",
+				"cell_name": "Thameshaven"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-43.297974,
+					296.052704,
+					134.478622
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0729B751",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"cell": "0703BB80",
+				"cell_name": "Chem Den"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-34840.460938,
+					28524.162109,
+					5596.325684
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072A0AE9",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3953.807861,
+					2479.524658,
+					1.646941
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "072C1F8E",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "DumpWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-93167.507812,
+					60639.472656,
+					5418.450684
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0730221B",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-97300.492188,
+					75814.296875,
+					5050.010254
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "07324426",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					36778.632812,
+					-29358.234375,
+					5081.261719
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0732D780",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-32659.822266,
+					-10501.899414,
+					6228.867188
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "0732D82C",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					85148.140625,
+					-73735.234375,
+					5642.368164
+				]
+			},
+			"properties": {
+				"title": "Cooking Station",
+				"description": "FURN",
+				"ref_id": "073329E1",
+				"form_id": "002476B7",
+				"editor_id": "WorkbenchCookingFireWorkshop",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8134.904785,
+					2374.390137,
+					-3959.873047
+				]
+			},
+			"properties": {
+				"title": "Power Armour Station",
+				"description": "FURN",
+				"ref_id": "07279FBD",
+				"form_id": "00157FEB",
+				"editor_id": "WorkbenchPowerArmor",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14400,
+					-572,
+					-2880
+				]
+			},
+			"properties": {
+				"title": "Power Armour Station",
+				"description": "FURN",
+				"ref_id": "0727D07A",
+				"form_id": "00157FEB",
+				"editor_id": "WorkbenchPowerArmor",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14400,
+					-400,
+					-2880
+				]
+			},
+			"properties": {
+				"title": "Power Armour Station",
+				"description": "FURN",
+				"ref_id": "0727D07C",
+				"form_id": "00157FEB",
+				"editor_id": "WorkbenchPowerArmor",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					14400,
+					-228,
+					-2880
+				]
+			},
+			"properties": {
+				"title": "Power Armour Station",
+				"description": "FURN",
+				"ref_id": "0727D07D",
+				"form_id": "00157FEB",
+				"editor_id": "WorkbenchPowerArmor",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6894.800781,
+					5521.027344,
+					5238.018555
+				]
+			},
+			"properties": {
+				"title": "Power Armour Station",
+				"description": "FURN",
+				"ref_id": "07312540",
+				"form_id": "0013BD08",
+				"editor_id": "WorkbenchPowerArmorSmall",
+				"cell": "07212745",
+				"cell_name": "Royal Armaments Depo"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2656,
+					2544,
+					352
+				]
+			},
+			"properties": {
+				"title": "Power Armour Station",
+				"description": "FURN",
+				"ref_id": "0732A07A",
+				"form_id": "0013BD08",
+				"editor_id": "WorkbenchPowerArmorSmall",
+				"cell": "0710AAF1",
+				"cell_name": "Camelot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1570.509644,
+					4363.743164,
+					201.730057
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "070DFA2F",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "070465A7",
+				"cell_name": "St George"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-250.929687,
+					-261.773437,
+					0
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07114FE8",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07113BBD",
+				"cell_name": ""
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11233.296875,
+					-2172.703613,
+					2385.136475
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0713C91E",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07097DDB",
+				"cell_name": "Yes! Toy Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					12179.216797,
+					-2992.128662,
+					2385.136475
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0713C923",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07097DDB",
+				"cell_name": "Yes! Toy Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-17500.734375,
+					27993.181641,
+					1166.444702
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07147292",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "CamdenWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8016.828125,
+					2468.359619,
+					2039.633667
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071481BC",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "BromleyPindarWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3144.14624,
+					-2259.219727,
+					2142.825684
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0714B770",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0700FB5F",
+				"cell_name": "Polaris Apartments"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1744,
+					-647.047485,
+					384
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07157EF3",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0715651B",
+				"cell_name": "Syndicate Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2568.705322,
+					-870.849243,
+					2848.466553
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071684AA",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071679E3",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1090.207031,
+					3036.726562,
+					-511.972656
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07199CF0",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07199024",
+				"cell_name": ""
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					336,
+					-288,
+					-256
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071B3A07",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071B3834",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7634.900879,
+					1358.225342,
+					35.058746
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071B6A92",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07136638",
+				"cell_name": "Imperial War Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-19018.486328,
+					26607.878906,
+					5323.398926
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071BCA96",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1351.628784,
+					986.999268,
+					667.307068
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071E0FF3",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07183D4E",
+				"cell_name": "Kosuna Bike Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-828,
+					840,
+					512
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071E28F7",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FB7",
+				"cell_name": "Islington Public Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25028.582031,
+					13130.757812,
+					5091.26709
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071E76F4",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-274.076324,
+					1656.149414,
+					-55.675758
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071F0483",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FB2",
+				"cell_name": "National Gallery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3432.806396,
+					-4640.778809,
+					561.603088
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071F4DC1",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FA8",
+				"cell_name": "Ruined Skyscraper"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2146.95166,
+					-2386.165771,
+					-716.88147
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071F4F9F",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FA8",
+				"cell_name": "Ruined Skyscraper"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3899.824707,
+					1343.500854,
+					599.588257
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071FB9A1",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071F121F",
+				"cell_name": "Tobacco Dock"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1519.775757,
+					2954.038818,
+					599.182434
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071FBA05",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071F121F",
+				"cell_name": "Tobacco Dock"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8996.927734,
+					-349.230408,
+					487.243195
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "071FC1FE",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07120571",
+				"cell_name": "Old Royal Naval College"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2528.545654,
+					-3307.307617,
+					1513.099487
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07209A53",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3598.990967,
+					2997.820801,
+					2064
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0721038A",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2F97",
+				"cell_name": "U-96"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3598.990967,
+					2997.820801,
+					2064
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0721038B",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2F97",
+				"cell_name": "U-96"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1419.029175,
+					1811.943359,
+					-44.148609
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07212521",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0716EB10",
+				"cell_name": "Delinquent Hideout"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2442.448486,
+					4539.838867,
+					191.346909
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07219CCD",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0712C09C",
+				"cell_name": "Strand Tunnels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3004.706543,
+					7414.323242,
+					-1639.936646
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0721B918",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "070B2770",
+				"cell_name": "Euston Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-88416.734375,
+					82146.164062,
+					5251.830566
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0722AAA6",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					224.302475,
+					2821.354736,
+					-100.969925
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0722C1D9",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071D795A",
+				"cell_name": "Charing Cross Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5066.85791,
+					-635.579651,
+					360
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0722E12E",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "070B7378",
+				"cell_name": "Vauxhall Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5728.182129,
+					4821.075684,
+					1712.285767
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0722F056",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071F1220",
+				"cell_name": "Royal London Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10479,
+					915,
+					4463
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "072389A2",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2FAC",
+				"cell_name": "Senate House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1600.987793,
+					-3308.165771,
+					-3035.680908
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0723E245",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07083F82",
+				"cell_name": "LT Tower"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2659.836426,
+					3951.663574,
+					751.831543
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0723F8B8",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07210AC7",
+				"cell_name": "HMS Dredge"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2672.080322,
+					-663.077942,
+					2874.975098
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07241A42",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07240CD3",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1476.15271,
+					2358.620605,
+					224.930511
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07243E3D",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07240CD4",
+				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2907.233643,
+					-6959.99707,
+					2487.553223
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07244868",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071A2F85",
+				"cell_name": "Textile Manufactorium"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-74006.015625,
+					-36241.800781,
+					5091.583496
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07253A16",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2852.104248,
+					2550.261963,
+					-160
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "072606A2",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0710AAF1",
+				"cell_name": "Camelot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3763,
+					-2516,
+					0
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07267082",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0720801C",
+				"cell_name": "Battersea Power Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-253.193146,
+					-4771.799805,
+					2651.607422
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07275D04",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0700FB60",
+				"cell_name": "Air Raid Shelter"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5816,
+					-1428,
+					-3704
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0727C51D",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "07279148",
+				"cell_name": "Chuckster's US Embassy"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5316.671875,
+					7072.999023,
+					-2801.151611
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0727EB64",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071FDF4D",
+				"cell_name": "Westminster Underground Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-28931.958984,
+					12868.140625,
+					5066.38916
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "072A45CB",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-8913.474609,
+					60460.242187,
+					4836.314453
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "072B79EA",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-719.894165,
+					285.470276,
+					368.030579
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "072C24A2",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "072BA192",
+				"cell_name": "Cutty Sark"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-88738.554688,
+					-85250.117188,
+					5372.224609
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "072D73C7",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-88334.039062,
+					-85436.078125,
+					5367.567383
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "072D73D7",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1153.023438,
+					-1576.000488,
+					0
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "072DBE02",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "0719A05F",
+				"cell_name": "Quick Test Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-19341.240234,
+					-34844.070312,
+					5077.262695
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "072DD15C",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					89374.523438,
+					-76041.398438,
+					5900.981445
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "0730C414",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-89103.796875,
+					40261.703125,
+					5064
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07311E42",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3596.668945,
+					51277.359375,
+					5882.210938
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07315872",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1800.033447,
+					229.334396,
+					-3.1E-5
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07327023",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"cell": "071B5706",
+				"cell_name": "Shadwell Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					93398.140625,
+					-71226.171875,
+					5693.746582
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07332942",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5492.640137,
+					596.666931,
+					4890.806152
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07332C0A",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-22679.179688,
+					-17894.882812,
+					5087.117188
+				]
+			},
+			"properties": {
+				"title": "Armour Workbench",
+				"description": "FURN",
+				"ref_id": "07332D0C",
+				"form_id": "0012EA9B",
+				"editor_id": "WorkbenchArmorA",
 				"area": "LondonWorld"
 			}
 		},
