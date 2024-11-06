@@ -101,6 +101,15 @@ begin
     end;
   end;
 
+  // r is the original item with the signature from the list
+  // e is a reference item with the REFR signature
+
+  // there may be REFR duplicates (e.g. coins vs tickets, form ID 0003000C)
+  // that happens because we scan all files and later files may override the ID
+  // there's no deduplication in the code just yet so use filters like
+  // * and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f))
+  // * if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
+
   sList := TStringList.Create;
   sList.DelimitedText := 'KEYM CONT DOOR NPC_ ARMO BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN ACTI';
   //sList.DelimitedText := 'DOOR KEYM';
@@ -115,14 +124,6 @@ begin
         for i := 0 to Pred(ReferencedByCount(r)) do begin
           e := ReferencedByIndex(r, i);
 
-          // r is the original item with the signature from the list
-          // e is a reference item with the REFR signature
-
-          // there may be REFR duplicates (e.g. coins vs tickets, form ID 0003000C)
-          // that happens because we scan all files and later files may override the ID
-          // there's no deduplication in the code just yet so use filter like
-          // and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f))
-
           // only allow objects referenced from LondonWorldSpace.esm
           if GetFile(e) <> mod_f then continue;
 
@@ -136,7 +137,7 @@ begin
             isLocked := Assigned(ref);
             if (not isTeleport) and (not isLocked) then continue;
           end else if (Signature(r) = 'ARMO') and (Signature(e) = 'REFR') then begin
-            if (GetFile(r) <> mod_f) then continue; // exclude all non-london references
+            if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
           end else if (Signature(r) = 'KEYM') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'ACTI') and (Signature(e) = 'REFR') then begin
             if (pos('Folon_ACTI_CutethulhuDollActivator', s) = 0)
@@ -147,7 +148,7 @@ begin
             and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f)) // ticket stash
             then continue;
           end else if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
-            //if (GetFile(r) <> mod_f) then continue; // exclude all non-london references
+            //if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
             if (pos('Folon_Workbench', s) = 0)
             and (pos('workbenchWeapons', s) = 0) // fallout 4 models (e.g. Do-It-Yourself building)
             and (pos('WorkbenchArmor', s) = 0)
@@ -160,7 +161,7 @@ begin
           end else if (Signature(r) = 'FLOR') and (Signature(e) = 'REFR') then begin
             if (pos('WildMutfruit', s) = 0) then continue;
           end else if (Signature(r) = 'AMMO') and (Signature(e) = 'REFR') then begin
-            if (GetFile(r) <> mod_f) then continue; // exclude all non-london references
+            if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
           end else if (Signature(r) = 'WEAP') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'ALCH') and (Signature(e) = 'REFR') then begin
             if (pos('RadX', s) = 0)
@@ -187,7 +188,7 @@ begin
             if (pos('BobbleHead_', s) <> 0) and (GetFile(r) <> mod_f) then continue; // exclude fo4 bobbleheas
 
           end else if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
-            if (GetFile(r) <> mod_f) then continue; // exclude all non-london references
+            if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
           end else if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin
             if pos('_NPC_', s) = 0 then continue;
             quests := 0;
