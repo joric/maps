@@ -930,7 +930,7 @@ function popupOnClick(e) {
         added_doors.push(o1.ref_id);
         markers['doors'][o1.ref_id] = {
           editor_id: o1.editor_id,
-          name: o1.door_name || itemLocation(o1),
+          name: o1.door_name || ( o1.title == 'Door' ?  itemLocation(o1) : o1.title),
           //description: itemDescription(o1),
         }
       }
