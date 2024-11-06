@@ -815,6 +815,7 @@ function fuzzySearch(s, limit, threshold) {
     let o = marker.properties;
     let items = [];
     let objectives = [];
+    let fragments = [];
 
     for (const section of ['quests','weapons', 'perks', 'outfits', 'keys']) {
       let list = o[section];
@@ -827,15 +828,20 @@ function fuzzySearch(s, limit, threshold) {
         items.push(itemText(title, o));
 
         if (section=='quests') {
-          for (let [key,objective] of Object.entries(markers[section][id].objectives||{})) {
-            objectives.push(objective);
+          for (let [key,value] of Object.entries(markers[section][id].objectives||{})) {
+            objectives.push(value);
           }
+
+          for (let [key,value] of Object.entries(markers[section][id].fragments||{})) {
+            //fragments.push(value);
+          }
+
         }
 
       }
     }
 
-    data.push({...o, ...{display_name: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), items: items, marker: marker, objectives:objectives}});
+    data.push({...o, ...{display_name: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), items: items, marker: marker, objectives:objectives, fragments:fragments}});
   }
 
   limit = limit || 100;
@@ -854,6 +860,7 @@ function fuzzySearch(s, limit, threshold) {
       { name: 'location', weight: 0.2 },
       { name: 'items', weight: 0.1 },           // Lower weight for items
       { name: 'objectives', weight: 0.01 },
+      { name: 'fragments', weight: 0.01 },
     ],
     threshold: threshold,
     ignoreLocation: true,
@@ -896,9 +903,34 @@ function popupOnClick(e) {
   let div = popup.querySelector('#popup-subnote');
   div.replaceChildren();
 
-  for (const [i, section] of Object.entries(['quests','weapons', 'perks', 'outfits', 'keys'])) {
-    let list = o[section];
-    if (!list) continue;
+  // go through all quests. if we have a related fragment in the inventory, add a related quest
+  let added_quests = [];
+  for (const [quest_id, prop] of Object.entries(markers.quests)) {
+    for (const [i, section] of Object.entries(['weapons', 'perks', 'outfits', 'keys'])) {
+      let list = o[section];
+      if (!list) continue;
+      let fragments = markers['quests'][quest_id]['fragments']||{};
+      for (const form_id of list) {
+        if (fragments[form_id]) {
+          console.log('related quest', quest_id);
+          added_quests.push(quest_id);
+        }
+      }
+    }
+  }
+
+
+  for (const [i, section] of Object.entries(['quests', 'weapons', 'perks', 'outfits', 'keys'])) {
+    let list = o[section] || [];
+
+    if (section=='quests') {
+      list = [...list, ...added_quests];
+      list = list.filter((item, pos) => list.indexOf(item) === pos) // deduplicate
+      console.log(list);
+    }
+
+
+    if (list.length==0) continue;
 
     div.classList.remove('collapsed');
     div.appendChild(document.createElement('hr'));
@@ -911,6 +943,7 @@ function popupOnClick(e) {
       let desc = markers[section][form_id].description;
       let title = desc ? ( name +': ' + desc ) : name;
       let objectives = markers[section][form_id]['objectives']||{};
+      let fragments = markers[section][form_id]['fragments']||{};
 
       let li = document.createElement('div');
       li.className = 'popup-subnote-item';
@@ -934,7 +967,11 @@ function popupOnClick(e) {
       a.title = section == 'quests' ? `${form_id} ${editor_id} (Click Icon to Copy ID)` : `Form ID ${form_id}`;
 
       if (Object.keys(objectives).length>0) {
-        a.title += '\n---\n' + Object.entries(objectives).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
+        a.title += '\n--- objectives ---\n' + Object.entries(objectives).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
+      }
+
+      if (Object.keys(fragments).length>0) {
+        //a.title += '\n--- fragments ---\n' + Object.entries(fragments).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
       }
 
       a.textContent = itemText(title, o);
@@ -1000,6 +1037,18 @@ function popupOnClick(e) {
             e.textContent = `${key}: ${strip(value)}`;
             d.appendChild(e);
           }
+
+          /*
+          for (const [key,value] of Object.entries(fragments)) {
+            let e = document.createElement('div');
+            e.className = 'popup-subnote-info-item';
+            e.title = `Copy Item ID to Clipboard (${key})`;
+            e.onclick = function() { copyToClipboard(key); return false; };
+            e.textContent = `Mentions: ${strip(value)}`;
+            d.appendChild(e);
+          }
+          */
+
           div.appendChild(d);
         }
       }

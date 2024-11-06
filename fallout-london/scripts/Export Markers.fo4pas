@@ -17,9 +17,9 @@ end;
 
 procedure AddItem(Obj, ChildObj: TJsonObject; ref: IInterface; section: string);
 var
-  ref_id: string;
+  ref_id, sig: string;
   i: integer;
-  item, items: IInterface;
+  item, items, subitem: IInterface;
   key: string;
 begin
   ref_id := IntToHex(GetLoadOrderFormID(ref), 8);
@@ -31,6 +31,7 @@ begin
     Obj.O[section].O[ref_id].S['description'] := GetElementEditValues(ref, 'DESC');
 
   if section = 'quests' then begin
+
     items := ElementByName(ref, 'Objectives');
     if Assigned(items) then begin
       for i := 0 to Pred(ElementCount(items)) do begin
@@ -39,6 +40,25 @@ begin
         Obj.O[section].O[ref_id].O['objectives'].S[key] := GetElementEditValues(item, 'NNAM');
       end;
     end;
+
+
+    //QUST \ VMAD - Virtual Machine Adapter \ Script Fragments \ Script \ Script Data \ Properties \ Property \ Value \ Object Union \ Object v2 \ FormID
+
+    items := ElementByPath(ref, 'VMAD - Virtual Machine Adapter\Script Fragments\Script\Script Data\Properties');
+    if Assigned(items) then begin
+      for i := 0 to Pred(ElementCount(items)) do begin
+        item := ElementByIndex(items, i);
+        subitem := LinksTo(ElementByPath(item, 'Value\Object Union\Object v2\FormID'));
+        if Assigned(subitem) then begin
+          sig := Signature(subitem);
+          if (sig = 'KEYM') or (sig = 'MISC') or (sig = 'NOTE') or (sig = 'BOOK') or (sig='WEAP') or (sig='ARMO') then begin
+            key := IntToHex(GetLoadOrderFormID(subitem), 8);
+            Obj.O[section].O[ref_id].O['fragments'].S[key] := GetElementEditValues(subitem, 'FULL');
+          end;
+        end;
+      end;
+    end;
+
   end;
 
 end;

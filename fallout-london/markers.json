@@ -177834,6 +177834,11 @@
 				"50": "Find a copy of The History of Cardenio in Greenwich",
 				"60": "Confront Jeanine about her lie",
 				"70": "Tell Kelpe that Jeanine lied"
+			},
+			"fragments": {
+				"0732781A": "Timon of Athens",
+				"0732781B": "Two Gentlemen of Verona",
+				"07156509": "Ruff"
 			}
 		},
 		"072AA443": {
@@ -177847,6 +177852,9 @@
 				"40": "Read the message on the inner terminal",
 				"50": "Kill the Robots",
 				"60": "Return to the Professor"
+			},
+			"fragments": {
+				"073246E9": "University Master Password"
 			}
 		},
 		"072AEAA5": {
@@ -177868,6 +177876,9 @@
 				"130": "Kill Dennis",
 				"140": "Retrieve the Sober from Manchester Mike's safe",
 				"150": "Give Prince Pete the Sober"
+			},
+			"fragments": {
+				"0731F6C6": "Manchester Mike's Safe Key"
 			}
 		},
 		"072B6595": {
@@ -177908,6 +177919,11 @@
 				"240": "Return to Chief Roach",
 				"250": "Return to Percival",
 				"270": "Speak to Merlin"
+			},
+			"fragments": {
+				"0732248C": "Brickton Shadow's Hat",
+				"0000000F": "Bottlecap",
+				"07311DA1": "Roach's Lucky Skull"
 			}
 		},
 		"072C0D8A": {
@@ -177944,6 +177960,10 @@
 				"100": "Distribute the packages to Malcolm's friends",
 				"120": "(Optional) Tell John about the leaflets",
 				"130": "Return to Malcolm Rhodes"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072FD601": "Camden Penthouse Key"
 			}
 		},
 		"072BCEF5": {
@@ -177973,6 +177993,13 @@
 				"180": "Kill Monty",
 				"190": "Acquire munitions for Eugene",
 				"200": "Return to Eugene"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"073013D7": "Eugene's Key",
+				"073013BE": "Jail Key",
+				"07307953": "St Catherine's Sword",
+				"071BAF45": "Tommy Uniform"
 			}
 		},
 		"072AA43D": {
@@ -177981,6 +178008,10 @@
 			"objectives": {
 				"10": "Investigate Alanah's parents' Footlocker",
 				"20": " Return to Alanah"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072D61A3": "Expired Syringe"
 			}
 		},
 		"07311020": {
@@ -178012,6 +178043,9 @@
 				"150": "Disable the speakers at the terminal",
 				"160": "Return to Claudia",
 				"170": "Return to Scott"
+			},
+			"fragments": {
+				"07240ABC": "Theatre Basement Key"
 			}
 		},
 		"072AC4EC": {
@@ -178034,6 +178068,11 @@
 				"170": "Interact with the fourth ghoul",
 				"185": "Deal with the fourth ghoul",
 				"190": "Speak to Director Wesley Herbertson"
+			},
+			"fragments": {
+				"072450F3": "Floater Gas Grenade",
+				"072EB41C": "DNA Extractor",
+				"072EB41D": "Scientist DNA Sample"
 			}
 		},
 		"071A2F20": {
@@ -178052,6 +178091,9 @@
 				"80": "Explore the Angel lab",
 				"90": "Stop the self-destruct sequence",
 				"100": "Traverse the Tube tunnel"
+			},
+			"fragments": {
+				"0705E7D1": "Gas Mask"
 			}
 		},
 		"071F1179": {
@@ -178062,6 +178104,9 @@
 				"20": "Find Mr. X",
 				"30": "Confront Mr. X",
 				"40": "(Optional) Destroy the Angel research before you leave"
+			},
+			"fragments": {
+				"07303831": "Science Museum Lab Key"
 			}
 		},
 		"072BA807": {
@@ -178082,6 +178127,13 @@
 				"120": "Speak to Second Lieutenant Buckley",
 				"180": "Report to Lieutenant Doyle",
 				"190": "Return to Chief Roach"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"00069081": "Screw",
+				"000731A4": "Steel",
+				"000731A3": "Wood",
+				"0730AC7A": "Support Beam"
 			}
 		},
 		"072BA814": {
@@ -178127,6 +178179,9 @@
 				"60": "Find the Assassin",
 				"65": "Speak to the Assassin",
 				"70": "Wait for the tournament to start"
+			},
+			"fragments": {
+				"072D7497": "Fifth Column Propaganda"
 			}
 		},
 		"072BA812": {
@@ -178151,6 +178206,10 @@
 				"90": "Report back to Gordon",
 				"95": "Wait for 3 days before returning to Gordon",
 				"100": "Return to Gordon"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"0713B86D": "Flower Power Staff"
 			}
 		},
 		"0729E8C9": {
@@ -178194,6 +178253,9 @@
 				"521": "(Optional) Cancel the self-destruct sequence",
 				"530": "(Optional) Manually initiate the lab's self-destruct sequence",
 				"540": "Escape the laboratory"
+			},
+			"fragments": {
+				"07198B0F": "Crude Laser"
 			}
 		},
 		"0719C4CD": {
@@ -178221,6 +178283,10 @@
 				"70": "Investigate the noise",
 				"75": "Fight the abomination",
 				"80": "Return to Archie and the Ferryman"
+			},
+			"fragments": {
+				"07292C8F": "Ferryman's Friend",
+				"0729E3F5": "Monument Hatch Key"
 			}
 		},
 		"07259136": {
@@ -178253,6 +178319,10 @@
 				"90": "Return to Eve",
 				"100": "Watch the execution",
 				"110": "Speak to Eve"
+			},
+			"fragments": {
+				"07272E70": "Oi",
+				"0732A8AA": "Lily's Knife"
 			}
 		},
 		"072BDCC5": {
@@ -178276,6 +178346,9 @@
 				"95": "Learn what happened to Archie’s parents",
 				"98": "Wait a while for Archie to open up",
 				"100": "Archie seems to want to give me something."
+			},
+			"fragments": {
+				"070DB5BF": "Battle Rifle"
 			}
 		},
 		"072AEAA2": {
@@ -178292,6 +178365,10 @@
 				"40": "Speak to Allistair Tenpenny",
 				"41": "Escort Allistair Tenpenny to the port",
 				"42": ""
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"070C9A15": "The Queen's Gambit"
 			}
 		},
 		"0719FC81": {
@@ -178305,6 +178382,9 @@
 				"50": "Kill the Hooligan leader",
 				"60": "Return to the Frenchman",
 				"70": "Speak with Bishop Whaler"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"07309BC2": {
@@ -178329,6 +178409,11 @@
 				"460": "Claim your fortune",
 				"470": "Defeat Smythe",
 				"500": "Take your place at the dispatch box"
+			},
+			"fragments": {
+				"001C4BE8": "Eyeglasses",
+				"0719ABBE": "Smythe's Hat",
+				"0710C867": "Umbrella"
 			}
 		},
 		"072AC4F1": {
@@ -178353,6 +178438,10 @@
 				"200": "Meet Asquith outside for a duel",
 				"230": "Defeat Asquith",
 				"250": "Listen to General Major's speech"
+			},
+			"fragments": {
+				"07259168": "Musket",
+				"073023CA": "The Duellist"
 			}
 		},
 		"072BA815": {
@@ -178380,6 +178469,10 @@
 				"140": "Speak to General Allen",
 				"150": "Speak to Derek",
 				"160": "Return to Eve"
+			},
+			"fragments": {
+				"073224C6": "Writ of Allegiance",
+				"073071B5": "Crude Launcher"
 			}
 		},
 		"072AC4EB": {
@@ -178392,6 +178485,9 @@
 				"20": "(Optional) Persuade Victor Schmidt to join the plot",
 				"30": "(Optional) Find evidence of Hume's murder before speaking to Victor",
 				"50": "Assassinate Eve Varney at the discrete location"
+			},
+			"fragments": {
+				"072EEDD4": "Private Lounge Key"
 			}
 		},
 		"072B658A": {
@@ -178419,6 +178515,9 @@
 				"210": "Storm their headquarters!",
 				"220": "Confront Eve",
 				"240": "Speak to Arthur"
+			},
+			"fragments": {
+				"0732C63E": "Tower Of London Gate Key"
 			}
 		},
 		"072B659F": {
@@ -178453,6 +178552,11 @@
 				"102": "(Optional) Speak to Ronnie",
 				"110": "Meet the Roundels outside",
 				"120": "Listen to Dennis' speech"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"07328BA5": "Miller's dead",
+				"00059AEA": "BIMT Fare"
 			}
 		},
 		"0719FC6F": {
@@ -178500,7 +178604,11 @@
 		},
 		"072CD196": {
 			"editor_id": "FOLON_GMCamelot",
-			"name": "Camelot Questline Manager"
+			"name": "Camelot Questline Manager",
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"0731F843": "Encrypted Letter"
+			}
 		},
 		"072329CA": {
 			"editor_id": "FOLON_SQWestminster103",
@@ -178509,6 +178617,9 @@
 				"10": "Get to Croydon Post Office",
 				"20": "Find the Letter in Croydon Post Office",
 				"30": "Return To Charles McAndrew"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072B457F": {
@@ -178531,6 +178642,9 @@
 				"77": "Get the ledger",
 				"78": "Collect your Weapons",
 				"80": "Return to Gaunt"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072E7EEA": {
@@ -178548,6 +178662,9 @@
 				"80": "Speak to John",
 				"85": "Listen to the holotape",
 				"87": "Speak to John"
+			},
+			"fragments": {
+				"07322AB5": "Courtroom Evidence"
 			}
 		},
 		"072B4580": {
@@ -178591,6 +178708,12 @@
 				"170": "Find Arthur",
 				"180": "Kill Arthur",
 				"190": "Return to Eve"
+			},
+			"fragments": {
+				"072995DE": "Arondight",
+				"072E9804": "Haereticus Ferire",
+				"07329C84": "Key to Lancelot's Cell",
+				"070BE3D0": "Two-Handed Long Sword"
 			}
 		},
 		"072AEA99": {
@@ -178622,6 +178745,9 @@
 				"190": "(Optional) Follow the Roundels",
 				"200": "Speak to Prince Pete",
 				"210": "Speak to the Roundels"
+			},
+			"fragments": {
+				"072DDF3D": "Catalytic Cowl"
 			}
 		},
 		"071C76B4": {
@@ -178649,6 +178775,16 @@
 				"160": "Deliver Johnny's apology gift",
 				"170": "Return to Johnny",
 				"180": "Return to Nelson"
+			},
+			"fragments": {
+				"072EA9DA": "Broken Radio",
+				"072EA9DC": "Fixed Radio",
+				"072EA9D8": "Crystalline Photon Agitator",
+				"072DCDF1": "Greenwich Station Key",
+				"072EA9DF": "Johnny's Gift",
+				"072EA9DE": "Radio Without Battery",
+				"072EA9DB": "Radio Parts",
+				"072EA9DD": "Winston's Package"
 			}
 		},
 		"0729B7E4": {
@@ -178676,6 +178812,9 @@
 				"28": "Speak to Blind Nelson",
 				"30": "Face Thomas Black",
 				"40": "Kill Black"
+			},
+			"fragments": {
+				"07318880": "Wayfarer's Syndicate Suit"
 			}
 		},
 		"072B6594": {
@@ -178728,6 +178867,10 @@
 				"30": "Talk to the man outside your cell",
 				"40": "Escape the prison",
 				"45": "Retrieve your belongings"
+			},
+			"fragments": {
+				"07303831": "Science Museum Lab Key",
+				"07189AAB": "Convict Outfit"
 			}
 		},
 		"072B84CA": {
@@ -178764,6 +178907,10 @@
 				"50": "Wait for clothes to wash (<Global=Folon_SQThameshaven102_WMPercent>%)",
 				"55": "Collect the clothes",
 				"60": "Return to Ellen"
+			},
+			"fragments": {
+				"000DFFC5": "Sweater Vest and Slacks",
+				"0725CC93": "Clean Clothes"
 			}
 		},
 		"072F0C90": {
@@ -178826,6 +178973,10 @@
 				"315": "Meet with your squad outside",
 				"320": "Debrief with your squad",
 				"330": "Report to Merlin"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"07319F92": "The Palm Greaser"
 			}
 		},
 		"072AA43E": {
@@ -178871,6 +179022,10 @@
 				"200": "Meet Guinevere near Camelot",
 				"210": "Follow Guinevere",
 				"320": "Report back to Smythe at North's lab"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072EEDD3": "Westminster House Back Door Key"
 			}
 		},
 		"072BA80B": {
@@ -178957,6 +179112,11 @@
 				"41": "Deal with Gaunt",
 				"45": "Prevent Reactor Meltdown",
 				"50": "Report to Black"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"0731888E": "The Garrison",
+				"070D7E22": "Bulldog"
 			}
 		},
 		"072AEAA3": {
@@ -178975,6 +179135,10 @@
 				"29": "Bring evidence to Fowler",
 				"30": "Return to Tenpenny",
 				"35": "Watch the destruction of the London eye"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"07301670": "Detonator"
 			}
 		},
 		"072C2D09": {
@@ -179093,6 +179257,10 @@
 				"150": "Deal with the Tommies",
 				"170": "Speak to the 2nd Lieutenant",
 				"190": "Speak to the Lieutenant"
+			},
+			"fragments": {
+				"072FB99B": "Room 5 Key",
+				"07037227": "Undamaged UK Flag"
 			}
 		},
 		"072BA80A": {
@@ -179115,6 +179283,12 @@
 				"100": "Return to Angela",
 				"110": "Bring the evidence to Horace",
 				"120": "Inform Rachel of Horace's decision"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072FD604": "The Empress' Claw",
+				"07292CB0": "Innsmouth Suite Key",
+				"001EC132": "Shipment of Steel - 50"
 			}
 		},
 		"0722C5CF": {
@@ -179130,6 +179304,9 @@
 				"40": "Return to John Marsh",
 				"45": "Visit the graveyard",
 				"50": "Return to Miller"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072B659A": {
@@ -179178,6 +179355,13 @@
 				"150": "(Optional) Confront Rhys Clarke",
 				"151": "Return to Zach Lloyd",
 				"160": "Report to Eve"
+			},
+			"fragments": {
+				"072995DE": "Arondight",
+				"072F995B": "Dearest Robert",
+				"072F996C": "Lancelot's Key",
+				"07327855": "Lancelot's Room Key",
+				"072D2E8B": "Mouse Trap MIRV"
 			}
 		},
 		"0731101F": {
@@ -179215,6 +179399,9 @@
 				"80": "Inform Dr. Webb about his Granddaughter",
 				"82": "Take Dr. Webb back to the 5th Column",
 				"83": "Discover what is going on"
+			},
+			"fragments": {
+				"0018E417": "Sack Hood"
 			}
 		},
 		"072964A4": {
@@ -179224,6 +179411,10 @@
 				"10": "Travel to the Lewisham Police Station",
 				"20": "Find the gun shipment in Lewisham Police Station",
 				"30": "Return the gun shipment to Captain Reasonable"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"070D95C5": "The Clash"
 			}
 		},
 		"072AC4F2": {
@@ -179250,6 +179441,9 @@
 				"275": "Replace the circuit",
 				"280": "Watch the broadcast",
 				"290": "Speak to the broadcast technician"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072AEAA8": {
@@ -179264,6 +179458,9 @@
 				"60": "Input the tape into Bradley Fortworth",
 				"70": "Return to Clive",
 				"100": "Quest End"
+			},
+			"fragments": {
+				"07322D45": "Clive's Song"
 			}
 		},
 		"072DEFBE": {
@@ -179278,6 +179475,11 @@
 				"20": "Clear the second group of Cannibals",
 				"30": "Clear the third group of Cannibals",
 				"40": "Return to Beefy"
+			},
+			"fragments": {
+				"0730166B": "Ear",
+				"0730166C": "Finger",
+				"0730166F": "Head"
 			}
 		},
 		"07322A8F": {
@@ -179295,6 +179497,9 @@
 				"5": "Speak to the Crypt Guard",
 				"10": "Kill the Enforcer",
 				"20": "Return to the Guard"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072AEAA1": {
@@ -179308,6 +179513,10 @@
 				"30": "Head to the meeting point",
 				"40": "Investigate the tunnels",
 				"50": "Report back to Guido"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"07272E72": "Guido's Hammer"
 			}
 		},
 		"072B659C": {
@@ -179318,6 +179527,9 @@
 				"20": "Put up Guido's Propaganda",
 				"21": "<Optional> Speak to Lily",
 				"30": "Tell Guido of your Success"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"0730FCF0": {
@@ -179336,6 +179548,9 @@
 				"10": "Help out Nick",
 				"20": "Find the lost cargo",
 				"30": "Return the cargo to Nick"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"0730159C": {
@@ -179367,6 +179582,9 @@
 				"150": "Meet Dennis on Birnham Drive",
 				"160": "Defeat Manchester Mike and his allies",
 				"170": "Defeat Dennis Blandford and his allies"
+			},
+			"fragments": {
+				"07319F15": "Bloody Roundel"
 			}
 		},
 		"07319F63": {
@@ -179385,6 +179603,10 @@
 				"28": "(Optional) Bring Anthony 4 pieces of lead",
 				"30": "Get a lapel pin from an IODS enforcer captain",
 				"40": "Show the lapel pin to Gaunt"
+			},
+			"fragments": {
+				"0730E98E": "Wayfarer's Vagabond Cap",
+				"071105B1": "Vagabond Outfit"
 			}
 		},
 		"072B4581": {
@@ -179400,7 +179622,10 @@
 		},
 		"0719ABAA": {
 			"editor_id": "FOLON_MQ101",
-			"name": "Overture"
+			"name": "Overture",
+			"fragments": {
+				"0719CBA6": "Test Subject Suit"
+			}
 		},
 		"072AE4A1": {
 			"editor_id": "FOLON_GW104",
@@ -179511,6 +179736,10 @@
 				"130": "Recruit candidates for the Good Samaritans (<global=FOLON_SQEastminster104counter02>/5)",
 				"135": "Speak to Stacy",
 				"140": "Speak to Toby"
+			},
+			"fragments": {
+				"073011CD": "Box of Ballots",
+				"073011D3": "Marley Farm Shipment"
 			}
 		},
 		"072BDCC8": {
@@ -179542,6 +179771,12 @@
 				"80": "Talk to Abigail",
 				"90": "Tell Gorden the News",
 				"100": "Return to Toby"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072FD13C": "Playing Cards",
+				"000E5082": "Red Menace",
+				"072FE966": "Tyre-d Tyre Wrench"
 			}
 		},
 		"072B5F97": {
@@ -179578,6 +179813,11 @@
 				"30": "(Optional) Take the supplies from Laurence",
 				"60": "Deliver ingredients to Sybil ",
 				"70": "Report on Sybil's sobriety to Laurence"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072F012F": "Crackle and Pop Special",
+				"072F0130": "Laurence's Supplies"
 			}
 		},
 		"0730FCF1": {
@@ -179596,6 +179836,12 @@
 				"30": "Return to Pvt Baker",
 				"31": "Return to Lieutenant Dunn",
 				"32": "Speak to Lieutenant Dunn"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072EB64D": "Love Letter",
+				"072EB64C": "Love Letter",
+				"072EB64B": "Assignment Orders"
 			}
 		},
 		"0731C33A": {
@@ -179613,6 +179859,10 @@
 				"37": "(Optional) Kill Fluffy",
 				"39": "(Optional) Tell Rosie about the Wedding Band",
 				"40": "Return to Rosie Lee"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072DBEB9": "Routemaster Tea Receipe"
 			}
 		},
 		"072A74BC": {
@@ -179621,6 +179871,9 @@
 			"objectives": {
 				"10": "Retrieve the Peruvian Artefact",
 				"20": "Return to Peru"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072B6591": {
@@ -179631,6 +179884,10 @@
 				"20": "Return to Audra",
 				"30": "Return in 3 days after Audra has practiced",
 				"32": "Check in on Audra"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"0711DD97": "I Don't Want to Set the World on Fire"
 			}
 		},
 		"072AEA9B": {
@@ -179660,6 +179917,10 @@
 				"68": "The Aluminium Chapeus: Return to Earl Wakefield",
 				"69": "Return to Penelope Shah",
 				"70": "Visit your new house"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"07328C20": "Aluminium Chapeau"
 			}
 		},
 		"072A5DED": {
@@ -179677,6 +179938,9 @@
 				"60": "Turn on the Purifier",
 				"65": "Find a way to open the door",
 				"70": "Speak to Corporal Robinson"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072BA809": {
@@ -179692,6 +179956,9 @@
 				"40": "Speak to Lillian",
 				"62": "Speak to Dawkins",
 				"65": "Speak to Lillian"
+			},
+			"fragments": {
+				"072EE8BA": "Peacock Feather"
 			}
 		},
 		"072A8FF0": {
@@ -179700,6 +179967,9 @@
 			"objectives": {
 				"10": "Retrieve Edith's trumpet from the sewer",
 				"20": "Return Edith's trumpet"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072AEAA4": {
@@ -179729,6 +179999,9 @@
 				"120": "Meet Patrick at the Shoppe",
 				"130": "Speak with Prince Pete Davis",
 				"140": "Speak to Patrick"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072A9B0D": {
@@ -179744,6 +180017,9 @@
 				"50": "Speak to Jesse Gray",
 				"60": "Return to Polly Ester",
 				"70": "Report back to Palmira Romero"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"07319F66": {
@@ -179786,6 +180062,10 @@
 				"10": "Talk to Car Salesman",
 				"20": "Check Car",
 				"30": "Confront Moe"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072D810B": "Car Key"
 			}
 		},
 		"0728C3D1": {
@@ -179794,6 +180074,9 @@
 			"objectives": {
 				"10": "Find Anarchy",
 				"20": "Return to Nancy"
+			},
+			"fragments": {
+				"001C67B0": "Spiked Dog Collar"
 			}
 		},
 		"072B5F98": {
@@ -179806,6 +180089,10 @@
 				"40": "Tell Caleb Wood about the patients",
 				"50": "Convince the Doctor to Return",
 				"55": "Return to Caleb Wood"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"0730BC24": "Patient Card"
 			}
 		},
 		"072BA80F": {
@@ -179841,6 +180128,9 @@
 				"40": "Kill Leeds",
 				"100": "Talk to Cambridge",
 				"200": "Talk to Shaun"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"073071D5": {
@@ -179855,6 +180145,10 @@
 			"name": "Sisterly Closure",
 			"objectives": {
 				"10": "Tell Veronica about the Note"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"0703721E": "Pound Coin"
 			}
 		},
 		"072AA434": {
@@ -179867,6 +180161,9 @@
 				"12": "Retrieve a ladder",
 				"15": "Put down the ladder",
 				"20": "Talk to Dot"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072BC9D0": {
@@ -179876,6 +180173,9 @@
 				"10": "Help at White Farm",
 				"20": "Ask around",
 				"30": "Report back to Frederick"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072B84CC": {
@@ -179888,6 +180188,9 @@
 			"objectives": {
 				"10": "Find Krazy Kaylah's lost marbles",
 				"20": "Return Krazy Kaylah's lost marbles"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072AE4A0": {
@@ -179908,6 +180211,9 @@
 			"objectives": {
 				"10": "Retrieve the Football for rat piss",
 				"20": "Return to Rat Piss with the Football"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072DC2E2": {
@@ -179935,6 +180241,9 @@
 				"80": "Find Dr Ross",
 				"90": "Kill Dr. Ainsley Ross",
 				"100": "Talk to Mad Jack"
+			},
+			"fragments": {
+				"072DC932": "Gauss Rifle"
 			}
 		},
 		"072BF525": {
@@ -179950,6 +180259,10 @@
 				"30": "Return to Reverend Francis",
 				"35": "Check on the choir in a week",
 				"37": "Return to the choir"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072EFB09": "Hymnal"
 			}
 		},
 		"0729EB90": {
@@ -179970,6 +180283,10 @@
 				"10": "Discreetly Return the watch",
 				"15": "<Optional> Inform Amanda about the watch",
 				"20": "Return to Avis"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072F1265": "Stolen Gold Watch"
 			}
 		},
 		"073204C5": {
@@ -179982,6 +180299,10 @@
 			"objectives": {
 				"10": "Find and photograph graffiti pieces (<Global=FOLON_GLOB_SQIslington101_PhotoCount>/20)",
 				"250": "Return to Frobisher"
+			},
+			"fragments": {
+				"072EFDC0": "ProSnap Hasselfrax PANX",
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072B84CB": {
@@ -180016,6 +180337,11 @@
 				"10": "Deliver the letter",
 				"20": "Check on Roger in a few days",
 				"30": "Speak to Rodger"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072DBEBE": "Envelope",
+				"072DC089": "Homesick"
 			}
 		},
 		"072BA808": {
@@ -180056,6 +180382,9 @@
 			"objectives": {
 				"10": "Retrieve the Warmite shipment",
 				"20": "Return the Warmite shipment"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"07286D66": {
@@ -180070,6 +180399,9 @@
 				"50": "Kill Shelly",
 				"55": "Release Shelly",
 				"60": "Return to Knight with the news"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072AD97B": {
@@ -180078,6 +180410,9 @@
 			"objectives": {
 				"10": "Retrieve Tim the Roundel's supplies from the flooded areas of Hackney",
 				"20": "Return Tim the Roundel's supplies"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072C0D8B": {
@@ -180112,6 +180447,9 @@
 			"objectives": {
 				"10": "Clear the Radar Station",
 				"20": "Return to Noah"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072AEAA0": {
@@ -180122,6 +180460,9 @@
 				"20": "Deliver the Barrel",
 				"25": "Barrel",
 				"30": "Report Back to Ayesha"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"07319F65": {
@@ -180138,6 +180479,10 @@
 			"objectives": {
 				"10": "Get the Zetan Blaster",
 				"20": "Return the Zetan Blaster"
+			},
+			"fragments": {
+				"000FF995": "Alien Blaster",
+				"0000000F": "Bottlecap"
 			}
 		},
 		"0730C94E": {
@@ -180146,6 +180491,9 @@
 			"objectives": {
 				"10": "Find Prospero's Book",
 				"20": "Return Prospero's Book to Reece"
+			},
+			"fragments": {
+				"00059B02": "Pre-War Money"
 			}
 		},
 		"0730C94F": {
@@ -180166,6 +180514,9 @@
 				"10": "Open the door",
 				"15": "Explore the room",
 				"20": "Speak to the Maintenance Man"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072AA43F": {
@@ -180188,6 +180539,12 @@
 				"52": "Steal the item for Jennifer",
 				"55": "Return to Jennifer",
 				"65": "Return to McFadden"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"07333B1C": "Madeira Inc. Lift Keycard",
+				"072DD38B": "Maderia Inc. Security Key Card",
+				"072DD38F": "Skeleton Key"
 			}
 		},
 		"072B659E": {
@@ -180215,6 +180572,9 @@
 			"objectives": {
 				"10": "Retrieve Elliot's engagement ring from the scrapyard ",
 				"20": "Return Elliot's engagement ring"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072B4044": {
@@ -180231,6 +180591,12 @@
 				"66": "Piss in the cask",
 				"70": "Serve the Abhainn Oir",
 				"80": "Get payment from Zack"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"07307B16": "Abhainn Oir",
+				"07221941": "Gold Bar",
+				"071A001F": "Pith Helmet"
 			}
 		},
 		"072AEAA6": {
@@ -180241,6 +180607,11 @@
 				"10": "Get the backpack",
 				"15": "Get the herbs",
 				"20": "Return to Sean with the medical items"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"070C852B": "Brahmin Leather Backpack",
+				"072D5890": "Brahmin Leather Backpack"
 			}
 		},
 		"072BDCC7": {
@@ -180251,6 +180622,9 @@
 				"20": "Survive a minute with Mad Jack",
 				"30": "Talk to Mad Jack in his office",
 				"40": "Retrieve your things"
+			},
+			"fragments": {
+				"070B6743": "Sport Jacket"
 			}
 		},
 		"072AA442": {
@@ -180260,6 +180634,10 @@
 				"5": "Speak to Jan \"The Screw\"",
 				"10": "Clear out the Bromley Hardware Store",
 				"20": "Return to Jan \"The Screw\""
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"07332EF1": "Rad-Rat Smasher"
 			}
 		},
 		"072E383F": {
@@ -180295,6 +180673,9 @@
 			"objectives": {
 				"10": "Retrieve the skull for Edmure",
 				"20": "Return the skull to Edmure"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072AC4EF": {
@@ -180336,6 +180717,10 @@
 				"54": "Escape to a safe distance",
 				"55": "Find Nemo",
 				"65": "Return to Jeremy"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"0730166D": "Morse Telegraph"
 			}
 		},
 		"072AA196": {
@@ -180344,6 +180729,10 @@
 			"objectives": {
 				"10": "Get the torch",
 				"20": "Return to the Nightwatchman"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"070D9615": "Service Rifle"
 			}
 		},
 		"072B84CF": {
@@ -180358,6 +180747,9 @@
 				"20": "Return to Corporal Nux",
 				"30": "Kill all of the remaining Hooligans",
 				"40": "Return to Corporal Nux"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072F9843": {
@@ -180369,6 +180761,9 @@
 			"objectives": {
 				"10": "Retrieve the Sword from the Camelot Armoury",
 				"20": "Return Sergeant Neil's Sword"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072BA805": {
@@ -180400,6 +180795,9 @@
 			"objectives": {
 				"10": "Convince Bishop Whaler to take in Lazarus",
 				"20": "Tell Lazarus he's welcome back at Sanctuary"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072BF529": {
@@ -180437,6 +180835,9 @@
 				"47": "Option 2: Search through St. Leonard's records to find the burial place",
 				"48": "Option 2: Go to New Chapel Cemetary",
 				"50": "See the sunset with Arthur"
+			},
+			"fragments": {
+				"0731F5EE": "Well Materials"
 			}
 		},
 		"072CD193": {
@@ -180450,6 +180851,10 @@
 				"10": "Place the Poster",
 				"20": "Defend the Poster",
 				"30": "Report Back to Percival"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"070BE3C6": "Rigby's Baton"
 			}
 		},
 		"072AC4ED": {
@@ -180471,6 +180876,9 @@
 				"80": "Pull the Sword in the Stone",
 				"90": "Defeat Morgana",
 				"100": "Return to Merlin"
+			},
+			"fragments": {
+				"072C9AD3": "Excalibur"
 			}
 		},
 		"0729B279": {
@@ -180485,6 +180893,9 @@
 				"50": "Report back to Apache Alice",
 				"60": "Get John Strutter's endorsement",
 				"70": "Speak to Apache Alice"
+			},
+			"fragments": {
+				"072EB15F": "Camden Lock House Key"
 			}
 		},
 		"072A763C": {
@@ -180515,6 +180926,9 @@
 			"name": "Pub Crawl",
 			"objectives": {
 				"10": "Find the Beer Mats"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072A4DDF": {
@@ -180576,6 +180990,9 @@
 			"objectives": {
 				"10": "Find the painting for Margery in the National Gallery",
 				"20": "Return to Margery with the painting"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"07286D68": {
@@ -180583,6 +181000,9 @@
 			"name": "Ion Brew for Greg",
 			"objectives": {
 				"10": "Get Greg a bottle of Ice Cold Ion Brew"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"07296562": {
@@ -180624,6 +181044,9 @@
 			"name": "Black Death",
 			"objectives": {
 				"10": "Bring 10 Pox Bulbs to Patch"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"07322A8E": {
@@ -180636,6 +181059,9 @@
 			"objectives": {
 				"10": "Retrieve a pizza for Jordan from Thameshaven",
 				"20": "Return with a pizza for Jordan"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"0730124F": {
@@ -180648,6 +181074,9 @@
 				"30": "Get Godric's money back",
 				"50": "Return the items to Godric",
 				"52": "Follow Xavier to Godric"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072AA436": {
@@ -180657,6 +181086,9 @@
 				"10": "Retrieve the Keg from the Brewery",
 				"15": "Swap out the keg",
 				"20": "Talk to Alain"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"072B658D": {
@@ -180669,6 +181101,10 @@
 				"40": "Report your findings to Roger Moon",
 				"50": "Find the Coach",
 				"60": "Return to Roger Moon"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072EEF60": "General Security Report"
 			}
 		},
 		"072AA437": {
@@ -180693,6 +181129,10 @@
 				"40": "Retrieve the Charter",
 				"50": "Return to Middleton",
 				"60": "Deliver the Charter"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"072E8706": "East India Company Charter"
 			}
 		},
 		"072BA810": {
@@ -180746,7 +181186,10 @@
 		},
 		"072DEFC1": {
 			"editor_id": "Folon_GMCaravanBase",
-			"name": "Caravan Main Quest"
+			"name": "Caravan Main Quest",
+			"fragments": {
+				"0000000F": "Bottlecap"
+			}
 		},
 		"072DEFC6": {
 			"editor_id": "Folon_GMCaravanTradePostAsmo",
@@ -180761,11 +181204,21 @@
 			"name": "PC Settlement - Caravan Stop"
 		},
 		"0009BD11": {
-			"editor_id": "DialogueMS11"
+			"editor_id": "DialogueMS11",
+			"fragments": {
+				"001F599A": "Lieutenant's Hat"
+			}
 		},
 		"06000808": {
 			"editor_id": "DLC04Grandchester",
-			"name": "Grandchester Mansion Controller Quest"
+			"name": "Grandchester Mansion Controller Quest",
+			"fragments": {
+				"00019568": "Long Johns",
+				"06022DC0": "Grandchester Mansion Ticket",
+				"06020A38": "Grandchester Guest Key",
+				"0601616F": "Grandchester Mansion Key",
+				"00059B02": "Pre-War Money"
+			}
 		},
 		"0001ED86": {
 			"editor_id": "MQ101",
@@ -180777,10 +181230,27 @@
 				"140": "",
 				"145": "",
 				"150": ""
+			},
+			"fragments": {
+				"000976B7": "Vault 111 Jumpsuit - New",
+				"0001EED7": "Vault 111 Jumpsuit",
+				"000F468E": "",
+				"00174D2F": "Casual Outfit",
+				"0014B019": "T-Shirt and Slacks",
+				"001410EC": "Casual Outfit",
+				"0008925C": "Wedding Ring",
+				"000EECF5": "Laundered Green Dress",
+				"000DFFC5": "Sweater Vest and Slacks",
+				"0006D7B8": "Pipboy"
 			}
 		},
 		"000282A7": {
-			"editor_id": "MS07Intro"
+			"editor_id": "MS07Intro",
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"000E2E2C": "Faded Trench Coat",
+				"000E2E2E": "Worn Fedora"
+			}
 		},
 		"0006FA37": {
 			"editor_id": "RR102",
@@ -180797,11 +181267,20 @@
 				"750": "Meet Deacon at the Old North Church",
 				"810": "Talk to Desdemona",
 				"900": "Follow Desdemona"
+			},
+			"fragments": {
+				"000E5084": "Farmhand Clothes",
+				"000DC8E7": "Deliverer",
+				"0017FC7B": "Railroad HQ Key"
 			}
 		},
 		"0014DC84": {
 			"editor_id": "RETravelKMK_BoSM02",
-			"name": "BoSM02 Postquest - Clarke flees from feral ghouls"
+			"name": "BoSM02 Postquest - Clarke flees from feral ghouls",
+			"fragments": {
+				"000DEDEB": "BOS Uniform",
+				"00117EB9": "Flannel Shirt and Jeans"
+			}
 		},
 		"00048516": {
 			"editor_id": "DN054",
@@ -180814,6 +181293,9 @@
 				"40": "Return to Rowdy",
 				"50": "Defeat the Gunners",
 				"60": "Talk to Zeke"
+			},
+			"fragments": {
+				"0014A0DC": "Zeke's Jacket and Jeans"
 			}
 		},
 		"00027556": {
@@ -180848,6 +181330,15 @@
 				"1300": "Talk with Kent",
 				"1360": "Talk with Kent",
 				"1400": "Meet with Hancock as the Shroud"
+			},
+			"fragments": {
+				"0014E58B": "Silver Shroud Costume",
+				"000DED2A": "Silver Shroud Calling Card",
+				"000456FC": "Find the Silver Shroud",
+				"0018AC1E": "Silver Shroud Photo",
+				"0008BB31": "Silver Submachine Gun Prop",
+				"001B8FF9": "Silver Shroud Script",
+				"00029167": "Happy Liberty Diagnostic Kit"
 			}
 		},
 		"000A8257": {
@@ -180863,22 +181354,40 @@
 				"50": "Report Your Findings to Justin Ayo",
 				"60": "Disable the Safeguards on Justin Ayo's Terminal",
 				"70": "Return to Liam Binet"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"001B5B26": "Liam's Glasses"
 			}
 		},
 		"010008BB": {
 			"editor_id": "DLC01Lair",
-			"name": "[DLC01 - Mechanist's Lair Dungeon Quest]"
+			"name": "[DLC01 - Mechanist's Lair Dungeon Quest]",
+			"fragments": {
+				"001C26B9": "Mechanic Jumpsuit",
+				"01001D29": "RB-2851 Master Control Password",
+				"01008BC1": "Mechanist's Armor",
+				"01008BC3": "Mechanist's Helmet"
+			}
 		},
 		"073153F7": {
 			"editor_id": "Folon_Demo_SmytheFate",
-			"name": "SytheFateTest"
+			"name": "SytheFateTest",
+			"fragments": {
+				"001C4BE8": "Eyeglasses",
+				"0719ABBE": "Smythe's Hat"
+			}
 		},
 		"0732A12E": {
 			"editor_id": "FOLON_GMTunnelCough"
 		},
 		"072E3809": {
 			"editor_id": "Folon_RETravelKMK_BoSM02",
-			"name": "BoSM02 Postquest - Clarke flees from feral ghouls"
+			"name": "BoSM02 Postquest - Clarke flees from feral ghouls",
+			"fragments": {
+				"071727C2": "Druid Hood",
+				"071727BE": "Druid Outfit"
+			}
 		},
 		"071C1C01": {
 			"editor_id": "FOLON_PipboyManager"
@@ -180892,6 +181401,10 @@
 				"30": "Pick up the torch",
 				"40": "Use the lift",
 				"50": "Find a way out"
+			},
+			"fragments": {
+				"072D372B": "Balisong",
+				"00021B3B": "Pip-Boy"
 			}
 		},
 		"0731F5CD": {
@@ -180903,6 +181416,9 @@
 			"objectives": {
 				"100": "Talk to Katy",
 				"200": "Talk to kids when they are in class"
+			},
+			"fragments": {
+				"0008E745": "Grognak the Barbarian"
 			}
 		},
 		"0006F08A": {
@@ -180918,6 +181434,10 @@
 				"25": "Explore the Library",
 				"30": "Clear the Library of Super Mutants",
 				"40": "Return to Daisy"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"000FE257": "Overdue Book"
 			}
 		},
 		"000AEC4F": {
@@ -180929,6 +181449,9 @@
 			"name": "Botany Class",
 			"objectives": {
 				"10": "Bring a Mutated Fern Flower to Solomon"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap"
 			}
 		},
 		"0005E9D7": {
@@ -180945,6 +181468,9 @@
 				"40": "Bring Med-X to Mama Murphy",
 				"50": "Bring Buffout to Mama Murphy",
 				"60": "Bring Psycho to Mama Murphy"
+			},
+			"fragments": {
+				"000F7EEC": "Kellogg's House Key"
 			}
 		},
 		"000B2D47": {
@@ -180959,6 +181485,10 @@
 				"60": "Resolve the Standoff in Hydroponics",
 				"70": "Talk to Newton Oberly",
 				"80": "Open the BioScience Main Door"
+			},
+			"fragments": {
+				"000C16FF": "Hydroponics Key",
+				"0013A02C": "Security Override Password"
 			}
 		},
 		"072E3832": {
@@ -180979,6 +181509,9 @@
 				"700": "See DiMA brought to justice",
 				"800": "Watch or partipicate in the attack on Acadia",
 				"900": "Talk with Allen Lee"
+			},
+			"fragments": {
+				"0301E3FB": "DiMA's Memory #1"
 			}
 		},
 		"0001FA20": {
@@ -180996,11 +181529,21 @@
 				"230": "Confront Eddie Winter",
 				"260": "Follow Nick",
 				"270": "Speak with Nick"
+			},
+			"fragments": {
+				"0000463F": "Assault Rifle",
+				"00184409": "Eddie Winter Case Notes",
+				"000D4D90": "Welcome Home!",
+				"000EBE78": "Eddie Winter Holotape 1"
 			}
 		},
 		"00160147": {
 			"editor_id": "Tutorial",
-			"name": "Tutorials"
+			"name": "Tutorials",
+			"fragments": {
+				"0008C14D": "Baton",
+				"00004822": "10mm"
+			}
 		},
 		"000537FF": {
 			"editor_id": "BoS202",
@@ -181013,11 +181556,17 @@
 				"50": "Secure Fort Strong Armory",
 				"60": "Speak to Paladin Danse",
 				"70": "Speak to Elder Maxson"
+			},
+			"fragments": {
+				"00056917": "Vertibird Signal Grenade"
 			}
 		},
 		"00061B72": {
 			"editor_id": "DialogueRailroadGenericNPCs",
-			"name": "Railroad HQ - Generic Peeps"
+			"name": "Railroad HQ - Generic Peeps",
+			"fragments": {
+				"00056917": "Vertibird Signal Grenade"
+			}
 		},
 		"000DFB3C": {
 			"editor_id": "MinDestBoS",
@@ -181029,6 +181578,9 @@
 				"400": "Destroy Prydwen",
 				"450": "Defeat Brotherhood attack on the Castle",
 				"500": "Talk to Preston Garvey"
+			},
+			"fragments": {
+				"00056917": "Vertibird Signal Grenade"
 			}
 		},
 		"000B9F9D": {
@@ -181053,6 +181605,9 @@
 				"150": "Speak to Elder Maxson",
 				"160": "Return to the Prydwen",
 				"170": "Speak to Elder Maxson"
+			},
+			"fragments": {
+				"000D10AB": "Danse's Holotags"
 			}
 		},
 		"000229E7": {
@@ -181073,6 +181628,10 @@
 				"150": "Search for More Information",
 				"200": "Discuss Your Findings with Nick",
 				"250": "Discuss Your Findings with Piper"
+			},
+			"fragments": {
+				"0009BC6F": "Cybernetic Limb Actuator",
+				"0009BC70": "Cybernetic Pain Inhibitor"
 			}
 		},
 		"0002C8CB": {
@@ -181090,6 +181649,12 @@
 				"900": "Talk with Tinker Tom",
 				"950": "Defend the vertibird",
 				"1000": "Talk with Deacon"
+			},
+			"fragments": {
+				"00148B86": "Brotherhood of Steel Uniform",
+				"0010A33D": "Plasma Grenade",
+				"000FF21F": "Pulse Grenade",
+				"00148B85": "Explosive Charge"
 			}
 		},
 		"0005DEE4": {
@@ -181108,6 +181673,9 @@
 				"1350": "Talk to Sturges",
 				"1400": "Build defenses for Sanctuary (<Global=Min01SafetyPercent>%)",
 				"1450": "Talk to Sturges"
+			},
+			"fragments": {
+				"001025AC": "Flare Gun"
 			}
 		},
 		"0011B36E": {
@@ -181118,6 +181686,9 @@
 				"20": "Kill the raiders in <Alias=RaiderDungeon>",
 				"30": "Report your success to settlers at <Alias=ActualLocation>",
 				"40": "Talk to Preston Garvey"
+			},
+			"fragments": {
+				"001025AC": "Flare Gun"
 			}
 		},
 		"072E3838": {
@@ -181128,6 +181699,9 @@
 				"20": "Kill the raiders in <Alias=RaiderDungeon>",
 				"30": "Report your success to settlers at <Alias=ActualLocation>",
 				"40": "Talk to Preston Garvey"
+			},
+			"fragments": {
+				"001025AC": "Flare Gun"
 			}
 		},
 		"000E2058": {
@@ -181140,6 +181714,12 @@
 				"30": "Reclaim the Rogue Synth",
 				"40": "Return to Father",
 				"50": "Visit Your Quarters"
+			},
+			"fragments": {
+				"0011E7B8": "Institute Jumper",
+				"001291BF": "Libertalia Password",
+				"0010A33D": "Plasma Grenade",
+				"0010A342": "Plasma Mine"
 			}
 		},
 		"000EDE28": {
@@ -181148,6 +181728,9 @@
 			"objectives": {
 				"10": "Take the Transmitter to the Captured Synth",
 				"20": "Return to Alana Secord"
+			},
+			"fragments": {
+				"0010A33D": "Plasma Grenade"
 			}
 		},
 		"0004542B": {
@@ -181155,6 +181738,11 @@
 			"name": "[DN049 - General Atomics Galleria]",
 			"objectives": {
 				"30": "Report to the Director of the General Atomics Galleria"
+			},
+			"fragments": {
+				"000FF17E": "Galleria DMS Override Password",
+				"00059B02": "Pre-War Money",
+				"00060E7C": "Gold Watch"
 			}
 		},
 		"07299572": {
@@ -181185,6 +181773,10 @@
 				"190": "Kill Lorenzo Cabot",
 				"200": "Talk to Lorenzo Cabot",
 				"210": "Talk to Jack Cabot"
+			},
+			"fragments": {
+				"000495D5": "Cabot House Key",
+				"00052502": "Pillars of the Community Flier"
 			}
 		},
 		"001CCDA5": {
@@ -181214,6 +181806,11 @@
 				"805": "Install a power distributor",
 				"900": "Talk to Dara",
 				"905": "Start the ride"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"0600D2AE": "Spacesuit Costume",
+				"060296B8": "Spacesuit Costume Helmet"
 			}
 		},
 		"000ADCA6": {
@@ -181267,6 +181864,16 @@
 				"110": "Report Back to the Sheriff",
 				"120": "Kill all the Cowboy Protectrons",
 				"1000": "Assign a Gang to Dry Rock Gulch"
+			},
+			"fragments": {
+				"0000000F": "Bottlecap",
+				"06029C08": "Western Outfit",
+				"06042322": "Cowboy Hat",
+				"0604693D": "Safe Combination Part 1",
+				"0604693E": "Safe Combination Part 2",
+				"0604693F": "Safe Combination Part 3",
+				"06046CF6": "Dry Rock Gulch Safe Combination",
+				"060415B3": "Western Revolver"
 			}
 		},
 		"0012221F": {
@@ -181305,7 +181912,17 @@
 		},
 		"0004A09E": {
 			"editor_id": "PerksQuest",
-			"name": "Perks Quest"
+			"name": "Perks Quest",
+			"fragments": {
+				"0006167B": "Atomic Command",
+				"000727FA": "Grognak & The Ruby Ruins",
+				"001680E3": "Protectron Override Program",
+				"001128BC": "Spotlight Override Program",
+				"00108B55": "Turret Override Program",
+				"00072802": "Pipfall",
+				"000E5082": "Red Menace",
+				"00072803": "Zeta Invaders"
+			}
 		},
 		"07326EDE": {
 			"editor_id": "FOLON_LQCity105",
