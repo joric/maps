@@ -833,7 +833,7 @@ function fuzzySearch(s, limit, threshold) {
           }
 
           for (let [key,value] of Object.entries(markers[section][id].fragments||{})) {
-            fragments.push(value);
+            // fragments.push(value); // perhaps do not search by fragments?
           }
 
         }
