@@ -191,7 +191,7 @@
       "Beacon": {"match": "Folon_ACTI_BarryBoatBeacon", "fa": "tower-observation", "bg": "seagreen", "type": "Water Signal Beacon"},
       "Book Terminal": {"match":"DN011OverdueBookVendMachine", "fa":"book", "bg": "darkcyan", "type":"Book Terminal"},
       "CutethulhuActivator": {"match": "Folon_ACTI_CutethulhuDollActivator", "fa": "square-virus", "bg": "darkslategrey", "type": "CuteThulhu Activator"},
-      "Taxi": {"match":"Folon_ACTI_TaxiActivatorFT", "fa":"taxi", "bg": "darkorange", "type":"Taxi"},
+      "Taxi": {"match":"Folon_ACTI_TaxiActivatorFT", "fa":"taxi", "bg": "black", "type":"Taxi"},
       "Tickets": {"match":"loot_capsStash_tin", "fa":"ticket", "bg": "peru", "type":"Tickets", "group": "items"}
     }
   },
