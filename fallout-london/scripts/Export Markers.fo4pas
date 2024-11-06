@@ -121,6 +121,11 @@ begin
           // only allow objects referenced from LondonWorldSpace.esm
           if GetFile(e) <> mod_f then continue;
 
+          // there may be REFR duplicates (e.g. coins vs tickets, form ID 0003000C)
+          // that happens because we scan all files and later files may override the ID
+          // there's no deduplication in the code just yet so use filter like
+          // and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f))
+
           s := EditorID(r);
           fid := GetLoadOrderFormID(e);
 
