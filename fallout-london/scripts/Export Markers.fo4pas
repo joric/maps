@@ -104,7 +104,7 @@ begin
   // r is the original item with the signature from the list
   // e is a reference item with the REFR signature
 
-  // there may be REFR duplicates for overloaded forms (e.g. coins vs tickets, form ID 0003000C)
+  // there may be REFR duplicates for overloaded models (e.g. coins vs tickets, form ID 0003000C)
   // we scan all files and collect items by substring so we may collect older models
   // there's no deduplication in the code just yet so use filters like
   // * and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f))
