@@ -981,7 +981,7 @@ function popupOnClick(e) {
       let a = document.createElement('a');
       c0.title = section == 'quests' ? `Copy Quest ID to Clipboard (${form_id})` : `Copy Form ID to Clipboard (${form_id})`;
 
-      a.title = section == 'quests' ? `${form_id} ${editor_id} (Click Icon to Copy ID)` : `Form ID ${form_id}`;
+      a.title = `Click Icon to Copy ID (${form_id})`;
 
       if (Object.keys(objectives).length>0) {
         a.title += '\n--- objectives ---\n' + Object.entries(objectives).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
