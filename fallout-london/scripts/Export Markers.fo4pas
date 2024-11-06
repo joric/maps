@@ -105,7 +105,7 @@ begin
   // e is a reference item with the REFR signature
 
   // there may be REFR duplicates (e.g. coins vs tickets, form ID 0003000C)
-  // that happens because we scan all files and later files may override the ID
+  // we scan all files and collect items by substring and later files may override the model
   // there's no deduplication in the code just yet so use filters like
   // * and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f))
   // * if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
@@ -178,16 +178,13 @@ begin
             then continue;
           end else if (Signature(r) = 'MISC') and (Signature(e) = 'REFR') then begin
             if (pos('VinylRecord', s) = 0)
-            and (pos('BobbleHead_', s) = 0)
+            and ((pos('BobbleHead_', s) = 0) or (GetFile(r) <> mod_f)) // exclude fo4 bobbleheads
             and (pos('Folon_MiscCuteThulhu', s) = 0)
             and (pos('Folon_MiscCard', s) = 0)
             and (pos('Folon_MiscFeatherPeacock', s) = 0)
             and (pos('FOLON_MiscHymnBook', s) = 0) // Welcome to the Vagabonds
             and (s <> 'OverdueBook') // Overdue Book
             then continue;
-
-            if (pos('BobbleHead_', s) <> 0) and (GetFile(r) <> mod_f) then continue; // exclude fo4 bobbleheas
-
           end else if (Signature(r) = 'BOOK') and (Signature(e) = 'REFR') then begin
             if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
           end else if (Signature(r) = 'NPC_') and (Signature(e) = 'ACHR') then begin
