@@ -204,7 +204,7 @@ begin
             and (fid <> $072e6087) // Corporal Rafferty (food vendor, 072e6087)
             and (rid <> $0725EFB0) // thamesfolk
             and (rid <> $00013746) // human
-            and (rid <> $0011D83F) // karen
+            and (rid <> $0011D83F) // human child (Karen)
             and (rid <> $0001D698) // doge
             and (rid <> $000EAFB6) // ghoul
             and (rid <> $0715650D) // atkins robot (camelot companion)
