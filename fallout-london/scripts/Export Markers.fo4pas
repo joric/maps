@@ -50,6 +50,7 @@ var
   Obj, ChildObj: TJsonObject;
   s, id, section, name: string;
   sList: TStringList;
+  isTeleport, isLocked: boolean;
 begin
   mod_f := FileByIndex(8);
   count := 0;
@@ -82,7 +83,7 @@ begin
 
   sList := TStringList.Create;
   sList.DelimitedText := 'KEYM CONT DOOR NPC_ ARMO BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN ACTI';
-  //sList.DelimitedText := 'NPC_';
+  //sList.DelimitedText := 'DOOR KEYM';
 
   for k := 0 to Pred(sList.Count) do begin
     subcount := 0;
@@ -97,14 +98,13 @@ begin
           fid := GetLoadOrderFormID(e);
 
           if (Signature(r) = 'DOOR') and (Signature(e) = 'REFR') then begin
-            id: = IntToHex(GetLoadOrderFormID(e), 8);
             ref := WinningOverride(LinksTo(ElementByPath(e, 'XTEL\Door')));
-            if not Assigned(ref) then continue;
-//          end else if f<>mod_f then begin
-//            continue;
+            isTeleport := Assigned(ref);
+            ref := LinksTo(ElementByPath(e, 'XLOC\Key'));
+            isLocked := Assigned(ref);
+            if (not isTeleport) and (not isLocked) then continue;
           end else if (Signature(r) = 'ARMO') and (Signature(e) = 'REFR') then begin
-            if (GetFile(r) <> mod_f) // exclude all non-london references
-              then continue;
+            if (GetFile(r) <> mod_f) then continue; // exclude all non-london references
           end else if (Signature(r) = 'KEYM') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'ACTI') and (Signature(e) = 'REFR') then begin
             if (pos('Folon_ACTI_CutethulhuDollActivator', s) = 0)

@@ -477,6 +477,11 @@ function markerSymbol2(o) {
     icon = 'person-walking';
   }
 
+  // mark non-teleport doors
+  if ((icon=='door-open') && o.keys) {
+    icon='door-closed';
+  }
+
 
   if (!(fa = FontAwesome.icon({ iconName: icon }))) {
     fa = FontAwesome.icon({ icon: 'circle-question' });
@@ -1093,6 +1098,7 @@ function loadMarkers() {
     let doors = cell_doors[cell_id];
     for (const door of doors||[]) {
       const next_door = ref_lookup[door.properties.other_door];
+      if (!next_door || !next_door.properties) return null;
       if (next_door.properties.area) return [door, next_door]; // Return the path
       const result = find_path_rec(next_door.properties.cell, false);
       if (result) return [door, ...result]; // Append current door to the path

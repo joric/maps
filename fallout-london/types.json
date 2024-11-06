@@ -196,10 +196,10 @@
     }
   },
 
-  "DOOR": {"fa": "door-open", "bg": "grey", "type": "Exterior Door", "group": "misc",
+  "DOOR": {"fa": "door-open", "bg": "darkorange", "type": "Exterior Door", "group": "misc",
     "items": {
       "Autoload Door": {"match": "AutoloadDoor", "fa": "dungeon", "type": "Autoload Door" },
-      "Interior Door": {"cell":true, "fa": "door-closed", "type": "Interior Door" }
+      "Interior Door": {"cell":true, "fa": "door-open", "type": "Interior Door", "bg":"royalblue" }
    }},
 
   "BOOK": {"fa": "envelope", "bg": "tan", "type": "Message", "group": "items",

@@ -11034,6 +11034,29 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					616,
+					-1296,
+					0
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071261A3",
+				"form_id": "0024952C",
+				"editor_id": "IndMetalDoor01NonOccluder",
+				"keys": [
+					"072FA543"
+				],
+				"cell": "07125D37",
+				"cell_name": "Two Westminster Chairmen"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-32097.201172,
 					-9138.349609,
 					4950.215332
@@ -12762,6 +12785,29 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					1164.532837,
+					1164.243286,
+					764.891479
+				]
+			},
+			"properties": {
+				"title": "Display Case",
+				"description": "DOOR",
+				"ref_id": "07299C22",
+				"form_id": "001C9052",
+				"editor_id": "FederalistDisplayBoxMidTallIntactLid01",
+				"keys": [
+					"07332EFE"
+				],
+				"cell": "07111C71",
+				"cell_name": "Tower of London"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-28.74675,
 					-435.36084,
 					-9.730629
@@ -13501,6 +13547,29 @@
 				],
 				"cell": "0715651F",
 				"cell_name": "Greenwich Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1108.233154,
+					3066.002686,
+					3368.601807
+				]
+			},
+			"properties": {
+				"title": "Security Door",
+				"description": "DOOR",
+				"ref_id": "071A95CB",
+				"form_id": "001B4A3F",
+				"editor_id": "BankMegaSecurityDoor01",
+				"keys": [
+					"071A9A1F"
+				],
+				"cell": "0715A4DD",
+				"cell_name": "Decayed Bank"
 			}
 		},
 		{
@@ -18097,6 +18166,29 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					397.535858,
+					1946.74646,
+					422.531616
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0717313F",
+				"form_id": "0019EFC9",
+				"editor_id": "PaintedWoodDoorC01",
+				"keys": [
+					"071E0C4C"
+				],
+				"cell": "07173113",
+				"cell_name": "Crown Mail Post Office"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					2397.647461,
 					2265.677734,
 					487.369507
@@ -18620,6 +18712,97 @@
 				],
 				"cell": "071A2F8E",
 				"cell_name": "Swan & Mitre"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9631.205078,
+					-72302.351562,
+					5140.875977
+				]
+			},
+			"properties": {
+				"title": "Cryolator Case",
+				"description": "DOOR",
+				"ref_id": "07067D2D",
+				"form_id": "0018F311",
+				"editor_id": "CryoGun_Case01",
+				"keys": [
+					"07068303"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4183.700195,
+					951.98584,
+					474.64624
+				]
+			},
+			"properties": {
+				"title": "Display Case",
+				"description": "DOOR",
+				"ref_id": "0724570E",
+				"form_id": "0018EA4D",
+				"editor_id": "FederalistDisplayBoxWallShortIntactLid01",
+				"keys": [
+					"072450F5"
+				],
+				"cell": "072450F4",
+				"cell_name": "Houseguard Gin Distillery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1982.956055,
+					1703.937134,
+					1144.535278
+				]
+			},
+			"properties": {
+				"title": "Display Case",
+				"description": "DOOR",
+				"ref_id": "072E886C",
+				"form_id": "0018EA4D",
+				"editor_id": "FederalistDisplayBoxWallShortIntactLid01",
+				"keys": [
+					"07301686"
+				],
+				"cell": "072E8708",
+				"cell_name": "Caledonia"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2936.35791,
+					4591.01709,
+					-53.84082
+				]
+			},
+			"properties": {
+				"title": "Display Case",
+				"description": "DOOR",
+				"ref_id": "0730AA8A",
+				"form_id": "0018EA4D",
+				"editor_id": "FederalistDisplayBoxWallShortIntactLid01",
+				"keys": [
+					"072F996D"
+				],
+				"cell": "070465A7",
+				"cell_name": "St George"
 			}
 		},
 		{
@@ -19634,6 +19817,29 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					-7143.95166,
+					-19252.876953,
+					1142.74231
+				]
+			},
+			"properties": {
+				"title": "Elevator",
+				"description": "DOOR",
+				"ref_id": "07113AFA",
+				"form_id": "000F7C72",
+				"editor_id": "ElevatorDoorOutHiTech",
+				"keys": [
+					"072EB15F"
+				],
+				"cell": "0711397B",
+				"cell_name": "Lock Penthouse"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					2695.999512,
 					1939.999878,
 					1536
@@ -19931,6 +20137,31 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					10186.851562,
+					-73487.28125,
+					5072.771973
+				]
+			},
+			"properties": {
+				"title": "Wood Gate",
+				"description": "DOOR",
+				"ref_id": "07067D2C",
+				"form_id": "000F0B4F",
+				"editor_id": "BHMarketGateDoor01",
+				"keys": [
+					"07068304"
+				],
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					92.233444,
 					2930.008789,
 					-1996.9104
@@ -20118,6 +20349,386 @@
 					269.2558
 				],
 				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					231.385925,
+					-1232.723267,
+					-448
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0711FD25",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0711FE11"
+				],
+				"cell": "07111257",
+				"cell_name": "Sewer"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1362.991089,
+					3032.080811,
+					61.23484
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071ABE0C",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"071F1205"
+				],
+				"quests": [
+					"071B7318"
+				],
+				"cell": "071A2FB9",
+				"cell_name": "Wintergarden"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728516,
+					1626.197388,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07284033",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728027,
+					1370.197266,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07284034",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728027,
+					1114.19751,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07284035",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728271,
+					858.197388,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07284036",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3367.728027,
+					602.197266,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07284037",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.728027,
+					522.196777,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07284038",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.728516,
+					778.196777,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07284039",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"quests": [
+					"07283CDA"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.727539,
+					1546.197021,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0728403A",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.728271,
+					1290.197021,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0728403B",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.728027,
+					1034.197021,
+					-446.55069
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0728403C",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0730AC3D"
+				],
+				"quests": [
+					"07283CDA"
+				],
+				"cell": "07283CD4",
+				"cell_name": "Gentry Prison"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6998.401855,
+					902.848572,
+					180.474396
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072D3605",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"072D58A3"
+				],
+				"area": "StPaulsWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-83831.96875,
+					64152.046875,
+					5495.027344
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072D39CC",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"0731B4C5"
+				],
+				"quests": [
+					"072B84CA"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-14408,
+					-25736,
+					5064
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "073037D8",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"073013BE"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.193329,
+					-84.87915,
+					2.799622
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07326FB5",
+				"form_id": "000E74F4",
+				"editor_id": "JailDoorSwing01",
+				"keys": [
+					"07329C84"
+				],
+				"quests": [
+					"072BA816"
+				],
+				"cell": "071B5706",
+				"cell_name": "Shadwell Fire Station"
 			}
 		},
 		{
@@ -23827,6 +24438,106 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					4182.795898,
+					-73397.976562,
+					5033.169434
+				]
+			},
+			"properties": {
+				"title": "Gate",
+				"description": "DOOR",
+				"ref_id": "07067D2F",
+				"form_id": "000CE94B",
+				"editor_id": "JunkWallGate01",
+				"keys": [
+					"07068304"
+				],
+				"quests": [
+					"072BA814"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-9643.427734,
+					9303.677734,
+					1596.387329
+				]
+			},
+			"properties": {
+				"title": "Gate",
+				"description": "DOOR",
+				"ref_id": "0731B2F4",
+				"form_id": "000CE94B",
+				"editor_id": "JunkWallGate01",
+				"keys": [
+					"0732258E"
+				],
+				"quests": [
+					"072BDCC5"
+				],
+				"cell": "070C74E7",
+				"cell_name": "Thameshaven"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					416.817322,
+					238.715668,
+					1536
+				]
+			},
+			"properties": {
+				"title": "Security Gate",
+				"description": "DOOR",
+				"ref_id": "071BB00E",
+				"form_id": "000BA4B5",
+				"editor_id": "SecurityGateSmLatch02",
+				"keys": [
+					"07303831"
+				],
+				"quests": [
+					"071F1179"
+				],
+				"cell": "0711EF3B",
+				"cell_name": "Science Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2072,
+					-888,
+					2368
+				]
+			},
+			"properties": {
+				"title": "Security Gate",
+				"description": "DOOR",
+				"ref_id": "071EB4CA",
+				"form_id": "000BA4B5",
+				"editor_id": "SecurityGateSmLatch02",
+				"keys": [
+					"072EBDA8"
+				],
+				"cell": "071A2FBF",
+				"cell_name": "Bethlem Museum of the Mind"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-1544.241211,
 					109.535667,
 					126.509041
@@ -24147,6 +24858,286 @@
 				],
 				"cell": "071679E4",
 				"cell_name": "House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-256,
+					-384,
+					-512
+				]
+			},
+			"properties": {
+				"title": "Security Gate",
+				"description": "DOOR",
+				"ref_id": "07157A65",
+				"form_id": "00094731",
+				"editor_id": "SecurityGateSmLatch01",
+				"keys": [
+					"071588CA"
+				],
+				"cell": "07156520",
+				"cell_name": "Hackney Police Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2168,
+					-888,
+					2368
+				]
+			},
+			"properties": {
+				"title": "Security Gate",
+				"description": "DOOR",
+				"ref_id": "071EB4C9",
+				"form_id": "00094731",
+				"editor_id": "SecurityGateSmLatch01",
+				"keys": [
+					"072EBDA8"
+				],
+				"cell": "071A2FBF",
+				"cell_name": "Bethlem Museum of the Mind"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-2448,
+					-4888,
+					1128
+				]
+			},
+			"properties": {
+				"title": "Security Gate",
+				"description": "DOOR",
+				"ref_id": "072099E5",
+				"form_id": "00094731",
+				"editor_id": "SecurityGateSmLatch01",
+				"keys": [
+					"0729C4D9"
+				],
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4887.229004,
+					-5121.845215,
+					280.219391
+				]
+			},
+			"properties": {
+				"title": "Security Gate",
+				"description": "DOOR",
+				"ref_id": "0722C895",
+				"form_id": "00094731",
+				"editor_id": "SecurityGateSmLatch01",
+				"keys": [
+					"0722C691"
+				],
+				"cell": "071A2F92",
+				"cell_name": "London City Airport"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4107.969238,
+					1291.121704,
+					-140.670029
+				]
+			},
+			"properties": {
+				"title": "Security Gate",
+				"description": "DOOR",
+				"ref_id": "07237ECC",
+				"form_id": "00094731",
+				"editor_id": "SecurityGateSmLatch01",
+				"keys": [
+					"07237ECD"
+				],
+				"cell": "071061FB",
+				"cell_name": "Cyberfox"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2432.061523,
+					3918.518066,
+					1017.811035
+				]
+			},
+			"properties": {
+				"title": "Security Gate",
+				"description": "DOOR",
+				"ref_id": "0723988A",
+				"form_id": "00094731",
+				"editor_id": "SecurityGateSmLatch01",
+				"keys": [
+					"0731556C"
+				],
+				"quests": [
+					"072B4580",
+					"072F0C90"
+				],
+				"cell": "07210AC7",
+				"cell_name": "HMS Dredge"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1352,
+					392,
+					2368
+				]
+			},
+			"properties": {
+				"title": "Security Gate",
+				"description": "DOOR",
+				"ref_id": "072EBDB6",
+				"form_id": "00094731",
+				"editor_id": "SecurityGateSmLatch01",
+				"keys": [
+					"072EBDA8"
+				],
+				"cell": "071A2FBF",
+				"cell_name": "Bethlem Museum of the Mind"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-412.885254,
+					3017,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0723CAE9",
+				"form_id": "0008158A",
+				"editor_id": "HitDoorLg01",
+				"keys": [
+					"0724EB34"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					5218.885254,
+					2633.734375,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0723D370",
+				"form_id": "0008158A",
+				"editor_id": "HitDoorLg01",
+				"keys": [
+					"0724EB34"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					0,
+					640,
+					512
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0723E1E5",
+				"form_id": "0008158A",
+				"editor_id": "HitDoorLg01",
+				"keys": [
+					"0723C0AB"
+				],
+				"cell": "07195B6E",
+				"cell_name": "London Mithraeum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2403.114746,
+					2632.999023,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0724EDEE",
+				"form_id": "0008158A",
+				"editor_id": "HitDoorLg01",
+				"keys": [
+					"0724EB34"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6242.885742,
+					3657.727051,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0724EDF2",
+				"form_id": "0008158A",
+				"editor_id": "HitDoorLg01",
+				"keys": [
+					"0724EB34"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
 			}
 		},
 		{
@@ -24843,6 +25834,28 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					3465.657959,
+					-27859.503906,
+					5077.665527
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072772FA",
+				"form_id": "0007E290",
+				"editor_id": "IndMetalDoor02",
+				"keys": [
+					"07276668"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					4305.581055,
 					2586.41333,
 					810.123779
@@ -25486,6 +26499,52 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					-584.000122,
+					-991.999756,
+					0
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "070CA602",
+				"form_id": "0002279B",
+				"editor_id": "UtilMetalDoor01",
+				"keys": [
+					"070CA818"
+				],
+				"cell": "070C9EED",
+				"cell_name": "Newham Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-0.000122,
+					639.537537,
+					0
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07157A35",
+				"form_id": "0002279B",
+				"editor_id": "UtilMetalDoor01",
+				"keys": [
+					"071588C9"
+				],
+				"cell": "07156520",
+				"cell_name": "Hackney Police Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-142.599838,
 					-71.154343,
 					24.274799
@@ -26042,6 +27101,32 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					-6134.414062,
+					8933.609375,
+					830.070312
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07293162",
+				"form_id": "0002278C",
+				"editor_id": "UtilMetalDbDoor01",
+				"keys": [
+					"07292CB0"
+				],
+				"quests": [
+					"072BA806"
+				],
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					78414.59375,
 					44408.289062,
 					5039.881348
@@ -26328,6 +27413,29 @@
 				],
 				"cell": "07331AAC",
 				"cell_name": "Hideout"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-256,
+					640,
+					0
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07157A36",
+				"form_id": "00018C93",
+				"editor_id": "IndMetalDoor01",
+				"keys": [
+					"071588C9"
+				],
+				"cell": "07156520",
+				"cell_name": "Hackney Police Station"
 			}
 		},
 		{
@@ -29741,6 +30849,167 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					1853.619751,
+					1460.091675,
+					372.255646
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0711D382",
+				"form_id": "00052576",
+				"editor_id": "ShackDoor01",
+				"keys": [
+					"0711D58A"
+				],
+				"cell": "0702E9DD",
+				"cell_name": "University College Hospital"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-11416.822266,
+					9889.855469,
+					848.639709
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072EF012",
+				"form_id": "00052576",
+				"editor_id": "ShackDoor01",
+				"keys": [
+					"072FD602"
+				],
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8358.75,
+					7274.220703,
+					1330.933716
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "070D061A",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"070D06EE"
+				],
+				"cell": "070CFE47",
+				"cell_name": "Tower Hamlets Pindar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-640,
+					1600,
+					-760
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07146EE8",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"072EBF3D"
+				],
+				"cell": "070B6922",
+				"cell_name": "Lambeth Aquarium"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1280,
+					896,
+					3584
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071BDF8E",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"071BE10C"
+				],
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-768,
+					-640,
+					3584
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071BDFAD",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"071BE10E"
+				],
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					384,
+					-256,
+					3584
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071BDFAE",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"071BE10E"
+				],
+				"cell": "071BDC34",
+				"cell_name": "Madeira Inc. Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-462.122314,
 					5831.697266,
 					-262.552734
@@ -29774,6 +31043,98 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					2299.789062,
+					2256.616211,
+					241.778473
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0723A85C",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"0732B383"
+				],
+				"cell": "07238BDB",
+				"cell_name": "The Mend"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2915.114746,
+					2632.999512,
+					1444.059082
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07244C2D",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"0724EB34"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4578.881836,
+					1097.734741,
+					1508.059082
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0724EDF0",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"0724EB34"
+				],
+				"cell": "0720BD55",
+				"cell_name": "Angel Lab Lower Levels"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1044,
+					-1254,
+					4139
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07275631",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"0727E561"
+				],
+				"cell": "07274281",
+				"cell_name": "Nuka-Cola Headquarters Top Floor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					723.782227,
 					491.999939,
 					477.995117
@@ -29799,6 +31160,52 @@
 				],
 				"cell": "072B079C",
 				"cell_name": "Destroyed Tower"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-115.405273,
+					3006.637451,
+					3887.873535
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072CE4DD",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"072CDC8A"
+				],
+				"cell": "07053E1B",
+				"cell_name": "London Gas and Heating Offices"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					4744,
+					2488.000732,
+					8
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072CE511",
+				"form_id": "0003D773",
+				"editor_id": "HitDoorSm01",
+				"keys": [
+					"072EA9E3"
+				],
+				"cell": "071647E7",
+				"cell_name": "The Gauntlet"
 			}
 		},
 		{
@@ -32193,6 +33600,29 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					1056,
+					-504,
+					0
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071AE32F",
+				"form_id": "0001D930",
+				"editor_id": "BldWoodPDbDoor01",
+				"keys": [
+					"0728C778"
+				],
+				"cell": "071AE25F",
+				"cell_name": "Broadcasting House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					1078.428345,
 					121.122925,
 					2162
@@ -34257,6 +35687,121 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					-480,
+					432,
+					224
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07157C75",
+				"form_id": "0001D92C",
+				"editor_id": "BldWoodPDoor01",
+				"keys": [
+					"072E578A"
+				],
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3996.215332,
+					2358.111572,
+					-231.048492
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071B37AD",
+				"form_id": "0001D92C",
+				"editor_id": "BldWoodPDoor01",
+				"keys": [
+					"07240ABC"
+				],
+				"cell": "071AD97D",
+				"cell_name": "Hippodrome"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-351.999939,
+					-208,
+					224
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071FA41D",
+				"form_id": "0001D92C",
+				"editor_id": "BldWoodPDoor01",
+				"keys": [
+					"072E578A"
+				],
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-352,
+					48,
+					224
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071FA6EE",
+				"form_id": "0001D92C",
+				"editor_id": "BldWoodPDoor01",
+				"keys": [
+					"072E578A"
+				],
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-784,
+					-4632,
+					1768
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0732B0FF",
+				"form_id": "0001D92C",
+				"editor_id": "BldWoodPDoor01",
+				"keys": [
+					"072218CA"
+				],
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					3729.78833,
 					-2303.411377,
 					-198.77684
@@ -34442,6 +35987,28 @@
 				],
 				"cell": "072BEA93",
 				"cell_name": "Hidden Bunker"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-20896.640625,
+					32599.390625,
+					5095.688477
+				]
+			},
+			"properties": {
+				"title": "Gate",
+				"description": "DOOR",
+				"ref_id": "0719F22E",
+				"form_id": "0001CB71",
+				"editor_id": "MetalGateFancy01",
+				"keys": [
+					"0732C63E"
+				],
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -34806,6 +36373,72 @@
 				],
 				"cell": "070D7E5A",
 				"cell_name": "The Nags"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7082.038574,
+					-72368.242188,
+					5080.686523
+				]
+			},
+			"properties": {
+				"title": "Gate",
+				"description": "DOOR",
+				"ref_id": "072ECA1C",
+				"form_id": "00004E46",
+				"editor_id": "FenceChainlinkGate01",
+				"keys": [
+					"07067FA3"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7082.038574,
+					-72507.03125,
+					5080.686523
+				]
+			},
+			"properties": {
+				"title": "Gate",
+				"description": "DOOR",
+				"ref_id": "072ECA1D",
+				"form_id": "00004E46",
+				"editor_id": "FenceChainlinkGate01",
+				"keys": [
+					"07067FFF"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7082.038574,
+					-72644.625,
+					5080.686523
+				]
+			},
+			"properties": {
+				"title": "Gate",
+				"description": "DOOR",
+				"ref_id": "072ECA28",
+				"form_id": "00004E46",
+				"editor_id": "FenceChainlinkGate01",
+				"keys": [
+					"0706811B"
+				],
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -36128,6 +37761,98 @@
 				],
 				"cell": "072F010F",
 				"cell_name": "Rusted Caravan"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-608,
+					560,
+					224
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07157C74",
+				"form_id": "00022563",
+				"editor_id": "BldWoodPDoor02",
+				"keys": [
+					"072E578A"
+				],
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-352,
+					560,
+					224
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07157D5C",
+				"form_id": "00022563",
+				"editor_id": "BldWoodPDoor02",
+				"keys": [
+					"072E578A"
+				],
+				"cell": "0715651C",
+				"cell_name": "Lambeth Fire Station"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					344,
+					-129,
+					384
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0726C4D1",
+				"form_id": "00022563",
+				"editor_id": "BldWoodPDoor02",
+				"keys": [
+					"0726C118"
+				],
+				"cell": "071A2FB3",
+				"cell_name": "10 Downing Street"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					197.250977,
+					-116.455811,
+					378.953857
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072FBBA7",
+				"form_id": "00022563",
+				"editor_id": "BldWoodPDoor02",
+				"keys": [
+					"072FB99B"
+				],
+				"cell": "072FB955",
+				"cell_name": "Land's End Inn"
 			}
 		},
 		{
@@ -37481,6 +39206,28 @@
 					0,
 					0,
 					315.8034
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9631.205078,
+					-72302.351562,
+					5140.875977
+				]
+			},
+			"properties": {
+				"title": "Cold Storage",
+				"description": "DOOR",
+				"ref_id": "07067D2D",
+				"form_id": "0018F311",
+				"editor_id": "CryoGun_Case01",
+				"keys": [
+					"07068303"
 				],
 				"area": "LondonWorld"
 			}
@@ -41061,6 +42808,52 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					3498.212158,
+					1076.357544,
+					474.64624
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0724570D",
+				"form_id": "071E9747",
+				"editor_id": "Folon_TCW_OffDoorSmDbl02Fixed",
+				"keys": [
+					"072450F5"
+				],
+				"cell": "072450F4",
+				"cell_name": "Houseguard Gin Distillery"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-7143.95166,
+					-19252.876953,
+					1142.74231
+				]
+			},
+			"properties": {
+				"title": "Lift",
+				"description": "DOOR",
+				"ref_id": "07113AFA",
+				"form_id": "000F7C72",
+				"editor_id": "ElevatorDoorOutHiTech",
+				"keys": [
+					"072EB15F"
+				],
+				"cell": "0711397B",
+				"cell_name": "Lock Penthouse"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-1132.184448,
 					-612.031799,
 					3627.506348
@@ -44276,6 +46069,355 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					127.557205,
+					-1.111256,
+					256.17276
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0729B61E",
+				"form_id": "071E0CC5",
+				"editor_id": "Folon_TCW_OffDoorSmR01fixed",
+				"keys": [
+					"07327855"
+				],
+				"quests": [
+					"072BA818"
+				],
+				"cell": "07045FD1",
+				"cell_name": "The Old Cheese Of Cheshire"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1481.700073,
+					1432.000366,
+					384
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07249457",
+				"form_id": "071E0CBE",
+				"editor_id": "Folon_TCW_OffDoorMetalSmL02bfixed",
+				"keys": [
+					"073112AC"
+				],
+				"quests": [
+					"0731101F"
+				],
+				"cell": "070B3840",
+				"cell_name": "NuSkin"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-257.876862,
+					572.315735,
+					-479.756409
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07235D5D",
+				"form_id": "071E0CBA",
+				"editor_id": "Folon_TCW_OffDoorMetalSmR01fixed",
+				"keys": [
+					"073011CC"
+				],
+				"cell": "071A2FAF",
+				"cell_name": "City Hall"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2943.998047,
+					1984.000977,
+					-512
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0727E135",
+				"form_id": "071E0CB6",
+				"editor_id": "Folon_TCW_OffDoorMetalSmL02afixed",
+				"keys": [
+					"0727D39C"
+				],
+				"quests": [
+					"07283CDA"
+				],
+				"cell": "0727D38E",
+				"cell_name": "Scotland Yard"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2166.012451,
+					3797.529297,
+					-293.84079
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0727F9C1",
+				"form_id": "071E0CB6",
+				"editor_id": "Folon_TCW_OffDoorMetalSmL02afixed",
+				"keys": [
+					"072EEDD4"
+				],
+				"quests": [
+					"072AC4EB",
+					"072B658A",
+					"072B84CE"
+				],
+				"cell": "070465A7",
+				"cell_name": "St George"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-383.999695,
+					256.000061,
+					0
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07278F82",
+				"form_id": "071E0CB2",
+				"editor_id": "Folon_TCW_OffDoorHotelSmR03aFixed",
+				"keys": [
+					"07278CD3"
+				],
+				"cell": "07180059",
+				"cell_name": "Kinoworld Cinema"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2029.988037,
+					4008.190918,
+					-309.87851
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072EEEE6",
+				"form_id": "071E0CAC",
+				"editor_id": "Folon_TCW_OffDoorHotelSmR03bFIXED",
+				"keys": [
+					"072EEDD4"
+				],
+				"quests": [
+					"072AC4EB",
+					"072B658A"
+				],
+				"cell": "070465A7",
+				"cell_name": "St George"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1731.330078,
+					-1392.000244,
+					383.89801
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "071898DB",
+				"form_id": "071E0CAA",
+				"editor_id": "Folon_TCW_OffDoorHotelSmL03bFIXED",
+				"keys": [
+					"073112AC"
+				],
+				"cell": "070B3840",
+				"cell_name": "NuSkin"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					28,
+					-188,
+					-240
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072D4383",
+				"form_id": "071E0CAA",
+				"editor_id": "Folon_TCW_OffDoorHotelSmL03bFIXED",
+				"keys": [
+					"072B07A2"
+				],
+				"cell": "072B079D",
+				"cell_name": "Churchill Library"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2662.000488,
+					1299.99939,
+					-664
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0730D6C9",
+				"form_id": "071E0CAA",
+				"editor_id": "Folon_TCW_OffDoorHotelSmL03bFIXED",
+				"keys": [
+					"0730D227"
+				],
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					112.000992,
+					-4131.586426,
+					1512.989746
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "07221523",
+				"form_id": "071E0ADF",
+				"editor_id": "Folon_TCW_GomorrahDoorDouble01",
+				"keys": [
+					"072218CA"
+				],
+				"quests": [
+					"071A2F20"
+				],
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					744.002197,
+					-3496.001953,
+					1512
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072218CD",
+				"form_id": "071E0ADF",
+				"editor_id": "Folon_TCW_GomorrahDoorDouble01",
+				"keys": [
+					"0722211B"
+				],
+				"quests": [
+					"071A2F20"
+				],
+				"cell": "0712EC66",
+				"cell_name": "Bank of England"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					895.999878,
+					-1280,
+					321.465332
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0725A93A",
+				"form_id": "071E0ADF",
+				"editor_id": "Folon_TCW_GomorrahDoorDouble01",
+				"keys": [
+					"07259C37"
+				],
+				"cell": "0710423F",
+				"cell_name": "St Pancras International Hotel"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2230.180908,
+					-1792.454346,
+					654.297363
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072832ED",
+				"form_id": "071E0ADF",
+				"editor_id": "Folon_TCW_GomorrahDoorDouble01",
+				"keys": [
+					"073023CE"
+				],
+				"quests": [
+					"072AC4F1"
+				],
+				"cell": "071A2F89",
+				"cell_name": "Buckingham Palace"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					-7016,
 					3928,
 					968
@@ -44855,6 +46997,28 @@
 					0,
 					0,
 					180.0003
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7100.33252,
+					-72927.625,
+					5066.030762
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "072ECA29",
+				"form_id": "071E0AD8",
+				"editor_id": "Folon_TCW_WastelandDoorR01",
+				"keys": [
+					"07068303"
 				],
 				"area": "LondonWorld"
 			}
@@ -48451,6 +50615,51 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					40468.394531,
+					-28901.289062,
+					5067.388672
+				]
+			},
+			"properties": {
+				"title": "Preservation Shelter",
+				"description": "DOOR",
+				"ref_id": "07302B1F",
+				"form_id": "0713030C",
+				"editor_id": "Folon_PreservationShelterDoor",
+				"keys": [
+					"0731C3D1"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2819.151855,
+					622.264893,
+					-664
+				]
+			},
+			"properties": {
+				"title": "Door",
+				"description": "DOOR",
+				"ref_id": "0730D6CB",
+				"form_id": "0712FAC9",
+				"editor_id": "Folon_TCW_OffDoorHotelSmL03a1",
+				"keys": [
+					"0730D227"
+				],
+				"cell": "0724D422",
+				"cell_name": "Prilladog Chum Factory"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					81120.414062,
 					48594.6875,
 					5031.22998
@@ -49218,6 +51427,72 @@
 					208.9918
 				],
 				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8994.256836,
+					-72521.539062,
+					5063.472168
+				]
+			},
+			"properties": {
+				"title": "Phone Box Door",
+				"description": "DOOR",
+				"ref_id": "07068007",
+				"form_id": "07003538",
+				"editor_id": "Folon_StreetTelephoneBoxDoor",
+				"keys": [
+					"07067FA3"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8994.34375,
+					-72392.960938,
+					5063.472168
+				]
+			},
+			"properties": {
+				"title": "Phone Box Door",
+				"description": "DOOR",
+				"ref_id": "07068008",
+				"form_id": "07003538",
+				"editor_id": "Folon_StreetTelephoneBoxDoor",
+				"keys": [
+					"07067FA3"
+				],
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8994.34375,
+					-72262.507812,
+					5063.472168
+				]
+			},
+			"properties": {
+				"title": "Phone Box Door",
+				"description": "DOOR",
+				"ref_id": "07068009",
+				"form_id": "07003538",
+				"editor_id": "Folon_StreetTelephoneBoxDoor",
+				"keys": [
+					"07067FA3"
+				],
+				"area": "LondonWorld"
 			}
 		},
 		{
@@ -176425,17 +178700,34 @@
 			"editor_id": "FOLON_MQ309Master",
 			"name": "Battle of Westminster Master Quest"
 		},
-		"07238B82": {
-			"editor_id": "FOLON_SQThameshaven102",
-			"name": "Saint of Style",
+		"071B7318": {
+			"editor_id": "FOLON_MQ106",
+			"name": "Cold Case",
 			"objectives": {
-				"10": "Travel to the Laundromat in Greenwhich",
-				"20": "Find clothes for Ellen",
-				"30": "Turn on the power",
-				"40": "Put washing powder in the washing machine",
-				"50": "Wait for clothes to wash (<Global=Folon_SQThameshaven102_WMPercent>%)",
-				"55": "Collect the clothes",
-				"60": "Return to Ellen"
+				"10": "Speak to Father Luke",
+				"20": "Investigate Lazarus' belongings",
+				"30": "Return to Father Luke",
+				"40": "Figure out who \"bones\" is",
+				"50": "Speak to the undertaker's assistant",
+				"55": "Investigate Christopher's belongings",
+				"60": "Confront Christopher",
+				"70": "Consult Reverend Francis",
+				"80": "Find Lazarus' stash",
+				"90": "Travel to Beefeater Burger",
+				"95": "Search for clues in the restaurant",
+				"100": "Listen to the holotape",
+				"110": "Investigate Wintergarden",
+				"120": "Free Lazarus",
+				"140": "Speak to Lazarus"
+			}
+		},
+		"07283CDA": {
+			"editor_id": "FOLON_MQ203",
+			"name": "All To Pot",
+			"objectives": {
+				"30": "Talk to the man outside your cell",
+				"40": "Escape the prison",
+				"45": "Retrieve your belongings"
 			}
 		},
 		"072B84CA": {
@@ -176461,13 +178753,43 @@
 				"200": "Give Arthur a full report"
 			}
 		},
-		"07283CDA": {
-			"editor_id": "FOLON_MQ203",
-			"name": "All To Pot",
+		"07238B82": {
+			"editor_id": "FOLON_SQThameshaven102",
+			"name": "Saint of Style",
 			"objectives": {
-				"30": "Talk to the man outside your cell",
-				"40": "Escape the prison",
-				"45": "Retrieve your belongings"
+				"10": "Travel to the Laundromat in Greenwhich",
+				"20": "Find clothes for Ellen",
+				"30": "Turn on the power",
+				"40": "Put washing powder in the washing machine",
+				"50": "Wait for clothes to wash (<Global=Folon_SQThameshaven102_WMPercent>%)",
+				"55": "Collect the clothes",
+				"60": "Return to Ellen"
+			}
+		},
+		"072F0C90": {
+			"editor_id": "FOLON_GW106PrisonersManager"
+		},
+		"072BA806": {
+			"editor_id": "FOLON_SQSouthwark101",
+			"name": "No More Heroes",
+			"objectives": {
+				"1": "Investigate the shouting",
+				"2": "Listen to Allen's speech",
+				"5": "Talk to Harvin",
+				"10": "Find Harvin's office",
+				"11": "Speak to Harvin",
+				"12": "Follow Harvin",
+				"13": "Speak to Allen",
+				"15": "Follow Harvin",
+				"16": "Talk to Allen",
+				"17": "Follow Harvin",
+				"18": "Eliminate Allen",
+				"19": "Kill Harvin",
+				"20": "Speak to Harvin",
+				"21": "Speak to Allen",
+				"161": "Speak to Harvin",
+				"171": "Speak to Allen",
+				"172": "Speak to Harvin"
 			}
 		},
 		"072B84D1": {
@@ -176504,27 +178826,6 @@
 				"315": "Meet with your squad outside",
 				"320": "Debrief with your squad",
 				"330": "Report to Merlin"
-			}
-		},
-		"071B7318": {
-			"editor_id": "FOLON_MQ106",
-			"name": "Cold Case",
-			"objectives": {
-				"10": "Speak to Father Luke",
-				"20": "Investigate Lazarus' belongings",
-				"30": "Return to Father Luke",
-				"40": "Figure out who \"bones\" is",
-				"50": "Speak to the undertaker's assistant",
-				"55": "Investigate Christopher's belongings",
-				"60": "Confront Christopher",
-				"70": "Consult Reverend Francis",
-				"80": "Find Lazarus' stash",
-				"90": "Travel to Beefeater Burger",
-				"95": "Search for clues in the restaurant",
-				"100": "Listen to the holotape",
-				"110": "Investigate Wintergarden",
-				"120": "Free Lazarus",
-				"140": "Speak to Lazarus"
 			}
 		},
 		"072AA43E": {
@@ -176853,6 +179154,67 @@
 				"20": "(Optional) Let the Vagabonds in",
 				"25": "Burn the warehouse",
 				"30": "Return to Anthony"
+			}
+		},
+		"072BA818": {
+			"editor_id": "FOLON_MQFifth304",
+			"name": "Mountain Out Of A Molehill",
+			"objectives": {
+				"10": "Speak to Eve in her office",
+				"20": "Speak to Zach Lloyd",
+				"30": "Wait at the Drop-Off Point",
+				"40": "Defeat the Ambushers",
+				"50": "Report Back to Zach Lloyd",
+				"60": "Make contact with Jeff Mutt",
+				"70": "Clear out the church in Wandsworth",
+				"80": "Return to Jeff Mutt",
+				"90": "Return to the church",
+				"100": "Wait to ambush the Knights",
+				"101": "(Optional) Place a trap at the church door",
+				"110": "Take down Lancelot and kill his allies",
+				"120": "Let Horatio question Lancelot",
+				"130": "Speak to Horatio",
+				"140": "(Optional) Search Lancelot's room",
+				"150": "(Optional) Confront Rhys Clarke",
+				"151": "Return to Zach Lloyd",
+				"160": "Report to Eve"
+			}
+		},
+		"0731101F": {
+			"editor_id": "FOLON_SQWestminster109",
+			"name": "NuSkin, New You",
+			"objectives": {
+				"10": "Speak to Miss Crake",
+				"11": "Make an appointment for a NuSkin treatment",
+				"20": "Speak to Nurse Peggy",
+				"30": "Enter the Restricted Section of NuSkin",
+				"35": "Speak to the Child",
+				"37": "(Optional) Find out what happened to Renara",
+				"40": "Find out what is happening at NuSkin",
+				"41": "Access Miss Crake's Terminal",
+				"45": "Tell Nurse Peggy of your findings",
+				"50": "Speak to Miss Crake",
+				"60": "Kill Miss Crake and eliminate the Robots",
+				"70": "Speak to Caspian",
+				"80": "Speak to the people of Eastminster"
+			}
+		},
+		"072B84CE": {
+			"editor_id": "FOLON_MQFifth303",
+			"name": "Of Mutants and Men",
+			"objectives": {
+				"5": "Talk to John Smith",
+				"10": "Report to Victor Schmidt",
+				"20": "Speak to Horatio Whitehouse",
+				"30": "Investigate Thameshaven",
+				"40": "Talk to Dr. Alan Webb",
+				"50": "Find out about Tunnel Cough immunity in Thameshaven",
+				"60": "Talk to Margery",
+				"64": "Convince Margery to go to Cable Street",
+				"70": "Talk to Horatio",
+				"80": "Inform Dr. Webb about his Granddaughter",
+				"82": "Take Dr. Webb back to the 5th Column",
+				"83": "Discover what is going on"
 			}
 		},
 		"072964A4": {
@@ -177656,24 +180018,6 @@
 				"30": "Speak to Rodger"
 			}
 		},
-		"072B84CE": {
-			"editor_id": "FOLON_MQFifth303",
-			"name": "Of Mutants and Men",
-			"objectives": {
-				"5": "Talk to John Smith",
-				"10": "Report to Victor Schmidt",
-				"20": "Speak to Horatio Whitehouse",
-				"30": "Investigate Thameshaven",
-				"40": "Talk to Dr. Alan Webb",
-				"50": "Find out about Tunnel Cough immunity in Thameshaven",
-				"60": "Talk to Margery",
-				"64": "Convince Margery to go to Cable Street",
-				"70": "Talk to Horatio",
-				"80": "Inform Dr. Webb about his Granddaughter",
-				"82": "Take Dr. Webb back to the 5th Column",
-				"83": "Discover what is going on"
-			}
-		},
 		"072BA808": {
 			"editor_id": "FOLON_MQFifth307",
 			"name": "A Roar in the Waves",
@@ -177700,49 +180044,6 @@
 				"110": "Speak with Eve",
 				"120": "Descend",
 				"140": "Debrief with Eve"
-			}
-		},
-		"072BA818": {
-			"editor_id": "FOLON_MQFifth304",
-			"name": "Mountain Out Of A Molehill",
-			"objectives": {
-				"10": "Speak to Eve in her office",
-				"20": "Speak to Zach Lloyd",
-				"30": "Wait at the Drop-Off Point",
-				"40": "Defeat the Ambushers",
-				"50": "Report Back to Zach Lloyd",
-				"60": "Make contact with Jeff Mutt",
-				"70": "Clear out the church in Wandsworth",
-				"80": "Return to Jeff Mutt",
-				"90": "Return to the church",
-				"100": "Wait to ambush the Knights",
-				"101": "(Optional) Place a trap at the church door",
-				"110": "Take down Lancelot and kill his allies",
-				"120": "Let Horatio question Lancelot",
-				"130": "Speak to Horatio",
-				"140": "(Optional) Search Lancelot's room",
-				"150": "(Optional) Confront Rhys Clarke",
-				"151": "Return to Zach Lloyd",
-				"160": "Report to Eve"
-			}
-		},
-		"0731101F": {
-			"editor_id": "FOLON_SQWestminster109",
-			"name": "NuSkin, New You",
-			"objectives": {
-				"10": "Speak to Miss Crake",
-				"11": "Make an appointment for a NuSkin treatment",
-				"20": "Speak to Nurse Peggy",
-				"30": "Enter the Restricted Section of NuSkin",
-				"35": "Speak to the Child",
-				"37": "(Optional) Find out what happened to Renara",
-				"40": "Find out what is happening at NuSkin",
-				"41": "Access Miss Crake's Terminal",
-				"45": "Tell Nurse Peggy of your findings",
-				"50": "Speak to Miss Crake",
-				"60": "Kill Miss Crake and eliminate the Robots",
-				"70": "Speak to Caspian",
-				"80": "Speak to the people of Eastminster"
 			}
 		},
 		"07311022": {
@@ -179391,6 +181692,10 @@
 		}
 	},
 	"keys": {
+		"072FA543": {
+			"editor_id": "Folon_KEYM_WestminsterPubFridgeKey",
+			"name": "Pub Fridge Key"
+		},
 		"0729E3F5": {
 			"editor_id": "Folon_KEYM_MQ104_Key01",
 			"name": "Monument Hatch Key"
@@ -179403,6 +181708,14 @@
 			"editor_id": "Folon_KEYM_FQPistols_HouseKey",
 			"name": "Camden Lock House Key"
 		},
+		"07332EFE": {
+			"editor_id": "Folon_KEYM_TOLCrownKey",
+			"name": "Crown Jewels Key"
+		},
+		"071A9A1F": {
+			"editor_id": "Folon_KEYM_IslingBankVaultKey01",
+			"name": "Islington Bank Vault Key"
+		},
 		"072F0C99": {
 			"editor_id": "Folon_KEYM_HMSDredgeKey",
 			"name": "HMS Dredge Key"
@@ -179411,37 +181724,273 @@
 			"editor_id": "FOLON_KEYM_GreenwichStationKey",
 			"name": "Greenwich Station Key"
 		},
+		"071E0C4C": {
+			"editor_id": "Folon_KEYM_CroydonPOKeys01",
+			"name": "Sorting Room Keys"
+		},
+		"07068303": {
+			"editor_id": "Folon_KEYM_CroydonMazeKey04",
+			"name": "Maze Key #4"
+		},
+		"072450F5": {
+			"editor_id": "Folon_KEYM_GinBreweryKey01",
+			"name": "Gin Brewery Lobby Key"
+		},
+		"07301686": {
+			"editor_id": "Folon_KEYM_SQWestminster106CharterKey",
+			"name": "Charter Display Case Key"
+		},
+		"072F996D": {
+			"editor_id": "Folon_KEYM_5thColumnKey",
+			"name": "St George Master Key"
+		},
+		"07068304": {
+			"editor_id": "Folon_KEYM_CroydonMazeKey05",
+			"name": "Maze Exit Key"
+		},
+		"0711FE11": {
+			"editor_id": "Folon_KEYM_IslingtonSewerKey01",
+			"name": "Sewer Gate Key"
+		},
+		"071F1205": {
+			"editor_id": "Folon_KEYM_MQ106_Key01",
+			"name": "Wintergarden Key"
+		},
+		"0730AC3D": {
+			"editor_id": "Folon_KEYM_MQ203_CellBlockAKey",
+			"name": "Cell Block A Master Key"
+		},
+		"072D58A3": {
+			"editor_id": "Folon_KEYM_StPaulsSafeKey",
+			"name": "Tarnished Key"
+		},
+		"0731B4C5": {
+			"editor_id": "Folon_KEYM_MQCamelot304_CageKey",
+			"name": "Churchyard Cage Key"
+		},
+		"073013BE": {
+			"editor_id": "FOLON_KEYM_SQNewham102_JailKey",
+			"name": "Jail Key"
+		},
+		"07329C84": {
+			"editor_id": "FOLON_KEYM_MQFifth308LanceCell",
+			"name": "Key to Lancelot's Cell"
+		},
+		"0732258E": {
+			"editor_id": "Folon_KEYM_COM_ArchieQuest",
+			"name": "Barrier Key"
+		},
+		"07303831": {
+			"editor_id": "Folon_KEYM_MQ204_LabKey",
+			"name": "Science Museum Lab Key"
+		},
+		"072EBDA8": {
+			"editor_id": "Folon_KEYM_CroydonBedlam",
+			"name": "Bethlem Royal Hospital Key"
+		},
+		"071588CA": {
+			"editor_id": "Folon_KEYM_WolfpackPrison02_PowerRoomKey02",
+			"name": "Police Station Maintenance Key"
+		},
+		"0729C4D9": {
+			"editor_id": "Folon_KEYM_BOEKeyCard02",
+			"name": "Bank Pindar Key Card"
+		},
+		"0722C691": {
+			"editor_id": "Folon_KEYM_NewhamLCASecurityDoorKey01",
+			"name": "LCA Security Keys"
+		},
+		"07237ECD": {
+			"editor_id": "Folon_KEYM_CyberdogSecurityKey01",
+			"name": "Cyberdog Security Key"
+		},
+		"0731556C": {
+			"editor_id": "Folon_KEYM_GW106ArmouryKey",
+			"name": "HMS Dredge Armoury Key"
+		},
+		"0724EB34": {
+			"editor_id": "Folon_KEYM_ABCWlabKeyCard01",
+			"name": "Biolab Keycard"
+		},
+		"0723C0AB": {
+			"editor_id": "Folon_KEYM_MithraeumKey01",
+			"name": "Mithraeum Key"
+		},
+		"07276668": {
+			"editor_id": "Folon_KEYM_AndersonShelterKey",
+			"name": "Anderson Shelter Key"
+		},
+		"070CA818": {
+			"editor_id": "Folon_KEYM_NewhamPindarKey01",
+			"name": "Newham Pindar Key"
+		},
+		"071588C9": {
+			"editor_id": "Folon_KEYM_WolfpackPrison02_InterrogationRoomKey01",
+			"name": "Interrogation Room Key"
+		},
 		"073188D0": {
 			"editor_id": "Folon_KEYM_NewhamIODSFactory",
 			"name": "Syndicate Factory Key"
+		},
+		"07292CB0": {
+			"editor_id": "Folon_KEYM_ThameshavenPlayerRoomKey",
+			"name": "Innsmouth Suite Key"
 		},
 		"07331E39": {
 			"editor_id": "Folon_KEYM_NewhamTextileKey",
 			"name": "Textile Manufactorium Key"
 		},
+		"0711D58A": {
+			"editor_id": "Folon_KEYM_UCLHKey01",
+			"name": "Hooligan Storage Key"
+		},
+		"072FD602": {
+			"editor_id": "Folon_KEYM_FQThameshaven101CarlKey",
+			"name": "Carl's Shack Key"
+		},
+		"070D06EE": {
+			"editor_id": "Folon_KEYM_PindarKeyCard01",
+			"name": "Tower Hamlets Pindar Key Card"
+		},
+		"072EBF3D": {
+			"editor_id": "Folon_KEYM_MQAngel302_Maintenance",
+			"name": "Aquarium Maintenance Key"
+		},
+		"071BE10C": {
+			"editor_id": "Folon_KEYM_MadeiraOfficeKey01",
+			"name": "Madeira Inc. Chief's Office Key"
+		},
+		"071BE10E": {
+			"editor_id": "Folon_KEYM_MadeiraOfficeKey02",
+			"name": "Madeira Inc. Restricted Lab Key"
+		},
+		"0732B383": {
+			"editor_id": "FOLON_KEYM_HackneyNigel",
+			"name": "Nigel's Recording Studio Key"
+		},
+		"0727E561": {
+			"editor_id": "Folon_KEYM_NukaBruKey01",
+			"name": "Nuka-Cola Headquarters Office Key"
+		},
+		"072CDC8A": {
+			"editor_id": "Folon_KEYM_GreenwichGasOfficeKey",
+			"name": "Post Master's Key"
+		},
+		"072EA9E3": {
+			"editor_id": "Folon_KEYM_Gauntletofficekey",
+			"name": "Gauntlet Office Key"
+		},
 		"072CDC8B": {
 			"editor_id": "Folon_KEYM_BromleyLibraryKey",
 			"name": "Churchill Library Book Room Key"
+		},
+		"0728C778": {
+			"editor_id": "Folon_KEYM_BBMDirectorKey",
+			"name": "BBM Director's Quarters Key"
 		},
 		"072EEDD3": {
 			"editor_id": "Folon_KEYM_WestminsterHouse01GardenKey",
 			"name": "Westminster House Back Door Key"
 		},
+		"072E578A": {
+			"editor_id": "Folon_KEYM_LambethFireHQKey01",
+			"name": "Lambeth Fire Station Key"
+		},
+		"07240ABC": {
+			"editor_id": "Folon_KEYM_HippoBasementKey01",
+			"name": "Theatre Basement Key"
+		},
+		"072218CA": {
+			"editor_id": "Folon_KEYM_BOEKey01",
+			"name": "Bank of Engand Key"
+		},
+		"0732C63E": {
+			"editor_id": "Folon_KEYM_TowerOfLondonGateKey",
+			"name": "Tower Of London Gate Key"
+		},
 		"071B3A09": {
 			"editor_id": "Folon_KEYM_WestminsterHouse01BasementKey",
 			"name": "Westminster House Basement Key"
+		},
+		"07067FA3": {
+			"editor_id": "Folon_KEYM_CroydonMazeKey01",
+			"name": "Maze Key #1"
+		},
+		"07067FFF": {
+			"editor_id": "Folon_KEYM_CroydonMazeKey02",
+			"name": "Maze Key #2"
+		},
+		"0706811B": {
+			"editor_id": "Folon_KEYM_CroydonMazeKey03",
+			"name": "Maze Key #3"
 		},
 		"072FD601": {
 			"editor_id": "Folon_KEYM_FQPistols_PenthouseKey",
 			"name": "Camden Penthouse Key"
 		},
+		"0726C118": {
+			"editor_id": "Folon_KEYM_10DownStrMaintKey",
+			"name": "10 Downing Street Maintenance Key"
+		},
+		"072FB99B": {
+			"editor_id": "Folon_KEYM_MQAngel307_Room5Key",
+			"name": "Room 5 Key"
+		},
 		"073284A9": {
 			"editor_id": "Folon_KEYM_TOLPH",
 			"name": "Lanthorn Tower Key"
 		},
+		"07327855": {
+			"editor_id": "FOLON_KEYM_MQFifth304",
+			"name": "Lancelot's Room Key"
+		},
+		"073112AC": {
+			"editor_id": "Folon_KEYM_SQWestminster109",
+			"name": "NuSkin Facility Key"
+		},
+		"073011CC": {
+			"editor_id": "FOLON_KEYM_SQEastminster104Key01",
+			"name": "City Hall Closet Key"
+		},
+		"0727D39C": {
+			"editor_id": "Folon_KEYM_ScotYardBackRoom",
+			"name": "Scotland Yard Key"
+		},
+		"072EEDD4": {
+			"editor_id": "Folon_KEYM_MQAngel303_LoungeKey",
+			"name": "Private Lounge Key"
+		},
+		"07278CD3": {
+			"editor_id": "Folon_KEYM_KinoworldStoreRoom",
+			"name": "Kinoworld Storeroom Key"
+		},
+		"072B07A2": {
+			"editor_id": "Folon_KEYM_BromleyLibraryBannedKey",
+			"name": "Banned Books Key"
+		},
+		"0730D227": {
+			"editor_id": "Folon_KEYM_SQSouthwark102_Key",
+			"name": "Chum Factory Key"
+		},
+		"0722211B": {
+			"editor_id": "Folon_KEYM_BOEKey02",
+			"name": "Bank Manager Key"
+		},
+		"07259C37": {
+			"editor_id": "Folon_KEYM_StPancrasHotelKey01",
+			"name": "St Pancras Int. Bellboy Key"
+		},
+		"073023CE": {
+			"editor_id": "Folon_KEYM_MQAngel306_QueensChamber",
+			"name": "Queen's Chamber Key"
+		},
 		"0730C9A3": {
 			"editor_id": "Folon_KEYM_FQCroydon_StationKey",
 			"name": "West Croydon Station Key"
+		},
+		"0731C3D1": {
+			"editor_id": "Folon_KEYM_GW205b",
+			"name": "Preservation Shelter Key"
 		}
 	},
 	"outfits": {
