@@ -912,7 +912,7 @@ function popupOnClick(e) {
       let fragments = markers['quests'][quest_id]['fragments']||{};
       for (const form_id of list) {
         if (fragments[form_id]) {
-          console.log('related quest', quest_id);
+          //console.log('related quest', quest_id);
           added_quests.push(quest_id);
         }
       }
@@ -971,7 +971,7 @@ function popupOnClick(e) {
       }
 
       if (Object.keys(fragments).length>0) {
-        a.title += '\n--- fragments ---\n' + Object.entries(fragments).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
+        a.title += '\n--- scripted ---\n' + Object.entries(fragments).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
       }
 
       a.textContent = itemText(title, o);
@@ -1043,7 +1043,7 @@ function popupOnClick(e) {
             e.className = 'popup-subnote-info-item';
             e.title = `Copy Item ID to Clipboard (${key})`;
             e.onclick = function() { copyToClipboard(key); return false; };
-            e.textContent = `Fragment: ${strip(value)}`;
+            e.textContent = `Scripted: ${strip(value)}`;
             d.appendChild(e);
           }
 
