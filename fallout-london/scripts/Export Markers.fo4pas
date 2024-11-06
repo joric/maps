@@ -114,6 +114,13 @@ begin
         r := ElementByIndex(g, j);
         for i := 0 to Pred(ReferencedByCount(r)) do begin
           e := ReferencedByIndex(r, i);
+
+          // r is the original item with the signature from the list
+          // e is a reference item with the REFR signature
+
+          // only allow objects referenced from LondonWorldSpace.esm
+          if GetFile(e) <> mod_f then continue;
+
           s := EditorID(r);
           fid := GetLoadOrderFormID(e);
 
@@ -211,9 +218,6 @@ begin
             then continue;
 
           end else continue;
-
-          // only local objects allowed
-          if GetFile(e) <> mod_f then continue;
 
           if (Signature(r) = 'CONT') and (pos('Folon_SettlementWorkbench', s) = 0) then begin
             cnt := 0;
