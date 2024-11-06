@@ -109,6 +109,7 @@ begin
   // there's no deduplication in the code just yet so use filters like
   // * and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f))
   // * if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
+  // we can't do it globally because fallout london still uses some models from FO4
 
   sList := TStringList.Create;
   sList.DelimitedText := 'KEYM CONT DOOR NPC_ ARMO BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN ACTI';
