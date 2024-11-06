@@ -132,7 +132,7 @@ begin
             and (pos('Folon_ACTI_BarryBoatBeacon', s) = 0)
             and (pos('DN011OverdueBookVendMachine', s) = 0) // overdue book terminal
             and (pos('Folon_ACTI_TaxiActivatorFT', s) = 0)
-            and (pos('loot_capsStash_tin', s) = 0) // ticket stash
+            and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f)) // ticket stash
             then continue;
           end else if (Signature(r) = 'FURN') and (Signature(e) = 'REFR') then begin
             //if (GetFile(r) <> mod_f) then continue; // exclude all non-london references
