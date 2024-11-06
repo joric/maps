@@ -833,7 +833,7 @@ function fuzzySearch(s, limit, threshold) {
           }
 
           for (let [key,value] of Object.entries(markers[section][id].fragments||{})) {
-            //fragments.push(value);
+            fragments.push(value);
           }
 
         }
@@ -971,7 +971,7 @@ function popupOnClick(e) {
       }
 
       if (Object.keys(fragments).length>0) {
-        //a.title += '\n--- fragments ---\n' + Object.entries(fragments).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
+        a.title += '\n--- fragments ---\n' + Object.entries(fragments).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
       }
 
       a.textContent = itemText(title, o);
@@ -1038,16 +1038,14 @@ function popupOnClick(e) {
             d.appendChild(e);
           }
 
-          /*
           for (const [key,value] of Object.entries(fragments)) {
             let e = document.createElement('div');
             e.className = 'popup-subnote-info-item';
             e.title = `Copy Item ID to Clipboard (${key})`;
             e.onclick = function() { copyToClipboard(key); return false; };
-            e.textContent = `Mentions: ${strip(value)}`;
+            e.textContent = `Fragment: ${strip(value)}`;
             d.appendChild(e);
           }
-          */
 
           div.appendChild(d);
         }
