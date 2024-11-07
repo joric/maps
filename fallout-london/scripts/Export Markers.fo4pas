@@ -165,13 +165,13 @@ begin
             if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
           end else if (Signature(r) = 'WEAP') and (Signature(e) = 'REFR') then begin
           end else if (Signature(r) = 'ALCH') and (Signature(e) = 'REFR') then begin
-            if (pos('RadX', s) = 0)
-            and (pos('Buffout', s) = 0)
+            if ((pos('RadX', s) = 0) or (GetFile(r) <> mod_f)) // exclude fo4 RadX
+            and ((pos('Buffout', s) = 0) or (GetFile(r) <> mod_f)) // exclude fo4 Buffout in favor of Roid
+            and ((pos('Psycho', s) = 0) or (GetFile(r) <> mod_f)) // exclude fo4 Psycho in favor of Hyp-O
+            and ((pos('Mentats', s) = 0) or (GetFile(r) <> mod_f)) // exclude fo4 GrapeMentats
+            and ((pos('XCell', s) = 0) or (GetFile(r) <> mod_f)) // exclude fo4 X-Cell in favor of Excalibur
             and (pos('Med-X', s) = 0)
-            and (pos('Psycho', s) = 0)
-            and (pos('Mentats', s) = 0)
             and (pos('Overdrive', s) = 0)
-            and (pos('XCell', s) = 0)
             and (pos('UltraJet', s) = 0)
             and (pos('Folon_FoodDog', s) = 0)
             and (pos('Folon_DrinksUnique', s) = 0)
