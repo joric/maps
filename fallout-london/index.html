@@ -1032,7 +1032,7 @@ function popupOnClick(e) {
               let o = marker.properties;
               let t = getType(o);
               if (o.form_id == form_id || o.ref_id == form_id) {
-                map.animateTo({center: marker.getCoordinates(), zoom:3, pitch:0, bearing:0});
+                map.animateTo({center: marker.getCoordinates()});
                 marker.show();
                 popupOnClick({target: marker});
                 marker.openInfoWindow();
