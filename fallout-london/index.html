@@ -1027,16 +1027,19 @@ function popupOnClick(e) {
           if (!e.ctrlKey) { 
             e.preventDefault();
 
-            // find marker that refers to the item id
-            for (marker of markerLayer._geoList) {
-              let o = marker.properties;
-              let t = getType(o);
-              if (o.form_id == form_id || o.ref_id == form_id) {
-                map.animateTo({center: marker.getCoordinates()});
-                marker.show();
-                popupOnClick({target: marker});
-                marker.openInfoWindow();
-                return false;
+            // do not hyperlink from outfits and weapons
+            if (!['outfits','weapons'].includes(section)) {
+              // find marker that refers to the item id
+              for (marker of markerLayer._geoList) {
+                let o = marker.properties;
+                let t = getType(o);
+                if (o.form_id == form_id || o.ref_id == form_id) {
+                  map.animateTo({center: marker.getCoordinates()});
+                  marker.show();
+                  popupOnClick({target: marker});
+                  marker.openInfoWindow();
+                  return false;
+                }
               }
             }
 
