@@ -291,6 +291,7 @@ begin
           for q := 0 to Pred(ReferencedByCount(r)) do begin
             ref := ReferencedByIndex(r, q);
             if Signature(ref) = 'QUST' then begin
+              if GetFile(ref) <> mod_f then continue;
               AddItem(Obj, ChildObj, ref, 'quests');
               Inc(quests);
             end;
@@ -301,6 +302,7 @@ begin
             for q := 0 to Pred(ReferencedByCount(e)) do begin
               ref := ReferencedByIndex(e, q);
               if Signature(ref) = 'QUST' then begin
+                if GetFile(ref) <> mod_f then continue;
                 AddItem(Obj, ChildObj, ref, 'quests');
               end;
             end;
