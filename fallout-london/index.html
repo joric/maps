@@ -904,6 +904,7 @@ function popupOnClick(e) {
   div.replaceChildren();
 
   // go through all quests. if we have a related fragment in the inventory, add a related quest
+  let is_scripted = {};
   let added_quests = [];
   for (const [quest_id, prop] of Object.entries(markers.quests)) {
     for (const [i, section] of Object.entries(['weapons', 'perks', 'outfits', 'keys'])) {
@@ -914,6 +915,7 @@ function popupOnClick(e) {
         if (fragments[form_id]) {
           //console.log('related quest', quest_id);
           added_quests.push(quest_id);
+          is_scripted[form_id] = prop.name;
         }
       }
     }
@@ -990,6 +992,8 @@ function popupOnClick(e) {
       if (Object.keys(fragments).length>0) {
         a.title += '\n--- fragments ---\n' + Object.entries(fragments).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
       }
+
+      if (is_scripted[form_id]) title += ' (' + is_scripted[form_id] +')';
 
       a.textContent = itemText(title, o);
       a.href = wikiPrefix + encodeURIComponent(itemText(name, o));
