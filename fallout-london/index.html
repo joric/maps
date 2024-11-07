@@ -993,7 +993,7 @@ function popupOnClick(e) {
         a.title += '\n--- fragments ---\n' + Object.entries(fragments).map( ([key,value])=>`${key}: ${strip(value)}`).join('\n');
       }
 
-      if (is_scripted[form_id]) title += ' (' + is_scripted[form_id] +')';
+      //if (is_scripted[form_id]) title += ' (' + is_scripted[form_id] +')';
 
       a.textContent = itemText(title, o);
       a.href = wikiPrefix + encodeURIComponent(itemText(name, o));
