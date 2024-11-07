@@ -907,7 +907,7 @@ function popupOnClick(e) {
   let is_scripted = {};
   let added_quests = [];
   for (const [quest_id, prop] of Object.entries(markers.quests)) {
-    for (const [i, section] of Object.entries(['weapons', 'perks', 'outfits', 'keys'])) {
+    for (const [i, section] of Object.entries(['keys'])) {
       let list = o[section];
       if (!list) continue;
       let fragments = markers['quests'][quest_id]['fragments']||{};
