@@ -108,7 +108,7 @@ begin
   // r is the original item with the signature from sList
   // e is a reference item with the REFR signature
 
-  // there may be REFR duplicates for the overloaded models (e.g. for both coins and tickets, form ID 0003000C)
+  // there may be REFR duplicates for the overloaded models (e.g. for bottlecaps and tickets, form ID 0003000C)
   // we collect references for all the signatures in all files so overloaded models get the same list of references
   // there's no deduplication in the code just yet so use filters like
   // * and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f))
