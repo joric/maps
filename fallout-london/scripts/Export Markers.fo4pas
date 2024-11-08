@@ -109,8 +109,8 @@ begin
   // e is a reference item with the REFR signature
 
   // there may be REFR duplicates for the overloaded models (e.g. for bottlecaps and tickets, form ID 0000000F)
-  // we collect references for all the signatures in all files so overloaded models get the same list of references
-  // there's no deduplication in the code just yet so use filters like
+  // we collect references for all the signatures in all files, overloaded models get the same list of references
+  // we may get duplicates, there's no deduplication in the code just yet so use filters like:
   // * and ((pos('loot_capsStash_tin', s) = 0) or (GetFile(r) <> mod_f))
   // * if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
   // we can't do it globally because fallout london still uses some models from FO4
