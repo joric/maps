@@ -101,7 +101,11 @@ begin
     end;
   end;
 
-  // r is the original item with the signature from the list
+  sList := TStringList.Create;
+  sList.DelimitedText := 'KEYM CONT DOOR NPC_ ARMO BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN ACTI';
+  //sList.DelimitedText := 'DOOR KEYM';
+
+  // r is the original item with the signature from sList
   // e is a reference item with the REFR signature
 
   // there may be REFR duplicates for the overloaded models (e.g. for both coins and tickets, form ID 0003000C)
@@ -111,10 +115,6 @@ begin
   // * if (GetFile(r) <> mod_f) then continue; // exclude all non-london models
   // we can't do it globally because fallout london still uses some models from FO4
   // WinningOverride sometimes helps to get the latest overloaded model
-
-  sList := TStringList.Create;
-  sList.DelimitedText := 'KEYM CONT DOOR NPC_ ARMO BOOK MISC ALCH WEAP AMMO NOTE FLOR FURN ACTI';
-  //sList.DelimitedText := 'DOOR KEYM';
 
   for k := 0 to Pred(sList.Count) do begin
     subcount := 0;
