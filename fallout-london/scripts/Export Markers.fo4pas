@@ -48,7 +48,7 @@ begin
     if Assigned(items) then begin
       for i := 0 to Pred(ElementCount(items)) do begin
         item := ElementByIndex(items, i);
-        subitem := LinksTo(ElementByPath(item, 'Value\Object Union\Object v2\FormID'));
+        subitem := WinningOverride(LinksTo(ElementByPath(item, 'Value\Object Union\Object v2\FormID')));
         if Assigned(subitem) then begin
           sig := Signature(subitem);
           if (sig = 'KEYM') or (sig = 'MISC') or (sig = 'NOTE') or (sig = 'BOOK') or (sig='WEAP') or (sig='ARMO') then begin
