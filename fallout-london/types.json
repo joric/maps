@@ -167,7 +167,8 @@
       "Boxcutter": {"match": "Axe$|Bryce|Razor|Boxcutter|Kukri|Knife|Bayonet|Halberd|Sword|Dagger", "fa": "scissors"},
       "Camera": {"match": "Camera", "fa": "camera"},
       "Pickaxe": {"match": "Hammer|PICKAXE", "fa": "hammer"},
-      "Crowbar": {"match": "Crowbar", "fa": "slash"},
+      "Crowbar": {"match": "Crowbar", "fa": "baseball-bat-ball"},
+      "Pipe": {"match": "Pipe$", "fa": "baseball-bat-ball"},
       "Racquet": {"match": "Racquet", "fa": "table-tennis-paddle-ball"},
       "Mace": {"match": "Mace$", "fa": "spray-can-sparkles"}
     }
