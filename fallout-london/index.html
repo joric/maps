@@ -1169,7 +1169,7 @@ function popupOnClick(e) {
       e.preventDefault();
       let title = prompt('New title:', o.title);
       if (title) {
-        updateMarker(o.ref_id, title, true);
+        updateMarker(o.ref_id, title);
       }
       return false;
     }
@@ -1355,7 +1355,7 @@ function onDragEnd(e) {
   updateMarker(e.target.properties.ref_id);
 }
 
-function updateMarker(ref_id, title, popup) {
+function updateMarker(ref_id, title) {
   for (marker of markerLayer._geoList) {
     let o = marker.properties;
     if (ref_id != o.ref_id) continue;
@@ -1380,10 +1380,8 @@ function updateMarker(ref_id, title, popup) {
       }
     }
 
-    if (popup) {
-      popupOnClick({target: marker});
-      marker.openInfoWindow();
-    }
+    popupOnClick({target: marker});
+    marker.openInfoWindow();
 
     saveSettings();
   }
