@@ -84,8 +84,20 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
   <div class="sidebar-close" onclick="toggleNav(this)"><div class="container middle"><i class="triangle"></i></div></div>
   <div class="panel">
     <h2 id="title2">Progress Tracker</h2>
+
     <hr/>
+
+    <div class="button-panel">
+      <span id="add-note">Add Note</span>
+      <span id="toggle-notes" class="button-toggle disabled">Notes (0)</span>
+    </div>
+
+    <hr/>
+
+    <div class="button-panel">
       <span id="toggle-found" class="button-toggle"><i class="icon fa fa-eye"></i>Found Locations</span>
+    </div>
+
     <hr/>
 
     <div id="user-panel">
@@ -627,6 +639,12 @@ function markItems() {
     let hide = !settings.activeItems[t.type];
     if (settings.hideFound && settings.markedItems[o.ref_id]) hide = true;
     hide ? marker.hide() : marker.show();
+
+    // toggle notes
+    if (t.type=='Note') {
+      let hide = settings.hideNotes;
+      hide ? marker.hide() : marker.show();
+    }
   }
 
   [].forEach.call(document.querySelectorAll('#categories .header'), function(header) {
@@ -723,6 +741,9 @@ function updateTracking() {
     li.appendChild(c3);
     div.appendChild(li);
   }
+
+  let notes = total['Note'] || 0;//localData.customMarkers.features.length;
+  document.querySelector('#toggle-notes').innerText = `Notes (${notes})`;
 }
 
 function toggleMarked(id) {
@@ -1127,10 +1148,39 @@ function popupOnClick(e) {
   popup.querySelector('#popup-form-id-link').href = '#' + (o.form_id || '00000010');
   popup.querySelector('#popup-form-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
 
-  popup.querySelector('#popup-map-link').href = getMapURL(wikify(o));
-  popup.querySelector('#popup-map-link').onclick = copyLink;
+  let editable = o.ref_id && o.ref_id.startsWith('FF');
 
-  popup.querySelector('#popup-wiki-link').href = wikiPrefix+encodeURIComponent(itemName(o));
+  if (!editable) {
+    popup.querySelector('#popup-map-link').href = getMapURL(wikify(o));
+    popup.querySelector('#popup-map-link').onclick = copyLink;
+    popup.querySelector('#popup-wiki-link').href = wikiPrefix+encodeURIComponent(itemName(o));
+    popup.querySelector('#popup-wiki-link').onclick = null;
+  } else {
+
+    popup.querySelector('#popup-map-link').href = '#';
+    popup.querySelector('#popup-map-link').title = 'Edit';
+    popup.querySelector('#popup-map-link').innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+    popup.querySelector('#popup-map-link').onclick = function(e) {
+      e.preventDefault();
+      let title = prompt('New title:', o.title);
+      if (title) {
+        updateMarker(o.ref_id, title);
+      }
+      return false;
+    }
+    popup.querySelector('#popup-wiki-link').href = '#';
+    popup.querySelector('#popup-wiki-link').title = 'Delete';
+    popup.querySelector('#popup-wiki-link').innerHTML = '<i class="fa-solid fa-trash"></i>';
+    popup.querySelector('#popup-wiki-link').onclick = function(e) {
+      e.preventDefault();
+      if (confirm('Are you sure you want to delete this marker?')) {
+        deleteMarker(o.ref_id);
+      }
+      return false;
+    }
+
+  }
+
   popup.querySelector('#popup-close').onclick = function() {  e.target._infoWindow.hide(); };
 
   setClass(popup.querySelector('#popup-data'), settings.debugMode!=true, 'collapsed');
@@ -1150,6 +1200,207 @@ let ref_lookup = {};
 let cell_doors = {};
 let exits = {};
 //let cc = {};
+
+function rotate2d( x,y, angle, cx, cy ) {
+  x = x - cx;
+  y = y - cy;
+  let tx = x * Math.cos(angle) - y * Math.sin(angle);
+  let ty = x * Math.sin(angle) + y * Math.cos(angle);
+  x = tx + cx;
+  y = ty + cy;
+  return [x,y];
+}
+
+function getLoc(feature) {
+  let [x,y,z] = feature.geometry.coordinates;
+
+  let o = feature.properties;
+
+  //o._coordinates = feature.geometry.coordinates;
+
+  let area = itemArea(o);
+
+  if (o.cell) {
+    let path = exits[o.cell];
+    if (path && path.length>0) {
+      o._doors = path.reduce((a,f) => ({ ...a, [f.properties.ref_id]:f.properties.area||f.properties.cell_name||f.properties.cell}), {});
+
+      // just take two last doors and smoosh them together
+
+      let door = path[0];
+
+      let [dx,dy,dz] = door.geometry.coordinates;
+      x = x - dx;
+      y = y - dy;
+      z = z - dz;
+
+      door = path[path.length-1];
+      [dx,dy,dz] = door.geometry.coordinates;
+
+      [x,y] = rotate2d(x,y, door.properties.rotation[2]*Math.PI/180, 0,0);
+
+      x = x + dx;
+      y = y + dy;
+      z = z + dz;
+
+    }
+  }
+
+  let w = markers.worldspaces[area];
+  let t = {scale: w.scale, offset:{x: w.offset[0],  y: w.offset[1], z: w.offset[2]}};
+
+  if (t) {
+    x = x * t.scale + t.offset.x;
+    y = y * t.scale + t.offset.y;
+  }
+
+  if (t = (maps[mapId].regions && maps[mapId].regions[area])) {
+    x = x * t.scale + t.offset.x;
+    y = y * t.scale + t.offset.y;
+    if (t.rotation) {
+      [x,y] = rotate2d(x,y, t.rotation, t.offset.x, t.offset.y);
+    }
+  } else if (t = maps[area]) {
+    x = x * t.scale + t.offset.x;
+    y = y * t.scale + t.offset.y;
+  }
+
+  return {'x':x, 'y':-y, 'z':z};
+}
+
+
+function locToCoordinates(c, area) {
+  x = c.x;
+  y = -c.y;
+
+  if (t = (maps[mapId].regions && maps[mapId].regions[area])) {
+
+    if (t.rotation) {
+      [x,y] = rotate2d(x,y, -t.rotation, t.offset.x, t.offset.y);
+    }
+
+    x = (x - t.offset.x) / t.scale;
+    y = (y - t.offset.y) / t.scale;
+
+  } else if (t = maps[area]) {
+    if (t && t.scale) {
+      x = (x - t.offset.x) / t.scale;
+      y = (y - t.offset.y) / t.scale;
+    }
+  }
+
+  let w = markers.worldspaces[area];
+  t = {scale: w.scale, offset:{x: w.offset[0],  y: w.offset[1], z: w.offset[2]}};
+
+  if (t && t.scale) {
+    x = (x - t.offset.x) / t.scale;
+    y = (y - t.offset.y) / t.scale;
+  }
+
+  return [x,y,0];
+}
+
+function onDragEnd(e) {
+  let marker = e.target;
+  let o = marker.properties;
+  let loc = marker.getCoordinates();
+  let c = locToCoordinates(loc, o.area);
+  for (feature of localData.customMarkers.features) {
+    if (o.ref_id == feature.properties.ref_id) {
+      feature.geometry.coordinates = c;
+      saveSettings();
+      break;
+    }
+  }
+}
+
+function updateMarker(ref_id, title) {
+  for (marker of markerLayer._geoList) {
+    let o = marker.properties;
+    if (ref_id != o.ref_id) continue;
+    o.title = title;
+    popupOnClick({target: marker});
+    marker.openInfoWindow();
+    const tooltip = new maptalks.ui.ToolTip( itemDescription(o) + ' in ' + itemLocation(o), {
+      showTimeout: 50
+    }).addTo(marker);
+
+    for (f of localData.customMarkers.features) {
+      if (ref_id == f.properties.ref_id) {
+        f.properties.title = title;
+        break;
+      }
+    }
+    saveSettings();
+  }
+}
+
+function deleteMarker(ref_id) {
+  for (marker of markerLayer._geoList) {
+    let o = marker.properties;
+    if (ref_id != o.ref_id) continue;
+    marker.remove();
+    localData.customMarkers.features = localData.customMarkers.features.filter(item=>ref_id != item.properties.ref_id)
+    markItems();
+    saveSettings();
+  }
+}
+
+function addNote(e) {
+  let title = prompt('Enter note name', 'Note');
+  if (title == null) return false;
+  let form_id = 'FF000010';
+  let last_id = 0xff000001;
+  for (feature of localData.customMarkers.features) {
+    last_id = Math.max(last_id, parseInt(feature.properties.ref_id,16));
+  }
+  let ref_id = (last_id+1).toString(16).toUpperCase();
+  let area = mapId;
+  let o = {
+    "title": title,
+    "description": "Note",
+    "ref_id": ref_id,
+    "form_id": form_id,
+    "area": area,
+  }
+  let loc = map.getCenter();
+  let newFeature = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": locToCoordinates(loc, area),
+    },
+    "properties":o
+  };
+  localData.customMarkers.features.push(newFeature);
+  markers.features.push(newFeature);
+  addMarker(loc, o);
+  markItems();
+  saveSettings();
+}
+
+function addMarker(loc, o) {
+  let marker = new maptalks.Marker(loc, {
+    properties: o,
+    content: itemName(o),
+    symbol: markerSymbol(o),
+    draggable: o.ref_id && o.ref_id.startsWith('FF'),
+  }).addTo(markerLayer);
+
+  const tooltip = new maptalks.ui.ToolTip( itemDescription(o) + ' in ' + itemLocation(o), {
+    showTimeout: 50
+  }).addTo(marker);
+
+  marker.setInfoWindow({autoCloseOn: 'click'})
+  .on('dragend', onDragEnd)
+  .on('click', popupOnClick)
+  .on('contextmenu', e=> {
+    if (mouseMoved) return;
+    let o = e.target.properties;
+    toggleMarked(o.ref_id);
+  })
+}
+
 
 function loadMarkers() {
   let counters = {};
@@ -1213,77 +1464,6 @@ function loadMarkers() {
   console.log('orphaned_cells', Object.keys(oc).length, oc);
   */
 
-  function rotate2d( x,y, angle, cx, cy ) {
-    x = x - cx;
-    y = y - cy;
-    let tx = x * Math.cos(angle) - y * Math.sin(angle);
-    let ty = x * Math.sin(angle) + y * Math.cos(angle);
-    x = tx + cx;
-    y = ty + cy;
-    return [x,y];
-  }
-
-  function getLoc(feature) {
-    let [x,y,z] = feature.geometry.coordinates;
-
-    let o = feature.properties;
-
-    //o._coordinates = feature.geometry.coordinates;
-
-    let area = itemArea(o);
-
-    if (o.cell) {
-      let path = exits[o.cell];
-      if (path && path.length>0) {
-        o._doors = path.reduce((a,f) => ({ ...a, [f.properties.ref_id]:f.properties.area||f.properties.cell_name||f.properties.cell}), {});
-
-        // just take two last doors and smoosh them together
-
-        let door = path[0];
-
-        let [dx,dy,dz] = door.geometry.coordinates;
-        x = x - dx;
-        y = y - dy;
-        z = z - dz;
-
-        door = path[path.length-1];
-        [dx,dy,dz] = door.geometry.coordinates;
-
-        [x,y] = rotate2d(x,y, door.properties.rotation[2]*Math.PI/180, 0,0);
-
-        x = x + dx;
-        y = y + dy;
-        z = z + dz;
-
-      }
-    }
-
-    let w = markers.worldspaces[area];
-
-    let t = {scale: w.scale, offset:{x: w.offset[0],  y: w.offset[1], z: w.offset[2]}};
-
-    if (t) {
-      x = x * t.scale + t.offset.x;
-      y = y * t.scale + t.offset.y;
-    }
-
-    if (t = (maps[mapId].regions && maps[mapId].regions[area])) {
-
-      x = x * t.scale + t.offset.x;
-      y = y * t.scale + t.offset.y;
-      if (t.rotation) {
-        [x,y] = rotate2d(x,y, t.rotation, t.offset.x, t.offset.y);
-      }
-
-    } else if (t = maps[area]) {
-
-      x = x * t.scale + t.offset.x;
-      y = y * t.scale + t.offset.y;
-    }
-
-    return {'x':x, 'y':-y, 'z':z};
-  }
-
   let cached_types = {};
   let weights = {};
   let total = 0;
@@ -1327,23 +1507,7 @@ function loadMarkers() {
 
     cached_types[t.type] = {...cached_types[t.type], ...t};
 
-    let marker = new maptalks.Marker(c, {
-      properties: o,
-      content: itemName(o),
-      symbol: markerSymbol(o),
-    }).addTo(markerLayer);
-
-    const tooltip = new maptalks.ui.ToolTip( itemDescription(o) + ' in ' + itemLocation(o), {
-      showTimeout: 50
-    }).addTo(marker);
-
-    marker.setInfoWindow({autoCloseOn: 'click'})
-    .on('click', popupOnClick)
-    .on('contextmenu', e=> {
-      if (mouseMoved) return;
-      let o = e.target.properties;
-      toggleMarked(o.ref_id);
-    })
+    addMarker(c, o);
 
     counters[t.group] = counters[t.group] || {};
     counters[t.group][t.type] = (counters[t.group][t.type] || 0) + 1;
@@ -1364,6 +1528,8 @@ function loadMarkers() {
   let groups = Object.keys(counters);
 
   for (group of groups.sort( (a,b)=> weights[b]-weights[a] || cmpAlphaNum(a,b)) ) {
+
+    if (group=='custom') continue;
 
     let header = document.createElement('div');
     header.innerHTML = capitalize(group);
@@ -1500,6 +1666,9 @@ function loadMap(id, cell) {
   let promises = ['./markers.json'].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
     markers = values[0];
+
+    markers.features = [...markers.features, ...localData.customMarkers.features];
+
     loadMarkers();
   }).catch(e=>{console.log(e);})
 
@@ -1691,6 +1860,8 @@ window.onload = function(event) {
     localData[id].searchText = localData[id].searchText || '';
   }
 
+  localData.customMarkers = localData.customMarkers || {features:[]};
+
   settings = localData[mapId];
 
   saveSettings();
@@ -1799,6 +1970,14 @@ window.onload = function(event) {
 
     setClass(document.querySelector('#toggle-left'), false, 'selected');
     setClass(document.querySelector('#left-sidebar'), false, 'mobile');
+  }
+
+  document.querySelector('#add-note').onclick = addNote;
+  setClass(document.querySelector('#toggle-notes'),settings.hideNotes,'hidden');
+  document.querySelector('#toggle-notes').onclick = function(e) {
+    settings.hideNotes = toggleClass(e.target,'hidden');
+    markItems();
+    saveSettings();
   }
 
 }

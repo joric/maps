@@ -176,7 +176,7 @@
 
   "MISC": {"group": "items",
     "items": {
-      "Feather": {"match": "Folon_MiscFeatherPeacock", "fa": "feather", "bg": "darkslategrey", "type":"Peacock Feather"},
+      "Feather": {"match": "Folon_MiscFeatherPeacock", "fa": "feather", "bg": "darkslategrey", "type":"Ingestible"},
       "Vinyl": {"match": "Vinyl", "fa": "record-vinyl", "bg": "darkslategrey", "type": "Vinyl Record"},
       "CigaretteCard": {"match": "MiscCard", "fa": "file-image", "bg": "rosybrown", "type": "Cigarette Card"},
       "Coaster": {"match": "BobbleHead_", "fa": "image", "bg": "peru", "type": "Coaster"},
@@ -206,7 +206,6 @@
   "BOOK": {"fa": "envelope", "bg": "tan", "type": "Message", "group": "items",
     "items": {
       "Newspaper": {"match": "Newspaper", "fa": "newspaper", "bg": "#aaa", "type": "Newspaper"},
-      "Note": {"match": "Note", "fa": "note-sticky", "bg": "sandybrown", "type": "Note", "group_fa": "note-sticky"},
       "Coaster": {"match": "Folon_BOOK_Mag", "fa": "image", "bg": "peru", "type": "Coaster"},
       "Magazine": {"match": "PerkMag", "fa": "book", "bg": "steelblue", "type": "Magazine", 
         "replace":{
@@ -222,6 +221,8 @@
         },
       "Card": {"match": "Card", "fa": "address-card", "bg": "goldenrod", "group":"items", "type": "Visiting Card"}
     }
-  }
+  },
+
+  "Note": {"fa": "note-sticky", "bg": "sandybrown", "type": "Note", "group":"custom", "group_weight":-10000}
 }
 
