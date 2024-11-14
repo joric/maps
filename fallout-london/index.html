@@ -225,7 +225,7 @@ let maps = {
       'CoventGardenWorldSpace': { scale: 1, offset: {x:1500, y:-2000} },
 
       // those seem to be pretty close to worldspace offsets (try zero values)
-      'IWMWorld':{ scale: 1, offset: {x:0, y:0} },
+      'IWMWorld':{ scale: 1, offset: {x:0, y:0}, hidden: true },
       'DumpWorld':{ scale: 1, offset: {x: 2000, y: -2000,} },
       'BromleyPindarWorld':{ scale: 1, offset: {x:-9000, y:-8000} },
     },
@@ -1169,7 +1169,7 @@ function popupOnClick(e) {
       e.preventDefault();
       let title = prompt('New title:', o.title);
       if (title) {
-        updateMarker(o.ref_id, title);
+        updateMarker(o.ref_id, title, true);
       }
       return false;
     }
@@ -1274,9 +1274,9 @@ function getLoc(feature) {
 }
 
 
-function locToCoordinates(c, area) {
-  x = c.x;
-  y = -c.y;
+function locToCoordinates(loc, area) {
+  x = loc.x;
+  y = -loc.y;
 
   if (t = (maps[mapId].regions && maps[mapId].regions[area])) {
 
@@ -1305,39 +1305,89 @@ function locToCoordinates(c, area) {
   return [x,y,0];
 }
 
-function onDragEnd(e) {
-  let marker = e.target;
-  let o = marker.properties;
-  let loc = marker.getCoordinates();
-  let c = locToCoordinates(loc, o.area);
-  for (feature of localData.customMarkers.features) {
-    if (o.ref_id == feature.properties.ref_id) {
-      feature.geometry.coordinates = c;
-      saveSettings();
-      break;
-    }
+function getMapRegion(c) {
+  let x = c.x;
+  let y = c.y;
+
+  // let's just do custom polygons for now
+  let areas = {
+    'WestminsterWorld': [
+      {x: -113444.10591124948, y: -49929.56200970712},
+      {x: -74962.76029110316, y: -22239.28156346427},
+      {x: -91861.97556344255, y: 8301.468928715354},
+      {x: -135433.4462656188, y: -6358.0913075308645},
+    ],
+    'CamdenWorld': [
+      {x: -100932.58754827986, y: -95274.3059883011},
+      {x: -69236.4408481617, y: -91995.39426070267},
+      {x: -57869.54685915381, y: -111668.86462629325},
+      {x: -81914.89952820896, y: -132435.30556774998},
+      {x: -107709.00511864995, y: -118226.68808149011},
+    ],
+    'IslingtonWorld': [
+      {x: -47246.6311871809, y: -94856.35279431737},
+      {x: -8681.96221588199, y: -84448.8820552977},
+      {x: -16808.34347785625, y: -65202.18959272708},
+      {x: -59507.487126299966, y: -66556.5864697228},
+    ],
+    'HackneyWorld': [
+      {x: -6551.4791886195035, y: -70391.86483946137},
+      {x: 19306.356228092576, y: -92177.60019054949},
+      {x: 48014.66169074142, y: -69170.23481977418},
+      {x: 22971.24628715413, y: -45552.05443915527},
+    ]
   }
+
+  for (const [area, points] of Object.entries(areas)) {
+    const poly = new maptalks.Polygon([points]);
+    const point = new maptalks.Coordinate(x, y);
+    const layer = new maptalks.VectorLayer('temp').addTo(map);
+    poly.addTo(layer);
+    const isInside = poly.containsPoint(point);
+    layer.remove();
+    if (isInside) return area;
+  }
+
+  return mapId;
 }
 
-function updateMarker(ref_id, title) {
+function onDragEnd(e) {
+  updateMarker(e.target.properties.ref_id);
+}
+
+function updateMarker(ref_id, title, popup) {
   for (marker of markerLayer._geoList) {
     let o = marker.properties;
     if (ref_id != o.ref_id) continue;
-    o.title = title;
-    popupOnClick({target: marker});
-    marker.openInfoWindow();
+
+    if (title) {
+      o.title = title;
+    }
+
+    let loc = marker.getCoordinates();
+    o.area = getMapRegion(loc);
+
     const tooltip = new maptalks.ui.ToolTip( itemDescription(o) + ' in ' + itemLocation(o), {
       showTimeout: 50
     }).addTo(marker);
 
     for (f of localData.customMarkers.features) {
       if (ref_id == f.properties.ref_id) {
-        f.properties.title = title;
+        f.geometry.coordinates = locToCoordinates(loc, o.area);
+        f.properties.title = o.title;
+        f.properties.area = o.area;
         break;
       }
     }
+
+    if (popup) {
+      popupOnClick({target: marker});
+      marker.openInfoWindow();
+    }
+
     saveSettings();
   }
+
 }
 
 function deleteMarker(ref_id) {
@@ -1360,7 +1410,10 @@ function addNote(e) {
     last_id = Math.max(last_id, parseInt(feature.properties.ref_id,16));
   }
   let ref_id = (last_id+1).toString(16).toUpperCase();
-  let area = mapId;
+
+  let loc = map.getCenter();
+  let area = getMapRegion(loc);
+
   let o = {
     "title": title,
     "description": "Note",
@@ -1368,7 +1421,6 @@ function addNote(e) {
     "form_id": form_id,
     "area": area,
   }
-  let loc = map.getCenter();
   let newFeature = {
     "type": "Feature",
     "geometry": {
@@ -1405,7 +1457,6 @@ function addMarker(loc, o) {
     toggleMarked(o.ref_id);
   })
 }
-
 
 function loadMarkers() {
   let counters = {};
