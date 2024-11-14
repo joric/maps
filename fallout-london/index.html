@@ -673,6 +673,8 @@ function toggleTrack(e) {
 }
 
 function updateTracking() {
+  setClass(document.querySelector('#toggle-notes'), settings.hideNotes, 'hidden');
+
   let total = {};
   let marked = {};
   let cached_types = {};
@@ -1399,9 +1401,7 @@ function deleteMarker(ref_id) {
   }
 }
 
-function addNote(e) {
-  let title = prompt('Enter note name', 'Note');
-  if (title == null) return false;
+function addNote(e, title) {
   let form_id = 'FF000010';
   let last_id = 0xff000001;
   for (feature of localData.customMarkers.features) {
@@ -1430,8 +1430,6 @@ function addNote(e) {
   localData.customMarkers.features.push(newFeature);
   markers.features.push(newFeature);
   addMarker(loc, o);
-  markItems();
-  saveSettings();
 }
 
 function addMarker(loc, o) {
@@ -2026,12 +2024,20 @@ window.onload = function(event) {
     setClass(document.querySelector('#left-sidebar'), false, 'mobile');
   }
 
-  document.querySelector('#add-note').onclick = addNote;
-  setClass(document.querySelector('#toggle-notes'),settings.hideNotes,'hidden');
   document.querySelector('#toggle-notes').onclick = function(e) {
     settings.hideNotes = toggleClass(e.target,'hidden');
     markItems();
     saveSettings();
+  }
+
+  document.querySelector('#add-note').onclick = function(e) {
+    let title = prompt('Enter note name', 'Note');
+    if (title) {
+      addNote(e, title);
+      settings.hideNotes = false;
+      markItems();
+      saveSettings();
+    }
   }
 
 }
