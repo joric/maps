@@ -1305,7 +1305,7 @@ function getMapRegion(c) {
     }
   }
 
-  for (const [area, points] of (Object.entries(regions[mapId])||{})) {
+  for (const [area, points] of (Object.entries(regions[mapId]||{}))) {
     const poly = new maptalks.Polygon([points]);
     const point = new maptalks.Coordinate(x, y);
     const layer = new maptalks.VectorLayer('temp').addTo(map);
