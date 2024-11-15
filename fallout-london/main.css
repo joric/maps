@@ -395,6 +395,7 @@ hr { opacity: .6;}
   margin: 0;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-evenly;
 }
 
 .input-group-prepend {
@@ -417,6 +418,11 @@ hr { opacity: .6;}
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.button-group .btn-link {
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .btn-link:hover{
