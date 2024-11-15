@@ -1328,7 +1328,7 @@ function updateMarker(ref_id, title) {
     if (ref_id != o.ref_id) continue;
 
     if (title) {
-      o.title = title;
+      o.title = title.substring(0,128);
     }
 
     let loc = marker.getCoordinates();
@@ -1378,7 +1378,7 @@ function addNote(e, title) {
   let area = getMapRegion(loc);
 
   let o = {
-    "title": title,
+    "title": title.substring(0,128),
     "description": "Note",
     "ref_id": ref_id,
     "form_id": form_id,
