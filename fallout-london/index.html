@@ -582,22 +582,14 @@ function toggleGroup(e) {
 }
 
 function toggleItems(e, show, parent) {
-  ids = {};
   for (div of parent) {
-    ids[div.alt] = true;
-  }
-
-  for (marker of markerLayer._geoList) {
-    let o = marker.properties;
-    let t = getType(o);
-    if (!ids[t.type]) continue;
+    let type = div.alt;
     if (show) {
-      settings.activeItems[t.type] = true;
+      settings.activeItems[type] = true;
     } else {
-      delete settings.activeItems[t.type];
+      delete settings.activeItems[type];
     }
   }
-
   saveSettings();
   markItems();
   return false;
@@ -656,6 +648,7 @@ function updateTracking() {
   let notes = total['Note'] || 0;
   document.querySelector('#toggle-notes').innerText = `Notes (${notes})`;
   setClass(document.querySelector('#toggle-notes'), settings.activeItems['Note']!=true, 'hidden');
+
 
   let base = document.querySelector('.category-progress');
   base.innerHTML = '';
@@ -1989,7 +1982,10 @@ window.onload = function(event) {
   }
 
   document.querySelector('#toggle-notes').alt = 'Note'; // not an attribute
-  document.querySelector('#toggle-notes').onclick = toggleItem;
+  document.querySelector('#toggle-notes').onclick = function(e) {
+    toggleItem(e);
+  }
+
   document.querySelector('#add-note').onclick = function(e) {
     let title = prompt('Enter note name', 'Note');
     if (title) {
