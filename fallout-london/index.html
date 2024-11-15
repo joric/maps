@@ -88,14 +88,14 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
     <hr/>
 
     <div class="button-panel">
-      <span id="add-note">Add Note</span>
-      <span id="toggle-notes" class="button-toggle disabled">Notes (0)</span>
+      <button id="add-note" class="btn-link">Add Note</button>
+      <button id="toggle-notes" class="button-toggle btn-link">Notes (0)</button>
     </div>
 
     <hr/>
 
     <div class="button-panel">
-      <span id="toggle-found" class="button-toggle"><i class="icon fa fa-eye"></i>Found Locations</span>
+      <button id="toggle-found" class="button-toggle btn-link"><i class="icon fa fa-eye"></i>Found Locations</button>
     </div>
 
     <hr/>
@@ -532,36 +532,6 @@ function saveSettings() {
   localStorage.setItem(localDataName, JSON.stringify(localData));
 }
 
-function showAll(e) {
-  updateAll(e, true);
-}
-
-function hideAll(e) {
-  updateAll(e, false);
-}
-
-function updateAll(e, show=true, type=null) {
-  lookup = {};
-
-  if (type) {
-    let div = e.target;
-    lookup[type] = div;
-    show ? setClass(div, false, 'hidden') : setClass(div, true, 'hidden');
-  } else {
-    for (div of document.querySelectorAll('.category')) {
-      lookup[div.alt] = div;
-      show ? setClass(div, false, 'hidden') : setClass(div, true, 'hidden');
-    }
-  }
-
-  return false;
-}
-
-function toggleItem(e) {
-  e.preventDefault();
-  return updateAll(e, e.target.classList.contains('hidden'), e.target.alt);
-}
-
 function setClass(e, set, c) { set ? e.classList.add(c) : e.classList.remove(c);}
 function toggleClass(e, c) { if (e.classList.contains(c)) { e.classList.remove(c); return false; } else { e.classList.add(c); return true; }}
 function toggleNav(e) { let input = document.querySelector('#search-input'); toggleClass(e.parentElement, 'closed') ? input.blur() : input.focus();}
@@ -586,8 +556,14 @@ let itemTypeExtended = o => {t = getType(o); return t.subtype ? t.type + ' / ' +
 let human = s=>s.replace(/([A-Z]+|[\d]+)/g, ' $1').replace(/^ /, ''); // camel case to space-separated
 let plural = (x,s)=> x + ' ' +(x>1 ? (s.endsWith('y') ? s.slice(0,-1)+'ies':s+'s') : s);
 
-function showAll(e) { toggleItems(e, true, document.querySelectorAll('#categories .category-item')); }
-function hideAll(e) { toggleItems(e, false, document.querySelectorAll('#categories .category-item')); }
+function showAll(e) { updateAll(e, true); }
+function hideAll(e) { updateAll(e, false); }
+
+function updateAll(e, show=true, type=null) {
+  toggleItems(e, show, document.querySelectorAll('#categories .category-item'));
+  toggleItems(e, show, document.querySelectorAll('#toggle-notes'));
+  return false;
+}
 
 function toggleItem(e) {
   e.preventDefault();
@@ -624,13 +600,10 @@ function toggleItems(e, show, parent) {
 
   saveSettings();
   markItems();
-
   return false;
 }
 
-
 function markItems() {
-
   // update markers
   for (marker of markerLayer._geoList) {
     let o = marker.properties;
@@ -639,12 +612,6 @@ function markItems() {
     let hide = !settings.activeItems[t.type];
     if (settings.hideFound && settings.markedItems[o.ref_id]) hide = true;
     hide ? marker.hide() : marker.show();
-
-    // toggle notes
-    if (t.type=='Note') {
-      let hide = settings.hideNotes;
-      hide ? marker.hide() : marker.show();
-    }
   }
 
   [].forEach.call(document.querySelectorAll('#categories .header'), function(header) {
@@ -673,8 +640,6 @@ function toggleTrack(e) {
 }
 
 function updateTracking() {
-  setClass(document.querySelector('#toggle-notes'), settings.hideNotes, 'hidden');
-
   let total = {};
   let marked = {};
   let cached_types = {};
@@ -687,6 +652,10 @@ function updateTracking() {
     marked[t.type] = (marked[t.type] || 0) + (found ? 1 : 0);
     cached_types[t.type] = {...cached_types[t.type], ...t};
   }
+
+  let notes = total['Note'] || 0;
+  document.querySelector('#toggle-notes').innerText = `Notes (${notes})`;
+  setClass(document.querySelector('#toggle-notes'), settings.activeItems['Note']!=true, 'hidden');
 
   let base = document.querySelector('.category-progress');
   base.innerHTML = '';
@@ -743,9 +712,6 @@ function updateTracking() {
     li.appendChild(c3);
     div.appendChild(li);
   }
-
-  let notes = total['Note'] || 0;//localData.customMarkers.features.length;
-  document.querySelector('#toggle-notes').innerText = `Notes (${notes})`;
 }
 
 function toggleMarked(id) {
@@ -1637,8 +1603,6 @@ function loadMarkers() {
       let numTypes = Object.values(counters2[group][type]).length;
 
       li.title = numTypes > 1 ? [plural(count,'marker'), plural(numTypes,'type')].join(' of ') : plural(count,'marker');
-
-      //console.log(counters[group][type]);
     }
   }
 
@@ -2024,22 +1988,17 @@ window.onload = function(event) {
     setClass(document.querySelector('#left-sidebar'), false, 'mobile');
   }
 
-  document.querySelector('#toggle-notes').onclick = function(e) {
-    settings.hideNotes = toggleClass(e.target,'hidden');
-    markItems();
-    saveSettings();
-  }
-
+  document.querySelector('#toggle-notes').alt = 'Note'; // not an attribute
+  document.querySelector('#toggle-notes').onclick = toggleItem;
   document.querySelector('#add-note').onclick = function(e) {
     let title = prompt('Enter note name', 'Note');
     if (title) {
       addNote(e, title);
-      settings.hideNotes = false;
+      toggleItems(e, true, document.querySelectorAll('#toggle-notes'));
       markItems();
       saveSettings();
     }
   }
-
 }
 
 </script>
