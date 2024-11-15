@@ -1392,7 +1392,10 @@ function addNote(e, title) {
   };
   localData.customMarkers.features.push(newFeature);
   markers.features.push(newFeature);
-  addMarker(loc, o);
+  let marker = addMarker(loc, o);
+
+  popupOnClick({target: marker});
+  marker.openInfoWindow();
 }
 
 function addMarker(loc, o) {
@@ -1415,6 +1418,8 @@ function addMarker(loc, o) {
     let o = e.target.properties;
     toggleMarked(o.ref_id);
   })
+
+  return marker;
 }
 
 function loadMarkers() {
