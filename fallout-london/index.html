@@ -584,6 +584,7 @@ function toggleGroup(e) {
 function toggleItems(e, show, parent) {
   for (div of parent) {
     let type = div.alt;
+    if (!type) continue;
     if (show) {
       settings.activeItems[type] = true;
     } else {
