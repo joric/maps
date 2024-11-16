@@ -1368,7 +1368,7 @@ function deleteMarker(ref_id) {
 
 function addNote(e, title) {
   let form_id = 'FF000010';
-  let last_id = 0xff000001;
+  let last_id = 0xff000000;
   for (feature of localData.customMarkers.features) {
     last_id = Math.max(last_id, parseInt(feature.properties.ref_id,16));
   }
