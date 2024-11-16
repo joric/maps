@@ -1132,7 +1132,7 @@ function popupOnClick(e) {
     popup.querySelector('#popup-map-link').innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
     popup.querySelector('#popup-map-link').onclick = function(e) {
       e.preventDefault();
-      let title = prompt('Title', o.title);
+      let title = prompt('Edit note:', o.title);
       if (title) {
         updateMarker(o.ref_id, title);
       }
@@ -1998,7 +1998,7 @@ window.onload = function(event) {
   }
 
   document.querySelector('#add-note').onclick = function(e) {
-    let title = prompt('Title', 'Note');
+    let title = prompt('Add note:', 'Note');
     if (title) {
       addNote(e, title);
       toggleItems(e, true, document.querySelectorAll('#toggle-notes'));
