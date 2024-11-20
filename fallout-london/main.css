@@ -715,6 +715,11 @@ hr { opacity: .6;}
   overflow: hidden;
 }
 
+.exact {
+  font-weight: bold;
+}
+
+
 .search-item.selected{
   opacity: 1;
   background: transparent;

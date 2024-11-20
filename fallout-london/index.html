@@ -557,7 +557,7 @@ let itemDescription = o=> itemName(o) + ' (' + itemTypeExtended(o) + ')';
 let itemType = o => getType(o).type;
 let itemTypeExtended = o => {t = getType(o); return t.subtype ? t.type + ' / ' + t.subtype : t.type; } 
 let human = s=>s.replace(/([A-Z]+|[\d]+)/g, ' $1').replace(/^ /, ''); // camel case to space-separated
-let plural = (x,s)=> x + ' ' +(x>1 ? (s.endsWith('y') ? s.slice(0,-1)+'ies':s+'s') : s);
+let plural = (x,s)=> x + ' ' +(x>1 ? (s.endsWith('y') ? s.slice(0,-1)+'ies' : (s.endsWith('ch') ? s+'es' : s+'s')) : s);
 
 function showAll(e) { updateAll(e, true); }
 function hideAll(e) { updateAll(e, false); }
@@ -1707,6 +1707,8 @@ function updateSearchResults(text) {
 
   let result = fuzzySearch(text, 100, 0.25);
 
+  let exact = 0;
+
   for (r of result) {
     let o = r.item;
 
@@ -1722,7 +1724,13 @@ function updateSearchResults(text) {
     let li = document.createElement('div');
     li.className = 'item';
     li.classList.add('search-item');
-    li.title = title + ' [' + o.form_id + ']';
+    li.title = title + ' [' + o.form_id + '] score: ' + r.score;
+
+    if (r.score<0.4) {
+      exact += 1;
+      //li.classList.add('exact');
+    }
+
     li.alt = o.ref_id;
     li.onclick = clickSearchItem;
 
@@ -1748,7 +1756,7 @@ function updateSearchResults(text) {
   a.href = getBaseURL() + '#search/' + encodeURIComponent(text);
   a.onclick = function(e){ copyToClipboard(e.target.href); return false; };
   a.title = 'copy search url to clipboard';
-  a.textContent = plural(result.length,'search result');
+  a.textContent = plural(result.length,'search result');// + ' (' + plural(exact,'exact match') + ')';
   document.querySelector('#search-count').replaceChildren(a);
 
   if (result.length>0) {
