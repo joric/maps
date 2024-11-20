@@ -1728,9 +1728,9 @@ function updateSearchResults(text) {
     li.classList.add('search-item');
     li.title = title + ' [' + o.form_id + '] score: ' + (r.score).toFixed(5);
 
-    if (r.score<0.01) {
+    if (r.score<0.0001) {
       exact += 1;
-      //li.classList.add('exact');
+      li.classList.add('exact');
     }
 
     li.alt = o.ref_id;
