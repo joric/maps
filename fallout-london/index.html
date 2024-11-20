@@ -1724,7 +1724,7 @@ function updateSearchResults(text) {
     let li = document.createElement('div');
     li.className = 'item';
     li.classList.add('search-item');
-    li.title = title + ' [' + o.form_id + '] score: ' + r.score;
+    li.title = title + ' [' + o.form_id + '] score: ' + (r.score).toFixed(5);
 
     if (r.score<0.4) {
       exact += 1;
