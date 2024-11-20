@@ -827,7 +827,10 @@ function fuzzySearch(s, limit, threshold) {
       }
     }
 
-    data.push({...o, ...{display_name: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), items: items, marker: marker, objectives:objectives, fragments:fragments}});
+    //data.push({...o, ...{display_name: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), items: items, marker: marker, objectives:objectives, fragments:fragments}});
+
+    data.push({...o, ...{custom_title: itemName(o), custom_description: itemDescription(o), custom_type: itemType(o), location: itemLocation(o), items: items, marker: marker, objectives:objectives, fragments:fragments}});
+
   }
 
   limit = limit || 100;
@@ -836,13 +839,12 @@ function fuzzySearch(s, limit, threshold) {
   let options = {
     //keys: ['title','description','display_name','form_id','ref_id','editor_id','custom_type','location','items','objectives'],
     keys: [
-      { name: 'title', weight: 0.8 },         // Higher weight for titles
-      { name: 'description', weight: 0.4 },
-      { name: 'display_name', weight: 0.3 },
+      { name: 'custom_title', weight: 0.8 },         // Higher weight for titles
+      { name: 'custom_description', weight: 0.4 },
+      { name: 'custom_type', weight: 0.2 },
       { name: 'form_id', weight: 0.2 },
       { name: 'ref_id', weight: 0.2 },
       { name: 'editor_id', weight: 0.2 },
-      { name: 'custom_type', weight: 0.2 },
       { name: 'location', weight: 0.2 },
       { name: 'items', weight: 0.1 },           // Lower weight for items
       { name: 'objectives', weight: 0.01 },
@@ -1726,7 +1728,7 @@ function updateSearchResults(text) {
     li.classList.add('search-item');
     li.title = title + ' [' + o.form_id + '] score: ' + (r.score).toFixed(5);
 
-    if (r.score<0.4) {
+    if (r.score<0.01) {
       exact += 1;
       //li.classList.add('exact');
     }
