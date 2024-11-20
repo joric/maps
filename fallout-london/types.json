@@ -164,7 +164,7 @@
       "Bomb": {"match": "Weap_Gren|Grenade|Mine", "fa": "bomb"},
       "Bat": {"match": "Bat$|Truncheon$", "fa": "baseball-bat-ball"},
       "Trowel": {"match": "Trowel", "fa": "trowel"},
-      "Knife": {"match": "Axe$|Bryce|Razor|Boxcutter|Kukri|Knife|Bayonet|Halberd|Sword|Dagger", "fa": "scissors"},
+      "Melee": {"match": "Axe$|Bryce|Razor|Boxcutter|Kukri|Knife|Bayonet|Halberd|Sword|Dagger", "fa": "scissors"},
       "Camera": {"match": "Camera", "fa": "camera"},
       "Pickaxe": {"match": "Hammer|PICKAXE", "fa": "hammer"},
       "Crowbar": {"match": "Crowbar", "fa": "baseball-bat-ball"},
