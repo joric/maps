@@ -1617,8 +1617,12 @@ function loadMarkers() {
 
   if (firstRun) {
     firstRun = false;
-    // make it less cluttered maybe ?
-    // document.querySelector('#group-header-items').click();
+
+    // toggle markers on first load
+    setTimeout(function() {
+      document.querySelector('#group-header-markers').click();
+    }, 1000);
+
     saveSettings();
   }
 
