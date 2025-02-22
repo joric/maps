@@ -876,6 +876,8 @@ function jumpToLocation(name) {
 }
 
 function popupOnClick(e) {
+  console.log('clicked', e.target.properties);
+
   let marker = e.target;
   let o = marker.properties;
 
