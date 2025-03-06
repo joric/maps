@@ -155,6 +155,7 @@ begin
             and (pos('workbenchWeapons', s) = 0) // fallout 4 models (e.g. Do-It-Yourself building)
             and (pos('WorkbenchArmor', s) = 0)
             and (pos('WorkbenchChemistry', s) = 0)
+            and (pos('Folon_FURN_AmmoWorkbench', s) = 0)
             // and (pos('WorkbenchCooking', s) = 0) // too much cooking (fire/pit/etc.)
             // and (pos('WorkbenchPowerArmor', s) = 0) // no mentions
             then continue;

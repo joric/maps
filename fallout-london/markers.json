@@ -169439,6 +169439,720 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					-233.628281,
+					1730.340332,
+					280.538696
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0729999A",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "07074EA2",
+				"cell_name": "The Shoppe"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					56840.097656,
+					-59022.453125,
+					5063.706543
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0729CAE3",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-36267.257812,
+					-77721.382812,
+					4819.758789
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0729F2BF",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-18331.412109,
+					-89909.585938,
+					4777.349609
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0729F425",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-65154.183594,
+					15788.217773,
+					5167.969727
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "072C4761",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					3895.362305,
+					2204.711914,
+					256
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "072C71E6",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "070CB1B7",
+				"cell_name": "Ministry of Defence Bunker"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-81270.742188,
+					69833.085938,
+					5109.953613
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "072C7B3A",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-44649.523438,
+					38970.011719,
+					5328.060547
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "072CC42F",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					86436.15625,
+					-85759.617188,
+					6312.494141
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "072EB9F1",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-69619.84375,
+					-61826.386719,
+					5767.524902
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "072F092A",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					780.289856,
+					8627.362305,
+					3033.932373
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "072F1ACD",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "072F1251",
+				"cell_name": "Docklands Light Railway"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					40405.578125,
+					-26192.373047,
+					6581.731934
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "07302A83",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-33482.75,
+					57106.753906,
+					5334.175293
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "073075DD",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					821.369507,
+					-917.924255,
+					128
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0730AABC",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "07130FD3",
+				"cell_name": "Forgotten Store"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					8855.327148,
+					16968.121094,
+					-162.354523
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0730AB69",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-294.712769,
+					949.589417,
+					-64.681229
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0730ACC3",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "070A5CE8",
+				"cell_name": "C3Delight Dev Cell"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-10518.293945,
+					11210.37207,
+					830.671631
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0730B47C",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "070CE960",
+				"cell_name": "Thameshaven Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					39946.1875,
+					-773.73877,
+					5688
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0730D9EA",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-550.723816,
+					-249.527466,
+					0
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0730EC5A",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "07180059",
+				"cell_name": "Kinoworld Cinema"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-82785.648438,
+					73179.390625,
+					5099.111816
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0730F21C",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-22826.076172,
+					-9248.06543,
+					5256.692383
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0730F26B",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					42628.53125,
+					23966.539062,
+					5104
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "073116FF",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-405,
+					634.160156,
+					48.64502
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0731271C",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "073122C6",
+				"cell_name": ""
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-71119.007812,
+					6407.231445,
+					5032.048828
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "07313ED4",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-45604.511719,
+					-43023.105469,
+					5104
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0731426C",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					6775.609863,
+					335.394592,
+					36.440407
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0731A8B3",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "07136638",
+				"cell_name": "Imperial War Museum"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-37998.308594,
+					-9098.507812,
+					5174.797363
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0731EEF1",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					34542.664062,
+					3512.541504,
+					123.320679
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "07323B14",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "HackneyWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-5177.923828,
+					-23268.365234,
+					627.367737
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0732A2FF",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "0710C868",
+				"cell_name": "Emelio's Caffe House"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-31879.154297,
+					-9700.667969,
+					6230.28125
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0732D836",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1839.708496,
+					3548.807373,
+					-0.61621
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "07332425",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"cell": "071E3425",
+				"cell_name": "Stables Market"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10546.868164,
+					9961.240234,
+					-225.193817
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "07332500",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					11139.733398,
+					5086.423828,
+					-230.398163
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "0733250D",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "WestminsterWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					86840.335938,
+					-74101.609375,
+					5658.910645
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "073329D6",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-48960.742188,
+					56074.429687,
+					5067.494141
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "07332BE9",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-9539.086914,
+					8966.039062,
+					5024.159668
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "07332C0D",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-25970.921875,
+					-10278.373047,
+					5112.503418
+				]
+			},
+			"properties": {
+				"title": "Ammunition Crafting Workbench",
+				"description": "FURN",
+				"ref_id": "07332D19",
+				"form_id": "07297C07",
+				"editor_id": "Folon_FURN_AmmoWorkbench",
+				"area": "LondonWorld"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					545.932312,
 					2077.092041,
 					791.611633

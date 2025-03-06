@@ -114,7 +114,8 @@
       "Armor Station": {"match": "WorkbenchArmor", "fa": "shield-halved"},
       "Weapons Workbench": {"match": "orkbenchWeapons", "fa": "gun"},
       "Tea Station": {"match": "WorkbenchTeaStation", "fa": "mug-hot"},
-      "Chemistry Station": {"match": "WorkbenchChemistry", "fa": "flask"}
+      "Chemistry Station": {"match": "WorkbenchChemistry", "fa": "flask"},
+      "Ammo Workbench": {"match": "AmmoWorkbench", "fa": "list-ul"}
     }
    },
 
