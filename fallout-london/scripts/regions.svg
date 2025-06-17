@@ -28,13 +28,13 @@
    inkscape:window-height="1009"
    id="namedview108"
    showgrid="false"
-   inkscape:zoom="0.64000002"
-   inkscape:cx="571.87499"
-   inkscape:cy="644.53123"
+   inkscape:zoom="5.1200002"
+   inkscape:cx="1265.8203"
+   inkscape:cy="1411.0351"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="layer1"
+   inkscape:current-layer="svg106"
    inkscape:showpageshadow="2"
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
@@ -61,6 +61,12 @@
            
            <defs
    id="defs110" /><path
+   style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 1234.6747,1392.3927 L 1235.5033,1528.0135 L 1295.9941,1565.3024 L 1355.1038,1552.0441 L 1420.5664,1530.4995 L 1444.597,1521.9368 L 1472.4946,1490.1723 L 1431.0626,1444.597 L 1448.464,1432.1674 L 1432.9961,1411.1752 L 1416.6995,1392.6689 L 1402.8888,1384.1063 L 1371.6766,1376.3723 L 1303.1757,1374.4388 L 1255.6669,1373.3339 Z"
+   id="lewisham"
+   inkscape:label="lewisham"
+   sodipodi:insensitive="true"
+   sodipodi:nodetypes="cccccccccccccccc" /><path
    style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    d="M 232.8125,102.34375 L 233.00781,85.156248 L 238.28124,73.828123 L 257.61718,55.273436 L 357.03124,16.210937 L 364.2578,19.921875 L 386.32812,11.328125 L 412.89062,39.453124 L 438.86718,53.906249 L 466.40624,68.945311 L 509.17968,110.9375 L 541.21093,146.48437 L 541.79686,149.80468 L 534.96093,212.5 L 513.47655,218.75 L 498.6328,224.41406 L 481.64061,240.23437 L 479.29686,293.16406 L 423.6328,302.14843 L 369.33593,306.64062 L 321.28906,269.33593 L 239.06249,267.57812 L 195.50781,111.13281 Z"
    id="camden"
@@ -91,9 +97,4 @@
      x="0"
      y="0"
      style="opacity:0.641"
-     inkscape:svg-dpi="96" /></g><path
-   style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-   d="M 1200.7004,1367.5334 L 1232.1888,1387.4208 L 1234.6747,1392.3927 L 1235.5033,1528.0135 L 1295.9941,1565.3024 L 1355.1038,1552.0441 L 1420.5664,1530.4995 L 1444.597,1521.9368 L 1472.4946,1490.1723 L 1431.0626,1444.597 L 1448.464,1432.1674 L 1432.9961,1411.1752 L 1416.6995,1392.6689 L 1402.8888,1384.1063 L 1371.6766,1376.3723 L 1303.1757,1374.4388 L 1255.6669,1373.3339 L 1235.2271,1368.9145 L 1212.3014,1357.866 Z"
-   id="lewisham"
-   inkscape:label="lewisham"
-   sodipodi:insensitive="true" /></svg>
+     inkscape:svg-dpi="96" /></g></svg>
