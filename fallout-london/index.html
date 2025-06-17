@@ -1756,12 +1756,35 @@ function addRegions(geojson) {
     }
   }
 
+  const regionMarkers = new maptalks.VectorLayer('regions', {
+    enableAltitude: enableAltitude,
+    sortByDistanceToCamera: true,
+    forceRenderOnMoving: true,
+    forceRenderOnRotating: true,
+  });
+  
+  regionMarkers.addTo(map);
+
   polygons.forEach(polygon => {
     if (polygon.getType() === 'Polygon') { // Ensure it's a polygon
       polygon.setSymbol(defaultSymbol);
       let name = polygon.properties.svgID.substring(1).replaceAll('_','');
       polygon.feature = {properties: {title: name}};
       //polygon.on('click', polygonClick); // doesn't work with overlapping labels, use global event for now
+
+      const extent = polygon.getExtent();
+      const center = extent.getCenter();
+
+      const textMarker = new maptalks.Marker(center, {
+          'symbol' : {
+              'textFaceName' : 'sans-serif',
+              'textName' : capitalize(name),
+              'textSize' : 16,
+              'textFill' : 'white',
+              'textHaloFill' : 'black',
+              'textHaloRadius' : 1,
+          }
+      }).addTo(regionMarkers);
     }
   });
 
@@ -1822,10 +1845,27 @@ function addRegions(geojson) {
   let visible = settings.activeItems[layerId.toLowerCase()] == true;
   //let layer = new maptalks.PolygonLayer(layerId, polygons, { visible: visible });
 
-  let layer = new maptalks.VectorLayer('vector', polygons).addTo(map);
+  let polygonLayer = new maptalks.VectorLayer('vector', polygons).addTo(map);
 
   //addHandler(layer);
   //layer.addTo(groupLayer);
+
+  function updateRegions() {
+    let zoom = map.getZoom();
+    let visible = zoom < 3;
+
+    if (visible) {
+      regionMarkers.show();
+      polygonLayer.show();
+    } else {
+      regionMarkers.hide();
+      polygonLayer.hide();
+    }
+  }
+
+  map.on('zoomend', updateRegions);
+
+  updateRegions();
 }
 
 
@@ -1843,7 +1883,7 @@ function loadMap(id, cell) {
 
   let promises = [
     './markers.json',
-//    './regions.json',
+    './regions.json',
   ].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
     markers = values[0];
