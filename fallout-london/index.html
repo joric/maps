@@ -1725,6 +1725,8 @@ function getRegionName(coord, polygons) {
 }
 
 function addRegions(geojson) {
+  const maxZoom = 2;
+
   const defaultSymbol = {
     'lineColor': '#fff',    // Border color
     'lineWidth': 1.5,            // Border width
@@ -1796,7 +1798,6 @@ function addRegions(geojson) {
   map.on('mousemove', e => {
 
     let zoom = map.getZoom();
-    let maxZoom = 3;
 
     const mouseCoord = e.coordinate; // Geographic coordinate of the mouse
     //let mouseCoord = map.containerPointToCoord(e.containerPoint); // same
@@ -1852,7 +1853,7 @@ function addRegions(geojson) {
 
   function updateRegions() {
     let zoom = map.getZoom();
-    let visible = zoom < 3;
+    let visible = zoom < maxZoom;
 
     if (visible) {
       regionMarkers.show();
