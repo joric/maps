@@ -1886,16 +1886,17 @@ function loadMap(id, cell) {
     './regions.json',
   ].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
-    markers = values[0];
-
-    markers.features = [...markers.features, ...localData.customMarkers.features];
-
-    loadMarkers();
 
     if (values.length>1) {
       regions = values[1];
       addRegions(regions);
     }
+
+    markers = values[0];
+
+    markers.features = [...markers.features, ...localData.customMarkers.features];
+
+    loadMarkers();
 
   }).catch(e=>{console.log(e);})
 
