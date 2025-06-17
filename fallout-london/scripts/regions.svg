@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="2048"
+   height="2048"
+   version="1.1"
+   id="svg106"
+   sodipodi:docname="regions.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:www="http://www.prognoz.ru"><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1009"
+   id="namedview108"
+   showgrid="false"
+   inkscape:zoom="3.6203868"
+   inkscape:cx="1320.3009"
+   inkscape:cy="1427.8861"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg106"
+   inkscape:showpageshadow="2"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showguides="true" /><metadata
+   id="metadata112"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata>
+           
+           
+
+  <www:MetaInfo><www:Geo>
+    <www:GeoItem
+   X="0"
+   Y="0"
+   Latitude="0"
+   Longitude="0" />
+    <www:GeoItem
+   X="8192"
+   Y="8192"
+   Latitude="8192"
+   Longitude="8192" />
+  </www:Geo></www:MetaInfo>
+
+           
+           <defs
+   id="defs110" /><path
+   style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 232.8125,102.34375 L 233.00781,85.156248 L 238.28124,73.828123 L 257.61718,55.273436 L 357.03124,16.210937 L 364.2578,19.921875 L 386.32812,11.328125 L 412.89062,39.453124 L 438.86718,53.906249 L 466.40624,68.945311 L 509.17968,110.9375 L 541.21093,146.48437 L 541.79686,149.80468 L 534.96093,212.5 L 513.47655,218.75 L 498.6328,224.41406 L 481.64061,240.23437 L 479.29686,293.16406 L 423.6328,302.14843 L 369.33593,306.64062 L 321.28906,269.33593 L 239.06249,267.57812 L 195.50781,111.13281 Z"
+   id="camden"
+   inkscape:label="camden" /><path
+   style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 217.96875,692.18749 L 292.38281,757.42186 L 320.31249,759.17967 L 331.83593,786.91405 L 344.92187,804.10155 L 349.02343,828.12498 L 385.35155,839.25779 L 382.61718,876.75779 L 374.41405,891.79686 L 359.96093,965.03904 L 357.22655,1001.1719 L 352.53905,1027.7344 L 349.60937,1033.2031 L 311.91406,1047.6562 L 301.95312,1014.8437 L 299.41406,1009.7656 L 265.42968,1011.1328 L 263.86718,1003.3203 L 246.48437,999.41404 L 218.94531,1020.1172 L 147.26562,949.41404 L 133.98437,944.33592 L 119.33593,954.29685 L 85.937498,1033.0078 L 58.984374,1022.6562 L 48.242186,1014.0625 L 11.71875,973.04685 L 12.109375,901.36717 L 17.382812,895.31248 L 20.898437,884.96092 L 29.296874,875.58592 L 41.796874,865.62498 L 52.343749,857.81248 L 71.679686,834.96092 L 79.882811,827.53904 L 82.812498,824.02342 L 79.687498,820.11717 L 123.63281,778.12498 L 127.14843,772.65623 L 128.32031,764.84373 L 115.03906,711.32811 L 124.80468,703.71092 L 128.32031,690.23436 L 152.53906,676.17186 L 200.78125,674.41405 L 210.9375,687.30467 Z"
+   id="westminster"
+   inkscape:label="westminster" /><path
+   style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 641.36795,321.78883 L 664.8461,309.91164 L 692.19125,304.9398 L 709.5927,308.53058 L 737.76649,327.3131 L 744.94804,336.42815 L 859.30047,369.02135 L 886.3694,357.97281 L 906.80921,357.69659 L 948.51746,369.29757 L 931.66843,428.68349 L 926.42037,431.72184 L 903.49464,478.12572 L 889.68396,492.21261 L 863.71989,501.88009 L 839.6893,504.64222 L 815.65872,501.88009 L 751.30096,488.89805 L 727.54659,487.51698 L 707.65921,490.27912 L 617.88979,504.91844 L 599.93591,503.81358 L 585.29659,492.48883 L 571.48591,467.07718 L 572.59077,446.91358 L 617.88979,363.49708 V 354.65825 L 636.3961,330.90388 L 640.53931,328.69417 Z"
+   id="islington"
+   inkscape:label="islington"
+   sodipodi:nodetypes="cccccccccccccccccccccccccccccc" /><path
+   style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 1102.7827,368.33082 L 1128.0563,369.43567 L 1136.6189,367.08786 L 1153.7442,350.10072 L 1186.4755,344.16213 L 1191.9997,376.75533 L 1240.8895,425.92135 L 1251.6619,429.37402 L 1263.6772,429.09781 L 1266.4393,426.74999 L 1272.6541,389.32305 L 1286.8791,375.78858 L 1305.6616,372.19781 L 1374.715,442.49417 L 1375.1293,452.29975 L 1383.692,460.86237 L 1372.5053,513.61916 L 1255.1145,628.1097 L 1248.6235,628.93834 L 1240.4752,626.45241 L 1211.0585,601.31698 L 1076.9568,589.30169 L 1065.2177,586.12523 L 1043.1206,562.64708 L 1037.182,560.57547 L 1021.4378,543.45023 L 1024.0619,538.34028 L 976.55314,486.96455 L 975.03396,483.23567 L 976.27692,480.19732 L 1027.2383,433.79344 L 1044.3636,421.50193 L 1096.5679,375.51237 Z"
+   id="hackney"
+   inkscape:label="hackney"
+   sodipodi:nodetypes="cccccccccccccccccccccccccccccccccc" /><g
+   inkscape:groupmode="layer"
+   id="layer1"
+   inkscape:label="Layer 1"
+   sodipodi:insensitive="true"><image
+     width="2048"
+     height="2048"
+     preserveAspectRatio="none"
+     xlink:href="LondonWorld.jpg"
+     id="image1-7"
+     x="0"
+     y="0"
+     style="opacity:0.641"
+     inkscape:svg-dpi="96"
+     sodipodi:insensitive="true" /></g><path
+   style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 1200.7004,1367.5334 L 1232.1888,1387.4208 L 1234.6747,1392.3927 L 1235.5033,1528.0135 L 1295.9941,1565.3024 L 1355.1038,1552.0441 L 1420.5664,1530.4995 L 1444.597,1521.9368 L 1472.4946,1490.1723 L 1431.0626,1444.597 L 1448.464,1432.1674 L 1432.9961,1411.1752 L 1416.6995,1392.6689 L 1402.8888,1384.1063 L 1371.6766,1376.3723 L 1303.1757,1374.4388 L 1255.6669,1373.3339 L 1235.2271,1368.9145 L 1212.3014,1357.866 Z"
+   id="lewisham"
+   inkscape:label="lewisham" /></svg>

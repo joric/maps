@@ -199,6 +199,7 @@ let markerSymbol = markerSymbol2;
 let map = null;
 let parsed = {};
 let objectNames = {};
+let regions = {};
 
 let settings;
 let counters = {};
@@ -1680,6 +1681,155 @@ function loadMarkers() {
   mapParam = {}; // critical to reload map properly
 }
 
+
+function scaleOrigin(coordinates, scaleFactor, origin) {
+  return coordinates.map(coord => {
+    const [x, y] = coord;
+    return [
+      origin[0] + (x - origin[0]) * scaleFactor,
+      origin[1] + (y - origin[1]) * scaleFactor,
+      //-10, // sink region outline a bit (some markers are -3)
+    ];
+  });
+}
+
+function scaleGeoJSON(geojson, scaleFactor, origin) {
+  geojson.features.forEach(feature => {
+    feature.geometry.coordinates = feature.geometry.coordinates.map(ring =>
+      scaleOrigin(ring, scaleFactor, origin)
+    );
+  });
+  return geojson;
+}
+
+function isPointInsidePolygon(point, polyPoints) {
+  let [x,y] = [point.x, point.y];
+  let inside = false;
+  for (let i = 0, j = polyPoints.length - 1; i < polyPoints.length; j = i++) {
+    var xi = polyPoints[i].x, yi = polyPoints[i].y;
+    var xj = polyPoints[j].x, yj = polyPoints[j].y;
+    var intersect = ((yi > y) != (yj > y))
+        && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+    if (intersect) inside = !inside;
+  }
+  return inside;
+};
+
+function getRegionName(coord, polygons) {
+  if (!polygons || !coord) return null;
+  for (const polygon of polygons) {
+    if (isPointInsidePolygon(coord, polygon.getCoordinates()[0])) {
+      return polygon.properties.svgID.substring(1);
+    }
+  }
+}
+
+function addRegions(geojson) {
+  const defaultSymbol = {
+    'lineColor': '#fff',    // Border color
+    'lineWidth': 1.5,            // Border width
+    'polygonFill': '#fff',  // Fill color
+    'polygonOpacity': 0.0,      // Fill opacity
+    'lineOpacity': 0.5,
+  };
+
+  // Define the hover style
+  const hoverSymbol = {
+    'polygonOpacity': 0.20 // Increased opacity
+  };
+
+  const polygons = maptalks.GeoJSON.toGeometry(scaleGeoJSON(geojson, 4096*64/2048, [1024+8,1024+8]));
+
+  // Store a reference to the currently "hovered" polygon
+  let selectedPolygon = null;
+  let lastZoom = null;
+
+  let polygonClick = e=> {
+    if (selectedPolygon) {
+      const extent = selectedPolygon.getExtent();
+      let zoom = map.getZoom();
+      if (extent && zoom <= 4) {
+        //map.fitExtent(extent);
+        const center = extent.getCenter();
+        map.animateTo({center: center, zoom: 4});
+      }
+    }
+  }
+
+  polygons.forEach(polygon => {
+    if (polygon.getType() === 'Polygon') { // Ensure it's a polygon
+      polygon.setSymbol(defaultSymbol);
+      let name = polygon.properties.svgID.substring(1).replaceAll('_','');
+      polygon.feature = {properties: {title: name}};
+      //polygon.on('click', polygonClick); // doesn't work with overlapping labels, use global event for now
+    }
+  });
+
+  regionsData = polygons;
+
+  map.on('click', polygonClick);
+
+  // Add mousemove listener to the map
+  map.on('mousemove', e => {
+
+    let zoom = map.getZoom();
+    let maxZoom = 3;
+
+    const mouseCoord = e.coordinate; // Geographic coordinate of the mouse
+    //let mouseCoord = map.containerPointToCoord(e.containerPoint); // same
+
+    let found = false;
+
+    // Iterate through polygons to find if the point is inside any
+    for (const polygon of polygons) {
+
+      if (!polygon.isVisible()) continue;
+
+      //if (polygon.containsPoint(mouseCoord)) { // doesn't work for some reason
+      if (isPointInsidePolygon(mouseCoord, polygon.getCoordinates()[0])) {
+
+        found = true;
+
+        if (selectedPolygon !== polygon || lastZoom != zoom) {
+          // New polygon hovered, update appearance
+          if (selectedPolygon) {
+            // Reset the previous polygon
+            selectedPolygon.updateSymbol(defaultSymbol);
+          }
+
+          // Highlight the currently hovered polygon
+          polygon.updateSymbol(zoom > maxZoom ? defaultSymbol : hoverSymbol);
+          selectedPolygon = polygon; // Update reference
+
+          currentRegion = polygon.properties.svgID.substring(1);
+
+          if (zoom>maxZoom) selectedPolygon = null; // uncomment to prevent zoom on click (it's rather glitchy)
+
+          lastZoom = zoom;
+        }
+        break; // Stop checking once a match is found
+      }
+    }
+
+    if (!found && selectedPolygon) {
+      // Mouse is not over any polygon, reset the previous one
+      selectedPolygon.updateSymbol(defaultSymbol);
+      selectedPolygon = null; // Clear reference
+    }
+  });
+
+  let layerId = 'Polygons'
+  let visible = settings.activeItems[layerId.toLowerCase()] == true;
+  //let layer = new maptalks.PolygonLayer(layerId, polygons, { visible: visible });
+
+  let layer = new maptalks.VectorLayer('vector', polygons).addTo(map);
+
+  //addHandler(layer);
+  //layer.addTo(groupLayer);
+}
+
+
+
 function loadMap(id, cell) {
   map && map.remove();
   mapId = id;
@@ -1691,13 +1841,22 @@ function loadMap(id, cell) {
 
   createMap();
 
-  let promises = ['./markers.json'].map(url=>fetch(url).then(r=>r.json()));
+  let promises = [
+    './markers.json',
+//    './regions.json',
+  ].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
     markers = values[0];
 
     markers.features = [...markers.features, ...localData.customMarkers.features];
 
     loadMarkers();
+
+    if (values.length>1) {
+      regions = values[1];
+      addRegions(regions);
+    }
+
   }).catch(e=>{console.log(e);})
 
   return false;
