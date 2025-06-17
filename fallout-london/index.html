@@ -1888,7 +1888,7 @@ function loadMap(id, cell) {
   ].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
 
-    if (values.length>1) {
+    if (values.length>1 && mapId=='LondonWorld') {
       regions = values[1];
       addRegions(regions);
     }
