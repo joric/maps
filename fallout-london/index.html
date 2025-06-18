@@ -1751,6 +1751,7 @@ function addRegions(geojson) {
       const extent = selectedPolygon.getExtent();
       let zoom = map.getZoom();
       if (extent && zoom <= 4) {
+        polygonLayer.hide();
         //map.fitExtent(extent);
         const center = extent.getCenter();
         map.animateTo({center: center, zoom: 4});
