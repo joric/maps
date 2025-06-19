@@ -28,9 +28,9 @@
    inkscape:window-height="1009"
    id="namedview108"
    showgrid="false"
-   inkscape:zoom="5.1200002"
-   inkscape:cx="1265.8203"
-   inkscape:cy="1411.0351"
+   inkscape:zoom="14.481547"
+   inkscape:cx="689.60172"
+   inkscape:cy="301.79786"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -60,7 +60,20 @@
 
            
            <defs
-   id="defs110" /><path
+   id="defs110" /><g
+   inkscape:groupmode="layer"
+   id="layer1"
+   inkscape:label="Layer 1"
+   sodipodi:insensitive="true"><image
+     width="2048"
+     height="2048"
+     preserveAspectRatio="none"
+     xlink:href="LondonWorld.jpg"
+     id="image1-7"
+     x="0"
+     y="0"
+     style="opacity:1"
+     inkscape:svg-dpi="96" /></g><path
    style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    d="M 1234.6747,1392.3927 L 1235.5033,1528.0135 L 1295.9941,1565.3024 L 1355.1038,1552.0441 L 1420.5664,1530.4995 L 1444.597,1521.9368 L 1472.4946,1490.1723 L 1431.0626,1444.597 L 1448.464,1432.1674 L 1432.9961,1411.1752 L 1416.6995,1392.6689 L 1402.8888,1384.1063 L 1371.6766,1376.3723 L 1303.1757,1374.4388 L 1255.6669,1373.3339 Z"
    id="lewisham"
@@ -76,25 +89,12 @@
    id="westminster"
    inkscape:label="westminster" /><path
    style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-   d="M 641.36795,321.78883 L 664.8461,309.91164 L 692.19125,304.9398 L 709.5927,308.53058 L 737.76649,327.3131 L 744.94804,336.42815 L 859.30047,369.02135 L 886.3694,357.97281 L 906.80921,357.69659 L 948.51746,369.29757 L 931.66843,428.68349 L 926.42037,431.72184 L 903.49464,478.12572 L 889.68396,492.21261 L 863.71989,501.88009 L 839.6893,504.64222 L 815.65872,501.88009 L 751.30096,488.89805 L 727.54659,487.51698 L 707.65921,490.27912 L 617.88979,504.91844 L 599.93591,503.81358 L 585.29659,492.48883 L 571.48591,467.07718 L 572.59077,446.91358 L 617.88979,363.49708 V 354.65825 L 636.3961,330.90388 L 640.53931,328.69417 Z"
+   d="M 641.16079,320.75303 L 662.49828,310.1188 L 683.55958,304.52548 L 699.30731,304.74381 L 709.5927,308.53058 L 737.76649,327.3131 L 745.29331,336.84247 L 777.90816,344.29206 L 859.09331,368.33082 L 887.19804,358.11092 L 908.53554,357.76564 L 948.51746,369.29757 L 930.42547,428.89065 L 926.42037,431.72184 L 903.08032,479.64489 L 890.02923,491.17681 L 878.40799,497.82524 L 863.71989,501.88009 L 839.75835,503.88263 L 816.34925,501.74198 L 755.72038,489.51953 L 737.97365,487.86225 L 723.09264,487.89677 L 707.65921,490.27912 L 617.88979,504.91844 L 603.11237,504.91843 L 593.44489,499.91207 L 584.88227,491.7983 L 574.24805,474.53495 L 571.69307,464.86747 L 572.08527,450.85428 L 575.79204,439.60323 L 595.58555,401.20023 L 617.88979,363.49708 V 354.65825 L 636.3961,330.90388 L 639.91783,328.2108 Z"
    id="islington"
    inkscape:label="islington"
-   sodipodi:nodetypes="cccccccccccccccccccccccccccccc" /><path
+   sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc" /><path
    style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    d="M 1102.7827,368.33082 L 1128.0563,369.43567 L 1136.6189,367.08786 L 1153.7442,350.10072 L 1186.4755,344.16213 L 1191.9997,376.75533 L 1240.8895,425.92135 L 1251.6619,429.37402 L 1263.6772,429.09781 L 1266.4393,426.74999 L 1272.6541,389.32305 L 1286.8791,375.78858 L 1305.6616,372.19781 L 1374.715,442.49417 L 1375.1293,452.29975 L 1383.692,460.86237 L 1372.5053,513.61916 L 1255.1145,628.1097 L 1248.6235,628.93834 L 1240.4752,626.45241 L 1211.0585,601.31698 L 1076.9568,589.30169 L 1065.2177,586.12523 L 1043.1206,562.64708 L 1037.182,560.57547 L 1021.4378,543.45023 L 1024.0619,538.34028 L 976.55314,486.96455 L 975.03396,483.23567 L 976.27692,480.19732 L 1027.2383,433.79344 L 1044.3636,421.50193 L 1096.5679,375.51237 Z"
    id="hackney"
    inkscape:label="hackney"
-   sodipodi:nodetypes="cccccccccccccccccccccccccccccccccc" /><g
-   inkscape:groupmode="layer"
-   id="layer1"
-   inkscape:label="Layer 1"
-   sodipodi:insensitive="true"><image
-     width="2048"
-     height="2048"
-     preserveAspectRatio="none"
-     xlink:href="LondonWorld.jpg"
-     id="image1-7"
-     x="0"
-     y="0"
-     style="opacity:0.641"
-     inkscape:svg-dpi="96" /></g></svg>
+   sodipodi:nodetypes="cccccccccccccccccccccccccccccccccc" /></svg>
