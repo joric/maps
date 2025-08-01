@@ -39,8 +39,9 @@ class SearchControl {
   };
 
   constructor(layer, options) {
-
     let autofocus = false;
+
+    document.querySelector('.search-form')?.remove();
 
     const innerHTML = `
       <form class="search-form">
