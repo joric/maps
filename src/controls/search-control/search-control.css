@@ -1,24 +1,26 @@
-.search-container {
+.search-control {
   font-family: sans-serif;
   color: black;
   background: white;
   width: 210px;
   border-radius: 24px;
   z-index: 9999;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 20px;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
   border: 1px solid rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
 
-.search-container:focus-within {
+.search-form {
+  padding: 0;
+  margin: 0;
+}
+
+.search-control:focus-within {
   width: 376px;
 }
 
-.search-container:focus-within:has(.search-list:not(:empty)) {
+.search-control:focus-within:has(.search-list:not(:empty)) {
   border-radius: 12px;
   padding-bottom: 6px;
 }
@@ -27,7 +29,7 @@
   .search-box: {
     max-width: 90vw;
   }
-  .search-container {
+  .search-control {
     max-width: 90vw;
   }
 }
@@ -49,13 +51,12 @@
   outline: none;
   transition: all 0.3s ease;
   background: transparent;
-
   padding: 12px 4px 9px 2px;
   margin: 0;
   margin-left: 16px;
 }
 
-.search-container:has(.search-list:not(:empty)) .search-input:focus {
+.search-control:has(.search-list:not(:empty)) .search-input:focus {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -106,7 +107,7 @@
   margin: 6px;
 }
 
-.search-container:focus-within:has(.search-list:not(:empty)) .search-list-container {
+.search-control:focus-within:has(.search-list:not(:empty)) .search-list-container {
   max-height: 281px;  /* 40*7=280 + 1px border + top padding */
   overflow: auto;
   margin-top: 2px;

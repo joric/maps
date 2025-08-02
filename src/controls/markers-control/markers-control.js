@@ -7,16 +7,25 @@ class MarkersControl {
 
     document.querySelector('.markers-control')?.remove();
 
-    document.body.append( Object.assign(document.createElement('ul'), {
+    const control = Object.assign(document.createElement('div'), {
       className: 'markers-control',
-      innerHTML: Object.keys(counters).sort(cmpGroup).map(group =>
+      innerHTML: Object.keys(counters||{}).sort(cmpGroup).map(group =>
         `<li tabindex="0"><div class="markers-control-group" data-name="${group}">${translate(group)}</div><ul>`+
         Object.entries(counters[group]).sort(cmpAlphaNum).map(([type, count]) =>
           `<li tabindex="0" class="markers-control-item" data-name="${type}"><i class="${options?.icons?.[type]?.class}"></i><span>${translate(type)}</span><span>${count}</span></li>`
         ).join('')
         +`</ul></li>`
       ).join('')
-    }));
+    });
+
+    let dock = document.querySelector('.' +(options?.position ?? 'topleft'));
+    (dock || document.body).append(control);
+
+    if (!dock) {
+      control.style.position = 'absolute';
+      control.style.left = (options?.left ?? 0)+'px';
+      control.style.top = (options?.top ?? 0)+'px';
+    }
 
     document.querySelectorAll('.markers-control .markers-control-group').forEach(el=>{
       el.addEventListener('click', e => {
@@ -29,7 +38,6 @@ class MarkersControl {
         options.itemCallback ? options.itemCallback(e.target.dataset.name) :  console.log('itemCallback', e);
       })
     })
-
   }
 }
 

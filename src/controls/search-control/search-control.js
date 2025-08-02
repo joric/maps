@@ -43,20 +43,26 @@ class SearchControl {
 
     document.querySelector('.search-form')?.remove();
 
-    const innerHTML = `
-      <form class="search-form">
-      <div class="search-container">
+    const control = Object.assign(document.createElement('div'), {
+      className: 'search-control',
+      innerHTML: `<form class="search-form">
         <div class="search-input-container">
           <input type="text" class="search-input" name="q" tabindex=1 placeholder="Search..."${autofocus ? 'autofocus':''}>
           <button type="submit" class="search-button search-submit" tabindex=-1 title="Search">&#128269;&#xFE0E;</button>
           <button type="button" class="search-button search-clear" tabindex=0 title="Cancel">&times;</button>
         </div>
         <div class="search-list-container"><ul class="search-list"></ul></div>
-      </div>
-      </form>
-    `;
+      </form>`
+    });
 
-    document.body.insertAdjacentHTML('beforeend', innerHTML);
+    let dock = document.querySelector('.' +(options?.position ?? 'topleft'));
+    (dock || document.body).append(control);
+
+    if (!dock) {
+      control.style.position = 'absolute';
+      control.style.left = (options?.left ?? 0)+'px';
+      control.style.top = (options?.top ?? 0)+'px';
+    }
 
     this._input = document.querySelector('.search-input');
     this._items = JSON.parse(localStorage.getItem(this._historyEntryName) || "[]");
