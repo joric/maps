@@ -6,24 +6,43 @@
   display: flex;
   align-items: flex-start;
   gap: 6px;
-
   margin-top: 8px;
 }
 
-.markers-control ul,
-.markers-control li {
-  all: unset;
+.markers-control > li {
   display: block;
+  padding: 0;
+  margin: 0;
 }
 
-.markers-control > li {
+.markers-control-group {
+  margin: 0;
+  padding: 8px;
+  display: block;
   background-color: white;
   border-radius: 16px;
-  padding: 8px;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 }
 
-.markers-control > li > ul {
+.markers-control-item {
+  margin: 0;
+  padding: 8px;
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.markers-control-item > * {
+  pointer-events: none;
+}
+
+.markers-control-item :nth-child(2) {
+  flex: 1;
+  padding-right: 8px;
+}
+
+.markers-control-items {
+  padding: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -31,13 +50,13 @@
   position: absolute;
   background-color: white;
   border-radius: 8px;
-  margin-top: 16px;
+  margin-top: 12px;
   margin-left: -8px;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
 }
 
-.markers-control > li > ul::before {
+.markers-control-items::before {
   content: "";
   position: absolute;
   top: -8px; left: 16px;
@@ -56,32 +75,10 @@
   padding: 8px;
 }
 
-.markers-control .markers-control-group,
-.markers-control .markers-control-item {
+.markers-control-group, .markers-control-item {
   cursor: pointer;
 }
 
-.markers-control .markers-control-group:hover,
-.markers-control .markers-control-item:hover {
-  opacity: 0.75;
+.markers-control-group:hover, .markers-control-item:hover {
+  opacity: 0.6;
 }
-
-.markers-control .markers-control-group {
-}
-
-.markers-control .markers-control-item {
-  display: flex;
-  gap: 4px;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.markers-control .markers-control-item > * {
-  pointer-events: none;
-}
-
-.markers-control .markers-control-item :nth-child(2) {
-  flex: 1;
-  padding-right: 8px;
-}
-

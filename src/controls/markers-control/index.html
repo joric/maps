@@ -1,6 +1,12 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/js/all.min.js"></script>
+<template id="remote">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/js/all.min.js"></script>
+</template>
+
+<template id="local">
+  <script src="../../../lib/font-awesome/js/all.min.js"></script>
+</template>
 
 <link rel="stylesheet" href="markers-control.css" />
 <script src="markers-control.js"></script>
@@ -9,10 +15,10 @@
 body { background-color: #aaa; }
 .topleft {
   display: flex;
-  position: absolute;
-  left: 10%;
-  top: 5%;
-  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 </style>
 
@@ -21,6 +27,7 @@ body { background-color: #aaa; }
 </body>
 
 <script>
+document.head.appendChild(document.getElementById(location.protocol === 'file:' ? 'local' : 'remote').content.cloneNode(true));
 
 window.onload = function(event) {
 
