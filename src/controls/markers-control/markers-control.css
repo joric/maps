@@ -18,6 +18,8 @@
 .markers-control-group {
   margin: 0;
   padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
   display: block;
   background-color: white;
   border-radius: 16px;
@@ -30,6 +32,9 @@
   display: flex;
   gap: 4px;
   cursor: pointer;
+
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .markers-control-item > * {
@@ -42,14 +47,15 @@
 }
 
 .markers-control-items {
+  background-color: white;
+  border-radius: 8px;
+
   padding: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   max-height: 0;
   position: absolute;
-  background-color: white;
-  border-radius: 8px;
   margin-top: 12px;
   margin-left: -8px;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
@@ -72,7 +78,8 @@
   max-height: 320px;
   max-width: 320px;
   overflow: visible;
-  padding: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .markers-control-group, .markers-control-item {
@@ -80,5 +87,5 @@
 }
 
 .markers-control-group:hover, .markers-control-item:hover {
-  opacity: 0.6;
+  background: #eee;
 }
