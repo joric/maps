@@ -6,7 +6,7 @@
 <script src="markers-control.js"></script>
 
 <style>
-body { background-color: #fff; }
+body { background-color: #666; }
 </style>
 
 <script>
@@ -14,14 +14,16 @@ body { background-color: #fff; }
 window.onload = function(event) {
 
   let counters =  {
-    'group1': { 'house': 1, 'file': 2 },
-    'group2': { 'image': 3 },
+    'collectibles': { 'house': 1, 'file': 2 },
+    'locations': { 'image': 3 },
+    'NPCs': { 'user': 3 },
   };
 
   let icons = {
     'house': {'class': 'fa fa-house'},
     'file': {'class': 'fa fa-file'},
     'image': {'class': 'fa fa-image'},
+    'user': {'class': 'fa fa-user'},
   }
 
   let markersControl = new MarkersControl(counters, {icons: icons, left: 32, top: 32 });
