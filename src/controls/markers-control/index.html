@@ -1,0 +1,30 @@
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/js/all.min.js"></script>
+
+<link rel="stylesheet" href="markers-control.css" />
+<script src="markers-control.js"></script>
+
+<style>
+body { background-color: #fff; }
+</style>
+
+<script>
+
+window.onload = function(event) {
+
+  let counters =  {
+    'group1': { 'house': 1, 'file': 2 },
+    'group2': { 'image': 3 },
+  };
+
+  let icons = {
+    'house': {'class': 'fa fa-house'},
+    'file': {'class': 'fa fa-file'},
+    'image': {'class': 'fa fa-image'},
+  }
+
+  let markersControl = new MarkersControl(counters, {icons: icons, left: 32, top: 32 });
+}
+
+</script>
