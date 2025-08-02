@@ -20,6 +20,7 @@
   background-color: white;
   border-radius: 16px;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .markers-control ul:focus-within {
