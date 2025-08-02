@@ -6,8 +6,19 @@
 <script src="markers-control.js"></script>
 
 <style>
-body { background-color: #666; }
+body { background-color: #aaa; }
+.topleft {
+  display: flex;
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  transform: translateX(-50%);
+}
 </style>
+
+<body>
+<div class="topleft"/>
+</body>
 
 <script>
 
@@ -26,7 +37,7 @@ window.onload = function(event) {
     'user': {'class': 'fa fa-user'},
   }
 
-  let markersControl = new MarkersControl(counters, {icons: icons, left: 32, top: 32 });
+  let markersControl = new MarkersControl(counters, {icons: icons});
 }
 
 </script>
