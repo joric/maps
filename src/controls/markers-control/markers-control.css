@@ -26,6 +26,8 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+
+  display: inline-block;
 }
 
 .markers-control ul:focus-within {
@@ -47,7 +49,11 @@
   flex-direction: column;
   overflow: hidden;
   max-height: 0;
-  max-width: 50px;
+
+  /*max-width: 50px;*/
+
+  flex-grow: 1;
+  width: 0;
 
   padding: 0;
   margin: 0;
@@ -55,7 +61,10 @@
 
 .markers-control *:focus-within .markers-control-items {
   max-height: 320px;
-  max-width: 320px;
+  /*max-width: 320px;*/
+
+  width: 180px;
+
   overflow: visible;
   padding-top: 6px;
   padding-bottom: 6px;
