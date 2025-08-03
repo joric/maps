@@ -42,7 +42,7 @@ class MarkersControl {
 
     // prevent selection on double click
     let time = 0;
-    document.addEventListener('mousedown', ev => {
+    control.addEventListener('mousedown', ev => {
       let now = Date.now();
       if (now - time < 300)
         setTimeout(() => {
