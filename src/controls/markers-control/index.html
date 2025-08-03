@@ -16,12 +16,7 @@ body { background-color: #aaa; }
 .topleft {
   display: flex;
   align-items: flex-start;
-  padding: 8px;
-
-  top: 50%;
-  left: 45%;
-  position: absolute;
-
+  padding: 16px;
 }
 </style>
 
@@ -38,6 +33,7 @@ window.onload = function(event) {
     'collectibles': { 'house': 1, 'file': 2 },
     'locations': { 'image': 3 },
     'NPCs': { 'user': 3 },
+    'quests': {'part': 50},
   };
 
   let icons = {
@@ -45,9 +41,14 @@ window.onload = function(event) {
     'file': {'class': 'fa fa-file'},
     'image': {'class': 'fa fa-image'},
     'user': {'class': 'fa fa-user'},
+    'part': {'class': 'fa fa-gear'},
   }
 
-  let markersControl = new MarkersControl(counters, {icons: icons});
+  for (let i=0; i<100; i++) {
+    counters['quests'][`quest_longname_longname_longname_${i}`] = i;
+  }
+
+  let markersControl = new MarkersControl(counters, {icons: icons, groupCallback:()=>{}, itemCallback:()=>{}, });
 }
 
 </script>

@@ -10,36 +10,31 @@
   margin-left: 4px;
 }
 
-.markers-control > ul,
-.markers-control > ul > li {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-
 .markers-control * {
   transition: all 0.3s ease;
 }
 
-.markers-control > ul {
+.markers-control-groups {
   background-color: white;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 
   display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
-.markers-control ul:focus-within {
+.markers-control-groups:focus-within {
   border-radius: 8px;
 }
 
 .markers-control-group {
   margin: 0;
   padding: 8px;
+  display: block;
   padding-left: 16px;
   padding-right: 16px;
-  display: block;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 }
 
@@ -49,28 +44,20 @@
   flex-direction: column;
   overflow: hidden;
   max-height: 0;
-
-  /*max-width: 50px;*/
-
   flex-grow: 1;
   width: 0;
-
   padding: 0;
   margin: 0;
 }
 
 .markers-control *:focus-within .markers-control-items {
   max-height: 320px;
-  /*max-width: 320px;*/
-
   width: 180px;
-
-  overflow: visible;
+  overflow-y: auto;
   padding-top: 6px;
   padding-bottom: 6px;
   border-top: 1px solid rgba(0,0,0,0.1);
 }
-
 
 .markers-control-item {
   margin: 0;
@@ -89,6 +76,10 @@
 .markers-control-item :nth-child(2) {
   flex: 1;
   padding-right: 8px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .markers-control-group, .markers-control-item {
