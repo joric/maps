@@ -6,7 +6,7 @@
   display: flex;
   align-items: flex-start;
   gap: 6px;
-  margin-top: 6px;
+  margin-top: 5px;
   margin-left: 4px;
 }
 
@@ -51,8 +51,8 @@
 }
 
 .markers-control *:focus-within .markers-control-items {
-  max-height: 320px;
-  width: 180px;
+  max-height: 280px;
+  width: 150px;
   overflow-y: auto;
   padding-top: 6px;
   padding-bottom: 6px;
