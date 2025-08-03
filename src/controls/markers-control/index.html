@@ -45,7 +45,7 @@ window.onload = function(event) {
   }
 
   for (let i=0; i<100; i++) {
-    counters['quests'][`quest_longname_longname_longname_${i}`] = i;
+    counters['quests'][`quest_longname_longname_longname_${i}`] = i*5000;
   }
 
   let markersControl = new MarkersControl(counters, {icons: icons, groupCallback:()=>{}, itemCallback:()=>{}, });
