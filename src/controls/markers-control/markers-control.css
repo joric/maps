@@ -12,6 +12,7 @@
 
 .markers-control * {
   transition: all 0.3s ease;
+  user-select: none;
 }
 
 .markers-control-groups {
