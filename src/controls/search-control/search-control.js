@@ -1,6 +1,6 @@
 class SearchControl {
 
-  _historyEntryName = 'searchHistory';
+  _historyEntryName = `searchHistory:${location.pathname}`;
   _maxHistorySize = 50;
   _masStringLength = 100;
 
@@ -64,6 +64,7 @@ class SearchControl {
       control.style.top = (options?.top ?? 0)+'px';
     }
 
+    this._historyEntryName = options?.historyEntryName || this._historyEntryName;
     this._input = document.querySelector('.search-input');
     this._items = JSON.parse(localStorage.getItem(this._historyEntryName) || "[]");
 
