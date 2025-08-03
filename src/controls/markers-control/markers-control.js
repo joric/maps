@@ -38,6 +38,20 @@ class MarkersControl {
         options.itemCallback ? options.itemCallback(e.target.dataset.name) :  console.log('itemCallback', e);
       })
     })
+
+
+    // prevent selection on double click
+    let time = 0;
+    document.addEventListener('mousedown', ev => {
+      let now = Date.now();
+      if (now - time < 300)
+        setTimeout(() => {
+          let sel = getSelection();
+          if (sel?.type === 'Range') sel.removeAllRanges();
+        }, 0);
+      time = now;
+    });
+
   }
 }
 

@@ -1,6 +1,6 @@
 class SearchControl {
 
-  _historyEntryName = `searchHistory:${location.pathname}`;
+  _historyEntryName = `search-control:${location.pathname}`;
   _maxHistorySize = 50;
   _masStringLength = 100;
 
