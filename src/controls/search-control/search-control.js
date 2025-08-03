@@ -41,7 +41,7 @@ class SearchControl {
   constructor(layer, options) {
     let autofocus = false;
 
-    document.querySelector('.search-form')?.remove();
+    document.querySelector('.search-control')?.remove();
 
     const control = Object.assign(document.createElement('div'), {
       className: 'search-control',
