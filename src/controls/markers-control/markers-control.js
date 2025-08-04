@@ -7,8 +7,6 @@ class MarkersControl {
 
     document.querySelector('.markers-control')?.remove();
 
-    console.log(counters);
-
     const control = Object.assign(document.createElement('div'), {
       className: 'markers-control',
       innerHTML: Object.keys(counters||{}).sort(cmpGroup).map(group =>
