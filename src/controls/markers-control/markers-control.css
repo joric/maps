@@ -36,11 +36,9 @@
   display: block;
   padding-left: 16px;
   padding-right: 16px;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 }
 
 .markers-control-items {
-  background-color: white;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -88,5 +86,5 @@
 }
 
 .markers-control-group:hover, .markers-control-item:hover {
-  background: #eee;
+  background: rgba(0,0,0,0.1);
 }

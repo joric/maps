@@ -47,6 +47,7 @@ class SearchControl {
       className: 'search-control',
       innerHTML: `<form class="search-form">
         <div class="search-input-container">
+          <button type="button" class="search-button search-menu" tabindex=0 title="Menu">&#8801;</button>
           <input type="text" class="search-input" name="q" tabindex=1 placeholder="Search..."${autofocus ? 'autofocus':''}>
           <button type="submit" class="search-button search-submit" tabindex=-1 title="Search">&#128269;&#xFE0E;</button>
           <button type="button" class="search-button search-clear" tabindex=0 title="Cancel">&times;</button>
