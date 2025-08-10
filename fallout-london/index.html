@@ -1113,9 +1113,11 @@ function popupOnClick(e) {
   popup.querySelector('#popup-found').onclick = function() { toggleMarked(o.ref_id) };
 
   popup.querySelector('#popup-marker-id-link').href = '#' + o.ref_id;
+  popup.querySelector('#popup-marker-id-link').title = `Copy Reference ID to Clipboard (${o.ref_id || '00000010'})`;
   popup.querySelector('#popup-marker-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
 
   popup.querySelector('#popup-form-id-link').href = '#' + (o.form_id || '00000010');
+  popup.querySelector('#popup-form-id-link').title = `Copy Form ID to Clipboard (${o.form_id || '00000010'})`;
   popup.querySelector('#popup-form-id-link').onclick = function(e){ copyToClipboard(e.target.href.split('#')[1]); return false; };
 
   let editable = o.ref_id && o.ref_id.startsWith('FF');
