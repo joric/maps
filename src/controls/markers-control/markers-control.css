@@ -20,10 +20,16 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
-
   display: inline-block;
   padding: 0;
   margin: 0;
+
+  /*
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  outline: 2px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.1);
+  */
 }
 
 .markers-control-groups:focus-within {
