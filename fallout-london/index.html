@@ -1125,12 +1125,12 @@ function popupOnClick(e) {
   if (!editable) {
     popup.querySelector('#popup-map-link').href = getMapURL(wikify(o));
     popup.querySelector('#popup-map-link').onclick = copyLink;
-    popup.querySelector('#popup-map-link').title = "Copy Map URL to Clipboard";
+    popup.querySelector('#popup-map-link').title = `Copy Map URL to Clipboard (#${wikify(o)})`;
     popup.querySelector('#popup-map-link').innerHTML = '<i class="fa fa-link"></i>';
 
     popup.querySelector('#popup-wiki-link').href = wikiPrefix+encodeURIComponent(itemName(o));
     popup.querySelector('#popup-wiki-link').onclick = null;
-    popup.querySelector('#popup-wiki-link').title = "Fallout London Wiki";
+    popup.querySelector('#popup-wiki-link').title = `Fallout London Wiki ("${itemName(o)}")`;
     popup.querySelector('#popup-wiki-link').innerHTML = '<i class="fa-brands fa-wikipedia-w"></i>';
   } else {
 
