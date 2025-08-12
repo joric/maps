@@ -11,9 +11,9 @@ class MarkersControl {
     //options = {...options||{}, theme:'retro'};
 
     const control = Object.assign(document.createElement('div'), {
-      className: 'markers-control',
+      className: `markers-control${(options?.theme) ? ' '+options.theme : ''}`,
       innerHTML: Object.keys(counters||{}).sort(cmpGroup).map(group =>
-        `<ul class="markers-control-groups${(options?.theme) ? ' '+options.theme : ''}"><li tabindex="0"><div class="markers-control-group" data-name="${group}">${translate(group)}</div><ul class="markers-control-items">`+
+        `<ul class="markers-control-groups"><li tabindex="0"><div class="markers-control-group" data-name="${group}">${translate(group)}</div><ul class="markers-control-items">`+
         Object.entries(counters[group]).map(([type,count])=>[translate(type),type,count]).sort(cmpAlphaNum).map(([title, type, count]) =>
           `<li tabindex="0" class="markers-control-item" data-name="${type}" title="${title}"><i class="${options?.icons?.[type]?.class||'fa fa-question-circle'}"></i><span>${title}</span><span>${count}</span></li>`
         ).join('')
@@ -21,7 +21,7 @@ class MarkersControl {
       ).join('')
     });
 
-    let dock = document.querySelector('.' +(options?.position ?? 'topleft'));
+    let dock = document.querySelector('.' +(options?.position ?? 'controls-topleft'));
     (dock || document.body).append(control);
 
     if (!dock) {

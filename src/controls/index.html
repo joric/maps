@@ -5,8 +5,11 @@
 </template>
 
 <template id="local">
-  <script src="../../../lib/font-awesome/js/all.min.js"></script>
+  <script src="../../lib/font-awesome/js/all.min.js"></script>
 </template>
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css">
 
 <link rel="stylesheet" href="search-control/search-control.css" />
 <script src="search-control/search-control.js"></script>
@@ -15,44 +18,73 @@
 <script src="markers-control/markers-control.js"></script>
 
 <style>
+html, body, #map { width:100%; height: 100%; margin: 0; padding: 0; }
 body { 
+/*
   background:
     repeating-radial-gradient(circle at 20% 30%, #fffb 0 25px, #0000 25px 50px),
     repeating-radial-gradient(circle at 80% 70%, #0ff8 0 20px, #0000 20px 50px),
     repeating-linear-gradient(45deg, #f0f5 0 25px, #0000 25px 50px),
     repeating-linear-gradient(-45deg, #0f08 0 25px, #0000 25px 50px),
     linear-gradient(135deg, #f06, #fc0, #0cf, #90f);
+    */
 }
 
-.topleft {
+.controls-topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: flex-start;
   padding: 16px;
+  z-index: 1000;
+}
+
+#themeCtrl {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
 }
 
 </style>
 
+<div id="map"></div>
+
 <body>
-<select id="themeCtrl" name=theme onchange="window.onload()">
+<select id="themeCtrl" name=theme onchange="location.hash=this.value;window.onload()">
 <option></option>
 <option>glass</option>
 <option>retro</option>
 </select>
 
-<div class="topleft"/>
+<div class="controls-topleft"/>
 </body>
 
 <script>
 document.head.appendChild(document.getElementById(location.protocol === 'file:' ? 'local' : 'remote').content.cloneNode(true));
 
+let map = null;
+
 window.onload = function(event) {
-  let searchControl = new SearchControl();
+
+  if (map) map.remove();
+
+  map = L.map('map',{zoomControl: false}).setView([51.505, -0.09], 13);
+
+  const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+
+  let theme = location.hash ? location.hash.slice(1) : '';
+
+  let searchControl = new SearchControl(null, {theme: theme});
 
   searchControl._handleSubmit = function() {
     console.log('here', searchControl._input.value);
   }
-
-  let theme = themeCtrl.value;
 
   let counters =  {
     'collectibles': { 'house': 1, 'file': 2 },

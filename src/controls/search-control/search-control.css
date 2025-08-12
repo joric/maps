@@ -12,6 +12,15 @@
   transition: all 0.3s ease;
 }
 
+.search-control.glass {
+  background-color: rgba(255,255,255,0.1) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  outline: 2px solid rgba(255,255,255,0.1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+}
+
 .search-control > * {
   user-select: none;
 }
@@ -140,7 +149,7 @@
 }
 
 .search-list li:hover {
-  background-color: #ddd;
+  background: rgba(0,0,0,0.1);
 }
 
 .search-delete {
@@ -178,4 +187,6 @@
 
   opacity: 0.75;
 }
+
+
 

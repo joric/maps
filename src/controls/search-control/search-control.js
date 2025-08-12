@@ -44,7 +44,7 @@ class SearchControl {
     document.querySelector('.search-control')?.remove();
 
     const control = Object.assign(document.createElement('div'), {
-      className: 'search-control',
+      className: `search-control${(options?.theme) ? ' '+options.theme : ''}`,
       innerHTML: `<form class="search-form">
         <div class="search-input-container">
           <button type="button" class="search-button search-menu" tabindex=0 title="Menu">&#8801;</button>
@@ -56,7 +56,7 @@ class SearchControl {
       </form>`
     });
 
-    let dock = document.querySelector('.' +(options?.position ?? 'topleft'));
+    let dock = document.querySelector('.' +(options?.position ?? 'controls-topleft'));
     (dock || document.body).append(control);
 
     if (!dock) {
