@@ -46,6 +46,12 @@ body {
 document.head.appendChild(document.getElementById(location.protocol === 'file:' ? 'local' : 'remote').content.cloneNode(true));
 
 window.onload = function(event) {
+  let searchControl = new SearchControl();
+
+  searchControl._handleSubmit = function() {
+    console.log('here', searchControl._input.value);
+  }
+
   let theme = themeCtrl.value;
 
   let counters =  {
@@ -65,12 +71,6 @@ window.onload = function(event) {
 
   for (let i=0; i<100; i++) {
     counters['quests'][`quest_longname_longname_longname_${i}`] = i*5000;
-  }
-
-  let searchControl = new SearchControl();
-
-  searchControl._handleSubmit = function() {
-    console.log('here', searchControl._input.value);
   }
 
   let markersControl = new MarkersControl(counters, {icons: icons, groupCallback:()=>{}, itemCallback:()=>{}, theme:theme});
