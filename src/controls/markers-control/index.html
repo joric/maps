@@ -12,15 +12,29 @@
 <script src="markers-control.js"></script>
 
 <style>
-body { background-color: #aaa; }
+body { 
+  background:
+    repeating-radial-gradient(circle at 20% 30%, #fffb 0 25px, #0000 25px 50px),
+    repeating-radial-gradient(circle at 80% 70%, #0ff8 0 20px, #0000 20px 50px),
+    repeating-linear-gradient(45deg, #f0f5 0 25px, #0000 25px 50px),
+    repeating-linear-gradient(-45deg, #0f08 0 25px, #0000 25px 50px),
+    linear-gradient(135deg, #f06, #fc0, #0cf, #90f);
+}
 .topleft {
   display: flex;
   align-items: flex-start;
   padding: 16px;
 }
+
 </style>
 
 <body>
+<select id="themeCtrl" name=theme onchange="reload()">
+<option></option>
+<option>glass</option>
+<option>retro</option>
+</select>
+
 <div class="topleft"/>
 </body>
 
@@ -28,6 +42,12 @@ body { background-color: #aaa; }
 document.head.appendChild(document.getElementById(location.protocol === 'file:' ? 'local' : 'remote').content.cloneNode(true));
 
 window.onload = function(event) {
+  reload();
+}
+
+function reload() {
+
+  let theme = themeCtrl.value;
 
   let counters =  {
     'collectibles': { 'house': 1, 'file': 2 },
@@ -48,7 +68,7 @@ window.onload = function(event) {
     counters['quests'][`quest_longname_longname_longname_${i}`] = i*5000;
   }
 
-  let markersControl = new MarkersControl(counters, {icons: icons, groupCallback:()=>{}, itemCallback:()=>{}, });
+  let markersControl = new MarkersControl(counters, {icons: icons, groupCallback:()=>{}, itemCallback:()=>{}, theme:theme});
 }
 
 </script>

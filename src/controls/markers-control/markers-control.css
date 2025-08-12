@@ -23,17 +23,21 @@
   display: inline-block;
   padding: 0;
   margin: 0;
+}
 
-  /*
+.markers-control-groups.glass {
+  background-color: rgba(255,255,255,0.1) !important;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
   outline: 2px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.1);
-  */
 }
 
 .markers-control-groups:focus-within {
   border-radius: 8px;
+}
+
+.markers-control-groups.retro:focus-within {
+  border-radius: 16px !important;
 }
 
 .markers-control-group {
@@ -53,6 +57,27 @@
   width: 0;
   padding: 0;
   margin: 0;
+}
+
+.retro .markers-control-items {
+  position: absolute;
+  background: white;
+  border-radius: 16px;
+  margin-top: 8px;
+  border-top: none !important;
+  transition: none;
+}
+
+.retroxxx .markers-control-items::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 16px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid red;
 }
 
 .markers-control *:focus-within .markers-control-items {
