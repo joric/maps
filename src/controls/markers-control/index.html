@@ -29,7 +29,7 @@ body {
 </style>
 
 <body>
-<select id="themeCtrl" name=theme onchange="reload()">
+<select id="themeCtrl" name=theme onchange="window.onload()">
 <option></option>
 <option>glass</option>
 <option>retro</option>
@@ -42,11 +42,6 @@ body {
 document.head.appendChild(document.getElementById(location.protocol === 'file:' ? 'local' : 'remote').content.cloneNode(true));
 
 window.onload = function(event) {
-  reload();
-}
-
-function reload() {
-
   let theme = themeCtrl.value;
 
   let counters =  {
