@@ -8,8 +8,11 @@
   <script src="../../../lib/font-awesome/js/all.min.js"></script>
 </template>
 
-<link rel="stylesheet" href="markers-control.css" />
-<script src="markers-control.js"></script>
+<link rel="stylesheet" href="search-control/search-control.css" />
+<script src="search-control/search-control.js"></script>
+
+<link rel="stylesheet" href="markers-control/markers-control.css" />
+<script src="markers-control/markers-control.js"></script>
 
 <style>
 body { 
@@ -20,6 +23,7 @@ body {
     repeating-linear-gradient(-45deg, #0f08 0 25px, #0000 25px 50px),
     linear-gradient(135deg, #f06, #fc0, #0cf, #90f);
 }
+
 .topleft {
   display: flex;
   align-items: flex-start;
@@ -61,6 +65,12 @@ window.onload = function(event) {
 
   for (let i=0; i<100; i++) {
     counters['quests'][`quest_longname_longname_longname_${i}`] = i*5000;
+  }
+
+  let searchControl = new SearchControl();
+
+  searchControl._handleSubmit = function() {
+    console.log('here', searchControl._input.value);
   }
 
   let markersControl = new MarkersControl(counters, {icons: icons, groupCallback:()=>{}, itemCallback:()=>{}, theme:theme});
