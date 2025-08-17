@@ -10,9 +10,14 @@
   margin-left: 4px;
 }
 
-.markers-control * {
-  transition: all 0.3s ease;
-  user-select: none;
+@media (max-width: 1024px) {
+  .markers-control {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .controls-topleft {
+    flex-direction: column;
+  }
 }
 
 .markers-control-groups {
@@ -23,6 +28,11 @@
   display: inline-block;
   padding: 0;
   margin: 0;
+}
+
+.markers-control * {
+  transition: all 0.3s ease;
+  user-select: none;
 }
 
 .glass .markers-control-groups {
@@ -121,3 +131,8 @@
 .markers-control-group:hover, .markers-control-item:hover {
   background: rgba(0,0,0,0.1);
 }
+
+
+
+
+
