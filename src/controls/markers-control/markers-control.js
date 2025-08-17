@@ -30,11 +30,24 @@ class MarkersControl {
       control.style.top = (options?.top ?? 0)+'px';
     }
 
-    document.querySelectorAll('.markers-control .markers-control-group').forEach(el=>{
-      el.addEventListener('click', e => {
-        options.groupCallback ? options.groupCallback(e.target.dataset.name) : console.log('groupCallback', e);
-      })
+
+    document.querySelectorAll('.markers-control li').forEach(el => {
+      el.addEventListener('focus', () => el.dataset.justFocused = '1');
     })
+
+    document.querySelectorAll('.markers-control .markers-control-group').forEach(el => {
+      el.addEventListener('click', e => {
+        if (el.parentElement.dataset.justFocused) {
+          delete el.parentElement.dataset.justFocused; // skip first click
+          return;
+        }
+        // Only fire callback when already focused
+        options.groupCallback
+          ? options.groupCallback(e.currentTarget.dataset.name)
+          : console.log('groupCallback', e);
+      });
+
+    });
 
     document.querySelectorAll('.markers-control .markers-control-item').forEach(el=>{
       el.addEventListener('click', e => {
