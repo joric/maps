@@ -30,30 +30,34 @@ class MarkersControl {
       control.style.top = (options?.top ?? 0)+'px';
     }
 
-    document.querySelectorAll('.markers-control > ul > li').forEach(el => {
-      el.addEventListener('focus', () => {
-        //console.log('li focused', el);
-        el.dataset.justFocused = '1'
-        setTimeout((el)=>{
-          delete el.dataset.justFocused;
-          //console.log('clearing', el);
-          }, 500, el);
-        });
-    })
+    let justFocusedLi = null;
 
-    document.querySelectorAll('.markers-control .markers-control-group').forEach(el => {
-      el.addEventListener('click', e => {
-        if (el.parentElement.dataset.justFocused) {
-          delete el.parentElement.dataset.justFocused; // skip first click
+    document.querySelectorAll('.markers-control > ul > li').forEach(li => {
+      li.addEventListener('focus', e => {
+        if (!li.contains(e.relatedTarget)) {
+          justFocusedLi = li;
+        }
+      });
+    });
+
+    document.addEventListener('mouseup', e => {
+      if (e.target.parentElement == justFocusedLi) return;
+      justFocusedLi = null;
+    });
+
+    document.querySelectorAll('.markers-control .markers-control-group').forEach(group => {
+      group.addEventListener('click', e => {
+        const li = group.closest('li');
+        // Skip first click if li just got focus
+        if (justFocusedLi === li) {
+          justFocusedLi = null; // reset flag
           return;
         }
         //console.log('firing callback');
-        // Only fire callback when already focused
         options.groupCallback
-          ? options.groupCallback(e.currentTarget.dataset.name)
+          ? options.groupCallback(group.dataset.name)
           : console.log('groupCallback', e);
       });
-
     });
 
     document.querySelectorAll('.markers-control .markers-control-item').forEach(el=>{
