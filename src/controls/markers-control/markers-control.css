@@ -108,20 +108,23 @@
 .markers-control-item :nth-child(2) {
   flex: 1;
   padding-right: 8px;
-
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
+.markers-control-group.selected, .markers-control-item.selected {
+  opacity: 1.0;
+}
+
 .markers-control-group, .markers-control-item {
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .markers-control-group:hover, .markers-control-item:hover {
   background: rgba(0,0,0,0.1);
 }
-
 
 
 
