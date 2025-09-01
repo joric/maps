@@ -3,7 +3,7 @@ class MarkersControl {
 
     const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true });
     const translate = options?.translate || (s => s[0].toUpperCase()+s.slice(1));
-    let cmpGroup = (a,b)=>(options?.weights?.[b]??0-options?.weights?.[a]??0)||cmpAlphaNum(a,b);
+    let cmpGroup = (a,b)=>((options?.weights?.[b]??0)-(options?.weights?.[a]??0))||cmpAlphaNum(a,b);
 
     document.querySelector('.markers-control')?.remove();
 
