@@ -124,6 +124,7 @@
 
 .markers-control-group:hover, .markers-control-item:hover {
   background: rgba(0,0,0,0.1);
+  opacity: 1;
 }
 
 
