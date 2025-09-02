@@ -83,7 +83,7 @@
 }
 
 .markers-control *:focus-within .markers-control-items {
-  max-height: 290px;
+  max-height: 293px;
   width: 200px;
   overflow-y: auto;
   padding-top: 6px;
