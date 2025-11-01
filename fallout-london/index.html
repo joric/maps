@@ -76,6 +76,11 @@ html, body{margin:0px;height:100%;width:100%;font-family:sans-serif;}
       </ul>
 
     <hr/>
+
+    <div class="version"></div>
+
+    <br/>
+
     <a href="https://github.com/joric/maps/wiki/Fallout-London" class="link" target=_blank><span class="fa-brands fa-wikipedia-w"></span> About the Map</a>
 
     </div>
@@ -214,6 +219,13 @@ let firstRun = false;
 let layerName = 'markers';
 
 let wikiPrefix = 'https://fallout.wiki/wiki/Mod:Fallout_London/';
+
+let config = {
+  versions: {
+    '1.02': { date: '2024-10-18', data: 'markers-1.02.json'},
+    '1.03': { date: '2025-09-30', data: 'markers.json'},
+  }
+}
 
 let maps = {
   'LondonWorld' : { name: 'London', scale: 1, offset: {x:0, y:0},
@@ -1885,8 +1897,11 @@ function loadMap(id, cell) {
 
   createMap();
 
+  let markersFile = config.versions?.[settings.version]?.data || './markers.json';
+  console.log('loading markers from', markersFile);
+
   let promises = [
-    './markers.json',
+    markersFile,
     './regions.json',
   ].map(url=>fetch(url).then(r=>r.json()));
   Promise.all(promises).then(values => {
@@ -2103,6 +2118,18 @@ window.onload = function(event) {
   localData.customMarkers = localData.customMarkers || {features:[]};
 
   settings = localData[mapId];
+
+  if (config.versions) {
+    settings.version = settings.version || config.versions && Object.keys(config.versions)[Object.keys(config.versions).length-1];
+    document.querySelector('.version').innerHTML = `<select>${Object.entries(config.versions).sort((a,b)=>b[0]-a[0]).map(([key,value])=>`<option value="${key}"${key==settings.version?' selected':''}>Version ${key} (${new Date(value.date).toLocaleDateString("en",{day:"numeric",month:"short",year:"numeric"})})</option>`).join('')}</select>`;
+    document.querySelector('.version select').onchange = e=> {
+      settings.version = e.target.value;
+      saveSettings();
+      location.reload();
+    }
+  } else {
+    document.querySelector('.version').textContent = '';
+  }
 
   saveSettings();
 

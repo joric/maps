@@ -61,6 +61,15 @@
   margin: 0;
 }
 
+.markers-control *:focus-within .markers-control-items {
+  max-height: 293px;
+  width: 200px;
+  overflow-y: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
 .retro .markers-control-items {
   position: absolute;
   background: white;
@@ -80,15 +89,6 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 5px solid red;
-}
-
-.markers-control *:focus-within .markers-control-items {
-  max-height: 293px;
-  width: 200px;
-  overflow-y: auto;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .markers-control-item {
@@ -124,7 +124,6 @@
 
 .markers-control-group:hover, .markers-control-item:hover {
   background: rgba(0,0,0,0.1);
-  opacity: 1;
 }
 
 
