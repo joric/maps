@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <title>301 Moved Permanently</title>
   <link rel="canonical" href="https://joric.github.io/folon/">
-  <meta http-equiv="refresh" content="0; url=https://joric.github.io/folon/">
+  <script>
+    const target = 'https://joric.github.io/folon/';
+    const newUrl = location.hash ? target + location.hash : target;
+    location.replace(newUrl);
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://joric.github.io/folon/">
+  </noscript>
 </head>
 <body>
   <h1>301 Moved Permanently</h1>
