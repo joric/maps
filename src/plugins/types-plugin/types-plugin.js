@@ -1,19 +1,19 @@
 /*
   parses types.json, pre-compiles regex entries.
-  non-ascii keys are compiled with new RegExp, use optional "weight" parameter to pre-sort
-  all fields are inherited while parsing, group_weight is optional, category_icon is first icon
+  non-ascii keys are compiled with new RegExp, "weight" parameter is used to pre-sort regex entries
+  all fields are inherited while parsing, group weight is first weight, category icon is first icon
   example format:
 {
   "icon": "misc",
   "group": "misc",
   "match": {
     "description": {
-      "Note": { "category": "Note", "group": "custom", "group_weight": -10000, "icon": "note" }
+      "Note": { "category": "Note", "group": "custom", "weight": -10000, "icon": "note" }
     },
     "signature": {
       "ACTI": {
         "group": "misc",
-        "group_weight": 1000,
+        "weight": 1000,
         "match": {
           "editor_id": {
             "DN011OverdueBookVendMachine": { "category": "Book Terminal", "icon": "book_terminal" },
