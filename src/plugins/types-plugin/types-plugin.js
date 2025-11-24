@@ -44,11 +44,17 @@ let getType2 = function(o) {
       for (const [field, map] of Object.entries(node.match)) {
         const arr = [];
         for (const [k, entry] of Object.entries(map)) {
-          if (/[^A-Za-z0-9_]/.test(k)) {
+          if (/[\^\*\+\$\|\(\)\[\]\{\}]/.test(k)) {
             arr.push({ re: new RegExp(k, "i"), entry });
           }
         }
-        if (arr.length) nodeCache[field] = arr;
+
+        if (arr.length) {
+          arr.sort((a,b)=>(b.entry?.weight??0)-(a.entry?.weight??0));
+
+          console.log(arr);
+          nodeCache[field] = arr;
+        }
       }
 
       regexCache.set(node, nodeCache);
