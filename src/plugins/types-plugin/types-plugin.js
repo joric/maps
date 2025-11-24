@@ -19,7 +19,7 @@
             "Folon_ACTI_BarryBoatBeacon": { "category": "Water Signal Beacon", "icon": "water_signal_beacon" },
             "Folon_ACTI_CutethulhuDollActivator": { "category": "Cutethulhu Activator", "icon": "cutethulhu_activator" },
             "Folon_ACTI_TaxiActivatorFT": { "category": "Taxi", "icon": "taxi" },
-            // non-ascii keys are compiled into regex, use optional "weight" parameter to pre-sort
+            // non-ascii keys are compiled with new RegExp, use optional "weight" parameter to pre-sort
             ".*loot_capsStash_ti": { "category": "Tickets", "icon": "tickets", "weight": -1 }
           }
         }
