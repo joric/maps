@@ -1,3 +1,34 @@
+/*
+  parses types.json, pre-compiles regex entries. example format:
+
+{
+  "icon": "misc",
+  "group": "misc",
+  "match": {
+    "description": {
+      "Note": { "category": "Note", "group": "custom", "group_weight": -10000, "icon": "note" }
+    },
+    "signature": {
+      "ACTI": {
+        "group": "misc",
+        "group_weight": 1000,
+        "match": {
+          "editor_id": {
+            "DN011OverdueBookVendMachine": { "category": "Book Terminal", "icon": "book_terminal" },
+            "FOLON_ACTI_LQLondon100": { "category": "Tardis", "icon": "call_box" },
+            "Folon_ACTI_BarryBoatBeacon": { "category": "Water Signal Beacon", "icon": "water_signal_beacon" },
+            "Folon_ACTI_CutethulhuDollActivator": { "category": "Cutethulhu Activator", "icon": "cutethulhu_activator" },
+            "Folon_ACTI_TaxiActivatorFT": { "category": "Taxi", "icon": "taxi" },
+            // non-ascii keys are compiled into regex, use optional "weight" parameter to pre-sort
+            ".*loot_capsStash_ti": { "category": "Tickets", "icon": "tickets", "weight": -1 }
+          }
+        }
+      }
+    }
+  }
+}
+*/
+
 let regexCache = null;
 
 let getType2 = function(o) {
