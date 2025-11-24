@@ -28,8 +28,6 @@
     }
   }
 }
-
-
 */
 
 let regexCache = null;
