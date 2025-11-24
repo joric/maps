@@ -1,7 +1,7 @@
 /*
   parses types.json, pre-compiles regex entries.
-  non-ascii keys are compiled with new RegExp, "weight" parameter is used to pre-sort regex entries
-  all fields are inherited while parsing, group weight is first weight, category icon is first icon
+  non-ascii keys are pre-sorted with "weight" parameter and compiled with new RegExp
+  all fields are inherited while parsing, weight and icon can also be used for groups
   example format:
 {
   "icon": "misc",
