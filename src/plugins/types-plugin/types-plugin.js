@@ -51,7 +51,6 @@ let getType2 = function(o) {
 
         if (arr.length) {
           arr.sort((a,b)=>(b.entry?.weight??0)-(a.entry?.weight??0));
-          //console.log(arr);
           nodeCache[field] = arr;
         }
       }
