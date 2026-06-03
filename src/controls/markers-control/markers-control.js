@@ -15,7 +15,7 @@ class MarkersControl {
       innerHTML: Object.keys(counters||{}).sort(cmpGroup).map(group =>
         `<ul class="markers-control-groups${(options?.theme) ? ' '+options.theme : ''}"><li tabindex="0"><div class="markers-control-group" data-name="${group}">${translate(group)}</div><ul class="markers-control-items">`+
         Object.entries(counters[group]).map(([type,count])=>[translate(type),type,count]).sort(cmpAlphaNum).map(([title, type, count]) =>
-          `<li tabindex="0" class="markers-control-item" data-name="${type}" title="${title}"><i class="${options?.icons?.[type]?.class||'fa fa-question-circle'}"></i><span>${title}</span><span>${count}</span></li>`
+          `<li tabindex="0" class="markers-control-item" data-name="${type}" title="${title} (${type})"><i class="${options?.icons?.[type]?.class||'fa fa-question-circle'}"></i><span>${title}</span><span>${count}</span></li>`
         ).join('')
         +`</ul></li></ul>`
       ).join('')
