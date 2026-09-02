@@ -5,16 +5,19 @@
   <title>Page Not Found</title>
   <script type="text/javascript">
     (function(l) {
-      // ===== SPECIFIC REDIRECTS FOR OLD PATHS =====
-      // Check if this is the old Fallout London path
-      if (l.pathname.startsWith('/maps/fallout-london')) {
-        // Redirect to the new location, preserving any hash or query string
-        const target = 'https://joric.github.io/folon/';
-        const newUrl = target + l.hash + l.search;
-        l.replace(newUrl);
-        return; // Stop execution
-      }
+      const redirects = {
+        '/maps/fallout-london': 'https://joric.github.io/folon/',
+        '/maps/stalker': 'https://joric.github.io/stalker/',
+      };
       
+      for (const [oldPath, newUrl] of Object.entries(redirects)) {
+        if (l.pathname.startsWith(oldPath)) {
+          const target = newUrl + l.hash + l.search;
+          l.replace(target);
+          return; // Stop execution after redirect
+        }
+      }
+
       // ===== SPA FALLBACK FOR PROJECT PAGES =====
       // For all other missing paths, handle as SPA routing
       var pathSegmentsToKeep = 1; // Keep '/maps' for Project Pages
