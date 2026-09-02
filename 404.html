@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <script type="text/javascript">
+    (function(l) {
+      // ===== SPECIFIC REDIRECTS FOR OLD PATHS =====
+      // Check if this is the old Fallout London path
+      if (l.pathname.startsWith('/maps/fallout-london')) {
+        // Redirect to the new location, preserving any hash or query string
+        const target = 'https://joric.github.io/folon/';
+        const newUrl = target + l.hash + l.search;
+        l.replace(newUrl);
+        return; // Stop execution
+      }
+      
+      // ===== SPA FALLBACK FOR PROJECT PAGES =====
+      // For all other missing paths, handle as SPA routing
+      var pathSegmentsToKeep = 1; // Keep '/maps' for Project Pages
+      
+      var path = l.pathname;
+      var search = l.search;
+      var hash = l.hash;
+      
+      var newPath = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
+      var newSearch = '/?' + path.slice(1).split('/').slice(pathSegmentsToKeep).join('/');
+      
+      if (search) {
+        newSearch += '&' + search.slice(1).replace(/&/g, '~and~');
+      }
+      
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        newPath + newSearch + hash
+      );
+    })(window.location);
+  </script>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://joric.github.io/maps/">
+  </noscript>
+</body>
+</html>
