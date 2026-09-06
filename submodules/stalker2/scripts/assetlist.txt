@@ -1,4 +1,0 @@
-# game data is packed to bin since 1.6, use https://www.nexusmods.com/stalker2heartofchornobyl/mods/1653
-
-Stalker2/Content/_Stalker_2/props/posters/Textures/T_pos_poster_10_a_D.uasset
-
