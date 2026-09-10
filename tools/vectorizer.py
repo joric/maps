@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Converts an indexed (no antialiasing) raster polygon map into GeoJSON regions.
+
+Converts an indexed color (or non-antialiased RGB) raster map into GeoJSON regions.
 
 Requires:
     pip install rasterio
@@ -8,7 +9,8 @@ Requires:
 
 Example usage: python vectorizer.py regions.png -o regions.json
 
-see https://github.com/joric/maps/wiki
+See https://github.com/joric/maps/wiki for details.
+
 """
 import argparse
 import json
@@ -41,10 +43,12 @@ def parse_args():
                          help="Keep the raw (unsimplified) GeoJSON instead of deleting it")
     parser.add_argument("--skip-mapshaper", action="store_true",
                          help="Skip the mapshaper simplify/clean/explode step entirely")
+    parser.add_argument("--skip-color", action="append",
+                         help="Skip color in hex (can be used multiple times)")
     return parser.parse_args()
 
 
-def vectorizer(input_path, raw_geojson_path, dest_res, dx, dy, sieve_size, connectivity):
+def vectorizer(input_path, raw_geojson_path, dest_res, dx, dy, sieve_size, connectivity, skip_color):
     with rasterio.open(input_path) as src:
         height, width = src.height, src.width
         print(f"Input: {width} x {height}")
@@ -75,6 +79,9 @@ def vectorizer(input_path, raw_geojson_path, dest_res, dx, dy, sieve_size, conne
                 continue
             intvalue = int(value)
             color = f"#{intvalue:06x}"
+
+            if color in (skip_color or []): continue;
+
             scaled_coords = [
                 [[(x * scale_factor) + dx, (y * scale_factor) + dy] for x, y in ring]
                 for ring in geom["coordinates"]
@@ -113,6 +120,7 @@ def main():
         args.dy,
         args.sieve_size,
         args.connectivity,
+        args.skip_color,
     )
 
     if args.skip_mapshaper:
