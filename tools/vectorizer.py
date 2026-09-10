@@ -24,7 +24,7 @@ import rasterio.features
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Convert an indexed raster polygon map (PNG) into a simplified GeoJSON."
+        description="Convert a non-antialiased raster polygon map (PNG) into a simplified GeoJSON."
     )
     parser.add_argument("input", help="Path to the input raster image (e.g. T_Regions_Map.png)")
     parser.add_argument("-o", "--output", default=None,
@@ -44,7 +44,7 @@ def parse_args():
     parser.add_argument("--skip-mapshaper", action="store_true",
                          help="Skip the mapshaper simplify/clean/explode step entirely")
     parser.add_argument("--skip-color", action="append",
-                         help="Skip color in hex (can be used multiple times)")
+                         help="Skip color in hex, e.g. '#0000ff' (can be used multiple times)")
     return parser.parse_args()
 
 
