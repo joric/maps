@@ -7,7 +7,7 @@ Requires:
     pip install rasterio
     npm install -g mapshaper
 
-Example usage: python vectorizer.py regions.png -o regions.json
+Example usage: python regions.py regions.png -o regions.json
 
 See https://github.com/joric/maps/wiki for details.
 
