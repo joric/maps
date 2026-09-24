@@ -1,0 +1,79 @@
+.menu-control {
+}
+
+.menu-control > * {
+  transition: all 0.3s allow-discrete;
+}
+
+.menu-control-items {
+  position: relative;
+  top: 4px;
+  left: -4px;
+  color: black;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-width: max-content;
+  display: none;
+  opacity: 0;
+}
+
+.menu-control:focus-within .menu-control-items {
+  display: block;
+  opacity: 1;
+  @starting-style { opacity: 0 }
+}
+
+.menu-control-item {
+  margin: 0;
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+  padding: 6px;
+  padding-left: 14px;
+  padding-right: 16px;
+}
+
+.menu-control-item:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+.menu-control-button {
+  border: 0;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+
+  margin-top: 6px;
+  margin-left: -6px;
+
+  border-radius: 50%;
+  color: black;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+}
+
+.menu-control-button::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-top: 0px;
+  box-shadow: 0 -7px 0 currentColor, 0 7px 0 currentColor;
+  filter1: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white);
+}
+
+.menu-control-button:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+
+
+

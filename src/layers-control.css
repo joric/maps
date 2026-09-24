@@ -1,0 +1,136 @@
+.layers-control {
+  --size: 75px;
+  --fsize: 150px;
+  --gap: 1px;
+  --r: 8px;
+  --fr: 4px;
+  --transition: all 0.3s ease, outline 0s;
+  --count: 6;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding: var(--gap);
+
+  height: calc(var(--size) + var(--gap) * 2);
+  width: calc(var(--size) + var(--gap) * 2);
+
+  color: black;
+  border-radius: var(--r);
+  transition: var(--transition);
+  overflow: hidden;
+
+  background: white;
+
+  box-sizing: border-box;
+}
+
+.layers-viewport {
+  width: calc(100vw - 2em - var(--gap));
+  overflow: auto;
+}
+
+
+.layers-control:focus,.layers-control:focus-within {
+  width: calc( var(--count)*(var(--gap) + var(--fsize)) + var(--gap) );
+  height: calc(var(--fsize) + var(--gap) * 2);
+  border-radius: var(--fr);
+}
+
+.layers-list {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap);
+  height: 100%;
+  touch-action: pan-y pinch-zoom;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.layers-list li {
+  flex: 0 0 var(--size);
+  width: var(--size);
+  height: var(--size);
+
+  background-size: var(--size);
+  border-radius: calc(var(--r) * 0.9);
+  cursor: pointer;
+  transition: var(--transition);
+
+  color: white;
+  text-shadow: 1px 1px 4px black;
+
+  font-size: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layers-list li:hover {
+  filter: brightness(1.3) saturate(0.8);
+}
+
+.layers-control:focus li,
+.layers-control:focus-within li {
+  flex-basis: var(--fsize);
+  width: var(--fsize);
+  height: var(--fsize);
+  background-size: var(--fsize);
+  border-radius: calc(var(--fr) * 0.95);
+}
+
+.layers-prev,
+.layers-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+}
+
+.layers-prev { left: 12px; }
+.layers-next { right: 12px; }
+
+.layers-prev::before,
+.layers-next::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #111;
+  border-right: 2px solid #111;
+  transform-origin: center;
+}
+
+.layers-prev::before {
+  transform: translateX(2px) rotate(-135deg);
+}
+
+.layers-next::before {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+.layers-prev[hidden],
+.layers-next[hidden] {
+  display: none;
+}
+
+.layers-control:not(:focus):not(:focus-within) .layers-prev,
+.layers-control:not(:focus):not(:focus-within) .layers-next {
+  display: none;
+}
+

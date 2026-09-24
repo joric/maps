@@ -1,0 +1,26 @@
+.popup-container {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  border-radius: 8px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+  width: 360px;
+}
+
+.popup-content {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.popup-text, .popup-text pre {
+  white-space: pre-wrap;
+  word-wrap: break-all;
+  overflow-wrap: break-word;
+  max-height: 300px;
+  overflow: auto;
+}

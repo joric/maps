@@ -1,0 +1,78 @@
+.wrapper-container {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.wrapper-viewport {
+  overflow: auto;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+  touch-action: none;
+}
+
+.wrapper-viewport.wrapper-grabbing {
+  cursor: grabbing;
+}
+
+.wrapper-hidden-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.wrapper-hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: opacity 0.2s ease, background 0.2s ease;
+  z-index: 9999;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wrapper-btn.wrapper-btn-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper-btn::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+
+.wrapper-btn-prev::before {
+  transform: rotate(-135deg);
+  margin-left: 3px;
+}
+
+.wrapper-btn-next::before {
+  transform: rotate(45deg);
+  margin-right: 3px;
+}
+
+.wrapper-btn-prev { left: 8px; }
+.wrapper-btn-next { right: 8px; }
+
+.wrapper-btn:hover { color: #000 }
+
