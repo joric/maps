@@ -86,66 +86,81 @@ function translate(s) {
   return lang[s] || capitalize(s);
 }
 
-function getRegion(feature) {
+function call(cb, options) {
+  if (options?.benchmark) console.time(cb.name);
+  let result = cb(...(options?.params ?? []));
+  if (options?.benchmark) console.timeEnd(cb.name);
+  return result;
+}
+
+function getPolygon(feature) {
   const [x,y,z] = applyMapping(feature.geometry.coordinates);
   for (const polygon of allRegions) {
     if (utils.ptInPoly({x: x, y: y}, polygon.getCoordinates()[0])) return polygon;
   }
 }
 
+function addRegionMarkers() {
+  if (allRegions.length==0) return;
+  let colors = Object.values(config.worlds)[0].regions?.[0]?.colors;
+  if (!colors) return;
+  if (allFeatures.filter(f => f._type.regionMarker).length!=0) return;
+
+  let count = allFeatures.length;
+
+  for (const polygon of allRegions) {
+    let point = utils.getWeightedCentroid(polygon.getCoordinates()[0]);
+    let region = colors[polygon.properties.color];
+    let feature = {
+      geometry: { coordinates: [point.x, point.y, 0] },
+      properties: { name: region, type: 'regionMarker' }
+    }
+    feature._type = getType(feature.properties, typeData);
+    feature._type.regionMarker = true;
+    //console.log('adding region marker', feature);
+    allFeatures.push(feature);
+  }
+
+  console.log(`[added ${allFeatures.length-count} region markers]`);
+}
+
+function nameRegions() {
+  allFeatures.filter(f => f._type?.regionMarker).forEach(feature => {
+    const polygon = getPolygon(feature);
+    if (polygon) polygon.properties.region = feature.properties.sid;
+
+    //optionally use weighted centroid
+    if (!polygon) return;
+    let point = utils.getWeightedCentroid(polygon.getCoordinates()[0]);
+    feature.geometry.coordinates[0] = point.x;
+    feature.geometry.coordinates[1] = point.y;
+
+  });
+}
+
+function assignRegions() {
+  allFeatures.forEach(feature => {
+    const polygon = getPolygon(feature);
+    if (polygon && feature._type) feature._type.region = polygon.properties.region;
+  });
+}
+
+function assignTypes() {
+  allFeatures.forEach(feature => {
+    feature._type = getType(feature.properties, typeData);
+  });
+}
+
 function getFuse() {
+  call(assignTypes, { benchmark: true });
+  call(addRegionMarkers, { benchmark: true });
+  call(nameRegions, { benchmark: true });
+  call(assignRegions, { benchmark: true });
+
   let data = [];
-
-  console.time('getType');
-
   for (const i in allFeatures) {
-    allFeatures[i]._type = getType(allFeatures[i].properties, typeData);
     data.push({ featureIndex: i, ...allFeatures[i] });
   }
-
-  console.timeEnd('getType');
-
-
-
-  console.time('getRegion');
-
-  let regionMarkers = allFeatures.filter(f => f._type.regionMarker);
-
-  if (regionMarkers.length==0 && allRegions.length > 0) {
-    //console.log('no region markers, but we got regions, gotta make some markers!');
-    let colors = Object.values(config.worlds)[0].regions?.[0]?.colors;
-    if (colors) {
-      for (const polygon of allRegions) {
-        let point = utils.getWeightedCentroid(polygon.getCoordinates()[0]);
-        let region = colors[polygon.properties.color];
-
-        let feature = {
-          geometry: { coordinates: [point.x, point.y, 0] },
-          properties: { name: region, type: 'regionMarker', region: region, signature: "STAT" }
-        }
-
-        feature._type = getType(feature.properties, typeData);
-        feature._type.regionMarker = true;
-        feature._type.region = region;
-        data.push({ featureIndex: allFeatures.length, ...feature });
-        allFeatures.push(feature);
-      }
-    }
-
-  } else {
-    regionMarkers.forEach(feature => {
-      const polygon = getRegion(feature);
-      if (polygon) polygon.properties.region = feature.properties.sid;
-    });
-  }
-
-  allFeatures.forEach(feature => {
-    const polygon = getRegion(feature);
-    if (polygon) feature._type.region = polygon.properties.region;
-  });
-
-  console.timeEnd('getRegion');
-
 
   let options = {
     keys: [
@@ -512,7 +527,7 @@ function searchRenderItem(ref) {
   let subtitle = translate(t.group);
   let location = translate(t.region || o.area || o.cell || o.type);
 
-  return `<span class="search-item-row" title="${title} [${o.score}]"><span class="search-item-left">${title} (${subtitle})</span><span class="search-item-right">${location}</span></span>`;
+  return `<span class="search-item-row" title="${title} (${subtitle}) [${ref.score}]"><span class="search-item-left">${title} (${subtitle})</span><span class="search-item-right">${location}</span></span>`;
 }
 
 // --- filter -----------------------------------------------------------
@@ -586,7 +601,7 @@ function getSymbol(o, t) {
 
   if (t.regionMarker) {
     const textSymbol = {
-        textName : translate(o.title||o.region),
+        textName : translate(o.title||o.name),
         textFaceName : 'sans-serif',
         textFill : '#fff',
         textSize : 16,
