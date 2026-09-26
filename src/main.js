@@ -18,8 +18,7 @@ import { getIcon } from './marker-icons.js';
 
 let USE_LOCAL = import.meta.env.DEV;
 
-let bNoImages = false;
-let spriteIndex = 0;
+let submodulesBase = USE_LOCAL ? 'submodules/': '../submodules/';
 
 let slugs = [
   'stalker',
@@ -32,7 +31,8 @@ let slugs = [
   'breathedge2',
 ];
 
-let submodulesBase = USE_LOCAL ? 'submodules/': '../submodules/';
+let repoName = location.href.split('/').pop().split('#')[0];
+if (!repoName || repoName.endsWith('.html')) repoName = slugs[0];
 
 function getTilesetBase(config) {
   let tilesetBase = config.tilesetBase || '';
@@ -41,11 +41,10 @@ function getTilesetBase(config) {
   return tilesetBase;
 }
 
-let repoName = location.href.split('/').pop();
-if (!repoName || repoName.endsWith('.html')) repoName = slugs[0];
+let bNoImages = false;
+let spriteIndex = 0;
 
 let allFeatures = [];
-
 let allRegions = [];
 
 const defaultPitch = 50;
@@ -74,8 +73,11 @@ function translate(s) {
   s  = String(s);
 
   let templates_fn = [
-    s => `sid_locations_region_${s}_name`,
-    s => `sid_locations_region_${s}_alt`,
+    name => `sid_locations_region_${name}_name`,
+    name => `sid_items_${name}_name`,
+    name => `sid_items_DLC01_${name}_name`,
+    name => `sid_notes_${name}_name`,
+    name => `sid_questItemprototypes_${name}_name`,
   ];
 
   for (const make of templates_fn) {
@@ -127,7 +129,7 @@ function addRegionMarkers() {
 function nameRegions() {
   allFeatures.filter(f => f._type?.regionMarker).forEach(feature => {
     const polygon = getPolygon(feature);
-    if (polygon) polygon.properties.region = feature.properties.sid;
+    if (polygon) polygon.properties.region = feature.properties.sid || feature.properties.name;
 
     //optionally use weighted centroid
     if (!polygon) return;
@@ -139,6 +141,9 @@ function nameRegions() {
 }
 
 function assignRegions() {
+  for (const polygon of allRegions) {
+    if (!polygon.properties.region) return;
+  }
   allFeatures.forEach(feature => {
     const polygon = getPolygon(feature);
     if (polygon && feature._type) feature._type.region = polygon.properties.region;
@@ -167,6 +172,8 @@ function getFuse() {
       {name: 'properties.title', weight: 0.8},
       {name: 'properties.name', weight: 0.8},
       {name: 'properties.type', weight: 0.4},
+      {name: 'properties.item', weight: 0.2},
+      {name: '_type.group', weight: 0.2},
     ],
     threshold: 0.1,
     ignoreLocation: true,
@@ -894,7 +901,7 @@ function parseConfig(data) {
     console.log(`loading "${url}"...`);
 
     console.time('loadLocalization');
-    fetch(url).then(r=>r.json()).catch(err=>{console.error(`Failed to fetch/parse ${url}:`, err);return {}})
+    fetch(url).then(r=>r.json()).catch(err=>{console.error(`Failed to fetch/parse "${url}":`, err);return {}})
     .then(data=>{
       lang = data[c.key] ? data[c.key] : data;
       console.timeEnd('loadLocalization');
@@ -910,13 +917,15 @@ function loadConfig() {
   baseDir = submodulesBase + repoName + '/';
 
   console.log('baseDir', baseDir);
-  console.log(`loading "${baseDir +'data/config.json'}"...`);
 
-  fetch(baseDir+'data/config.json').then(r => r.json()).then(data => parseConfig(data))
+  let url = baseDir + 'data/config.json';
+  console.log(`loading "${url}"...`);
+
+  fetch(url).then(r => r.json()).catch(err=>{console.error(`Failed to fetch/parse "${url}":`, err);return {}})
+  .then(data => parseConfig(data))
 }
 
 window.onload = function (event) {
-
   document.body.insertAdjacentHTML('beforeend', '<div tabindex=0 id="map"></div>');
 
   document.body.insertAdjacentHTML('beforeend', '<div class="controls-placeholder controls-top-left"></div>');
