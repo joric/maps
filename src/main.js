@@ -34,6 +34,14 @@ let slugs = [
 let repoName = location.href.split('/').pop().split('#')[0];
 if (!repoName || repoName.endsWith('.html')) repoName = slugs[0];
 
+let localDataName = 'joricsMaps-repoName';
+let localData = JSON.parse(localStorage.getItem(localDataName)) || {};
+let settings = localData;
+
+function saveSettings() {
+  localStorage.setItem(localDataName, JSON.stringify(localData));
+}
+
 function getTilesetBase(config) {
   let tilesetBase = config.tilesetBase || '';
   if (USE_LOCAL) tilesetBase = tilesetBase.replace('https://joric.github.io/', submodulesBase);
@@ -325,6 +333,23 @@ function addMap() {
 
     zoomControl: { position  : {bottom: 70, right: 20}, zoomLevel : false, },
     attribution: { position: {top: -50}, },
+  });
+
+  if (settings.center && settings.zoom) {
+    map.setView({
+      center: settings.center,
+      zoom: settings.zoom || 0,
+      bearing: settings.bearing || 0,
+      pitch: settings.pitch || 0,
+    })
+  }
+
+  map.on('viewchange', e=> {
+    settings.center = [e.new.center[0],e.new.center[1]];
+    settings.bearing = e.new.bearing;
+    settings.pitch = e.new.pitch;
+    settings.zoom = e.new.zoom;
+    saveSettings();
   });
 
   for (const [layerName, layer] of Object.entries(baseLayers)) {
