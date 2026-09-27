@@ -53,6 +53,8 @@ function getTilesetBase(config) {
   return tilesetBase;
 }
 
+const getMapURL = name => window.location.href.split('/').slice(0, -1).join('/') + '/' + name;
+
 let bNoImages = false;
 let spriteIndex = 0;
 
@@ -80,19 +82,7 @@ let lang = {};
 
 let markersControl = null;
 
-let mouseMoved = false;
-document.addEventListener('mousedown', function(event) {mouseMoved = false; });
-document.addEventListener('mousemove', function(event){mouseMoved = true; });
-
-function resetTitle() {
-  document.title = "Joric's Maps";
-  if (config && config.name) {
-    document.title += ` - ${config.name}`;
-  }
-}
-
-
-const capitalize = s => s[0].toUpperCase()+s.slice(1);
+const capitalize = s => (s && s.length>0) ? s[0].toUpperCase()+s.slice(1) : '';
 
 function translate(s) {
   s  = String(s);
@@ -110,7 +100,7 @@ function translate(s) {
     if (lang[key]) return lang[key];
   }
 
-  return lang[s] || capitalize(s);
+  return lang[s] || capitalize(s??'');
 }
 
 function call(cb, options) {
@@ -182,48 +172,7 @@ function assignTypes() {
 }
 
 function getFuse() {
-  call(assignTypes, { benchmark: true });
-  call(addRegionMarkers, { benchmark: true });
-  call(nameRegions, { benchmark: true });
-  call(assignRegions, { benchmark: true });
-
-  let data = [];
-  for (const i in allFeatures) {
-    let feature = allFeatures[i];
-    let o = feature.properties;
-    let t = feature._type;
-
-    let title = translate(o.title || o.name);
-
-    // later add all translated fields
-
-    data.push({ featureIndex: i, ...feature, title: title });
-
-    counters[t.group] = counters[t.group] || {};
-    counters[t.group][t.category] = (counters[t.group][t.category] || 0) + 1;
-  }
-
-
-  let options = {
-    keys: [
-      {name: 'title', weight: 0.8},
-      {name: 'properties.title', weight: 0.7},
-      {name: 'properties.name', weight: 0.6},
-      {name: 'properties.type', weight: 0.5},
-      {name: 'properties.item', weight: 0.4},
-      {name: '_type.group', weight: 0.3},
-    ],
-    threshold: 0.1,
-    ignoreLocation: true,
-    includeScore: true,
-    useExtendedSearch: true,
-    findAllMatches: false,
-    numWorkers: (navigator.hardwareConcurrency || 4) * 2 // 2x oversubscribing
-  };
-
-
   /*
-
   Browsers refuse new Worker('https://cdn.../worker.js') because a worker script has to be same-origin with your page.
   That's why the docs tell you to copy the file, but there's a clean workaround.
 
@@ -240,14 +189,47 @@ function getFuse() {
   const fuse = new FuseWorker(docs, options, { workerUrl })
   */
 
-  markersControl = new MarkersControl(counters, {weights:{}, groupCallback: toggleGroup, itemCallback: toggleItem, translate: translate, theme: 'retro' });
+  let data = [];
+  for (const i in allFeatures) {
+    const feature = allFeatures[i];
+    const o = feature.properties;
+    const t = feature._type;
+    let title = translate(o.title || o.name);
+    let group = translate(t.group);
+    let category = translate(t.category);
+    let text = [title, group, category].join(' ');
+    data.push({ featureIndex: i, ...feature, title: title, text: text });
+  }
 
-  updateControls(); // update pill headers (required, later move to control)
+  let options = {
+    keys: [
+      {name: 'title', weight: 1.0},
+      {name: 'text', weight: 0.8},
+      {name: 'properties.title', weight: 0.7},
+      {name: 'properties.name', weight: 0.6},
+      {name: 'properties.type', weight: 0.5},
+      {name: 'properties.item', weight: 0.4},
+      {name: '_type.group', weight: 0.3},
+    ],
+    threshold: 0.1,
+    ignoreLocation: true,
+    includeScore: true,
+    useExtendedSearch: true,
+    findAllMatches: false,
+    // useTokenSearch: true, tokenMatch: 'all', // doesn't support workers, need combined field
+    numWorkers: (navigator.hardwareConcurrency || 4) * 2 // 2x oversubscribing
+  };
 
   return new FuseWorker(data, options);
 }
 
 let popup;
+
+const openTooltip = (marker, tooltip) => {
+  let o = marker.feature.properties;
+  let t = marker.feature._type;
+  tooltip._content = `${translate(o.item||o.spawns||o.title||o.name||t.category)} (${translate(t.group||o.type)})`;
+}
 
 const openPopup = (marker, forced) => {
   //const coordinate = new maptalks.Coordinate(feature.geometry.coordinates);
@@ -366,17 +348,21 @@ function addMap() {
     zoomControl: { position  : {bottom: 70, right: 20}, zoomLevel : false, },
     attribution: { position: {top: -50}, },
   });
+  
+ //z: ${map.getZoom().toFixed(0)}
 
-  let mmTimeout = 0;
   map.on('mousemove', function(e){
     const p = e.coordinate;
-      //z: ${map.getZoom().toFixed(0)}
-    document.title = `${p.x.toFixed(0)} ${p.y.toFixed(0)}`;
-    clearTimeout(mmTimeout);
-    mmTimeout = setTimeout(resetTitle, 1000);
+    let text = `${p.x.toFixed(0)}, ${p.y.toFixed(0)}`;
+    let c = 'info';
+    let div = document.querySelector(`.${c}`);
+    if (!div) {
+      document.body.insertAdjacentHTML('beforeend', `<div class="${c}"></div>`);
+      div = document.querySelector(`.${c}`);
+    }
+    //div.innerText = text;
   });
 
-  map.on('mouseleave', resetTitle);
 
   if (!settings.activeItems) {
     settings.activeItems = {};
@@ -406,6 +392,30 @@ function addMap() {
     settings.zoom = e.new.zoom;
     saveSettings();
   });
+
+
+  const menuControl = new MenuControl(null, {
+    items: Object.fromEntries(slugs.map(slug => [slug, { name: slug }])),
+    callback: name => {
+      window.location.href = getMapURL(name);
+    },
+  });
+
+  const searchControl = new SearchControl(null, {
+    localDataPrefix: localDataName,
+    settings: settings, // updates searchHistory
+    searchCallback: query => fuzzySearch(query),
+    onSubmit: query =>  fuzzySearch(query),
+    searchRenderItem: searchRenderItem,
+    searchOnSelect: fuseResult => {
+      let marker = allFeatures[fuseResult.item.featureIndex]?._geom;
+      if (marker) {
+        //map.animateTo({center: marker.getCoordinates(), zoom: focusZoom});
+        openPopup(marker);
+      }
+    },
+  });
+
 
   for (const [layerName, layer] of Object.entries(baseLayers)) {
     layer.addTo(map);
@@ -439,7 +449,7 @@ function addMap() {
         }
 
       } else {
-        window.location.href = url.pathname.split('/').slice(0, -1).join('/') + name;
+        window.location.href = getMapURL(name);
       }
     }
   });
@@ -492,33 +502,6 @@ function addMap() {
 
   popup = new PopupControl();
 
-  let menuItems = {};
-  for (const slug of slugs) {
-    menuItems[slug] = { name: slug };
-  }
-
-  const menuControl = new MenuControl(null,{ items: menuItems,
-    callback: name => {
-      window.location.href = 'http://localhost:3000/'+name;
-    },
-  });
-
-  const searchControl = new SearchControl(null, {
-    localDataPrefix: localDataName,
-    settings: settings, // updates searchHistory
-    searchCallback: query => fuzzySearch(query),
-    onSubmit: query =>  fuzzySearch(query),
-    searchRenderItem: searchRenderItem,
-    searchOnSelect: fuseResult => {
-      let marker = allFeatures[fuseResult.item.featureIndex]?._geom;
-      if (marker) {
-        //map.animateTo({center: marker.getCoordinates(), zoom: focusZoom});
-        openPopup(marker, true);
-      }
-    },
-  });
-
-
   let mapEl = document.querySelector('#map');
   mapEl.setAttribute('tabindex', '0');
   mapEl.addEventListener('pointerdown', function () {
@@ -532,7 +515,29 @@ function addMap() {
   });
 }
 
+function indexMarkers() {
+  call(assignTypes, { benchmark: true });
+  call(addRegionMarkers, { benchmark: true });
+  call(nameRegions, { benchmark: true });
+  call(assignRegions, { benchmark: true });
+
+  for (const feature of allFeatures) {
+    let t = feature._type;
+    counters[t.group] = counters[t.group] || {};
+    counters[t.group][t.category] = (counters[t.group][t.category] || 0) + 1;
+  }
+
+  markersControl = new MarkersControl(counters, {weights:{}, groupCallback: toggleGroup, itemCallback: toggleItem, translate: translate, theme: 'retro' });
+
+  updateControls(); // update pill headers (required, later move to control)
+
+  if (!fuse) {
+    requestAnimationFrame(()=>{ fuse = getFuse(); });
+  }
+}
+
 async function fuzzySearch(s, limit=1024) {
+
   let searchTimer;
   clearTimeout(searchTimer);
 
@@ -613,6 +618,8 @@ function searchRenderItem(ref) {
 
   let title = translate(o.title || o.name);
   let subtitle = translate(t.group);
+  if (t.category) subtitle += ' / ' + translate(t.category);
+  if (t.item) subtitle += ' / ' + translate(t.item);
   let location = translate(t.region || o.area || o.cell || o.type);
 
   return `<span class="search-item-row" title="${title} (${subtitle}) [${ref.score}]"><span class="search-item-left">${title} (${subtitle})</span><span class="search-item-right">${location}</span></span>`;
@@ -720,21 +727,7 @@ function createGeometry(feature) {
 
   marker.feature = feature;
 
-  //marker.on('click', e => console.log(e.target));
-
-  marker.on('mouseover', e=>{
-    //openPopup(e.target.feature);
-  });
-
-  marker.on('mouseout', e=> {
-    //popup.hide();
-  })
-
-  const tooltip = new maptalks.ui.ToolTip(`${translate(o.item||o.spawns||o.title||o.name||t.category)} (${translate(t.group||o.type)})`, {
-      showTimeout: 100,
-  });
-
-  tooltip.addTo(marker);
+  new maptalks.ui.ToolTip('', {showTimeout: 100}).addTo(marker).on('showstart', e=>openTooltip(e.target.getOwner(), e.target));
 
   marker.setInfoWindow({
       autoCloseOn : 'click',
@@ -966,7 +959,7 @@ function loadMarkers() {
     allFeatures = geojson.features;
     console.timeEnd('loadMarkers');
     console.log('loaded', allFeatures.length,'markers');
-    fuse = getFuse();
+    indexMarkers();
     scheduleUpdate();
   }
 
@@ -1013,6 +1006,11 @@ function parseConfig(data) {
   let game = games[0];
 
   config = data[game];
+
+  document.title = "Joric's Maps";
+  if (config && config.name) {
+    document.title += ` - ${config.name}`;
+  }
 
   addMap();
 

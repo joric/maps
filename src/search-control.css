@@ -18,6 +18,8 @@
   --transition:all 0.3s ease;
 
   transition: var(--transition);
+
+  margin-right: 3px;
 }
 
 .search-container:focus-within {
@@ -185,8 +187,8 @@
   height: 24px;
 }
 
-.search-item-row { display:flex; width:100%; gap:8px; padding-right: 8px;  }
-.search-item-left { font-size: 16px; flex:1; min-width:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.search-item-row { display:flex; flex:1 1 0; min-width:0; gap:8px; padding-right:12px; }
+.search-item-left { flex:1 1 0; min-width:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
 .search-item-right { flex:0 0 auto; font-size: 14px; }
 
 .search-list li:focus,

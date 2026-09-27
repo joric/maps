@@ -58,6 +58,7 @@
   width: 0;
   padding: 0;
   margin: 0;
+  z-index: 5000;
 }
 
 .markers-control *:focus-within .markers-control-items {
