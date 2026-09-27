@@ -8,7 +8,7 @@
 
 .menu-control-items {
   position: absolute;
-  top: 44px;
+  top: 50px;
   left: -4px;
   color: black;
   background: white;
@@ -41,35 +41,23 @@
   background: rgba(0,0,0,0.1);
 }
 
+
 .menu-control-button {
-  border: 0;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-
-  margin-top: 6px;
-  margin-left: -6px;
-  margin-right: -6px;
-
-  border-radius: 50%;
-  color: black;
-
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  color: #222;
+  cursor: pointer;
+  padding: 0;
 
-  background-color: transparent;
-}
+  margin-top: 2px;
+  margin-left: -8px;
+  margin-right: -4px;
 
-.menu-control-button::before {
-  content: "";
-  width: 4px;
-  height: 4px;
   border-radius: 50%;
-  background: currentColor;
-  margin-top: 0px;
-  box-shadow: 0 -7px 0 currentColor, 0 7px 0 currentColor;
+
   filter1: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white);
 }
 
@@ -77,5 +65,51 @@
   background-color: rgba(255,255,255,0.5);
 }
 
+.menu-control-button::before,
+.menu-control-button::after,
+.menu-control-button span {
+  position: absolute;
+  left: 11px;
+  top: 19px;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  display: block;
+  margin: 0;
+  transition: all .2s ease-in-out;
+}
 
+.menu-control-button::before,
+.menu-control-button::after {
+  content: "";
+}
 
+.menu-control-button::before {
+  transform: translateY(-6px);
+}
+
+.menu-control-button::after {
+  transform: translateY(6px);
+}
+
+.menu-control-button span {
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+}
+
+.menu-control-button:focus {
+  outline: none;
+}
+
+.menu-control-button:focus::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.menu-control-button:focus::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.menu-control-button:focus span {
+  opacity: 0;
+}

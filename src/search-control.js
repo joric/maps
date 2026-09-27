@@ -1,7 +1,7 @@
 import './search-control.css'
 
 export class SearchControl {
-  _localDataName = 'searchHistory';
+  _settings = {};
   _maxHistorySize = 50;
   _maxStringLength = 100;
   _searchRequestId = 0;
@@ -29,7 +29,7 @@ export class SearchControl {
   _updateDropdown = () => {
     this._mode = 'history';
     this._renderList(this._items, { deletable: true, renderItem: this._historyRenderItem });
-    localStorage.setItem(this._localDataName, JSON.stringify(this._items));
+    this._settings.searchHistory = this._items;
   }
   _runSearch = async value => {
     let requestId = ++this._searchRequestId;
@@ -124,7 +124,7 @@ export class SearchControl {
     this._searchOnSelect = options && options.searchOnSelect;
     this._searchRenderItem = (options && options.searchRenderItem) || (o => `<span class="search-item-text">${this._searchGetText(o)}</span>`);
     this._handleSubmit = (options && options.onSubmit) || (() => {});
-    this._localDataName = (options && options.localDataPrefix + '-search') || this._localDataName;
+    this._settings = options.settings ?? this._settings;
 
     const innerHTML = `
       <div class="search-container">
@@ -145,7 +145,7 @@ export class SearchControl {
 
     this._input = document.querySelector('.search-input');
     this._container = document.querySelector('.search-container');
-    this._items = JSON.parse(localStorage.getItem(this._localDataName) || "[]");
+    this._items = this._settings.searchHistory ?? [];
     document.querySelector('.search-clear').onclick = this._clear;
     document.querySelector('.search-form').onsubmit = this._submit;
     document.querySelector('.search-list').addEventListener('mousedown', event => {

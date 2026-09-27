@@ -35,7 +35,7 @@ let slugs = [
 let repoName = location.href.split('/').pop().split('#')[0];
 if (!repoName || repoName.endsWith('.html')) repoName = slugs[0];
 
-let localDataName = `localData-maps-${repoName}`;
+let localDataName = `localData-${repoName}`;
 let localData = JSON.parse(localStorage.getItem(localDataName)) || {};
 let settings = localData;
 let counters = {};
@@ -76,10 +76,21 @@ let baseDir = '';
 
 let typeData = {};
 let iconData = {};
-
 let lang = {};
 
 let markersControl = null;
+
+let mouseMoved = false;
+document.addEventListener('mousedown', function(event) {mouseMoved = false; });
+document.addEventListener('mousemove', function(event){mouseMoved = true; });
+
+function resetTitle() {
+  document.title = "Joric's Maps";
+  if (config && config.name) {
+    document.title += ` - ${config.name}`;
+  }
+}
+
 
 const capitalize = s => s[0].toUpperCase()+s.slice(1);
 
@@ -178,9 +189,15 @@ function getFuse() {
 
   let data = [];
   for (const i in allFeatures) {
-    data.push({ featureIndex: i, ...allFeatures[i] });
+    let feature = allFeatures[i];
+    let o = feature.properties;
+    let t = feature._type;
 
-    let t = allFeatures[i]._type;
+    let title = translate(o.title || o.name);
+
+    // later add all translated fields
+
+    data.push({ featureIndex: i, ...feature, title: title });
 
     counters[t.group] = counters[t.group] || {};
     counters[t.group][t.category] = (counters[t.group][t.category] || 0) + 1;
@@ -189,11 +206,12 @@ function getFuse() {
 
   let options = {
     keys: [
-      {name: 'properties.title', weight: 0.8},
-      {name: 'properties.name', weight: 0.8},
-      {name: 'properties.type', weight: 0.4},
-      {name: 'properties.item', weight: 0.2},
-      {name: '_type.group', weight: 0.2},
+      {name: 'title', weight: 0.8},
+      {name: 'properties.title', weight: 0.7},
+      {name: 'properties.name', weight: 0.6},
+      {name: 'properties.type', weight: 0.5},
+      {name: 'properties.item', weight: 0.4},
+      {name: '_type.group', weight: 0.3},
     ],
     threshold: 0.1,
     ignoreLocation: true,
@@ -249,7 +267,7 @@ const openPopup = (marker, forced) => {
 
   //text += `<pre>${JSON.stringify({geometry: marker.feature.geometry, properties: marker.feature.properties}, null, 2)}</pre>`;
 
-  text += `<pre>${JSON.stringify({_type: t, properties: marker.feature.properties}, null, 2)}</pre>`;
+  text += `<pre>${JSON.stringify({_type: t, properties: o, geometry: marker.feature.geometry }, null, 2)}</pre>`;
 
   let content = `<div class="popup-text">${text}</div>`;
 
@@ -305,15 +323,14 @@ function addMap() {
 
     let visible = baseLayerName == section.name;
 
-    if (section.center) {
-      center = section.center;
-    }
-
     if (section.bounds) {
       bounds = section.bounds;
       //mapSize =  section.size ? section.size : mapSize; //bounds.right - bounds.left;
     }
 
+    if (section.center) {
+      center = section.center;
+    }
 
     let baseLayer = new maptalks.TileLayer(section.name||'default', {
       urlTemplate: getTilesetBase(config) + section.urlTemplate,
@@ -350,6 +367,16 @@ function addMap() {
     attribution: { position: {top: -50}, },
   });
 
+  let mmTimeout = 0;
+  map.on('mousemove', function(e){
+    const p = e.coordinate;
+      //z: ${map.getZoom().toFixed(0)}
+    document.title = `${p.x.toFixed(0)} ${p.y.toFixed(0)}`;
+    clearTimeout(mmTimeout);
+    mmTimeout = setTimeout(resetTitle, 1000);
+  });
+
+  map.on('mouseleave', resetTitle);
 
   if (!settings.activeItems) {
     settings.activeItems = {};
@@ -412,9 +439,7 @@ function addMap() {
         }
 
       } else {
-        //window.location.href = 'http://localhost:3000/#'+name;
-        //location.reload();
-        window.location.href = 'http://localhost:3000/'+name;
+        window.location.href = url.pathname.split('/').slice(0, -1).join('/') + name;
       }
     }
   });
@@ -472,8 +497,15 @@ function addMap() {
     menuItems[slug] = { name: slug };
   }
 
+  const menuControl = new MenuControl(null,{ items: menuItems,
+    callback: name => {
+      window.location.href = 'http://localhost:3000/'+name;
+    },
+  });
+
   const searchControl = new SearchControl(null, {
     localDataPrefix: localDataName,
+    settings: settings, // updates searchHistory
     searchCallback: query => fuzzySearch(query),
     onSubmit: query =>  fuzzySearch(query),
     searchRenderItem: searchRenderItem,
@@ -483,12 +515,6 @@ function addMap() {
         //map.animateTo({center: marker.getCoordinates(), zoom: focusZoom});
         openPopup(marker, true);
       }
-    },
-  });
-
-  const menuControl = new MenuControl(null,{ items: menuItems,
-    callback: name => {
-      window.location.href = 'http://localhost:3000/'+name;
     },
   });
 
@@ -628,18 +654,13 @@ function applyMapping(coords) {
   let p = mapping.map(([axis, sign]) => sign * source[axis]);
 
   if (world.markers?.flip_y) {
-    let cy = 0;
-    let section = Object.values(config.worlds)[0].baseLayers[0];
-    if (config.size && section.bounds) {
-      //yc = (section.bounds.bottom - section.bounds.top) / 2 - section.center.top/2;
-      cy = (config.size/2 - section.center.top/2)*1.0316;
-    }
-
-    if (world.markers.cy !== undefined) {
-      cy = world.markers.cy;
-    }
+    let cy = world.markers.cy ?? 0;
 
     p[1] =  cy - p[1];
+
+    let cx = world.markers.cx ?? 0;
+
+    p[0] += cx;
   }
 
   return p;
@@ -992,8 +1013,6 @@ function parseConfig(data) {
   let game = games[0];
 
   config = data[game];
-
-  document.title = `Joric's Maps - ${config.name}`;
 
   addMap();
 
