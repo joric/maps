@@ -1,4 +1,5 @@
 .menu-control {
+  position: relative;
 }
 
 .menu-control > * {
@@ -6,8 +7,8 @@
 }
 
 .menu-control-items {
-  position: relative;
-  top: 4px;
+  position: absolute;
+  top: 44px;
   left: -4px;
   color: black;
   background: white;
@@ -48,6 +49,7 @@
 
   margin-top: 6px;
   margin-left: -6px;
+  margin-right: -6px;
 
   border-radius: 50%;
   color: black;
