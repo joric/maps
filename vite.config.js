@@ -1,59 +1,61 @@
 import fs from 'fs';
-import path from 'path';
 
 function watchFiles(patterns) {
-  return {name:'watch-files',configureServer(s) {
+  return { name: 'watch-files', configureServer(s) {
+    const seen = new Map();
+    const kill = [];
+    const fire = (f) => {
+      try {
+        const m = fs.statSync(f).mtimeMs;
+        if (seen.get(f) === m) return;
+        seen.set(f, m);
+      } catch {}
+      s.ws.send({ type: 'full-reload' });
+    };
+
     for (const p of patterns) {
-      const a=p.split('/'), dirs=a.slice(0,-1), mask=new RegExp('^'+a.at(-1).replace(/[.+^${}()|[\]\\]/g,'\\$&').replace(/\*/g,'.*')+'$');
-      const walk=(d,i)=>{
+      const a = p.split('/'), dirs = a.slice(0, -1);
+      const mask = new RegExp('^' + a.at(-1).replace(/[.+^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*') + '$');
+      const walk = (d, i) => {
         if (!fs.existsSync(d)) return;
-        if (i<dirs.length) {
-          for (const x of fs.readdirSync(d,{withFileTypes:true})) if (x.isDirectory() && (dirs[i]==='*'||x.name===dirs[i])) walk(`${d}/${x.name}`,i+1);
-        } else for (const f of fs.readdirSync(d).filter(f=>mask.test(f))) fs.watch(`${d}/${f}`,()=>s.ws.send({type:'full-reload'}));
+        if (i < dirs.length) {
+          for (const x of fs.readdirSync(d, { withFileTypes: true }))
+            if (x.isDirectory() && (dirs[i] === '*' || x.name === dirs[i])) walk(`${d}/${x.name}`, i + 1);
+        } else {
+          for (const f of fs.readdirSync(d).filter(f => mask.test(f))) {
+            const file = `${d}/${f}`;
+            try { seen.set(file, fs.statSync(file).mtimeMs); } catch {}
+            kill.push(fs.watch(file, (e) => e === 'change' && fire(file)));
+          }
+        }
       };
-      walk(dirs[0],1);
+      walk(dirs[0], 1);
     }
+
+    s.httpServer?.on('close', () => kill.forEach(w => w.close()));
   }};
 }
 
 export default {
   plugins: [
-    watchFiles([
-      'submodules/*/data/*.json',
-      'submodules/*/scripts/*.json',
-    ])  
+    watchFiles(['submodules/*/data/*.json', 'submodules/*/scripts/*.json']),
   ],
   server: {
     port: 3000,
     open: true,
-    watch: {
-      ignored: /[\\/]((archive|examples|submodules|lib))[\\/]/,
-    },
-    hmr: {
-      overlay: false,
-    },
+    watch: { ignored: /[\\/]((archive|examples|submodules|lib))[\\/]/ },
+    hmr: { overlay: false },
   },
-
   build: {
     outDir: 'dist',
-
     sourcemap: false,
     rollupOptions: {
       output: {
         entryFileNames: 'maps.min.js',
         chunkFileNames: '[name].min.js',
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-            return 'maps.min.css';
-          }
-          return '[name].[ext]';
-        }
-      }
+        assetFileNames: (a) => a.name?.endsWith('.css') ? 'maps.min.css' : '[name].[ext]',
+      },
     },
   },
-
-  optimizeDeps: {
-    entries: ['index.html']
-  },
-
+  optimizeDeps: { entries: ['index.html'] },
 };
