@@ -197,7 +197,9 @@ function getFuse() {
     let title = translate(o.title || o.name);
     let group = translate(t.group);
     let category = translate(t.category);
-    let text = [title, group, category].join(' ');
+    let location = translate(t.region||t.area||t.cell);
+    let text = [title, group, category, location].join(' ');
+
     data.push({ featureIndex: i, ...feature, title: title, text: text });
   }
 
