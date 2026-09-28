@@ -19,6 +19,8 @@ import { getIcon } from './marker-icons.js';
 
 let USE_LOCAL = import.meta.env.DEV;
 
+let USE_FA = true;
+
 let submodulesBase = USE_LOCAL ? 'submodules/': '../submodules/';
 
 let slugs = [
@@ -55,7 +57,7 @@ function getTilesetBase(config) {
 
 const getMapURL = name => window.location.href.split('/').slice(0, -1).join('/') + '/' + name;
 
-let bNoImages = false;
+let bNoImages = USE_FA;
 let spriteIndex = 0;
 
 let allFeatures = [];
@@ -79,6 +81,7 @@ let baseDir = '';
 let typeData = {};
 let iconData = {};
 let lang = {};
+let popup;
 
 let markersControl = null;
 
@@ -88,6 +91,7 @@ function translate(s) {
   s  = String(s);
 
   let templates_fn = [
+    name => name,
     name => `sid_locations_region_${name}_name`,
     name => `sid_items_${name}_name`,
     name => `sid_items_DLC01_${name}_name`,
@@ -171,30 +175,35 @@ function assignTypes() {
   });
 }
 
+/*
+Browsers refuse new Worker('https://cdn.../worker.js') because a worker script has to be same-origin with your page.
+That's why the docs tell you to copy the file, but there's a clean workaround.
+
+FuseWorker accepts a workerUrl option that takes a string or URL, and a blob: URL counts as same-origin.
+So you can hand it a tiny blob whose only job is to import the real worker from the CDN
+
+const WORKER_CDN =
+  'https://cdn.jsdelivr.net/npm/fuse.js@7.6.0-beta.0/dist/fuse.worker.mjs'
+
+const workerUrl = URL.createObjectURL(
+  new Blob([`import ${JSON.stringify(WORKER_CDN)};`], { type: 'text/javascript' })
+)
+
+const fuse = new FuseWorker(docs, options, { workerUrl })
+*/
+
 function getFuse() {
-  /*
-  Browsers refuse new Worker('https://cdn.../worker.js') because a worker script has to be same-origin with your page.
-  That's why the docs tell you to copy the file, but there's a clean workaround.
 
-  FuseWorker accepts a workerUrl option that takes a string or URL, and a blob: URL counts as same-origin.
-  So you can hand it a tiny blob whose only job is to import the real worker from the CDN
-
-  const WORKER_CDN =
-    'https://cdn.jsdelivr.net/npm/fuse.js@7.6.0-beta.0/dist/fuse.worker.mjs'
-
-  const workerUrl = URL.createObjectURL(
-    new Blob([`import ${JSON.stringify(WORKER_CDN)};`], { type: 'text/javascript' })
-  )
-
-  const fuse = new FuseWorker(docs, options, { workerUrl })
-  */
-
+  console.time('translating');
   let data = [];
   for (const i in allFeatures) {
     const feature = allFeatures[i];
-    const text = Object.values(renderItem(feature)).join(' ');
-    data.push({ featureIndex: i, ...feature, text: text });
+    const { _geom, ...rest } = feature; // exclude geom, it's non-clonable
+    const info = renderItem(feature);
+    const text = Object.values(info).join(' ');
+    data.push({ featureIndex: i, ...rest, text: text });
   }
+  console.timeEnd('translating');
 
   let options = {
     keys: [
@@ -210,18 +219,15 @@ function getFuse() {
     includeScore: true,
     useExtendedSearch: true,
     findAllMatches: false,
-    // useTokenSearch: true, tokenMatch: 'all', // doesn't support workers, need combined field
-    numWorkers: (navigator.hardwareConcurrency || 4) * 2 // 2x oversubscribing
+    numWorkers: navigator.hardwareConcurrency || 4
   };
 
   return new FuseWorker(data, options);
 }
 
-let popup;
-
 function renderItem(feature) {
-  let o = feature.properties;
-  let t = feature._type;
+  let o = feature?.properties ?? {};
+  let t = feature?._type ?? {};
   let title = translate(o.title || o.name);
   let subtitle = translate(t.group);
   if (t.category) subtitle += ' / ' + translate(t.category);
@@ -533,9 +539,7 @@ function indexMarkers() {
 
   updateControls(); // update pill headers (required, later move to control)
 
-  if (!fuse) {
-    requestAnimationFrame(()=>{ fuse = getFuse(); });
-  }
+  if (!fuse) fuse = getFuse();
 }
 
 async function fuzzySearch(s, limit=1024) {
@@ -612,7 +616,7 @@ async function fuzzySearch(s, limit=1024) {
 }
 
 function searchRenderItem(ref) {
-  let info = renderItem(ref.item);
+  let info = renderItem(allFeatures[ref.item.featureIndex]);
   return `<span class="search-item-row" title="${info.title} [${ref.score}]"><span class="search-item-left">${info.title}</span><span class="search-item-right">${info.location}</span></span>`;
 }
 

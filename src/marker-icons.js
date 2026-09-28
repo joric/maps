@@ -9,7 +9,7 @@ let iconSize = 48;
 let iconImages = {};
 
 export function getIcon(t, iconData, options) {
-  const defaultData = {class: 'fa fa-circle-question'};
+  const defaultData = {class: 'fa-circle-question'};
   const defaultOptions = { bGetCategoryIcon: false, spriteIndex: 0, baseDir: '', bNoImages: false, imageDir: 'images/sprites/'};
 
   options = {...defaultOptions, ...(options||{})};
@@ -49,11 +49,12 @@ export function getIcon(t, iconData, options) {
 }
 
 function parseFAClass(faClass) {
-  const parts = faClass.trim().split(/\s+/);
-  const prefix = parts.find(p => p.startsWith('fa-') || p === 'fa')?.replace('fa-', '') || 'solid';
-  const iconName = parts.find(p => p.startsWith('fa-') && p !== 'fa' && p !== `fa-${prefix}`)?.replace('fa-', '');
-  const prefixMap = { solid: 'fas', regular: 'far', light: 'fal', thin: 'fat', duotone: 'fad', brands: 'fab' };
-  return { prefix: prefixMap[prefix] || 'fas', iconName };
+  const parts = faClass.trim().split(/\s+/).filter(p => p.startsWith('fa-') && p !== 'fa');
+  const styleMap = { solid: 'fas', regular: 'far', light: 'fal', thin: 'fat', duotone: 'fad', brands: 'fab' };
+  const styleClass = parts.find(p => styleMap[p.replace('fa-', '')]);
+  const prefix = styleMap[styleClass?.replace('fa-', '')] || 'fas';
+  const iconName = parts.find(p => p !== styleClass)?.replace('fa-', '');
+  return { prefix, iconName };
 }
 
 export function renderFAIconToImageURL(fa_class, bg, fg='white', size=48) {
@@ -62,11 +63,11 @@ export function renderFAIconToImageURL(fa_class, bg, fg='white', size=48) {
   canvas.height = size;
   const ctx = canvas.getContext('2d');
 
-  fa_class = fa_class || 'fa fa-circle-question';
+  fa_class = fa_class || 'fa-circle-question';
 
   function drawFAIcon(prefix, iconName, color, pixelSize, dy = 0) {
     let icon = FontAwesome.icon({ prefix, iconName });
-    if (!icon) icon = FontAwesome.icon({ prefix:'fa', iconName: 'question-circle' });
+    if (!icon) icon = FontAwesome.icon({ prefix:'far', iconName: 'circle-question' });
     const [w, h, , , path] = icon.icon;
     const scale = pixelSize / h;
     const iconWidthPx = w * scale;
