@@ -43,6 +43,7 @@ export class SearchControl {
     let value = this._input.value.trim();
     if (!value || !this._searchCallback) {
       this._updateDropdown();
+      this._handleSubmit();
       return;
     }
     this._searchTimer = setTimeout(() => this._runSearch(value), this._searchDebounceMs);
@@ -123,7 +124,7 @@ export class SearchControl {
     this._searchGetText = (options && options.searchGetText) || (o => o.item.custom_title);
     this._searchOnSelect = options && options.searchOnSelect;
     this._searchRenderItem = (options && options.searchRenderItem) || (o => `<span class="search-item-text">${this._searchGetText(o)}</span>`);
-    this._handleSubmit = (options && options.onSubmit) || (() => {});
+    this._handleSubmit = (options && options.searchOnSubmit) || (() => {});
     this._settings = options.settings ?? this._settings;
 
     const innerHTML = `

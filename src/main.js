@@ -192,26 +192,18 @@ function getFuse() {
   let data = [];
   for (const i in allFeatures) {
     const feature = allFeatures[i];
-    const o = feature.properties;
-    const t = feature._type;
-    let title = translate(o.title || o.name);
-    let group = translate(t.group);
-    let category = translate(t.category);
-    let location = translate(t.region||t.area||t.cell);
-    let text = [title, group, category, location].join(' ');
-
-    data.push({ featureIndex: i, ...feature, title: title, text: text });
+    const text = Object.values(renderItem(feature)).join(' ');
+    data.push({ featureIndex: i, ...feature, text: text });
   }
 
   let options = {
     keys: [
-      {name: 'title', weight: 1.0},
-      {name: 'text', weight: 0.8},
-      {name: 'properties.title', weight: 0.7},
-      {name: 'properties.name', weight: 0.6},
-      {name: 'properties.type', weight: 0.5},
-      {name: 'properties.item', weight: 0.4},
-      {name: '_type.group', weight: 0.3},
+      {name: 'text', weight: 0.5},
+      {name: 'properties.title', weight: 0.4},
+      {name: 'properties.name', weight: 0.3},
+      {name: 'properties.type', weight: 0.2},
+      {name: 'properties.item', weight: 0.1},
+      {name: '_type.group', weight: 0.05},
     ],
     threshold: 0.1,
     ignoreLocation: true,
@@ -227,10 +219,19 @@ function getFuse() {
 
 let popup;
 
+function renderItem(feature) {
+  let o = feature.properties;
+  let t = feature._type;
+  let title = translate(o.title || o.name);
+  let subtitle = translate(t.group);
+  if (t.category) subtitle += ' / ' + translate(t.category);
+  if (t.item) subtitle += ' / ' + translate(t.item);
+  let location = translate(t.region || o.area || o.cell || o.type);
+  return {title: `${title} (${subtitle})`, location: location};
+}
+
 const openTooltip = (marker, tooltip) => {
-  let o = marker.feature.properties;
-  let t = marker.feature._type;
-  tooltip._content = `${translate(o.item||o.spawns||o.title||o.name||t.category)} (${translate(t.group||o.type)})`;
+  tooltip._content = renderItem(marker.feature).title;
 }
 
 const openPopup = (marker, forced) => {
@@ -404,10 +405,9 @@ function addMap() {
   });
 
   const searchControl = new SearchControl(null, {
-    localDataPrefix: localDataName,
-    settings: settings, // updates searchHistory
+    settings: settings,
     searchCallback: query => fuzzySearch(query),
-    onSubmit: query =>  fuzzySearch(query),
+    searchOnSubmit: query =>  fuzzySearch(query),
     searchRenderItem: searchRenderItem,
     searchOnSelect: fuseResult => {
       let marker = allFeatures[fuseResult.item.featureIndex]?._geom;
@@ -539,15 +539,12 @@ function indexMarkers() {
 }
 
 async function fuzzySearch(s, limit=1024) {
-
   let searchTimer;
   clearTimeout(searchTimer);
 
   searchString = s || '';
 
-  //console.log('searchString', searchString);
-  
-  if (!s) {
+  if (searchString === '') {
     filterData = {};
     searchTimer = setTimeout(scheduleUpdate, 100);
     return;
@@ -615,16 +612,8 @@ async function fuzzySearch(s, limit=1024) {
 }
 
 function searchRenderItem(ref) {
-  let o = ref.item.properties;
-  let t = ref.item._type;
-
-  let title = translate(o.title || o.name);
-  let subtitle = translate(t.group);
-  if (t.category) subtitle += ' / ' + translate(t.category);
-  if (t.item) subtitle += ' / ' + translate(t.item);
-  let location = translate(t.region || o.area || o.cell || o.type);
-
-  return `<span class="search-item-row" title="${title} (${subtitle}) [${ref.score}]"><span class="search-item-left">${title} (${subtitle})</span><span class="search-item-right">${location}</span></span>`;
+  let info = renderItem(ref.item);
+  return `<span class="search-item-row" title="${info.title} [${ref.score}]"><span class="search-item-left">${info.title}</span><span class="search-item-right">${info.location}</span></span>`;
 }
 
 // --- filter -----------------------------------------------------------
@@ -847,14 +836,15 @@ function toggleGroup(group) {
       delete settings.activeItems[name];
     }
   }
+  filterData = {};
   updateItems();
 }
 
 function toggleItem(name) {
   settings.activeItems[name] = !settings.activeItems[name];
+  filterData = {};
   updateItems();
 }
-
 
 function updateItems() {
   saveSettings();
