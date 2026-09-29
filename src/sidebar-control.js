@@ -6,6 +6,11 @@ export class SidebarControl {
     if (sb) sb.focus();
   }
 
+  toggle = event => {
+    const sb = document.querySelector('.sidebar-control');
+    document.activeElement === sb ? sb.blur() : sb.focus();
+  }
+
   constructor(layer, options) {
     const innerHTML = `
     <div class="sidebar-control" tabindex="-1">
@@ -43,5 +48,13 @@ export class SidebarControl {
         callback(e.target.dataset.name);
       });
     });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.code=='Backquote' || e.code=='Escape') {
+        this.toggle();
+      }
+    });
+
+
   }
 }

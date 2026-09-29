@@ -126,6 +126,7 @@ export class SearchControl {
     this._searchRenderItem = (options && options.searchRenderItem) || (o => `<span class="search-item-text">${this._searchGetText(o)}</span>`);
     this._handleSubmit = (options && options.searchOnSubmit) || (() => {});
     this._settings = options.settings ?? this._settings;
+    this._menu = options.menuCallback ?? function(e) { console.log('menuCallback not defined'); };
 
     const innerHTML = `
       <div class="search-container">
@@ -148,7 +149,7 @@ export class SearchControl {
     this._container = document.querySelector('.search-container');
     this._items = this._settings.searchHistory ?? [];
     document.querySelector('.search-clear').onclick = this._clear;
-    document.querySelector('.search-menu').onclick = options.menuCallback ?? function(e) { console.log('menuCallback not defined'); };
+    document.querySelector('.search-menu').onclick = this._menu;
     document.querySelector('.search-form').onsubmit = this._submit;
     document.querySelector('.search-list').addEventListener('mousedown', event => {
       event.preventDefault();
@@ -217,7 +218,7 @@ export class SearchControl {
         }
       });
 
-    document.addEventListener("keydown",function (e) {
+    document.addEventListener("keydown", (e) => {
       let input = document.querySelector('.search-input');
       if (document.activeElement === input) return;
       if ((e.code=='KeyF' && e.ctrlKey) || e.code=='Slash') {
