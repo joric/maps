@@ -133,8 +133,8 @@ export class SearchControl {
           <div class="search-input-container">
             <button type="button" class="search-button search-menu" tabindex=0 title="Menu">&#x2630;&#xFE0E;</button>
             <input type="text" class="search-input" tabindex=1 autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" placeholder="Search..."${autofocus ? 'autofocus':''}>
-            <button type="submit" class="search-button search-submit" tabindex=-1 title="Search">&#128269;&#xFE0E;</button>
-            <button type="button" class="search-button search-clear" tabindex=0 title="Cancel">&times;</button>
+            <button type="submit" class="search-button search-submit" title="Search">&#128269;&#xFE0E;</button>
+            <button type="button" class="search-button search-clear" title="Cancel">&times;</button>
           </div>
           <div class="search-list-container"><ul class="search-list" role="listbox"></ul></div>
         </form>
@@ -194,15 +194,28 @@ export class SearchControl {
       }
     });
     this._updateDropdown();
+
+    /*
     // clicking on clear/search changes focus and starts animation - can we mitigate that in css?
     let handleFocus = event => {
       if (document.activeElement !== this._input) {
         event.preventDefault();
       }
+
       this._clear();
     };
+
     document.querySelector('.search-clear').onmousedown = handleFocus;
     document.querySelector('.search-clear').ontouchstart = handleFocus;
+    */
+
+    this._container
+      .querySelector('.search-input-container')
+      .addEventListener('mousedown', event => {
+        if (event.target.closest('button')) {
+          event.preventDefault();   // stop the button from stealing focus
+        }
+      });
 
     document.addEventListener("keydown",function (e) {
       let input = document.querySelector('.search-input');
