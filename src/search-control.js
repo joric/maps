@@ -131,6 +131,7 @@ export class SearchControl {
       <div class="search-container">
         <form class="search-form">
           <div class="search-input-container">
+            <button type="button" class="search-button search-menu" tabindex=0 title="Menu">&#x2630;&#xFE0E;</button>
             <input type="text" class="search-input" tabindex=1 autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" placeholder="Search..."${autofocus ? 'autofocus':''}>
             <button type="submit" class="search-button search-submit" tabindex=-1 title="Search">&#128269;&#xFE0E;</button>
             <button type="button" class="search-button search-clear" tabindex=0 title="Cancel">&times;</button>
@@ -143,11 +144,11 @@ export class SearchControl {
     let container = document.querySelector('.controls-top-left') ?? document.body;
     container.insertAdjacentHTML('beforeend', innerHTML);
 
-
     this._input = document.querySelector('.search-input');
     this._container = document.querySelector('.search-container');
     this._items = this._settings.searchHistory ?? [];
     document.querySelector('.search-clear').onclick = this._clear;
+    document.querySelector('.search-menu').onclick = options.menuCallback ?? function(e) { console.log('menuCallback not defined'); };
     document.querySelector('.search-form').onsubmit = this._submit;
     document.querySelector('.search-list').addEventListener('mousedown', event => {
       event.preventDefault();

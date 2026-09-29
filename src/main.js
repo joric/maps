@@ -12,6 +12,7 @@ import { MenuControl } from './menu-control.js';
 import { PopupControl } from './popup-control.js';
 import { LayersControl } from './layers-control.js';
 import { MarkersControl } from './markers-control.js';
+import { SidebarControl } from './sidebar-control.js';
 
 import * as utils from './utils.js';
 import { getType } from './marker-types.js';
@@ -414,8 +415,17 @@ function addMap() {
     saveSettings();
   });
 
-
+  /*
   const menuControl = new MenuControl(null, {
+    items: Object.fromEntries(slugs.map(slug => [slug, { name: slug }])),
+    callback: name => {
+      window.location.href = getMapURL(name);
+    },
+  });
+  */
+
+  const sidebarControl = new SidebarControl(null,{
+    title: config.name,
     items: Object.fromEntries(slugs.map(slug => [slug, { name: slug }])),
     callback: name => {
       window.location.href = getMapURL(name);
@@ -424,6 +434,7 @@ function addMap() {
 
   const searchControl = new SearchControl(null, {
     settings: settings,
+    menuCallback: sidebarControl.open,
     searchCallback: query => fuzzySearch(query),
     searchOnSubmit: query =>  fuzzySearch(query),
     searchRenderItem: searchRenderItem,
