@@ -372,17 +372,10 @@ function addMap() {
 
   map.on('mousemove', function(e){
     const p = e.coordinate;
-    let text = `${p.x.toFixed(0)},${p.y.toFixed(0)}`;
-    let c = 'info';
-    let div = document.querySelector(`.${c}`);
-    if (!div) {
-      document.body.insertAdjacentHTML('beforeend', `<div class="${c}"></div>`);
-      div = document.querySelector(`.${c}`);
-    }
-    //div.innerText = text;
-
-    window.location.hash = `pointer=[${p.x.toFixed(0)},${p.y.toFixed(0)}]`;
-
+    let text = `${p.x.toFixed(0)}, ${p.y.toFixed(0)}`;
+    let div = document.querySelector(`.info`);
+    if (div) div.innerText = text;
+    //window.location.hash = `pointer=[${p.x.toFixed(0)},${p.y.toFixed(0)}]`;
   });
 
 

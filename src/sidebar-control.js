@@ -14,8 +14,15 @@ export class SidebarControl {
   constructor(layer, options) {
     const innerHTML = `
     <div class="sidebar-control" tabindex="-1">
-      <div class="sidebar-content"></div>
-      <ul class="sidebar-items"></ul>
+      <div class="sidebar-content">
+        <h1 class="sidebar-title"></h1>
+
+        <div class="sidebar-menu">
+          <ul class="sidebar-items"></ul>
+        </div>
+
+      </div>
+      <div class="info"></div>
     </div>
     `;
 
@@ -24,7 +31,7 @@ export class SidebarControl {
     let content = document.querySelector('.sidebar-content');
 
     if (options.title) {
-      content.insertAdjacentHTML('beforeend', `<h1>${options.title}</h1>`);
+      document.querySelector('.sidebar-title').innerText = options.title;
     }
 
     let ul = document.querySelector('.sidebar-items');
@@ -34,7 +41,7 @@ export class SidebarControl {
 
     for (const [name, item] of Object.entries(items)) {
       let title = item.title || name;
-      html += `<li tabindex=-1 data-name="${name}" class="menu-control-item" title="${item.title||name}">${title}</li>`;
+      html += `<li tabindex=-1 data-name="${name}" class="sidebar-control-item" title="${item.title||name}">${title}</li>`;
     }
 
     ul.innerHTML = html;
@@ -43,10 +50,10 @@ export class SidebarControl {
       console.log(`default callback called with parameter ${i}`);
     };
 
-    document.querySelectorAll('.sidebar-control ul > li').forEach(li => {
-      li.addEventListener('click', e => {
-        callback(e.target.dataset.name);
-      });
+    ul.addEventListener('click', e => {
+      const li = e.target.closest('.sidebar-control-item');
+      if (!li) return;
+      callback(li.dataset.name);
     });
 
     document.addEventListener("keydown", (e) => {
