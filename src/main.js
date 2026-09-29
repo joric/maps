@@ -19,7 +19,7 @@ import { getIcon } from './marker-icons.js';
 
 let USE_LOCAL = import.meta.env.DEV;
 
-let USE_FA = true;
+let USE_FA_ICONS = false;
 
 let submodulesBase = USE_LOCAL ? 'submodules/': '../submodules/';
 
@@ -57,7 +57,7 @@ function getTilesetBase(config) {
 
 const getMapURL = name => window.location.href.split('/').slice(0, -1).join('/') + '/' + name;
 
-let bNoImages = USE_FA;
+let bNoImages = USE_FA_ICONS;
 let spriteIndex = 0;
 
 let allFeatures = [];
@@ -130,14 +130,22 @@ function addRegionMarkers() {
   let count = allFeatures.length;
 
   for (const polygon of allRegions) {
-    let point = utils.getWeightedCentroid(polygon.getCoordinates()[0]);
     let region = colors[polygon.properties.color];
+    let center = utils.getWeightedCentroid(polygon.getCoordinates()[0]);
+
     let feature = {
-      geometry: { coordinates: [point.x, point.y, 0] },
-      properties: { name: region, type: 'regionMarker' }
+      geometry: { coordinates: reverseMapping(center) },
+      properties: { name: region, transient: true, type: 'regionMarker' }
     }
+
     feature._type = getType(feature.properties, typeData);
-    feature._type.regionMarker = true;
+    let t = feature._type
+    t.type = 'regionMarker';
+    t.regionMarker = true;
+    t.region = region;
+
+    polygon.properties.region = region;
+
     //console.log('adding region marker', feature);
     allFeatures.push(feature);
   }
@@ -148,14 +156,12 @@ function addRegionMarkers() {
 function nameRegions() {
   allFeatures.filter(f => f._type?.regionMarker).forEach(feature => {
     const polygon = getPolygon(feature);
-    if (polygon) polygon.properties.region = feature.properties.sid || feature.properties.name;
-
-    //optionally use weighted centroid
-    if (!polygon) return;
-    let point = utils.getWeightedCentroid(polygon.getCoordinates()[0]);
-    feature.geometry.coordinates[0] = point.x;
-    feature.geometry.coordinates[1] = point.y;
-
+    if (polygon && !polygon.properties.region) {
+      polygon.properties.region = feature.properties.sid || feature.properties.name;
+      let point = utils.getWeightedCentroid(polygon.getCoordinates()[0]);
+      feature.geometry.coordinates[0] = point.x;
+      feature.geometry.coordinates[1] = point.y;
+    }
   });
 }
 
@@ -165,7 +171,9 @@ function assignRegions() {
   }
   allFeatures.forEach(feature => {
     const polygon = getPolygon(feature);
-    if (polygon && feature._type) feature._type.region = polygon.properties.region;
+    if (polygon && feature._type) {
+      feature._type.region = polygon.properties.region;
+    }
   });
 }
 
@@ -319,9 +327,10 @@ function addMap() {
       //mapSize =  section.size ? section.size : mapSize; //bounds.right - bounds.left;
     }
 
-    if (section.center) {
-      center = section.center;
-    }
+    center = {
+      left: bounds.left + (bounds.right-bounds.left)/2,
+      top: bounds.top + (bounds.bottom-bounds.top)/2,
+    };
 
     let baseLayer = new maptalks.TileLayer(section.name||'default', {
       urlTemplate: getTilesetBase(config) + section.urlTemplate,
@@ -362,7 +371,7 @@ function addMap() {
 
   map.on('mousemove', function(e){
     const p = e.coordinate;
-    let text = `${p.x.toFixed(0)}, ${p.y.toFixed(0)}`;
+    let text = `${p.x.toFixed(0)},${p.y.toFixed(0)}`;
     let c = 'info';
     let div = document.querySelector(`.${c}`);
     if (!div) {
@@ -370,6 +379,9 @@ function addMap() {
       div = document.querySelector(`.${c}`);
     }
     //div.innerText = text;
+
+    window.location.hash = `pointer=[${p.x.toFixed(0)},${p.y.toFixed(0)}]`;
+
   });
 
 
@@ -492,7 +504,6 @@ function addMap() {
 
   new maptalks.control.Compass({ position: 'bottom-right' }).addTo(map)._compass.onclick = toggleView;
 
-
   // sceneconfig options https://doc.maptalks.com/docs/api/vt/point-layer/
 
   let layerOptions = { sceneConfig: { depthFunc: '<=' } };
@@ -560,56 +571,22 @@ async function fuzzySearch(s, limit=1024) {
   const cmpAlphaNum2 = (a,b) => a.localeCompare(b, 'en', { numeric: true });
   result.sort( (a,b)=> a.score - b.score || cmpAlphaNum2(a.item.properties.name||'', b.item.properties.name||'') ) ;
 
-  const extent = {
-    minX: Infinity,
-    minY: Infinity,
-    maxX: -Infinity,
-    maxY: -Infinity,
-  
-    addPoint(x, y) {
-      if (x < this.minX) this.minX = x;
-      if (y < this.minY) this.minY = y;
-      if (x > this.maxX) this.maxX = x;
-      if (y > this.maxY) this.maxY = y;
-    },
-  
-    getWidth() {
-      return this.maxX - this.minX;
-    },
-  
-    getHeight() {
-      return this.maxY - this.minY;
-    },
-  
-    toExtent() {
-      return {
-        xmin: this.minX,
-        ymin: this.minY,
-        xmax: this.maxX,
-        ymax: this.maxY,
-      };
-    }
-  };
-
-
-  let hasData = false;
-  let lookup = {};
+  let extent = null;
   for (const r of result) {
-    let feature = r.item;
-    let key = getKey(feature);
-    lookup[key] = true;
-    const [x,y,z] = applyMapping(r.item.geometry.coordinates);
-    extent.addPoint(x, y);
-    hasData = true;
+    let key = getKey(r.item);
+    filterData = extent ? filterData : {}
+    filterData[key] = true;
+    const [x, y, z] = applyMapping(r.item.geometry.coordinates);
+    const c = new maptalks.Coordinate(x, y);
+    extent = extent ? extent.combine(c) : new maptalks.Extent(c, c);
   }
 
-  if (hasData) {
+  if (extent) {
     map.setMaxZoom(5);
-    map.fitExtent(extent.toExtent(), -0.2);
+    map.fitExtent(extent, -0.2);
     map.setMaxZoom(maxZoom);
   }
 
-  filterData = lookup;
   searchTimer = setTimeout(scheduleUpdate, 100);
 
   return result;
@@ -644,28 +621,27 @@ function applyMatrix(coords, m) {
   return m.map(row => row[0]*x + row[1]*y + row[2]*z);
 }
 
+
+const DEFAULT_MAPPING = [["x", 1], ["y", 1], ["z", 1]];
+
 function applyMapping(coords) {
-  const DEFAULT_MAPPING = [["x", 1], ["y", 1], ["z", 1]];
   let world = Object.values(config.worlds)[0];
   const mapping = world.markers?.mapping ?? DEFAULT_MAPPING;
-
   const [x, y, z] = coords;
-
   const source = { x, y, z };
-
   let p = mapping.map(([axis, sign]) => sign * source[axis]);
-
-  if (world.markers?.flip_y) {
-    let cy = world.markers.cy ?? 0;
-
-    p[1] =  cy - p[1];
-
-    let cx = world.markers.cx ?? 0;
-
-    p[0] += cx;
-  }
-
   return p;
+}
+
+function reverseMapping(p) {
+  let world = Object.values(config.worlds)[0];
+  const mapping = world.markers?.mapping ?? DEFAULT_MAPPING;
+  let q = [p.x, p.y, p.z ?? 0];
+  const source = { x: 0, y: 0, z: 0 };
+  mapping.forEach(([axis, sign], i) => {
+    source[axis] = q[i] / sign;
+  });
+  return [source.x, source.y, source.z];
 }
 
 function getSymbol(o, t) {
@@ -732,8 +708,18 @@ function createGeometry(feature) {
   });
 
   marker.on('click', e => {
-    openPopup(e.target);
+    let excludeLabels = false;
+
+    let marker = e.target;
+    if (excludeLabels && marker.polygon) {
+      zoomToPolygon(marker.polygon);
+    } else {
+      openPopup(e.target);
+    }
   });
+
+  //marker.on('mouseover', e => { e.target.polygon && selectPolygon(e.target.polygon, true); })
+  //marker.on('mouseout', e => { e.target.polygon && selectPolygon(e.target.polygon, false); })
 
   marker.line = new maptalks.LineString([[x, y, z], [x, y, 0]], {
     symbol: { lineColor: '#fff', lineWidth: 1.5 },
@@ -742,6 +728,18 @@ function createGeometry(feature) {
   if (o.radius>1) {
     marker.circle = new maptalks.Circle([x, y, -1.5], o.radius, {});
     setPolygonOptions(marker.circle, true);
+  }
+
+  if (feature._type.region) {
+    for (const polygon of allRegions) {
+      //console.log(feature._type.region, polygon.properties.color);
+      if (feature._type.regionMarker===true && polygon.properties.region === feature._type.region) {
+        marker.polygon = polygon;
+        //if (marker.isVisible())
+        polygon.show();
+        break;
+      }
+    }
   }
 
   feature._geom = marker;
@@ -782,7 +780,7 @@ function scheduleUpdate() {
 
         // !vis && !marker: nothing to do, stays uncreated
       } else {
-        for (const g of [marker, marker.line, marker.circle]) {
+        for (const g of [marker, marker.line, marker.circle, marker.polygon]) {
           if (g && vis !== g.isVisible()) vis ? g.show() : g.hide();
         }
       }
@@ -856,8 +854,7 @@ function updateItems() {
   setTimeout(scheduleUpdate, 0);
 }
 
-function setPolygonOptions(polygon, bSelectable) {
-
+function selectPolygon(polygon, bSelect) {
   const hoverSymbol = {
     polygonOpacity: 0.25,
     lineWidth: 2.5,
@@ -871,28 +868,26 @@ function setPolygonOptions(polygon, bSelectable) {
     lineWidth: 2.5,
   };
 
-  let zoom = 3;
+  //bSelect = bSelect && map.getZoom() <= zoom;
+  polygon.setSymbol(bSelect ? hoverSymbol : defaultSymbol);
+  polygon.config({cursor: bSelect ? 'pointer': 'default'});
+}
 
-  function selectPolygon(polygon, bSelect) {
-    //bSelect = bSelect && map.getZoom() <= zoom;
-    polygon.setSymbol(bSelect ? hoverSymbol : defaultSymbol);
-    polygon.config({cursor: bSelect ? 'pointer': 'default'});
-  }
+function zoomToPolygon(polygon, zoom = 3) {
+  const extent = polygon.getExtent();
+  if (extent) map.fitExtent(extent);
+}
 
-  function zoomToPolygon(polygon) {
-    const extent = polygon.getExtent();
-    if (extent) map.fitExtent(extent);
-  }
+function zoomToPolygon1(polygon, zoom = 3) {
+  const extent = polygon.getExtent();
+  let mapZoom = map.getZoom();
+  if (!extent || zoom < mapZoom) return;
+  const center = extent.getCenter();
+  map.animateTo({center: center, zoom: zoom+1});
+  selectPolygon(polygon, false);
+}
 
-  function zoomToPolygon0(polygon) {
-    const extent = polygon.getExtent();
-    let mapZoom = map.getZoom();
-    if (!extent || zoom < mapZoom) return;
-    const center = extent.getCenter();
-    map.animateTo({center: center, zoom: zoom+1});
-    selectPolygon(polygon, false);
-  }
-
+function setPolygonOptions(polygon, bSelectable) {
   selectPolygon(polygon, false);
 
   if (bSelectable) {
@@ -927,6 +922,7 @@ function addRegions() {
     polygons = polygons.filter(polygon => polygon); // filter out null geometry
 
     polygons.forEach(polygon => {
+      polygon.hide();
       setPolygonOptions(polygon, true);
       allRegions.push(polygon);
     });
