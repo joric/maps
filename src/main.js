@@ -43,6 +43,12 @@ let localData = JSON.parse(localStorage.getItem(localDataName)) || {};
 let settings = localData;
 let counters = {};
 
+window.setLanguage = function (cc) {
+  settings.language = cc;
+  saveSettings();
+  location.reload();
+}
+
 //console.log('using localData', localDataName);
 
 function saveSettings() {
@@ -417,9 +423,21 @@ function addMap() {
   });
   */
 
-  const sidebarControl = new SidebarControl(null,{
+  let html = '';
+
+  if (config.localization) {
+    const files = config.localization.files || {};
+    const current = settings?.language;
+    const options = Object.keys(files)
+      .map(key => `<option value="${key}"${key === current ? ' selected' : ''}>${key}</option>`)
+      .join('');
+    html = `<select onchange="javascript:setLanguage(this.value)">${options}</select>`;
+  }
+
+  const sidebarControl = new SidebarControl(null, {
     title: config.name,
     items: Object.fromEntries(slugs.map(slug => [slug, { name: slug }])),
+    html: html,
     callback: name => {
       window.location.href = getMapURL(name);
     },
@@ -1012,7 +1030,7 @@ function parseConfig(data) {
 
   if (config.localization) {
     let c = config.localization;
-    let cc = 'en';
+    let cc = settings.language ?? 'en';
     let url = baseDir + c.path + c.files[cc];
 
     console.log(`loading "${url}"...`);

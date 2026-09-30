@@ -25,10 +25,6 @@
   transform: translateX(0);
 }
 
-.sidebar-content h1 {
-  padding: 12px;
-}
-
 .sidebar-content {
   padding: 0;
   flex: 1;
@@ -53,6 +49,9 @@
   background: rgba(0,0,0,0.1);
 }
 
+.sidebar-block {
+  padding: 12px;
+}
 
 .info {
   flex-shrink: 0;

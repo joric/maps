@@ -57,5 +57,6 @@ export default {
       },
     },
   },
+  base: './',
   optimizeDeps: { entries: ['index.html'] },
 };

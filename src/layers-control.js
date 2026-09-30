@@ -21,6 +21,7 @@ export class LayersControl {
       dragSpeed: 1.5,
     });
 
+
     const control = document.querySelector('.layers-control');
     const viewport = control.querySelector('.layers-viewport');
     const ul = control.querySelector('.layers-list');

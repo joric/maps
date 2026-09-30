@@ -15,11 +15,10 @@ export class SidebarControl {
     const innerHTML = `
     <div class="sidebar-control" tabindex="-1">
       <div class="sidebar-content">
-        <h1 class="sidebar-title"></h1>
 
-        <div class="sidebar-menu">
-          <ul class="sidebar-items"></ul>
-        </div>
+        <div class="sidebar-block"><h1 class="sidebar-title"></h1></div>
+
+        <div class="sidebar-menu"><ul class="sidebar-items"></ul></div>
 
       </div>
       <div class="info"></div>
@@ -32,6 +31,10 @@ export class SidebarControl {
 
     if (options.title) {
       document.querySelector('.sidebar-title').innerText = options.title;
+    }
+
+    if (options.html) {
+      content.insertAdjacentHTML('beforeend', `<div class="sidebar-block">${options.html}</div>`);
     }
 
     let ul = document.querySelector('.sidebar-items');
@@ -57,7 +60,7 @@ export class SidebarControl {
     });
 
     document.addEventListener("keydown", (e) => {
-      if (e.code=='Backquote' || e.code=='Escape') {
+      if (e.code=='Backquote') {
         this.toggle();
       }
     });
