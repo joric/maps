@@ -20,7 +20,7 @@ import { getIcon } from './marker-icons.js';
 
 let USE_LOCAL = import.meta.env.DEV;
 
-let USE_FA_ICONS = false;
+let allowImages = true;
 
 let submodulesBase = USE_LOCAL ? 'submodules/': '../submodules/';
 
@@ -38,33 +38,6 @@ let slugs = [
 let repoName = location.href.split('/').pop().split('#')[0];
 if (!repoName || repoName.endsWith('.html')) repoName = slugs[0];
 
-let localDataName = `localData-${repoName}`;
-let localData = JSON.parse(localStorage.getItem(localDataName)) || {};
-let settings = localData;
-let counters = {};
-
-window.setLanguage = function (cc) {
-  settings.language = cc;
-  saveSettings();
-  location.reload();
-}
-
-//console.log('using localData', localDataName);
-
-function saveSettings() {
-  localStorage.setItem(localDataName, JSON.stringify(localData));
-}
-
-function getTilesetBase(config) {
-  let tilesetBase = config.tilesetBase || '';
-  if (USE_LOCAL) tilesetBase = tilesetBase.replace('https://joric.github.io/', submodulesBase);
-  if (tilesetBase=='') tilesetBase = submodulesBase + repoName +'/';
-  return tilesetBase;
-}
-
-const getMapURL = name => window.location.href.split('/').slice(0, -1).join('/') + '/' + name;
-
-let bNoImages = USE_FA_ICONS;
 let spriteIndex = 0;
 
 let allFeatures = [];
@@ -85,17 +58,63 @@ let config = {};
 let searchString = '';
 let baseDir = '';
 
-let typeData = {};
+let markerTypes = {};
 let iconData = {};
 let lang = {};
 let popup;
 
 let markersControl = null;
 
+let icons = {};
+
+
+let localDataName = `localData-${repoName}`;
+let localData = JSON.parse(localStorage.getItem(localDataName)) || {};
+let settings = localData;
+let counters = {};
+
+window.setLanguage = function (cc) {
+  settings.language = cc;
+  saveSettings();
+  location.reload();
+}
+
+window.setAllowImages = function (allowImages) {
+  settings.allowImages = allowImages ? true : false;
+  saveSettings();
+  location.reload();
+}
+
+//console.log('using localData', localDataName);
+
+function saveSettings() {
+  localStorage.setItem(localDataName, JSON.stringify(localData));
+}
+
+function getTilesetBase(config) {
+  let tilesetBase = config.tilesetBase || '';
+  if (USE_LOCAL) tilesetBase = tilesetBase.replace('https://joric.github.io/', submodulesBase);
+  if (tilesetBase=='') tilesetBase = submodulesBase + repoName +'/';
+  return tilesetBase;
+}
+
+const getMapURL = name => window.location.href.split('/').slice(0, -1).join('/') + '/' + name;
+
+allowImages = settings.allowImages = settings.allowImages ?? allowImages;
+
 const capitalize = s => (s && s.length>0) ? s[0].toUpperCase()+s.slice(1) : '';
 
-function translate(s) {
+function translate(s, section) {
   s  = String(s);
+
+  if (!section) section = 'items';
+
+  const k = markerTypes?.[section]?.[s]?.title;
+  if (k) {
+    const [p, e] = k.split('.');
+    const res = e ? lang[p]?.[e] : lang[k];
+    if (res) return res;
+  }
 
   let templates_fn = [
     name => name,
@@ -145,7 +164,7 @@ function addRegionMarkers() {
       properties: { name: region, transient: true, type: 'regionMarker' }
     }
 
-    feature._type = getType(feature.properties, typeData);
+    feature._type = getType(feature.properties, markerTypes);
     let t = feature._type
     t.type = 'regionMarker';
     t.regionMarker = true;
@@ -186,7 +205,7 @@ function assignRegions() {
 
 function assignTypes() {
   allFeatures.forEach(feature => {
-    feature._type = getType(feature.properties, typeData);
+    feature._type = getType(feature.properties, markerTypes);
   });
 }
 
@@ -431,8 +450,12 @@ function addMap() {
     const options = Object.keys(files)
       .map(key => `<option value="${key}"${key === current ? ' selected' : ''}>${key}</option>`)
       .join('');
-    html = `<select onchange="javascript:setLanguage(this.value)">${options}</select>`;
+    html = `<br>language: <select onchange="setLanguage(this.value)">${options}</select>`;
   }
+
+  html += `
+    <br><br><label>allowImages: <input type=checkbox name=allowImages onchange="setAllowImages(this.checked)" ${settings.allowImages ? 'checked':''}/></label>
+  `;
 
   const sidebarControl = new SidebarControl(null, {
     title: config.name,
@@ -534,8 +557,8 @@ function addMap() {
 
   let groupLayer = new maptalks.GroupGLLayer('features', [], {}).addTo(map);
 
-  layers.regions = new maptalks.PolygonLayer('regions', [], { ...polygonOptions } ),
-  layers.circles = new maptalks.PolygonLayer('circles', [], { ...polygonOptions, maxZoom: 4 } ),
+  layers.regions = new maptalks.PolygonLayer('regions', [], { ...polygonOptions, maxZoom: 4 } ),
+  layers.circles = new maptalks.PolygonLayer('circles', [], { ...polygonOptions, minZoom: 3, maxZoom: 6 } ),
   layers.lines   = new maptalks.LineStringLayer('lines', [], { ...layerOptions, minZoom: 2, maxZoom: 3 } ),
   layers.markers = new maptalks.PointLayer('markers', [], layerOptions ), // must be the last to be clickable
 
@@ -566,9 +589,12 @@ function indexMarkers() {
     let t = feature._type;
     counters[t.group] = counters[t.group] || {};
     counters[t.group][t.category] = (counters[t.group][t.category] || 0) + 1;
+    icons[t.category] = iconData[t.icon];
   }
 
-  markersControl = new MarkersControl(counters, {weights:{}, groupCallback: toggleGroup, itemCallback: toggleItem, translate: translate, theme: 'retro' });
+  //console.log(icons);
+
+  markersControl = new MarkersControl(counters, {icons:icons, groups:markerTypes?.groups??{}, groupCallback: toggleGroup, itemCallback: toggleItem, translate: translate, theme: 'retro' });
 
   updateControls(); // update pill headers (required, later move to control)
 
@@ -667,7 +693,7 @@ function reverseMapping(p) {
 }
 
 function getSymbol(o, t) {
-  let icon = getIcon(t, iconData, {baseDir: baseDir, spriteIndex: spriteIndex, bNoImages: bNoImages});
+  let icon = getIcon(t, iconData, {baseDir: baseDir, spriteIndex: spriteIndex, allowImages: allowImages});
 
   var symbol = {
     markerFile   : icon.image,
@@ -749,7 +775,7 @@ function createGeometry(feature) {
 
   if (o.radius>1) {
     marker.circle = new maptalks.Circle([x, y, -1.5], o.radius, {});
-    setPolygonOptions(marker.circle, true);
+    setPolygonOptions(marker.circle, true, t.color ?? 'white');
   }
 
   if (feature._type.region) {
@@ -876,16 +902,18 @@ function updateItems() {
   setTimeout(scheduleUpdate, 0);
 }
 
-function selectPolygon(polygon, bSelect) {
+function selectPolygon(polygon, bSelect, lineColor) {
   const hoverSymbol = {
     polygonOpacity: 0.25,
     lineWidth: 2.5,
+    lineColor: lineColor ?? '#fff',
+    polygonFill: lineColor ?? '#fff',
   };
 
   const defaultSymbol = {
-    lineColor: '#fff',
     lineOpacity: 0.5,
-    polygonFill: '#fff',
+    lineColor: lineColor ?? '#fff',
+    polygonFill: lineColor ?? '#fff',
     polygonOpacity: 0.0,
     lineWidth: 2.5,
   };
@@ -909,12 +937,12 @@ function zoomToPolygon1(polygon, zoom = 3) {
   selectPolygon(polygon, false);
 }
 
-function setPolygonOptions(polygon, bSelectable) {
-  selectPolygon(polygon, false);
+function setPolygonOptions(polygon, bSelectable, color) {
+  selectPolygon(polygon, false, color);
 
   if (bSelectable) {
-    polygon.on('mouseover', e => { selectPolygon(e.target, true); })
-    polygon.on('mouseout', e => { selectPolygon(e.target, false); })
+    polygon.on('mouseover', e => { selectPolygon(e.target, true, color); })
+    polygon.on('mouseout', e => { selectPolygon(e.target, false, color); })
     polygon.on('click', e => { zoomToPolygon(e.target); })
   }
 }
@@ -994,12 +1022,16 @@ function addTypes() {
   let typesFile = baseDir + (world.markers?.[0]?.types ?? 'data/types.json');
   let iconsFile = baseDir + (world.markers?.[0]?.icons ?? 'data/icons.json');
 
+  // new!
+  let markerTypesFile = baseDir + (world.markers?.[0]?.types ?? 'data/markerTypes.json');
+
   console.log(`loading "${typesFile}"...`);
   console.log(`loading "${iconsFile}"...`);
 
   let promises = [
     typesFile,
     iconsFile,
+    markerTypesFile,
   ].map(url =>
     fetch(url)
       .then(r => r.json())
@@ -1010,7 +1042,19 @@ function addTypes() {
   );
 
   Promise.all(promises).then(data => {
-    [typeData, iconData] = data;
+
+    let markerTypesNew = {};
+
+    [markerTypes, iconData, markerTypesNew] = data;
+
+    markerTypes = Object.keys(markerTypesNew).length ? markerTypesNew : markerTypes;
+
+    if (markerTypes.icons) iconData = markerTypes.icons;
+
+    for (const[key,value] of Object.entries(markerTypes?.localization?.[settings.language] ?? [])){
+      lang[key] = value;
+    }
+
     addRegions();
   });
 }
@@ -1040,6 +1084,30 @@ function parseConfig(data) {
     .then(data=>{
       lang = data[c.key] ? data[c.key] : data;
       console.timeEnd('loadLocalization');
+
+      let strings = {
+        "misc": {
+          "en": "Misc",
+          "de": "Verschiedenes",
+          "es": "Varios",
+          "fr": "Divers",
+          "it": "Varie",
+          "ja": "その他",
+          "ko": "기타",
+          "pt": "Diversos",
+          "ru": "Разное",
+          "uk": "Різне",
+          "zh": "其他"
+        }
+      };
+
+      for (const key of Object.keys(strings)) {
+        const entry = strings[key][settings.language];
+        if (entry) {
+          lang [ key ] = entry;
+        }
+      }
+
       addTypes();
     })
 

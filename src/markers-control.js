@@ -1,5 +1,7 @@
 import './markers-control.css'
 
+import { WrapperControl } from './controls.js';
+
 export class MarkersControl {
   constructor(counters, options) {
 
@@ -7,32 +9,59 @@ export class MarkersControl {
 
     const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true, sensitivity: 'base' });
 
-    let cmpGroup = (a,b)=>((options?.weights?.[b]??0)-(options?.weights?.[a]??0))||cmpAlphaNum(translate(a),translate(b));
+    //let cmpGroup = (a,b)=>((options?.weights?.[b]??0)-(options?.weights?.[a]??0))||cmpAlphaNum(translate(a),translate(b));
 
     document.querySelector('.markers-control')?.remove();
+
+    const groupOrder = Object.keys(options.groups||[]);
+
+    let cmpGroup = (a,b) => groupOrder.indexOf(a[1]) - groupOrder.indexOf(b[1]);
+
 
     //options = {...options||{}, theme:'glass'};
     //options = {...options||{}, theme:'retro'};
 
-    const control = Object.assign(document.createElement('div'), {
-      className: `markers-control${(options?.theme) ? ' '+options.theme : ''}`,
-      innerHTML: Object.keys(counters||{}).sort(cmpGroup).map(group =>
-        `<ul class="markers-control-groups${(options?.theme) ? ' '+options.theme : ''}"><li tabindex="0"><div class="markers-control-group" data-name="${group}">${translate(group)}</div><ul class="markers-control-items">`+
-        Object.entries(counters[group]).map(([type,count])=>[translate(type),type,count]).sort(cmpAlphaNum).map(([title, type, count]) =>
-          `<li tabindex="0" class="markers-control-item" data-name="${type}" title="${title} (${type})"><i class="${options?.icons?.[type]?.class||'fa fa-question-circle'}"></i><span>${title}</span><span>${count}</span></li>`
-        ).join('')
-        +`</ul></li></ul>`
-      ).join('')
+    let themeClass = options?.theme ?? '';
+
+    const innerHTML = `
+      <div class="markers-control markers-viewport ${themeClass}">
+          ${Object.keys(counters || {})
+            .map((group) => [translate(group, 'groups'), group])
+            .sort(cmpGroup)
+            .map(([groupTitle, group]) => `
+            <ul class="markers-control-groups ${themeClass}">
+              <li tabindex="0">
+                <div class="markers-control-group" data-name="${group}" title="${groupTitle} (${group})">${groupTitle}</div>
+                <ul class="markers-control-items">
+                  ${Object.entries(counters[group])
+                    .map(([category, count]) => [translate(category, 'categories'), category, count])
+                    .sort(cmpAlphaNum)
+                    .map(([title, category, count]) => `
+                      <li tabindex="0" class="markers-control-item" data-name="${category}" title="${title} (${category})">
+                        <i class="${options?.icons?.[category]?.class || 'fa fa-question-circle'}"></i>
+                        <span>${title}</span>
+                        <span>${count}</span>
+                      </li>
+                    `).join('')}
+                </ul>
+              </li>
+            </ul>
+          `).join('')}
+        </div>
+    `;
+
+    const container = options.container
+      ?? document.querySelector('.controls-top-left')
+      ?? document.body;
+
+    container.insertAdjacentHTML('beforeend', innerHTML);
+
+    /*
+    const wrapper = new WrapperControl('.markers-viewport', {
+      scrollStep: 150,
+      dragSpeed: 1.5,
     });
-
-    let dock = document.querySelector('.' +(options?.position ?? 'controls-top-left'));
-    (dock || document.body).append(control);
-
-    if (!dock) {
-      control.style.position = 'absolute';
-      control.style.left = (options?.left ?? 0)+'px';
-      control.style.top = (options?.top ?? 0)+'px';
-    }
+    */
 
     let justFocusedLi = null;
 

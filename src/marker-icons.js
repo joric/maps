@@ -10,7 +10,7 @@ let iconImages = {};
 
 export function getIcon(t, iconData, options) {
   const defaultData = {class: 'fa-circle-question'};
-  const defaultOptions = { bGetCategoryIcon: false, spriteIndex: 0, baseDir: '', bNoImages: false, imageDir: 'images/sprites/'};
+  const defaultOptions = { bGetCategoryIcon: false, spriteIndex: 0, baseDir: '', allowImages: true, imageDir: 'images/sprites/'};
 
   options = {...defaultOptions, ...(options||{})};
 
@@ -19,7 +19,7 @@ export function getIcon(t, iconData, options) {
   const color = t.color || d.color || d.fg || 'grey';
   const bgColor = d.background || d.bg || 'white';
   const className = d.class || (d.fa ? ('fa fa-'+ (v.fa||'circle-question')) : defaultData.class );
-  const bUseImage = !options.bNoImages && (d.sprites || d.image);
+  const bUseImage = options.allowImages && (d.sprites || d.image);
 
   let key = bUseImage ? icon : `${icon}-${color}-${bgColor}`;
 
@@ -33,7 +33,7 @@ export function getIcon(t, iconData, options) {
 
   let size = [iconSize, iconSize];
 
-  if (!options.bNoImages && (d.image || d.sprites) && d.size) {
+  if (bUseImage && d.size) {
     size = Array.isArray(d.size) ? d.size: [d.size, d.size];
   }
 

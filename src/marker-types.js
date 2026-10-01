@@ -33,7 +33,7 @@ export function getType (o, typeData) {
       }
     }
 
-    preprocess(typeData);
+    preprocess(typeData.types ?? typeData);
   }
 
   function rec(node, t = {}) {
@@ -50,6 +50,9 @@ export function getType (o, typeData) {
 
       // 1) exact match
       const ex = exactMap[value];
+
+      //if (field=='name' && o.type == 'ESpawnType::CustomMarker' && o.name=='EMarkerType::Explosives') console.log('------here-------', value, exactMap[value]);
+
       if (ex) return rec(ex, { ...t, category: value, ...prop });
 
       // 2) regex match from cache
@@ -62,5 +65,5 @@ export function getType (o, typeData) {
     return { ...t, ...prop };
   }
 
-  return rec(typeData);
+  return rec(typeData.types ?? typeData);
 }

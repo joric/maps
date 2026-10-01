@@ -21,7 +21,7 @@
   transition: var(--transition);
   overflow: hidden;
 
-  background: white;
+  background: transparent;
 
   box-sizing: border-box;
 }
