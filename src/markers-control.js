@@ -4,41 +4,30 @@ import { WrapperControl } from './controls.js';
 
 export class MarkersControl {
   constructor(counters, options) {
-
     const translate = options?.translate || (s => s[0].toUpperCase()+s.slice(1));
-
     const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true, sensitivity: 'base' });
-
-    //let cmpGroup = (a,b)=>((options?.weights?.[b]??0)-(options?.weights?.[a]??0))||cmpAlphaNum(translate(a),translate(b));
-
     document.querySelector('.markers-control')?.remove();
-
     const groupOrder = Object.keys(options.groups||[]);
-
     let cmpGroup = (a,b) => groupOrder.indexOf(a[1]) - groupOrder.indexOf(b[1]);
-
-
-    //options = {...options||{}, theme:'glass'};
-    //options = {...options||{}, theme:'retro'};
-
     let themeClass = options?.theme ?? '';
+    let icons = options.icons ?? {};
 
     const innerHTML = `
       <div class="markers-control markers-viewport ${themeClass}">
-          ${Object.keys(counters || {})
-            .map((group) => [translate(group, 'groups'), group])
+          ${Object.entries(counters || {})
+            .map(([group, categories]) => [translate(group, 'groups'), group, categories])
             .sort(cmpGroup)
-            .map(([groupTitle, group]) => `
+            .map(([groupTitle, group, categories]) => `
             <ul class="markers-control-groups ${themeClass}">
               <li tabindex="0">
-                <div class="markers-control-group" data-name="${group}" title="${groupTitle} (${group})">${groupTitle}</div>
+                <div class="markers-control-group" data-name="${group}" title="${groupTitle} (${group}) [${Object.values(categories).reduce((a,b) =>a+b,0)}]">${groupTitle}</div>
                 <ul class="markers-control-items">
-                  ${Object.entries(counters[group])
+                  ${Object.entries(categories)
                     .map(([category, count]) => [translate(category, 'categories'), category, count])
                     .sort(cmpAlphaNum)
                     .map(([title, category, count]) => `
                       <li tabindex="0" class="markers-control-item" data-name="${category}" title="${title} (${category})">
-                        <i class="${options?.icons?.[category]?.class || 'fa fa-question-circle'}"></i>
+                        <i class="${icons[category]?.class || 'fa fa-question-circle'}"></i>
                         <span>${title}</span>
                         <span>${count}</span>
                       </li>

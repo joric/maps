@@ -2,7 +2,7 @@
   font-family: sans-serif;
   color: black;
   background: white;
-  width: 240px;
+  width: 275px;
   border-radius: 24px;
   z-index: 9998;
   /*position: absolute;
@@ -20,6 +20,7 @@
   transition: var(--transition);
 
   margin-right: 3px;
+  margin-left: -5px;
 }
 
 .search-wrap input {
@@ -108,7 +109,7 @@
   transform: scaleX(1.33);
   margin-top: 1px;
   margin-left: 8px;
-  padding-right: 4px;
+  padding-right: 2px;
 
   color: black;
 }

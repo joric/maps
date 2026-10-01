@@ -6,9 +6,12 @@
   top: 0;
   bottom: 0;
   left: 0;                  /* anchor left, use transform to hide */
-  width: 300px;
+  width: 290px;
   padding: 0;
   margin: 0;
+  
+  padding-top: 8px;
+
   color: black;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);

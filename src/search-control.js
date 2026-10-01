@@ -133,7 +133,7 @@ export class SearchControl {
         <form class="search-form">
           <div class="search-input-container">
             <button type="button" class="search-button search-menu-button" tabindex=0 title="Menu">&#x2630;&#xFE0E;</button>
-            <input type="text" class="search-input" tabindex=1 autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" placeholder="Search..."${autofocus ? 'autofocus':''}>
+            <input type="text" class="search-input" tabindex=1 autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" placeholder="${options.placeholder ?? 'Search...'}"${autofocus ? 'autofocus':''}>
             <button type="submit" class="search-button search-submit" title="Search">&#128269;&#xFE0E;</button>
             <button type="button" class="search-button search-clear" title="Cancel">&times;</button>
           </div>
