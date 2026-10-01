@@ -64,6 +64,7 @@ let lang = {};
 let popup;
 
 let markersControl = null;
+let searchControl = null;
 
 let icons = {};
 
@@ -432,15 +433,6 @@ function addMap() {
     saveSettings();
   });
 
-  /*
-  const menuControl = new MenuControl(null, {
-    items: Object.fromEntries(slugs.map(slug => [slug, { name: slug }])),
-    callback: name => {
-      window.location.href = getMapURL(name);
-    },
-  });
-  */
-
   let html = '';
 
   if (config.localization) {
@@ -465,7 +457,7 @@ function addMap() {
     },
   });
 
-  const searchControl = new SearchControl(null, {
+  searchControl = new SearchControl(null, {
     placeholder: config.name,
     settings: settings,
     menuCallback: sidebarControl.open,
@@ -576,6 +568,7 @@ function addMap() {
     if (document.activeElement === document.querySelector('#search')) return;
     if (document.activeElement === document.querySelector('.search-input')) return;
     if (e.code == 'KeyR' && !e.ctrlKey) toggleView();
+    if (/^Digit[1-9]$/.test(e.code) && !e.ctrlKey && !e.altKey && !e.metaKey) window.location.href = getMapURL(slugs[+e.code.slice(5) - 1]);
   });
 }
 
@@ -599,6 +592,12 @@ function indexMarkers() {
   updateControls(); // update pill headers (required, later move to control)
 
   if (!fuse) fuse = getFuse();
+}
+
+function resetSearch() {
+  searchString = '';
+  filterData = {};
+  searchControl._input.value = '';
 }
 
 async function fuzzySearch(s, limit=1024) {
@@ -865,6 +864,7 @@ function updateControls() {
 }
 
 function toggleGroup(group) {
+  resetSearch();
   let counter = 0;
   let total = 0;
 
@@ -891,6 +891,7 @@ function toggleGroup(group) {
 }
 
 function toggleItem(name) {
+  resetSearch();
   settings.activeItems[name] = !settings.activeItems[name];
   filterData = {};
   updateItems();
