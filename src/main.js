@@ -263,8 +263,8 @@ function renderItem(feature) {
   let o = feature?.properties ?? {};
   let t = feature?._type ?? {};
   let title = translate(o.title || o.name);
-  let subtitle = translate(t.group);
-  if (t.category) subtitle += ' / ' + translate(t.category);
+  let subtitle = translate(t.group, 'groups');
+  if (t.category) subtitle += ' / ' + translate(t.category, 'categories');
   if (t.item) subtitle += ' / ' + translate(t.item);
   let location = translate(t.region || o.area || o.cell || o.type);
   return {title: `${title} (${subtitle})`, location: location};
