@@ -29,10 +29,10 @@ let slugs = [
   'folon',
   'subnautica',
   'supraworld',
-  'windlands',
   'fuszerka',
   'ootss',
   'breathedge2',
+  'windlands',
 ];
 
 let repoName = location.href.split('/').pop().split('#')[0];
@@ -568,7 +568,7 @@ function addMap() {
     if (document.activeElement === document.querySelector('#search')) return;
     if (document.activeElement === document.querySelector('.search-input')) return;
     if (e.code == 'KeyR' && !e.ctrlKey) toggleView();
-    if (/^Digit[1-9]$/.test(e.code) && !e.ctrlKey && !e.altKey && !e.metaKey) window.location.href = getMapURL(slugs[+e.code.slice(5) - 1]);
+    if (/^Digit[1-9]$/.test(e.code) && +e.code.slice(5) <= slugs.length) window.location.href = getMapURL(slugs[+e.code.slice(5)-1]);
   });
 }
 
