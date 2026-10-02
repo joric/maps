@@ -26,7 +26,8 @@ export class MarkersControl {
                   <ul class="markers-control-groups">
                     <li tabindex="0">
                       <div class="markers-control-group" data-name="${group}" title="${groupTitle} (${group}) [${Object.values(categories).reduce((a,b) =>a+b,0)}]">${groupTitle}</div>
-                      <ul class="markers-control-items">
+                      <div class="markers-control-items">
+                      <ul class="markers-control-items-list">
                         ${Object.entries(categories)
                           .map(([category, count]) => [translate(category, 'categories'), category, count])
                           .sort(cmpAlphaNum)
@@ -38,6 +39,7 @@ export class MarkersControl {
                             </li>
                           `).join('')}
                       </ul>
+                      </div>
                     </li>
                   </ul>
                 `).join('')}
@@ -195,6 +197,8 @@ export class MarkersControl {
     // Wheel + drag scrolling
     // ---------------------------------------------------------------
     panel.addEventListener('wheel', (e) => {
+      if (e.target.closest('.markers-control-items.open')) return;
+
       if (panel.scrollWidth <= panel.clientWidth) return;
       const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
       if (delta === 0) return;

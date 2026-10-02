@@ -70,11 +70,18 @@
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   width: 200px;
+  max-height: 292px;
+  overflow: hidden;         /* clip to the radius */
+  padding: 0;
+}
+
+.markers-control-items-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
   max-height: 293px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-top: 6px;
-  padding-bottom: 6px;
 }
 
 /* ----- items ----- */
