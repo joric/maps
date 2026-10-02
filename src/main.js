@@ -826,7 +826,7 @@ function scheduleUpdate() {
         if (vis) {
           const m = createGeometry(feature);
           newMarkers.push(m);
-          newLines.push(m.line);
+          if (m.lines) newLines.push(m.line);
           if (m.circle) newCircles.push(m.circle);
           //console.log('created new marker');
         }
