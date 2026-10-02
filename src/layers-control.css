@@ -1,4 +1,5 @@
 .layers-control {
+
   --size: 75px;
   --fsize: 150px;
   --gap: 1px;
@@ -21,9 +22,14 @@
   transition: var(--transition);
   overflow: hidden;
 
-  background: white;
 
   box-sizing: border-box;
+
+  background: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  outline: 1px solid rgba(255, 255, 255, 0.75);
 }
 
 .layers-viewport {

@@ -20,7 +20,7 @@ import { getIcon } from './marker-icons.js';
 
 let USE_LOCAL = import.meta.env.DEV;
 
-let allowImages = true;
+let allowImagesDefault = true;
 
 let submodulesBase = USE_LOCAL ? 'submodules/': '../submodules/';
 
@@ -93,8 +93,8 @@ window.setLanguage = function (cc) {
   location.reload();
 }
 
-window.setallowImages = function (allowImages) {
-  settings.allowImages = allowImages ? true : false;
+window.setallowImages = function (allow) {
+  settings.allowImages = allow ? true : false;
   saveSettings();
   location.reload();
 }
@@ -109,8 +109,6 @@ function getTilesetBase(config) {
   if (tilesetBase=='') tilesetBase = submodulesBase + repoName +'/';
   return tilesetBase;
 }
-
-allowImages = settings.allowImages = settings.allowImages ?? allowImages;
 
 const capitalize = s => (s && s.length>0) ? s[0].toUpperCase()+s.slice(1) : '';
 
@@ -195,6 +193,8 @@ function nameRegions() {
 }
 
 function assignRegions() {
+  console.time('assignRegions');
+
   for (const polygon of allRegions) {
     if (!polygon.properties.region) return;
   }
@@ -204,6 +204,8 @@ function assignRegions() {
       feature._type.region = polygon.properties.region;
     }
   });
+
+  console.timeEnd('assignRegions');
 }
 
 function assignTypes() {
@@ -213,7 +215,8 @@ function assignTypes() {
 }
 
 function getFuse() {
-  console.time('translating');
+  console.time('indexing');
+
   let data = [];
   for (const i in allFeatures) {
     const feature = allFeatures[i];
@@ -222,7 +225,8 @@ function getFuse() {
     const text = Object.values(info).join(' ');
     data.push({ featureIndex: i, ...rest, text: text });
   }
-  console.timeEnd('translating');
+
+  console.timeEnd('indexing');
 
   let options = {
     keys: [
@@ -690,7 +694,7 @@ function reverseMapping(p) {
 }
 
 function getSymbol(o, t) {
-  let icon = getIcon(t, iconData, {baseDir: baseDir, spriteIndex: spriteIndex, allowImages: allowImages});
+  let icon = getIcon(t, iconData, {baseDir: baseDir, spriteIndex: spriteIndex, allowImages: settings.allowImages});
 
   var symbol = {
     markerFile   : icon.image,
@@ -1043,6 +1047,7 @@ function parseConfig(data) {
 
   settings = localData;
 
+  settings.allowImages = settings.allowImages ?? allowImagesDefault;
   settings.language = settings.language ?? 'en';
 
   addMap();

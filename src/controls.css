@@ -2,20 +2,29 @@
   position: absolute;
   display: flex;
   padding: 0;
-  margin: 1em;
+  margin: 1.5em;
   gap: 8px;
   align-items: start;
   flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .controls-top-left {
-  top: 0;
-  left: 0;
+  top: -8px;
+  left: -8px;
 }
 
 .controls-bottom-left {
   bottom: 0;
   left: 0;
+}
+
+
+@media (max-width: 468px) {
+  .controls-placeholder {
+    flex-direction: column;
+    gap: 0px;
+  }
 }
 
 

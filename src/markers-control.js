@@ -1,6 +1,6 @@
 import './markers-control.css'
 
-const RIGHT_GAP = 90;
+const RIGHT_GAP = 0;
 const TOGGLE_W = 32;
 
 export class MarkersControl {
@@ -105,6 +105,7 @@ export class MarkersControl {
     // ---------------------------------------------------------------
     let openItems = null;
     let openLi = null;
+    let justFocusedLi = null;
 
     function positionOpenPopout() {
       if (!openItems || !openLi) return;
@@ -140,6 +141,11 @@ export class MarkersControl {
       closePopout();
       const items = li.querySelector('.markers-control-items');
       if (!items) return;
+
+      // popout is now owned by this li; any pending "just focused" click-swallow
+      // belongs to the previous li and must not leak onto this one.
+      if (justFocusedLi && justFocusedLi !== li) justFocusedLi = null;
+
       openLi = li;
       openItems = items;
       items.classList.add('open');
@@ -147,15 +153,19 @@ export class MarkersControl {
     }
 
     // ---------------------------------------------------------------
-    // Original focus / click logic
+    // Focus / click logic
     // ---------------------------------------------------------------
-    let justFocusedLi = null;
-
     collapsible.querySelectorAll('.markers-control > ul > li').forEach(li => {
       li.addEventListener('focus', e => {
         if (!li.contains(e.relatedTarget)) {
-          justFocusedLi = li;
+          // Was the popout already open for this li before the focus?
+          // If yes (hover-open case), a click that follows should toggle
+          // the group immediately — don't arm the swallow.
+          // If no (focus caused the open), swallow the click that follows
+          // the focus so it doesn't also toggle the group.
+          const wasOpen = openLi === li;
           openPopoutFor(li);
+          justFocusedLi = wasOpen ? null : li;
         }
       });
     });
@@ -192,6 +202,29 @@ export class MarkersControl {
       if (openLi.contains(e.target)) return;
       closePopout();
     }, true);
+
+    // ---------------------------------------------------------------
+    // Hover switching between groups when a popout is open
+    // ---------------------------------------------------------------
+    let hoverSwitchRaf = 0;
+
+    function scheduleHoverSwitch(li) {
+      cancelAnimationFrame(hoverSwitchRaf);
+      hoverSwitchRaf = requestAnimationFrame(() => {
+        if (!openLi) return;
+        if (openLi === li) return;
+        if (!li.querySelector('.markers-control-items')) return;
+        openPopoutFor(li);
+      });
+    }
+
+    collapsible.querySelectorAll('.markers-control > ul > li').forEach(li => {
+      li.addEventListener('pointerenter', (e) => {
+        if (e.pointerType && e.pointerType !== 'mouse') return;
+        if (!openLi) return;
+        scheduleHoverSwitch(li);
+      });
+    });
 
     // ---------------------------------------------------------------
     // Wheel + drag scrolling
@@ -328,6 +361,7 @@ export class MarkersControl {
       if (!document.body.contains(anchor)) {
         cancelAnimationFrame(anchorRafId);
         cancelAnimationFrame(resizeRafId);
+        cancelAnimationFrame(hoverSwitchRaf);
         closePopout();
         panelMO.disconnect();
         htmlRO.disconnect();
