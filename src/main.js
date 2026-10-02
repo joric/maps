@@ -22,6 +22,8 @@ let USE_LOCAL = import.meta.env.DEV;
 
 let allowImagesDefault = true;
 
+let allowLines = false;
+
 let submodulesBase = USE_LOCAL ? 'submodules/': '../submodules/';
 
 let slugs = [
@@ -770,9 +772,11 @@ function createGeometry(feature) {
   //marker.on('mouseover', e => { e.target.polygon && selectPolygon(e.target.polygon, true); })
   //marker.on('mouseout', e => { e.target.polygon && selectPolygon(e.target.polygon, false); })
 
-  marker.line = new maptalks.LineString([[x, y, z], [x, y, 0]], {
-    symbol: { lineColor: '#fff', lineWidth: 1.5 },
-  });
+  if (allowLines) {
+    marker.line = new maptalks.LineString([[x, y, z], [x, y, 0]], {
+      symbol: { lineColor: '#fff', lineWidth: 1.5 },
+    });
+  }
 
   if (o.radius>1) {
     marker.circle = new maptalks.Circle([x, y, -1.5], o.radius, {});
