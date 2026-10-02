@@ -80,7 +80,7 @@ let popup;
 let markersControl = null;
 let searchControl = null;
 
-let localDataName = `localData-${repoName}`;
+let localDataName = `localData-maps-${repoName}`;
 let localData = JSON.parse(localStorage.getItem(localDataName)) ?? {};
 let settings = {};
 
