@@ -8,6 +8,17 @@ export class MarkersControl {
     const translate = options?.translate || (s => s[0].toUpperCase()+s.slice(1));
     document.querySelector('.markers-anchor')?.remove();
 
+    // Toggle whether hovering a group opens its popout (when none is open),
+    // and whether mouse-leave auto-closes an open popout.
+    // When false: popouts only open via click/focus, and only close via
+    // click-away (or collapsing the panel).
+    let openOnHover = true;
+
+    // Toggle whether hovering another group switches an already-open popout
+    // to that group. Independent of openOnHover: works even when hover-open
+    // is disabled, as long as a popout is already open.
+    let switchOnHover = true;
+
     const groupOrder = Object.keys(options.groups||[]);
     const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true, sensitivity: 'base' });
     const cmpGroup = (a,b) => (groupOrder.indexOf(a[1]) - groupOrder.indexOf(b[1])) || cmpAlphaNum(a,b);
@@ -107,6 +118,28 @@ export class MarkersControl {
     let openLi = null;
     let justFocusedLi = null;
 
+    // Deferred-close timer so the cursor can travel from an li to its
+    // popout (which renders outside the collapsible's box).
+    let closeTimer = 0;
+
+    function cancelScheduledClose() {
+      if (closeTimer) {
+        clearTimeout(closeTimer);
+        closeTimer = 0;
+      }
+    }
+
+    function scheduleClosePopout() {
+      // When hover-open is disabled, the popout must not close from the
+      // mouse leaving; it only closes via click-away / collapse.
+      if (!openOnHover) return;
+      cancelScheduledClose();
+      closeTimer = setTimeout(() => {
+        closeTimer = 0;
+        closePopout();
+      }, 150);
+    }
+
     function positionOpenPopout() {
       if (!openItems || !openLi) return;
       const rect = openLi.getBoundingClientRect();
@@ -128,6 +161,7 @@ export class MarkersControl {
     }
 
     function closePopout() {
+      cancelScheduledClose();
       if (!openItems) return;
       openItems.classList.remove('open');
       openItems.style.left = '';
@@ -138,6 +172,7 @@ export class MarkersControl {
 
     function openPopoutFor(li) {
       if (openLi === li) return;
+      cancelScheduledClose();
       closePopout();
       const items = li.querySelector('.markers-control-items');
       if (!items) return;
@@ -204,16 +239,25 @@ export class MarkersControl {
     }, true);
 
     // ---------------------------------------------------------------
-    // Hover switching between groups when a popout is open
+    // Hover: open and switch popouts for mouse users
     // ---------------------------------------------------------------
+    // Two independent behaviors on hover:
+    //   openOnHover   — open a popout when none is open
+    //   switchOnHover — switch an already-open popout to the hovered group
     let hoverSwitchRaf = 0;
 
     function scheduleHoverSwitch(li) {
       cancelAnimationFrame(hoverSwitchRaf);
       hoverSwitchRaf = requestAnimationFrame(() => {
-        if (!openLi) return;
-        if (openLi === li) return;
         if (!li.querySelector('.markers-control-items')) return;
+        if (openLi === li) return;
+        if (openLi) {
+          // A popout is already open — only switch when allowed.
+          if (!switchOnHover) return;
+        } else {
+          // No popout open — only open when allowed.
+          if (!openOnHover) return;
+        }
         openPopoutFor(li);
       });
     }
@@ -221,10 +265,35 @@ export class MarkersControl {
     collapsible.querySelectorAll('.markers-control > ul > li').forEach(li => {
       li.addEventListener('pointerenter', (e) => {
         if (e.pointerType && e.pointerType !== 'mouse') return;
-        if (!openLi) return;
         scheduleHoverSwitch(li);
       });
     });
+
+    // ---------------------------------------------------------------
+    // Deferred close on leave (mouse only)
+    // ---------------------------------------------------------------
+    collapsible.addEventListener('pointerleave', (e) => {
+      if (e.pointerType && e.pointerType !== 'mouse') return;
+      // If the pointer moved into the popout, don't schedule a close.
+      if (openItems && e.relatedTarget && openItems.contains(e.relatedTarget)) return;
+      // If moving to another li in the same collapsible, let hover switch handle it.
+      if (openLi && e.relatedTarget && openLi.contains(e.relatedTarget)) return;
+      scheduleClosePopout();
+    });
+
+    // Re-entering the collapsible cancels a pending close.
+    collapsible.addEventListener('pointerenter', (e) => {
+      if (e.pointerType && e.pointerType !== 'mouse') return;
+      cancelScheduledClose();
+    });
+
+    // Hovering the popout itself keeps it open.
+    // Attached at document level (capture) since the popout lives outside
+    // the collapsible subtree and moves between li's.
+    document.addEventListener('pointerover', (e) => {
+      if (e.pointerType && e.pointerType !== 'mouse') return;
+      if (openItems && openItems.contains(e.target)) cancelScheduledClose();
+    }, true);
 
     // ---------------------------------------------------------------
     // Wheel + drag scrolling
@@ -362,6 +431,7 @@ export class MarkersControl {
         cancelAnimationFrame(anchorRafId);
         cancelAnimationFrame(resizeRafId);
         cancelAnimationFrame(hoverSwitchRaf);
+        cancelScheduledClose();
         closePopout();
         panelMO.disconnect();
         htmlRO.disconnect();
