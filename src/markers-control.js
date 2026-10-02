@@ -5,10 +5,13 @@ import { WrapperControl } from './controls.js';
 export class MarkersControl {
   constructor(counters, options) {
     const translate = options?.translate || (s => s[0].toUpperCase()+s.slice(1));
-    const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true, sensitivity: 'base' });
     document.querySelector('.markers-control')?.remove();
+
     const groupOrder = Object.keys(options.groups||[]);
-    let cmpGroup = (a,b) => groupOrder.indexOf(a[1]) - groupOrder.indexOf(b[1]);
+    const cmpAlphaNum = (a,b) => a[0].localeCompare(b[0], 'en', { numeric: true, sensitivity: 'base' });
+
+    let cmpGroup = (a,b) => (groupOrder.indexOf(a[1]) - groupOrder.indexOf(b[1])) || cmpAlphaNum(a,b);
+
     let themeClass = options?.theme ?? '';
     let icons = options.icons ?? {};
 

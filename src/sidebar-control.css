@@ -2,20 +2,17 @@
   display: flex;
   flex-direction: column;
   z-index: 9999;
-  position: fixed;          /* ← was relative */
+  position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;                  /* anchor left, use transform to hide */
+  left: 0;
   width: 290px;
   padding: 0;
   margin: 0;
-  
   padding-top: 8px;
-
   color: black;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: 4px 0 8px -2px rgba(0, 0, 0, 0.25);
   outline: none;
   border: none;

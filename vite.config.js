@@ -1,4 +1,21 @@
 import fs from 'fs';
+import importToCDN from 'vite-plugin-cdn-import'
+
+const FUSE_WORKER_CLASS_CDN =
+  'https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.5.0/fuse-worker.mjs';
+
+function fuseWorkerCdn() {
+  return {
+    name: 'fuse-worker-cdn',
+    enforce: 'pre',
+    resolveId(s) {
+      if (s === 'fuse.js/worker') {
+        return { id: FUSE_WORKER_CLASS_CDN, external: true };
+      }
+      return null;
+    },
+  };
+}
 
 function watchFiles(patterns) {
   return { name: 'watch-files', configureServer(s) {
@@ -39,7 +56,28 @@ function watchFiles(patterns) {
 export default {
   plugins: [
     watchFiles(['submodules/*/data/*.json', 'submodules/*/scripts/*.json']),
+
+    fuseWorkerCdn(),
+
+    importToCDN({
+      modules: [
+        {
+          name: 'maptalks-gl',
+          var: 'maptalks',
+          path: 'https://cdn.jsdelivr.net/npm/maptalks-gl@0.124.4/dist/maptalks-gl.min.js',
+          css: 'https://cdn.jsdelivr.net/npm/maptalks-gl@0.124.4/dist/maptalks-gl.css',
+        },
+        {
+          name: '@fortawesome/fontawesome-free/js/all.js',
+          var: 'FontAwesome',
+          path: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.min.js',
+          css: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css',
+        },
+      ],
+    }),
+
   ],
+
   server: {
     port: 3000,
     open: true,
@@ -58,5 +96,8 @@ export default {
     },
   },
   base: './',
-  optimizeDeps: { entries: ['index.html'] },
+  optimizeDeps: {
+    entries: ['index.html'],
+    exclude: ['fuse.js/worker'],
+  },
 };

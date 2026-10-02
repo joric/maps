@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
-    "fuse.js": "^7.4.2",
+    "fuse.js": "^7.5.0",
     "maptalks-gl": "^0.124.4"
   },
   "devDependencies": {

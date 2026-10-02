@@ -35,8 +35,22 @@ let slugs = [
   'windlands',
 ];
 
-let repoName = location.href.split('/').pop().split('#')[0];
-if (!repoName || repoName.endsWith('.html')) repoName = slugs[0];
+//let repoName = location.href.split('/').pop().split('#')[0];
+//const getMapURL = name => window.location.href.split('/').slice(0, -1).join('/') + '/' + name;
+
+const url = new URL(window.location.href);
+let repoName = url.searchParams.get('map');
+if (!slugs.includes(repoName)) repoName = slugs[0];
+
+const getMapURL = name => {
+  const url = new URL(window.location.href);
+  url.searchParams.set('map', name);
+  return url.href;
+};
+
+const switchMap = name => {
+  window.location.href = getMapURL(name);
+};
 
 let spriteIndex = 0;
 
@@ -66,11 +80,11 @@ let popup;
 let markersControl = null;
 let searchControl = null;
 
-let icons = {};
-
 let localDataName = `localData-${repoName}`;
-let localData = JSON.parse(localStorage.getItem(localDataName)) || {};
-let settings = localData;
+let localData = JSON.parse(localStorage.getItem(localDataName)) ?? {};
+let settings = {};
+
+let icons = {};
 let counters = {};
 
 window.setLanguage = function (cc) {
@@ -85,8 +99,6 @@ window.setallowImages = function (allowImages) {
   location.reload();
 }
 
-//console.log('using localData', localDataName);
-
 function saveSettings() {
   localStorage.setItem(localDataName, JSON.stringify(localData));
 }
@@ -97,8 +109,6 @@ function getTilesetBase(config) {
   if (tilesetBase=='') tilesetBase = submodulesBase + repoName +'/';
   return tilesetBase;
 }
-
-const getMapURL = name => window.location.href.split('/').slice(0, -1).join('/') + '/' + name;
 
 allowImages = settings.allowImages = settings.allowImages ?? allowImages;
 
@@ -112,7 +122,7 @@ function translate(s, section) {
   const k = markerTypes?.[section]?.[s]?.title;
   if (k) {
     const [p, e] = k.split('.');
-    const res = e ? lang[p]?.[e] : lang[k];
+    let res = e ? lang[p]?.[e] : lang[k];
     if (res) return res;
   }
 
@@ -131,13 +141,6 @@ function translate(s, section) {
   }
 
   return lang[s] || capitalize(s??'');
-}
-
-function call(cb, options) {
-  if (options?.benchmark) console.time(cb.name);
-  let result = cb(...(options?.params ?? []));
-  if (options?.benchmark) console.timeEnd(cb.name);
-  return result;
 }
 
 function getPolygon(feature) {
@@ -209,25 +212,7 @@ function assignTypes() {
   });
 }
 
-/*
-Browsers refuse new Worker('https://cdn.../worker.js') because a worker script has to be same-origin with your page.
-That's why the docs tell you to copy the file, but there's a clean workaround.
-
-FuseWorker accepts a workerUrl option that takes a string or URL, and a blob: URL counts as same-origin.
-So you can hand it a tiny blob whose only job is to import the real worker from the CDN
-
-const WORKER_CDN =
-  'https://cdn.jsdelivr.net/npm/fuse.js@7.6.0-beta.0/dist/fuse.worker.mjs'
-
-const workerUrl = URL.createObjectURL(
-  new Blob([`import ${JSON.stringify(WORKER_CDN)};`], { type: 'text/javascript' })
-)
-
-const fuse = new FuseWorker(docs, options, { workerUrl })
-*/
-
 function getFuse() {
-
   console.time('translating');
   let data = [];
   for (const i in allFeatures) {
@@ -256,7 +241,17 @@ function getFuse() {
     numWorkers: navigator.hardwareConcurrency || 4
   };
 
-  return new FuseWorker(data, options);
+  let opts = {};
+  let remoteWorker = true;//import.meta.env.DEV
+
+  if (remoteWorker) {
+    const WORKER_CDN = 'https://cdn.jsdelivr.net/npm/fuse.js@7.5.0/dist/fuse.worker.mjs';
+    opts.workerUrl = URL.createObjectURL(
+      new Blob([`import ${JSON.stringify(WORKER_CDN)};`], { type: 'text/javascript' })
+    );
+  }
+
+  return new FuseWorker(data, options, opts);
 }
 
 function renderItem(feature) {
@@ -403,19 +398,6 @@ function addMap() {
     //window.location.hash = `pointer=[${p.x.toFixed(0)},${p.y.toFixed(0)}]`;
   });
 
-
-  if (!settings.activeItems) {
-    settings.activeItems = {};
-    /*
-    // later: fill groups from config filter, if settings are new
-    if (config.filter) {
-      for (const group of config.filter) {
-        //settings.activeItems[group] = 
-      }
-    }
-    */
-  }
-
   if (settings.center && settings.zoom) {
     map.setView({
       center: settings.center,
@@ -452,9 +434,7 @@ function addMap() {
     title: config.name,
     items: Object.fromEntries(slugs.map(slug => [slug, { name: slug }])),
     html: html,
-    callback: name => {
-      window.location.href = getMapURL(name);
-    },
+    callback: switchMap,
   });
 
   searchControl = new SearchControl(null, {
@@ -506,7 +486,7 @@ function addMap() {
         }
 
       } else {
-        window.location.href = getMapURL(name);
+        switchMap(name);
       }
     }
   });
@@ -568,26 +548,42 @@ function addMap() {
     if (document.activeElement === document.querySelector('#search')) return;
     if (document.activeElement === document.querySelector('.search-input')) return;
     if (e.code == 'KeyR' && !e.ctrlKey) toggleView();
-    if (/^Digit[1-9]$/.test(e.code) && +e.code.slice(5) <= slugs.length) window.location.href = getMapURL(slugs[+e.code.slice(5)-1]);
+    if (/^Digit[1-9]$/.test(e.code) && +e.code.slice(5) <= slugs.length) switchMap(slugs[+e.code.slice(5)-1]);
   });
 }
 
 function indexMarkers() {
-  call(assignTypes, { benchmark: true });
-  call(addRegionMarkers, { benchmark: true });
-  call(nameRegions, { benchmark: true });
-  call(assignRegions, { benchmark: true });
+  assignTypes();
+  addRegionMarkers();
+  nameRegions();
+  assignRegions();
 
   const icons = {};
 
   for (const feature of allFeatures) {
     let t = feature._type;
+    if (t.hidden) continue;
     counters[t.group] = counters[t.group] || {};
     counters[t.group][t.category] = (counters[t.group][t.category] || 0) + 1;
     icons[t.category] = iconData[t.icon];
   }
 
   markersControl = new MarkersControl(counters, {icons: icons, groups:markerTypes?.groups??{}, groupCallback: toggleGroup, itemCallback: toggleItem, translate: translate, theme: 'retro' });
+
+  if (!settings.activeItems) {
+    settings.activeItems = {};
+
+    Object.entries(markerTypes.groups ?? {})
+      .filter(([group, value]) => value.default)
+      .flatMap(([group]) => Object.keys(counters[group] ?? {}))
+      .forEach(name => settings.activeItems[name] = true);
+
+    Object.entries(markerTypes.categories ?? {})
+      .filter(([name, value]) => value.default)
+      .forEach(([name, value]) => settings.activeItems[name] = true);
+  }
+
+  saveSettings();
 
   updateControls(); // update pill headers (required, later move to control)
 
@@ -653,6 +649,8 @@ function getKey(feature) {
 function currentFilter(feature) {
   let key = getKey(feature);
   let t = feature._type;
+
+  if (t.hidden) return false;
 
   if (searchString === '') {
     let visible = settings.activeItems[t.category] === true;
@@ -1019,43 +1017,15 @@ function loadMarkers() {
 
 function addTypes() {
   let world = Object.values(config.worlds)[0];
-
-  let typesFile = baseDir + (world.markers?.[0]?.types ?? 'data/types.json');
-  let iconsFile = baseDir + (world.markers?.[0]?.icons ?? 'data/icons.json');
-
-  // new!
-  let markerTypesFile = baseDir + (world.markers?.[0]?.types ?? 'data/markerTypes.json');
-
-  console.log(`loading "${typesFile}"...`);
-  console.log(`loading "${iconsFile}"...`);
-
-  let promises = [
-    typesFile,
-    iconsFile,
-    markerTypesFile,
-  ].map(url =>
-    fetch(url)
-      .then(r => r.json())
-      .catch(err => {
-        console.error(`Failed to fetch/parse ${url}:`, err);
-        return {};
-      })
-  );
-
-  Promise.all(promises).then(data => {
-
-    let markerTypesNew = {};
-
-    [markerTypes, iconData, markerTypesNew] = data;
-
-    markerTypes = Object.keys(markerTypesNew).length ? markerTypesNew : markerTypes;
-
+  let url = baseDir + (world.markers?.[0]?.types ?? 'data/markerTypes.json');
+  console.log(`loading "${url}"...`);
+  fetch(url).then(r=>r.json()).catch(err=>{console.error(`Failed to fetch/parse "${url}":`, err);return {}})
+  .then(data=>{
+    markerTypes = data;
     if (markerTypes.icons) iconData = markerTypes.icons;
-
-    for (const[key,value] of Object.entries(markerTypes?.localization?.[settings.language] ?? [])){
+    for (const[key,value] of Object.entries(markerTypes.localization?.[settings.language] ?? [])){
       lang[key] = value;
     }
-
     addRegions();
   });
 }
@@ -1070,6 +1040,10 @@ function parseConfig(data) {
   if (config && config.name) {
     document.title += ` - ${config.name}`;
   }
+
+  settings = localData;
+
+  settings.language = settings.language ?? 'en';
 
   addMap();
 

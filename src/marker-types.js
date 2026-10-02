@@ -46,7 +46,6 @@ export function getType (o, typeData) {
 
     for (const [field, exactMap] of Object.entries(node.match || {})) {
       const value = o[field];
-      if (!value) continue;
 
       // 1) exact match
       const ex = exactMap[value];
