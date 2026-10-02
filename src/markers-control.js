@@ -1,7 +1,5 @@
 import './markers-control.css'
 
-import { WrapperControl } from './controls.js';
-
 const RIGHT_GAP = 90;
 const TOGGLE_W = 32;
 
@@ -66,8 +64,6 @@ export class MarkersControl {
     let naturalWidth = 0;
 
     function measureAll() {
-      // Read the ANCHOR's left edge, which has width 0 and cannot be
-      // affected by the panel's width. This is the row's left edge.
       const aLeft = anchor.getBoundingClientRect().left;
       const vw = document.documentElement.clientWidth;
       const rowMax = Math.max(0, vw - aLeft - RIGHT_GAP);
@@ -267,7 +263,7 @@ export class MarkersControl {
     });
 
     // ---------------------------------------------------------------
-    // Re-measurement
+    // Re-measurement — every viewport/container change signal
     // ---------------------------------------------------------------
     let resizeRafId = 0;
     const onResize = () => {
@@ -284,16 +280,50 @@ export class MarkersControl {
 
     const htmlRO = new ResizeObserver(onResize);
     htmlRO.observe(document.documentElement);
+    htmlRO.observe(anchor);
 
-    window.addEventListener('scroll', () => measureAll(), true);
+    window.addEventListener('scroll', onResize, true);
 
     const panelMO = new MutationObserver(onResize);
     panelMO.observe(panel, { childList: true, subtree: true, characterData: true });
 
     if (document.fonts?.ready) document.fonts.ready.then(measureAll);
 
+    // ---------------------------------------------------------------
+    // Anchor position watcher
+    // ---------------------------------------------------------------
+    // measureAll() writes only CSS custom properties that cannot affect
+    // the anchor's position (anchor is position: relative, collapsible
+    // is position: absolute relative to it). So this rAF loop cannot
+    // feed back into layout.
+    let lastAnchorLeft = null;
+    let lastAnchorTop = null;
+    let anchorRafId = null;
+
+    function watchAnchorPosition() {
+      const r = anchor.getBoundingClientRect();
+      if (r.left !== lastAnchorLeft || r.top !== lastAnchorTop) {
+        lastAnchorLeft = r.left;
+        lastAnchorTop = r.top;
+        measureAll();
+      }
+      anchorRafId = requestAnimationFrame(watchAnchorPosition);
+    }
+
+    {
+      const r = anchor.getBoundingClientRect();
+      lastAnchorLeft = r.left;
+      lastAnchorTop = r.top;
+    }
+    anchorRafId = requestAnimationFrame(watchAnchorPosition);
+
+    // ---------------------------------------------------------------
+    // Cleanup
+    // ---------------------------------------------------------------
     const cleanupObserver = new MutationObserver(() => {
       if (!document.body.contains(anchor)) {
+        cancelAnimationFrame(anchorRafId);
+        cancelAnimationFrame(resizeRafId);
         closePopout();
         panelMO.disconnect();
         htmlRO.disconnect();

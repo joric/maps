@@ -7,8 +7,6 @@
   display: flex;
   align-items: flex-start;
   gap: 6px;
-  margin-top: 5px;
-  margin-left: 4px;
 
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -17,6 +15,11 @@
   -ms-overflow-style: none;
   cursor: grab;
   max-width: 100%;
+
+  margin-top: 4px;
+
+  padding-left: 0px;
+  padding-right: 6px;
 }
 
 .markers-control::-webkit-scrollbar { display: none; }
@@ -132,6 +135,8 @@
   overflow: hidden;
   max-width: var(--row-max, 100vw);
   min-width: 0;
+
+  left: -3px;
 }
 
 .markers-collapsible-inner {
