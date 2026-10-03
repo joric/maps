@@ -1099,7 +1099,7 @@ function parseConfig(data) {
           "en": "Search...",
           "de": "Suchen...",
           "es": "Buscar...",
-          "fr": "Сhercher...",
+          "fr": "Chercher...",
           "it": "Cerca...",
           "ja": "検索...",
           "ko": "검색...",
