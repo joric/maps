@@ -1103,7 +1103,7 @@ function parseConfig(data) {
           "it": "Cerca...",
           "ja": "検索...",
           "ko": "검색...",
-          "pt": "Pesquisar...",
+          "pt": "Buscar...",
           "ru": "Искать...",
           "uk": "Шукати...",
           "zh": "搜索..."
