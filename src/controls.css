@@ -10,7 +10,7 @@
 }
 
 .controls-top-left {
-  top: -8px;
+  top: -10px;
   left: -8px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 
-@media (max-width: 468px) {
+@media (max-width: 666px) {
   .controls-placeholder {
     flex-direction: column;
     gap: 0px;

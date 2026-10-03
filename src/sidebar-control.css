@@ -20,6 +20,20 @@
   transition: transform 0.3s ease;
 }
 
+.sidebar-control h1 {
+  font-size: 24px;
+}
+
+.sidebar-control * {
+  font-size: 18px;
+}
+
+.sidebar-control input {
+  transform: scale(1.5);
+  cursor: pointer;
+  margin: 0 6px 0 0;
+}
+
 .sidebar-control:focus,
 .sidebar-control:focus-within {
   transform: translateX(0);

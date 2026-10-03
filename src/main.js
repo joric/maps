@@ -18,13 +18,17 @@ import * as utils from './utils.js';
 import { getType } from './marker-types.js';
 import { getIcon } from './marker-icons.js';
 
-let USE_LOCAL = import.meta.env.DEV;
+const RUNNING_MODE = window.location.protocol === 'file:'  ? 'file' : ( import.meta.env.DEV  ? 'dev' : 'prod' );
 
-let allowImagesDefault = true;
+console.log('RUNNING_MODE', RUNNING_MODE);
+
+let submodulesBase = RUNNING_MODE === 'file' ? '../submodules/' : ( RUNNING_MODE === 'dev'  ? 'submodules/' : 'https://joric.github.io/' );
+
+console.log('submodulesBase', submodulesBase);
+
+let customImagesDefault = true;
 
 let allowLines = false;
-
-let submodulesBase = USE_LOCAL ? 'submodules/': '../submodules/';
 
 let slugs = [
   'stalker',
@@ -95,8 +99,8 @@ window.setLanguage = function (cc) {
   location.reload();
 }
 
-window.setallowImages = function (allow) {
-  settings.allowImages = allow ? true : false;
+window.setcustomImages = function (allow) {
+  settings.customImages = allow ? true : false;
   saveSettings();
   location.reload();
 }
@@ -105,11 +109,11 @@ function saveSettings() {
   localStorage.setItem(localDataName, JSON.stringify(localData));
 }
 
-function getTilesetBase(config) {
-  let tilesetBase = config.tilesetBase || '';
-  if (USE_LOCAL) tilesetBase = tilesetBase.replace('https://joric.github.io/', submodulesBase);
-  if (tilesetBase=='') tilesetBase = submodulesBase + repoName +'/';
-  return tilesetBase;
+function getTilesetURL(config, section) {
+  let url = section.urlTemplate ||'';
+  if (!url.startsWith('http')) url = submodulesBase + repoName +'/' + url;
+  url = url.replace('https://joric.github.io/', submodulesBase);
+  return url;
 }
 
 const capitalize = s => (s && s.length>0) ? s[0].toUpperCase()+s.slice(1) : '';
@@ -360,7 +364,7 @@ function addMap() {
     };
 
     let baseLayer = new maptalks.TileLayer(section.name||'default', {
-      urlTemplate: getTilesetBase(config) + section.urlTemplate,
+      urlTemplate: getTilesetURL(config, section),
       maxAvailableZoom: section.maxAvailableZoom || 4,
       tileSize: section.tileSize || tileSize,
       repeatWorld: false,
@@ -433,7 +437,7 @@ function addMap() {
   }
 
   html += `
-    <br><br><label>allowImages: <input type=checkbox name=allowImages onchange="setallowImages(this.checked)" ${settings.allowImages ? 'checked':''}/></label>
+    <br><br><label><input type=checkbox name=customImages onchange="setcustomImages(this.checked)" ${settings.customImages ? 'checked':''}/> customImages</label>
   `;
 
   const sidebarControl = new SidebarControl(null, {
@@ -444,7 +448,8 @@ function addMap() {
   });
 
   searchControl = new SearchControl(null, {
-    placeholder: config.name,
+    //placeholder: config.name,
+    placeholder: translate('search...'),
     settings: settings,
     menuCallback: sidebarControl.open,
     searchCallback: query => fuzzySearch(query),
@@ -466,9 +471,12 @@ function addMap() {
 
   let items = {};
 
-  for (const item of sections) {
-    let image =  getTilesetBase(config) + (item.urlTemplate ? item.urlTemplate.replace(/\{[xyz]\}/g, '0') : item.url||'');
-    items[item.name] = {image: image};
+  for (const section of sections) {
+    let url = getTilesetURL(config, section);
+
+    let image =  url.replace(/\{[xyz]\}/g, '0');
+
+    items[section.name] = {image: image};
   }
 
   items = {...items};
@@ -573,6 +581,8 @@ function indexMarkers() {
     counters[t.group][t.category] = (counters[t.group][t.category] || 0) + 1;
     icons[t.category] = iconData[t.icon];
   }
+
+  //menuControl = new MenuControl(null,{});
 
   markersControl = new MarkersControl(counters, {icons: icons, groups:markerTypes?.groups??{}, groupCallback: toggleGroup, itemCallback: toggleItem, translate: translate, theme: 'retro' });
 
@@ -696,7 +706,7 @@ function reverseMapping(p) {
 }
 
 function getSymbol(o, t) {
-  let icon = getIcon(t, iconData, {baseDir: baseDir, spriteIndex: spriteIndex, allowImages: settings.allowImages});
+  let icon = getIcon(t, iconData, {baseDir: baseDir, spriteIndex: spriteIndex, customImages: settings.customImages});
 
   var symbol = {
     markerFile   : icon.image,
@@ -1024,6 +1034,8 @@ function loadMarkers() {
 }
 
 function addTypes() {
+  addMap();
+
   let world = Object.values(config.worlds)[0];
   let url = baseDir + (world.markers?.[0]?.types ?? 'data/markerTypes.json');
   console.log(`loading "${url}"...`);
@@ -1051,10 +1063,8 @@ function parseConfig(data) {
 
   settings = localData;
 
-  settings.allowImages = settings.allowImages ?? allowImagesDefault;
+  settings.customImages = settings.customImages ?? customImagesDefault;
   settings.language = settings.language ?? 'en';
-
-  addMap();
 
   if (config.localization) {
     let c = config.localization;
@@ -1082,6 +1092,19 @@ function parseConfig(data) {
           "ru": "Разное",
           "uk": "Різне",
           "zh": "其他"
+        },
+        "search...": {
+          "en": "Search...",
+          "de": "Suchen...",
+          "es": "Buscar...",
+          "fr": "Rechercher...",
+          "it": "Cerca...",
+          "ja": "検索...",
+          "ko": "검색...",
+          "pt": "Pesquisar...",
+          "ru": "Поиск...",
+          "uk": "Пошук...",
+          "zh": "搜索..."
         }
       };
 
@@ -1091,7 +1114,6 @@ function parseConfig(data) {
           lang [ key ] = entry;
         }
       }
-
       addTypes();
     })
 

@@ -65,10 +65,12 @@
   cursor: pointer;
   transition: var(--transition);
 
-  color: white;
+  color: transparent;
   text-shadow: 1px 1px 4px black;
 
   font-size: 16px;
+
+  overflow-wrap: anywhere;
 
   display: flex;
   justify-content: center;
@@ -86,6 +88,8 @@
   height: var(--fsize);
   background-size: var(--fsize);
   border-radius: calc(var(--fr) * 0.95);
+
+  color: white;
 }
 
 .layers-prev,

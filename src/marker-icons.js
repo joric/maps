@@ -10,7 +10,7 @@ let iconImages = {};
 
 export function getIcon(t, iconData, options) {
   const defaultData = {class: 'fa-circle-question'};
-  const defaultOptions = { bGetCategoryIcon: false, spriteIndex: 0, baseDir: '', allowImages: true, imageDir: 'images/sprites/'};
+  const defaultOptions = { bGetCategoryIcon: false, spriteIndex: 0, baseDir: '', customImages: true, imageDir: 'images/sprites/'};
 
   options = {...defaultOptions, ...(options||{})};
 
@@ -19,7 +19,7 @@ export function getIcon(t, iconData, options) {
   const color = t.color || d.color || d.fg || 'grey';
   const bgColor = d.background || d.bg || 'white';
   const className = d.class || (d.fa ? ('fa fa-'+ (v.fa||'circle-question')) : defaultData.class );
-  const bUseImage = options.allowImages && (d.sprites || d.image);
+  const bUseImage = options.customImages && (d.sprites || d.image);
 
   let key = bUseImage ? icon : `${icon}-${color}-${bgColor}`;
 

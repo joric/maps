@@ -206,7 +206,7 @@
 
 .markers-collapsible.collapsed .markers-toggle::after {
   content: ">";
-  padding-right: -1px;
+  padding-left: 1px;
 }
 
 .markers-collapsible.expanded .markers-toggle::after {

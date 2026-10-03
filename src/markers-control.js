@@ -12,7 +12,7 @@ export class MarkersControl {
     // and whether mouse-leave auto-closes an open popout.
     // When false: popouts only open via click/focus, and only close via
     // click-away (or collapsing the panel).
-    let openOnHover = false;
+    let openOnHover = true;
 
     // Toggle whether hovering another group switches an already-open popout
     // to that group. Independent of openOnHover: works even when hover-open

@@ -37,8 +37,9 @@ export class LayersControl {
       //let bgStyle = `background-image: url("${image}");`;
       let style = bgStyle;
       
-      let title = item.title || '';
-      //let title='';
+      let title = item.title || name;
+
+      title = '';
 
       html += `<li tabindex=-1 data-name="${name}" style='${style}' title="${item.title||name}">${title}</li>`;
     }
