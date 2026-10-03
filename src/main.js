@@ -27,8 +27,8 @@ let submodulesBase = RUNNING_MODE === 'file' ? '../submodules/' : ( RUNNING_MODE
 console.log('submodulesBase', submodulesBase);
 
 let customImagesDefault = true;
-
 let allowLines = false;
+let extentOnSearch = false;
 
 let slugs = [
   'stalker',
@@ -251,11 +251,12 @@ function getFuse() {
     numWorkers: navigator.hardwareConcurrency || 4
   };
 
-  let opts = {};
-  let remoteWorker = true;//import.meta.env.DEV
+  const WORKER_CDN = __FUSE_WORKER_CDN__;
+  const remoteWorker = !import.meta.env.DEV;
 
+  const opts = {};
   if (remoteWorker) {
-    const WORKER_CDN = 'https://cdn.jsdelivr.net/npm/fuse.js@7.5.0/dist/fuse.worker.mjs';
+    console.log('adding fuse worker from', WORKER_CDN);
     opts.workerUrl = URL.createObjectURL(
       new Blob([`import ${JSON.stringify(WORKER_CDN)};`], { type: 'text/javascript' })
     );
@@ -631,6 +632,7 @@ async function fuzzySearch(s, limit=1024) {
   result.sort( (a,b)=> a.score - b.score || cmpAlphaNum2(a.item.properties.name||'', b.item.properties.name||'') ) ;
 
   let extent = null;
+
   for (const r of result) {
     let key = getKey(r.item);
     filterData = extent ? filterData : {}
@@ -640,7 +642,7 @@ async function fuzzySearch(s, limit=1024) {
     extent = extent ? extent.combine(c) : new maptalks.Extent(c, c);
   }
 
-  if (extent) {
+  if (extent && extentOnSearch) {
     map.setMaxZoom(5);
     map.fitExtent(extent, -0.2);
     map.setMaxZoom(maxZoom);
