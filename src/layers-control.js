@@ -39,9 +39,11 @@ export class LayersControl {
       
       let title = item.title || name;
 
-      title = '';
+      //title = '';
 
-      html += `<li tabindex=-1 data-name="${name}" style='${style}' title="${item.title||name}">${title}</li>`;
+      //title = item.maxAvailableZoom;
+
+      html += `<li tabindex=-1 data-name="${name}" style='${style}' title="${name}">${title}</li>`;
     }
 
     ul.innerHTML = html;

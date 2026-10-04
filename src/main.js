@@ -34,6 +34,7 @@ let slugs = [
   'stalker',
   'folon',
   'subnautica',
+  'supraland',
   'supraworld',
   'fuszerka',
   'ootss',
@@ -80,6 +81,12 @@ let baseDir = '';
 
 let markerTypes = {};
 let iconData = {};
+let markerData = {};
+
+// cell-specific (creation engine, folon)
+let cell_doors = {};
+let exits = {};
+
 let lang = {};
 let popup;
 
@@ -197,6 +204,63 @@ function nameRegions() {
     }
   });
 }
+
+function calculateCells() {
+  console.time('calculateCells');
+
+  const ref_lookup = {};
+
+  // fill lookup tables
+  for (const feature of allFeatures) {
+    const o = feature.properties;
+    ref_lookup[o.ref_id] = feature;
+    if (o.cell && o.other_door) {
+      cell_doors[o.cell] = (cell_doors[o.cell]||[]);
+      cell_doors[o.cell].push(feature);
+    }
+  }
+
+  function find_path(cell_id) {
+    const visited = new Set();
+    const queue = [[cell_id, []]];
+
+    while (queue.length > 0) {
+      const [current_cell_id, path] = queue.shift();
+      if (visited.has(current_cell_id)) continue;
+      visited.add(current_cell_id);
+      for (const door of cell_doors[current_cell_id]||[]) {
+        const next_door = ref_lookup[door.properties.other_door];
+        if (next_door.properties.area) return [...path, door, next_door];
+        queue.push([next_door.properties.cell, [...path, door]]);
+      }
+    }
+
+  }
+
+  const visited = new Set();
+  function find_path_rec(cell_id, clear = true) {
+    if (clear) visited.clear();
+    if (visited.has(cell_id)) return null;
+    visited.add(cell_id);
+    let doors = cell_doors[cell_id];
+
+    for (const door of doors||[]) {
+      const next_door = ref_lookup[door.properties.other_door];
+      if (!next_door || !next_door.properties) return null;
+      if (next_door.properties.area) return [door, next_door]; // Return the path
+      const result = find_path_rec(next_door.properties.cell, false);
+      if (result) return [door, ...result]; // Append current door to the path
+    }
+  }
+
+  for (const cell_id of Object.keys(cell_doors)) {
+    exits[cell_id] = find_path_rec(cell_id);
+  }
+
+  console.timeEnd('calculateCells');
+}
+
+
 
 function assignRegions() {
   console.time('assignRegions');
@@ -345,7 +409,7 @@ function addMap() {
 
   let baseLayers = {};
 
-  let baseLayerName = '';
+  let baseLayerName = settings.baseLayerName || '';
 
   // pre-create all base layers
   for (const section of sections) {
@@ -477,7 +541,9 @@ function addMap() {
 
     let image =  url.replace(/\{[xyz]\}/g, '0');
 
-    items[section.name] = {image: image};
+    let d = Math.pow(2, section.maxAvailableZoom + 9);
+
+    items[section.name] = {image: image, title: `${d} x ${d}` };
   }
 
   items = {...items};
@@ -485,22 +551,18 @@ function addMap() {
   const layersControl = new LayersControl(null, {
     items: items,
     callback: name=> {
-      //console.log(name, 'clicked');
-
       if (baseLayers[name]) {
-
-        //map.setBaseLayer(baseLayers[name]);
-
+        settings.baseLayerName = name;
+        saveSettings();
         let layer = baseLayers[name];
         layer.show();
-
         for (const [layerName, layer] of Object.entries(baseLayers)) {
           if (name!=layerName) {
             layer.hide();
           }
         }
-
       } else {
+        // unused for now
         switchMap(name);
       }
     }
@@ -572,6 +634,7 @@ function indexMarkers() {
   addRegionMarkers();
   nameRegions();
   assignRegions();
+  calculateCells();
 
   const icons = {};
 
@@ -742,10 +805,76 @@ function getSymbol(o, t) {
   return symbol;
 }
 
+function rotate2d( x,y, angle, cx, cy ) {
+  x = x - cx;
+  y = y - cy;
+  let tx = x * Math.cos(angle) - y * Math.sin(angle);
+  let ty = x * Math.sin(angle) + y * Math.cos(angle);
+  x = tx + cx;
+  y = ty + cy;
+  return [x,y];
+}
+
+function itemArea(o) {
+  if (o.area) return o.area;
+  let path = exits[o.cell];
+  if (path && path.length>0) {
+    return path[path.length-1].properties.area;
+  }
+}
+
 function createGeometry(feature) {
   const o = feature.properties;
 
-  const [x, y, z] = applyMapping(feature.geometry.coordinates);
+  let [x, y, z] = applyMapping(feature.geometry.coordinates);
+
+  let area = itemArea(o);
+
+  if (o.cell) {
+    let path = exits[o.cell];
+    if (path && path.length>0) {
+      o._doors = path.reduce((a,f) => ({ ...a, [f.properties.ref_id]:f.properties.area||f.properties.cell_name||f.properties.cell}), {});
+
+      // just take two last doors and smoosh them together
+
+      let door = path[0];
+
+      let [dx,dy,dz] = door.geometry.coordinates;
+      x = x - dx;
+      y = y - dy;
+      z = z - dz;
+
+      door = path[path.length-1];
+      [dx,dy,dz] = door.geometry.coordinates;
+
+      [x,y] = rotate2d(x,y, door.properties.rotation[2]*Math.PI/180, 0,0);
+
+      x = x + dx;
+      y = y + dy;
+      z = z + dz;
+    }
+  }
+
+  // apply worldspaces from marker data (folon)
+  const w = markerData.worldspaces?.[area];
+  if (w) {
+    let t = {scale: w.scale, offset:{x: w.offset[0],  y: w.offset[1], z: w.offset[2]}};
+    x = x * t.scale + t.offset.x;
+    y = y * t.scale + t.offset.y;
+  }
+
+  // apply areas, if config has areas (folon)
+  const world = Object.values(config.worlds)[0]; // assume default world (0)
+  const a = world.areas?.[area];
+  if (a) {
+    let t = a;
+    x = x * t.scale + t.offset.x;
+    y = y * t.scale + t.offset.y;
+    if (t.rotation) {
+      [x,y] = rotate2d(x,y, t.rotation, t.offset.x, t.offset.y);
+    }
+  }
+
 
   let t = feature._type;
 
@@ -837,10 +966,12 @@ function scheduleUpdate() {
       if (!marker) {
         if (vis) {
           const m = createGeometry(feature);
-          newMarkers.push(m);
-          if (m.lines) newLines.push(m.line);
-          if (m.circle) newCircles.push(m.circle);
-          //console.log('created new marker');
+          if (m) {
+            newMarkers.push(m);
+            if (m.lines) newLines.push(m.line);
+            if (m.circle) newCircles.push(m.circle);
+            //console.log('created new marker');
+          }
         }
 
         // !vis && !marker: nothing to do, stays uncreated
@@ -882,7 +1013,6 @@ function updateControls() {
 }
 
 function toggleGroup(group) {
-  resetSearch();
   let counter = 0;
   let total = 0;
 
@@ -909,7 +1039,6 @@ function toggleGroup(group) {
 }
 
 function toggleItem(name) {
-  resetSearch();
   settings.activeItems[name] = !settings.activeItems[name];
   filterData = {};
   updateItems();
@@ -1002,6 +1131,37 @@ function addRegions() {
   })
 }
 
+function loadMarkersData(data, format) {
+
+  if (format == 'simple') {
+    let features = [];
+
+    for(const p of data) {
+
+      let feature = {
+        type: 'feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [p.lng, p.lat, p.alt]
+        },
+        properties: p,
+      };
+
+      features.push(feature);
+    }
+
+    data = { type: 'FeatureCollection', features: features };
+  }
+
+  markerData = data;
+  allFeatures = data.features;
+
+  console.timeEnd('loadMarkers');
+  console.log('loaded', allFeatures.length,'markers');
+  indexMarkers();
+  scheduleUpdate();
+}
+
 function loadMarkers() {
 
   console.time('loadMarkers');
@@ -1010,28 +1170,23 @@ function loadMarkers() {
 
   let world = Object.values(config.worlds)[0];
 
+  let format = 'geojson';
+
   if (world.markers && world.markers.url) {
     markersFile = baseDir + world.markers.url;
+    format = world.markers.format ?? format;
   }
 
   console.log(`loading "${markersFile}"...`);
 
-  function loadGeojson(geojson) {
-    allFeatures = geojson.features;
-    console.timeEnd('loadMarkers');
-    console.log('loaded', allFeatures.length,'markers');
-    indexMarkers();
-    scheduleUpdate();
-  }
-
   fetch(markersFile)
     .then(response => response.json())
-    .then(geojson => {
-      loadGeojson(geojson);
+    .then(data => {
+      loadMarkersData(data, format);
     })
     .catch(e => {
       console.log('error reading', markersFile, e);
-      loadGeojson({features: []});
+      loadMarkersData({}, format);
     })
 }
 
@@ -1054,7 +1209,7 @@ function addTypes() {
 
 function parseConfig(data) {
   let games = Object.keys(data);
-  let game = games[0];
+  let game = games[0]; // later add switchable games 
 
   config = data[game];
 

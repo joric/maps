@@ -173,7 +173,7 @@
   max-width: 100%;
 }
 
-/* ----- round toggle button ----- */
+
 .markers-toggle {
   width: 31px;
   height: 31px;
@@ -213,3 +213,35 @@
   content: "<";
   padding-right: 1px;
 }
+
+
+/*
+.markers-toggle {
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 40px;
+  color: black;
+  border: none;
+  outline: none;
+  transition: background 0.2s, transform 0.1s;
+  user-select: none;
+  flex-shrink: 0;
+  margin-top: 6px;
+  line-height: 1;
+  padding-bottom: 3px;
+  position: static;
+  z-index: 10;
+  margin-left: -8px;
+  background: transparent;
+}
+
+
+.markers-collapsible .markers-toggle::after {
+  content: "\0022EE"
+}
+*/
