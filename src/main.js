@@ -18,6 +18,9 @@ import * as utils from './utils.js';
 import { getType } from './marker-types.js';
 import { getIcon } from './marker-icons.js';
 
+
+import * as unity from './unity-reader.js';
+
 const RUNNING_MODE = window.location.protocol === 'file:'  ? 'file' : ( import.meta.env.DEV  ? 'dev' : 'prod' );
 
 console.log('RUNNING_MODE', RUNNING_MODE);
@@ -556,11 +559,16 @@ function addMap() {
         saveSettings();
         let layer = baseLayers[name];
         layer.show();
+
+        //  add all worlds maybe
+
         for (const [layerName, layer] of Object.entries(baseLayers)) {
           if (name!=layerName) {
             layer.hide();
           }
         }
+
+
       } else {
         // unused for now
         switchMap(name);
@@ -1131,7 +1139,7 @@ function addRegions() {
   })
 }
 
-function loadMarkersData(data, format) {
+function loadMarkersData(data, format = 'geojson') {
 
   if (format == 'simple') {
     let features = [];
@@ -1151,6 +1159,16 @@ function loadMarkersData(data, format) {
     }
 
     data = { type: 'FeatureCollection', features: features };
+
+  } else if (format == 'unity') {
+
+    let features = unity.markerLoader(data);
+    data = { features: features };
+
+  } else if (format != 'geojson') {
+
+    data = { features:[] };
+
   }
 
   markerData = data;

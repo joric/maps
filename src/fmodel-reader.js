@@ -383,7 +383,7 @@ function parseLargeJSONArray(buffer) {
 
 ////////////////////////////////////////////////////////////////////////
 
-if (typeof require !== 'undefined' && require.main === module) {
+if (typeof process !== 'undefined' && import.meta.url === `file:///${process.argv[1]}`.replaceAll('\\','/')) {
   const fs = require('fs');
   const zlib = require('zlib');
   const vm = require('vm');
