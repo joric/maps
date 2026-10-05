@@ -102,6 +102,9 @@ let settings = {};
 
 let icons = {};
 let counters = {};
+let cachedTitles = {};
+
+let currentWorld = null;
 
 window.setLanguage = function (cc) {
   settings.language = cc;
@@ -138,6 +141,13 @@ function translate(s, section) {
     const [p, e] = k.split('.');
     let res = e ? lang[p]?.[e] : lang[k];
     if (res) return res;
+  }
+
+  if (section == 'categories') {
+    let ct = cachedTitles[s];
+    if (ct) {
+      return ct;
+    }
   }
 
   let templates_fn = [
@@ -340,11 +350,17 @@ function renderItem(feature) {
   if (t.category) subtitle += ' / ' + translate(t.category, 'categories');
   if (t.item) subtitle += ' / ' + translate(t.item);
   let location = translate(t.region || o.area || o.cell || o.type);
+
+  if (o.cell) {
+    location = markerData.cells?.[o.cell]; // folon
+  }
+
   return {title: `${title} (${subtitle})`, location: location};
 }
 
 const openTooltip = (marker, tooltip) => {
-  tooltip._content = renderItem(marker.feature).title;
+  let info = renderItem(marker.feature);
+  tooltip._content = `${info.title}`;
 }
 
 const openPopup = (marker, forced) => {
@@ -395,12 +411,56 @@ const openPopup = (marker, forced) => {
   //document.querySelector('.popup-text')?.addEventListener('contextmenu', function(e) { e.stopPropagation()}, true);
 }
 
+function setBaseLayer(name, baseLayers) {
+  let sections = Object.values(config.worlds)[0].baseLayers;
+
+  settings.baseLayerName = name;
+  saveSettings();
+
+  let mapSize = config.size;
+  let tileSize = 512;
+  let center = { left: mapSize/2, top: mapSize/2 };
+  let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
+
+  for (const section of sections) {
+    let visible = name == section.name;
+
+    if (visible) {
+
+      if (section.bounds) {
+        bounds = section.bounds;
+        mapSize = bounds.right - bounds.left;
+      }
+
+      let spatialReference = {
+        projection: 'identity',
+        fullExtent: bounds,
+        resolutions: Array.from({ length: maxZoom + 1 }, (_, i) => mapSize / tileSize / (1 << i)),
+      };
+
+      map.config('spatialReference', spatialReference );
+
+    }
+  }
+
+  let layer = baseLayers[name];
+
+  layer.show();
+
+  for (const [layerName, layer] of Object.entries(baseLayers)) {
+    if (name != layerName) {
+      layer.hide();
+    }
+  }
+}
+
 function addMap() {
   const initialSearch = 'Dnipro';
 
   let searchText = initialSearch.toLowerCase();
 
   let mapSize = config.size;
+
   let tileSize = 512;
 
   //let center = { left: mapSize/2, top: mapSize/2 };
@@ -413,6 +473,9 @@ function addMap() {
   let baseLayers = {};
 
   let baseLayerName = settings.baseLayerName || '';
+
+  let b0 = {};
+  let c0 = {};
 
   // pre-create all base layers
   for (const section of sections) {
@@ -431,12 +494,21 @@ function addMap() {
       top: bounds.top + (bounds.bottom-bounds.top)/2,
     };
 
+    if (visible) {
+      b0 = bounds;
+      c0 = center;
+      mapSize = bounds.right - bounds.left;
+    }
+
+    let k = (bounds.bottom - bounds.top) / (bounds.right-bounds.left);
+    if (k<0) k = -k;
+
     let baseLayer = new maptalks.TileLayer(section.name||'default', {
       urlTemplate: getTilesetURL(config, section),
       maxAvailableZoom: section.maxAvailableZoom || 4,
       tileSize: section.tileSize || tileSize,
       repeatWorld: false,
-      tileSystem: [1, -1, bounds.left, bounds.top],
+      tileSystem: [1, -1 * k, bounds.left, bounds.top],
       visible: visible,
     });
 
@@ -447,6 +519,12 @@ function addMap() {
     }
 
   }
+
+  bounds = b0;
+  center = c0;
+
+  console.log('bounds', bounds, 'center', center);
+
 
   //console.log(center, bounds, mapSize);
 
@@ -465,14 +543,28 @@ function addMap() {
     zoomControl: { position  : {bottom: 70, right: 20}, zoomLevel : false, },
     attribution: { position: {top: -50}, },
   });
-  
- //z: ${map.getZoom().toFixed(0)}
+
+  /*
+  const orig = map.pixelToDistance.bind(map);
+  const k = mapSize / tileSize / 100 / 1000; // correction factor
+  map.pixelToDistance = (dx, dy) => orig(dx, dy) * k;
+
+  const scale = new maptalks.control.Scale({
+      position: { bottom: 25, left: 120 },
+      maxWidth: 250,
+      metric: true,
+      imperial: false
+  }).addTo(map);
+  */
+
 
   map.on('mousemove', function(e){
     const p = e.coordinate;
-    let text = `${p.x.toFixed(0)}, ${p.y.toFixed(0)}`;
+
+    let text = `${map.getZoom().toFixed(2)}x ${p.x.toFixed(0)}, ${p.y.toFixed(0)}`;
+
     let div = document.querySelector(`.info`);
-    if (div) div.innerText = text;
+    if (div) div.innerHTML = text;
     //window.location.hash = `pointer=[${p.x.toFixed(0)},${p.y.toFixed(0)}]`;
   });
 
@@ -555,20 +647,7 @@ function addMap() {
     items: items,
     callback: name=> {
       if (baseLayers[name]) {
-        settings.baseLayerName = name;
-        saveSettings();
-        let layer = baseLayers[name];
-        layer.show();
-
-        //  add all worlds maybe
-
-        for (const [layerName, layer] of Object.entries(baseLayers)) {
-          if (name!=layerName) {
-            layer.hide();
-          }
-        }
-
-
+        setBaseLayer(name, baseLayers);
       } else {
         // unused for now
         switchMap(name);
@@ -652,6 +731,7 @@ function indexMarkers() {
     counters[t.group] = counters[t.group] || {};
     counters[t.group][t.category] = (counters[t.group][t.category] || 0) + 1;
     icons[t.category] = iconData[t.icon];
+    if (t.title) cachedTitles[t.category] = t.title;
   }
 
   //menuControl = new MenuControl(null,{});
