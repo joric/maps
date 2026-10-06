@@ -3,7 +3,10 @@ import './layers-control.css'
 export class LayersControl {
   constructor(layer, options) {
     const innerHTML = `
-    <div class="layers-control">
+    <div class="layers-control" tabindex="-1">
+      <div class="layers-preview" role="button" aria-label="Open layers">
+        <div class="layers-preview-content"></div>
+      </div>
       <ul class="layers-list" role="listbox"></ul>
     </div>
     `;
@@ -15,6 +18,7 @@ export class LayersControl {
 
     const control = document.querySelector('.layers-control');
     const ul = control.querySelector('.layers-list');
+    const preview = control.querySelector('.layers-preview');
 
     let html = '';
     let items = options.items || [];
@@ -36,25 +40,66 @@ export class LayersControl {
 
       let content = `<div class="layer-size">${w}x${h}</div><div class="layer-title">${title}</div>`;
 
-
       if (!item.overlay) {
         content += `<div class="layer-radio"><input type="radio" name="baseLayer" id="${item.name}" ${item.visible?'checked':''}></div>`;
       } else {
         content += `<div class="layer-checkbox"><input type="checkbox" name="${item.name}" ${item.visible?'checked':''}></div>`;
       }
 
-
       let bgStyle = `--bg: url("${item.image}"); background-image: var(--bg); ` // prevent imagehover/imagus
       let style = bgStyle;
 
-      html += `<li tabindex=-1 data-name="${name}" style='${style} ${extra}' title="${name}"><div class="layer-content">${content}</content></li>`;
+      html += `<li tabindex=-1 data-name="${name}" style='${style} ${extra}' title="${name}"><div class="layer-content">${content}</div></li>`;
     }
 
     ul.innerHTML = html;
 
-    document.querySelector('.layers-control').style.setProperty('--count', Object.keys(items).length);
+    control.style.setProperty('--count', Object.keys(items).length);
 
     const callback = options.callback || function(i) { console.log(`default layers-control callback called with parameter ${i}`); };
+
+    // --- collapsed preview ---
+    function getCheckedBaseLi() {
+      return ul.querySelector('li:has(input[type="radio"]:checked)');
+    }
+
+    function updatePreview() {
+      const li = getCheckedBaseLi();
+      if (!li) {
+        preview.style.removeProperty('--bg');
+        preview.style.backgroundPosition = '';
+        preview.style.backgroundSize = '';
+        preview.style.backgroundRepeat = '';
+        preview.dataset.name = '';
+        return;
+      }
+
+      // Reuse the same --bg variable the <li> uses; the size/position come from CSS.
+      const bg = li.style.getPropertyValue('--bg');
+      preview.style.setProperty('--bg', bg);
+      preview.dataset.name = li.dataset.name;
+
+      // Carry over the per-item positioning/size override (the `extra` inline style)
+      // as relative values, NOT the computed pixel size.
+      const liExtra = li.getAttribute('style') || '';
+      const posMatch = liExtra.match(/background-position:\s*([^;]+)/);
+      const sizeMatch = liExtra.match(/background-size:\s*([^;]+)/);
+      const repeatMatch = liExtra.match(/background-repeat:\s*([^;]+)/);
+
+      preview.style.backgroundPosition = posMatch ? posMatch[1].trim() : '';
+      preview.style.backgroundSize     = sizeMatch ? sizeMatch[1].trim() : '';
+      preview.style.backgroundRepeat   = repeatMatch ? repeatMatch[1].trim() : '';
+    }
+
+    updatePreview();
+
+    ul.querySelectorAll('input[type="radio"]').forEach(r => {
+      r.addEventListener('change', updatePreview);
+    });
+
+    preview.addEventListener('click', () => {
+      control.focus();
+    });
 
     // shared drag state
     let dragMoved = false;
@@ -68,14 +113,12 @@ export class LayersControl {
       });
 
       li.addEventListener('click', e => {
-        // Ignore clicks that were actually drags
         if (dragMoved) {
           wasFocusedOnMouseDown = false;
           dragMoved = false;
           return;
         }
 
-        // Only respond when the control was focused at mousedown
         if (!wasFocusedOnMouseDown) {
           wasFocusedOnMouseDown = false;
           return;
@@ -86,17 +129,15 @@ export class LayersControl {
         const input = li.querySelector('input[type="radio"], input[type="checkbox"]');
         if (!input) return;
 
-        // If the click landed directly on the input, let the browser handle it
-        // naturally and just fire the callback.
         if (e.target !== input) {
           if (input.type === 'radio') {
-            // Radios can't be unchecked by clicking; just select this one.
             input.checked = true;
           } else {
             input.checked = !input.checked;
           }
         }
 
+        updatePreview();
         callback(name);
       });
     });
@@ -121,7 +162,6 @@ export class LayersControl {
       dragMoved = false;
       startX = e.pageX;
       startScrollLeft = ul.scrollLeft;
-      // NOTE: do NOT add .dragging yet — only after threshold
     });
 
     window.addEventListener('mousemove', (e) => {
