@@ -123,8 +123,8 @@ function saveSettings() {
   localStorage.setItem(localDataName, JSON.stringify(localData));
 }
 
-function getTilesetURL(config, section) {
-  let url = section.urlTemplate ||'';
+function getURL(config, url) {
+  url = url || '';
   if (!url.startsWith('http')) url = submodulesBase + repoName +'/' + url;
   url = url.replace('https://joric.github.io/', submodulesBase);
   return url;
@@ -528,14 +528,29 @@ function addMap() {
     let k = (bounds.bottom - bounds.top) / (bounds.right-bounds.left);
     if (k<0) k = -k;
 
-    let layer = new maptalks.TileLayer(name, {
-      urlTemplate: getTilesetURL(config, section),
-      maxAvailableZoom: section.maxAvailableZoom || 4,
-      tileSize: section.tileSize || 512,
-      repeatWorld: false,
-      tileSystem: [1, -1 * k, bounds.left, bounds.top],
-      visible: visible,
-    });
+    let layer = null;
+
+
+    if (section.urlTemplate) {
+      layer = new maptalks.TileLayer(name, {
+        urlTemplate: getURL(config, section.urlTemplate),
+        maxAvailableZoom: section.maxAvailableZoom || 4,
+        tileSize: section.tileSize || 512,
+        repeatWorld: false,
+        tileSystem: [1, -1 * k, bounds.left, bounds.top],
+        visible: visible,
+      });
+    } else {
+      layer = new maptalks.ImageLayer(name, [{
+        url: getURL(config, section.url),
+        extent: [bounds.left, bounds.top, bounds.right, bounds.bottom],
+      }],
+      {
+        visible: visible
+      });
+    }
+
+
 
     if (visible && !section.overlay) {
       baseLayerBounds = [{...bounds}, {...center}];
@@ -565,6 +580,14 @@ function addMap() {
     zoomControl: { position  : {bottom: 70, right: 20}, zoomLevel : false, },
     attribution: { position: {top: -50}, },
   });
+
+  for (const [layerName, layer] of Object.entries(baseLayers)) {
+    layer.addTo(map);
+  }
+
+  for (const [layerName, layer] of Object.entries(overlays)) {
+    layer.addTo(map);
+  }
 
   /*
   const orig = map.pixelToDistance.bind(map);
@@ -643,24 +666,18 @@ function addMap() {
     },
   });
 
-
-  for (const [layerName, layer] of Object.entries(baseLayers)) {
-    layer.addTo(map);
-  }
-
-  for (const [layerName, layer] of Object.entries(overlays)) {
-    layer.addTo(map);
-  }
-
   let items = {};
 
   for (const section of sections) {
-    let url = getTilesetURL(config, section);
+
+    let url = getURL(config, section.urlTemplate || section.url);
+
+
     let image =  url.replace(/\{[xyz]\}/g, '0');
+
+
     items[section.name] = {image: image, title: section.name, 
-
       visible: section.overlay ? settings.overlays[section.name]===true : section.name === settings.baseLayerName,
-
       overlay: section.overlay, size: section.size, base: Math.pow(2, section.maxAvailableZoom + Math.log2(tileSize)) };
   }
 
