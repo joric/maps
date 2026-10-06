@@ -422,96 +422,88 @@ const openPopup = (marker, forced) => {
   //document.querySelector('.popup-text')?.addEventListener('contextmenu', function(e) { e.stopPropagation()}, true);
 }
 
-function setOverlay(show, name, overlays) {
-  const layer = overlays[name];
-  if (layer) {
-    if (show) {
-      settings.overlays[name] = true;
-      layer.show();
-    } else {
-      layer.hide();
-      delete settings.overlays[name];
-    }
-  }
-  saveSettings();
-}
-
-function setBaseLayer(name, baseLayers) {
-  let sections = Object.values(config.worlds)[0].baseLayers;
-
-  settings.baseLayerName = name;
-  saveSettings();
-
+function getLayerSpatialReference(conf) {
   let mapSize = config.size;
   let tileSize = 512;
   let center = { left: mapSize/2, top: mapSize/2 };
   let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
 
-  let layer = baseLayers[name];
-  layer.show();
-  for (const [layerName, layer] of Object.entries(baseLayers)) {
-    if (name != layerName) {
-      layer.hide();
-    }
+  if (conf.bounds) {
+    bounds = conf.bounds;
+    mapSize = bounds.right - bounds.left;
   }
 
+  let spatialReference = {
+    projection: 'identity',
+    fullExtent: bounds,
+    resolutions: Array.from({ length: maxZoom + 1 }, (_, i) => mapSize / tileSize / (1 << i)),
+  };
 
-  for (const section of sections) {
-    let visible = name == section.name;
+  return spatialReference;
+}
 
-    if (visible && section.urlTemplate) {
-      if (section.bounds) {
-        bounds = section.bounds;
-        mapSize = bounds.right - bounds.left;
+function toggleLayer(name, show, layers) {
+  const layer = layers[name];
+  if (!layer) return;
+
+  let world = Object.values(config.worlds)[0];
+  const conf = world.layers.find(conf => conf.name === name) ?? {};
+
+  if (show) {
+    layer.show();
+    settings.activeLayers[name] = true;
+  } else {
+    layer.hide();
+    delete settings.activeLayers[name];
+  }
+
+  // hide other layers if not overlay
+  if (!conf.overlay && show) {
+    Object.entries(layers).forEach(([key, layer]) => {
+      if (key !== name) {
+
+        const conf2 = world.layers.find(conf => conf.name === key) ?? {};
+        if (!conf2.overlay) {
+          layer.hide();
+          delete settings.activeLayers[key];
+        }
       }
-      let spatialReference = {
-        projection: 'identity',
-        fullExtent: bounds,
-        resolutions: Array.from({ length: maxZoom + 1 }, (_, i) => mapSize / tileSize / (1 << i)),
-      };
-      map.config('spatialReference', spatialReference );
-    }
+    });
   }
+
+  if (!conf.overlay && conf.urlTemplate) {
+    map.config('spatialReference', getLayerSpatialReference(conf));
+  }
+
+  saveSettings();
 }
 
 function addMap() {
-  const initialSearch = 'Dnipro';
+  let world = Object.values(config.worlds)[0];
 
-  let searchText = initialSearch.toLowerCase();
-  //let center = { left: mapSize/2, top: mapSize/2 };
-
-  let sections = Object.values(config.worlds)[0].baseLayers;
-
-  let baseLayers = {};  
+  let baseLayers = {};
   let overlays = {};
-
-  const validNames = new Set(sections.map(s => s.name));
-  const baseLayerName = validNames.has(settings.baseLayerName)
-    ? settings.baseLayerName
-    : sections.find(s => !s.overlay)?.name ?? sections[0].name;
-
-  settings.baseLayerName = baseLayerName;
 
   let mapSize = config.size || 2048;
   let center = { left: mapSize/2, top: mapSize/2 };
   let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
 
-  let baseLayerBounds = [{...bounds}, {...center}];
+  let backupSettings = [{...bounds}, {...center}];
 
-  let baseLayer = new maptalks.ImageLayer('dummy',[{url:'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',extent:[0,0,1,1]}]);
+  if (!Object.keys(settings.activeLayers).length)
+    settings.activeLayers[world.layers.find(l => !l.overlay).name] = true;
+
+  let baseConf = null;
 
   // pre-create all base layers
-  for (const section of sections) {
+  for (const conf of world.layers) {
 
-    let name = section.name || 'default';
+    let name = conf.name || 'default';
 
-    if (!baseLayerName) baseLayerName = name;
+    let visible = settings.activeLayers[name]===true;
 
-    let visible = section.overlay ? settings.overlays[name]===true : baseLayerName == name;
-
-    if (section.bounds) {
-      bounds = section.bounds;
-      //mapSize =  section.size ? section.size : mapSize; //bounds.right - bounds.left;
+    if (conf.bounds) {
+      bounds = conf.bounds;
     }
 
     center = {
@@ -524,74 +516,45 @@ function addMap() {
 
     let layer = null;
 
-    if (section.urlTemplate) {
+    if (conf.urlTemplate) {
       layer = new maptalks.TileLayer(name, {
-        urlTemplate: getURL(config, section.urlTemplate),
-        maxAvailableZoom: section.maxAvailableZoom || 4,
-        tileSize: section.tileSize || 512,
+        urlTemplate: getURL(config, conf.urlTemplate),
+        maxAvailableZoom: conf.maxAvailableZoom || 4,
+        tileSize: conf.tileSize || 512,
         repeatWorld: false,
         tileSystem: [1, -1 * k, bounds.left, bounds.top],
         visible: visible,
       });
     } else {
-      layer = new maptalks.ImageLayer(name, [{
-        url: getURL(config, section.url),
-        extent: [bounds.left, bounds.top, bounds.right, bounds.bottom],
-      }],
-      {
-        visible: visible
+      let images = [{url: getURL(config, conf.url), extent: [bounds.left, bounds.top, bounds.right, bounds.bottom] }];
+      layer = new maptalks.ImageLayer(name, images, {
+        visible: visible,
       });
     }
 
-    if (visible && !section.overlay) {
-      baseLayerBounds = [{...bounds}, {...center}];
-      baseLayer = layer;
-      mapSize = bounds.right - bounds.left;
-    }
+    (conf.overlay ? overlays : baseLayers)[name] = layer;
 
-    if (section.overlay) {
-      overlays[name] = layer;
-    } else {
-      baseLayers[name] = layer;
+    // update map with base layer
+    if (visible && !conf.overlay) {
+      backupSettings = [{...bounds}, {...center}];
+      mapSize = bounds.right - bounds.left;
+      baseConf = conf;
     }
   }
 
-  [bounds, center] = baseLayerBounds;
+  [bounds, center] = backupSettings;
   let tileSize = 512;
 
   map = new maptalks.Map('map', {
     center: [center.left, center.top],
     zoom: startZoom,
-    baseLayer: baseLayer,
-    spatialReference: {
-      projection: 'identity',
-      fullExtent: bounds,
-      resolutions: Array.from({ length: maxZoom + 1 }, (_, i) => mapSize / tileSize / (1 << i)),
-    },
+    spatialReference: getLayerSpatialReference(baseConf),
     zoomControl: { position  : {bottom: 70, right: 20}, zoomLevel : false, },
     attribution: { position: {top: -50}, },
   });
-
-  for (const [layerName, layer] of Object.entries(baseLayers)) {
-    layer.addTo(map);
-  }
-
-  for (const [layerName, layer] of Object.entries(overlays)) {
-    layer.addTo(map);
-  }
-
-  /*
-  const orig = map.pixelToDistance.bind(map);
-  const k = mapSize / tileSize / 100 / 1000; // correction factor
-  map.pixelToDistance = (dx, dy) => orig(dx, dy) * k;
-
-  const scale = new maptalks.control.Scale({
-      position: { bottom: 25, left: 120 },
-      maxWidth: 250,
-      metric: true,
-      imperial: false
-  }).addTo(map);
-  */
+  
+  let rasterLayers = {...baseLayers, ...overlays};
+  Object.values(rasterLayers).forEach(layer => layer.addTo(map) );
 
   map.on('mousemove', function(e){
     const p = e.coordinate;
@@ -659,33 +622,24 @@ function addMap() {
 
   let items = {};
 
-  for (const section of sections) {
-
-    let url = getURL(config, section.urlTemplate || section.url);
-
-
+  for (const conf of world.layers) {
+    let url = getURL(config, conf.urlTemplate || conf.url);
     let image =  url.replace(/\{[xyz]\}/g, '0');
 
-
-    items[section.name] = {image: image, title: section.name, 
-      visible: section.overlay ? settings.overlays[section.name]===true : section.name === settings.baseLayerName,
-      overlay: section.overlay, size: section.size, base: Math.pow(2, section.maxAvailableZoom + Math.log2(tileSize)) };
+    items[conf.name] = {
+      image: image,
+      title: conf.name,
+      visible: settings.activeLayers[conf.name]===true,
+      overlay: conf.overlay,
+      size: conf.size,
+      base: Math.pow(2, conf.maxAvailableZoom + Math.log2(tileSize))
+    };
   }
-
-  items = {...items};
 
   const layersControl = new LayersControl(null, {
     items: items,
-    callback: (name, show) => {
-      if (baseLayers[name]) {
-        setBaseLayer(name, baseLayers);
-      } else if (overlays[name]){
-        setOverlay(show, name, overlays);
-      }
-    }
+    callback: (name, show) => { toggleLayer(name, show, rasterLayers); },
   });
-
-  //const toggleView = e => map.getBearing() != 0 ? map.animateTo({ bearing: 0 }) : map.setView({ pitch: 0 });
 
   function customAnimateTo(map, targetView, duration = 200) {
       const startView = { pitch: map.getPitch() };
@@ -1352,7 +1306,7 @@ function parseConfig(data) {
 
   settings.customImages = settings.customImages ?? customImagesDefault;
   settings.language = settings.language ?? 'en';
-  settings.overlays = settings.overlays ?? {};
+  settings.activeLayers = settings.activeLayers ?? {};
 
   if (config.localization) {
     let c = config.localization;
