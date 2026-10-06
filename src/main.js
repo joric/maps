@@ -471,7 +471,7 @@ function toggleLayer(name, show, layers) {
     });
   }
 
-  if (!conf.overlay && conf.urlTemplate) {
+  if (!conf.overlay) {
     map.config('spatialReference', getLayerSpatialReference(conf));
   }
 
@@ -526,7 +526,8 @@ function addMap() {
         visible: visible,
       });
     } else {
-      let images = [{url: getURL(config, conf.url), extent: [bounds.left, bounds.top, bounds.right, bounds.bottom] }];
+      let b = conf.image_bounds ?? bounds;
+      let images = [{url: getURL(config, conf.url), extent: [b.left, b.top, b.right, b.bottom] }];
       layer = new maptalks.ImageLayer(name, images, {
         visible: visible,
       });
