@@ -18,7 +18,6 @@ import * as utils from './utils.js';
 import { getType } from './marker-types.js';
 import { getIcon } from './marker-icons.js';
 
-
 import * as unity from './unity-reader.js';
 
 const RUNNING_MODE = window.location.protocol === 'file:'  ? 'file' : ( import.meta.env.DEV  ? 'dev' : 'prod' );
@@ -446,6 +445,8 @@ function toggleLayer(name, show, layers) {
   const layer = layers[name];
   if (!layer) return;
 
+  if (show==layer.isVisible()) return;
+
   let world = Object.values(config.worlds)[0];
   const conf = world.layers.find(conf => conf.name === name) ?? {};
 
@@ -511,22 +512,29 @@ function addMap() {
       top: bounds.top + (bounds.bottom-bounds.top)/2,
     };
 
-    let k = (bounds.bottom - bounds.top) / (bounds.right-bounds.left);
-    if (k<0) k = -k;
-
     let layer = null;
 
     if (conf.urlTemplate) {
+
+      let b = conf.overlayBounds ?? bounds;
+
+      let k = (b.bottom - b.top) / (b.right - b.left);
+      // it looks like tileSystem _ratio_ somehow leaks to the entire map
+      // so just don't use non-uniform overlay tile layers (image layers okay)
+      k = 1;
+
+      if (k<0) k = -k;
       layer = new maptalks.TileLayer(name, {
         urlTemplate: getURL(config, conf.urlTemplate),
         maxAvailableZoom: conf.maxAvailableZoom || 4,
         tileSize: conf.tileSize || 512,
         repeatWorld: false,
-        tileSystem: [1, -1 * k, bounds.left, bounds.top],
+        tileSystem: [1, -1 * k, b.left, b.top],
         visible: visible,
       });
+
     } else {
-      let b = conf.image_bounds ?? bounds;
+      let b = conf.overlayBounds ?? bounds;
       let images = [{url: getURL(config, conf.url), extent: [b.left, b.top, b.right, b.bottom] }];
       layer = new maptalks.ImageLayer(name, images, {
         visible: visible,
@@ -548,14 +556,18 @@ function addMap() {
 
   map = new maptalks.Map('map', {
     center: [center.left, center.top],
-    zoom: startZoom,
+    zoom: settings.zoom,
     spatialReference: getLayerSpatialReference(baseConf),
     zoomControl: { position  : {bottom: 70, right: 20}, zoomLevel : false, },
     attribution: { position: {top: -50}, },
   });
   
   let rasterLayers = {...baseLayers, ...overlays};
-  Object.values(rasterLayers).forEach(layer => layer.addTo(map) );
+
+  Object.values(rasterLayers).forEach(layer => {
+    //console.log('adding', layer);
+    layer.addTo(map);
+  });
 
   map.on('mousemove', function(e){
     const p = e.coordinate;
@@ -565,7 +577,7 @@ function addMap() {
     //window.location.hash = `pointer=[${p.x.toFixed(0)},${p.y.toFixed(0)}]`;
   });
 
-  if (settings.center && settings.zoom) {
+  if (settings.center) {
     map.setView({
       center: settings.center,
       zoom: settings.zoom || 0,
@@ -1308,6 +1320,7 @@ function parseConfig(data) {
   settings.customImages = settings.customImages ?? customImagesDefault;
   settings.language = settings.language ?? 'en';
   settings.activeLayers = settings.activeLayers ?? {};
+  settings.zoom = settings.zoom ?? startZoom;
 
   if (config.localization) {
     let c = config.localization;
