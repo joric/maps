@@ -38,7 +38,11 @@ export class LayersControl {
         extra = `background-position: ${offset*100}%; background-size: ${ratio*100}%; background-repeat: no-repeat;`
       }
 
-      let content = `<div class="layer-size">${w}x${h}</div><div class="layer-title">${title}</div>`;
+      let res  = `${w}x${h}`;
+
+      let content = `<div class="layer-size">${res}</div><div class="layer-title">${title}</div>`;
+
+      let alt = `${title} (${res})`;
 
       if (!item.overlay) {
         content += `<div class="layer-radio"><input type="radio" name="baseLayer" id="${item.name}" ${item.visible?'checked':''}></div>`;
@@ -49,7 +53,7 @@ export class LayersControl {
       let bgStyle = `--bg: url("${item.image}"); background-image: var(--bg); ` // prevent imagehover/imagus
       let style = bgStyle;
 
-      html += `<li tabindex=-1 data-name="${name}" style='${style} ${extra}' title="${name}"><div class="layer-content">${content}</div></li>`;
+      html += `<li tabindex=-1 data-name="${name}" style='${style} ${extra}' title="${alt}"><div class="layer-content">${content}</div></li>`;
     }
 
     ul.innerHTML = html;
@@ -89,6 +93,10 @@ export class LayersControl {
       preview.style.backgroundPosition = posMatch ? posMatch[1].trim() : '';
       preview.style.backgroundSize     = sizeMatch ? sizeMatch[1].trim() : '';
       preview.style.backgroundRepeat   = repeatMatch ? repeatMatch[1].trim() : '';
+
+
+      preview.title = li.title;
+
     }
 
     updatePreview();
@@ -138,7 +146,7 @@ export class LayersControl {
         }
 
         updatePreview();
-        callback(name);
+        callback(name, input.checked ? true : false);
       });
     });
 

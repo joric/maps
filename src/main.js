@@ -422,6 +422,20 @@ const openPopup = (marker, forced) => {
   //document.querySelector('.popup-text')?.addEventListener('contextmenu', function(e) { e.stopPropagation()}, true);
 }
 
+function setOverlay(show, name, overlays) {
+  const layer = overlays[name];
+  if (layer) {
+    if (show) {
+      settings.overlays[name] = true;
+      layer.show();
+    } else {
+      layer.hide();
+      delete settings.overlays[name];
+    }
+  }
+  saveSettings();
+}
+
 function setBaseLayer(name, baseLayers) {
   let sections = Object.values(config.worlds)[0].baseLayers;
 
@@ -482,6 +496,8 @@ function addMap() {
   let sections = Object.values(config.worlds)[0].baseLayers;
 
   let baseLayers = {};
+  
+  let overlays = {};
 
   let baseLayerName = settings.baseLayerName || '';
 
@@ -492,18 +508,16 @@ function addMap() {
   }
   if (!found) baseLayerName = sections[0].name;
 
-
-  let b0 = {};
-  let c0 = {};
-
+  let baseLayerBounds = [bounds, center];
+  
   // pre-create all base layers
   for (const section of sections) {
 
-    if (!baseLayerName) baseLayerName = section.name;
+    let name = section.name || 'default';
 
-    if (section.overlay) continue;
+    if (!baseLayerName) baseLayerName = name;
 
-    let visible = baseLayerName == section.name;
+    let visible = section.overlay ? settings.overlays[name]===true : baseLayerName == name;
 
     if (section.bounds) {
       bounds = section.bounds;
@@ -515,16 +529,15 @@ function addMap() {
       top: bounds.top + (bounds.bottom-bounds.top)/2,
     };
 
-    if (visible) {
-      b0 = bounds;
-      c0 = center;
+    if (visible && !section.overlay) {
       mapSize = bounds.right - bounds.left;
+      baseLayerBounds = [{...bounds}, {...center}];
     }
 
     let k = (bounds.bottom - bounds.top) / (bounds.right-bounds.left);
     if (k<0) k = -k;
 
-    let baseLayer = new maptalks.TileLayer(section.name||'default', {
+    let layer = new maptalks.TileLayer(name, {
       urlTemplate: getTilesetURL(config, section),
       maxAvailableZoom: section.maxAvailableZoom || 4,
       tileSize: section.tileSize || tileSize,
@@ -533,33 +546,24 @@ function addMap() {
       visible: visible,
     });
 
-    baseLayers[section.name] = baseLayer;
-
-    if (visible) {
-      //mapSize =  section.size ? section.size : bounds.right - bounds.left;
+    if (section.overlay) {
+      overlays[name] = layer;
+    } else {
+      baseLayers[name] = layer;
     }
   }
 
-  bounds = b0;
-  center = c0;
-
-  console.log('bounds', bounds, 'center', center);
-
-
-  //console.log(center, bounds, mapSize);
+  [bounds, center] = baseLayerBounds;
 
   map = new maptalks.Map('map', {
     center: [center.left, center.top],
     zoom: startZoom,
-
     baseLayer: Object.values(baseLayers)[0],
-
     spatialReference: {
       projection: 'identity',
       fullExtent: bounds,
       resolutions: Array.from({ length: maxZoom + 1 }, (_, i) => mapSize / tileSize / (1 << i)),
     },
-
     zoomControl: { position  : {bottom: 70, right: 20}, zoomLevel : false, },
     attribution: { position: {top: -50}, },
   });
@@ -577,12 +581,9 @@ function addMap() {
   }).addTo(map);
   */
 
-
   map.on('mousemove', function(e){
     const p = e.coordinate;
-
     let text = `${map.getZoom().toFixed(2)}x ${p.x.toFixed(0)}, ${p.y.toFixed(0)}`;
-
     let div = document.querySelector(`.info`);
     if (div) div.innerHTML = text;
     //window.location.hash = `pointer=[${p.x.toFixed(0)},${p.y.toFixed(0)}]`;
@@ -649,13 +650,19 @@ function addMap() {
     layer.addTo(map);
   }
 
+  for (const [layerName, layer] of Object.entries(overlays)) {
+    layer.addTo(map);
+  }
+
   let items = {};
 
   for (const section of sections) {
     let url = getTilesetURL(config, section);
     let image =  url.replace(/\{[xyz]\}/g, '0');
     items[section.name] = {image: image, title: section.name, 
-      visible: section.name===settings.baseLayerName,
+
+      visible: section.overlay ? settings.overlays[section.name]===true : section.name === settings.baseLayerName,
+
       overlay: section.overlay, size: section.size, base: Math.pow(2, section.maxAvailableZoom + Math.log2(tileSize)) };
   }
 
@@ -663,12 +670,11 @@ function addMap() {
 
   const layersControl = new LayersControl(null, {
     items: items,
-    callback: name=> {
+    callback: (name, show) => {
       if (baseLayers[name]) {
         setBaseLayer(name, baseLayers);
-      } else if (name){
-        //toggle overlay maybe
-        //switchMap(name);
+      } else if (overlays[name]){
+        setOverlay(show, name, overlays);
       }
     }
   });
@@ -1340,6 +1346,7 @@ function parseConfig(data) {
 
   settings.customImages = settings.customImages ?? customImagesDefault;
   settings.language = settings.language ?? 'en';
+  settings.overlays = settings.overlays ?? {};
 
   if (config.localization) {
     let c = config.localization;
