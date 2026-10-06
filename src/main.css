@@ -16,6 +16,9 @@ body {
   height:100%;
 }
 
+
+/* styling maptalks.control.Scale */
+
 .maptalks-control div {
   color:#fff !important; border-color:#fff !important;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
