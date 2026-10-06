@@ -447,34 +447,29 @@ function setBaseLayer(name, baseLayers) {
   let center = { left: mapSize/2, top: mapSize/2 };
   let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
 
+  let layer = baseLayers[name];
+  layer.show();
+  for (const [layerName, layer] of Object.entries(baseLayers)) {
+    if (name != layerName) {
+      layer.hide();
+    }
+  }
+
+
   for (const section of sections) {
     let visible = name == section.name;
 
-    if (visible) {
-
+    if (visible && section.urlTemplate) {
       if (section.bounds) {
         bounds = section.bounds;
         mapSize = bounds.right - bounds.left;
       }
-
       let spatialReference = {
         projection: 'identity',
         fullExtent: bounds,
         resolutions: Array.from({ length: maxZoom + 1 }, (_, i) => mapSize / tileSize / (1 << i)),
       };
-
       map.config('spatialReference', spatialReference );
-
-    }
-  }
-
-  let layer = baseLayers[name];
-
-  layer.show();
-
-  for (const [layerName, layer] of Object.entries(baseLayers)) {
-    if (name != layerName) {
-      layer.hide();
     }
   }
 }
@@ -497,17 +492,16 @@ function addMap() {
 
   settings.baseLayerName = baseLayerName;
 
-  let baseLayerBounds = [{}, {}];
-
-  let baseLayer = null;
-
   let mapSize = config.size || 2048;
-  
+  let center = { left: mapSize/2, top: mapSize/2 };
+  let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
+
+  let baseLayerBounds = [{...bounds}, {...center}];
+
+  let baseLayer = new maptalks.ImageLayer('dummy',[{url:'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',extent:[0,0,1,1]}]);
+
   // pre-create all base layers
   for (const section of sections) {
-
-    let center = { left: mapSize/2, top: mapSize/2 };
-    let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
 
     let name = section.name || 'default';
 
@@ -530,7 +524,6 @@ function addMap() {
 
     let layer = null;
 
-
     if (section.urlTemplate) {
       layer = new maptalks.TileLayer(name, {
         urlTemplate: getURL(config, section.urlTemplate),
@@ -550,8 +543,6 @@ function addMap() {
       });
     }
 
-
-
     if (visible && !section.overlay) {
       baseLayerBounds = [{...bounds}, {...center}];
       baseLayer = layer;
@@ -565,7 +556,7 @@ function addMap() {
     }
   }
 
-  let [bounds, center] = baseLayerBounds;
+  [bounds, center] = baseLayerBounds;
   let tileSize = 512;
 
   map = new maptalks.Map('map', {
