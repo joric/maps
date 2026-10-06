@@ -501,7 +501,7 @@ function addMap() {
 
   let baseLayer = null;
 
-  let mapSize = config.mapSize || 2048;
+  let mapSize = config.size || 2048;
   
   // pre-create all base layers
   for (const section of sections) {
@@ -540,6 +540,7 @@ function addMap() {
     if (visible && !section.overlay) {
       baseLayerBounds = [{...bounds}, {...center}];
       baseLayer = layer;
+      mapSize = bounds.right - bounds.left;
     }
 
     if (section.overlay) {
@@ -550,7 +551,6 @@ function addMap() {
   }
 
   let [bounds, center] = baseLayerBounds;
-  mapSize = bounds.right - bounds.left;
   let tileSize = 512;
 
   map = new maptalks.Map('map', {
