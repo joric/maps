@@ -482,40 +482,31 @@ function setBaseLayer(name, baseLayers) {
 function addMap() {
   const initialSearch = 'Dnipro';
 
-  let searchText = initialSearch.toLowerCase();
-
   let mapSize = config.size;
-
   let tileSize = 512;
 
+  let searchText = initialSearch.toLowerCase();
   //let center = { left: mapSize/2, top: mapSize/2 };
-
-  let center = { left: mapSize/2, top: mapSize/2 };
-  let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
 
   let sections = Object.values(config.worlds)[0].baseLayers;
 
-  let baseLayers = {};
-  
+  let baseLayers = {};  
   let overlays = {};
 
-  if (!settings.baseLayerName) {
-    settings.baseLayerName = sections.find(s => !s.overlay)?.name ?? 'default';
-  }
+  const validNames = new Set(sections.map(s => s.name));
+  const baseLayerName = validNames.has(settings.baseLayerName)
+    ? settings.baseLayerName
+    : sections.find(s => !s.overlay)?.name ?? sections[0].name;
 
-  let baseLayerName = settings.baseLayerName;
+  settings.baseLayerName = baseLayerName;
 
-  // check if baseLayerName not in settings, reset to first one
-  let found = false;
-  for (const section of sections) {
-    if (baseLayerName === section.name) { found = true; }
-  }
-  if (!found) baseLayerName = sections[0].name;
-
-  let baseLayerBounds = [bounds, center];
+  let baseLayerBounds = [{}, {}];
   
   // pre-create all base layers
   for (const section of sections) {
+
+    let center = { left: mapSize/2, top: mapSize/2 };
+    let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
 
     let name = section.name || 'default';
 
@@ -534,7 +525,7 @@ function addMap() {
     };
 
     if (visible && !section.overlay) {
-      mapSize = bounds.right - bounds.left;
+      let mapSize = bounds.right - bounds.left;
       baseLayerBounds = [{...bounds}, {...center}];
     }
 
@@ -557,7 +548,7 @@ function addMap() {
     }
   }
 
-  [bounds, center] = baseLayerBounds;
+  let [bounds, center] = baseLayerBounds;
 
   map = new maptalks.Map('map', {
     center: [center.left, center.top],
