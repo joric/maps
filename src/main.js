@@ -43,6 +43,7 @@ let slugs = [
   'ootss',
   'breathedge2',
   'windlands',
+  'zelda'
 ];
 
 //let repoName = location.href.split('/').pop().split('#')[0];
@@ -176,14 +177,23 @@ function getPolygon(feature) {
 
 function addRegionMarkers() {
   if (allRegions.length==0) return;
+
   let colors = Object.values(config.worlds)[0].regions?.[0]?.colors;
+
   if (!colors) return;
+
   if (allFeatures.filter(f => f._type.regionMarker).length!=0) return;
 
   let count = allFeatures.length;
 
+  let idx = 0;
+
   for (const polygon of allRegions) {
-    let region = colors[polygon.properties.color];
+
+    let region = colors[polygon.properties.color] || `region-${idx}`;
+
+    idx += 1;
+
     let center = utils.getWeightedCentroid(polygon.getCoordinates()[0]);
 
     let feature = {
@@ -199,7 +209,8 @@ function addRegionMarkers() {
 
     polygon.properties.region = region;
 
-    //console.log('adding region marker', feature);
+    //console.log('adding region marker', region, polygon._coordinates);
+
     allFeatures.push(feature);
   }
 
@@ -474,6 +485,14 @@ function addMap() {
 
   let baseLayerName = settings.baseLayerName || '';
 
+  // check if baseLayerName not in settings, reset to first one
+  let found = false;
+  for (const section of sections) {
+    if (baseLayerName === section.name) { found = true; }
+  }
+  if (!found) baseLayerName = sections[0].name;
+
+
   let b0 = {};
   let c0 = {};
 
@@ -481,6 +500,8 @@ function addMap() {
   for (const section of sections) {
 
     if (!baseLayerName) baseLayerName = section.name;
+
+    if (section.overlay) continue;
 
     let visible = baseLayerName == section.name;
 
@@ -517,7 +538,6 @@ function addMap() {
     if (visible) {
       //mapSize =  section.size ? section.size : bounds.right - bounds.left;
     }
-
   }
 
   bounds = b0;
@@ -633,12 +653,10 @@ function addMap() {
 
   for (const section of sections) {
     let url = getTilesetURL(config, section);
-
     let image =  url.replace(/\{[xyz]\}/g, '0');
-
-    let d = Math.pow(2, section.maxAvailableZoom + 9);
-
-    items[section.name] = {image: image, title: `${d} x ${d}` };
+    items[section.name] = {image: image, title: section.name, 
+      visible: section.name===settings.baseLayerName,
+      overlay: section.overlay, size: section.size, base: Math.pow(2, section.maxAvailableZoom + Math.log2(tileSize)) };
   }
 
   items = {...items};
@@ -648,9 +666,9 @@ function addMap() {
     callback: name=> {
       if (baseLayers[name]) {
         setBaseLayer(name, baseLayers);
-      } else {
-        // unused for now
-        switchMap(name);
+      } else if (name){
+        //toggle overlay maybe
+        //switchMap(name);
       }
     }
   });
@@ -1206,6 +1224,8 @@ function addRegions() {
     let polygons = maptalks.GeoJSON.toGeometry(geojson);
 
     polygons = polygons.filter(polygon => polygon); // filter out null geometry
+
+    polygons = polygons.filter(polygon => polygon._coordinates.length>3); // filter out points <= 3 (zelda)
 
     polygons.forEach(polygon => {
       polygon.hide();

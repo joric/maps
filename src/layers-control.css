@@ -9,8 +9,8 @@
   --count: 6;
 
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 1em;
+  bottom: 1em;
 
   padding: var(--gap);
 
@@ -22,10 +22,8 @@
   transition: var(--transition);
   overflow: hidden;
 
-
   box-sizing: border-box;
 
-  background: white;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 
@@ -37,9 +35,13 @@
   overflow: auto;
 }
 
-
-.layers-control:focus,.layers-control:focus-within {
-  width: calc( var(--count)*(var(--gap) + var(--fsize)) + var(--gap) );
+.layers-control:focus,
+.layers-control:focus-within {
+  /* full natural width capped at viewport minus 2em (1em on each side) */
+  width: min(
+    calc( var(--count)*(var(--gap) + var(--fsize)) + var(--gap) ),
+    calc( 100vw - 2em )
+  );
   height: calc(var(--fsize) + var(--gap) * 2);
   border-radius: var(--fr);
 }
@@ -53,10 +55,27 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  /* hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.layers-list::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .layers-list li {
+  position: relative; /* anchor for absolutely positioned indicator */
+
   flex: 0 0 var(--size);
+  flex-shrink: 0;
   width: var(--size);
   height: var(--size);
 
@@ -65,15 +84,34 @@
   cursor: pointer;
   transition: var(--transition);
 
-  color: transparent;
-
-  font-size: 16px;
+  font-size: 15px;
 
   overflow-wrap: anywhere;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  flex-direction: column;
+}
+
+.layers-control .layer-content {
+  visibility: hidden;
+}
+
+.layers-control:focus .layer-content,
+.layers-control:focus-within .layer-content {
+  visibility: visible;
+}
+
+
+.layers-list li div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  width: 120px;
+  text-align: center;
 }
 
 .layers-list li:hover {
@@ -89,7 +127,28 @@
   border-radius: calc(var(--fr) * 0.95);
 
   color: white;
-  text-shadow: 1px 1px 4px black;
+}
+
+/* text shadow only on the text elements, not on the whole li */
+.layers-control:focus .layer-title,
+.layers-control:focus .layer-size,
+.layers-control:focus-within .layer-title,
+.layers-control:focus-within .layer-size {
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black,
+     0 0 6px black,
+     0 0 12px black;
+}
+
+.layers-list.dragging {
+  cursor: grabbing;
+}
+
+.layers-list.dragging li {
+  pointer-events: none;
 }
 
 .layers-prev,
@@ -144,3 +203,88 @@
   display: none;
 }
 
+/* --- custom radio / checkbox indicators --- */
+
+.layers-list li input[type="radio"],
+.layers-list li input[type="checkbox"] {
+  /* hide native control but keep it in the DOM for form semantics */
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-sizing: border-box;
+  outline: none;
+
+  /* empty circle by default — transparent background, colored ring */
+  border: 2px solid currentColor;
+  background: transparent;
+
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+/* radio: blue */
+.layers-list li input[type="radio"] {
+  color: #2563eb; /* blue-600 */
+}
+
+/* checkbox: orange */
+.layers-list li input[type="checkbox"] {
+  color: #ea580c; /* orange-600 */
+}
+
+/* checked state: filled circle */
+.layers-list li input[type="radio"]:checked,
+.layers-list li input[type="checkbox"]:checked {
+  background: currentColor;
+}
+
+/* checkmark drawn with a pseudo-element */
+.layers-list li input[type="radio"]::after,
+.layers-list li input[type="checkbox"]::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -60%) rotate(45deg) scale(0);
+  transform-origin: center;
+  opacity: 0;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.layers-list li input[type="radio"]:checked::after,
+.layers-list li input[type="checkbox"]:checked::after {
+  transform: translate(-50%, -60%) rotate(45deg) scale(1);
+  opacity: 1;
+}
+
+/* focus ring for keyboard users */
+.layers-list li input[type="radio"]:focus-visible,
+.layers-list li input[type="checkbox"]:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
+/* keep the wrapper divs from interfering with layout */
+.layers-list li .layer-radio,
+.layers-list li .layer-checkbox {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* let the input itself receive clicks */
+}
+
+.layers-list li .layer-radio input,
+.layers-list li .layer-checkbox input {
+  pointer-events: auto;
+}

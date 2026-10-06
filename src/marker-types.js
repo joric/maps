@@ -42,8 +42,6 @@ export function getType (o, typeData) {
       Object.entries(node).filter(([k, v]) => typeof v !== "object" || k === "replace")
     );
 
-    if (prop.icon && !prop.category) t.category_icon = t.icon;
-
     for (const [field, exactMap] of Object.entries(node.match || {})) {
       const value = o[field];
 
