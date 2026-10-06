@@ -499,7 +499,11 @@ function addMap() {
   
   let overlays = {};
 
-  let baseLayerName = settings.baseLayerName || '';
+  if (!settings.baseLayerName) {
+    settings.baseLayerName = sections.find(s => !s.overlay)?.name ?? 'default';
+  }
+
+  let baseLayerName = settings.baseLayerName;
 
   // check if baseLayerName not in settings, reset to first one
   let found = false;
