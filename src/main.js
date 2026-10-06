@@ -482,9 +482,6 @@ function setBaseLayer(name, baseLayers) {
 function addMap() {
   const initialSearch = 'Dnipro';
 
-  let mapSize = config.size;
-  let tileSize = 512;
-
   let searchText = initialSearch.toLowerCase();
   //let center = { left: mapSize/2, top: mapSize/2 };
 
@@ -501,6 +498,10 @@ function addMap() {
   settings.baseLayerName = baseLayerName;
 
   let baseLayerBounds = [{}, {}];
+
+  let baseLayer = null;
+
+  let mapSize = config.mapSize || 2048;
   
   // pre-create all base layers
   for (const section of sections) {
@@ -524,22 +525,22 @@ function addMap() {
       top: bounds.top + (bounds.bottom-bounds.top)/2,
     };
 
-    if (visible && !section.overlay) {
-      let mapSize = bounds.right - bounds.left;
-      baseLayerBounds = [{...bounds}, {...center}];
-    }
-
     let k = (bounds.bottom - bounds.top) / (bounds.right-bounds.left);
     if (k<0) k = -k;
 
     let layer = new maptalks.TileLayer(name, {
       urlTemplate: getTilesetURL(config, section),
       maxAvailableZoom: section.maxAvailableZoom || 4,
-      tileSize: section.tileSize || tileSize,
+      tileSize: section.tileSize || 512,
       repeatWorld: false,
       tileSystem: [1, -1 * k, bounds.left, bounds.top],
       visible: visible,
     });
+
+    if (visible && !section.overlay) {
+      baseLayerBounds = [{...bounds}, {...center}];
+      baseLayer = layer;
+    }
 
     if (section.overlay) {
       overlays[name] = layer;
@@ -549,11 +550,13 @@ function addMap() {
   }
 
   let [bounds, center] = baseLayerBounds;
+  mapSize = bounds.right - bounds.left;
+  let tileSize = 512;
 
   map = new maptalks.Map('map', {
     center: [center.left, center.top],
     zoom: startZoom,
-    baseLayer: Object.values(baseLayers)[0],
+    baseLayer: baseLayer,
     spatialReference: {
       projection: 'identity',
       fullExtent: bounds,
