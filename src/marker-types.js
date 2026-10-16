@@ -36,6 +36,18 @@ export function getType (o, typeData) {
     preprocess(typeData.types ?? typeData);
   }
 
+  // resolve a possibly-dotted field path against an object
+  function resolvePath (obj, path) {
+    if (!path.includes(".")) return obj?.[path];
+    const parts = path.split(".");
+    let cur = obj;
+    for (const p of parts) {
+      if (cur == null || typeof cur !== "object") return undefined;
+      cur = cur[p];
+    }
+    return cur;
+  }
+
   function rec(node, t = {}) {
     // collect non-object props except "replace"
     const prop = Object.fromEntries(
@@ -43,19 +55,21 @@ export function getType (o, typeData) {
     );
 
     for (const [field, exactMap] of Object.entries(node.match || {})) {
-      const value = o[field];
+      const value = resolvePath(o, field);
+
+      // skip when the path doesn't resolve
+      if (value === undefined) continue;
 
       // 1) exact match
       const ex = exactMap[value];
-
-      //if (field=='name' && o.type == 'ESpawnType::CustomMarker' && o.name=='EMarkerType::Explosives') console.log('------here-------', value, exactMap[value]);
-
       if (ex) return rec(ex, { ...t, category: value, ...prop });
 
       // 2) regex match from cache
       const cached = regexCache.get(node)?.[field] || [];
       for (const r of cached) {
-        if (r.re.test(value)) return rec(r.entry, { ...t, category: value, ...prop });
+        if (typeof value === "string" && r.re.test(value)) {
+          return rec(r.entry, { ...t, category: value, ...prop });
+        }
       }
     }
 

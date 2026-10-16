@@ -29,18 +29,20 @@ let submodulesBase = RUNNING_MODE === 'file' ? '../submodules/' : ( RUNNING_MODE
 console.log('submodulesBase', submodulesBase);
 
 let customImagesDefault = true;
-let allowLines = false;
 let extentOnSearch = false;
 
+let allowLines = true;
+let heightFactor = 0.1;
+let flattenMarkers = false;
+
 let slugs = [
+  'ootss',
   'stalker',
   'folon',
   'subnautica',
-  'supraland',
   'supraworld',
   'fuszerka',
-  'ootss',
-  'breathedge2',
+  'breathedge',
   'windlands',
   'zelda'
 ];
@@ -77,12 +79,11 @@ let focusZoom = 5;
 
 let filterData = {};
 let layers = [];
-let config = {};
 
 let searchString = '';
 let baseDir = '';
 
-let markerTypes = {};
+let config = {};
 let iconData = {};
 let markerData = {};
 
@@ -104,7 +105,8 @@ let icons = {};
 let counters = {};
 let cachedTitles = {};
 
-let currentWorld = null;
+let worldName = null;
+let world = null;
 
 window.setLanguage = function (cc) {
   settings.language = cc;
@@ -129,14 +131,71 @@ function getURL(config, url) {
   return url;
 }
 
+const SMALL_WORDS = new Set([
+  'a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'nor',
+  'of', 'on', 'or', 'per', 'so', 'the', 'to', 'up', 'via', 'vs', 'yet'
+]);
+
+function humanize(tag) {
+  if (!tag) return '';
+
+  let s = tag.trim();
+  s = s.replace(/[_-]v\d+(\.[\d]+)?$/i, '');
+
+  s = s
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+    .replace(/([A-Z]+)([A-Z][a-z]{2,})/g, '$1 $2')
+    .replace(/([a-zA-Z]{2,})(\d)(?![A-Z])/g, '$1 $2')
+    .replace(/(\d)([a-z]{2,})/g, '$1 $2')
+    .replace(/[_-]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  s = s.replace(/(\d+)\s+(\d+)/g, '$1-$2');
+  s = s.replace(/\s+v\d+(\.[\d]+)?$/i, '').trim();
+
+  if (!s) return '';
+
+  const parts = s.split(' ');
+  const lastIndex = parts.length - 1;
+
+  return parts.map((word, i) => {
+    if (/^\d+[a-zA-Z]{1,3}$/.test(word)) {
+      return word.replace(/[a-zA-Z]+$/, m => m.toUpperCase());
+    }
+    if (/^\d+-\d+$/.test(word)) {
+      return word;
+    }
+    if (/^[a-zA-Z]\d+$/.test(word)) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+
+    const lower = word.toLowerCase();
+    if (lower === 'alt') return 'Alt.';
+
+    const hasUpper = /[A-Z]/.test(word);
+    const hasLower = /[a-z]/.test(word);
+    const isAllUpper = hasUpper && word === word.toUpperCase();
+    const isMixedCase = hasUpper && hasLower;
+    const isSmall = SMALL_WORDS.has(lower);
+    const isEdge = i === 0 || i === lastIndex;
+
+    if (isAllUpper || isMixedCase) return word;
+    if (isSmall && !isEdge) return lower;
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  }).join(' ');
+}
+
+
 const capitalize = s => (s && s.length>0) ? s[0].toUpperCase()+s.slice(1) : '';
+
 
 function translate(s, section) {
   s  = String(s);
 
   if (!section) section = 'items';
 
-  const k = markerTypes?.[section]?.[s]?.title;
+  const k = config?.[section]?.[s]?.title;
   if (k) {
     const [p, e] = k.split('.');
     let res = e ? lang[p]?.[e] : lang[k];
@@ -152,6 +211,7 @@ function translate(s, section) {
 
   let templates_fn = [
     name => name,
+    name => `area_g_${name}`,
     name => `sid_locations_region_${name}_name`,
     name => `sid_items_${name}_name`,
     name => `sid_items_DLC01_${name}_name`,
@@ -164,7 +224,7 @@ function translate(s, section) {
     if (lang[key]) return lang[key];
   }
 
-  return lang[s] || capitalize(s??'');
+  return lang[s] || humanize(s??'');
 }
 
 function getPolygon(feature) {
@@ -200,7 +260,7 @@ function addRegionMarkers() {
       properties: { name: region, transient: true, type: 'regionMarker' }
     }
 
-    feature._type = getType(feature.properties, markerTypes);
+    feature._type = getType(feature.properties, config);
     let t = feature._type
     t.type = 'regionMarker';
     t.regionMarker = true;
@@ -229,8 +289,6 @@ function nameRegions() {
 }
 
 function calculateCells() {
-  console.time('calculateCells');
-
   const ref_lookup = {};
 
   // fill lookup tables
@@ -279,13 +337,12 @@ function calculateCells() {
   for (const cell_id of Object.keys(cell_doors)) {
     exits[cell_id] = find_path_rec(cell_id);
   }
-
-  console.timeEnd('calculateCells');
 }
 
 
-
 function assignRegions() {
+  if (allRegions && allRegions.length===0) return;
+
   console.time('assignRegions');
 
   for (const polygon of allRegions) {
@@ -303,7 +360,7 @@ function assignRegions() {
 
 function assignTypes() {
   allFeatures.forEach(feature => {
-    feature._type = getType(feature.properties, markerTypes);
+    feature._type = getType(feature.properties, config);
   });
 }
 
@@ -315,7 +372,8 @@ function getFuse() {
     const feature = allFeatures[i];
     const { _geom, ...rest } = feature; // exclude geom, it's non-clonable
     const info = renderItem(feature);
-    const text = Object.values(info).join(' ');
+    let tags = Object.values(info);
+    const text = tags.join(' ');
     data.push({ featureIndex: i, ...rest, text: text });
   }
 
@@ -328,6 +386,8 @@ function getFuse() {
       {name: 'properties.name', weight: 0.3},
       {name: 'properties.type', weight: 0.2},
       {name: 'properties.item', weight: 0.1},
+      {name: 'properties.id', weight: 0.1},
+      {name: 'properties.entity_properties.script_name', weight: 0.1},
       {name: '_type.group', weight: 0.05},
     ],
     threshold: 0.1,
@@ -357,8 +417,12 @@ function renderItem(feature) {
   let t = feature?._type ?? {};
   let title = translate(o.title || o.name);
   let subtitle = translate(t.group, 'groups');
+
   if (t.category) subtitle += ' / ' + translate(t.category, 'categories');
   if (t.item) subtitle += ' / ' + translate(t.item);
+
+  if (!t.category && !t.item) subtitle += ' / ' + translate(o.type);
+
   let location = translate(t.region || o.area || o.cell || o.type);
 
   if (o.cell) {
@@ -447,7 +511,6 @@ function toggleLayer(name, show, layers) {
 
   if (show==layer.isVisible()) return;
 
-  let world = Object.values(config.worlds)[0];
   const conf = world.layers.find(conf => conf.name === name) ?? {};
 
   if (show) {
@@ -480,7 +543,9 @@ function toggleLayer(name, show, layers) {
 }
 
 function addMap() {
-  let world = Object.values(config.worlds)[0];
+
+  worldName = Object.keys(config.worlds)[0];
+  world = config.worlds[worldName];
 
   let baseLayers = {};
   let overlays = {};
@@ -528,7 +593,7 @@ function addMap() {
         urlTemplate: getURL(config, conf.urlTemplate),
         maxAvailableZoom: conf.maxAvailableZoom || 4,
         tileSize: conf.tileSize || 512,
-        repeatWorld: false,
+        repeatWorld: conf.repeatWorld ?? false,
         tileSystem: [1, -1 * k, b.left, b.top],
         visible: visible,
       });
@@ -692,7 +757,10 @@ function addMap() {
 
   layers.regions = new maptalks.PolygonLayer('regions', [], { ...polygonOptions, maxZoom: 4 } ),
   layers.circles = new maptalks.PolygonLayer('circles', [], { ...polygonOptions, minZoom: 3, maxZoom: 6 } ),
-  layers.lines   = new maptalks.LineStringLayer('lines', [], { ...layerOptions, minZoom: 2, maxZoom: 3 } ),
+  //layers.lines   = new maptalks.LineStringLayer('lines', [], { ...layerOptions, minZoom: 2, maxZoom: 3 } ),
+
+  layers.lines   = new maptalks.LineStringLayer('lines', [], { ...layerOptions } ),
+
   layers.markers = new maptalks.PointLayer('markers', [], layerOptions ), // must be the last to be clickable
 
   Object.values(layers).forEach(layer => layer.addTo(groupLayer));
@@ -733,17 +801,17 @@ function indexMarkers() {
 
   //menuControl = new MenuControl(null,{});
 
-  markersControl = new MarkersControl(counters, {icons: icons, groups:markerTypes?.groups??{}, groupCallback: toggleGroup, itemCallback: toggleItem, translate: translate, theme: 'retro' });
+  markersControl = new MarkersControl(counters, {icons: icons, groups:config?.groups??{}, groupCallback: toggleGroup, itemCallback: toggleItem, translate: translate, theme: 'retro' });
 
   if (!settings.activeItems) {
     settings.activeItems = {};
 
-    Object.entries(markerTypes.groups ?? {})
+    Object.entries(config.groups ?? {})
       .filter(([group, value]) => value.default)
       .flatMap(([group]) => Object.keys(counters[group] ?? {}))
       .forEach(name => settings.activeItems[name] = true);
 
-    Object.entries(markerTypes.categories ?? {})
+    Object.entries(config.categories ?? {})
       .filter(([name, value]) => value.default)
       .forEach(([name, value]) => settings.activeItems[name] = true);
   }
@@ -809,10 +877,10 @@ function searchRenderItem(ref) {
 // --- filter -----------------------------------------------------------
 
 function getKey(feature) {
-  return feature.properties.sid || feature.properties.ref_id || feature.properties.name;
+  return feature.properties.sid || feature.properties.id || feature.properties.ref_id || feature.properties.name;
 }
 
-function currentFilter(feature) {
+function passesFilter(feature) {
   let key = getKey(feature);
   let t = feature._type;
 
@@ -820,6 +888,15 @@ function currentFilter(feature) {
 
   if (searchString === '') {
     let visible = settings.activeItems[t.category] === true;
+
+    if (world.heightRange) {
+      const [bottom, top] = world.heightRange;
+      let h = feature.geometry.coordinates[2];
+      if (h<bottom || h>top) {
+        visible = false;
+      }
+    }
+
     return visible;
   }
 
@@ -836,18 +913,18 @@ function applyMatrix(coords, m) {
 const DEFAULT_MAPPING = [["x", 1], ["y", 1], ["z", 1]];
 
 function applyMapping(coords) {
-  let world = Object.values(config.worlds)[0];
   const mapping = world.markers?.mapping ?? DEFAULT_MAPPING;
   const [x, y, z] = coords;
   const source = { x, y, z };
   let p = mapping.map(([axis, sign]) => sign * source[axis]);
+  p[2] *= heightFactor;
   return p;
 }
 
 function reverseMapping(p) {
-  let world = Object.values(config.worlds)[0];
   const mapping = world.markers?.mapping ?? DEFAULT_MAPPING;
   let q = [p.x, p.y, p.z ?? 0];
+  q.z /= heightFactor;
   const source = { x: 0, y: 0, z: 0 };
   mapping.forEach(([axis, sign], i) => {
     source[axis] = q[i] / sign;
@@ -908,6 +985,44 @@ function itemArea(o) {
   }
 }
 
+function rotatePointsInPlace(points, centerX, centerY, angle) {
+    const rad = angle * Math.PI / 180;
+    const cos = Math.cos(rad);
+    const sin = Math.sin(rad);
+    
+    for (let i = 0; i < points.length; i++) {
+        let px = points[i][0];
+        let py = points[i][1];
+        
+        // Translate to origin
+        const tx = px - centerX;
+        const ty = py - centerY;
+        
+        // Rotate
+        points[i][0] = tx * cos - ty * sin + centerX;
+        points[i][1] = tx * sin + ty * cos + centerY;
+        // z coordinate remains unchanged (points[i][2])
+    }
+}
+
+function createRectangle(x,y,z, w,h, angle) {
+  let points = [];
+
+  points.push([x-w, y-h, z]);
+  points.push([x+w, y-h, z]);
+  points.push([x+w, y+h, z]);
+  points.push([x-w, y+h, z]);
+
+  if (angle!=0) {
+    rotatePointsInPlace(points, x,y, angle);
+  }
+
+  let polygon = new maptalks.Polygon(points, {});
+
+  return polygon;
+}
+
+
 function createGeometry(feature) {
   const o = feature.properties;
 
@@ -949,7 +1064,6 @@ function createGeometry(feature) {
   }
 
   // apply areas, if config has areas (folon)
-  const world = Object.values(config.worlds)[0]; // assume default world (0)
   const a = world.areas?.[area];
   if (a) {
     let t = a;
@@ -960,12 +1074,11 @@ function createGeometry(feature) {
     }
   }
 
-
   let t = feature._type;
 
   let markerSymbol = getSymbol(feature.properties, t);
 
-  const marker = new maptalks.Marker([x, y, 0], {
+  const marker = new maptalks.Marker([x, y, flattenMarkers ? 0 : z], {
     symbol: markerSymbol,
     cursor: 'pointer',
     //interactive: false,
@@ -1005,8 +1118,14 @@ function createGeometry(feature) {
   }
 
   if (o.radius>1) {
-    marker.circle = new maptalks.Circle([x, y, -1.5], o.radius, {});
+    marker.circle = new maptalks.Circle([x, y, z], o.radius, {});
     setPolygonOptions(marker.circle, true, t.color ?? 'white');
+  }
+
+  if (o.entity_properties?.box_extents) {
+    const b = o.entity_properties.box_extents;
+    marker.rectangle = createRectangle(x,y,z, b.x, b.y, 0);
+    setPolygonOptions(marker.rectangle, true, 'white');
   }
 
   if (feature._type.region) {
@@ -1022,6 +1141,7 @@ function createGeometry(feature) {
   }
 
   feature._geom = marker;
+
   return marker;
 }
 
@@ -1041,10 +1161,11 @@ function scheduleUpdate() {
     const newMarkers = [];
     const newLines = [];
     const newCircles = [];
+    const newRectangles = [];
 
     while (i < allFeatures.length && performance.now() - start < 500) {
       const feature = allFeatures[i++];
-      const vis = currentFilter(feature);
+      const vis = passesFilter(feature);
 
       const marker = feature._geom;
 
@@ -1053,8 +1174,9 @@ function scheduleUpdate() {
           const m = createGeometry(feature);
           if (m) {
             newMarkers.push(m);
-            if (m.lines) newLines.push(m.line);
+            if (m.line) newLines.push(m.line);
             if (m.circle) newCircles.push(m.circle);
+            if (m.rectangle) newRectangles.push(m.rectangle);
             //console.log('created new marker');
           }
         }
@@ -1072,6 +1194,7 @@ function scheduleUpdate() {
     if (newMarkers.length) layers.markers.addGeometry(newMarkers);
     if (newLines.length) layers.lines.addGeometry(newLines);
     if (newCircles.length) layers.circles.addGeometry(newCircles);
+    if (newRectangles.length) layers.regions.addGeometry(newRectangles);
 
     //console.timeEnd('update');
 
@@ -1265,8 +1388,6 @@ function loadMarkers() {
 
   let markersFile = baseDir+'data/markers.json';
 
-  let world = Object.values(config.worlds)[0];
-
   let format = 'geojson';
 
   if (world.markers && world.markers.url) {
@@ -1289,26 +1410,18 @@ function loadMarkers() {
 
 function addTypes() {
   addMap();
-
-  let world = Object.values(config.worlds)[0];
-  let url = baseDir + (world.markers?.[0]?.types ?? 'data/markerTypes.json');
-  console.log(`loading "${url}"...`);
-  fetch(url).then(r=>r.json()).catch(err=>{console.error(`Failed to fetch/parse "${url}":`, err);return {}})
-  .then(data=>{
-    markerTypes = data;
-    if (markerTypes.icons) iconData = markerTypes.icons;
-    for (const[key,value] of Object.entries(markerTypes.localization?.[settings.language] ?? [])){
-      lang[key] = value;
-    }
-    addRegions();
-  });
+  if (config.icons) iconData = config.icons;
+  addRegions();
 }
 
 function parseConfig(data) {
-  let games = Object.keys(data);
-  let game = games[0]; // later add switchable games 
 
-  config = data[game];
+  config = data;
+
+  if (data.games) {
+    let game = Object.keys(data.games)[0];
+    config = { ...config, ...data.games[ game ] };
+  }
 
   document.title = "Joric's Maps";
   if (config && config.name) {
@@ -1325,6 +1438,7 @@ function parseConfig(data) {
   if (config.localization) {
     let c = config.localization;
     let cc = settings.language ?? 'en';
+
     let url = baseDir + c.path + c.files[cc];
 
     console.log(`loading "${url}"...`);
@@ -1370,6 +1484,16 @@ function parseConfig(data) {
           lang [ key ] = entry;
         }
       }
+
+      if (config.strings) {
+        for (const key of Object.keys(config.strings[settings.language] ?? {})) {
+          const entry = config.strings[settings.language][key];
+          if (entry) {
+            lang [ key ] = entry;
+          }
+        }
+      }
+
       addTypes();
     })
 
@@ -1383,7 +1507,9 @@ function loadConfig() {
 
   console.log('baseDir', baseDir);
 
-  let url = baseDir + 'data/config.json';
+  //let url = baseDir + 'data/config.json';
+  let url = `data/${repoName}.json`;
+
   console.log(`loading "${url}"...`);
 
   fetch(url).then(r => r.json()).catch(err=>{console.error(`Failed to fetch/parse "${url}":`, err);return {}})

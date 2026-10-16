@@ -1,0 +1,358 @@
+{
+  "name": "S.T.A.L.K.E.R. 2",
+  "size": 812900,
+  "localization": {
+    "path": "data/Localization/",
+    "key": "ST_S2BaseGameLocalization",
+    "files": {
+      "en": "Localization_EN.json",
+      "uk": "Localization_UA.json",
+      "fr": "Localization_FR.json",
+      "ru": "Localization_RU.json"
+    }
+  },
+  "worlds": {
+    "default": {
+      "layers": [
+        {
+          "name": "T_DLCWorldMap_UDIM.nofog",
+          "urlTemplate": "https://joric.github.io/stalker2_extras/tiles/dlc_nofog/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 5
+        },
+        {
+          "name": "T_ZU_UndergroundMapDLC_UDIM",
+          "urlTemplate": "https://joric.github.io/stalker2_extras/tiles/dlc_ug/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 5
+        },
+        {
+          "name": "T_ZU_UndergroundMap_UDIM",
+          "urlTemplate": "https://joric.github.io/stalker2_extras/tiles/ug/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 5
+        },
+        {
+          "name": "T_DLCWorldMap_UDIM",
+          "urlTemplate": "https://joric.github.io/stalker2_tileset/extras/dlc/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 5
+        },
+        {
+          "name": "T_WorldMap_UDIM",
+          "urlTemplate": "https://joric.github.io/stalker2_tileset/tiles/{z}/{x}/{y}.jpg",
+          "tileSize": 512,
+          "maxAvailableZoom": 7
+        },
+        {
+          "name": "T_GLOBAL_MAP_LEGEND",
+          "urlTemplate": "https://joric.github.io/stalker2_tileset/extras/wl/{z}/{x}/{y}.png",
+          "tileSize": 512,
+          "maxAvailableZoom": 4
+        },
+        {
+          "name": "T_GLOBAL_MAP_BASE",
+          "urlTemplate": "https://joric.github.io/stalker2_tileset/extras/wb/{z}/{x}/{y}.jpg",
+          "tileSize": 512,
+          "maxAvailableZoom": 5
+        },
+        {
+          "name": "T_WorldMap_LDScheme",
+          "urlTemplate": "https://joric.github.io/stalker2_tileset/extras/ld/{z}/{x}/{y}.png",
+          "tileSize": 512,
+          "maxAvailableZoom": 3
+        },
+        {
+          "name": "topographic",
+          "urlTemplate": "https://joric.github.io/stalker2_tileset/extras/topographic/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 6
+        },
+
+        {
+          "name": "topo_v2",
+          "urlTemplate": "https://joric.github.io/stalker2_tileset/extras/topo_v2/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 6
+        },
+        {
+          "name": "diegetic",
+          "overlayBounds": {"left": -12043.0424, "top": 80842.1161, "right": 823676.2491, "bottom": 819222.3155},
+          "overlay": true,
+          "comment": "layer tileSystem ratio somehow leaks to the entire map so don't use non-uniform overlay tile layers (image layers okay)",
+          "urlTemplate1": "https://joric.github.io/stalker2_tileset/extras/diegetic/{z}/{y}/{x}.webp",
+          "url": "images/diegetic.png",
+          "tileSize": 512,
+          "maxAvailableZoom": 1
+        },
+        {
+          "name": "Stalker_1_Overlay",
+          "urlTemplate": "https://joric.github.io/stalker2_tileset/extras/s1/{z}/{x}/{y}.png",
+          "tileSize": 512,
+          "maxAvailableZoom": 3,
+          "overlay": true
+        },
+        {
+          "name": "dlc_ug_overlay",
+          "urlTemplate": "https://joric.github.io/stalker2_extras/tiles/dlc_ug_overlay/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 5,
+          "overlay": true
+        }
+      ],
+      "regions": [
+        {
+          "name": "T_Regions_Map",
+          "url": "scripts/regions.json",
+          "image": "scripts/T_Regions_Map.png",
+          "skip_color": "#0000ff",
+          "size": 812900,
+          "simplify": "5%"
+        }
+      ]
+    }
+  },
+
+  "categories": {
+    "armor": { "title": "sid_misc_pda_reward_armor" },
+    "anomaly": { "title": "sid_misc_pda_map_playerTags_anomaly" },
+    "ammo": { "title": "sid_misc_pda_reward_ammo_grenades" },
+    "archAnomaly": { "title": "sid_misc_pda_Map_ArchAnomaly" },
+    "artifact": { "title": "sid_misc_pda_reward_artifacts" },
+    "bed": { "title": "sid_misc_pda_Map_MarkerBed" },
+    "contextualAction": { "title": "CA: Unsorted" },
+    "bonfire": { "title": "CA: Bonfire" },
+    "sitting": { "title": "CA: Sitting" },
+    "consumable": { "title": "sid_misc_pda_reward_food_drink" },
+    "controls": { "title": "sid_misc_pda_hint_Controls" },
+    "deadBody": { "title": "sid_npc_name_mertvec" },
+    "dolg": { "title": "sid_character_dolgovec_0" },
+    "detector": { "title": "sid_misc_controlsSettings_equipment_detector_MLI" },
+    "freedom": { "title": "sid_character_freedom_leader_0" },
+    "journal": { "title": "sid_misc_pda_TopPanel_Journal" },
+    "noon": { "title": "sid_character_poldenec_0" },
+    "guide": { "title": "sid_misc_pda_Map_MarkerGuide" },
+    "key": { "title": "sid_questItemprototypes_QuestItem_Key_DoorNew_name" },
+    "props": { "title": "sid_misc_modIO_LMB_props" },
+    "camp": { "title": "sid_misc_pda_Map_MarkerCamp" },
+    "location": { "title": "sid_misc_pda_Map_MarkerLocation" },
+    "medic": { "title": "sid_misc_pda_Map_MarkerMedic" },
+    "mutant": { "title": "sid_npc_name_mutant" },
+    "PDA": { "title": "sid_questItemprototypes_BasePDA_name" },
+    "technician": { "title": "sid_misc_pda_Map_MarkerTechnician" },
+    "shelter": { "title": "sid_misc_pda_Map_MarkerShellter" },
+    "quest": { "title": "sid_misc_answer_sidequest" },
+    "questGiver": { "title": "sid_misc_answer_sidequest" },
+    "region": { "title": "sid_misc_pda_hint_region", "default": true, "zoom": [0,4] },
+    "stash": { "title": "sid_misc_pda_Map_MarkerCache" },
+    "trader": { "title": "sid_misc_pda_Map_MarkerTrader" },
+    "photo": { "title": "sid_misc_QIO_Photo" },
+    "note": { "title": "sid_audiolog_DLC01_SQ15_VydraLostAudiolog_name" },
+    "playerStorage": { "title": "sid_stashes_Gen_Stash285_name" },
+    "scanner": { "title": "sid_character_skaner_0" },
+    "schedule": { "title": "Daily Schedule Zone" },
+    "weapon": { "title": "sid_misc_pda_reward_weapon" }
+  },
+
+  "groups": {
+    "locations1": { "title": "sid_misc_pda_Map_MarkerLocation" },
+    "locations": { "title": "sid_tutorial_tutorial_map_marker_head" },
+    "items": { "title": "sid_misc_pda_Map_MarkerPlayerLandmarkHabar" },
+    "NPCs": { "title": "NPCs" },
+    "misc": { "title": "misc" }
+  },
+
+  "icons": {
+    "location":         { "class": "fa fa-location-crosshairs",       "color": "grey",           "image": "T_LocationOrigin_NotActive_Shadow.png" },
+    "region":           { "class": "fa fa-map-pin",                   "color": "darkslategrey",  "image": "T_NotActive_Region_Shadow.png" },
+    "anomaly":          { "class": "fa fa-disease",                   "color": "slategrey",      "image": "Texture_Anomaly_NotActive_General_Shadow.png" },
+    "arch_anomaly":     { "class": "fa fa-tornado",                   "color": "red",            "image": "Texture_Archianomaly_NotActive_General_Shadow.png" },
+    "bed":              { "class": "fa fa-bed",                       "color": "steelblue",      "image": "Texture_Bed_NotActive_General_Shadow.png" },
+    "camp":             { "class": "fa fa-star",                      "color": "#e8a514",        "image": "Texture_Camp_NotActive_General_Shadow.png" },
+    "danger":           { "class": "fa fa-skull",                     "color": "brown",          "image": "Texture_Dangerous_NotActive_General_Shadow.png" },
+    "follow":           { "class": "fa fa-virus",                     "color": "saddlebrown",    "image": "Texture_Follow_NotActive_General_Shadow.png" },
+    "guide":            { "class": "fa fa-compass",                   "color": "steelblue",      "image": "Texture_Guide_NotActive_General_Shadow.png" },
+    "chest":            { "class": "fa fa-box-archive",               "color": "steelblue",      "image": "Texture_Habar_NotActive_General_Shadow.png" },
+    "technician":       { "class": "fa fa-screwdriver-wrench",        "color": "steelblue",      "image": "Texture_Mechanical_NotActive_General_Shadow.png" },
+    "medic":            { "class": "fa fa-briefcase-medical",         "color": "steelblue",      "image": "Texture_Medecine_NotActive_General_Shadow.png" },
+    "quest":            { "class": "fa fa-flag-checkered",            "color": "orange",         "image": "Texture_Quest_NotActive_General_Shadow.png" },
+    "quest-giver":      { "class": "fa fa-person",                    "color": "darkslategrey",  "image": "Texture_QuestGiver_NotActive_General_Shadow.png" },
+    "radiation-marker": { "class": "fa fa-radiation",                 "color": "dimgrey",        "image": "Texture_Radiation_NotActive_General_Shadow.png",  "background": "darkorange" },
+    "scanner":          { "class": "fa fa-tower-broadcast",           "color": "darkslategrey",  "image": "Texture_Signal_NotActive_General_Shadow.png" },
+    "stash":            { "class": "fa fa-cubes",                     "color": "#8885c5",        "image": "Texture_Stahes_NotActive_General_Shadow.png" },
+    "storage":          { "class": "fa fa-toolbox",                   "color": "steelblue",      "image": "Texture_Storage_NotActive_General_Shadow.png" },
+    "trader":           { "class": "fa fa-sack-dollar",               "color": "steelblue",      "image": "Texture_Trader_NotActive_General_Shadow.png" },
+    "misc":             { "class": "fa fa-question",                  "color": "steelblue",      "image": "CompassMarker_2_3.png", "size":32 },
+    "claws":            { "class": "fa fa-skull",                     "color": "red",            "image": "CompassMarker_0_0.png", "size":32 },
+    "skull":            { "class": "fa-solid fa-skull-crossbones",    "color": "grey",           "image": "CompassMarker_0_1.png", "size":32 },
+    "bag":              { "class": "fa fa-virus",                     "color": "slategrey",      "image": "CompassMarker_0_2.png", "size":32 },
+    "circle":           { "class": "fa fa-crosshairs",                "color": "steelblue",      "image": "CompassMarker_0_3.png", "size":32 },
+    "circle-locked":    { "class": "fa fa-location-crosshairs",       "color": "steelblue",      "image": "CompassMarker_1_0.png", "size":32 },
+    "fire":             { "class": "fa fa-fire",                      "color": "steelblue",      "image": "CompassMarker_1_1.png", "size":32 },
+    "radiation":        { "class": "fa fa-radiation",                 "color": "dimgrey",        "image": "CompassMarker_1_2.png", "size":32, "background": "darkorange" },
+    "lock":             { "class": "fa fa-lock",                      "color": "steelblue",      "image": "CompassMarker_1_3.png", "size":32 },
+    "exclamation":      { "class": "fa fa-exclamation",               "color": "grey",           "image": "CompassMarker_2_0.png", "size":32 },
+    "soldier":          { "class": "fa fa-person-rifle",              "color": "steelblue",      "image": "CompassMarker_2_1.png", "size":32 },
+    "circle-dot":       { "class": "fa fa-circle-dot",                "color": "steelblue",      "image": "CompassMarker_2_2.png", "size":32 },
+    "question":         { "class": "fa fa-question",                  "color": "steelblue",      "image": "CompassMarker_2_3.png", "size":32 },
+    "box":              { "class": "fa fa-box",                       "color": "steelblue",      "image": "CompassMarker_3_0.png", "size":32 },
+    "unlocked":         { "class": "fa fa-lock-open",                 "color": "steelblue",      "image": "CompassMarker_3_1.png", "size":32 },
+    "artifact":         { "class": "fa fa-disease",                   "color": "slategrey",      "image": "CompassMarker_3_2.png", "size":32 },
+    "cave":             { "class": "fa fa-mound",                     "color": "steelblue",      "image": "CompassMarker_3_3.png", "size":32 },
+    "yen":              { "class": "fa fa-key",                       "color": "steelblue",      "image": "CompassMarker_4_0.png", "size":32 },
+    "repair":           { "class": "fa-solid fa-screwdriver-wrench",  "color": "steelblue",      "image": "CompassMarker_4_1.png", "size":32 },
+    "rest":             { "class": "fa fa-campground",                "color": "steelblue",      "image": "CompassMarker_4_2.png", "size":32 },
+    "message":          { "class": "fa-solid fa-comment-dots",        "color": "steelblue",      "image": "CompassMarker_4_3.png", "size":32 }
+  },
+
+  "types": {
+    "group": "misc",
+    "icon": "misc",
+    "match": {
+      "type": {
+        "EQuestNodeType::SetJournal": { "category": "journal", "group": "misc", "icon": "quest" },
+        "EQuestNodeType::TeleportCharacter": { "category": "teleport", "group": "misc", "icon": "circle-locked" },
+        "ESpawnType::ALifeGroup": { "category": "Alife Group", "group": "misc", "icon": "question" },
+        "ESpawnType::Anomaly": { "category": "anomaly", "group": "misc", "icon": "artifact" },
+        "ESpawnType::AnomalySpawner": { "category": "anomaly", "group": "misc", "icon": "artifact" },
+        "ESpawnType::ArtifactSpawner": { "category": "artifact", "group": "items", "icon": "bag" },
+        "ESpawnType::ClickerAnomaly": { "category": "anomaly", "group": "misc", "icon": "artifact" },
+        "ESpawnType::ContextualAction": {
+          "category": "contextualAction",
+          "group": "misc",
+          "icon": "exclamation",
+          "match": {
+            "name": {
+              "_bonfire|_sit_barrel": { "category": "bonfire", "group": "misc", "icon": "fire" },
+              "_pee|_sit|_stand|_lie|_sleep": { "category": "sitting", "group": "misc", "icon": "exclamation" }
+            }
+          }
+        },
+        "ESpawnType::CustomMarker": {
+          "match": {
+            "name": {
+              "EMarkerType::Anomaly": { "category": "anomaly", "group": "notes", "icon": "anomaly" },
+              "EMarkerType::Bed": { "category": "bed", "group": "locations", "icon": "bed" },
+              "EMarkerType::Button": { "category": "controls", "group": "misc", "icon": "circle-dot" },
+              "EMarkerType::CardLock": { "category": "controls", "group": "misc", "icon": "circle-dot" },
+              "EMarkerType::Chest": { "category": "sid_misc_pda_hint_PlayerMarkers", "group": "notes", "icon": "chest" },
+              "EMarkerType::CodeLock": { "category": "codelock", "group": "misc", "icon": "message" },
+              "EMarkerType::Container": { "category": "controls", "group": "misc", "icon": "box" },
+              "EMarkerType::Danger": { "category": "sid_misc_pda_hint_PlayerMarkers", "group": "notes", "icon": "danger" },
+              "EMarkerType::Door": { "category": "controls", "group": "misc", "icon": "circle" },
+              "EMarkerType::DynamicObject": { "category": "controls", "group": "misc", "icon": "lock" },
+              "EMarkerType::Explosives": { "category": "explosives", "group": "misc", "icon": "exclamation" },
+              "EMarkerType::FusePanel": { "category": "controls", "group": "misc", "icon": "circle-dot" },
+              "EMarkerType::Generator": { "category": "controls", "group": "misc", "icon": "circle-dot" },
+              "EMarkerType::InteractableNote": { "category": "note", "group": "misc", "icon": "message" },
+              "EMarkerType::InteractablePDA": { "category": "PDA", "group": "items", "icon": "message" },
+              "EMarkerType::InteractableUSB": { "category": "note", "group": "misc", "icon": "message" },
+              "EMarkerType::Latch": { "category": "controls", "group": "misc", "icon": "circle-dot" },
+              "EMarkerType::Lever": { "category": "controls", "group": "misc", "icon": "circle-dot" },
+              "EMarkerType::Note": { "category": "sid_misc_pda_hint_PlayerMarkers", "group": "notes", "icon": "follow" },
+              "EMarkerType::PadLock": { "category": "controls", "group": "misc", "icon": "circle-dot" },
+              "EMarkerType::Photos": { "category": "photo", "group": "misc", "icon": "question" },
+              "EMarkerType::PlayerStorage": { "category": "playerStorage", "group": "locations", "icon": "storage" },
+              "EMarkerType::Radiation": { "category": "sid_misc_pda_hint_PlayerMarkers", "group": "notes", "icon": "radiation-marker" },
+              "EMarkerType::Scanner": { "category": "scanner", "group": "misc", "icon": "scanner" },
+              "EMarkerType::Teleport": { "category": "controls", "group": "misc", "icon": "circle-dot" },
+              "EMarkerType::TeleportTarget": { "category": "location", "group": "misc", "icon": "circle-locked" },
+              "EMarkerType::Trap": { "category": "controls", "group": "misc", "icon": "unlocked" },
+              "EMarkerType::Turnstile": { "category": "turnstile", "group": "misc", "icon": "exclamation" },
+              "EMarkerType::Valve": { "category": "controls", "group": "misc", "icon": "circle-dot" }
+            }
+          }
+        },
+        "ESpawnType::DailyScheduleZone": { "category": "schedule", "group": "misc", "icon": "exclamation" },
+        "ESpawnType::DeadBody": { "category": "deadBody", "group": "items", "icon": "skull" },
+        "ESpawnType::ElectroAnomaly": { "category": "anomaly", "group": "misc", "icon": "artifact" },
+        "ESpawnType::Hub": { "category": "camp", "color": "#e8a514", "group": "locations", "icon": "camp" },
+        "ESpawnType::Item": {
+          "group": "misc",
+          "category": "misc",
+          "match": {
+            "proto": {
+              "HugeMagTemplate": { "category": "weapon", "group": "items", "icon": "repair" },
+              "^Gun|Template(Sniper|Rifle|Pistol|Shotgun|SMG|DMR)": { "category": "weapon", "group": "items", "icon": "repair" },
+              "^Template(Helmet|Mask|NightVisionGoggles|Binoculars)": { "category": "armor", "group": "items", "icon": "repair" },
+              "TemplateArmor": { "category": "armor", "group": "items", "icon": "repair" },
+              "PDA|Note": { "category": "PDA", "group": "items", "icon": "message" },
+              "QuestItem_Fuse": { "category": "fuse", "group": "items", "icon": "yen" },
+              "QuestItem_Key|Tamplate_Key|_Key_|_USB_": { "category": "key", "group": "misc", "icon": "yen" },
+              "TemplateAmmo": { "category": "ammo", "group": "items", "icon": "box" },
+              "TemplateDetector|Scanner": { "category": "weapon", "group": "items", "icon": "repair" },
+              "TemplateArtifact": { "category": "artifact", "group": "items", "icon": "bag" },
+              "(TemplateConsumable|Energetic)": { "category": "consumable", "group": "items", "icon": "box" }
+            },
+            "ammo_type": {
+              "^EAmmoType": { "category": "ammo", "group": "items", "icon": "box" }
+            }
+          }
+        },
+        "ESpawnType::ItemContainer": {
+          "category": "stash",
+          "group": "items",
+          "icon": "stash",
+          "match": {
+            "name": {
+              "Backpack": {},
+              "Bag": {},
+              "BigSafe": {},
+              "BlueBox": {},
+              "SmallSafe": {}
+            }
+          }
+        },
+        "ESpawnType::LairSpawner": { "category": "lair", "group": "NPCs", "icon": "cave" },
+        "ESpawnType::LightningBallAnomaly": { "category": "anomaly", "group": "misc", "icon": "artifact" },
+        "ESpawnType::Marker": {
+          "match": {
+            "name": {
+              "EMarkerType::ArchAnomaly": { "category": "archAnomaly", "group": "locations", "icon": "arch_anomaly" },
+              "EMarkerType::Hub": { "category": "camp", "color": "#e8a514", "group": "locations", "icon": "camp" },
+              "EMarkerType::Location": { "category": "location", "group": "locations", "icon": "location" },
+              "EMarkerType::RegionMarker": { "category": "region", "group": "locations", "icon": "region", "regionMarker": true }
+            }
+          }
+        },
+        "ESpawnType::MoveToPath": { "category": "misc", "group": "misc", "icon": "exclamation" },
+        "ESpawnType::Obj": {
+          "category": "soldiers",
+          "group": "NPCs",
+          "icon": "soldier",
+          "match": {
+            "name": {
+              "Bloodsucker": { "category": "mutant", "group": "NPCs", "icon": "claws" },
+              "DLC01_Zulus": { "category": "dolg", "group": "NPCs", "icon": "soldier" },
+              "Faust": { "category": "noon", "group": "NPCs", "icon": "soldier" },
+              "HumanBase": { "category": "NPC", "group": "NPCs", "icon": "soldier" },
+              "MainQuest": { "category": "quest", "group": "NPCs", "icon": "quest" },
+              "Mavka": { "category": "freedom", "group": "NPCs", "icon": "soldier" },
+              "QuestNPCBase": { "category": "NPC", "group": "NPCs", "icon": "soldier" },
+              "^(GeneralZombie|Bloodsucker|Chimera|Controller|PseudoDog|Deer|Pseudogiant|Burer|Poltergeist|Bayun|Flesh|Blinddog|Tushkan|Boar|ZombieFoster|Rat|Snork)": { "category": "mutant", "group": "NPCs", "icon": "claws" }
+            },
+            "subtype": {
+              "Guider": { "category": "guide", "group": "locations", "icon": "guide" },
+              "Medic": { "category": "medic", "group": "locations", "icon": "medic" },
+              "QuestGiver": { "category": "questGiver", "group": "NPCs", "icon": "quest-giver" },
+              "Technician": { "category": "technician", "group": "locations", "icon": "technician" },
+              "Trader": { "category": "trader", "group": "locations", "icon": "trader" }
+            }
+          }
+        },
+        "ESpawnType::OnlineModifierZone": { "category": "modifiers", "group": "misc", "icon": "exclamation" },
+        "ESpawnType::PackOfItems": { "category": "props", "group": "items", "icon": "box" },
+        "ESpawnType::Patrol": { "category": "patrol", "group": "NPCs", "icon": "soldier" },
+        "ESpawnType::PillowAnomaly": { "category": "anomaly", "group": "misc", "icon": "artifact" },
+        "ESpawnType::PsyAnomaly": { "category": "anomaly", "group": "misc", "icon": "artifact" },
+        "ESpawnType::Radiation": { "category": "radiation", "group": "misc", "icon": "radiation" },
+        "ESpawnType::SafeZone": { "category": "safezone", "group": "misc", "icon": "exclamation" },
+        "ESpawnType::Shelter": { "category": "shelter", "group": "misc", "icon": "rest" },
+        "ESpawnType::SoapBubbleAnomaly": { "category": "anomaly", "group": "misc", "icon": "artifact" },
+        "ESpawnType::Squad": { "category": "squads", "group": "NPCs", "icon": "soldier" },
+        "ESpawnType::Trigger": { "category": "trigger", "group": "misc", "icon": "exclamation" },
+        "ESpawnType::WeatherSelection": { "category": "schedule", "group": "misc", "icon": "exclamation" }
+      }
+    }
+  }
+}

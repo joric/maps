@@ -1,0 +1,86 @@
+{
+  "games": {
+    "totk": {
+      "name": "The Legend of Zelda: Tears of the Kingdom",
+      "worlds": {
+        "default": {
+          "layers": [
+            {
+              "name": "totk-F",
+              "bounds": {"left": -14768, "top":-17768, "right": 50768, "bottom": 47768 },
+              "urlTemplate": "tiles/totk-F/{z}/{y}/{x}.webp",
+              "tileSize": 512,
+              "size": [36000, 30000],
+              "maxAvailableZoom": 7
+            },
+            {
+              "name": "totk-G",
+              "bounds": {"left": -14768, "top":-17768, "right": 50768, "bottom": 47768 },
+              "urlTemplate": "tiles/totk-G/{z}/{y}/{x}.webp",
+              "size": [36000, 30000],
+              "tileSize": 512,
+              "maxAvailableZoom": 7
+            },
+            {
+              "name": "totk-S",
+              "bounds": {"left": -14768, "top":-17768, "right": 50768, "bottom": 47768 },
+              "urlTemplate": "tiles/totk-S/{z}/{y}/{x}.webp",
+              "size": [36000, 30000],
+              "tileSize": 512,
+              "maxAvailableZoom": 7
+            },
+            {
+              "name": "totk-U",
+              "bounds": {"left": -14768, "top":-17768, "right": 50768, "bottom": 47768 },
+              "urlTemplate": "tiles/totk-U/{z}/{y}/{x}.webp",
+              "size": [36000, 30000],
+              "tileSize": 512,
+              "maxAvailableZoom": 7
+            },
+            {
+              "name": "botw-G",
+              "bounds": {"left": -14768, "top":-17768, "right": 50768, "bottom": 47768 },
+              "size": [36000, 30000],
+              "urlTemplate": "tiles/botw-G/{z}/{y}/{x}.webp",
+              "tileSize": 512,
+              "maxAvailableZoom": 7
+            }
+          ],
+          "regions": [
+            {
+              "name": "T_Regions_Map",
+              "url": "scripts/regions.json",
+              "image": "scripts/T_Regions_Map.png",
+              "skip_color": "#0000ff",
+              "size": 812900,
+              "simplify": "5%",
+              "colors": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  "categories": {
+    "region": { "default": true }
+  },
+
+  "groups": {
+    "regions": {}
+  },
+
+  "icons": {
+    "region": {"color": "grey","class": "fa fa-map-pin"}
+  },
+
+  "types": {
+    "icon": "misc",
+    "group": "misc",
+    "match": {
+      "type": {
+        "regionMarker": { "category": "region", "group": "markers", "icon": "region" }
+      }
+    }
+  }
+}

@@ -1,0 +1,523 @@
+{
+  "name": "Fallout: London",
+  "size": 262144,
+  "worlds": {
+    "LondonWorld": {
+      "name": "London",
+      "layers": [{
+        "name": "LondonWorld",
+        "bounds": {"left": -131072, "top": 131072, "right": 131072, "bottom": -131072},
+        "urlTemplate": "tiles/LondonWorld/{z}/{x}/{y}.png",
+        "maxAvailableZoom": 2
+      }],
+      "regions": [
+        {
+          "size": 262144,
+          "skip_color": "#ffffff",
+          "image": "scripts/regions.png",
+          "url": "scripts/regions.json",
+          "dx": -131072,
+          "dy": -131072,
+          "flip_y": true,
+          "colors": {
+            "#9370db": "westminster",
+            "#2f4f4f": "camden",
+            "#4169e1": "islington",
+            "#4ea24e": "hackney",
+            "#ff6347": "lewisham"
+          }
+        }
+      ],
+
+      "areas": {
+        "WestminsterWorld": { "scale": 0.6, "offset": { "x": -104300, "y": 27900 }, "rotation": 0.57 },
+        "CamdenWorld": { "scale": 1, "offset": { "x": -79000, "y": 74000 } },
+        "IslingtonWorld": { "scale": 0.95, "offset": { "x": -26600, "y": 66500 }, "rotation": 0.57 },
+        "HackneyWorld": { "scale": 0.95, "offset": { "x": 19100, "y": 44000 }, "rotation": 0.78 },
+        "BankofEnglandWorld": { "scale": 1, "offset": { "x": -32000, "y": 35500 } },
+        "BromleyGladesWorld": { "scale": 1, "offset": { "x": 0, "y": 0 } },
+        "StPaulsWorld": { "scale": 1, "offset": { "x": 3000, "y": 0 } },
+        "CoventGardenWorldSpace": { "scale": 1, "offset": { "x": 1500, "y": -2000 } },
+        "IWMWorld": { "scale": 1, "offset": { "x": 0, "y": 0 }, "hidden": true },
+        "DumpWorld": { "scale": 1, "offset": { "x": 2000, "y": -2000 } },
+        "BromleyPindarWorld": { "scale": 1, "offset": { "x": -9000, "y": -8000 } }
+      }
+    },
+
+    "WestminsterWorld": { "name": "Westminster", "scale": 1.9, "offset": { "x": 7000, "y": 22000 },
+      "baseLayers": [{
+        "urlTemplate": "tiles/WestminsterWorld/{z}/{x}/{y}.png",
+        "maxAvailableZoom": 2
+      }]
+    },
+    "IslingtonWorld": { "name": "Islington", "scale": 3.82, "offset": { "x": 0, "y": -47500 },
+      "baseLayers": [{
+        "urlTemplate": "tiles/IslingtonWorld/{z}/{x}/{y}.png",
+        "maxAvailableZoom": 2
+      }]
+    },
+    "HackneyWorld": { "name": "Hackney", "scale": 3.77, "offset": { "x": -77500, "y": -63000 },
+      "baseLayers": [{
+        "urlTemplate": "tiles/HackneyWorld/{z}/{x}/{y}.png",
+        "maxAvailableZoom": 2
+      }]
+    },
+    "CamdenWorld": { "name": "Camden", "scale": 3.77, "offset": { "x": 15000, "y": -126000 },
+      "baseLayers": [{
+        "urlTemplate": "tiles/CamdenWorldWorld/{z}/{x}/{y}.png",
+        "maxAvailableZoom": 2
+      }]
+    },
+    "BankofEnglandWorld": { "name": "Bank of England", "scale": 3.77, "offset": { "x": 6000, "y": 4800 },
+      "baseLayers": [{
+        "urlTemplate": "tiles/BankofEnglandWorld/{z}/{x}/{y}.png",
+        "maxAvailableZoom": 2
+      }]
+    },
+
+    "CoventGardenWorldSpace": { "name":"Covent Garden", "hidden": true },
+    "BromleyGladesWorld": { "name": "Bromley Glades", "hidden": true },
+    "StPaulsWorld": { "name": "St Pauls", "hidden": true },
+    "IWMWorld":{ "name": "War Museum", "hidden": true },
+    "DumpWorld": { "name": "Dump", "hidden": true },
+    "BromleyPindarWorld": { "name": "Bromley Pindar", "hidden": true }
+  },
+
+  "groups": {
+    "markers": { "default": true },
+    "items": {},
+    "NPCs": {},
+    "misc": {}
+  },
+
+  "icons": {
+    "AirfieldMarker": {"class": "fa fa-plane","sprites": [267,268]},
+    "BoSMarker": {"color": "red","class": "fa fa-cat","sprites": [264,265]},
+    "BottlingPlantMarker": {"class": "fa fa-wine-glass","sprites": [187,188]},
+    "BrownstoneMarker": {"class": "fa fa-house-chimney","sprites": [261,262]},
+    "BunkerHillMarker": {"class": "fa fa-monument","sprites": [258,259]},
+    "BunkerMarker": {"class": "fa fa-warehouse","sprites": [255,256]},
+    "CamperMarker": {"class": "fa fa-campground","sprites": [252,253]},
+    "CarMarker": {"class": "fa fa-car","sprites": [249,250]},
+    "CastleMarker": {"class": "fa fa-chess-rook","sprites": [246,247]},
+    "CaveMarker": {"class": "fa fa-mound","sprites": [243,244]},
+    "ChurchMarker": {"class": "fa fa-church","sprites": [240,241]},
+    "CityMarker": {"color": "red","class": "fa fa-city","sprites": [237,238]},
+    "CountryClubMarker": {"class": "fa fa-crown","sprites": [234,235]},
+    "CustomHouseMarker": {"class": "fa fa-landmark-dome","sprites": [231,232]},
+    "DiamondCityMarker": {"color": "orange","class": "fa fa-archway","sprites": [225,226]},
+    "DriveInMarker": {"class": "fa fa-rotate","sprites": [218,219]},
+    "ElevatedHighwayMarker": {"class": "fa fa-bridge","sprites": [215,216]},
+    "EncampmentMarker": {"class": "fa fa-campground","sprites": [212,213]},
+    "FactoryMarker": {"class": "fa fa-industry","sprites": [147,148]},
+    "FaneuilHallMarker": {"class": "fa fa-dollar-sign","sprites": [208,209]},
+    "FarmMarker": {"class": "fa fa-tractor","sprites": [205,206]},
+    "FillingStationMarker": {"class": "fa fa-gas-pump","sprites": [202,203]},
+    "ForestedMarker": {"class": "fa fa-tree","sprites": [199,200]},
+    "GalacticMarker": {"color": "darkcyan","class": "fa fa-plane","sprites": [181,182]},
+    "GoodneighborMarker": {"class": "fa fa-hotel","sprites": [196,197]},
+    "GraveyardMarker": {"class": "fa fa-cross","sprites": [193,194]},
+    "HospitalMarker": {"class": "fa fa-house-medical","sprites": [190,191]},
+    "HubMarker": {"class": "fa fa-bread-slice","sprites": [178,179]},
+    "IndustrialDomeMarker": {"class": "fa fa-industry","sprites": [150,151]},
+    "InstituteMarker": {"color": "lightgrey","class": "fa fa-compass-drafting","sprites": [144,145]},
+    "IrishPrideMarker": {"class": "fa fa-bridge","sprites": [141,142]},
+    "JunkyardMarker": {"class": "fa fa-car-side","sprites": [138,139]},
+    "LandmarkMarker": {"class": "fa fa-landmark","sprites": [135,136]},
+    "LibertaliaMarker": {"class": "fa fa-ferry","sprites": [132,133]},
+    "LowRiseMarker": {"class": "fa fa-house-crack","sprites": [129,130]},
+    "MechanistMarker": {"class": "fa fa-shopping-cart","sprites": [126,127]},
+    "MetroMarker": {"color": "dodgerblue","class": "fa fa-subway","sprites": [123,124]},
+    "MilitaryBaseMarker": {"color": "darkkhaki","class": "fa fa-flag","sprites": [120,121]},
+    "MinutemenMarker": {"color": "darkorange","class": "fa fa-dragon","sprites": [117,118]},
+    "MonorailMarker": {"class": "fa fa-cable-car","sprites": [172,173]},
+    "MonumentMarker": {"class": "fa fa-building-columns","sprites": [114,115]},
+    "ObservatoryMarker": {"class": "fa fa-landmark-dome","sprites": [111,112]},
+    "OfficeMarker": {"class": "fa fa-house","sprites": [108,109]},
+    "OperatorsMarker": {"color": "royalblue","class": "fa fa-dog","sprites": [169,170]},
+    "POIMarker": {"class": "fa fa-location-crosshairs","sprites": [162,163]},
+    "PackMarker": {"color": "saddlebrown","class": "fa fa-dove","sprites": [165,166]},
+    "PierMarker": {"class": "fa fa-water","sprites": [105,106]},
+    "PoliceStationMarker": {"class": "fa fa-helmet-safety","sprites": [97,98]},
+    "PondLakeMarker": {"color": "grey","class": "fa fa-water","sprites": [94,95]},
+    "PrydwenMarker": {"color": "darkslategrey","class": "fa fa-hand-fist","sprites": [85,86]},
+    "RadioTowerMarker": {"class": "fa fa-tower-cell","sprites": [68,69]},
+    "RadioactiveAreaMarker": {"class": "fa fa-radiation","sprites": [71,72]},
+    "RaiderSettlementMarker": {"class": "fa fa-anchor","sprites": [65,66]},
+    "RailroadFactionMarker": {"class": "fa fa-store","sprites": [62,63]},
+    "RailroadMarker": {"class": "fa fa-train","sprites": [59,60]},
+    "RidesMarker": {"class": "fa fa-dharmachakra","sprites": [159,160]},
+    "SafariMarker": {"class": "fa fa-tree","sprites": [156,157]},
+    "SalemMarker": {"class": "fa fa-place-of-worship","sprites": [56,57]},
+    "SatelliteMarker": {"class": "fa fa-satellite-dish","sprites": [50,51]},
+    "SchoolMarker": {"class": "fa fa-graduation-cap","sprites": [47,48]},
+    "SentinelMarker": {"class": "fa fa-igloo","sprites": [44,45]},
+    "SettlementMarker": {"color": "darkcyan","class": "fa fa-tents","sprites": [41,42]},
+    "SewerMarker": {"class": "fa fa-ring","sprites": [38,39]},
+    "ShipwreckMarker": {"class": "fa fa-ship","sprites": [35,36]},
+    "SkyscraperMarker": {"class": "fa fa-building","sprites": [228,229]},
+    "SubmarineMarker": {"class": "fa fa-ship","sprites": [32,33]},
+    "SynthHeadMarker": {"class": "fa fa-globe","sprites": [26,27]},
+    "TownMarker": {"color": "red","class": "fa fa-tree-city","sprites": [23,24]},
+    "TownRuinsMarker": {"class": "fa fa-house-circle-xmark","sprites": [20,21]},
+    "USSConstitutionMarker": {"class": "fa fa-ship","sprites": [14,15]},
+    "UrbanRuinsMarker": {"class": "fa fa-building-circle-xmark","sprites": [17,18]},
+    "VassalSettlementMarker": {"color": "forestgreen","class": "fa fa-bullseye","sprites": [11,12]},
+    "VaultMarker": {"class": "fa fa-gear","sprites": [8,9]},
+    "activator": {"color": "red","class": "fa fa-virus"},
+    "ammo": {"color": "dimgrey","class": "fa fa-toolbox"},
+    "ammo_workbench": {"color": "darkcyan","class": "fa fa-list-ul"},
+    "armor": {"color": "slategrey","class": "fa fa-shirt"},
+    "armor_station": {"color": "darkcyan","class": "fa fa-shield-halved"},
+    "autoload_door": {"class": "fa fa-dungeon"},
+    "bat": {"color": "tomato","class": "fa fa-baseball-bat-ball"},
+    "bed": {"color": "darkcyan","class": "fa fa-bed"},
+    "bed-mattress": {"color": "tan","class": "fa fa-bed"},
+    "bed-sleeping-bag": {"color": "tomato","class": "fa fa-bed"},
+    "beefeaters": {"color": "brown","class": "fa fa-person"},
+    "bomb": {"color": "tomato","class": "fa fa-bomb"},
+    "book": {"color": "red","class": "fa fa-book"},
+    "book_terminal": {"color": "darkcyan","class": "fa fa-book"},
+    "call_box": {"color": "cornflowerblue","class": "fa fa-phone"},
+    "camera": {"color": "tomato","class": "fa fa-camera"},
+    "chemistry_station": {"color": "darkcyan","class": "fa fa-flask"},
+    "cigarette_card": {"color": "rosybrown","class": "fa fa-file-image"},
+    "clarity": {"color": "red","class": "fa fa-briefcase-medical"},
+    "coaster": {"color": "peru","class": "fa fa-image"},
+    "companion": {"color": "orchid","class": "fa fa-person"},
+    "companion-dog": {"color": "orchid","class": "fa fa-dog"},
+    "container": {"color": "darkolivegreen","class": "fa fa-box-archive"},
+    "crowbar": {"color": "tomato","class": "fa fa-baseball-bat-ball"},
+    "cutethulhu": {"color": "darkslategrey","class": "fa fa-virus"},
+    "cutethulhurare": {"color": "red","class": "fa fa-virus"},
+    "cutethulhu_activator": {"color": "darkslategrey","class": "fa fa-square-virus"},
+    "dog_food": {"color": "chocolate","class": "fa fa-shield-dog"},
+    "eastminster": {"color": "tan","class": "fa fa-question-circle"},
+    "excalibur": {"color": "orange","class": "fa fa-jar"},
+    "exterior_door": {"color": "dimgrey","class": "fa fa-door-open"},
+    "folon_npc_peacock": {"class": "fa fa-crow"},
+    "gentry": {"color": "mediumpurple","class": "fa fa-person"},
+    "goggles": {"color": "slategrey","class": "fa fa-glasses"},
+    "hat": {"color": "slategrey","class": "fa fa-helmet-safety"},
+    "holotape": {"color": "peru","class": "fa fa-compact-disc"},
+    "hooligans": {"color": "tomato","class": "fa fa-question-circle"},
+    "hyp_o": {"color": "red","class": "fa fa-syringe"},
+    "ingestible": {"color": "darkcyan","class": "fa fa-utensils"},
+    "interior_door": {"color": "black","class": "fa fa-door-open"},
+    "jack_tars": {"color": "black","class": "fa fa-question-circle"},
+    "key": {"color": "mediumseagreen","class": "fa fa-key"},
+    "keycard": {"color": "mediumseagreen","class": "fa fa-id-card"},
+    "mace": {"color": "tomato","class": "fa fa-spray-can-sparkles"},
+    "magazine": {"color": "steelblue","class": "fa fa-book"},
+    "melee": {"color": "tomato","class": "fa fa-scissors"},
+    "message": {"color": "tan","class": "fa fa-envelope"},
+    "misc": {"class": "fa fa-question-circle"},
+    "mutfruit": {"color": "darkorchid","class": "fa fa-seedling"},
+    "newspaper": {"color": "#aaa","class": "fa fa-newspaper"},
+    "note": {"color": "sandybrown","class": "fa fa-note-sticky"},
+    "npc": {"color": "#555","class": "fa fa-person"},
+    "overdue_book": {"color": "sienna","class": "fa fa-book"},
+    "password": {"color": "mediumseagreen","class": "fa fa-asterisk"},
+    "pickaxe": {"color": "tomato","class": "fa fa-hammer"},
+    "pipe": {"color": "tomato","class": "fa fa-slash"},
+    "racquet": {"color": "tomato","class": "fa fa-table-tennis-paddle-ball"},
+    "rad_x": {"color": "red","class": "fa fa-prescription-bottle"},
+    "rebreather": {"color": "darkcyan","class": "fa fa-head-side-mask"},
+    "roid": {"color": "red","class": "fa fa-jar"},
+    "stat": {"class": "fa fa-question-circle"},
+    "taxi": {"color": "darkorange","class": "fa fa-taxi"},
+    "tea_station": {"color": "darkcyan","class": "fa fa-mug-hot"},
+    "thamesfolk": {"color": "slategrey","class": "fa fa-person"},
+    "tickets": {"color": "peru","class": "fa fa-ticket"},
+    "trowel": {"color": "tomato","class": "fa fa-trowel"},
+    "umbrella": {"class": "fa fa-umbrella"},
+    "vinyl_record": {"color": "darkslategrey","class": "fa fa-record-vinyl"},
+    "visiting_card": {"color": "goldenrod","class": "fa fa-address-card"},
+    "water_signal_beacon": {"color": "seagreen","class": "fa fa-tower-observation"},
+    "weapon": {"color": "tomato","class": "fa fa-gun"},
+    "weapons_workbench": {"color": "darkcyan","class": "fa fa-gun"},
+    "workbench": {"color": "darkcyan","class": "fa fa-wrench"},
+    "workshop": {"color": "red","class": "fa fa-screwdriver-wrench"},
+    "region": {"color": "grey","class": "fa fa-map-pin"}
+  },
+
+  "types": {
+    "icon": "misc",
+    "group": "misc",
+    "match": {
+      "type": {
+        "regionMarker": { "category": "region", "group": "markers", "icon": "region" }
+      },
+      "description": {
+        "Note": { "category": "Note", "group": "custom", "icon": "note" }
+      },
+      "signature": {
+        "ACTI": {
+          "group": "misc",
+          "match": {
+            "editor_id": {
+              "DN011OverdueBookVendMachine": { "category": "Book Terminal", "icon": "book_terminal" },
+              "FOLON_ACTI_LQLondon100": { "category": "Tardis", "icon": "call_box" },
+              "Folon_ACTI_BarryBoatBeacon": { "category": "Water Signal Beacon", "icon": "water_signal_beacon" },
+              "Folon_ACTI_CutethulhuDollActivator": { "category": "Cutethulhu Activator", "icon": "cutethulhu_activator" },
+              "Folon_ACTI_TaxiActivatorFT": { "category": "Taxi", "icon": "taxi" },
+              ".*loot_capsStash_tin": { "category": "Tickets", "icon": "tickets" }
+            }
+          }
+        },
+        "ALCH": {
+          "category": "Ingestible",
+          "group": "items",
+          "icon": "ingestible",
+          "match": {
+            "editor_id": {
+              "Buffout": { "icon": "roid", "item": "Roid" },
+              "Folon_Drinks": { "item": "Drink" },
+              "Folon_FoodDog.*": { "icon": "dog_food", "item": "Dog Food" },
+              "Mentats": { "icon": "clarity", "item": "Clarity" },
+              "Psycho": { "icon": "hyp_o", "item": "Hyp-O" },
+              "RadX": { "icon": "rad_x", "item": "Rad-X" },
+              "XCell": { "icon": "excalibur", "item": "Excalibur" }
+            }
+          }
+        },
+        "AMMO": { "category": "Ammo", "group": "items", "icon": "ammo" },
+        "ARMO": {
+          "category": "Armor",
+          "group": "items",
+          "icon": "armor",
+          "match": {
+            "editor_id": {
+              "Glasses|Goggles|Gasmask": { "icon": "goggles", "item": "Goggles" },
+              "Hat$|Armo_Hat|Helmet": { "icon": "hat", "item": "Hat" }
+            }
+          }
+        },
+        "BOOK": {
+          "category": "Message",
+          "group": "items",
+          "icon": "message",
+          "match": {
+            "editor_id": {
+              ".*Card": { "category": "Message", "group": "items", "icon": "visiting_card", "item": "Visiting Card" },
+              ".*Folon_BOOK_Mag": { "category": "Coaster", "icon": "coaster" },
+              ".*Newspaper": { "category": "Newspaper", "icon": "newspaper" },
+              ".*PerkMag": {
+                "category": "Magazine",
+                "icon": "magazine",
+                "replace": {
+                  "005 Comic": "005 {index}",
+                  "Anarchy Times[r]*": "Anarchy Times {index}",
+                  "D.I.Y.": "DIY: The Householder's Handbook {index}",
+                  "London Crime Statistics": "London Crime Statistics {index}",
+                  "London Locksmith": "London Locksmith {index}",
+                  "Ministry of National Health": "Ministry of National Health {index}",
+                  "Protect and Survive": "Protect and Survive {index}",
+                  "Ranger Ridiculous": "Ranger Ridiculous {index}"
+                }
+              }
+            }
+          }
+        },
+        "CONT": {
+          "category": "Container",
+          "group": "misc",
+          "icon": "container",
+          "match": { "editor_id": { "Folon_SettlementWorkbench": { "category": "Workshop", "icon": "workshop" } } }
+        },
+        "DOOR": {
+          "category": "Exterior Door",
+          "group": "misc",
+          "icon": "exterior_door",
+          "match": {
+            "cell": { "^0.*": { "category": "Door", "icon": "interior_door", "category": "Interior Door" } },
+            "editor_id": { "AutoloadDoor": { "category": "Autoload Door", "icon": "autoload_door" } }
+          }
+        },
+        "FLOR": {
+          "category": "Ingestible",
+          "group": "items",
+          "icon": "ingestible",
+          "match": { "editor_id": { "FloraWildMutfruit": { "icon": "mutfruit", "item": "Mutfruit" } } }
+        },
+        "FURN": {
+          "category": "Workbench",
+          "group": "misc",
+          "icon": "workbench",
+          "match": {
+            "editor_id": {
+              "(GroundLay|Bed)": { "category": "Bed", "category_icon": "bed", "icon": "bed", "item": "Regular Bed", "weight":-1 },
+              "(Mattress|BedGround)": { "category": "Bed", "category_icon": "bed", "icon": "bed-mattress", "item": "Mattress" },
+              ".*SleepingBag": { "category": "Bed", "category_icon": "bed", "icon": "bed-sleeping-bag", "item": "Sleeping Bag" },
+              ".*AmmoWorkbench": { "icon": "ammo_workbench", "item": "Ammo Workbench" },
+              ".*Folon_WorkbenchRebreather": { "icon": "rebreather", "item": "Rebreather" },
+              ".*WorkbenchArmor": { "icon": "armor_station", "item": "Armor Station" },
+              ".*WorkbenchChemistry": { "icon": "chemistry_station" },
+              ".*WorkbenchTeaStation": { "icon": "tea_station" },
+              ".*WorkbenchWeapons": { "icon": "weapons_workbench", "item": "Weapons Workbench" }
+            }
+          }
+        },
+        "KEYM": {
+          "category": "Key",
+          "group": "items",
+          "icon": "key",
+          "match": {
+            "editor_id": {
+              ".*KeyCard": { "category": "Key", "icon": "keycard", "item": "KeyCard" },
+              ".*Password": { "category": "Key", "icon": "password", "item": "Password" }
+            }
+          }
+        },
+        "MISC": {
+          "group": "items",
+          "match": {
+            "editor_id": {
+              "Folon_MiscCuteThulhu": { "category": "CuteThulhu", "icon": "cutethulhu" },
+              "Folon_MiscCuteThulhuRare": { "category": "CuteThulhu", "icon": "cutethulhurare", "item": "CuteThulhu Rare" },
+              "Folon_MiscFeatherPeacock": { "category": "Feather", "icon": "ingestible" },
+              ".*BobbleHead_": { "category": "Coaster", "icon": "coaster" },
+              ".*HymnBook": { "category": "Book", "icon": "book" },
+              ".*MiscCard": { "category": "Cigarette Card", "icon": "cigarette_card" },
+              ".*Vinyl": { "category": "Vinyl Record", "icon": "vinyl_record" },
+              "^OverdueBook$": { "category": "Book", "icon": "overdue_book", "item": "Overdue Book" }
+            }
+          }
+        },
+        "NOTE": { "category": "Holotape", "group": "items", "weight": 1000, "icon": "holotape" },
+        "NPC_": {
+          "category": "Uncategorized",
+          "group": "NPCs",
+          "icon": "npc",
+          "match": {
+            "editor_id": {
+              "Folon_NPC_CamelotPendragon": { "category": "Companion", "icon": "companion", "title": "Pendragon" },
+              "Folon_NPC_Peacock": { "icon": "folon_npc_peacock" },
+              ".*Eastminster": { "category": "Eastminster" },
+              "Folon_NPC_.*Beefeater": { "category": "Beefeaters", "color": "brown" },
+              "Folon_NPC_5thColumn.*": { "category": "5th Column", "color": "red" },
+              "Folon_NPC_Angel.*": { "category": "Angels", "color": "lightgrey" },
+              "Folon_NPC_Camelot.*": { "category": "Camelot", "color": "orange" },
+              "Folon_NPC_Companion.*": { "category": "Companion", "icon": "companion" },
+              "Folon_NPC_DogCompanion.*": { "category": "Companion", "icon": "companion-dog", "title": "Churchill" },
+              "Folon_NPC_Gentry.*": { "category": "Gentry", "color": "mediumpurple" },
+              "Folon_NPC_Hooligan.*": { "category": "Hooligans", "color": "tomato" },
+              "Folon_NPC_IODS.*": { "category": "Isle of Dogs", "color": "royalblue" },
+              "Folon_NPC_JackTar.*": { "category": "Jack Tars", "color": "black" },
+              "Folon_NPC_Pistol.*": { "category": "Pistols", "color": "darkslategrey" },
+              "Folon_NPC_Roundel.*": { "category": "Roundels", "color": "forestgreen" },
+              "Folon_NPC_Thameshaven|NPC_Thamesfolk": { "category": "Thamesfolk", "color": "slategrey" },
+              "Folon_NPC_Tommy.*": { "category": "Tommies", "color": "darkkhaki" },
+              "Folon_NPC_Vagabonds.*": { "category": "Vagabonds", "color": "saddlebrown" }
+            }
+          }
+        },
+        "STAT": {
+          "group": "markers",
+          "match": {
+            "type": {
+              "": { "hidden": true },
+              "Airfield": { "icon": "AirfieldMarker" },
+              "Brotherhood of Steel": { "category": "Factions", "icon": "BoSMarker", "item": "5th Column" },
+              "Brownstone Townhouse": { "icon": "BrownstoneMarker" },
+              "Bunker": { "icon": "BunkerMarker" },
+              "Bunker Hill": { "category": "Bunker Hill", "icon": "BunkerHillMarker" },
+              "Camper": { "icon": "CamperMarker" },
+              "Car": { "category": "Parking", "icon": "CarMarker" },
+              "Castle": { "icon": "CastleMarker" },
+              "Cave": { "icon": "CaveMarker" },
+              "Church": { "icon": "ChurchMarker" },
+              "City": { "icon": "CityMarker" },
+              "Country Club": { "category": "Palace", "icon": "CountryClubMarker" },
+              "Custom 66": { "category": "Naval College", "icon": "RaiderSettlementMarker" },
+              "Custom 67": { "category": "Factions", "icon": "VassalSettlementMarker", "item": "Roundels" },
+              "Custom 69": { "category": "Pub", "icon": "BottlingPlantMarker" },
+              "Custom 70": { "category": "Settlement", "icon": "GalacticMarker" },
+              "Custom 71": { "category": "Restaurant", "icon": "HubMarker" },
+              "Custom 73": { "category": "Monorail", "icon": "MonorailMarker" },
+              "Custom 74": { "category": "Ferris Wheel", "icon": "RidesMarker" },
+              "Custom 75": { "category": "Tree House", "icon": "SafariMarker" },
+              "Custom 77": { "category": "Location", "icon": "POIMarker" },
+              "Custom 79": { "category": "Factions", "icon": "OperatorsMarker", "item": "Isle of Dogs" },
+              "Custom 80": { "category": "Factions", "icon": "PackMarker", "item": "Vagabonds" },
+              "Custom House": { "icon": "CustomHouseMarker" },
+              "Diamond City": { "category": "Gates", "icon": "DiamondCityMarker" },
+              "Drive-In": { "category": "Road Junction", "icon": "DriveInMarker" },
+              "Elevated Highway": { "category": "Bridge", "icon": "ElevatedHighwayMarker" },
+              "Encampment": { "icon": "EncampmentMarker" },
+              "Factory / Industrial Site": { "icon": "FactoryMarker" },
+              "Faneuil Hall": { "category": "Bank", "icon": "FaneuilHallMarker" },
+              "Farm": { "icon": "FarmMarker" },
+              "Filling Station": { "icon": "FillingStationMarker" },
+              "Forested": { "icon": "ForestedMarker" },
+              "Goodneighbor": { "category": "Hotel", "icon": "GoodneighborMarker" },
+              "Gov't Building / Monument": { "icon": "MonumentMarker" },
+              "Graveyard": { "icon": "GraveyardMarker" },
+              "Hospital": { "icon": "HospitalMarker" },
+              "Industrial Dome": { "group": "markers", "icon": "IndustrialDomeMarker" },
+              "Institute": { "category": "Factions", "icon": "InstituteMarker", "item": "Angels" },
+              "Irish Pride": { "category": "Tower Bridge", "icon": "IrishPrideMarker" },
+              "Junkyard": { "icon": "JunkyardMarker" },
+              "Libertalia": { "category": "Dock", "icon": "LibertaliaMarker" },
+              "Low-Rise Building": { "icon": "LowRiseMarker" },
+              "Mechanist LairRaider settlementVassal settlementPotential Vassal settlement": {
+                "category": "Shopping Area",
+                "icon": "MechanistMarker"
+              },
+              "Metro Station": { "icon": "MetroMarker" },
+              "Military Base": { "category": "Factions", "icon": "MilitaryBaseMarker", "item": "Tommies" },
+              "Minutemen": { "category": "Factions", "icon": "MinutemenMarker", "item": "Camelot" },
+              "Natural Landmark": { "icon": "LandmarkMarker" },
+              "Observatory": { "icon": "ObservatoryMarker" },
+              "Office / Civic Building": { "icon": "OfficeMarker" },
+              "Oval": { "icon": "pond_lake" },
+              "Pier": { "icon": "PierMarker" },
+              "Police Station": { "icon": "PoliceStationMarker" },
+              "Pond / Lake": { "icon": "PondLakeMarker" },
+              "Prydwen": { "category": "Factions", "icon": "PrydwenMarker", "item": "Pistols" },
+              "Radio Tower": { "icon": "RadioTowerMarker" },
+              "Radioactive Area": { "icon": "RadioactiveAreaMarker" },
+              "Railroad": { "icon": "RailroadMarker" },
+              "Railroad - Faction": { "category": "Marketplace", "icon": "RailroadFactionMarker" },
+              "Ruins - Town": { "icon": "TownRuinsMarker" },
+              "Ruins - Urban": { "icon": "UrbanRuinsMarker" },
+              "Salem": { "category": "Temple", "icon": "SalemMarker" },
+              "Satellite": { "icon": "SatelliteMarker" },
+              "School": { "icon": "SchoolMarker" },
+              "Sentinel": { "category": "The Dome", "icon": "SentinelMarker" },
+              "Settlement": { "icon": "SettlementMarker" },
+              "Sewer / Utility Tunnels": { "icon": "SewerMarker" },
+              "Shipwreck": { "icon": "ShipwreckMarker" },
+              "Skyscraper": { "icon": "SkyscraperMarker" },
+              "Submarine": { "icon": "SubmarineMarker" },
+              "Synth Head": { "category": "Theatre", "icon": "SynthHeadMarker" },
+              "Town": { "icon": "TownMarker" },
+              "USS Constitution": { "icon": "USSConstitutionMarker" },
+              "Vault": { "icon": "VaultMarker" }
+            }
+          }
+        },
+        "WEAP": {
+          "category": "Weapon",
+          "group": "items",
+          "icon": "weapon",
+          "match": {
+            "editor_id": {
+              "Axe$|Bryce|Razor|Boxcutter|Kukri|Knife|Bayonet|Halberd|Sword|Dagger": { "icon": "melee", "item": "Melee" },
+              "Bat$|Truncheon$": { "icon": "bat", "item": "Bat" },
+              ".*Camera": { "icon": "camera", "item": "Camera" },
+              ".*Crowbar": { "icon": "crowbar", "item": "Crowbar" },
+              "Folon_Weap_Umbrella": { "icon": "umbrella", "item": "Umbrella" },
+              "Hammer|PICKAXE": { "icon": "pickaxe", "item": "Pickaxe" },
+              "Mace$": { "icon": "mace", "item": "Mace" },
+              "Pipe$": { "icon": "pipe", "item": "Pipe" },
+              ".*Racquet": { "icon": "racquet", "item": "Racquet" },
+              ".*Trowel": { "icon": "trowel", "item": "Trowel" },
+              "Weap_Gren|Grenade|Mine": { "icon": "bomb", "item": "Bomb" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

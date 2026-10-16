@@ -1,0 +1,68 @@
+{
+  "name": "Cheap Car Repair",
+  "size": 1418.129,
+  "worlds": {
+    "default": {
+      "layers": [
+        {
+          "bounds": { "left": -745.67, "top": 999.81465, "right": 672.45905, "bottom": -418.31435  },
+          "name": "capture_v1-1.3.003",
+          "urlTemplate": "https://joric.github.io/fuszerka_tileset/tiles/1.3.003/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 7
+        },
+        {
+          "bounds": { "left": -745.67, "top": 999.81465, "right": 672.45905, "bottom": -418.31435  },
+          "overlayBounds": { "left":-896.360937090909, "bottom": -228.3490348304308, "right": 1181.0901989090908, "top": 818.4889567369385 },
+          "name": "Map_Game",
+          "size": [1628, 809],
+          "url": "images/Map_Game.png",
+          "remap": [[[706.5,711.5],[844,166]], [[-102.185, 5.1865],[603.6866, 180.6469]]]
+        }
+      ],
+      "markers": {
+        "mapping": [ ["x", 1], ["z", 1], ["y", 1] ]
+      }
+    }
+  },
+
+  "groups": {
+    "collectable": { "default": true },
+    "parts": {},
+    "misc": {}
+  },
+
+  "icons": {
+    "border": { "class": "fa fa-cube", "color": "red" },
+    "grab":   { "class": "fa fa-hand", "color": "orange" },
+    "collectable":   { "class": "fa fa-box", "color": "steelblue" },
+    "interact":   { "class": "fa fa-rotate", "color": "steelblue" },
+    "tool":   { "class": "fa fa-screwdriver-wrench", "color": "darkcyan" },
+    "part":   { "class": "fa fa-gear", "color": "tomato" },
+    "balloon":   { "class": "fa fa-egg", "color": "steelblue" },
+    "flower": { "class": "fa fa-spa", "color": "deeppink" },
+    "mushroom": { "class": "fa fa-chess-pawn", "color": "tan" }
+  },
+
+  "types": {
+    "icon": "misc",
+    "group": "misc",
+    "match": {
+      "path": {
+        "_ENVIRONMENT_/MainMapBorder": { "icon": "border", "group": "misc", "category": "border" }
+      },
+      "name": {
+        "^\\(Grabbable_Collectable_Prop\\)_Mushroom_": { "icon": "mushroom", "group": "collectable", "category": "mushroom" },
+        "^\\(Grabbable_Collectable_Prop\\)": { "icon": "collectable", "group": "collectable", "category": "prop" },
+        "^\\(Grabbable": { "icon": "grab", "group": "misc", "category": "grabbable" },
+        "^\\(Interactable": { "icon": "interact", "group": "misc", "category": "interactable" },
+        ".*Part_Decoration\\) Balloon": { "icon": "balloon", "group": "collectable", "category": "balloon" },
+        "^\\(Part_Decoration\\)_FlowerBouquet": { "icon": "flower", "group": "collectable", "category": "flower" },
+        "^\\(Tool": { "icon": "tool", "group": "collectable", "category": "tool" },
+        "^\\(Part": { "icon": "part", "group": "parts", "category": "part" },
+        "^\\(QuestPart\\)": { "icon": "part", "group": "parts", "category": "quest part" },
+        "^MainMapBorder_ALL": { "icon": "border", "group": "misc", "category": "border" }
+      }
+    }
+  }
+}

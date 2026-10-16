@@ -1,0 +1,387 @@
+{
+  "name": "Subnautica 2",
+  "size": 300000,
+  "localization": {
+    "path": "data/Localization/Game/",
+    "files": {
+      "en": "en/Game.json",
+      "uk": "uk-UA/Game.json",
+      "fr": "fr-FR/Game.json",
+      "ru": "ru-RU/Game.json",
+      "de": "de-DE/Game.json",
+      "es": "es-419/Game.json",
+      "it": "it/Game.json",
+      "ja": "ja-JP/Game.json",
+      "jo": "ko-KR/Game.json",
+      "pt": "pt-BR/Game.json",
+      "zh": "zh-Hans/Game.json"
+    }
+  },
+  "worlds": {
+    "default": {
+      "layers": [
+        {
+          "name": "capture_v2",
+          "bounds": {"left": -384375, "top": 285937.5, "right": -84375, "bottom": 585937.5 },
+          "urlTemplate": "https://joric.github.io/subnautica2_tileset/tiles/capture_v2/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 8
+        },
+        {
+          "name": "capture_v1",
+          "bounds": { "left": -435200, "top": 204800, "right": -25600, "bottom": 614400 },
+          "urlTemplate": "https://joric.github.io/subnautica2_tileset/tiles/capture_v1/{z}/{x}_{y}.jpg",
+          "tileSize": 512,
+          "maxAvailableZoom": 6
+        }
+
+      ],
+      "regions": [
+        {
+          "name": "scripts/regions.png",
+          "url": "scripts/regions.json",
+          "colors": {
+            "#eae600": "DA_CGShallows",
+            "#0055c4": "DA_CGPlateaus",
+            "#720b0b": "DA_CGGraveyard",
+            "#c4008f": "DA_CGAnemoneHills",
+            "#d67fff": "DA_CGTufaTowers",
+            "#079140": "DA_CGNorthRaceway",
+            "#3b7000": "DA_CGSouthRaceway",
+            "#c1c199": "DA_CGBlightedCoral",
+            "#c45201": "DA_CGLeadzone",
+            "#009ead": "DA_AR-Observatory",
+            "#ff4e32": "DA_AR-PowerPlant",
+            "#f3ee70": "DA_AR-RootCanyon"
+          }
+        }
+      ]
+    }
+  },
+  "categories": {
+    "region": { "title": "ST_Databank.Biomes", "default": true },
+    "playerPosition": { "title": "ST_BaseFeedback.Player" },
+    "basePieces": { "title": "ST_BaseMenuCategories.BasePieces" }
+  },
+
+  "groups" : {
+    "locations": { "title": "ST_Databank.Points_of_Interest" },
+    "blueprints": { "title": "ST_Databank.Blueprints" },
+    "minerals": { "title": "ST_AutomatedLockerNames.Minerals" },
+    "plants": { "title": "ST_BaseMenuCategories.Plants" },
+    "animals": { "title": "ST_Databank.Mobile_Life" },
+    "resources": { "title": "ST_Databank.Resources" },
+    "misc": { "title": "misc" }
+  },
+
+  "items": {
+    "DA_AR-Observatory": { "title": "ST_Ruins_Databanks.Observatory_title" },
+    "DA_AR-PowerPlant": { "title": "ST_Ruins_Databanks.PowerPlant_title" }
+  },
+
+  "strings": {
+    "en": {
+      "DA_CGShallows": "Shallows",
+      "DA_CGPlateaus": "Plateaus",
+      "DA_CGGraveyard": "Graveyard",
+      "DA_CGAnemoneHills": "Anemone Hills",
+      "DA_CGTufaTowers": "Tufa Towers",
+      "DA_CGNorthRaceway": "North Raceway",
+      "DA_CGSouthRaceway": "South Raceway",
+      "DA_CGBlightedCoral": "Blighted Coral",
+      "DA_CGLeadzone": "Leadzone",
+      "DA_AR-RootCanyon": "Root Canyon"
+    },
+    "de": {
+      "DA_CGShallows": "Flachwasser",
+      "DA_CGPlateaus": "Plateaus",
+      "DA_CGGraveyard": "Friedhof",
+      "DA_CGAnemoneHills": "Anemonenhügel",
+      "DA_CGTufaTowers": "Tufftürme",
+      "DA_CGNorthRaceway": "Nordrennbahn",
+      "DA_CGSouthRaceway": "Südrennbahn",
+      "DA_CGBlightedCoral": "Verderbtes Korallenriff",
+      "DA_CGLeadzone": "Bleizone",
+      "DA_AR-RootCanyon": "Wurzelcanyon"
+    },
+    "es": {
+      "DA_CGShallows": "Aguas someras",
+      "DA_CGPlateaus": "Mesetas",
+      "DA_CGGraveyard": "Cementerio",
+      "DA_CGAnemoneHills": "Colinas de anémonas",
+      "DA_CGTufaTowers": "Torres de toba",
+      "DA_CGNorthRaceway": "Pista norte",
+      "DA_CGSouthRaceway": "Pista sur",
+      "DA_CGBlightedCoral": "Coral devastado",
+      "DA_CGLeadzone": "Zona de plomo",
+      "DA_AR-RootCanyon": "Cañón de las raíces"
+    },
+    "fr": {
+      "DA_CGShallows": "Eaux peu profondes",
+      "DA_CGPlateaus": "Plateaux",
+      "DA_CGGraveyard": "Cimetière",
+      "DA_CGAnemoneHills": "Collines d'anémones",
+      "DA_CGTufaTowers": "Tours de tuf",
+      "DA_CGNorthRaceway": "Piste nord",
+      "DA_CGSouthRaceway": "Piste sud",
+      "DA_CGBlightedCoral": "Corail flétri",
+      "DA_CGLeadzone": "Zone de plomb",
+      "DA_AR-RootCanyon": "Canyon des racines"
+    },
+    "it": {
+      "DA_CGShallows": "Acque basse",
+      "DA_CGPlateaus": "Altopiani",
+      "DA_CGGraveyard": "Cimitero",
+      "DA_CGAnemoneHills": "Colline di anemoni",
+      "DA_CGTufaTowers": "Torri di tufo",
+      "DA_CGNorthRaceway": "Pista nord",
+      "DA_CGSouthRaceway": "Pista sud",
+      "DA_CGBlightedCoral": "Corallo avvizzito",
+      "DA_CGLeadzone": "Zona del piombo",
+      "DA_AR-RootCanyon": "Canyon delle radici"
+    },
+    "ja": {
+      "DA_CGShallows": "浅瀬",
+      "DA_CGPlateaus": "高原",
+      "DA_CGGraveyard": "墓地",
+      "DA_CGAnemoneHills": "アネモネの丘",
+      "DA_CGTufaTowers": "トゥファタワー",
+      "DA_CGNorthRaceway": "ノースレースウェイ",
+      "DA_CGSouthRaceway": "サウスレースウェイ",
+      "DA_CGBlightedCoral": "荒廃した珊瑚",
+      "DA_CGLeadzone": "鉛地帯",
+      "DA_AR-RootCanyon": "ルートキャニオン"
+    },
+    "ko": {
+      "DA_CGShallows": "여울",
+      "DA_CGPlateaus": "고원",
+      "DA_CGGraveyard": "묘지",
+      "DA_CGAnemoneHills": "아네모네 언덕",
+      "DA_CGTufaTowers": "응회암 탑",
+      "DA_CGNorthRaceway": "북부 경주로",
+      "DA_CGSouthRaceway": "남부 경주로",
+      "DA_CGBlightedCoral": "황폐한 산호",
+      "DA_CGLeadzone": "납 지대",
+      "DA_AR-RootCanyon": "뿌리 협곡"
+    },
+    "pt": {
+      "DA_CGShallows": "Águas rasas",
+      "DA_CGPlateaus": "Platôs",
+      "DA_CGGraveyard": "Cemitério",
+      "DA_CGAnemoneHills": "Colinas de anêmonas",
+      "DA_CGTufaTowers": "Torres de tufo",
+      "DA_CGNorthRaceway": "Pista norte",
+      "DA_CGSouthRaceway": "Pista sul",
+      "DA_CGBlightedCoral": "Coral devastado",
+      "DA_CGLeadzone": "Zona de chumbo",
+      "DA_AR-RootCanyon": "Canhão das raízes"
+    },
+    "ru": {
+      "DA_CGShallows": "Мель",
+      "DA_CGPlateaus": "Плато",
+      "DA_CGGraveyard": "Кладбище",
+      "DA_CGAnemoneHills": "Холмы анемонов",
+      "DA_CGTufaTowers": "Туфовые башни",
+      "DA_CGNorthRaceway": "Северная трасса",
+      "DA_CGSouthRaceway": "Южная трасса",
+      "DA_CGBlightedCoral": "Увядшие кораллы",
+      "DA_CGLeadzone": "Свинцовая зона",
+      "DA_AR-RootCanyon": "Каньон корней"
+    },
+    "uk": {
+      "DA_CGShallows": "Мілина",
+      "DA_CGPlateaus": "Плато",
+      "DA_CGGraveyard": "Кладовище",
+      "DA_CGAnemoneHills": "Пагорби анемонів",
+      "DA_CGTufaTowers": "Туфові вежі",
+      "DA_CGNorthRaceway": "Північна траса",
+      "DA_CGSouthRaceway": "Південна траса",
+      "DA_CGBlightedCoral": "Зів'ялі корали",
+      "DA_CGLeadzone": "Свинцева зона",
+      "DA_AR-RootCanyon": "Каньйон коріння"
+    },
+    "zh": {
+      "DA_CGShallows": "浅滩",
+      "DA_CGPlateaus": "高原",
+      "DA_CGGraveyard": "墓地",
+      "DA_CGAnemoneHills": "海葵山丘",
+      "DA_CGTufaTowers": "凝灰岩塔",
+      "DA_CGNorthRaceway": "北赛道",
+      "DA_CGSouthRaceway": "南赛道",
+      "DA_CGBlightedCoral": "枯萎珊瑚",
+      "DA_CGLeadzone": "铅区",
+      "DA_AR-RootCanyon": "根峡谷"
+    }
+  },
+
+  "icons": {
+    "blackbox": { "class": "fa fa-box", "color": "indianred" },
+    "lifepod": { "class": "fa fa-life-ring", "color": "orange"},
+    "player": { "class": "fa fa-person", "color": "red"},
+    "region": { "class": "fa fa-map-pin", "color": "darkcyan"},
+    "bookmark": { "class": "fa fa-bookmark", "color": "chocolate"},
+    "chip": { "class": "fa fa-compact-disc", "color": "salmon"},
+    "databox": { "class": "fa fa-record-vinyl", "color": "darkcyan"},
+    "supply_crate": { "class": "fa fa-box-open", "color": "darkcyan"},
+    "blockout_crate": { "class": "fa fa-box-open", "color": "slategrey"},
+    "locker": { "class": "fa fa-box-archive", "color": "darkcyan"},
+    "blueprint": { "class": "fa fa-compass-drafting", "color": "steelblue" },
+    "fragment": { "class": "fa fa-gear", "color": "darkslategray" },
+    "tadpole": { "class": "fa fa-helicopter", "color": "darkslategray" },
+    "terminal": { "class": "fa fa-tv", "color": "slategrey"},
+    "bed": { "class": "fa fa-bed", "color": "slateblue"},
+    "edge_volume": { "class": "fa fa-cube", "color": "firebrick" },
+    "zone_box": { "class": "fa fa-cube", "color": "steelblue" },
+    "poop": { "class": "fa fa-poop", "color": "chocolate" },
+    "water_slug": { "class": "fa fa-shrimp", "color": "pink" },
+    "vegetation": { "class": "fa fa-seedling", "color": "green" },
+    "fish": { "class": "fa fa-fish-fins", "color": "slategrey" },
+    "gun": { "class": "fa fa-gun", "color": "slategrey" },
+    "canker": { "class": "fa fa-biohazard", "color": "magenta" },
+    "turbine": { "class": "fa fa-fan", "color": "red" },
+    "alien_console":{ "class": "fa fa-display", "color": "darkseagreen" },
+    "great_jaw":{ "class": "fa fa-teeth-open", "color": "seagreen" },
+    "glyph": { "class": "fa fa-om", "color": "goldenrod" },
+    "planetary": { "class": "fa fa-globe", "color": "darkcyan" },
+    "upgrade": { "class": "fa fa-wrench", "color": "darkcyan" },
+    "angel_comb": { "class": "fa fa-spa", "color": "hotpink" },
+    "signal": { "class": "fa fa-tower-broadcast", "color": "slategrey" },
+    "station": { "class": "fa fa-tower-cell", "color": "slategrey" },
+    "base": { "class": "fa fa-house", "color": "slategrey" },
+    "medkit": { "class": "fa fa-briefcase-medical", "color": "red" },
+    "acid_anemone": { "class": "fa fa-plant-wilt", "color": "magenta" },
+    "plant": { "class": "fa fa-seedling", "color": "darkcyan" },
+    "pent": { "class": "fa fa-spa", "color": "chocolate" },
+    "resource": { "class": "fa fa-screwdriver-wrench", "color": "darkcyan" },
+    "food": { "class": "fa fa-utensils", "color": "darkcyan" },
+    "monster": { "class": "fa fa-dragon", "color": "red" },
+    "oxygen": { "class": "fa fa-sun-plant-wilt", "color": "royalblue" },
+    "poison_tube": { "class": "fa fa-biohazard", "color": "darkcyan" },
+
+    "titanium": { "class": "fa fa-cubes", "color": "grey" },
+    "silver": { "class": "fa fa-cubes", "color": "lightgrey" },
+    "gold": { "class": "fa fa-cubes", "color": "orange" },
+    "copper": { "class": "fa fa-cubes", "color": "chocolate" },
+    "salt": { "class": "fa fa-gem", "color": "lightgrey" },
+    "quartz": { "class": "fa fa-gem", "color": "MediumAquamarine" },
+    "sulfur": { "class": "fa fa-gem", "color": "orange" },
+    "lithium": { "class": "fa fa-cubes", "color": "slategrey" },
+    "celestine": { "class": "fa fa-gem", "color": "lightblue" },
+    "fulgurite": { "class": "fa fa-gem", "color": "slategrey" },
+    "lead": { "class": "fa fa-cubes", "color": "silver" },
+    "atacamite": { "class": "fa fa-gem", "color": "green" },
+    "shark_needles" :{ "class": "fa fa-road-spikes", "color": "darkcyan" },
+    "deep_root": { "class": "fa fa-carrot", "color": "brown" }
+  },
+  "types": {
+    "icon": "misc",
+    "group": "misc",
+    "match": {
+      "type": {
+
+        "playerPosition": {"icon": "player", "group": "locations"},
+        "regionMarker": {"icon": "region", "group": "locations", "category": "region" },
+
+        "BookMark": {"icon": "bookmark", "group": "misc" },
+        "BP_StaticLifepod_Surface_C": {"icon": "lifepod", "group": "locations" },
+
+        "BP_EdgeOfWorldVolume_C": {"icon": "edge_volume", "group": "locations" },
+
+        "UWEBoxWorldZone": {"icon": "zone_box", "group": "misc" },
+        "BP_Nrtv_QuartzChip_C": { "icon": "chip", "group": "locations"},
+        "BP_RecipeGainDataCard_Button_C": { "icon": "databox", "group": "locations"},
+        "BP_WorldSupplyLocker_C": { "icon": "locker", "group": "locations", "title":"Supply Locker"},
+        "BP_SupplyCrate_C": { "icon": "supply_crate", "group": "locations", "title":"Supply Crate"},
+        "BP_Blockout_Crate*": { "icon": "blockout_crate", "group": "misc", "category": "BP_Blockout_Crate_01_C"},
+
+        "BP_AxumGlyph_C": { "icon": "glyph", "group": "locations", "category": "BP_AxumGlyph_C"},
+        "BP_AxumGlyph_NoAdaptation_C": { "icon": "glyph", "group": "locations", "category": "BP_AxumGlyph_C"},
+
+        "BP_Planetary_C": { "icon": "planetary", "group": "locations"},
+        "BP_Clamthulu_C": { "icon": "great_jaw", "group": "animals"},
+
+        "BP_ComputerTextInterface_Terminal_C": { "icon": "terminal", "group": "locations"},
+
+        "BP_BioBed_Lifepod_C": { "icon": "bed", "group": "misc", "category": "BP_BioBed_C"},
+        "BP_BioBed_C": { "icon": "bed", "group": "misc", "category": "BP_BioBed_C"},
+
+        "BP_BiobedFragment*": { "icon": "blueprint", "group": "blueprints", "category": "BP_BioBed_Scan_C"},
+        "BP_Bio[bB]ed_Scan": { "icon": "blueprint", "group": "blueprints", "category": "BP_BioBed_Scan_C"},
+
+
+        "BP_Black[bB]ox_Clickable_01a_C": { "icon": "blackbox", "group": "locations", "category": "BP_BlackBox_Clickable_01a_C" },
+
+        "BP_CrabFeces_C": { "icon": "poop", "group": "minerals"},
+
+        "BP_ActivateConsoleButton_C": { "icon": "alien_console", "group": "locations"},
+
+
+        "BP_WorldBuildable_C": { "icon": "turbine", "group": "locations"},
+
+        "BP_ResourceDeposit_NeedleSharkNeedles_C": { "icon": "shark_needles", "group": "minerals"},
+        "BP_ResourceDeposit_DeepRootResonatableResource_C": { "icon": "deep_root", "group": "minerals"},
+        "BP_UpgradeTerminal_C": {"icon": "upgrade", "group": "locations" },
+
+        "BP_ScannerStationSignal_C": {"icon": "station", "group": "misc" },
+        "BP_NarrativeSignal_C": {"icon": "signal", "group": "misc" },
+
+        "BP_AbandonedBaseSign_C": {"icon": "base", "group": "locations" },
+
+
+        "BP_Food_C": {"icon": "food", "group": "misc" },
+        "BP_CopperWire_C": {"icon": "resource", "group": "misc"},
+        "BP_WiringKit_C": {"icon": "resource", "group": "misc" },
+        "BP_MedKit_C": {"icon": "medkit", "group": "misc" },
+
+        "BP_Flares_C": {"icon": "resource", "group": "misc" },
+        "BP_TitaniumIngot_C": {"icon": "titanium", "group": "misc" },
+        "BP_Water_C": {"icon": "food", "resource": "misc" },
+        "BP_BasicBattery_C": {"icon": "resource", "group": "misc" },
+
+        ".*(_Scan_|_Scannable_)": {"icon": "blueprint", "group": "blueprints"},
+        ".*Fragment*": {"icon": "blueprint", "group": "blueprints"},
+
+
+        ".*atacamite*": { "icon": "atacamite", "group": "minerals", "category": "BP_ResourceDeposit_Atacamite_C"},
+        ".*celestine*": { "icon": "celestine", "group": "minerals",  "category": "BP_ResourceDeposit_Celestine_C"},
+        ".*copper*": { "icon": "copper", "group": "minerals",  "category": "BP_ResourceDeposit_Copper_C"},
+        ".*fulgurite*": { "icon": "fulgurite", "group": "minerals",  "category": "BP_ResourceDeposit_Fulgurite_C"},
+        ".*gold*": { "icon": "gold", "group": "minerals",  "category": "BP_ResourceDeposit_Gold_C"},
+        ".*lead_c": { "icon": "lead", "group": "minerals",  "category": "BP_ResourceDeposit_Lead_C"},
+        ".*lithium*": { "icon": "lithium", "group": "minerals",  "category": "BP_ResourceDeposit_Lithium_C"},
+        ".*quartz*": { "icon": "quartz", "group": "minerals",  "category": "BP_ResourceDeposit_Quartz_C"},
+        ".*salt*": { "icon": "salt", "group": "minerals",  "category": "BP_ResourceDeposit_Salt_C"},
+        ".*silver*": { "icon": "silver", "group": "minerals",  "category": "BP_ResourceDeposit_Silver_C"},
+        ".*sulfur*": { "icon": "sulfur", "group": "minerals",  "category": "BP_ResourceDeposit_Sulfur_C"},
+        ".*titanium*": { "icon": "titanium", "group": "minerals", "category": "BP_ResourceDeposit_Titanium_C"},
+
+        "BP_Base*": {"icon": "fragment", "group": "misc", "category": "basePieces"},
+
+        "BP_AcidAnemone_C": {"icon": "acid_anemone", "group": "plants"},
+        "BP_AngelCombCore_C": { "icon": "angel_comb", "group": "plants"},
+        "BP_CG_BulbFlower_C":  { "icon": "plant", "group": "plants"},
+        "BP_CoralPad_01c_C": { "icon": "pent", "group": "plants"},
+        "BP_OxygenPlant_C": { "icon": "oxygen", "group": "plants"},
+
+        "BP_BlightNode_C": { "icon": "canker", "group": "plants"},
+
+        "BP_MinorThreat_PoisonTubeCluster_C": { "icon": "poison_tube", "group": "plants"},
+
+        "BP_CavePlantTendrils_01*": {"icon": "vegetation", "group": "plants", "category": "BP_CavePlantTendrils_01a_C"},
+
+        ".*(Flower|Petal|Anemone|Coral|OxygenPlant|Tree|BP_StiltOrb_).*": {"icon": "vegetation", "group": "plants", "category": "misc"},
+
+        "BP_WaterSlugWorldPopProxy_C": { "icon": "water_slug", "group": "animals"},
+
+        ".*(F-ishSchool).*": {"icon": "fish", "group": "animals", "category": "fishSchool"},
+
+        ".*(Leviathan).*": {"icon": "monster", "group": "animals", "category": "BP_CollectorLeviathan_C"},
+
+        ".*(Fish).*": {"icon": "fish", "group": "animals", "category": "fish"},
+
+        "---.*": {"icon": "misc", "group": "misc", "comment": "remove --- to show all blueprints as separate classes"}
+      }
+    }
+  }
+}
+

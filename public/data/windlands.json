@@ -1,0 +1,138 @@
+{
+  "name": "Windlands 2",
+  "size": 4096,
+  "worlds": {
+    "jungle": {
+      "layers": [
+        {
+          "bounds": {"left":-2048, "top":-2048, "right": 2048, "bottom": 2048},
+          "name": "jungle",
+          "urlTemplate": "tiles/jungle/{z}/{x}/{y}.jpg",
+          "tileSize": 512,
+          "maxAvailableZoom": 6
+        }
+      ],
+      "markers": {
+        "url": "data/jungle.json",
+        "format": "unity"
+      }
+    },
+    "desert": {
+      "layers": [
+        {
+          "bounds": {"left":-2048, "top":-2048, "right": 2048, "bottom": 2048},
+          "name": "desert",
+          "urlTemplate": "tiles/desert/{z}/{x}/{y}.jpg",
+          "tileSize": 512,
+          "maxAvailableZoom": 6
+        }
+      ],
+      "markers": {
+        "url": "data/desert.json",
+        "format": "unity"
+      }
+    },
+    "mountain": {
+      "layers": [
+        {
+          "bounds": {"left":-2048, "top":-2048, "right": 2048, "bottom": 2048},
+          "name": "mountain",
+          "urlTemplate": "tiles/mountain/{z}/{x}/{y}.jpg",
+          "tileSize": 512,
+          "maxAvailableZoom": 6
+        }
+      ],
+      "markers": {
+        "url": "data/mountain.json",
+        "format": "unity"
+      }
+    }
+  },
+
+  "groups": {
+    "collectibles": { "default": true },
+    "locations": {},
+    "quests": {},
+    "NPCs": {},
+    "misc": {}
+  },
+
+  "icons": {
+    "relic": {"class": "fa-solid fa-receipt", "color": "slategrey"},
+    "checkpoint": {"class": "fa-solid fa-flag-checkered", "color": "orange"},
+    "secret": {"class": "fa-solid fa-star", "color": "green"},
+    "part": {"class": "fa-solid fa-gear", "color": "violet"},
+    "bomb": {"class": "fa-solid fa-land-mine-on", "color": "purple"},
+    "person": {"class": "fa-solid fa-person", "color": "cornflowerblue"},
+    "enemy": {"class": "fa-solid fa-person", "color": "red"},
+    "target": {"class": "fa-solid fa-location-crosshairs", "color": "tomato"},
+    "rescue": {"class": "fa-solid fa-child", "color": "hotpink"},
+    "fruit": {"class": "fa-solid fa-bomb", "color": "purple"},
+    "misc": {"class": "fa-solid fa-circle-question", "color": "grey"}
+  },
+
+  "types": {
+    "group": "misc",
+    "icon": "misc",
+    "match": {
+      "path": {
+        "/(Solyatta|Maako|Tohir|Rah|Taka_Character_001|LizardGuard|Ra|Saralla|Boro|Trigger-Techsmith)(?: \\(\\d+\\))?$": {
+          "category": "character",
+          "group": "NPCs",
+          "icon": "person"
+        },
+        "/(Tohir-Rollerdroid|RollerDroid \\(\\d+\\)|PossibleEnemyPosition|DroidLocation|JumpPosition)(?:_\\d+)?(?: \\(\\d+\\))?$": {
+          "category": "droid",
+          "group": "NPCs",
+          "icon": "target"
+        },
+        "/(WeakPoint)(?:_\\d+)?(?: \\(\\d+\\))?$": {
+          "category": "target",
+          "group": "locations",
+          "icon": "target"
+        },
+        "/Checkpoint(?:_\\d+)?[^/]*$": {
+          "category": "checkpoint",
+          "group": "locations",
+          "icon": "checkpoint"
+        },
+        "/GoobyFruit(?: \\(\\d\\))?$": {
+          "category": "fruit",
+          "group": "locations",
+          "icon": "fruit"
+        },
+        "/PossibleRescuePosition(?: \\(\\d\\))?": {
+          "category": "rescue",
+          "group": "quests",
+          "icon": "rescue"
+        },
+        "BombPart(?:_\\d+)?$": {
+          "category": "bomb",
+          "group": "quests",
+          "icon": "bomb"
+        },
+        "Bosses/.*(DropShip|Spiderbot|RocketSpiderBot|TenticleBoss|WormBoss|FlyingDroid|BloodKnight|Baldakka)(?:\\d+)?$": {
+          "category": "boss",
+          "group": "NPCs",
+          "icon": "enemy"
+        },
+        "PossibleCollectionPosition(?:_\\d+)?$": {
+          "category": "part",
+          "group": "quests",
+          "icon": "part"
+        },
+        "Secret(?:_\\d+)?$": {
+          "category": "secret",
+          "group": "collectibles",
+          "icon": "secret"
+        },
+        "_Relic(?:_\\d+)?$": {
+          "category": "relic",
+          "group": "collectibles",
+          "icon": "relic"
+        }
+      }
+    }
+  }
+
+}
