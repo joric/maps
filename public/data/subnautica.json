@@ -1,22 +1,6 @@
 {
   "name": "Subnautica 2",
   "size": 300000,
-  "localization": {
-    "path": "data/Localization/Game/",
-    "files": {
-      "en": "en/Game.json",
-      "uk": "uk-UA/Game.json",
-      "fr": "fr-FR/Game.json",
-      "ru": "ru-RU/Game.json",
-      "de": "de-DE/Game.json",
-      "es": "es-419/Game.json",
-      "it": "it/Game.json",
-      "ja": "ja-JP/Game.json",
-      "jo": "ko-KR/Game.json",
-      "pt": "pt-BR/Game.json",
-      "zh": "zh-Hans/Game.json"
-    }
-  },
   "worlds": {
     "default": {
       "layers": [
@@ -58,6 +42,24 @@
       ]
     }
   },
+
+  "localization": {
+    "path": "data/Localization/Game/",
+    "files": {
+      "en": "en/Game.json",
+      "uk": "uk-UA/Game.json",
+      "fr": "fr-FR/Game.json",
+      "ru": "ru-RU/Game.json",
+      "de": "de-DE/Game.json",
+      "es": "es-419/Game.json",
+      "it": "it/Game.json",
+      "ja": "ja-JP/Game.json",
+      "jo": "ko-KR/Game.json",
+      "pt": "pt-BR/Game.json",
+      "zh": "zh-Hans/Game.json"
+    }
+  },
+
   "categories": {
     "region": { "title": "ST_Databank.Biomes", "default": true },
     "playerPosition": { "title": "ST_BaseFeedback.Player" },

@@ -1,23 +1,6 @@
 {
   "name": "Order of the Sinking Star",
-  "size": 192,
-  "localization": {
-    "path": "data/Localization/",
-    "files": {
-      "de": "de.json",
-      "en": "en.json",
-      "es": "es.json",
-      "fr": "fr.json",
-      "it": "it.json",
-      "ja": "ja.json",
-      "ko": "ko.json",
-      "pt-br": "pt-br.json",
-      "ru": "ru.json",
-      "s-cn": "s-cn.json",
-      "t-cn": "t-cn.json"
-    }
-  },
-
+  "size": 190,
   "worlds": {
     "overworld": {
       "heightRange": [-4,10],
@@ -99,10 +82,28 @@
     }
   },
 
+  "localization": {
+    "path": "data/Localization/",
+    "files": {
+      "de": "de.json",
+      "en": "en.json",
+      "es": "es.json",
+      "fr": "fr.json",
+      "it": "it.json",
+      "ja": "ja.json",
+      "ko": "ko.json",
+      "pt-br": "pt-br.json",
+      "ru": "ru.json",
+      "s-cn": "s-cn.json",
+      "t-cn": "t-cn.json"
+    }
+  },
+
+
   "groups": {
     "items": { "default": true },
     "levels": { "default": true },
-    "regions": { },
+    "markers": { },
     "misc": { }
   },
 

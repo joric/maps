@@ -32,7 +32,7 @@ let customImagesDefault = true;
 let extentOnSearch = false;
 
 let allowLines = true;
-let heightFactor = 0.1;
+let heightFactor = 1;
 let flattenMarkers = false;
 
 let slugs = [
@@ -627,6 +627,22 @@ function addMap() {
     attribution: { position: {top: -50}, },
   });
   
+
+  /*
+  // scale control
+  const orig = map.pixelToDistance.bind(map);
+  const k = mapSize / tileSize / 100 / 1000; // correction factor
+  map.pixelToDistance = (dx, dy) => orig(dx, dy) * k;
+
+  const scale = new maptalks.control.Scale({
+      position: { bottom: 25, left: 120 },
+      maxWidth: 250,
+      metric: true,
+      imperial: false
+  }).addTo(map);
+  */
+
+
   let rasterLayers = {...baseLayers, ...overlays};
 
   Object.values(rasterLayers).forEach(layer => {
@@ -749,21 +765,16 @@ function addMap() {
 
   // sceneconfig options https://doc.maptalks.com/docs/api/vt/point-layer/
 
+
+  layers.boxes = new maptalks.ExtrudePolygonLayer('boxes', [], { } ).addTo(map);
+
+
   let layerOptions = { sceneConfig: { depthFunc: '<=' } };
-
-  let polygonOptions = { maxZoom: 3 }
-
   let groupLayer = new maptalks.GroupGLLayer('features', [], {}).addTo(map);
+  layers.polygons = new maptalks.PolygonLayer('polygons', [], { ...layerOptions } ).addTo(groupLayer);
+  layers.lines   = new maptalks.LineStringLayer('lines', [], { ...layerOptions } ).addTo(groupLayer);
+  layers.markers = new maptalks.PointLayer('markers', [], layerOptions ).addTo(groupLayer);
 
-  layers.regions = new maptalks.PolygonLayer('regions', [], { ...polygonOptions, maxZoom: 4 } ),
-  layers.circles = new maptalks.PolygonLayer('circles', [], { ...polygonOptions, minZoom: 3, maxZoom: 6 } ),
-  //layers.lines   = new maptalks.LineStringLayer('lines', [], { ...layerOptions, minZoom: 2, maxZoom: 3 } ),
-
-  layers.lines   = new maptalks.LineStringLayer('lines', [], { ...layerOptions } ),
-
-  layers.markers = new maptalks.PointLayer('markers', [], layerOptions ), // must be the last to be clickable
-
-  Object.values(layers).forEach(layer => layer.addTo(groupLayer));
 
   popup = new PopupControl();
 
@@ -1017,9 +1028,60 @@ function createRectangle(x,y,z, w,h, angle) {
     rotatePointsInPlace(points, x,y, angle);
   }
 
-  let polygon = new maptalks.Polygon(points, {});
+  //let polygon = new maptalks.Polygon(points, { properties: { height: 50, altitude: 20} });
+
+  let t = 20;
+
+  let polygon = new maptalks.Rectangle([x-w/2,y-h/2, z ], w,h, { properties: { height:t, altitude: z } });
 
   return polygon;
+}
+
+
+function zoomToPolygon(polygon, zoom = 3) {
+  const extent = polygon.getExtent();
+  if (extent) map.fitExtent(extent);
+}
+
+function zoomToPolygon1(polygon, zoom = 3) {
+  const extent = polygon.getExtent();
+  let mapZoom = map.getZoom();
+  if (!extent || zoom < mapZoom) return;
+  const center = extent.getCenter();
+  map.animateTo({center: center, zoom: zoom+1});
+  selectPolygon(polygon, false);
+}
+
+function selectPolygon(polygon, bSelect, lineColor, polygonOpacity) {
+  const defaultSymbol = {
+    polygonOpacity: polygonOpacity,
+    lineOpacity: 0.5,
+    lineColor: lineColor ?? '#fff',
+    polygonFill: lineColor ?? '#fff',
+    lineWidth: 2.5,
+  };
+
+  const hoverSymbol = {
+    polygonOpacity: polygonOpacity + 0.5,
+    lineWidth: 2.5,
+    lineColor: lineColor ?? '#fff',
+    polygonFill: lineColor ?? '#fff',
+  };
+
+  //bSelect = bSelect && map.getZoom() <= zoom;
+  polygon.setSymbol(bSelect ? hoverSymbol : defaultSymbol);
+  polygon.config({cursor: bSelect ? 'pointer': 'default'});
+}
+
+function setPolygonOptions(polygon, bSelectable, color, polygonOpacity=0.25) {
+
+  selectPolygon(polygon, false, color, polygonOpacity);
+
+  if (bSelectable) {
+    polygon.on('mouseover', e => { selectPolygon(e.target, true, color, polygonOpacity); })
+    polygon.on('mouseout', e => { selectPolygon(e.target, false, color, polygonOpacity); })
+    polygon.on('click', e => { zoomToPolygon(e.target); })
+  }
 }
 
 
@@ -1123,9 +1185,14 @@ function createGeometry(feature) {
   }
 
   if (o.entity_properties?.box_extents) {
+
     const b = o.entity_properties.box_extents;
-    marker.rectangle = createRectangle(x,y,z, b.x, b.y, 0);
-    setPolygonOptions(marker.rectangle, true, 'white');
+
+    marker.box = new maptalks.Rectangle([x-b.x,y+b.y,z], b.x*2, b.y*2, { properties: { height:b.z } });
+
+    //marker.polygon = createRectangle(x,y,z, b.x, b.y, 0);
+
+    setPolygonOptions(marker.box, true, 'white');
   }
 
   if (feature._type.region) {
@@ -1160,8 +1227,8 @@ function scheduleUpdate() {
 
     const newMarkers = [];
     const newLines = [];
-    const newCircles = [];
-    const newRectangles = [];
+    const newPolygons = [];
+    const newBoxes = [];
 
     while (i < allFeatures.length && performance.now() - start < 500) {
       const feature = allFeatures[i++];
@@ -1175,15 +1242,17 @@ function scheduleUpdate() {
           if (m) {
             newMarkers.push(m);
             if (m.line) newLines.push(m.line);
-            if (m.circle) newCircles.push(m.circle);
-            if (m.rectangle) newRectangles.push(m.rectangle);
+            if (m.circle) newPolygons.push(m.circle);
+            if (m.polygon) newPolygons.push(m.polygon);
+            if (m.box) newBoxes.push(m.box);
+
             //console.log('created new marker');
           }
         }
 
         // !vis && !marker: nothing to do, stays uncreated
       } else {
-        for (const g of [marker, marker.line, marker.circle, marker.polygon]) {
+        for (const g of [marker, marker.line, marker.circle, marker.polygon, marker.box]) {
           if (g && vis !== g.isVisible()) vis ? g.show() : g.hide();
         }
       }
@@ -1193,8 +1262,8 @@ function scheduleUpdate() {
 
     if (newMarkers.length) layers.markers.addGeometry(newMarkers);
     if (newLines.length) layers.lines.addGeometry(newLines);
-    if (newCircles.length) layers.circles.addGeometry(newCircles);
-    if (newRectangles.length) layers.regions.addGeometry(newRectangles);
+    if (newPolygons.length) layers.polygons.addGeometry(newPolygons);
+    if (newBoxes.length) layers.boxes.addGeometry(newBoxes);
 
     //console.timeEnd('update');
 
@@ -1258,51 +1327,6 @@ function updateItems() {
   setTimeout(scheduleUpdate, 0);
 }
 
-function selectPolygon(polygon, bSelect, lineColor) {
-  const hoverSymbol = {
-    polygonOpacity: 0.25,
-    lineWidth: 2.5,
-    lineColor: lineColor ?? '#fff',
-    polygonFill: lineColor ?? '#fff',
-  };
-
-  const defaultSymbol = {
-    lineOpacity: 0.5,
-    lineColor: lineColor ?? '#fff',
-    polygonFill: lineColor ?? '#fff',
-    polygonOpacity: 0.0,
-    lineWidth: 2.5,
-  };
-
-  //bSelect = bSelect && map.getZoom() <= zoom;
-  polygon.setSymbol(bSelect ? hoverSymbol : defaultSymbol);
-  polygon.config({cursor: bSelect ? 'pointer': 'default'});
-}
-
-function zoomToPolygon(polygon, zoom = 3) {
-  const extent = polygon.getExtent();
-  if (extent) map.fitExtent(extent);
-}
-
-function zoomToPolygon1(polygon, zoom = 3) {
-  const extent = polygon.getExtent();
-  let mapZoom = map.getZoom();
-  if (!extent || zoom < mapZoom) return;
-  const center = extent.getCenter();
-  map.animateTo({center: center, zoom: zoom+1});
-  selectPolygon(polygon, false);
-}
-
-function setPolygonOptions(polygon, bSelectable, color) {
-  selectPolygon(polygon, false, color);
-
-  if (bSelectable) {
-    polygon.on('mouseover', e => { selectPolygon(e.target, true, color); })
-    polygon.on('mouseout', e => { selectPolygon(e.target, false, color); })
-    polygon.on('click', e => { zoomToPolygon(e.target); })
-  }
-}
-
 function addRegions() {
   console.time('regions');
 
@@ -1335,7 +1359,7 @@ function addRegions() {
       allRegions.push(polygon);
     });
 
-    layers.regions.addGeometry(polygons);
+    layers.polygons.addGeometry(polygons);
 
     loadMarkers();
   })
