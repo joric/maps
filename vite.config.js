@@ -79,7 +79,7 @@ export default defineConfig(({ command }) => {
     },
 
     plugins: [
-      watchFiles(['submodules/*/data/*.json', 'submodules/*/scripts/*.json']),
+      watchFiles(['public/*/*.json', 'submodules/*/data/*.json', 'submodules/*/scripts/*.json']),
 
       // Prod only: keep `fuse.js/worker` external so it's NOT bundled.
       // Dev resolves it from node_modules normally.

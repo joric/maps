@@ -1062,7 +1062,7 @@ function selectPolygon(polygon, bSelect, lineColor, polygonOpacity) {
   };
 
   const hoverSymbol = {
-    polygonOpacity: polygonOpacity + 0.5,
+    polygonOpacity: polygonOpacity + 0.25,
     lineWidth: 2.5,
     lineColor: lineColor ?? '#fff',
     polygonFill: lineColor ?? '#fff',
@@ -1084,6 +1084,7 @@ function setPolygonOptions(polygon, bSelectable, color, polygonOpacity=0.25) {
   }
 }
 
+let bias = 0;
 
 function createGeometry(feature) {
   const o = feature.properties;
@@ -1188,7 +1189,9 @@ function createGeometry(feature) {
 
     const b = o.entity_properties.box_extents;
 
-    marker.box = new maptalks.Rectangle([x-b.x,y+b.y,z], b.x*2, b.y*2, { properties: { height:b.z } });
+    marker.box = new maptalks.Rectangle([x-b.x,y+b.y,z], b.x*2, b.y*2, { properties: { height:b.z + bias } });
+
+    bias += 0.05;
 
     //marker.polygon = createRectangle(x,y,z, b.x, b.y, 0);
 
