@@ -19,6 +19,7 @@ import { getType } from './marker-types.js';
 import { getIcon } from './marker-icons.js';
 
 import * as unity from './unity-reader.js';
+import * as simplify from './simplify.js';
 
 const RUNNING_MODE = window.location.protocol === 'file:'  ? 'file' : ( import.meta.env.DEV  ? 'dev' : 'prod' );
 
@@ -68,6 +69,7 @@ let spriteIndex = 0;
 
 let allFeatures = [];
 let allRegions = [];
+let featureIndexById = {};
 
 const defaultPitch = 50;
 let fuse;
@@ -359,8 +361,9 @@ function assignRegions() {
 }
 
 function assignTypes() {
-  allFeatures.forEach(feature => {
+  allFeatures.forEach((feature, i) => {
     feature._type = getType(feature.properties, config);
+    featureIndexById[feature.properties.id] = i;
   });
 }
 
@@ -415,7 +418,7 @@ function getFuse() {
 function renderItem(feature) {
   let o = feature?.properties ?? {};
   let t = feature?._type ?? {};
-  let title = translate(o.title || o.name);
+  let title = translate(o.title || o.name || o.type);
   let subtitle = translate(t.group, 'groups');
 
   if (t.category) subtitle += ' / ' + translate(t.category, 'categories');
@@ -1086,6 +1089,27 @@ function setPolygonOptions(polygon, bSelectable, color, polygonOpacity=0.25) {
 
 let bias = 0;
 
+function parabola(start, end, maxHeight = null, steps = 50) {
+  const [x0, y0, z0] = start;
+  const [x1, y1, z1] = end;
+  const dx = x1 - x0;
+  const dy = y1 - y0;
+  const horizontalDistance = Math.sqrt(dx * dx + dy * dy);
+  const baseHeight = Math.max(z0, z1);
+  if (maxHeight === null) maxHeight = baseHeight + horizontalDistance / 8;
+  else maxHeight = Math.max(maxHeight, baseHeight + 0.001);
+  const points = [];
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    const x = x0 + dx * t;
+    const y = y0 + dy * t;
+    const z = z0 * (1 - t) + z1 * t + 4 * (maxHeight - baseHeight) * t * (1 - t);
+    //points.push([x, y, z]);
+    points.push({x:x, y:y, z:z}); // needed for simplify
+  }
+  return points;
+}
+
 function createGeometry(feature) {
   const o = feature.properties;
 
@@ -1186,17 +1210,48 @@ function createGeometry(feature) {
   }
 
   if (o.entity_properties?.box_extents) {
-
     const b = o.entity_properties.box_extents;
-
     marker.box = new maptalks.Rectangle([x-b.x,y+b.y,z], b.x*2, b.y*2, { properties: { height:b.z + bias } });
-
     bias += 0.05;
-
     //marker.polygon = createRectangle(x,y,z, b.x, b.y, 0);
-
     setPolygonOptions(marker.box, true, 'white');
   }
+
+
+  if (o.entity_properties?.unlocked_by_id) {
+    const id = o.entity_properties.unlocked_by_id;
+    const parentFeature = allFeatures[featureIndexById[id]];
+
+    if (parentFeature) {
+
+      const start = applyMapping(parentFeature.geometry.coordinates);
+      const end = applyMapping(feature.geometry.coordinates);
+      let points = parabola(start, end);
+
+      const opacity = 0.5;
+      const lineWidth = 3;
+
+      let lineColor = {
+
+            'lineColor' : {
+              'type' : 'linear',
+              'colorStops' : [
+                [0.00, 'red'],
+                [1 / 4, 'orange'],
+                [2 / 4, 'green'],
+                [3 / 4, 'aqua'],
+                [1.00, 'white']
+              ]
+            },
+      }
+
+      lineColor = 'white';
+
+      marker.link = new maptalks.LineString(points, { symbol: { lineOpacity: opacity, lineColor: lineColor, lineWidth: lineWidth } });
+    }
+  }
+
+
 
   if (feature._type.region) {
     for (const polygon of allRegions) {
@@ -1245,6 +1300,7 @@ function scheduleUpdate() {
           if (m) {
             newMarkers.push(m);
             if (m.line) newLines.push(m.line);
+            if (m.link) newLines.push(m.link);
             if (m.circle) newPolygons.push(m.circle);
             if (m.polygon) newPolygons.push(m.polygon);
             if (m.box) newBoxes.push(m.box);
@@ -1255,7 +1311,7 @@ function scheduleUpdate() {
 
         // !vis && !marker: nothing to do, stays uncreated
       } else {
-        for (const g of [marker, marker.line, marker.circle, marker.polygon, marker.box]) {
+        for (const g of [marker, marker.line, marker.circle, marker.polygon, marker.box, marker.link]) {
           if (g && vis !== g.isVisible()) vis ? g.show() : g.hide();
         }
       }
