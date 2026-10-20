@@ -16,26 +16,6 @@
           "maxZoom": 7
         },
         {
-          "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
-          "name": "sky_64k",
-          "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/sky_64k/{z}/{y}/{x}.webp",
-          "tileSize": 512,
-          "maxAvailableZoom": 7,
-          "repeatWorld": false,
-          "size": [65536, 65536],
-          "maxZoom": 7
-        },
-        {
-          "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
-          "name": "underworld_64k",
-          "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/underworld_64k/{z}/{y}/{x}.webp",
-          "tileSize": 512,
-          "maxAvailableZoom": 7,
-          "repeatWorld": false,
-          "size": [65536, 65536],
-          "maxZoom": 7
-        },
-        {
           "bounds": { "left": -77, "top": 221.5, "right": 219, "bottom": 74},
           "name": "Release_v1",
           "urlTemplate": "tiles/Release_v1/{z}/{y}/{x}.webp",
@@ -57,53 +37,79 @@
         {
           "name": "overworld_2160p",
           "bounds": {"left": -65, "top": 157, "right": 223, "bottom": -5},
-          "url": "images/overworld_2160p.jpg",
+          "url": "https://joric.github.io/ootss_tileset/images/overworld_2160p.jpg",
           "overlay": true,
           "size": [3840, 2160],
           "remap": { "cellSize": 13.34, "dx": -65, "dy": -5 },
           "comment": "from YouTube trailer, https://youtu.be/4m8R1BjjioU?t=90"
         }
-      ],
-      "grid": [
+      ]
+    },
+    "sky": {
+      "heightRange": [10, 75],
+      "layers": [
         {
-          "name": "default_grid",
-          "bounds": { "left": 81.5, "top": -15.5, "right":241.5, "bottom": 166.5},
-          "center": { "left": 89.5, "top": 75.5 }
-        }
-      ],
-      "markers": {
-        "url": "scripts/markers.geojson"
-      },
-      "regions1": [
-        {
-          "name": "default",
-          "image": "scripts/regions.png",
-          "url": "scripts/regions.json",
-          "size": 192,
-          "simplify": "100%",
-          "dx": -5.5,
-          "dy": -7.5,
-          "flip_y": true,
-          "colors": {
-            "#000000": "center",
-            "#ffff00": "crossroads",
-            "#0000ff": "promesst",
-            "#ffa500": "mirror",
-            "#ff0000": "heroes1",
-            "#00ff00": "heroes2",
-            "#ff00ff": "heroes3",
-            "#00ffff": "water"
-          }
+          "name": "sky_64k",
+          "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
+          "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/sky_64k/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 7,
+          "repeatWorld": false,
+          "size": [65536, 65536],
+          "maxZoom": 7
         }
       ]
     },
     "underworld": {
-      "heightRange": [-57,-4]
-    },
-    "sky": {
-      "heightRange": [10, 75]
+      "heightRange": [-57,-4],
+      "layers": [
+        {
+          "name": "underworld_64k",
+          "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
+          "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/underworld_64k/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 7,
+          "repeatWorld": false,
+          "size": [65536, 65536],
+          "maxZoom": 7
+        }
+      ]
     }
   },
+  "grid": [
+    {
+      "name": "default_grid",
+      "bounds": { "left": 81.5, "top": -15.5, "right":241.5, "bottom": 166.5},
+      "center": { "left": 89.5, "top": 75.5 }
+    }
+  ],
+
+  "markers": {
+    "url": "scripts/markers.geojson"
+  },
+
+  "regions1": [
+    {
+      "name": "default",
+      "image": "scripts/regions.png",
+      "url": "scripts/regions.json",
+      "size": 192,
+      "simplify": "100%",
+      "dx": -5.5,
+      "dy": -7.5,
+      "flip_y": true,
+      "colors": {
+        "#000000": "center",
+        "#ffff00": "crossroads",
+        "#0000ff": "promesst",
+        "#ffa500": "mirror",
+        "#ff0000": "heroes1",
+        "#00ff00": "heroes2",
+        "#ff00ff": "heroes3",
+        "#00ffff": "water"
+      }
+    }
+  ],
 
   "templates" : {
     "popup": {

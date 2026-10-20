@@ -90,8 +90,8 @@ export default defineConfig(({ command }) => {
           {
             name: 'maptalks-gl',
             var: 'maptalks',
-            path: 'https://cdn.jsdelivr.net/npm/maptalks-gl@0.124.4/dist/maptalks-gl.min.js',
-            css: 'https://cdn.jsdelivr.net/npm/maptalks-gl@0.124.4/dist/maptalks-gl.css',
+            path: 'https://unpkg.com/maptalks-gl@0.124.4/dist/maptalks-gl.js',
+            css: 'https://unpkg.com/maptalks-gl@0.124.4/dist/maptalks-gl.css',
           },
           {
             name: '@fortawesome/fontawesome-free/js/all.js',

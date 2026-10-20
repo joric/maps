@@ -1,16 +1,6 @@
 {
   "name": "S.T.A.L.K.E.R. 2",
   "size": 812900,
-  "localization": {
-    "path": "data/Localization/",
-    "key": "ST_S2BaseGameLocalization",
-    "files": {
-      "en": "Localization_EN.json",
-      "uk": "Localization_UA.json",
-      "fr": "Localization_FR.json",
-      "ru": "Localization_RU.json"
-    }
-  },
   "worlds": {
     "default": {
       "layers": [
@@ -110,6 +100,17 @@
           "simplify": "5%"
         }
       ]
+    }
+  },
+
+  "localization": {
+    "path": "data/Localization/",
+    "key": "ST_S2BaseGameLocalization",
+    "files": {
+      "en": "Localization_EN.json",
+      "uk": "Localization_UA.json",
+      "fr": "Localization_FR.json",
+      "ru": "Localization_RU.json"
     }
   },
 

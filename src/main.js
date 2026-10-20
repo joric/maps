@@ -32,7 +32,7 @@ let customImagesDefault = true;
 let extentOnSearch = false;
 
 let allowLines = true;
-let heightFactor = 1;
+let heightFactor = 0.1;
 let flattenMarkers = false;
 
 let slugs = [
@@ -106,9 +106,6 @@ let settings = {};
 let icons = {};
 let counters = {};
 let cachedTitles = {};
-
-let worldName = null;
-let world = null;
 
 window.setLanguage = function (cc) {
   settings.language = cc;
@@ -496,18 +493,18 @@ const openPopup = (marker, forced) => {
   //document.querySelector('.popup-text')?.addEventListener('contextmenu', function(e) { e.stopPropagation()}, true);
 }
 
-function getLayerSpatialReference(conf) {
-  let mapSize = config.size;
+function getLayerSpatialReference(layer) {
+  let mapSize = layer.size ?? 512;
   let tileSize = 512;
   let center = { left: mapSize/2, top: mapSize/2 };
   let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
 
-  if (conf.bounds) {
-    bounds = conf.bounds;
+  if (layer.bounds) {
+    bounds = layer.bounds;
     mapSize = bounds.right - bounds.left;
   }
 
-  maxZoom = conf.maxZoom ?? 19;
+  maxZoom = layer.maxZoom ?? 19;
 
   let spatialReference = {
     projection: 'identity',
@@ -518,12 +515,40 @@ function getLayerSpatialReference(conf) {
   return spatialReference;
 }
 
-function toggleLayer(name, show, layers) {
-  const layer = layers[name];
-  if (!layer) return;
+function getWorldNameByLayerName(name) {
+  for (const [worldName, world] of Object.entries(config.worlds)) {
+    for (const layer of Object.values(world.layers ?? [])) {
+      if (name == layer.name && worldName != settings.world) {
+        return worldName;
+      }
+    }
+  }
+}
+
+function toggleLayer(name, show, mapLayers) {
+  const layer = mapLayers[name];
+
+  if (!layer) {
+
+    // layer not found, we need to change the world, possibly
+    const worldName = getWorldNameByLayerName(name);
+
+    if (settings.world != worldName) {
+      settings.world = worldName;
+
+      settings.activeLayers = { [name]: true };
+
+      saveSettings();
+    }
+
+    location.reload();
+
+    return;
+  }
 
   if (show==layer.isVisible()) return;
 
+  const world = config.worlds[settings.world];
   const conf = world.layers.find(conf => conf.name === name) ?? {};
 
   if (show) {
@@ -538,7 +563,6 @@ function toggleLayer(name, show, layers) {
   if (!conf.overlay && show) {
     Object.entries(layers).forEach(([key, layer]) => {
       if (key !== name) {
-
         const conf2 = world.layers.find(conf => conf.name === key) ?? {};
         if (!conf2.overlay) {
           layer.hide();
@@ -557,8 +581,11 @@ function toggleLayer(name, show, layers) {
 
 function addMap() {
 
-  worldName = Object.keys(config.worlds)[0];
-  world = config.worlds[worldName];
+  settings.world = settings.world ?? Object.keys(config.worlds)[0];
+
+  console.log('loading world', settings.world);
+
+  let world = config.worlds[settings.world];
 
   let baseLayers = {};
   let overlays = {};
@@ -572,17 +599,17 @@ function addMap() {
   if (!Object.keys(settings.activeLayers).length)
     settings.activeLayers[world.layers.find(l => !l.overlay).name] = true;
 
-  let baseConf = null;
+  let baseConf = Object.values(world.layers)[0];
 
   // pre-create all base layers
-  for (const conf of world.layers) {
+  for (const layer of world.layers) {
 
-    let name = conf.name || 'default';
+    let name = layer.name ?? settings.world+'-default';
 
     let visible = settings.activeLayers[name]===true;
 
-    if (conf.bounds) {
-      bounds = conf.bounds;
+    if (layer.bounds) {
+      bounds = layer.bounds;
     }
 
     center = {
@@ -590,42 +617,40 @@ function addMap() {
       top: bounds.top + (bounds.bottom-bounds.top)/2,
     };
 
-    let layer = null;
+    let mapLayer = null;
 
-    if (conf.urlTemplate) {
-
-      let b = conf.overlayBounds ?? bounds;
+    if (layer.urlTemplate) {
+      let b = layer.overlayBounds ?? bounds;
 
       let k = (b.bottom - b.top) / (b.right - b.left);
-      // it looks like tileSystem _ratio_ somehow leaks to the entire map
-      // so just don't use non-uniform overlay tile layers (image layers okay)
+      // overlay AR leaks to all map, so just don't use non-square tile layers for overlays (image overlays stretch okay)
       k = 1;
 
       if (k<0) k = -k;
-      layer = new maptalks.TileLayer(name, {
-        urlTemplate: getURL(config, conf.urlTemplate),
-        maxAvailableZoom: conf.maxAvailableZoom || 4,
-        tileSize: conf.tileSize || 512,
-        repeatWorld: conf.repeatWorld ?? false,
+      mapLayer = new maptalks.TileLayer(name, {
+        urlTemplate: getURL(config, layer.urlTemplate),
+        maxAvailableZoom: layer.maxAvailableZoom || 4,
+        tileSize: layer.tileSize || 512,
+        repeatWorld: layer.repeatWorld ?? false,
         tileSystem: [1, -1 * k, b.left, b.top],
         visible: visible,
       });
 
     } else {
-      let b = conf.overlayBounds ?? bounds;
-      let images = [{url: getURL(config, conf.url), extent: [b.left, b.top, b.right, b.bottom] }];
-      layer = new maptalks.ImageLayer(name, images, {
+      let b = layer.overlayBounds ?? bounds;
+      let images = [{url: getURL(config, layer.url), extent: [b.left, b.top, b.right, b.bottom] }];
+      mapLayer = new maptalks.ImageLayer(name, images, {
         visible: visible,
       });
     }
 
-    (conf.overlay ? overlays : baseLayers)[name] = layer;
+    (layer.overlay ? overlays : baseLayers)[name] = mapLayer;
 
     // update map with base layer
-    if (visible && !conf.overlay) {
+    if (visible && !layer.overlay) {
       backupSettings = [{...bounds}, {...center}];
       mapSize = bounds.right - bounds.left;
-      baseConf = conf;
+      baseConf = layer;
     }
   }
 
@@ -656,11 +681,11 @@ function addMap() {
   */
 
 
-  let rasterLayers = {...baseLayers, ...overlays};
+  let mapLayers = {...baseLayers, ...overlays};
 
-  Object.values(rasterLayers).forEach(layer => {
+  Object.values(mapLayers).forEach(mapLayer => {
     //console.log('adding', layer);
-    layer.addTo(map);
+    mapLayer.addTo(map);
   });
 
   map.on('mousemove', function(e){
@@ -729,23 +754,34 @@ function addMap() {
 
   let items = {};
 
-  for (const conf of world.layers) {
-    let url = getURL(config, conf.urlTemplate || conf.url);
-    let image =  url.replace(/\{[xyz]\}/g, '0');
+  // collect all worlds first
 
-    items[conf.name] = {
+  function makeItem(layer) {
+    let url = getURL(config, layer.urlTemplate || layer.url);
+    let image =  url.replace(/\{[xyz]\}/g, '0');
+    return {
       image: image,
-      title: conf.name,
-      visible: settings.activeLayers[conf.name]===true,
-      overlay: conf.overlay,
-      size: conf.size,
-      base: Math.pow(2, conf.maxAvailableZoom + Math.log2(tileSize))
+      title: layer.name,
+      visible: settings.activeLayers[layer.name]===true,
+      overlay: layer.overlay == true,
+      size: layer.size,
+      base: Math.pow(2, layer.maxAvailableZoom + Math.log2(tileSize))
     };
+  }
+
+  for (const world of Object.values(config.worlds)) {
+    if (!world.layers) continue;
+    const layer = world.layers[0];
+    items[layer.name] = makeItem(layer);
+  }
+
+  for (const layer of world.layers) {
+    items[layer.name] = makeItem(layer);
   }
 
   const layersControl = new LayersControl(null, {
     items: items,
-    callback: (name, show) => { toggleLayer(name, show, rasterLayers); },
+    callback: (name, show) => { toggleLayer(name, show, mapLayers) },
   });
 
   function customAnimateTo(map, targetView, duration = 200) {
@@ -924,6 +960,7 @@ function passesFilter(feature) {
   if (searchString === '') {
     let visible = settings.activeItems[t.category] === true;
 
+    const world = config.worlds[settings.world];
     if (world.heightRange) {
       const [bottom, top] = world.heightRange;
       let h = feature.geometry.coordinates[2];
@@ -948,7 +985,8 @@ function applyMatrix(coords, m) {
 const DEFAULT_MAPPING = [["x", 1], ["y", 1], ["z", 1]];
 
 function applyMapping(coords) {
-  const mapping = world.markers?.mapping ?? DEFAULT_MAPPING;
+  const world = config.worlds[settings.world];
+  const mapping = config.markers?.mapping ?? DEFAULT_MAPPING;
   const [x, y, z] = coords;
   const source = { x, y, z };
   let p = mapping.map(([axis, sign]) => sign * source[axis]);
@@ -957,7 +995,7 @@ function applyMapping(coords) {
 }
 
 function reverseMapping(p) {
-  const mapping = world.markers?.mapping ?? DEFAULT_MAPPING;
+  const mapping = config.markers?.mapping ?? DEFAULT_MAPPING;
   let q = [p.x, p.y, p.z ?? 0];
   q.z /= heightFactor;
   const source = { x: 0, y: 0, z: 0 };
@@ -1110,15 +1148,16 @@ function setPolygonOptions(polygon, bSelectable, color, polygonOpacity=0.05) {
 
 let bias = 0;
 
-function parabola(start, end, maxHeight = null, steps = 50) {
+function parabola(start, end, options) {
   const [x0, y0, z0] = start;
   const [x1, y1, z1] = end;
   const dx = x1 - x0;
   const dy = y1 - y0;
   const horizontalDistance = Math.sqrt(dx * dx + dy * dy);
   const baseHeight = Math.max(z0, z1);
-  if (maxHeight === null) maxHeight = baseHeight + horizontalDistance / 8;
-  else maxHeight = Math.max(maxHeight, baseHeight + 0.001);
+  const maxHeight = options?.maxHeight ?? (baseHeight + horizontalDistance / 8)
+  //Math.max(maxHeight, baseHeight + 0.001);
+  const steps = options?.steps ?? 50;
   const points = [];
   for (let i = 0; i <= steps; i++) {
     const t = i / steps;
@@ -1132,6 +1171,8 @@ function parabola(start, end, maxHeight = null, steps = 50) {
 }
 
 function createGeometry(feature) {
+  const world = config.worlds[settings.world];
+
   const o = feature.properties;
 
   let [x, y, z] = applyMapping(feature.geometry.coordinates);
@@ -1262,7 +1303,7 @@ function createGeometry(feature) {
     if (!target) continue;
     const start = applyMapping(target.geometry.coordinates);
     let points = parabola(start, end);
-    points = utils.simplify(points, 0.001);
+    points = utils.simplify(points, 0.01);
 
     marker.links = marker.links ?? [];
 
@@ -1282,7 +1323,7 @@ function createGeometry(feature) {
         linePatternFile: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADklEQVR4AWL6////fwAAAAD//w7I1cwAAAAGSURBVAMACgUD/9k79a8AAAAASUVORK5CYII=',
         linePatternAnimSpeed: 0.25,           // 1~5 forward, -1~-5 reverse
         linePatternGap: 2,
-        linePatternGapColor: [0, 255, 255, 1.0]
+        linePatternGapColor: [1,1,1,0],
       }
     });
 
@@ -1511,9 +1552,11 @@ function loadMarkers() {
 
   let format = 'geojson';
 
-  if (world.markers && world.markers.url) {
-    markersFile = baseDir + world.markers.url;
-    format = world.markers.format ?? format;
+  const world = config.worlds[settings.world];
+
+  if (config.markers && config.markers.url) {
+    markersFile = baseDir + config.markers.url;
+    format = config.markers.format ?? format;
   }
 
   console.log(`loading "${markersFile}"...`);
