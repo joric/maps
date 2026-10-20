@@ -19,7 +19,6 @@ import { getType } from './marker-types.js';
 import { getIcon } from './marker-icons.js';
 
 import * as unity from './unity-reader.js';
-import * as simplify from './simplify.js';
 
 const RUNNING_MODE = window.location.protocol === 'file:'  ? 'file' : ( import.meta.env.DEV  ? 'dev' : 'prod' );
 
@@ -70,6 +69,7 @@ let spriteIndex = 0;
 let allFeatures = [];
 let allRegions = [];
 let featureIndexById = {};
+let featureIndexByFlavor = {};
 
 const defaultPitch = 50;
 let fuse;
@@ -364,6 +364,14 @@ function assignTypes() {
   allFeatures.forEach((feature, i) => {
     feature._type = getType(feature.properties, config);
     featureIndexById[feature.properties.id] = i;
+
+    // ootss-only
+    if (feature.properties.type == 'Switch') {
+      const flavor = feature.properties.entity_properties?.flavor;
+      featureIndexByFlavor[flavor] = featureIndexByFlavor[flavor] ?? [];
+      featureIndexByFlavor[flavor].push(i);
+    }
+
   });
 }
 
@@ -418,7 +426,7 @@ function getFuse() {
 function renderItem(feature) {
   let o = feature?.properties ?? {};
   let t = feature?._type ?? {};
-  let title = translate(o.title || o.name || o.type);
+  let title = translate(o.title || o.name || o.entity_properties?.entity_name || o.type);
   let subtitle = translate(t.group, 'groups');
 
   if (t.category) subtitle += ' / ' + translate(t.category, 'categories');
@@ -498,6 +506,8 @@ function getLayerSpatialReference(conf) {
     bounds = conf.bounds;
     mapSize = bounds.right - bounds.left;
   }
+
+  maxZoom = conf.maxZoom ?? 19;
 
   let spatialReference = {
     projection: 'identity',
@@ -769,15 +779,26 @@ function addMap() {
   // sceneconfig options https://doc.maptalks.com/docs/api/vt/point-layer/
 
 
-  layers.boxes = new maptalks.ExtrudePolygonLayer('boxes', [], { } ).addTo(map);
 
+  const groupLayer = new maptalks.GroupGLLayer('features', [], {
+    forceRedrawPerFrame: true
+  }).addTo(map);
 
-  let layerOptions = { sceneConfig: { depthFunc: '<=' } };
-  let groupLayer = new maptalks.GroupGLLayer('features', [], {}).addTo(map);
-  layers.polygons = new maptalks.PolygonLayer('polygons', [], { ...layerOptions } ).addTo(groupLayer);
-  layers.lines   = new maptalks.LineStringLayer('lines', [], { ...layerOptions } ).addTo(groupLayer);
-  layers.markers = new maptalks.PointLayer('markers', [], layerOptions ).addTo(groupLayer);
+  layers.boxes = new maptalks.ExtrudePolygonLayer('boxes', [], {
+    sceneConfig: { depthFunc: '<=' }
+  }).addTo(map);
 
+  layers.polygons = new maptalks.PolygonLayer('polygons', [], {
+    sceneConfig: { depthFunc: '<=' }
+  }).addTo(groupLayer);
+
+  layers.lines = new maptalks.LineStringLayer('lines', [], {
+    sceneConfig: { depthFunc: '<=', depthWrite: false }
+  }).addTo(groupLayer);
+
+  layers.markers = new maptalks.PointLayer('markers', [], {
+    sceneConfig: { depthFunc: '<=' }
+  }).addTo(groupLayer);
 
   popup = new PopupControl();
 
@@ -1076,7 +1097,7 @@ function selectPolygon(polygon, bSelect, lineColor, polygonOpacity) {
   polygon.config({cursor: bSelect ? 'pointer': 'default'});
 }
 
-function setPolygonOptions(polygon, bSelectable, color, polygonOpacity=0.25) {
+function setPolygonOptions(polygon, bSelectable, color, polygonOpacity=0.05) {
 
   selectPolygon(polygon, false, color, polygonOpacity);
 
@@ -1210,47 +1231,64 @@ function createGeometry(feature) {
   }
 
   if (o.entity_properties?.box_extents) {
-    const b = o.entity_properties.box_extents;
-    marker.box = new maptalks.Rectangle([x-b.x,y+b.y,z], b.x*2, b.y*2, { properties: { height:b.z + bias } });
     bias += 0.05;
-    //marker.polygon = createRectangle(x,y,z, b.x, b.y, 0);
-    setPolygonOptions(marker.box, true, 'white');
+    const b = {x:0, y: 0, z:0, ...o.entity_properties.box_extents}; // box may miss some fields
+
+    let box = new maptalks.Rectangle([x-b.x,y+b.y,z], b.x*2, b.y*2, { properties: { height:b.z + bias } });
+
+    //marker.box = box
+    marker.polygon = box
+    setPolygonOptions(box, true, 'white');
   }
 
 
+  let targetIds = [];
+
   if (o.entity_properties?.unlocked_by_id) {
-    const id = o.entity_properties.unlocked_by_id;
-    const parentFeature = allFeatures[featureIndexById[id]];
+    targetIds.push(featureIndexById[o.entity_properties.unlocked_by_id]);
+  }
 
-    if (parentFeature) {
-
-      const start = applyMapping(parentFeature.geometry.coordinates);
-      const end = applyMapping(feature.geometry.coordinates);
-      let points = parabola(start, end);
-
-      const opacity = 0.5;
-      const lineWidth = 3;
-
-      let lineColor = {
-
-            'lineColor' : {
-              'type' : 'linear',
-              'colorStops' : [
-                [0.00, 'red'],
-                [1 / 4, 'orange'],
-                [2 / 4, 'green'],
-                [3 / 4, 'aqua'],
-                [1.00, 'white']
-              ]
-            },
-      }
-
-      lineColor = 'white';
-
-      marker.link = new maptalks.LineString(points, { symbol: { lineOpacity: opacity, lineColor: lineColor, lineWidth: lineWidth } });
+  if (o.type == 'Gate' && o.entity_properties?.flavor != 0) {
+    const flavor = o.entity_properties?.flavor;
+    for (const dest_id of featureIndexByFlavor[flavor]||[]) {
+      targetIds.push(dest_id);
     }
   }
 
+  const end = [x,y,z];
+
+  for (const dest_id of targetIds) {
+    const target = allFeatures[dest_id];
+    if (!target) continue;
+    const start = applyMapping(target.geometry.coordinates);
+    let points = parabola(start, end);
+    points = utils.simplify(points, 0.001);
+
+    marker.links = marker.links ?? [];
+
+    let color = 'white';
+
+    if (o.type=='Gate') {
+      const { x, y, z } = o.entity_properties?.tint_color_a;
+      const light = 80, c = v => Math.min(255, v*255+light)|0;
+      color = `rgb(${[x,y,z].map(c)})`;
+    }
+
+    const line = new maptalks.LineString(points, {
+      symbol: {
+        lineWidth: 3,
+        lineOpacity: 1,
+        lineColor: color,
+        linePatternFile: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADklEQVR4AWL6////fwAAAAD//w7I1cwAAAAGSURBVAMACgUD/9k79a8AAAAASUVORK5CYII=',
+        linePatternAnimSpeed: 0.25,           // 1~5 forward, -1~-5 reverse
+        linePatternGap: 2,
+        linePatternGapColor: [0, 255, 255, 1.0]
+      }
+    });
+
+    marker.links.push(line);
+
+  }
 
 
   if (feature._type.region) {
@@ -1300,7 +1338,7 @@ function scheduleUpdate() {
           if (m) {
             newMarkers.push(m);
             if (m.line) newLines.push(m.line);
-            if (m.link) newLines.push(m.link);
+            if (m.links) newLines.push(...m.links);
             if (m.circle) newPolygons.push(m.circle);
             if (m.polygon) newPolygons.push(m.polygon);
             if (m.box) newBoxes.push(m.box);
@@ -1311,7 +1349,7 @@ function scheduleUpdate() {
 
         // !vis && !marker: nothing to do, stays uncreated
       } else {
-        for (const g of [marker, marker.line, marker.circle, marker.polygon, marker.box, marker.link]) {
+        for (const g of [marker, marker.line, marker.circle, marker.polygon, marker.box, ...(marker.links||[])]) {
           if (g && vis !== g.isVisible()) vis ? g.show() : g.hide();
         }
       }

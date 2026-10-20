@@ -6,6 +6,36 @@
       "heightRange": [-4,10],
       "layers": [
         {
+          "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
+          "name": "overworld_64k",
+          "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/overworld_64k/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 7,
+          "repeatWorld": false,
+          "size": [65536, 65536],
+          "maxZoom": 7
+        },
+        {
+          "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
+          "name": "sky_64k",
+          "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/sky_64k/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 7,
+          "repeatWorld": false,
+          "size": [65536, 65536],
+          "maxZoom": 7
+        },
+        {
+          "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
+          "name": "underworld_64k",
+          "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/underworld_64k/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 7,
+          "repeatWorld": false,
+          "size": [65536, 65536],
+          "maxZoom": 7
+        },
+        {
           "bounds": { "left": -77, "top": 221.5, "right": 219, "bottom": 74},
           "name": "Release_v1",
           "urlTemplate": "tiles/Release_v1/{z}/{y}/{x}.webp",
@@ -109,19 +139,21 @@
 
   "icons": {
     "audiolog": { "class": "fa fa-volume", "color": "chocolate" },
+    "beam": { "class": "fa fa-burst", "color": "slategrey" },
     "dragon": { "class": "fa fa-dragon", "color": "indianred" },
-    "freezer": { "class": "fa fa-snowflake", "color": "slategrey" },
+    "freezer": { "class": "fa fa-snowflake", "color": "skyblue" },
     "gate": { "class": "fa fa-door-closed", "color": "slategrey" },
     "gem": { "class": "fa fa-gem", "color": "cornflowerblue" },
     "gem_slot": { "class": "fa-regular fa-gem", "color": "slategrey" },
-    "map": { "class": "fa fa-compass", "color": "skyblue" },
+    "map": { "class": "fa fa-compass", "color": "deepskyblue" },
     "level": { "class": "fa fa-bahai", "color": "orange" },
     "mirror": { "class": "fa fa-clone", "color": "cornflowerblue" },
     "monster": { "class": "fa fa-skull", "color": "palevioletred" },
     "marker": { "class": "fa fa-location-crosshairs", "color": "grey" },
     "local_area": { "class": "fa fa-cube", "color": "grey" },
     "reset": { "class": "fa fa-rotate", "color": "slategrey" },
-    "switch": { "class": "fa fa-toggle-off", "color": "slategrey" },
+    "rover": { "class": "fa fa-car", "color": "slategrey" },
+    "switch": { "class": "fa fa-power-off", "color": "slategrey" },
     "rock": { "class": "fa fa-cube", "color": "grey" },
     "sign": { "class": "fa fa-receipt", "color": "brown" },
     "spawner": { "class": "fa fa-gift", "color": "darkcyan" },
@@ -166,7 +198,9 @@
             }
           }
         },
+        "Promesst_Light": { "group": "items", "category": "Beam", "icon": "beam" },
         "Rock": { "group": "misc", "category": "rock", "icon": "rock" },
+        "Rover": { "group": "items", "category": "rover", "icon": "rover" },
         "Voice_Log": { "group": "items", "category": "audiolog", "icon": "audiolog" },
         "Sign": { "group": "items", "category": "sign", "icon": "sign" },
         "Spawner": { "group": "misc", "category": "spawner", "icon": "spawner" },
