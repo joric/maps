@@ -525,24 +525,23 @@ function getWorldNameByLayerName(name) {
   }
 }
 
+function switchWorld(worldName) {
+  if (settings.world != worldName) {
+    settings.world = worldName;
+    let name = config.worlds[settings.world].layers[0]?.name;
+    settings.activeLayers = { [name]: true };
+    saveSettings();
+  }
+  location.reload();
+}
+
 function toggleLayer(name, show, mapLayers) {
   const layer = mapLayers[name];
 
   if (!layer) {
-
     // layer not found, we need to change the world, possibly
     const worldName = getWorldNameByLayerName(name);
-
-    if (settings.world != worldName) {
-      settings.world = worldName;
-
-      settings.activeLayers = { [name]: true };
-
-      saveSettings();
-    }
-
-    location.reload();
-
+    switchWorld(worldName);
     return;
   }
 
@@ -848,7 +847,8 @@ function addMap() {
     if (document.activeElement === document.querySelector('#search')) return;
     if (document.activeElement === document.querySelector('.search-input')) return;
     if (e.code == 'KeyR' && !e.ctrlKey) toggleView();
-    if (/^Digit[1-9]$/.test(e.code) && +e.code.slice(5) <= slugs.length) switchMap(slugs[+e.code.slice(5)-1]);
+    //if (/^Digit[1-9]$/.test(e.code) && +e.code.slice(5) <= slugs.length) switchMap(slugs[+e.code.slice(5)-1]);
+    if (/^Digit[1-9]$/.test(e.code) && +e.code.slice(5) <= slugs.length) switchWorld(Object.keys(config.worlds)[e.code.slice(5)-1]);
   });
 }
 
@@ -987,10 +987,11 @@ const DEFAULT_MAPPING = [["x", 1], ["y", 1], ["z", 1]];
 function applyMapping(coords) {
   const world = config.worlds[settings.world];
   const mapping = config.markers?.mapping ?? DEFAULT_MAPPING;
-  const [x, y, z] = coords;
+  let [x, y, z] = coords;
   const source = { x, y, z };
   let p = mapping.map(([axis, sign]) => sign * source[axis]);
   p[2] *= heightFactor;
+  p[2] = 0;
   return p;
 }
 
@@ -1289,6 +1290,13 @@ function createGeometry(feature) {
     targetIds.push(featureIndexById[o.entity_properties.unlocked_by_id]);
   }
 
+  if (o.entity_properties?.target_id) {
+    // warp pads (teleports) need to exclude backreferences here!
+    // also there's no minimap so we can't really use links to MAJOR teleports they point to layer we don't have picture of
+    targetIds.push(featureIndexById[o.entity_properties.target_id]);
+  }
+
+
   if (o.type == 'Gate' && o.entity_properties?.flavor != 0) {
     const flavor = o.entity_properties?.flavor;
     for (const dest_id of featureIndexByFlavor[flavor]||[]) {
@@ -1317,7 +1325,7 @@ function createGeometry(feature) {
 
     const line = new maptalks.LineString(points, {
       symbol: {
-        lineWidth: 3,
+        lineWidth: 1.5,
         lineOpacity: 1,
         lineColor: color,
         linePatternFile: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADklEQVR4AWL6////fwAAAAD//w7I1cwAAAAGSURBVAMACgUD/9k79a8AAAAASUVORK5CYII=',

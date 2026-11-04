@@ -3,7 +3,7 @@
   "size": 190,
   "worlds": {
     "overworld": {
-      "heightRange": [-4,10],
+      "heightRange": [-4,10,0],
       "layers": [
         {
           "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
@@ -42,11 +42,19 @@
           "size": [3840, 2160],
           "remap": { "cellSize": 13.34, "dx": -65, "dy": -5 },
           "comment": "from YouTube trailer, https://youtu.be/4m8R1BjjioU?t=90"
+        },
+        {
+          "name": "overworld-ft",
+          "bounds": {"left": 34.5, "top": 139.5, "right": 84.5, "bottom": 103.5},
+          "url": "https://joric.github.io/ootss_tileset/images/overworld-ft.jpg",
+          "overlay": true,
+          "size": [6400, 4608],
+          "comment": "fast travel map, 50x36 cells, or, rather 59 x 34, corner (-18, -11)"
         }
       ]
     },
     "sky": {
-      "heightRange": [10, 75],
+      "heightRange": [10, 75, 33],
       "layers": [
         {
           "name": "sky_64k",
@@ -74,6 +82,21 @@
           "maxZoom": 7
         }
       ]
+    },
+    "intro": {
+      "heightRange": [-100,100],
+      "layers": [
+        {
+          "name": "intro_64k",
+          "bounds": { "left": -50.0, "top": 126.0, "right": 140.0, "bottom": -63.0},
+          "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/intro_64k/{z}/{y}/{x}.webp",
+          "tileSize": 512,
+          "maxAvailableZoom": 7,
+          "repeatWorld": false,
+          "size": [65536, 65536],
+          "maxZoom": 7
+        }
+      ]
     }
   },
   "grid": [
@@ -85,7 +108,8 @@
   ],
 
   "markers": {
-    "url": "scripts/markers.geojson"
+    "url1": "data/markers.json",
+    "url": "scripts/markers.json"
   },
 
   "regions1": [
@@ -151,6 +175,7 @@
     "gate": { "class": "fa fa-door-closed", "color": "slategrey" },
     "gem": { "class": "fa fa-gem", "color": "cornflowerblue" },
     "gem_slot": { "class": "fa-regular fa-gem", "color": "slategrey" },
+    "ice_gate": { "class": "fa fa-door-closed", "color": "skyblue" },
     "map": { "class": "fa fa-compass", "color": "deepskyblue" },
     "level": { "class": "fa fa-bahai", "color": "orange" },
     "mirror": { "class": "fa fa-clone", "color": "cornflowerblue" },
@@ -173,7 +198,14 @@
         "regionMarker": { "group": "regions" },
         "Area_Pin": { "group": "items", "category": "map", "icon": "map"},
         "Activator": { "group": "items", "category": "reset", "icon": "reset" },
-        "Freezer": { "group": "items", "category": "freezer", "icon": "freezer" },
+        "Freezer": { "group": "items", "category": "freezer", "icon": "freezer",
+          "match": {
+            "entity_properties.mesh": {
+              "GAME_OVER_Freezer_A": { "category": "ice_cage" },
+              "GAME_OVER_Freezer_B": { "category": "ice_gate", "icon": "ice_gate" }
+            }
+          }
+        },
         "Gate": { "group": "items", "category": "gate", "icon": "gate" },
         "Gem": { "group": "items", "category": "gem", "icon": "gem" },
         "Gem_Slot": { "group": "items", "category": "gem_slot", "icon": "gem_slot" },
@@ -211,8 +243,13 @@
         "Sign": { "group": "items", "category": "sign", "icon": "sign" },
         "Spawner": { "group": "misc", "category": "spawner", "icon": "spawner" },
         "Switch": { "group": "items", "category": "switch", "icon": "switch" },
-        "Teleporter": { "group": "items", "category": "teleport", "icon": "teleport" },
-
+        "Teleporter": { "group": "items", "category": "teleport", "icon": "teleport", 
+          "match": {
+            "entity_properties.mesh": {
+              "GAME_OVER_Reset_C": { "category": "warp_pad" }
+            }
+          }
+        },
         ".*": { "group": "misc", "icon": "misc", "comment": "this rule maps type to category" }
       }
     }
