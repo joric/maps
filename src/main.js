@@ -364,7 +364,7 @@ function assignTypes() {
 
     // ootss-only
     if (feature.properties.type == 'Switch') {
-      const flavor = feature.properties.entity_properties?.flavor;
+      const flavor = feature.properties.flavor;
       featureIndexByFlavor[flavor] = featureIndexByFlavor[flavor] ?? [];
       featureIndexByFlavor[flavor].push(i);
     }
@@ -395,7 +395,7 @@ function getFuse() {
       {name: 'properties.type', weight: 0.2},
       {name: 'properties.item', weight: 0.1},
       {name: 'properties.id', weight: 0.1},
-      {name: 'properties.entity_properties.script_name', weight: 0.1},
+      {name: 'properties.script_name', weight: 0.1},
       {name: '_type.group', weight: 0.05},
     ],
     threshold: 0.1,
@@ -423,7 +423,7 @@ function getFuse() {
 function renderItem(feature) {
   let o = feature?.properties ?? {};
   let t = feature?._type ?? {};
-  let title = translate(o.title || o.name || o.entity_properties?.entity_name || o.type);
+  let title = translate(o.title || o.name || o.entity_name || o.type);
   let subtitle = translate(t.group, 'groups');
 
   if (t.category) subtitle += ' / ' + translate(t.category, 'categories');
@@ -1272,9 +1272,9 @@ function createGeometry(feature) {
     setPolygonOptions(marker.circle, true, t.color ?? 'white');
   }
 
-  if (o.entity_properties?.box_extents) {
+  if (o.box_extents) {
     bias += 0.05;
-    const b = {x:0, y: 0, z:0, ...o.entity_properties.box_extents}; // box may miss some fields
+    const b = {x:0, y: 0, z:0, ...o.box_extents}; // box may miss some fields
 
     let box = new maptalks.Rectangle([x-b.x,y+b.y,z], b.x*2, b.y*2, { properties: { height:b.z + bias } });
 
@@ -1286,19 +1286,19 @@ function createGeometry(feature) {
 
   let targetIds = [];
 
-  if (o.entity_properties?.unlocked_by_id) {
-    targetIds.push(featureIndexById[o.entity_properties.unlocked_by_id]);
+  if (o.unlocked_by_id) {
+    targetIds.push(featureIndexById[o.unlocked_by_id]);
   }
 
-  if (o.entity_properties?.target_id) {
+  if (o.target_id) {
     // warp pads (teleports) need to exclude backreferences here!
     // also there's no minimap so we can't really use links to MAJOR teleports they point to layer we don't have picture of
-    targetIds.push(featureIndexById[o.entity_properties.target_id]);
+    targetIds.push(featureIndexById[o.target_id]);
   }
 
 
-  if (o.type == 'Gate' && o.entity_properties?.flavor != 0) {
-    const flavor = o.entity_properties?.flavor;
+  if (o.type == 'Gate' && o.flavor != 0) {
+    const flavor = o.flavor;
     for (const dest_id of featureIndexByFlavor[flavor]||[]) {
       targetIds.push(dest_id);
     }
@@ -1318,7 +1318,7 @@ function createGeometry(feature) {
     let color = 'white';
 
     if (o.type=='Gate') {
-      const { x, y, z } = o.entity_properties?.tint_color_a;
+      const { x, y, z } = o.tint_color_a;
       const light = 80, c = v => Math.min(255, v*255+light)|0;
       color = `rgb(${[x,y,z].map(c)})`;
     }
