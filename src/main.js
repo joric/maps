@@ -579,8 +579,11 @@ function toggleLayer(name, show, mapLayers) {
 }
 
 function addMap() {
+  const defaultWorld = Object.keys(config.worlds)[0];
 
-  settings.world = settings.world ?? Object.keys(config.worlds)[0];
+  settings.world = settings.world ?? defaultWorld;
+
+  if (!Object.keys(config.worlds).includes(settings.world)) settings.world = defaultWorld;
 
   console.log('loading world', settings.world);
 

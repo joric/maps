@@ -53,7 +53,7 @@
         }
       ]
     },
-    "sky": {
+    "overworld_high": {
       "heightRange": [10, 75, 33],
       "layers": [
         {
@@ -67,7 +67,7 @@
           "maxZoom": 7
         },
         {
-          "name": "minimap_hight",
+          "name": "minimap_high",
           "bounds": {"left": 34.5, "top": 139.5, "right": 84.5, "bottom": 103.5, "height": 105},
           "url": "https://joric.github.io/ootss_tileset/images/minimap_high.jpg",
           "overlay": true,
@@ -75,7 +75,7 @@
         }
       ]
     },
-    "underworld": {
+    "overworld_low": {
       "heightRange": [-57,-4],
       "layers": [
         {
@@ -215,8 +215,8 @@
         "Freezer": { "group": "items", "category": "freezer", "icon": "freezer",
           "match": {
             "mesh": {
-              "GAME_OVER_Freezer_A": { "category": "ice_cage" },
-              "GAME_OVER_Freezer_B": { "category": "ice_gate", "icon": "ice_gate" }
+              "GAME_OVER_Freezer_A": { "category": "cage" },
+              "GAME_OVER_Freezer_B": { "category": "gate", "icon": "ice_gate" }
             }
           }
         },
