@@ -214,6 +214,70 @@
   padding-right: 1px;
 }
 
+/* ===================================================================
+   3-DOT MENU MODE
+   When `.markers-mode-dots` is on the collapsible:
+   - the toggle is a narrow, transparent, vertical 3-dot button
+   - it sits in-flow BEFORE the animated inner panel
+   - the inner panel slides open to the RIGHT of the dots button
+   - collapsed state = only the dots button visible
+   - expanded state  = dots button + pills panel
+   =================================================================== */
+
+.markers-collapsible.markers-mode-dots .markers-toggle {
+  order: 0;
+  width: 14px;                 /* narrow */
+  height: 31px;
+  border-radius: 0;
+  background: transparent;     /* no white pill */
+  box-shadow: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: monospace;
+  line-height: 1;
+  padding: 0;
+  margin-top: 6px;
+  position: static;
+  z-index: 10;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.markers-collapsible.markers-mode-dots .markers-toggle:hover { opacity: 0.7; }
+.markers-collapsible.markers-mode-dots .markers-toggle:active { transform: scale(0.95); }
+
+/* Kill the chevron content in dot mode */
+.markers-collapsible.markers-mode-dots .markers-toggle::after,
+.markers-collapsible.markers-mode-dots.collapsed .markers-toggle::after,
+.markers-collapsible.markers-mode-dots.expanded .markers-toggle::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Vertical 3-dot glyph */
+.markers-collapsible.markers-mode-dots .markers-toggle::before {
+  content: "\22EE";            /* ⋮ VERTICAL ELLIPSIS */
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+}
+
+/* The inner panel sits after the button in dot mode */
+.markers-collapsible.markers-mode-dots .markers-collapsible-inner {
+  order: 1;
+}
+
+/* Small gap between the dots button and the opening panel */
+.markers-collapsible.markers-mode-dots.expanded .markers-collapsible-inner {
+  margin-left: 6px;
+}
 
 /*
 .markers-toggle {

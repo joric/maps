@@ -8,6 +8,13 @@ export class MarkersControl {
     const translate = options?.translate || (s => s[0].toUpperCase()+s.slice(1));
     document.querySelector('.markers-anchor')?.remove();
 
+    // Layout mode: 'chevron' (original) or 'dots' (3-dot menu at start).
+    const mode = options?.mode === 'dots' ? 'dots' : 'chevron';
+    // In dot mode the dots button is placed BEFORE the panel, so the
+    // panel occupies the right side. In chevron mode the toggle stays
+    // after the panel.
+    const dotsFirst = mode === 'dots';
+
     // Toggle whether hovering a group opens its popout (when none is open),
     // and whether mouse-leave auto-closes an open popout.
     // When false: popouts only open via click/focus, and only close via
@@ -25,38 +32,44 @@ export class MarkersControl {
 
     let icons = options.icons ?? {};
 
+    const theme = options?.theme ? ` data-theme="${options.theme}"` : '';
+
+    const panelHTML = `
+      <div class="markers-control markers-viewport">
+          ${Object.entries(counters || {})
+            .map(([group, categories]) => [translate(group, 'groups'), group, categories])
+            .sort(cmpGroup)
+            .map(([groupTitle, group, categories]) => `
+            <ul class="markers-control-groups">
+              <li tabindex="0">
+                <div class="markers-control-group" data-name="${group}" title="${groupTitle} (${group}) [${Object.values(categories).reduce((a,b) =>a+b,0)}]">${groupTitle}</div>
+                <div class="markers-control-items">
+                <ul class="markers-control-items-list">
+                  ${Object.entries(categories)
+                    .map(([category, count]) => [translate(category, 'categories'), category, count])
+                    .sort(cmpAlphaNum)
+                    .map(([title, category, count]) => `
+                      <li tabindex="0" class="markers-control-item" data-name="${category}" title="${title} (${category})">
+                        <i class="${icons[category]?.class || 'fa fa-question-circle'}"></i>
+                        <span>${title}</span>
+                        <span>${count}</span>
+                      </li>
+                    `).join('')}
+                </ul>
+                </div>
+              </li>
+            </ul>
+          `).join('')}
+      </div>
+    `;
+
     const innerHTML = `
       <div class="markers-anchor">
-        <div class="markers-collapsible">
-          <div class="markers-collapsible-inner">
-            <div class="markers-control markers-viewport">
-                ${Object.entries(counters || {})
-                  .map(([group, categories]) => [translate(group, 'groups'), group, categories])
-                  .sort(cmpGroup)
-                  .map(([groupTitle, group, categories]) => `
-                  <ul class="markers-control-groups">
-                    <li tabindex="0">
-                      <div class="markers-control-group" data-name="${group}" title="${groupTitle} (${group}) [${Object.values(categories).reduce((a,b) =>a+b,0)}]">${groupTitle}</div>
-                      <div class="markers-control-items">
-                      <ul class="markers-control-items-list">
-                        ${Object.entries(categories)
-                          .map(([category, count]) => [translate(category, 'categories'), category, count])
-                          .sort(cmpAlphaNum)
-                          .map(([title, category, count]) => `
-                            <li tabindex="0" class="markers-control-item" data-name="${category}" title="${title} (${category})">
-                              <i class="${icons[category]?.class || 'fa fa-question-circle'}"></i>
-                              <span>${title}</span>
-                              <span>${count}</span>
-                            </li>
-                          `).join('')}
-                      </ul>
-                      </div>
-                    </li>
-                  </ul>
-                `).join('')}
-            </div>
-          </div>
-          <button type="button" class="markers-toggle" aria-label="Toggle markers"></button>
+        <div class="markers-collapsible${dotsFirst ? ' markers-mode-dots' : ''}">
+          ${dotsFirst ? `<button type="button" class="markers-toggle" aria-label="Toggle markers"${theme}></button>
+          <div class="markers-collapsible-inner">${panelHTML}</div>` : `
+          <div class="markers-collapsible-inner">${panelHTML}</div>
+          <button type="button" class="markers-toggle" aria-label="Toggle markers"${theme}></button>`}
         </div>
       </div>
     `;

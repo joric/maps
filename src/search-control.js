@@ -126,13 +126,18 @@ export class SearchControl {
     this._searchRenderItem = (options && options.searchRenderItem) || (o => `<span class="search-item-text">${this._searchGetText(o)}</span>`);
     this._handleSubmit = (options && options.searchOnSubmit) || (() => {});
     this._settings = options.settings ?? this._settings;
-    this._menu = options.menuCallback ?? function(e) { console.log('menuCallback not defined'); };
+
+    // menu button is only shown/used when a menuCallback is provided
+    const hasMenu = typeof (options && options.menuCallback) === 'function';
+    if (hasMenu) {
+      this._menu = options.menuCallback;
+    }
 
     const innerHTML = `
       <div class="search-container">
         <form class="search-form">
           <div class="search-input-container">
-            <button type="button" class="search-button search-menu-button" tabindex=0 title="Menu">&#x2630;&#xFE0E;</button>
+            ${hasMenu ? '<button type="button" class="search-button search-menu-button" tabindex=0 title="Menu">&#x2630;&#xFE0E;</button>' : ''}
             <input type="text" class="search-input" tabindex=1 autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" placeholder="${options.placeholder ?? 'Search...'}"${autofocus ? 'autofocus':''}>
             <button type="submit" class="search-button search-submit" title="Search">&#128269;&#xFE0E;</button>
             <button type="button" class="search-button search-clear" title="Cancel">&times;</button>
@@ -149,7 +154,12 @@ export class SearchControl {
     this._container = document.querySelector('.search-container');
     this._items = this._settings.searchHistory ?? [];
     document.querySelector('.search-clear').onclick = this._clear;
-    document.querySelector('.search-menu-button').onclick = this._menu;
+
+    // only wire up menu button when it exists
+    if (hasMenu) {
+      document.querySelector('.search-menu-button').onclick = this._menu;
+    }
+
     document.querySelector('.search-form').onsubmit = this._submit;
     document.querySelector('.search-list').addEventListener('mousedown', event => {
       event.preventDefault();

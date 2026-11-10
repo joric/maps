@@ -744,7 +744,7 @@ function loadMap() {
     //placeholder: config.name,
     placeholder: translate('search...'),
     settings: settings,
-    menuCallback: sidebarControl.open,
+    menuCallback: sidebarControl.open, // adds menu hamburger button, if defined
     searchCallback: query => fuzzySearch(query),
     searchOnSubmit: query =>  fuzzySearch(query),
     searchRenderItem: searchRenderItem,
@@ -876,7 +876,15 @@ function indexMarkers() {
 
   //menuControl = new MenuControl(null,{});
 
-  markersControl = new MarkersControl(counters, {icons: icons, groups:config?.groups??{}, groupCallback: toggleGroup, itemCallback: toggleItem, translate: translate, theme: 'retro' });
+  const markersControl = new MarkersControl(counters, {
+    icons: icons,
+    groups: config?.groups ?? {},
+    groupCallback: toggleGroup,
+    itemCallback: toggleItem,
+    translate: translate,
+    theme: 'retro',
+    //mode: 'dots',            // <-- enable 3-dot menu mode
+  });
 
   if (!settings.activeItems) {
     settings.activeItems = {};
