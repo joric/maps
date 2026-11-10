@@ -76,7 +76,7 @@ let fuse;
 let map;
 
 let maxZoom = 19;
-let startZoom = 0.5;
+let startZoom = 0;
 let focusZoom = 5;
 
 let filterData = {};
@@ -494,7 +494,7 @@ const openPopup = (marker, forced) => {
 }
 
 function getLayerSpatialReference(layer) {
-  let mapSize = layer.size ?? 512;
+  let mapSize = config.size ?? layer.size ?? 512;
   let tileSize = 512;
   let center = { left: mapSize/2, top: mapSize/2 };
   let bounds = { left: 0, top: 0, right: mapSize, bottom: mapSize };
@@ -538,6 +538,8 @@ function switchWorld(worldName) {
 function toggleLayer(name, show, mapLayers) {
   const layer = mapLayers[name];
 
+  //console.log('toggleLayer', name, show, mapLayers[name]);
+
   if (!layer) {
     // layer not found, we need to change the world, possibly
     const worldName = getWorldNameByLayerName(name);
@@ -545,7 +547,7 @@ function toggleLayer(name, show, mapLayers) {
     return;
   }
 
-  if (show==layer.isVisible()) return;
+  //if (show==layer.isVisible()) return;
 
   const world = config.worlds[settings.world];
   const conf = world.layers.find(conf => conf.name === name) ?? {};
@@ -560,7 +562,7 @@ function toggleLayer(name, show, mapLayers) {
 
   // hide other layers if not overlay
   if (!conf.overlay && show) {
-    Object.entries(layers).forEach(([key, layer]) => {
+    Object.entries(mapLayers).forEach(([key, layer]) => {
       if (key !== name) {
         const conf2 = world.layers.find(conf => conf.name === key) ?? {};
         if (!conf2.overlay) {
@@ -578,7 +580,7 @@ function toggleLayer(name, show, mapLayers) {
   saveSettings();
 }
 
-function addMap() {
+function loadMap() {
   const defaultWorld = Object.keys(config.worlds)[0];
 
   settings.world = settings.world ?? defaultWorld;
@@ -625,10 +627,11 @@ function addMap() {
       let b = layer.overlayBounds ?? bounds;
 
       let k = (b.bottom - b.top) / (b.right - b.left);
-      // overlay AR leaks to all map, so just don't use non-square tile layers for overlays (image overlays stretch okay)
-      k = 1;
 
+      // overlay AR leaks to all map, so just don't use non-square tile layers for overlays (image overlays stretch okay)[
+      k = 1;
       if (k<0) k = -k;
+
       mapLayer = new maptalks.TileLayer(name, {
         urlTemplate: getURL(config, layer.urlTemplate),
         maxAvailableZoom: layer.maxAvailableZoom || 4,
@@ -816,8 +819,6 @@ function addMap() {
 
   // sceneconfig options https://doc.maptalks.com/docs/api/vt/point-layer/
 
-
-
   const groupLayer = new maptalks.GroupGLLayer('features', [], {
     forceRedrawPerFrame: true
   }).addTo(map);
@@ -957,6 +958,7 @@ function getKey(feature) {
 function passesFilter(feature) {
   let key = getKey(feature);
   let t = feature._type;
+  let o = feature.properties;
 
   if (t.hidden) return false;
 
@@ -964,13 +966,15 @@ function passesFilter(feature) {
     let visible = settings.activeItems[t.category] === true;
 
     const world = config.worlds[settings.world];
-    if (world.heightRange) {
+    if (world.heightRange && world.group == o.group) {
       const [bottom, top] = world.heightRange;
       let h = feature.geometry.coordinates[2];
       if (h<bottom || h>top) {
         visible = false;
       }
     }
+
+    if (o.group != world.group) visible = false;
 
     return visible;
   }
@@ -1584,7 +1588,7 @@ function loadMarkers() {
 }
 
 function addTypes() {
-  addMap();
+  loadMap();
   if (config.icons) iconData = config.icons;
   addRegions();
 }

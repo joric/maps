@@ -4,111 +4,120 @@
   "worlds": {
     "overworld": {
       "heightRange": [-4,10,0],
+      "group": "overworld",
       "layers": [
         {
           "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
-          "name": "overworld_64k",
+          "name": "overworld",
           "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/overworld_64k/{z}/{y}/{x}.webp",
           "tileSize": 512,
           "maxAvailableZoom": 7,
           "repeatWorld": false,
-          "size": [65536, 65536],
+          "size": [65536, 53850],
           "maxZoom": 7
-        },
-        {
-          "bounds": { "left": -77, "top": 221.5, "right": 219, "bottom": 74},
-          "name": "Release_v1",
-          "urlTemplate": "tiles/Release_v1/{z}/{y}/{x}.webp",
-          "tileSize": 512,
-          "maxAvailableZoom": 5,
-          "repeatWorld": false,
-          "size": [12450, 10956],
-          "comment": "by qiekn, see #9"
-        },
-        {
-          "bounds": { "left": -6, "top": 185, "right": 186, "bottom": -7},
-          "name": "Demo2_16k",
-          "urlTemplate": "tiles/Demo2_16k/{z}/{y}/{x}.webp",
-          "tileSize": 512,
-          "maxAvailableZoom": 5,
-          "size": [16384, 9216],
-          "comment": "scaled 1920x1080 screenshot, 192x108 grid with center at cell 86,74 (real world center is 80,69 in game units)"
-        },
-        {
-          "name": "overworld_2160p",
-          "bounds": {"left": -65, "top": 157, "right": 223, "bottom": -5},
-          "url": "https://joric.github.io/ootss_tileset/images/overworld_2160p.jpg",
-          "overlay": true,
-          "size": [3840, 2160],
-          "remap": { "cellSize": 13.34, "dx": -65, "dy": -5 },
-          "comment": "from YouTube trailer, https://youtu.be/4m8R1BjjioU?t=90"
-        },
-        {
-          "name": "minimap",
-          "bounds": {"left": 34.5, "top": 139.5, "right": 84.5, "bottom": 103.5, "height": 89},
-          "url": "https://joric.github.io/ootss_tileset/images/minimap.jpg",
-          "overlay": true,
-          "size": [6400, 4608],
-          "comment": "fast travel map, 50x36 cells, or, rather 59 x 34, corner (-18, -11)"
         }
       ]
     },
     "overworld_high": {
       "heightRange": [10, 75, 33],
+      "group": "overworld",
       "layers": [
         {
-          "name": "sky_64k",
+          "name": "overworld_high",
           "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
           "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/sky_64k/{z}/{y}/{x}.webp",
           "tileSize": 512,
           "maxAvailableZoom": 7,
           "repeatWorld": false,
-          "size": [65536, 65536],
+          "size": [65536, 53850],
           "maxZoom": 7
-        },
-        {
-          "name": "minimap_high",
-          "bounds": {"left": 34.5, "top": 139.5, "right": 84.5, "bottom": 103.5, "height": 105},
-          "url": "https://joric.github.io/ootss_tileset/images/minimap_high.jpg",
-          "overlay": true,
-          "size": [6400, 4608]
         }
       ]
     },
     "overworld_low": {
       "heightRange": [-57,-4],
+      "group": "overworld",
       "layers": [
         {
-          "name": "underworld_64k",
+          "name": "overworld_low",
           "bounds": { "left": -24.5, "top": 170.5, "right": 165.5, "bottom": -18.5},
           "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/underworld_64k/{z}/{y}/{x}.webp",
           "tileSize": 512,
           "maxAvailableZoom": 7,
           "repeatWorld": false,
-          "size": [65536, 65536],
+          "size": [65536, 53850],
           "maxZoom": 7
-        },
-        {
-          "name": "minimap_low",
-          "bounds": {"left": 34.5, "top": 139.5, "right": 84.5, "bottom": 103.5, "height": 78},
-          "url": "https://joric.github.io/ootss_tileset/images/minimap_low.jpg",
-          "overlay": true,
-          "size": [6400, 4608]
         }
       ]
     },
     "intro": {
       "heightRange": [-100,100],
+      "group": "intro",
       "layers": [
         {
-          "name": "intro_64k",
+          "name": "intro",
           "bounds": { "left": -50.0, "top": 126.0, "right": 140.0, "bottom": -63.0},
           "urlTemplate": "https://joric.github.io/ootss_tileset/tiles/intro_64k/{z}/{y}/{x}.webp",
           "tileSize": 512,
           "maxAvailableZoom": 7,
           "repeatWorld": false,
-          "size": [65536, 65536],
+          "size": [32032, 36960],
           "maxZoom": 7
+        }
+      ]
+    },
+
+    "minimap": {
+      "heightRange": [89, 89],
+      "group": "overworld",
+      "layers": [
+        {
+          "name": "minimap",
+          "bounds": {"left": 34.55, "top": 139.45, "right": 84.45, "bottom": 103.55, "height": 105},
+          "url": "https://joric.github.io/ootss_tileset/images/minimap.jpg",
+          "size": [6400, 4608],
+          "comment": "fast travel map, 50x36 cells, or, rather 59 x 34, corner (-18, -11)"
+        }
+      ]
+    },
+
+    "minimap_high": {
+      "heightRange": [100, 110],
+      "group": "overworld",
+      "layers": [
+        {
+          "name": "minimap_high",
+          "bounds": {"left": 34.55, "top": 139.45, "right": 84.45, "bottom": 103.55, "height": 89},
+          "url": "https://joric.github.io/ootss_tileset/images/minimap_high.jpg",
+          "size": [6400, 4608]
+        }
+      ]
+    },
+
+    "minimap_low": {
+      "heightRange": [78, 78],
+      "group": "overworld",
+      "layers": [
+        {
+          "name": "minimap_low",
+          "bounds": {"left": 34.55, "top": 139.45, "right": 84.45, "bottom": 103.55, "height": 89},
+          "url": "https://joric.github.io/ootss_tileset/images/minimap_low.jpg",
+          "size": [6400, 4608]
+        }
+      ]
+    },
+
+    "skipping_stones": {
+      "heightRange": [-1,1],
+      "group": "skipping_stones",
+      "layers": [
+        {
+          "name": "skipping_stones",
+          "bounds": { "left": -25.0, "bottom": -17.0, "right": 101.0, "top": 84},
+          "url": "https://joric.github.io/ootss_tileset/images/stones.jpg",
+          "overlay": false,
+          "size":[4032, 3232],
+          "comment":"[126, 101], corner: [-25, -17], grid: [9, 6]"
         }
       ]
     }
@@ -122,8 +131,8 @@
   ],
 
   "markers": {
-    "url": "data/markers.json",
-    "url1": "scripts/markers.json"
+    "url0": "data/markers.json",
+    "url": "scripts/markers.json"
   },
 
   "regions1": [
@@ -197,12 +206,13 @@
     "marker": { "class": "fa fa-location-crosshairs", "color": "grey" },
     "local_area": { "class": "fa fa-cube", "color": "grey" },
     "reset": { "class": "fa fa-rotate", "color": "slategrey" },
-    "rover": { "class": "fa fa-car", "color": "slategrey" },
+    "rover": { "class": "fa fa-shopping-cart", "color": "slategrey" },
     "switch": { "class": "fa fa-power-off", "color": "slategrey" },
     "rock": { "class": "fa fa-cube", "color": "grey" },
     "sign": { "class": "fa fa-receipt", "color": "brown" },
     "spawner": { "class": "fa fa-gift", "color": "darkcyan" },
-    "teleport": { "class": "fa fa-street-view", "color": "slategrey" }
+    "teleport": { "class": "fa fa-street-view", "color": "slategrey" },
+    "treasure": { "class": "fa fa-toolbox", "color": "brown" }
   },
 
   "types": {
@@ -252,7 +262,7 @@
         },
         "Promesst_Light": { "group": "items", "category": "Beam", "icon": "beam" },
         "Rock": { "group": "misc", "category": "rock", "icon": "rock" },
-        "Rover": { "group": "items", "category": "rover", "icon": "rover" },
+        "Rover": { "group": "items", "category": "cart", "icon": "rover" },
         "Voice_Log": { "group": "items", "category": "audiolog", "icon": "audiolog" },
         "Sign": { "group": "items", "category": "sign", "icon": "sign" },
         "Spawner": { "group": "misc", "category": "spawner", "icon": "spawner" },
@@ -264,6 +274,7 @@
             }
           }
         },
+        "Treasure": { "group": "items", "category": "treasure", "icon": "treasure" },
         ".*": { "group": "misc", "icon": "misc", "comment": "this rule maps type to category" }
       }
     }

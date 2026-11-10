@@ -58,7 +58,6 @@
           "tileSize": 512,
           "maxAvailableZoom": 6
         },
-
         {
           "name": "topo_v2",
           "urlTemplate": "https://joric.github.io/stalker2_tileset/extras/topo_v2/{z}/{y}/{x}.webp",
